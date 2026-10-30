@@ -5,7 +5,7 @@ $TaxonID = htmlspecialchars($_GET["tid"]);
 require 'config/config.php';
 $db = new SQLite3($database_location);
 
-$results = $db->query('SELECT ID, ScientificName, TaxonAuthor, FormattedDisplayName, CommonName, NativeStatus, TJM2Author, ScientificEditor, Habit, PlantBody, Stem, SterileStem, FertileStem, Leaf, Spines, Inflorescence, StaminateHead, RayOrPistillateFlower, PistillateHead, StaminateInflorescence, PistillateOrBisexualInflorescence, PistillateInflorescence, Spikelet, FertileSpikelet, SterileSpikelet, DistalSpikelet, CentralSpikelet, LateralSpikelet, StaminateSpikelet, PistillateSpikelet, Flower, StaminateFlower, PistillateFlower, RayFlower, DiskFlower, Cone, PollenCone, SeedCone, BisexualFlower, Fruit, Seed, Sporangia, SporangiumCase, MaleSporangiumCase, FemaleSporangiumCase, Spores, Chromosomes, RarityStatus, Ecology, Elevation, BioregionalDistribution, OutsideCA, SpeciesInGenus, GeneraInFamily, Etymology, Toxicity, Synonyms, UnabridgedSynonyms, Reference, UnabridgedReference, Note, UnabridgedNote, FloweringTime, FloweringTimeCode, FruitingTime, ConingTime, Weediness, IsTerminalTaxon, RevisionNumber, RevisionDate, DistCode, HasKey 
+$results = $db->query('SELECT ID, ScientificName, TaxonAuthor, FormattedDisplayName, CommonName, NativeStatus, TJM2Author, ScientificEditor, Habit, PlantBody, Stem, SterileStem, FertileStem, Leaf, Spines, Inflorescence, StaminateHead, RayOrPistillateFlower, PistillateHead, StaminateInflorescence, PistillateOrBisexualInflorescence, PistillateInflorescence, Spikelet, FertileSpikelet, SterileSpikelet, DistalSpikelet, CentralSpikelet, LateralSpikelet, StaminateSpikelet, PistillateSpikelet, Flower, StaminateFlower, PistillateFlower, RayFlower, DiskFlower, Cone, PollenCone, SeedCone, BisexualFlower, Fruit, Seed, Sporangia, SporangiumCase, MaleSporangiumCase, FemaleSporangiumCase, Spores, Chromosomes, Ecology, RarityStatus, Elevation, BioregionalDistribution, OutsideCA, SpeciesInGenus, GeneraInFamily, Etymology, Toxicity, Synonyms, UnabridgedSynonyms, Reference, UnabridgedReference, Note, UnabridgedNote, FLFRTimeCode, FloweringTime, FruitingTime, SporConeTime, Weediness, IsTerminalTaxon, HasKey, RevisionNumber, RevisionDate, DistCode 
 						FROM eflora_taxa
 						WHERE TaxonID='.$TaxonID.''); //16711 is the TaxonID for Calochortus amabilis, for example
 
@@ -74,9 +74,11 @@ $UnabridgedReference = $row['UnabridgedReference'];
 $Note = $row['Note'];
 $UnabridgedNote = $row['UnabridgedNote'];
 $FloweringTime = $row['FloweringTime'];
-$FloweringTimeCode = $row['FloweringTimeCode'];
+$TimeCode = $row['FLFRTimeCode'];
 $FruitingTime = $row['FruitingTime'];
-$ConingTime = $row['ConingTime'];
+//$ConingTime = $row['ConingTime']; 
+//Remove this as there is no lines with this information
+//It has never been successfully printing online and it would be a duplicate of the data in the notes anyway
 $Weediness = $row['Weediness'];
 $IsTerminalTaxon  = $row['IsTerminalTaxon'];
 $RevisionNumber  = $row['RevisionNumber'];
@@ -245,7 +247,7 @@ while ($row = $results->fetchArray()) {
 
 //query and assign species info
 //Species has neither GeneraInFamily nor SpeciesInGenus
-$results = $db->query('SELECT t.TaxonID, t.SpeciesID, s.TaxonID, s.ScientificName, s.TaxonAuthor, s.CommonName, s.TJM2Author, s.Habit, s.PlantBody, s.Stem, s.SterileStem, s.FertileStem, s.Leaf, s.Spines, s.Inflorescence, s.StaminateHead, s.RayOrPistillateFlower, s.PistillateHead, s.StaminateInflorescence, s.PistillateOrBisexualInflorescence, s.PistillateInflorescence, s.Spikelet, s.FertileSpikelet, s.SterileSpikelet, s.DistalSpikelet, s.CentralSpikelet, s.LateralSpikelet, s.StaminateSpikelet, s.PistillateSpikelet, s.Flower, s.StaminateFlower, s.PistillateFlower, s.RayFlower, s.DiskFlower, s.Cone, s.PollenCone, s.SeedCone, s.BisexualFlower, s.Fruit, s.Seed, s.Sporangia, s.SporangiumCase, s.MaleSporangiumCase, s.FemaleSporangiumCase, s.Spores, s.Chromosomes, s.Etymology, s.Toxicity, s.Synonyms, s.UnabridgedSynonyms, s.Reference, s.UnabridgedReference, s.Note, s.UnabridgedNote, s.RevisionNumber, s.RevisionDate
+$results = $db->query('SELECT t.TaxonID, t.SpeciesID, s.TaxonID, s.ScientificName, s.TaxonAuthor, s.CommonName, s.TJM2Author, s.Habit, s.PlantBody, s.Stem, s.SterileStem, s.FertileStem, s.Leaf, s.Spines, s.Inflorescence, s.StaminateHead, s.RayOrPistillateFlower, s.PistillateHead, s.StaminateInflorescence, s.PistillateOrBisexualInflorescence, s.PistillateInflorescence, s.Spikelet, s.FertileSpikelet, s.SterileSpikelet, s.DistalSpikelet, s.CentralSpikelet, s.LateralSpikelet, s.StaminateSpikelet, s.PistillateSpikelet, s.Flower, s.StaminateFlower, s.PistillateFlower, s.RayFlower, s.DiskFlower, s.Cone, s.PollenCone, s.SeedCone, s.BisexualFlower, s.Fruit, s.Seed, s.Sporangia, s.SporangiumCase, s.MaleSporangiumCase, s.FemaleSporangiumCase, s.Spores, s.Chromosomes, s.Etymology, s.Toxicity, s.Synonyms, s.UnabridgedSynonyms, s.Reference, s.UnabridgedReference, s.Note, s.UnabridgedNote, s.RevisionNumber, s.RevisionDate, s.HasKey
 						from eflora_taxonomy t, eflora_taxa s
 						WHERE t.TaxonID='.$TaxonID.' AND t.SpeciesID=s.TaxonID');
 
@@ -302,6 +304,7 @@ while ($row = $results->fetchArray()) {
 	$SpecUnabridgedNote = $row['UnabridgedNote'];
 	$SpecRevisionNumber  = $row['RevisionNumber'];
 	$SpecRevisionDate  = $row['RevisionDate'];
+	$SpecHasKey = $row['HasKey'];
 }
 
 //get the illustration
@@ -336,8 +339,11 @@ if (isset($Reference)){ $Ref = $Reference;}#there are no species references, gen
 	else {$Ref = "";}
 
 if (isset($UnabridgedReference)){ $UnabRef = $UnabridgedReference;}#there are no species references, genus reference is always passed down
-	elseif (isset($GenUnabridgedReference)){ $UnabRef = $GenUnabridgedReference;}
-	elseif (isset($FamUnabridgedReference)){ $UnabRef = $FamUnabridgedReference;}
+	#elseif (isset($GenUnabridgedReference)){ $UnabRef = $GenUnabridgedReference;}
+	#elseif (isset($FamUnabridgedReference)){ $UnabRef = $FamUnabridgedReference;}
+	#the old method is above, but the genus description link and family description link already pass this information
+	#the data can be found by clikcing above, so why does it need to be displayed twice (although it is hidden by default)
+	#all carex species pages are very long because of the extra long unabridged reference in the genus page
 	else {$UnabRef = "";}
 
 
@@ -377,24 +383,23 @@ exit();
 ?>
 
 <head>
+<!--<title><?php echo "$ScientificName"?>==><?php echo "$MapName"?></title> --> <!--For variable testing-->
 <title><?php echo "$ScientificName"?></title> 
 <meta name="description" content="For vascular plants occurring in wildlands or otherwise outside of cultivation in California, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys.">
   <meta name="keywords" content="California Flora, Jepson eFlora, Flora of California, Vascular Plants of California, Jepson Flora Project, ">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-
-
 
 <link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
 <link href="http://ucjeps.berkeley.edu/common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
 
 
 <!--jquery script files-->
-<script src="http://ajax.googleapis.com/ajax/libs/jquery/1.11.2/jquery.min.js"></script>
-<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.11.2/jquery-ui.min.js"></script>
-<link rel="stylesheet" href="//code.jquery.com/ui/1.11.4/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 <!-- leaflet maps files and scripts -->
+
 <link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
    integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
    crossorigin=""/>
@@ -403,51 +408,17 @@ exit();
 <script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
    crossorigin=""></script>
-<script src="http://ucjeps.berkeley.edu/eflora/KML.js"></script>
 
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 
-<script type="text/javascript"> 
+<script src='https://api.mapbox.com/mapbox.js/plugins/geojson-extent/v0.0.1/geojson-extent.js'></script>
 
-    var map; 
-    var kml;
 
-    function initialize() {
-    
-	// Adding open source layers, unlimited loads
-        var streets = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
-    		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors'
-	});
+<!-- <script src="http://ucjeps.berkeley.edu/eflora/KML.js"></script>-->
 
-	var satellite = L.tileLayer(
-                'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
-                    attribution: '&copy; Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
-                    maxNativeZoom: 19,
-                    maxZoom: 25,
-                    opacity: 0.8,
-                    type: 'satellite'
-                });
-	var baseMaps = {
-		"Streets": streets,
-		"Satellite": satellite
-	};
-
-	// Create Map and setup layers
-	map = L.map('map_canvas', {layers:[streets,satellite]});
-	L.control.layers(baseMaps).addTo(map)
-
-	map.addControl(new L.Control.Fullscreen());
-
-	// Turn on KML Layer and add to Map
-  	var MapName = <?php echo "$TaxonID"?>;
- 	var kmlLayer = new L.KML("http://ucjeps.berkeley.edu/eflora/KMLs/"+MapName+"_8.kml?122").addTo(map);
-        kmlLayer.on("loaded", function(e) { 
-            map.fitBounds(e.target.getBounds());
-        });
-    }
-
+<script type="text/javascript">
+    var MapName = <?php echo json_encode($TaxonID); ?>; 
 </script>
-
 
 <style type="text/css" media="screen">
 
@@ -518,10 +489,13 @@ $(document).ready(function(){
 <!-- Beginning of horizontal menu -->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/globalnav.php'); ?> 
 <!-- End of horizontal menu -->
+
+
 <div id="content-top">
 <table border="0">
 	<tr>
 		<td><span class="pageName"><a href="http://ucjeps.berkeley.edu/eflora/">Jepson eFlora:</a> Taxon page</span></td>
+
 	</tr>
 	<tr>
        <td><span class="pageMajorHeading"><a name="TOP" id="TOP">Vascular Plants of California</a></span>
@@ -588,7 +562,7 @@ if (isset($FamScientificName)){
 	echo "<table class='taxonomy_table'><tr><td class='column1'><b>Family: {$FamScientificName}</b></td><td class='column2'><a id='familylink'>View Description</a></b></td>";
 	
 	if (isset($FamHasKey)){
-		echo "<td class='column3'><a href='http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?key={$FamTaxonID}'>Dichotomous Key</a></td></tr></table>";
+		echo "<td class='column3'><a href='http://ucjeps.berkeley.edu/eflora/eflora_keys.php?key={$FamTaxonID}'>Dichotomous Key</a></td></tr></table>";
 	}
 	else{ echo "<td class='column3'>&nbsp;</td></tr></table>"; }
 
@@ -654,7 +628,7 @@ echo "</blockquote></div></td>";
 	if (isset($GenScientificName)){
 		echo "<table class='taxonomy_table'><tr><td class='column1'><b>Genus: {$GenScientificName}</b></td><td class='column2'><a id='genuslink'>View Description</a></b></td>";
 		if (isset($GenHasKey)){
-			echo "<td class='column3'><a href='http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?key={$GenTaxonID}'>Dichotomous Key</a></td></tr></table>";
+			echo "<td class='column3'><a href='http://ucjeps.berkeley.edu/eflora/eflora_keys.php?key={$GenTaxonID}'>Dichotomous Key</a></td></tr></table>";
 		}
 		else{ 
 			echo "<td class='column3'>&nbsp;</td></tr></table>"; 
@@ -721,11 +695,26 @@ echo "</div></td>";
 	
 	}
 	
-	if (isset($SpecScientificName)){ 
-		echo "<table class='taxonomy_table'><tr><td class='column1'><b>Species: {$SpecScientificName}</b></td><td class='column2'><a id='specieslink'>View Description</a></b></td><td class='column3'>&nbsp;</td></tr></table>";
-		echo '<table><tr>';
-		echo '<td><div id="speciesdesc" class="initiallyHidden">';
-		echo "<blockquote class='bodyText'>";
+	//if (isset($SpecScientificName)){ 
+	//	echo "<table class='taxonomy_table'><tr><td class='column1'><b>Species: {$SpecScientificName}</b></td><td class='column2'><a id='specieslink'>View Description</a></b></td><td class='column3'>&nbsp;</td></tr></table>";
+	//	echo '<table><tr>';
+	//	echo '<td><div id="speciesdesc" class="initiallyHidden">';
+	//	echo "<blockquote class='bodyText'>";
+		
+		
+	if (isset($SpecScientificName)){
+		echo "<table class='taxonomy_table'><tr><td class='column1'><b>Species: {$SpecScientificName}</b></td><td class='column2'><a id='specieslink'>View Description</a></b></td>";
+		if (isset($SpecHasKey)){
+			echo "<td class='column3'><a href='http://ucjeps.berkeley.edu/eflora/eflora_keys.php?key={$SpecTaxonID}'>Dichotomous Key</a></td></tr></table>";
+		}
+		else{ 
+			echo "<td class='column3'>&nbsp;</td></tr></table>"; 
+		}
+echo '<table><tr>';
+echo '<td><div id="speciesdesc" class="initiallyHidden">';
+echo "<blockquote class='bodyText'><br>";		
+		
+		
 
 if ($SpecCommonName){ echo "<b>Common Name:</b> {$SpecCommonName}<br>";}
 if ($SpecHabit){ echo "<b>Habit:</b> {$SpecHabit} ";}
@@ -854,7 +843,8 @@ if ($Etymology){ echo "<b>Etymology:</b> {$Etymology} ";}
 if ($Toxicity){ echo "<b>Toxicity:</b> {$Toxicity} ";}
 if ($FloweringTime){ echo "<b>Flowering Time:</b> {$FloweringTime} ";}
 if ($FruitingTime){ echo "<b>Fruiting Time:</b> {$FruitingTime} ";}
-if ($ConingTime){ echo "<b>Coning Time:</b> {$ConingTime} ";}
+//if ($ConingTime){ echo "<b>Coning Time:</b> {$ConingTime} ";}
+//Remove as the data was a duplicate of that in Notes
 if ($Note){ echo "<b>Note:</b> {$Note} ";}
 echo "<br />";
 
@@ -865,13 +855,22 @@ if ($JMAuthor){ echo "<b>Jepson eFlora Author:</b> {$JMAuthor}<br>";}
 if ($Ref){ echo "<b>Reference:</b> {$Ref}<br>";}
 if ($UnabRef){ echo "<font color='blue'><b>Unabridged Reference:</b> {$UnabRef}</font><br>";}
 if ($ScientificEditor){ echo "<b>Scientific Editor:</b> {$ScientificEditor}<br>";}
-echo '<a href="http://ucjeps.berkeley.edu/cgi-bin/get_cpn.pl?'.$TaxonID.'"><b>Jepson Online Interchange</b></a><br>';
-if (isset($HasKey)){ echo "<b><a href='http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?key=".$TaxonID."'>Key to <i>".$ScientificName."</i></a></b></br>"; }
+echo '<a href="http://ucjeps.berkeley.edu/cgi-bin/get_cpn.pl?'.$TaxonID.'"><b>Index of California Plant Names (ICPN; linked via the Jepson Online Interchange)</b></a><br>';
+if (isset($HasKey)){ echo "<b><a href='http://ucjeps.berkeley.edu/eflora/eflora_keys.php?key=".$TaxonID."'>Key to <i>".$ScientificName."</i></a></b></br>"; }
 
-
-
-if (strpos($Weediness, 'SYMBOL 1') !== false){ echo "<a href='https://www.cdfa.ca.gov/plant/IPC/encycloweedia/weedinfo/winfo_table-sciname.html'><b>Noxious Weed</b></a><br>";}
-if (strpos($Weediness, 'SYMBOL 2') !== false){
+//old CDFA table, links are broken, so it is now just a list
+	if (strstr($Weediness, 'SYMBOL 1') !== false){ 
+		echo "<a href='https://www.cdfa.ca.gov/plant/IPC/encycloweedia/weedinfo/winfo_table-sciname.html'><b>Noxious Weed listed by CDFA</b></a><br>";
+	}
+	
+//new CDFA weed ranking sheets, indexed by page number of some sort, not taxon name
+//This has to be updated manually and added to a new table in eflora.db so that the CDFA_ID variable can be found
+	if (strstr($Weediness, 'SYM') !== false){
+		$CDFAurl = 'https://blogs.cdfa.ca.gov/Section3162/?p='.$CDFA_ID;
+		
+	}
+	
+	if (strstr($Weediness, 'SYM') !== false){
 			//convert scientific name to IPC name format for new website
 		$IPC_name = str_replace(" subsp. ", "-ssp-", $ScientificName); //CalPhotos uses "ssp." and not "subsp."
 		$IPC_name = str_replace(" nothosubsp. ", "-ssp-", $IPC_name);
@@ -889,12 +888,75 @@ if (strpos($Weediness, 'SYMBOL 2') !== false){
 				$IPC_search_name = str_replace("phytolacca-americana-var.-americana", "phytolacca-americana", $IPC_search_name);
 				$IPC_search_name = str_replace("phytolacca-americana-var-americana", "phytolacca-americana", $IPC_search_name);
 				$IPC_search_name = str_replace("tetragonia-tetragonoides", "tetragonia-tetragonioides", $IPC_search_name);
-				
+
+		$url = 'http://www.cal-ipc.org/plants/profile/'.$IPC_search_name.'-profile/';
+
+		echo "<a href='http://www.cal-ipc.org/plants/profile/$IPC_search_name-profile/'><b>Weed listed by Cal-IPC</b></a> <br>";
+//these codes create a lag, but will print a link only if the page exists.
+//page loading lag is about the same time it takes for a page to load in Cal-IPC, so this is a Cal_IPC issue during checking to see if the page exists
+//using just this echo line above does not check the eflora treatments text to see if the author was correct in placing a SYMBOL 2 in WEEDINESS
+//nor does is check to see if the page of the NOXIOUS WEED exists in Cal-IPC
+//note sure which is better, but all of the WEEDINESS records need some type of reporting function to see if the page still exists or has been changed in Cal_IPC
+//the web page url changes in Cal_IPC happens at least once per year, but not to all taxon pages at once in the past 3 years.
+//variant code 1
+		//$headers=get_headers($url, 1);
+		//	if ($headers[0]!='HTTP/1.1 200 OK'){
+		//		echo "<a href='http://www.cal-ipc.org/plants/profile/$IPC_search_name-profile/'><b>Weed listed by Cal-IPC</b></a> <br>";
+		//	}
+		//	else{
+		//		echo "<b>CHECK URL at Cal-IPC - poorly formatted weed url</b><br />";
+		//	}
+
+//variant code 2
+			//function get_http_response_code($url) {
+			//	$headers = get_headers($url);
+			//	return substr($headers[0], 9, 3);
+			//}
+
+		//if(intval(get_http_response_code($url)) < 400){
+			// File exists, huzzah!
+		//	echo "<a href='http://www.cal-ipc.org/plants/profile/$IPC_search_name-profile/'><b>Weed listed by Cal-IPC</b></a> <br>";
+		//}
+		//else{
+		//	echo "<b>CHECK URL at Cal-IPC - poorly formatted weed url</b><br />";
+		//}
+
+//variant code 3
+		//ini_set("default_socket_timeout","05");
+		//set_time_limit(5);
+		//$f=fopen($url,"r");
+		//$r=fread($f,500);
+		//fclose($f);
+		//	if(strlen($r)>1) {
+			//echo("<span class='online'>Online</span>");
+			// File exists, huzzah!
+		//	echo "<a href='http://www.cal-ipc.org/plants/profile/$IPC_search_name-profile/'><b>Weed listed by Cal-IPC</b></a> <br>";
+		//	}
+		//	else {
+				//echo("<span class='offline'>Offline</span>");
+		//		echo "<b>CHECK URL at Cal-IPC - poorly formatted weed url</b><br />";
+		//	}
+
+//variant code 4
+		//if(! @(file_get_contents($url))){
+		//	echo "<b>CHECK URL at Cal-IPC - poorly formatted weed url</b><br />";
+		//}
+		//else{
+		//	echo "<a href='http://www.cal-ipc.org/plants/profile/$IPC_search_name-profile/'><b>Weed listed by Cal-IPC</b></a> <br>";
+		//}
+
+//variant code 5
+		//if (fopen($url, "r")){
+		//	echo "<a href='http://www.cal-ipc.org/plants/profile/$IPC_search_name-profile/'><b>Weed listed by Cal-IPC</b></a> <br>"; 
+		//}
+		//else{
+		//	echo "<b>CHECK URL at Cal-IPC - poorly formatted weed url</b><br />";
+		//}
+
+
+	}
 		
-		
-		
-		
-	echo "<a href='http://www.cal-ipc.org/plants/profile/$IPC_search_name-profile/'><b>Weed listed by Cal-IPC</b></a> <br>";}
+
 if ($RarityStatus){ 
 	if (strpos($RarityStatus, '+') !== false){ echo '<a href="http://www.rareplants.cnps.org/result.html?fulldata='.$RarityStatus.'"><b>Listed on CNPS Rare Plant Inventory</b></a><br>';}
 	else { echo '<a href="http://www.rareplants.cnps.org/detail/'.$RarityStatus.'.html"><b>Listed on CNPS Rare Plant Inventory</b></a><br>';}
@@ -959,13 +1021,6 @@ if (isset ($nextTaxonID)) { //i.e. always, except for the very last page
 </form>
 
 </td>
-
-
-
-
-
-
-
 
 <?php
 //add second cell for illustration, if one is available
@@ -1041,7 +1096,7 @@ require "$config_path"."calphotos_database_connection.php";
 $cp_ssp_name = str_replace(" subsp. ", " ssp. ", $ScientificName); //CalPhotos uses "ssp." and not "subsp."
 $cp_name = $cp_ssp_name;
 
-$aName = array("Diplacus puniceus","Diplacus vandenbergensis","Mimetanthe pilosa","Erythranthe androsacea","Erythranthe arenaria","Erythranthe barbata","Erythranthe breviflora","Erythranthe corallina","Erythranthe cordata","Erythranthe dentata","Erythranthe diffusa","Erythranthe exigua","Erythranthe filicifolia","Erythranthe floribunda","Erythranthe geniculata","Erythranthe guttata","Erythranthe inconspicua","Erythranthe inflatula");
+$aName = array("Dipterostemon capitatus ssp. capitatus","Dipterostemon capitatus ssp. pauciflorus","Dipterostemon capitatus ssp. lacuna-vernalis","Dipterostemon capitatus","Diplacus puniceus","Diplacus vandenbergensis","Mimetanthe pilosa","Erythranthe androsacea","Erythranthe arenaria","Erythranthe barbata","Erythranthe breviflora","Erythranthe corallina","Erythranthe cordata","Erythranthe dentata","Erythranthe diffusa","Erythranthe exigua","Erythranthe filicifolia","Erythranthe floribunda","Erythranthe geniculata","Erythranthe guttata","Erythranthe inconspicua","Erythranthe inflatula");
 
 
 $taxon_result_a = mysqli_query($mysqli, "SELECT taxon, kwid FROM img 
@@ -1140,14 +1195,28 @@ if (!isset($kwid_syna)){
 	elseif($cp_ssp_name === "Diplacus puniceus"){
 		$cp_name = str_replace("Diplacus puniceus", "Mimulus aurantiacus var. puniceus", $cp_ssp_name);
 		//echo "and now it is changed to the string '$cp_name'";
+	}	
+	elseif($cp_ssp_name === "Dipterostemon capitatus"){
+		$cp_name = str_replace("Dipterostemon capitatus", "Dichelostemma capitatum", $cp_ssp_name);
+		//echo "and now it is changed to the string '$cp_name'";
 	}
-	
+	elseif($cp_ssp_name === "Dipterostemon capitatus ssp. pauciflorus"){
+		$cp_name = str_replace("Dipterostemon capitatus ssp. pauciflorus", "Dichelostemma capitatum ssp. pauciflorum", $cp_ssp_name);
+		//echo "and now it is changed to the string '$cp_name'";
+	}
+	elseif($cp_ssp_name === "Dipterostemon capitatus ssp. lacuna-vernalis"){
+		$cp_name = str_replace("Dipterostemon capitatus ssp. lacuna-vernalis", "Dichelostemma capitatum ssp. lacuna-vernalis", $cp_ssp_name);
+		//echo "and now it is changed to the string '$cp_name'";
+	}
+	elseif($cp_ssp_name === "Dipterostemon capitatus ssp. capitatus"){
+		$cp_name = str_replace("Dipterostemon capitatus ssp. capitatus", "Dichelostemma capitatum ssp. capitatum", $cp_ssp_name);
+		//echo "and now it is changed to the string '$cp_name'";
+	}
 	
   }
   else{
 
 	//echo "B. The string was found in '$cp_ssp_name' ";
-
 		if (preg_match("/^Erythranthe /", $cp_ssp_name)){
 			$cp_name = str_replace("Erythranthe ", "Mimulus ", $cp_ssp_name);
 			//echo "and now it is changed to the string '$cp_name'";
@@ -1156,12 +1225,12 @@ if (!isset($kwid_syna)){
 			$cp_name = str_replace("Diplacus ", "Mimulus ", $cp_ssp_name);
 			//echo "and now it is changed to the string '$cp_name'";
 		}
+		elseif (preg_match("/^Dipterostemon /", $cp_ssp_name)){
+			$cp_name = str_replace("Dipterostemon ", "Dichelostemma ", $cp_ssp_name);
+			//echo "and now it is changed to the string '$cp_name'";
+		}
   }
-
-
-
 }
-
 
 //now get all the images from CalPhotos
 $result = mysqli_query($mysqli, "SELECT taxon, kwid, copyright FROM img 
@@ -1211,7 +1280,6 @@ else{//if there is no $kwid (i.e. no photos), do not print the "see more" link o
 	echo '<p style="color:#BBBBB">No expert verified images found for <i>'.$ScientificName.'.</i></p>';
 }
 
-
 ?>
 </td></tr></table>
 </div>
@@ -1219,11 +1287,22 @@ else{//if there is no $kwid (i.e. no photos), do not print the "see more" link o
 <!--distribution panes-->
 <div id="content">
 <table border=0>
-<tr><td valign='bottom'><a name="MAP" id="MAP"></a>Geographic subdivisions for <a href="#TOP"><?php echo "$ScientificName"?></a>:
-<br><?php echo "$BioregionalDistribution"?>
+<tr><td valign='center'>
+<br />
+<a name="MAP" id="MAP"></a>Geographic subdivisions for <a href="#TOP"><?php echo "$ScientificName"?></a>:
+<br />
+<?php 
+$regname = str_replace(";", " ", $BioregionalDistribution);
+echo "$regname"?>
 </td>
-<td>Markers link to CCH specimen records. Yellow markers indicate records that may provide evidence for eFlora range revision or may have georeferencing or identification issues. Purple markers indicate specimens collected from a garden, greenhouse, or other non-wild location.
-<br><b><a href="http://ucjeps.berkeley.edu/consortium/about_yellow.html">READ ABOUT YELLOW FLAGS</a></b>
+<td><b>MAP CONTROLS</b>
+<br />1. You can change the display of the base map and layers by clicking on the layer control box in the upper right-hand corner.
+<br />2. California county polygons can be turned off and on in the layer control box.
+<br />3. Filling of Jepson subdivision polygons can be turned off and on in the layer control box.
+<br />4. Moving the cursor over any numbered cluster will show the range boundary of the included specimens (with a blue polygon).
+<br />5. <b>Marker clustering</b> can be turned off by clicking this link:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<?php echo '<a href="http://ucjeps.berkeley.edu/eflora/eflora_display_N.php?tid='.$TaxonID.'">Marker Clustering OFF</a>'?>
+<br /><b>WARNING</b>: Turning this off might cause maps with large numbers of specimens to load slowly.
 </td></tr>
 <tr>
 <td valign="top">
@@ -1231,25 +1310,1077 @@ else{//if there is no $kwid (i.e. no photos), do not print the "see more" link o
 </td>
 <td>
 	<div id="map_canvas"></div>
+	<link href="common/cluster/MarkerCluster.Default.css" type="text/css" rel=stylesheet />
+	<link rel="stylesheet" type="text/css" href="common/cluster/MapkeyIcons.css" />
+	<link rel="stylesheet" type="text/css" href="common/cluster/L.Icon.Mapkey.css" />
+	<script src="common/cluster/L.Icon.Mapkey.js"></script>
+	<script src="common/cluster/leaflet.markercluster.js"></script>
+
+<script type="text/javascript"> 
+
+
+latlng = L.latLng(37.5, -119.5);
+
+var map = L.map('map_canvas', {center: latlng, zoom: 5});
+
+
+	var FILL = L.layerGroup();
+	var COUNTY = L.layerGroup();	
+	
+	map.scrollWheelZoom.disable();
+	
+var cacount = "counties_TIGER2016.geojson"; //full json file for California County TIGER2016 
+var regfill = "JepsonV7.geojson"; //full json file for Jepson regions
+
+
+// loading GeoJSON file - files resides in same folder
+$.getJSON(cacount ,function(data){
+// L.geoJson function is used to parse geojson file and load on to map
+L.geoJson(data, {
+	style: function(feature) {
+		switch (feature.properties.NAME) {
+		case 'San Luis Obispo': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Glenn': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Santa Cruz': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Siskiyou': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'San Mateo': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Plumas': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Lake': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Amador': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Sutter': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Imperial': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Orange': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Stanislaus': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Tulare': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Merced': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Butte': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Nevada': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Alameda': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'San Joaquin': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Santa Clara': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Tehama': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Madera': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Fresno': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Del Norte': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Modoc': return {
+				color: "#00000f",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'Colusa': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: false
+			};
+		case 'Kern': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Riverside': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Humboldt': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'San Benito': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Yuba': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Yolo': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'El Dorado': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Alpine': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Contra Costa': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'San Bernardino': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Solano': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Tuolumne': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Mono': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Inyo': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Mendocino': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Trinity': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Monterey': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Shasta': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Napa': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Lassen': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Mariposa': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Marin': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'San Francisco': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Placer': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'San Diego': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Kings': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Calaveras': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Ventura': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Los Angeles': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Sonoma': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Santa Barbara': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Sacramento': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+		case 'Sierra': return {
+				color: "#00000f",
+				weight: 2,
+				opacity: 1,
+				fill: false
+			};
+        }
+    }
+	}).addTo(COUNTY);
+});
+
+
+
+// loading GeoJSON file - files resides in same folder
+$.getJSON(regfill ,function(data){
+// L.geoJson function is used to parse geojson file and load on to map
+L.geoJson(data, {
+	style: function(feature) {
+		switch (feature.properties.JEPCODE) {
+		case 'Wrn': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#ffa500",
+				fillOpacity: 0.7
+			};
+		case 'MP': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#ecdea0",
+				fillOpacity: 0.7
+			};
+		case 'KR': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#637c36",
+				fillOpacity: 0.7
+			};
+		case 'CaRF': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#c2deac",
+				fillOpacity: 0.7
+			};
+		case 'CaRH': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#618800",
+				fillOpacity: 0.7
+			};
+		case 'NCo': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#006400",
+				fillOpacity: 0.7
+			};
+		case 'NCoRI': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#89cc9f",
+				fillOpacity: 0.7
+			};
+		case 'NCoRO': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#89cca9",
+				fillOpacity: 0.7
+			};
+		case 'NCoRH': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#89cc95",
+				fillOpacity: 0.7
+			};
+		case 'ScV': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#9acd32",
+				fillOpacity: 0.7
+			};
+		case 'SnJV': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#d7ff86",
+				fillOpacity: 0.7
+			};
+		case 'CCo': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#609a83",
+				fillOpacity: 0.7
+			};
+		case 'SCoRO': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#6dd4c3",
+				fillOpacity: 0.7
+			};
+		case 'SCoRI': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#6dd4b9",
+				fillOpacity: 0.7
+			};
+		case 'SCo': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#9b30ff",
+				fillOpacity: 0.7
+			};
+		case 'SnFrB': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#d1feed",
+				fillOpacity: 0.7
+			};
+		case 'Teh': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#b1c5de",
+				fillOpacity: 0.7
+			};
+		case 'nSNF': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#98c0ed",
+				fillOpacity: 0.7
+			};
+		case 'cSNF': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#98c0f7",
+				fillOpacity: 0.7
+			};
+		case 'sSNF': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#98c0ff",
+				fillOpacity: 0.7
+			};
+		case 'nSNH': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#4ebeea",
+				fillOpacity: 0.7
+			};
+		case 'cSNH': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#4ebef4",
+				fillOpacity: 0.7
+			};
+		case 'sSNH': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#4ebefe",
+				fillOpacity: 0.7
+			};
+		case 'SNE': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#e7ee06",
+				fillOpacity: 0.7
+			};
+		case 'W&I': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#c6b247",
+				fillOpacity: 0.7
+			};
+		case 'DMoj': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#fbf0c0",
+				fillOpacity: 0.7
+			};
+		case 'DMtns': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#ff640d",
+				fillOpacity: 0.7
+			};
+		case 'DSon': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#ebd864",
+				fillOpacity: 0.7
+			};
+		case 'PR': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#cf7ba9",
+				fillOpacity: 0.7
+			};
+		case 'SnJt': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#cf7bbd",
+				fillOpacity: 0.7
+			};
+		case 'nChI': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#dda0dd",
+				fillOpacity: 0.7
+			};
+		case 'sChI': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#dda0d3",
+				fillOpacity: 0.7
+			};
+		case 'WTR': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#eccaeb",
+				fillOpacity: 0.7
+			};
+		case 'SnGb': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#eccaf5",
+				fillOpacity: 0.7
+			};
+		case 'SnBr': return {
+				color: "#00000f",
+				weight: 0.5,
+				opacity: 0.1,
+				fill: true,
+				fillColor: "#eccaff",
+				fillOpacity: 0.7
+			};
+        }
+    }
+	}).addTo(FILL);
+});
+
+
+
+var bnd = "Jepson_regions_buffer_bnd.geojson"; //full json file for Jepson regions
+
+// loading GeoJSON file
+$.getJSON(bnd ,function(data){
+// L.geoJson function is used to parse geojson file and load on to map
+L.geoJson(data, {
+	style: function(feature) {
+		switch (feature.properties.JEPCODE) {
+		case 'Wrn': return {
+				color: "#ffa500",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#ffa500",
+				fillOpacity: 0.8
+			};
+		case 'MP': return {
+				color: "#ecdea0",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#ecdea0",
+				fillOpacity: 0.8
+			};
+		case 'KR': return {
+				color: "#637c36",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#637c36",
+				fillOpacity: 0.8
+			};
+		case 'CaRF': return {
+				color: "#c2deac",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#c2deac",
+				fillOpacity: 0.8
+			};
+		case 'CaRH': return {
+				color: "#618800",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#618800",
+				fillOpacity: 0.8
+			};
+		case 'NCo': return {
+				color: "#006400",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#006400",
+				fillOpacity: 0.8
+			};
+		case 'NCoRI': return {
+				color: "#89cc9f",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#89cc9f",
+				fillOpacity: 0.8
+			};
+		case 'NCoRO': return {
+				color: "#89cca9",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#89cca9",
+				fillOpacity: 0.8
+			};
+		case 'NCoRH': return {
+				color: "#89cc95",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#89cc95",
+				fillOpacity: 0.8
+			};
+		case 'ScV': return {
+				color: "#9acd32",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#9acd32",
+				fillOpacity: 0.8
+			};
+		case 'SnJV': return {
+				color: "#d7ff86",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#d7ff86",
+				fillOpacity: 0.8
+			};
+		case 'CCo': return {
+				color: "#609a83",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#609a83",
+				fillOpacity: 0.8
+			};
+		case 'SCoRO': return {
+				color: "#6dd4c3",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#6dd4c3",
+				fillOpacity: 0.8
+			};
+		case 'SCoRI': return {
+				color: "#6dd4b9",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#6dd4b9",
+				fillOpacity: 0.8
+			};
+		case 'SCo': return {
+				color: "#9b30ff",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#9b30ff",
+				fillOpacity: 0.8
+			};
+		case 'SnFrB': return {
+				color: "#d1feed",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#d1feed",
+				fillOpacity: 0.8
+			};
+		case 'Teh': return {
+				color: "#b1c5de",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#b1c5de",
+				fillOpacity: 0.8
+			};
+		case 'nSNF': return {
+				color: "#98c0ed",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#98c0ed",
+				fillOpacity: 0.8
+			};
+		case 'cSNF': return {
+				color: "#98c0f7",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#98c0f7",
+				fillOpacity: 0.8
+			};
+		case 'sSNF': return {
+				color: "#98c0ff",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#98c0ff",
+				fillOpacity: 0.8
+			};
+		case 'nSNH': return {
+				color: "#4ebeea",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#4ebeea",
+				fillOpacity: 0.8
+			};
+		case 'cSNH': return {
+				color: "#4ebef4",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#4ebef4",
+				fillOpacity: 0.8
+			};
+		case 'sSNH': return {
+				color: "#4ebefe",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#4ebefe",
+				fillOpacity: 0.8
+			};
+		case 'SNE': return {
+				color: "#e7ee06",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#e7ee06",
+				fillOpacity: 0.8
+			};
+		case 'W&I': return {
+				color: "#c6b247",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#c6b247",
+				fillOpacity: 0.8
+			};
+		case 'DMoj': return {
+				color: "#fbf0c0",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#fbf0c0",
+				fillOpacity: 0.8
+			};
+		case 'DMtns': return {
+				color: "#ff640d",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#ff640d",
+				fillOpacity: 0.8
+			};
+		case 'DSon': return {
+				color: "#ebd864",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#ebd864",
+				fillOpacity: 0.8
+			};
+		case 'PR': return {
+				color: "#cf7ba9",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#cf7ba9",
+				fillOpacity: 0.8
+			};
+		case 'SnJt': return {
+				color: "#cf7bbd",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#cf7bbd",
+				fillOpacity: 0.8
+			};
+		case 'nChI': return {
+				color: "#dda0dd",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#dda0dd",
+				fillOpacity: 0.8
+			};
+		case 'sChI': return {
+				color: "#dda0d3",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#dda0d3",
+				fillOpacity: 0.8
+			};
+		case 'WTR': return {
+				color: "#eccaeb",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#eccaeb",
+				fillOpacity: 0.8
+			};
+		case 'SnGb': return {
+				color: "#eccaf5",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#eccaf5",
+				fillOpacity: 0.8
+			};
+		case 'SnBr': return {
+				color: "#eccaff",
+				weight: 0.5,
+				opacity: 0.8,
+				fill: true,
+				fillColor: "#eccaff",
+				fillOpacity: 0.8
+			};
+        }
+    }
+	}).addTo(map);
+});
+
+
+
+		//Custom radius and icon create function
+var markers = L.markerClusterGroup({ disableClusteringAtZoom: 9, maxClusterRadius: 25 });
+
+//var noCluster = L.layerGroup();
+
+$.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) {
+	var geojsonLayer = L.geoJson(data, {
+			// Make the popup
+		onEachFeature: function (feature, layer) {
+         layer.bindPopup(feature.properties.det_name+"<br /><a href=http://ucjeps.berkeley.edu/cgi-bin/new_detail.pl?"+feature.properties.accid+">"+feature.properties.accid+"</a>");
+		},
+		pointToLayer: function (feature, latlng) {
+			// Get the icon
+		  return L.marker(latlng, {
+			icon:L.icon({
+				iconUrl: 'common/icons/'+feature.properties.Flag_icon+'.png',
+				//shadowUrl: '',
+				iconSize: [25,25],
+				popupAnchor: [1, -25],    // point of the icon which will correspond to popup's location
+				iconAnchor: [12, 22]   // point of the icon which will correspond to marker's location
+				//shadowSize:   [41, 41],
+				//shadowAnchor: [13, 20]
+			})
+		  });
+		}
+	
+	});
+markers.addLayer(geojsonLayer);
+map.addLayer(markers);
+});
+
+
+
+	// Adding open source layers, unlimited loads
+	var streets = L.tileLayer('https://{s}.tile.openstreetmap.org/{z}/{x}/{y}.png', {
+		attribution: '&copy; <a href="https://www.openstreetmap.org/copyright">OpenStreetMap</a> contributors',
+		type: 'streets'
+	});
+
+
+	var satellite = L.tileLayer(
+	'https://services.arcgisonline.com/ArcGIS/rest/services/World_Imagery/MapServer/tile/{z}/{y}/{x}', {
+		attribution: '&copy; Esri, i-cubed, USDA, USGS, AEX, GeoEye, Getmapping, Aerogrid, IGN, IGP, UPR-EGP, and the GIS User Community',
+		maxNativeZoom: 19,
+		maxZoom: 25,
+		opacity: 0.8
+	}).addTo(map);
+
+	var baseMaps = {
+		"Streets": streets,
+		"Satellite": satellite
+	};
+	
+	var overlay = {
+		"Fill Jepson regions": FILL,
+		"Add County Boundaries": COUNTY
+	};
+
+//"County boundaries": county
+	L.control.layers(baseMaps, overlay).addTo(map);
+
+
+
+	//markers.addLayer(geojsonLayer);
+	
+</script>
+
+
 </td>
 </tr>
 
+
 <tr><td valign="top">
 (Note: any qualifiers in the taxon distribution description, such as 'northern', 'southern', 'adjacent' etc., are not reflected in the map above, and in some cases indication of a taxon in a subdivision is based on a single collection or author-verified occurence).
-<br><br>
+<br />
+<br />
+<br />
+<br />
+<br />
+<br />
+&nbsp;<br />
 <?php 
 $hb_value = "&times;";
 $hb_name = str_replace($hb_value, "X ", $ScientificName);
 // convert names to hybrid form that are compatible for taxon synonym tables
-echo '<a href="http://ucjeps.berkeley.edu/cgi-bin/map_cch_elev.pl?taxon_name='.$hb_name.'&t=&g=">View elevation by latitude chart</a>'?>
+echo '<a href="http://ucjeps.berkeley.edu/cgi-bin/map_cch_elev.pl?taxon_name='.$hb_name.'&t=&g="><h3>View elevation by latitude chart</h3></a>'?>
+<br />
 </td>
-<td valign="top">Data provided by the participants of the Consortium of California Herbaria.
-<br>
-<?php echo '<a href="http://ucjeps.berkeley.edu/cgi-bin/get_consort.pl?taxon_name='.$hb_name.'">View all CCH records</a>'?>
-
-<br><br>
-CCH collections by month<br> 
-
+<td valign="top">Data provided by the participants of the&nbsp;
+<?php echo '<a href="http://ucjeps.berkeley.edu/consortium/about.html">Consortium of California Herbaria</a>'?>.
+<br /><b>MAP LEGEND</b>
+<br /><?php echo '<a href="http://ucjeps.berkeley.edu/cgi-bin/get_consort.pl?taxon_name='.$hb_name.'">View all CCH records</a>'?>
+<br />All markers link to CCH specimen records. The original determination is shown in the popup window.
+<br />Blue markers indicate specimens that map to one of the expected Jepson geographic subdivisions (see left map). Purple markers indicate specimens collected from a garden, greenhouse, or other non-wild location.
+<br />Yellow markers indicate records that may provide evidence for eFlora range revision or may have georeferencing or identification issues.
+<br /><b><a href="http://ucjeps.berkeley.edu/consortium/about_yellow.html">READ ABOUT YELLOW FLAGS</a></b>
+<br /><br /><br />
+CCH collections by month
+<br />
 <?php
 //a.k.a. "heath bars"
 //infra rank must be removed for the heath bar script
@@ -1257,9 +2388,9 @@ $hb_name = str_replace(" nothosubsp.", "", $hb_name);
 $hb_name = str_replace(" subsp.", "", $hb_name);
 $hb_name = str_replace(" var.", "", $hb_name);
 
-//the hb2 script takes the flowering time as input, e.g. "&FT=3,4,5" for Mar-May. This is pre-loaded in the FloweringTimeCode field
-if (isset($FloweringTimeCode)){
-	echo '<img border=1 src="http://ucjeps.berkeley.edu/cgi-bin/hb2.pl?name='.$hb_name.'&FT='.$FloweringTimeCode.'">';
+//the hb2 script takes the flowering/fruiting/spore/cone time as input, e.g. "&FT=3,4,5" for Mar-May. This is pre-loaded in the FLFRTimeCode field
+if (isset($TimeCode)){
+	echo '<img border=1 src="http://ucjeps.berkeley.edu/cgi-bin/hb2.pl?name='.$hb_name.'&FT='.$TimeCode.'">';
 }	
 else {
 	echo '<img border=1 src="http://ucjeps.berkeley.edu/cgi-bin/hb2.pl?name='.$hb_name.'&FT=">';
@@ -1268,7 +2399,7 @@ else {
 
 <br>Duplicates counted once; synonyms included.
 <br>Species do not include records of infraspecific taxa, if there are more than 1 infraspecific taxon in CA.
-<br>Blue line denotes eFlora flowering time.
+<br>Blue line denotes eFlora flowering time (fruiting time in some monocot genera).
 
 </td></tr>
 </table>

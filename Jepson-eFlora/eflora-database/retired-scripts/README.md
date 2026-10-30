@@ -8,7 +8,7 @@ The original versions of the perl scripts are the originals in the main director
 
 ---
 
-## A. Recreating the Taxonomy File (`IJM_sequence.txt`)
+## A. Creating the Taxonomy File (`IJM_sequence.txt`)
 
 Before re-processing the eFlora database, the `IJM_sequence.txt` file must be recreated. 
 * **Why it's needed:** If the update involves nomenclature changes only (with no key changes), `IJM_sequence` still needs to be refreshed. 
