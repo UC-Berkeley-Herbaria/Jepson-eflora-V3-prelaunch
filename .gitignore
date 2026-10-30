@@ -15,3 +15,6 @@ Thumbs.db
 # Ignore IDE specific folders (like VS Code or PhpStorm local settings)
 .vscode/
 .idea/
+
+# Ignore Mac editor backup files ending with a tilde
+*~
