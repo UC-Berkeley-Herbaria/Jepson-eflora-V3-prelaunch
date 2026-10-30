@@ -1,0 +1,1113 @@
+					if(s!<<1>>(A| a)baxial<<1>>!<a href="\/IJM_glossary.html#abaxial" title="The side or surface of a structure away from the axis on which the structure is borne (e.g., the lower surface of a leaf, the outer surface of a petal)." class="keyTextEm">$1baxial</a>$2!){
+				}
+				if(s!<<2>>(A| a)chene<<2>>!<a href="\/IJM_glossary.html#achene" title="Dry, indehiscent, 1-seeded fruit from a 1-chambered ovary, sometimes winged, often appearing to be a naked seed. A 1-seeded dry fruit derived from an inferior ovary of > 1 carpel (e.g., Asteraceae, Dipsacaceae) is sometimes called a cypsela." class="keyTextEm">$1chene</a>$2!){
+				}
+				if(s!<<3>>(A| a)chenes<<3>>!<a href="\/IJM_glossary.html#achenes" title="Dry, indehiscent, 1-seeded fruit from a 1-chambered ovary, sometimes winged, often appearing to be a naked seed. A 1-seeded dry fruit derived from an inferior ovary of > 1 carpel (e.g., Asteraceae, Dipsacaceae) is sometimes called a cypsela." class="keyTextEm">$1chenes</a>$2!){
+				}
+				if(s!<<4>>(A| a)cidic<<4>>!<a href="\/IJM_glossary.html#acidic" title="Soil or water with a low pH, often found in habitats such as coniferous forests and bogs where decomposition of plant remains liberates an excess of hydrogen ions." class="keyTextEm">$1cidic</a>$2!){
+				}
+				if(s!<<5>>(A| a)cuminate<<5>>!<a href="\/IJM_glossary.html#acuminate" title="Having a long-tapered, sharp tip, the sides concave." class="keyTextEm">$1cuminate</a>$2!){
+				}
+				if(s!<<6>>(A| a)cute<<6>>!<a href="\/IJM_glossary.html#acute" title="Having a short-tapered, sharp tip, the sides convex or straight and converging at less than a right angle." class="keyTextEm">$1cute</a>$2!){
+				}
+				if(s!<<7>>(A| a)daxial<<7>>!<a href="\/IJM_glossary.html#adaxial" title="The side or surface of a structure toward the axis on which the structure is borne (e.g., the upper surface of a leaf, the inner surface of a petal)." class="keyTextEm">$1daxial</a>$2!){
+				}
+				if(s!<<8>>(A| a)dherent<<8>>!<a href="\/IJM_glossary.html#adherent" title="Sticking to and sometimes appearing fused to another part of like or unlike kind, but separable from it, such as 'perianth adherent to fruit'." class="keyTextEm">$1dherent</a>$2!){
+				}
+				if(s!<<9>>(A| a)dventitious <<9>>!<a href="\/IJM_glossary.html#adventitious " title="Arising at unusual times or places, such as  roots on aerial stems." class="keyTextEm">$1dventitious </a>$2!){
+				}
+				if(s!<<10>>(A| a)lien<<10>>!<a href="\/IJM_glossary.html#alien" title="Not native; introduced purposely or accidentally into an area." class="keyTextEm">$1lien</a>$2!){
+				}
+				if(s!<<11>>(A| a)lkali<<11>>!<a href="\/IJM_glossary.html#alkali" title="Soil or water with a high pH (i.e., basic), often found in areas where evaporation concentrates dissolved solutes." class="keyTextEm">$1lkali</a>$2!){
+				}
+				if(s!<<12>>(A| a)lkaline<<12>>!<a href="\/IJM_glossary.html#alkaline" title="Soil or water with a high pH (i.e., basic), often found in areas where evaporation concentrates dissolved solutes." class="keyTextEm">$1lkaline</a>$2!){
+				}
+				if(s!<<13>>(A| a)lluvial<<13>>!<a href="\/IJM_glossary.html#alluvial" title="Pertaining to sediments deposited by flowing water." class="keyTextEm">$1lluvial</a>$2!){
+				}
+				if(s!<<14>>(A| a)lpine<<14>>!<a href="\/IJM_glossary.html#alpine" title="Pertaining to the vegetational--altitudinal zone above timberline; zone above the subalpine." class="keyTextEm">$1lpine</a>$2!){
+				}
+				if(s!<<15>>(A| a)lternate<<15>>!<a href="\/IJM_glossary.html#alternate" title="1. Arranged singly, often spirally, along an axis - e.g., one leaf per node. 2. Occurring in different ranks, appearing to be between, not directly above or below, as 'stamens alternate petals'." class="keyTextEm">$1lternate</a>$2!){
+				}
+				if(s!<<16>>(A| a)ngiosperm<<16>>!<a href="\/IJM_glossary.html#angiosperm" title="Plant that bears flowers (hence, 'flowering plant'), in which 'vesseled seeds' (hence, angio-sperm) are enclosed in an ovary; woody to herbaceous." class="keyTextEm">$1ngiosperm</a>$2!){
+				}
+				if(s!<<17>>(A| a)ngiosperms<<17>>!<a href="\/IJM_glossary.html#angiosperms" title="Plant that bears flowers (hence, 'flowering plant'), in which 'vesseled seeds' (hence, angio-sperm) are enclosed in an ovary; woody to herbaceous." class="keyTextEm">$1ngiosperms</a>$2!){
+				}
+				if(s!<<18>>(A| a)nnual<<18>>!<a href="\/IJM_glossary.html#annual" title="Completing life cycle (germination through death) in one year or growing season, generally non-woody." class="keyTextEm">$1nnual</a>$2!){
+				}
+				if(s!<<19>>(A| a)nnulus<<19>>!<a href="\/IJM_glossary.html#annulus" title="On the sporangium of most ferns, a row of cells with partly thickened walls that functions in the release of spores." class="keyTextEm">$1nnulus</a>$2!){
+				}
+				if(s!<<20>>(A| a)nnuli<<20>>!<a href="\/IJM_glossary.html#annuli" title="On the sporangium of most ferns, a row of cells with partly thickened walls that functions in the release of spores." class="keyTextEm">$1nnuli</a>$2!){
+				}
+				if(s!<<21>>(A| a)nther<<21>>!<a href="\/IJM_glossary.html#anther" title="Pollen-bearing portion of a stamen, including one, two, or four pollen sacs." class="keyTextEm">$1nther</a>$2!){
+				}
+				if(s!<<22>>(A| a)nthers<<22>>!<a href="\/IJM_glossary.html#anthers" title="Pollen-bearing portion of a stamen, including one, two, or four pollen sacs." class="keyTextEm">$1nthers</a>$2!){
+				}
+				if(s!<<23>>(A| a)ppressed<<23>>!<a href="\/IJM_glossary.html#appressed" title="Parallel or nearly parallel to and often in contact with surface of origin; used to describe the disposition of hairs, leaves, pedicels, etc." class="keyTextEm">$1ppressed</a>$2!){
+				}
+				if(s!<<24>>(A| a)pogamous<<24>>!<a href="\/IJM_glossary.html#apogamous" title=" Forming a sporophyte (the generation in a vascular plant life cycle that is conspicuous, 2n, and produces spores, which give rise to gametophytes) from a gametophyte (the generation in a vascular plant life cycle that is inconspicuous, n, and produces sperms and eggs, which usually unite in fertilization to give rise to sporophytes) by direct, asexual development, rather than by fertilization of eggs by sperms." class="keyTextEm">$1pogamous</a>$2!){
+				}
+				if(s!<<25>>(A| a)quatic<<25>>!<a href="\/IJM_glossary.html#aquatic" title="Growing under, in, or on water (generally fresh; if brackish, saline, or marine, so indicated), whether rooted in bottom or floating, and including plants with parts of shoots submersed but with other parts above water; excluding plants of seeps or wet rocks. (e.g., Potamogeton gramineus)" class="keyTextEm">$1quatic</a>$2!){
+				}
+				if(s!<<26>>(A| a)reole<<26>>!<a href="\/IJM_glossary.html#areole" title="1. In Cactaceae, a well-defined, axillary area bearing one to many spines and generally other, shorter structures  (e.g., Ferocactus cylindraceus).  2.  In general, each of many areas defined by smallest veins on a leaf ." class="keyTextEm">$1reole</a>$2!){
+				}
+				if(s!<<27>>(A| a)reoles<<27>>!<a href="\/IJM_glossary.html#areoles" title="1. In Cactaceae, a well-defined, axillary area bearing one to many spines and generally other, shorter structures  (e.g., Ferocactus cylindraceus).  2.  In general, each of many areas defined by smallest veins on a leaf ." class="keyTextEm">$1reoles</a>$2!){
+				}
+				if(s!<<28>>(A| a)ril<<28>>!<a href="\/IJM_glossary.html#aril" title="Fleshy, corky, or bony appendage arising at or near the point of seed attachment, sometimes completely covering the seed." class="keyTextEm">$1ril</a>$2!){
+				}
+				if(s!<<29>>(A| a)rils<<29>>!<a href="\/IJM_glossary.html#arils" title="Fleshy, corky, or bony appendage arising at or near the point of seed attachment, sometimes completely covering the seed." class="keyTextEm">$1rils</a>$2!){
+				}
+				if(s!<<30>>(A| a)rmed<<30>>!<a href="\/IJM_glossary.html#armed" title="Bearing prickles, spines, or thorns." class="keyTextEm">$1rmed</a>$2!){
+				}
+				if(s!<<31>>(A| a)scending<<31>>!<a href="\/IJM_glossary.html#ascending" title="Curving or angling upward from base, or about 30-60 degrees less than vertical or away from axis of attachment." class="keyTextEm">$1scending</a>$2!){
+				}
+				if(s!<<32>>(A| a)symmetric<<32>>!<a href="\/IJM_glossary.html#asymmetric" title="Not divisible into identical or mirror-image halves." class="keyTextEm">$1symmetric</a>$2!){
+				}
+				if(s!<<33>>(A| a)uricle<<33>>!<a href="\/IJM_glossary.html#auricle" title="In Poaceae, a structure, often lanceolate, projecting from both margins of the leaf lateral to the ligule." class="keyTextEm">$1uricle</a>$2!){
+				}
+				if(s!<<34>>(A| a)uricles<<34>>!<a href="\/IJM_glossary.html#auricles" title="In Poaceae, a structure, often lanceolate, projecting from both margins of the leaf lateral to the ligule." class="keyTextEm">$1uricles</a>$2!){
+				}
+				if(s!<<35>>(A| a)wn<<35>>!<a href="\/IJM_glossary.html#awn" title="1. Bristle-like appendage or elongation, generally terminal.  2. Stiff, needle-like pappus element in Asteraceae." class="keyTextEm">$1wn</a>$2!){
+				}
+				if(s!<<36>>(A| a)wns<<36>>!<a href="\/IJM_glossary.html#awns" title="1. Bristle-like appendage or elongation, generally terminal.  2. Stiff, needle-like pappus element in Asteraceae." class="keyTextEm">$1wns</a>$2!){
+				}
+				if(s!<<37>>(A| a)xil<<37>>!<a href="\/IJM_glossary.html#axil" title="Distal, adaxial angle between an appendage or branch and a main axis (e.g., between leaf and stem, or between lateral vein and midrib on a leaf)." class="keyTextEm">$1xil</a>$2!){
+				}
+				if(s!<<38>>(A| a)xils<<38>>!<a href="\/IJM_glossary.html#axils" title="Distal, adaxial angle between an appendage or branch and a main axis (e.g., between leaf and stem, or between lateral vein and midrib on a leaf)." class="keyTextEm">$1xils</a>$2!){
+				}
+				if(s!<<39>>(A| a)xile<<39>>!<a href="\/IJM_glossary.html#axile" title="Pertaining to an axis, as of a placenta along the central axis in a compound ovary with more than one chamber." class="keyTextEm">$1xile</a>$2!){
+				}
+				if(s!<<40>>(A| a)xillary<<40>>!<a href="\/IJM_glossary.html#axillary" title="Pertaining to or within an axil, especially a leaf axil." class="keyTextEm">$1xillary</a>$2!){
+				}
+				if(s!<<41>>(A| a)xis<<41>>!<a href="\/IJM_glossary.html#axis" title="Line of direction, growth, or extension; structure occupying such a position - e.g., the main stem of a plant or inflorescence, the midrib of a leaf." class="keyTextEm">$1xis</a>$2!){
+				}
+				if(s!<<42>>(A| a)xes<<42>>!<a href="\/IJM_glossary.html#axes" title="Line of direction, growth, or extension; structure occupying such a position - e.g., the main stem of a plant or inflorescence, the midrib of a leaf." class="keyTextEm">$1xes</a>$2!){
+				}
+				if(s!<<43>>(B| b)anner<<43>>!<a href="\/IJM_glossary.html#banner" title="Uppermost, often largest petal of many members of Fabaceae." class="keyTextEm">$1anner</a>$2!){
+				}
+				if(s!<<44>>(B| b)arbed<<44>>!<a href="\/IJM_glossary.html#barbed" title="Having sharp, normally downward- or backward-pointing projections.  Said of an awn, bristle, or other structure." class="keyTextEm">$1arbed</a>$2!){
+				}
+				if(s!<<45>>(B| b)ark<<45>>!<a href="\/IJM_glossary.html#bark" title="Tough tissue (including phloem) covering the wood (hardened xylem) of subshrubs, shrubs, trees, and some vines." class="keyTextEm">$1ark</a>$2!){
+				}
+				if(s!<<46>>(B| b)asal<<46>>!<a href="\/IJM_glossary.html#basal" title="At or near the base of a plant or plant part.  Especially said of leaves clustered near the ground or of a placenta confined to the base of an ovary." class="keyTextEm">$1asal</a>$2!){
+				}
+				if(s!<<47>>(B| b)eak<<47>>!<a href="\/IJM_glossary.html#beak" title=" Generally distal or terminal, narrowed, generally sterile part of fruit or surrounding structures (e.g., Ambrosia bur, Carex perigynium)." class="keyTextEm">$1eak</a>$2!){
+				}
+				if(s!<<48>>(B| b)eaks<<48>>!<a href="\/IJM_glossary.html#beaks" title=" Generally distal or terminal, narrowed, generally sterile part of fruit or surrounding structures (e.g., Ambrosia bur, Carex perigynium)." class="keyTextEm">$1eaks</a>$2!){
+				}
+				if(s!<<49>>(B| b)erry<<49>>!<a href="\/IJM_glossary.html#berry" title="Fleshy, indehiscent fruit in which the seeds are generally more than 1 and are not encased in a stone. (e.g., Solanum americanum)" class="keyTextEm">$1erry</a>$2!){
+				}
+				if(s!<<50>>(B| b)iennial<<50>>!<a href="\/IJM_glossary.html#biennial" title="Completing life cycle (germination through death) in two years or growing seasons (generally flowering only in the second), non-woody (at least above ground), often with a rosette the first growing season." class="keyTextEm">$1iennial</a>$2!){
+				}
+				if(s!<<51>>(B| b)ilateral<<51>>!<a href="\/IJM_glossary.html#bilateral" title="Divisible into mirror-image halves in only one way." class="keyTextEm">$1ilateral</a>$2!){
+				}
+				if(s!<<52>>(B| b)iradial<<52>>!<a href="\/IJM_glossary.html#biradial" title="Divisible into mirror-image halves in two ways; isobilateral." class="keyTextEm">$1iradial</a>$2!){
+				}
+				if(s!<<53>>(B| b)isexual<<53>>!<a href="\/IJM_glossary.html#bisexual" title="Both male and female reproductive parts occurring and functional in the same plant or structure (e.g., flower, spikelet, inflorescence)." class="keyTextEm">$1isexual</a>$2!){
+				}
+				if(s!<<54>>(B| b)lade<<54>>!<a href="\/IJM_glossary.html#blade" title="Expanded portion of a leaf, petal, or other structure, generally flat but sometimes rolled, cylindric, wavy, or cupped." class="keyTextEm">$1lade</a>$2!){
+				}
+				if(s!<<55>>(B| b)lades<<55>>!<a href="\/IJM_glossary.html#blades" title="Expanded portion of a leaf, petal, or other structure, generally flat but sometimes rolled, cylindric, wavy, or cupped." class="keyTextEm">$1lades</a>$2!){
+				}
+				if(s!<<56>>(B| b)rackish<<56>>!<a href="\/IJM_glossary.html#brackish" title="Somewhat salty, generally a mixture of saline and fresh water." class="keyTextEm">$1rackish</a>$2!){
+				}
+				if(s!<<57>>(B| b)ract<<57>>!<a href="\/IJM_glossary.html#bract" title="Reduced, leaf- or scale-like structure subtending a branch, cone scale, peduncle, pedicel, or flower." class="keyTextEm">$1ract</a>$2!){
+				}
+				if(s!<<58>>(B| b)racts<<58>>!<a href="\/IJM_glossary.html#bracts" title="Reduced, leaf- or scale-like structure subtending a branch, cone scale, peduncle, pedicel, or flower." class="keyTextEm">$1racts</a>$2!){
+				}
+				if(s!<<59>>(B| b)ractlet<<59>>!<a href="\/IJM_glossary.html#bractlet" title="1. Relatively small, generally secondary bract within an inflorescence.  2. Bract-like structure on a pedicel that often does not directly subtend another structure." class="keyTextEm">$1ractlet</a>$2!){
+				}
+				if(s!<<60>>(B| b)ractlets<<60>>!<a href="\/IJM_glossary.html#bractlets" title="1. Relatively small, generally secondary bract within an inflorescence.  2. Bract-like structure on a pedicel that often does not directly subtend another structure." class="keyTextEm">$1ractlets</a>$2!){
+				}
+				if(s!<<61>>(B| b)ristle<<61>>!<a href="\/IJM_glossary.html#bristle" title="1. Relatively large, generally stiff, more or less straight hair. (e.g., Navarretia breweri) 2. In Asteraceae, fine, cylindric or minutely flattened pappus element (e.g., Calycoseris parryi) or epidermal outgrowth on the receptacle (e.g., Centaurea solstitialis)." class="keyTextEm">$1ristle</a>$2!){
+				}
+				if(s!<<62>>(B| b)ristles<<62>>!<a href="\/IJM_glossary.html#bristles" title="1. Relatively large, generally stiff, more or less straight hair. (e.g., Navarretia breweri) 2. In Asteraceae, fine, cylindric or minutely flattened pappus element (e.g., Calycoseris parryi) or epidermal outgrowth on the receptacle (e.g., Centaurea solstitialis)." class="keyTextEm">$1ristles</a>$2!){
+				}
+				if(s!<<63>>(B| b)ud<<63>>!<a href="\/IJM_glossary.html#bud" title="1. An incompletely developed, more or less embryonic shoot, usually covered with bud scales.  2. An unopened flower, often protected by sepals." class="keyTextEm">$1ud</a>$2!){
+				}
+				if(s!<<64>>(B| b)uds<<64>>!<a href="\/IJM_glossary.html#buds" title="1. An incompletely developed, more or less embryonic shoot, usually covered with bud scales.  2. An unopened flower, often protected by sepals." class="keyTextEm">$1uds</a>$2!){
+				}
+				if(s!<<65>>(B| b)ulb<<65>>!<a href="\/IJM_glossary.html#bulb" title="Short underground stem and the fleshy leaves or leaf bases attached to and surrounding it (e.g., an onion)." class="keyTextEm">$1ulb</a>$2!){
+				}
+				if(s!<<66>>(B| b)ulbs<<66>>!<a href="\/IJM_glossary.html#bulbs" title="Short underground stem and the fleshy leaves or leaf bases attached to and surrounding it (e.g., an onion)." class="keyTextEm">$1ulbs</a>$2!){
+				}
+				if(s!<<67>>(B| b)ulblet<<67>>!<a href="\/IJM_glossary.html#bulblet" title="1. Small bulb generally produced at the base of a bulb.  2. Any small, bulb-like structure that propagates a plant, often in a leaf or bract axil." class="keyTextEm">$1ulblet</a>$2!){
+				}
+				if(s!<<68>>(B| b)ulblets<<68>>!<a href="\/IJM_glossary.html#bulblets" title="1. Small bulb generally produced at the base of a bulb.  2. Any small, bulb-like structure that propagates a plant, often in a leaf or bract axil." class="keyTextEm">$1ulblets</a>$2!){
+				}
+				if(s!<<69>>(B| b)ur<<69>>!<a href="\/IJM_glossary.html#bur" title="Fruit or fruiting inflorescence with awns or bristles, often barbed.  (e.g., Xanthium strumarium)" class="keyTextEm">$1ur</a>$2!){
+				}
+				if(s!<<70>>(C| c)allus<<70>>!<a href="\/IJM_glossary.html#callus" title="1. In some Poaceae, enlarged or projected hard base of floret; sometimes hairy or sharp-pointed. 2. A firm protuberance." class="keyTextEm">$1allus</a>$2!){
+				}
+				if(s!<<71>>(C| c)alyx<<71>>!<a href="\/IJM_glossary.html#calyx" title="Collective term for sepals; outermost or lowermost whorl of flower parts, generally green and enclosing remainder of flower in bud.  Sometimes indistinguishable from corolla." class="keyTextEm">$1alyx</a>$2!){
+				}
+				if(s!<<72>>(C| c)anescent<<72>>!<a href="\/IJM_glossary.html#canescent" title="Covered with dense, fine, generally grayish white hairs.  (e.g., Phoenicaulis cheiranthoides leaf)" class="keyTextEm">$1anescent</a>$2!){
+				}
+				if(s!<<73>>(C| c)apsule<<73>>!<a href="\/IJM_glossary.html#capsule" title="Dry fruit from compound pistil, nearly always dehiscent (irregularly or by pores, slits, or lines of separation)." class="keyTextEm">$1apsule</a>$2!){
+				}
+				if(s!<<74>>(C| c)apsules<<74>>!<a href="\/IJM_glossary.html#capsules" title="Dry fruit from compound pistil, nearly always dehiscent (irregularly or by pores, slits, or lines of separation)." class="keyTextEm">$1apsules</a>$2!){
+				}
+				if(s!<<75>>(C| c)arpel<<75>>!<a href="\/IJM_glossary.html#carpel" title="The basic female structure of a flower, evolved from a fertile leaf.  Carpels are free or variously fused into a compound pistil, the number of carpels then often equal to the number of stigmas, styles, or chambers of the ovary." class="keyTextEm">$1arpel</a>$2!){
+				}
+				if(s!<<76>>(C| c)arpels<<76>>!<a href="\/IJM_glossary.html#carpels" title="The basic female structure of a flower, evolved from a fertile leaf.  Carpels are free or variously fused into a compound pistil, the number of carpels then often equal to the number of stigmas, styles, or chambers of the ovary." class="keyTextEm">$1arpels</a>$2!){
+				}
+				if(s!<<77>>(C| c)artilaginous<<77>>!<a href="\/IJM_glossary.html#cartilaginous" title="thickened, usually whitish, sometimes flexible; in ferns, applied especially to margins of blades." class="keyTextEm">$1artilaginous</a>$2!){
+				}
+				if(s!<<78>>(C| c)atkin<<78>>!<a href="\/IJM_glossary.html#catkin" title="Spike or spike-like (e.g., Alnus) inflorescence of unisexual flowers with inconspicuous perianths (generally wind-pollinated), usually pendent and often with conspicuous bracts." class="keyTextEm">$1atkin</a>$2!){
+				}
+				if(s!<<79>>(C| c)atkins<<79>>!<a href="\/IJM_glossary.html#catkins" title="Spike or spike-like (e.g., Alnus) inflorescence of unisexual flowers with inconspicuous perianths (generally wind-pollinated), usually pendent and often with conspicuous bracts." class="keyTextEm">$1atkins</a>$2!){
+				}
+				if(s!<<80>>(C| c)audex<<80>>!<a href="\/IJM_glossary.html#caudex" title="Generally short, sometimes woody, more or less vertical stem of a perennial, at or beneath ground level." class="keyTextEm">$1audex</a>$2!){
+				}
+				if(s!<<81>>(C| c)audices<<81>>!<a href="\/IJM_glossary.html#caudices" title="Generally short, sometimes woody, more or less vertical stem of a perennial, at or beneath ground level." class="keyTextEm">$1audices</a>$2!){
+				}
+				if(s!<<82>>(C| c)auline<<82>>!<a href="\/IJM_glossary.html#cauline" title="Pertaining to structures, especially leaves, borne along (i.e., not confined to the base of) an elongate, above-ground  stem; not basal." class="keyTextEm">$1auline</a>$2!){
+				}
+				if(s!<<83>>(C| c)espitose<<83>>!<a href="\/IJM_glossary.html#cespitose" title="Having a densely clumped, tufted, matted, or cushion-like growth form." class="keyTextEm">$1espitose</a>$2!){
+				}
+				if(s!<<84>>(C| c)hamber<<84>>!<a href="\/IJM_glossary.html#chamber" title="Compartment or cavity within an ovary, capsule, or other hollow structure." class="keyTextEm">$1hamber</a>$2!){
+				}
+				if(s!<<85>>(C| c)hambers<<85>>!<a href="\/IJM_glossary.html#chambers" title="Compartment or cavity within an ovary, capsule, or other hollow structure." class="keyTextEm">$1hambers</a>$2!){
+				}
+				if(s!<<86>>(C| c)haparral<<86>>!<a href="\/IJM_glossary.html#chaparral" title="Vegetation dominated by mostly evergreen shrubs with thick, leathery leaves and stiff branches." class="keyTextEm">$1haparral</a>$2!){
+				}
+				if(s!<<87>>(C| c)iliate<<87>>!<a href="\/IJM_glossary.html#ciliate" title="Having generally straight, conspicuous hairs along margins or edges." class="keyTextEm">$1iliate</a>$2!){
+				}
+				if(s!<<88>>(C| c)ircumboreal<<88>>!<a href="\/IJM_glossary.html#circumboreal" title="Occurring around the world at northern latitudes." class="keyTextEm">$1ircumboreal</a>$2!){
+				}
+				if(s!<<89>>(C| c)ircumscissile<<89>>!<a href="\/IJM_glossary.html#circumscissile" title="Dehiscence, usually of a fruit (capsule), by a transverse line, the top coming off as a lid." class="keyTextEm">$1ircumscissile</a>$2!){
+				}
+				if(s!<<90>>(C| c)law<<90>>!<a href="\/IJM_glossary.html#claw" title="Stalk-like base of some free or nearly free sepals or petals." class="keyTextEm">$1law</a>$2!){
+				}
+				if(s!<<91>>(C| c)laws<<91>>!<a href="\/IJM_glossary.html#claws" title="Stalk-like base of some free or nearly free sepals or petals." class="keyTextEm">$1laws</a>$2!){
+				}
+				if(s!<<92>>(C| c)leistogamous<<92>>!<a href="\/IJM_glossary.html#cleistogamous" title="Bud-like, unopening flowers that are generally self-fertilized." class="keyTextEm">$1leistogamous</a>$2!){
+				}
+				if(s!<<93>>(C| c)lone<<93>>!<a href="\/IJM_glossary.html#clone" title="Genetically identical individuals resulting from asexual reproduction (fragmentation of rhizomes or stolons, budding, etc.); often used for an apparent population, the members of which are or were connected (e.g., aspens, cattails, duckweeds, sumacs)." class="keyTextEm">$1lone</a>$2!){
+				}
+				if(s!<<94>>(C| c)lones<<94>>!<a href="\/IJM_glossary.html#clones" title="Genetically identical individuals resulting from asexual reproduction (fragmentation of rhizomes or stolons, budding, etc.); often used for an apparent population, the members of which are or were connected (e.g., aspens, cattails, duckweeds, sumacs)." class="keyTextEm">$1lones</a>$2!){
+				}
+				if(s!<<95>>(C| c)losed-cone forest<<95>>!<a href="\/IJM_glossary.html#closed-cone forest" title="Vegetation dominated by species of Pinus or Cupressus in which the seed cones persist unopened on the branches for extended periods of time; dominated by closely spaced +- tall trees." class="keyTextEm">$1losed-cone forest</a>$2!){
+				}
+				if(s!<<96>>(C| c)oastal redwood<<96>>!<a href="\/IJM_glossary.html#coastal redwood" title="Vegetation dominated by Sequoia sempervirens, occurring on slopes and canyons of coastal mountain ranges; dominated by closely spaced +- tall trees." class="keyTextEm">$1oastal redwood</a>$2!){
+				}
+				if(s!<<97>>(C| c)oastal scrub<<97>>!<a href="\/IJM_glossary.html#coastal scrub" title="Coastal vegetation dominated mostly by shrubs with flexible branches, e.g., Baccharis pilularis, Artemesia californica" class="keyTextEm">$1oastal scrub</a>$2!){
+				}
+				if(s!<<98>>(C| c)oastal strand<<98>>!<a href="\/IJM_glossary.html#coastal strand" title="Beach and foredune habitat, characterized by sandy soils, strong winds, salt spray, and wave action." class="keyTextEm">$1oastal strand</a>$2!){
+				}
+				if(s!<<99>>(C| c)ollar<<99>>!<a href="\/IJM_glossary.html#collar" title="1. In Poaceae, the abaxial junction of leaf sheath and blade. 2. Raised, inflated, or wing-like, encircling projection (e.g., the seeds of Delphinium luteum, D. nudicaule)" class="keyTextEm">$1ollar</a>$2!){
+				}
+				if(s!<<100>>(C| c)ollars<<100>>!<a href="\/IJM_glossary.html#collars" title="1. In Poaceae, the abaxial junction of leaf sheath and blade. 2. Raised, inflated, or wing-like, encircling projection (e.g., the seeds of Delphinium luteum, D. nudicaule)" class="keyTextEm">$1ollars</a>$2!){
+				}
+				if(s!<<101>>(C| c)olumn<<101>>!<a href="\/IJM_glossary.html#column" title="Structure at the center of an orchid flower formed by fusion of stamen(s) and style." class="keyTextEm">$1olumn</a>$2!){
+				}
+				if(s!<<102>>(C| c)olumns<<102>>!<a href="\/IJM_glossary.html#columns" title="Structure at the center of an orchid flower formed by fusion of stamen(s) and style." class="keyTextEm">$1olumns</a>$2!){
+				}
+				if(s!<<103>>(C| c)ompound<<103>>!<a href="\/IJM_glossary.html#compound" title="1. Composed of two or more parts, as a compound leaf composed of leaflets or a compound pistil composed of fused or partly fused carpels.  2. Repeating a structural pattern (a compound umbel is an umbel of umbels)." class="keyTextEm">$1ompound</a>$2!){
+				}
+				if(s!<<104>>(C| c)ompressed<<104>>!<a href="\/IJM_glossary.html#compressed" title="Flattened side-to-side or front-to-back." class="keyTextEm">$1ompressed</a>$2!){
+				}
+				if(s!<<105>>(C| c)oncave<<105>>!<a href="\/IJM_glossary.html#concave" title="Hollowed or indented, as the interior of a curved surface." class="keyTextEm">$1oncave</a>$2!){
+				}
+				if(s!<<106>>(C| c)one<<106>>!<a href="\/IJM_glossary.html#cone" title="Reproductive structure composed of an axis, scales, and sometimes bracts.  1.  Non-woody structure producing spores (e.g., clubmosses, horsetails) or pollen (e.g., male cone of conifers).  2. Generally woody structure producing seeds (e.g., female cones of most conifers).  (e.g., Abies concolor)" class="keyTextEm">$1one</a>$2!){
+				}
+				if(s!<<107>>(C| c)ones<<107>>!<a href="\/IJM_glossary.html#cones" title="Reproductive structure composed of an axis, scales, and sometimes bracts.  1.  Non-woody structure producing spores (e.g., clubmosses, horsetails) or pollen (e.g., male cone of conifers).  2. Generally woody structure producing seeds (e.g., female cones of most conifers).  (e.g., Abies concolor)" class="keyTextEm">$1ones</a>$2!){
+				}
+				if(s!<<108>>(C| c)onic<<108>>!<a href="\/IJM_glossary.html#conic" title="Three-dimensional, defined by a wide, more or less round base, the sides evenly tapered to a narrow tip." class="keyTextEm">$1onic</a>$2!){
+				}
+				if(s!<<109>>(C| c)oniferous forest<<109>>!<a href="\/IJM_glossary.html#coniferous forest" title="Vegetation dominated by trees belonging to various species of conifers (e.g., firs, pines, redwoods); dominated by closely spaced +- tall trees." class="keyTextEm">$1oniferous forest</a>$2!){
+				}
+				if(s!<<110>>(C| c)ontinuous<<110>>!<a href="\/IJM_glossary.html#continuous" title="Having parts spaced evenly and without interruption, not clumped; pertaining especially to  inflorescences in which the flowers are evenly spaced." class="keyTextEm">$1ontinuous</a>$2!){
+				}
+				if(s!<<111>>(C| c)onvex<<111>>!<a href="\/IJM_glossary.html#convex" title="Rounded outward, as the exterior of a curved surface." class="keyTextEm">$1onvex</a>$2!){
+				}
+				if(s!<<112>>(C| c)ordate<<112>>!<a href="\/IJM_glossary.html#cordate" title="Heart-shaped; often pertaining to a leaf in which the blade base on both sides of the petiole is rounded and convex." class="keyTextEm">$1ordate</a>$2!){
+				}
+				if(s!<<113>>(C| c)orm<<113>>!<a href="\/IJM_glossary.html#corm" title="Short, thick, unbranched, underground stem often surrounded by dry (not fleshy) leaves or leaf bases. (e.g., Muilla maritima)" class="keyTextEm">$1orm</a>$2!){
+				}
+				if(s!<<114>>(C| c)orms<<114>>!<a href="\/IJM_glossary.html#corms" title="Short, thick, unbranched, underground stem often surrounded by dry (not fleshy) leaves or leaf bases. (e.g., Muilla maritima)" class="keyTextEm">$1orms</a>$2!){
+				}
+				if(s!<<115>>(C| c)orolla<<115>>!<a href="\/IJM_glossary.html#corolla" title="Collective term for petals; whorl of flower parts immediately inside or above calyx, often large and brightly colored.  Sometimes indistinguishable from calyx." class="keyTextEm">$1orolla</a>$2!){
+				}
+				if(s!<<116>>(C| c)orollas<<116>>!<a href="\/IJM_glossary.html#corollas" title="Collective term for petals; whorl of flower parts immediately inside or above calyx, often large and brightly colored.  Sometimes indistinguishable from calyx." class="keyTextEm">$1orollas</a>$2!){
+				}
+				if(s!<<117>>(C| c)osta<<117>>!<a href="\/IJM_glossary.html#costa" title="In ferns, primary axis of a pinna." class="keyTextEm">$1osta</a>$2!){
+				}
+				if(s!<<118>>(C| c)ostule<<118>>!<a href="\/IJM_glossary.html#costule" title="In ferns, primary axis of a pinnule." class="keyTextEm">$1ostule</a>$2!){
+				}
+				if(s!<<119>>(C| c)ostulet<<119>>!<a href="\/IJM_glossary.html#costulet" title="In ferns, primary axis of a pinnulet." class="keyTextEm">$1ostulet</a>$2!){
+				}
+				if(s!<<120>>(C| c)otyledon<<120>>!<a href="\/IJM_glossary.html#cotyledon" title="Seed-leaf; a modified leaf present in the seed, often functioning for food storage.  Persistent in some annuals and of aid in their identification.  (e.g., Lupinus microcarpus)" class="keyTextEm">$1otyledon</a>$2!){
+				}
+				if(s!<<121>>(C| c)otyledons<<121>>!<a href="\/IJM_glossary.html#cotyledons" title="Seed-leaf; a modified leaf present in the seed, often functioning for food storage.  Persistent in some annuals and of aid in their identification.  (e.g., Lupinus microcarpus)" class="keyTextEm">$1otyledons</a>$2!){
+				}
+				if(s!<<122>>(C| c)renate<<122>>!<a href="\/IJM_glossary.html#crenate" title="Pertaining to margins with shallow, rounded teeth, between which are usually acute sinuses (i.e., scalloped)" class="keyTextEm">$1renate</a>$2!){
+				}
+				if(s!<<123>>(C| c)ylindric<<123>>!<a href="\/IJM_glossary.html#cylindric" title="Elongate, with parallel sides and, at any point, round in transverse section." class="keyTextEm">$1ylindric</a>$2!){
+				}
+				if(s!<<124>>(C| c)yme<<124>>!<a href="\/IJM_glossary.html#cyme" title="1. In flowering plants excluding Asteraceae and some other groups, a branched inflorescence in which the central or uppermost flower opens before the peripheral or lowermost flowers on any axis.  see 2. In Asteraceae and some other groups, a cyme-like inflorescence is one in which the central or uppermost inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, develop and mature before the peripheral or lowermost inflorescence units on any axis." class="keyTextEm">$1yme</a>$2!){
+				}
+				if(s!<<125>>(C| c)ymes<<125>>!<a href="\/IJM_glossary.html#cymes" title="1. In flowering plants excluding Asteraceae and some other groups, a branched inflorescence in which the central or uppermost flower opens before the peripheral or lowermost flowers on any axis.  see 2. In Asteraceae and some other groups, a cyme-like inflorescence is one in which the central or uppermost inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, develop and mature before the peripheral or lowermost inflorescence units on any axis." class="keyTextEm">$1ymes</a>$2!){
+				}
+				if(s!<<126>>(D| d)eciduous<<126>>!<a href="\/IJM_glossary.html#deciduous" title="Falling off naturally.  1. Pertaining to leaves that all fall seasonally, or to plants that are seasonally leafless. 2.  Pertaining to structures, such as hairs or flower parts, that fall early or readily." class="keyTextEm">$1eciduous</a>$2!){
+				}
+				if(s!<<127>>(D| d)ecumbent<<127>>!<a href="\/IJM_glossary.html#decumbent" title="lying mostly flat on the ground but with tips curving up." class="keyTextEm">$1ecumbent</a>$2!){
+				}
+				if(s!<<128>>(D| d)ecurrent<<128>>!<a href="\/IJM_glossary.html#decurrent" title="Pertaining to a wing-like or ridge-like extension basal to  the apparent  or actual point of attachment, particularly a leaf base that appears to continue onto the stem." class="keyTextEm">$1ecurrent</a>$2!){
+				}
+				if(s!<<129>>(D| d)ehiscent<<129>>!<a href="\/IJM_glossary.html#dehiscent" title="Opening at maturity to release contents; usually pertaining to anthers or fruits." class="keyTextEm">$1ehiscent</a>$2!){
+				}
+				if(s!<<130>>(D| d)eltate<<130>>!<a href="\/IJM_glossary.html#deltate" title="More or less equilaterally triangular, with the corners rounded or not." class="keyTextEm">$1eltate</a>$2!){
+				}
+				if(s!<<131>>(D| d)ense<<131>>!<a href="\/IJM_glossary.html#dense" title="Congested or compact; especially pertaining to the disposition of flowers in an inflorescence." class="keyTextEm">$1ense</a>$2!){
+				}
+				if(s!<<132>>(D| d)entate<<132>>!<a href="\/IJM_glossary.html#dentate" title="Having margins with sharp, relatively coarse teeth pointing outward, not tipward." class="keyTextEm">$1entate</a>$2!){
+				}
+				if(s!<<133>>(D| d)epressed<<133>>!<a href="\/IJM_glossary.html#depressed" title="Flattened from above and below, or with the center lower than the margins." class="keyTextEm">$1epressed</a>$2!){
+				}
+				if(s!<<134>>(D| d)esert<<134>>!<a href="\/IJM_glossary.html#desert" title="Region and associated communities characterized by low and irregular precipitation and prolonged periods of drought." class="keyTextEm">$1esert</a>$2!){
+				}
+				if(s!<<135>>(D| d)ioecious<<135>>!<a href="\/IJM_glossary.html#dioecious" title="Pertaining to a taxon in which individuals produce either male or female reproductive structures, and do not produce bisexual reproductive structures.  (e.g., Salix laevigata)" class="keyTextEm">$1ioecious</a>$2!){
+				}
+				if(s!<<136>>(D| d)igitate<<136>>!<a href="\/IJM_glossary.html#digitate" title="In Poaceae, pertaining to an inflorescence of two or more spike-like branches attached at the same point at the apex of the inflorescence stalk." class="keyTextEm">$1igitate</a>$2!){
+				}
+				if(s!<<137>>(D| d)iploid<<137>>!<a href="\/IJM_glossary.html#diploid" title="Having two sets of chromosomes (maternal and paternal); 2n." class="keyTextEm">$1iploid</a>$2!){
+				}
+				if(s!<<138>>(D| d)isciform head<<138>>!<a href="\/IJM_glossary.html#disciform head" title="In Asteraceae, a head composed of disk flowers and marginal pistillate (or sterile) flowers with minute or missing laminae, superficially similar to discoid head." class="keyTextEm">$1isciform head</a>$2!){
+				}
+				if(s!<<139>>(D| d)iscoid head<<139>>!<a href="\/IJM_glossary.html#discoid head" title="In Asteraceae, a head composed entirely of disk flowers." class="keyTextEm">$1iscoid head</a>$2!){
+				}
+				if(s!<<140>>(D| d)isk flower<<140>>!<a href="\/IJM_glossary.html#disk flower" title="In Asteraceae, a generally bisexual (occasionally staminate or sterile, never pistillate), generally radial flower with a 5- (rarely 4-) lobed corolla; appearing without other flower types (in discoid head), or with marginal flowers of a different type (in radiate, radiant, or disciform heads)." class="keyTextEm">$1isk flower</a>$2!){
+				}
+				if(s!<<141>>(D| d)isk flowers<<141>>!<a href="\/IJM_glossary.html#disk flowers" title="In Asteraceae, a generally bisexual (occasionally staminate or sterile, never pistillate), generally radial flower with a 5- (rarely 4-) lobed corolla; appearing without other flower types (in discoid head), or with marginal flowers of a different type (in radiate, radiant, or disciform heads)." class="keyTextEm">$1isk flowers</a>$2!){
+				}
+				if(s!<<142>>(D| d)issected<<142>>!<a href="\/IJM_glossary.html#dissected" title="Deeply, often sharply cut but not compound; usually pertaining to leaves.  (e.g., Cymopteris deserticola)" class="keyTextEm">$1issected</a>$2!){
+				}
+				if(s!<<143>>(D| d)istal<<143>>!<a href="\/IJM_glossary.html#distal" title="Farther away from the base, origin, or point of attachment, or closer to the edge or tip." class="keyTextEm">$1istal</a>$2!){
+				}
+				if(s!<<144>>(D| d)istally<<144>>!<a href="\/IJM_glossary.html#distally" title="Farther away from the base, origin, or point of attachment, or closer to the edge or tip." class="keyTextEm">$1istally</a>$2!){
+				}
+				if(s!<<145>>(D| d)rupe<<145>>!<a href="\/IJM_glossary.html#drupe" title="Fleshy or pulpy, indehiscent, superficially berry-like fruit in which 1 seed is encased in a stone (as in cherries), or more than 1 seed is encased in an equal number of free or variously fused stones (as in manzanitas).  (e.g., Prunus emarginata fruit)" class="keyTextEm">$1rupe</a>$2!){
+				}
+				if(s!<<146>>(D| d)rupes<<146>>!<a href="\/IJM_glossary.html#drupes" title="Fleshy or pulpy, indehiscent, superficially berry-like fruit in which 1 seed is encased in a stone (as in cherries), or more than 1 seed is encased in an equal number of free or variously fused stones (as in manzanitas).  (e.g., Prunus emarginata fruit)" class="keyTextEm">$1rupes</a>$2!){
+				}
+				if(s!<<147>>(D| d)une<<147>>!<a href="\/IJM_glossary.html#dune" title="Hill or ridge of sand formed by the wind." class="keyTextEm">$1une</a>$2!){
+				}
+				if(s!<<148>>(D| d)unes<<148>>!<a href="\/IJM_glossary.html#dunes" title="Hill or ridge of sand formed by the wind." class="keyTextEm">$1unes</a>$2!){
+				}
+				if(s!<<149>>(E| e)lliptic<<149>>!<a href="\/IJM_glossary.html#elliptic" title="In the shape of a flattened circle or ellipse; wider than linear" class="keyTextEm">$1lliptic</a>$2!){
+				}
+				if(s!<<150>>(E| e)mergent<<150>>!<a href="\/IJM_glossary.html#emergent" title="Pertaining to a plant normally rooted underwater and extending above the water surface, or to a part of such a plant normally held above the water surface.  (e.g., Polygonum amphibium)" class="keyTextEm">$1mergent</a>$2!){
+				}
+				if(s!<<151>>(E| e)ndemic<<151>>!<a href="\/IJM_glossary.html#endemic" title="Native to and restricted to a defined geographic area." class="keyTextEm">$1ndemic</a>$2!){
+				}
+				if(s!<<152>>(E| e)ntire<<152>>!<a href="\/IJM_glossary.html#entire" title="Having margins that are continuous and smooth (i.e., without teeth, lobes, etc.)." class="keyTextEm">$1ntire</a>$2!){
+				}
+				if(s!<<153>>(E| e)phemeral<<153>>!<a href="\/IJM_glossary.html#ephemeral" title="Lasting a short time.  1. Pertaining to individual plants, completing the life cycle (germination through death) or growth cycle in much less than one year.   2.  Pertaining to plant parts,  falling early or remaining functional for a relatively short time (e.g., less than a day for flower parts)." class="keyTextEm">$1phemeral</a>$2!){
+				}
+				if(s!<<154>>(E| e)pidermis<<154>>!<a href="\/IJM_glossary.html#epidermis" title="Outermost cell layer (or layers) of non-woody plant parts." class="keyTextEm">$1pidermis</a>$2!){
+				}
+				if(s!<<155>>(E| e)pipetalous<<155>>!<a href="\/IJM_glossary.html#epipetalous" title="Pertaining to stamens that are fused to the petals to various extents and therefore appear to arise from them." class="keyTextEm">$1pipetalous</a>$2!){
+				}
+				if(s!<<156>>(E| e)rect<<156>>!<a href="\/IJM_glossary.html#erect" title="Upright; vertically oriented." class="keyTextEm">$1rect</a>$2!){
+				}
+				if(s!<<157>>(E| e)stuarine<<157>>!<a href="\/IJM_glossary.html#estuarine" title="Pertaining to aquatic habitats where freshwater from streams mixes with sea water in a protected area, resulting in a gradation of brackish waters with varying degrees of salinity." class="keyTextEm">$1stuarine</a>$2!){
+				}
+				if(s!<<158>>(E| e)vergreen<<158>>!<a href="\/IJM_glossary.html#evergreen" title="Never leafless; usually pertaining to leaves that remain green and on the plant for more than one season, and that do not all fall seasonally, or to plants that are never leafless." class="keyTextEm">$1vergreen</a>$2!){
+				}
+				if(s!<<159>>(E| e)xceeding<<159>>!<a href="\/IJM_glossary.html#exceeding" title="Surpassing tipward, due to relative orientation or length of the structures involved (e.g., lateral branches exceeding inflorescences; hoods exceeded by anther head in Asclepias californica; hoods slightly exceeding anther head in Asclepias erosa)." class="keyTextEm">$1xceeding</a>$2!){
+				}
+				if(s!<<160>>(E| e)xserted<<160>>!<a href="\/IJM_glossary.html#exserted" title="Protruding out of surrounding structure(s) (e.g., stamens exserted from corolla)." class="keyTextEm">$1xserted</a>$2!){
+				}
+				if(s!<<161>>(E| e)xtant<<161>>!<a href="\/IJM_glossary.html#extant" title="Currently existing or surviving somewhere." class="keyTextEm">$1xtant</a>$2!){
+				}
+				if(s!<<162>>(E| e)xtinct<<162>>!<a href="\/IJM_glossary.html#extinct" title="No longer existing or surviving anywhere." class="keyTextEm">$1xtinct</a>$2!){
+				}
+				if(s!<<163>>(E| e)xtirpated<<163>>!<a href="\/IJM_glossary.html#extirpated" title="No longer existing or surviving in a defined geographic area, as either a direct or indirect result of human activity." class="keyTextEm">$1xtirpated</a>$2!){
+				}
+				if(s!<<164>>(E| e)xudate<<164>>!<a href="\/IJM_glossary.html#exudate" title="Material discharged (exuded) from a plant, often with characteristic odor, color, or texture (e.g., sticky, gummy, slippery)." class="keyTextEm">$1xudate</a>$2!){
+				}
+				if(s!<<165>>(F| f)ertile<<165>>!<a href="\/IJM_glossary.html#fertile" title="Reproductively functional; pertaining to a plant or plant part that produces or is associated with the production of functional spores, pollen, ovules, or seeds (e.g., fertile frond, fertile stamen, fertile flower, fertile floret)." class="keyTextEm">$1ertile</a>$2!){
+				}
+				if(s!<<166>>(F| f)ibrous<<166>>!<a href="\/IJM_glossary.html#fibrous" title="1. Pertaining to structures that are composed at least in part of more or less thread-like but usually tough elements (e.g., Yucca leaves).  2.  Pertaining to a root system composed of many roots similar in length and thickness (e.g., grass roots)." class="keyTextEm">$1ibrous</a>$2!){
+				}
+				if(s!<<167>>(F| f)ilament<<167>>!<a href="\/IJM_glossary.html#filament" title="Anther-stalk portion of a stamen, often thread-like." class="keyTextEm">$1ilament</a>$2!){
+				}
+				if(s!<<168>>(F| f)ilaments<<168>>!<a href="\/IJM_glossary.html#filaments" title="Anther-stalk portion of a stamen, often thread-like." class="keyTextEm">$1ilaments</a>$2!){
+				}
+				if(s!<<169>>(F| f)leshy<<169>>!<a href="\/IJM_glossary.html#fleshy" title="Thick and juicy; succulent.  (e.g., Sesuvium verrucosum)" class="keyTextEm">$1leshy</a>$2!){
+				}
+				if(s!<<170>>(F| f)loret<<170>>!<a href="\/IJM_glossary.html#floret" title="In Poaceae, a single flower and its immediately subtending bracts (lemma and generally palea, the lemma subtending the palea when the latter is present); in a sterile floret, the flower and sometimes palea are rudimentary or absent." class="keyTextEm">$1loret</a>$2!){
+				}
+				if(s!<<171>>(F| f)lorets<<171>>!<a href="\/IJM_glossary.html#florets" title="In Poaceae, a single flower and its immediately subtending bracts (lemma and generally palea, the lemma subtending the palea when the latter is present); in a sterile floret, the flower and sometimes palea are rudimentary or absent." class="keyTextEm">$1lorets</a>$2!){
+				}
+				if(s!<<172>>(F| f)ollicle<<172>>!<a href="\/IJM_glossary.html#follicle" title="Dry fruit from a simple pistil, dehiscent on only one side, along a single suture.  A single flower may develop into a simple fruit of 1 follicle or an aggregate fruit of several follicles." class="keyTextEm">$1ollicle</a>$2!){
+				}
+				if(s!<<173>>(F| f)ollicles<<173>>!<a href="\/IJM_glossary.html#follicles" title="Dry fruit from a simple pistil, dehiscent on only one side, along a single suture.  A single flower may develop into a simple fruit of 1 follicle or an aggregate fruit of several follicles." class="keyTextEm">$1ollicles</a>$2!){
+				}
+				if(s!<<174>>(F| f)oothill<<174>>!<a href="\/IJM_glossary.html#foothill" title="Slope at the base of a mountain; especially applied to such features in CA-FP." class="keyTextEm">$1oothill</a>$2!){
+				}
+				if(s!<<175>>(F| f)oothills<<175>>!<a href="\/IJM_glossary.html#foothills" title="Slope at the base of a mountain; especially applied to such features in CA-FP." class="keyTextEm">$1oothills</a>$2!){
+				}
+				if(s!<<176>>(F| f)orked<<176>>!<a href="\/IJM_glossary.html#forked" title="Pertaining to a hair or other structure that branches into two parts." class="keyTextEm">$1orked</a>$2!){
+				}
+				if(s!<<177>>(F| f)ree<<177>>!<a href="\/IJM_glossary.html#free" title="Neither fused to nor adherent to other parts; distinct, separate." class="keyTextEm">$1ree</a>$2!){
+				}
+				if(s!<<178>>(F| f)ree-central<<178>>!<a href="\/IJM_glossary.html#free-central" title="Pertaining to a placenta along the central axis in a compound ovary with only one chamber." class="keyTextEm">$1ree-central</a>$2!){
+				}
+				if(s!<<179>>(F| f)ringed<<179>>!<a href="\/IJM_glossary.html#fringed" title="Having ragged or finely cut margins." class="keyTextEm">$1ringed</a>$2!){
+				}
+				if(s!<<180>>(F| f)rond<<180>>!<a href="\/IJM_glossary.html#frond" title="In ferns, a leaf, often compound or dissected, borne on a rhizome." class="keyTextEm">$1rond</a>$2!){
+				}
+				if(s!<<181>>(F| f)ruit<<181>>!<a href="\/IJM_glossary.html#fruit" title="An ovary or ovaries and sometimes associated structures after ovule  fertilization (i.e., seed initiation).  A simple fruit develops from one ovary (e.g., cherry, apple, the latter derived largely from the hypanthium); aggregate and multiple fruits develop from ovaries of one and more than one flower, respectively, that remain distinct yet held together as a unit (e.g., a strawberry is an aggregate fruit of achenes held together by a juicy, red flower receptacle; a fig is a multiple fruit of achenes surrounded by a fleshy inflorescence receptacle." class="keyTextEm">$1ruit</a>$2!){
+				}
+				if(s!<<182>>(F| f)ruits<<182>>!<a href="\/IJM_glossary.html#fruits" title="An ovary or ovaries and sometimes associated structures after ovule  fertilization (i.e., seed initiation).  A simple fruit develops from one ovary (e.g., cherry, apple, the latter derived largely from the hypanthium); aggregate and multiple fruits develop from ovaries of one and more than one flower, respectively, that remain distinct yet held together as a unit (e.g., a strawberry is an aggregate fruit of achenes held together by a juicy, red flower receptacle; a fig is a multiple fruit of achenes surrounded by a fleshy inflorescence receptacle." class="keyTextEm">$1ruits</a>$2!){
+				}
+				if(s!<<183>>(F| f)unnel-shaped<<183>>!<a href="\/IJM_glossary.html#funnel-shaped" title="Widening from the base more or less gradually through the throat into an ascending, spreading, or recurved limb; often applied to a fused calyx or corolla." class="keyTextEm">$1unnel-shaped</a>$2!){
+				}
+				if(s!<<184>>(F| f)used<<184>>!<a href="\/IJM_glossary.html#fused" title="United, as the petals together into a corolla tube or stamens onto petals; neither free nor adherent." class="keyTextEm">$1used</a>$2!){
+				}
+				if(s!<<185>>(F| f)usiform<<185>>!<a href="\/IJM_glossary.html#fusiform" title="Elongate, widest at the middle, tapered to both ends." class="keyTextEm">$1usiform</a>$2!){
+				}
+				if(s!<<186>>(G| g)labrous<<186>>!<a href="\/IJM_glossary.html#glabrous" title="Without hairs." class="keyTextEm">$1labrous</a>$2!){
+				}
+				if(s!<<187>>(G| g)land<<187>>!<a href="\/IJM_glossary.html#gland" title="A small, often spheric body, on or embedded in the epidermis or at the tip of a hair, that exudes a generally sticky substance.  (e.g., Psorothamnus arborescens)" class="keyTextEm">$1land</a>$2!){
+				}
+				if(s!<<188>>(G| g)lands<<188>>!<a href="\/IJM_glossary.html#glands" title="A small, often spheric body, on or embedded in the epidermis or at the tip of a hair, that exudes a generally sticky substance.  (e.g., Psorothamnus arborescens)" class="keyTextEm">$1lands</a>$2!){
+				}
+				if(s!<<189>>(G| g)landular<<189>>!<a href="\/IJM_glossary.html#glandular" title="A small, often spheric body, on or embedded in the epidermis or at the tip of a hair, that exudes a generally sticky substance.  (e.g., Psorothamnus arborescens)" class="keyTextEm">$1landular</a>$2!){
+				}
+				if(s!<<190>>(G| g)laucous<<190>>!<a href="\/IJM_glossary.html#glaucous" title="Covered with a generally whitish or bluish, waxy or powdery film that is sometimes easily rubbed off." class="keyTextEm">$1laucous</a>$2!){
+				}
+				if(s!<<191>>(G| g)lume<<191>>!<a href="\/IJM_glossary.html#glume" title="In Poaceae, each of generally two sheathing bracts that are the lowermost parts of a spikelet, subtending one or more florets." class="keyTextEm">$1lume</a>$2!){
+				}
+				if(s!<<192>>(G| g)lumes<<192>>!<a href="\/IJM_glossary.html#glumes" title="In Poaceae, each of generally two sheathing bracts that are the lowermost parts of a spikelet, subtending one or more florets." class="keyTextEm">$1lumes</a>$2!){
+				}
+				if(s!<<193>>(G| g)raduated<<193>>!<a href="\/IJM_glossary.html#graduated" title="In Asteraceae, pertaining to an involucre in which the phyllaries are of unequal length, with the outer shortest, the inner longest, and a gradual transition through multiple series between." class="keyTextEm">$1raduated</a>$2!){
+				}
+				if(s!<<194>>(G| g)ranular<<194>>!<a href="\/IJM_glossary.html#granular" title="Covered with minute bumps." class="keyTextEm">$1ranular</a>$2!){
+				}
+				if(s!<<195>>(G| g)rassland<<195>>!<a href="\/IJM_glossary.html#grassland" title="Vegetation dominated by various species of grasses, often mixed with various other kinds of herbs (not grasses) and sometimes scattered, low-growing shrubs." class="keyTextEm">$1rassland</a>$2!){
+				}
+				if(s!<<196>>(G| g)rasslands<<196>>!<a href="\/IJM_glossary.html#grasslands" title="Vegetation dominated by various species of grasses, often mixed with various other kinds of herbs (not grasses) and sometimes scattered, low-growing shrubs." class="keyTextEm">$1rasslands</a>$2!){
+				}
+				if(s!<<197>>(G| g)ymnosperm<<197>>!<a href="\/IJM_glossary.html#gymnosperm" title="Plant that bears woody or fleshy cones, not flowers, in which 'naked seeds' (hence, gymno-sperm) are not enclosed in an ovary; woody, including e.g., pine, sequoia, ephedra, yew." class="keyTextEm">$1ymnosperm</a>$2!){
+				}
+				if(s!<<198>>(G| g)ymnosperms<<198>>!<a href="\/IJM_glossary.html#gymnosperms" title="Plant that bears woody or fleshy cones, not flowers, in which 'naked seeds' (hence, gymno-sperm) are not enclosed in an ovary; woody, including e.g., pine, sequoia, ephedra, yew." class="keyTextEm">$1ymnosperms</a>$2!){
+				}
+				if(s!<<199>>(H| h)abit<<199>>!<a href="\/IJM_glossary.html#habit" title="Characteristic mode of growth, general form, or shape of a plant (e.g., cespitose, herb, scapose, shrub)." class="keyTextEm">$1abit</a>$2!){
+				}
+				if(s!<<200>>(H| h)abits<<200>>!<a href="\/IJM_glossary.html#habits" title="Characteristic mode of growth, general form, or shape of a plant (e.g., cespitose, herb, scapose, shrub)." class="keyTextEm">$1abits</a>$2!){
+				}
+				if(s!<<201>>(H| h)abitat<<201>>!<a href="\/IJM_glossary.html#habitat" title="Natural setting or conditions under which a plant lives (e.g., saltbush scrub, vernal pool, granitic soil among pines, montane forest)." class="keyTextEm">$1abitat</a>$2!){
+				}
+				if(s!<<202>>(H| h)abitats<<202>>!<a href="\/IJM_glossary.html#habitats" title="Natural setting or conditions under which a plant lives (e.g., saltbush scrub, vernal pool, granitic soil among pines, montane forest)." class="keyTextEm">$1abitats</a>$2!){
+				}
+				if(s!<<203>>(H| h)air<<203>>!<a href="\/IJM_glossary.html#hair" title="Thread-like epidermal outgrowth." class="keyTextEm">$1air</a>$2!){
+				}
+				if(s!<<204>>(H| h)airs<<204>>!<a href="\/IJM_glossary.html#hairs" title="Thread-like epidermal outgrowth." class="keyTextEm">$1airs</a>$2!){
+				}
+				if(s!<<205>>(H| h)aploid<<205>>!<a href="\/IJM_glossary.html#haploid" title="Having one set of chromosomes (maternal or paternal); n." class="keyTextEm">$1aploid</a>$2!){
+				}
+				if(s!<<206>>(H| h)astate<<206>>!<a href="\/IJM_glossary.html#hastate" title="Arrowhead-shaped, with two basal lobes oriented more or less perpendicularly to the long axis." class="keyTextEm">$1astate</a>$2!){
+				}
+				if(s!<<207>>(H| h)ead<<207>>!<a href="\/IJM_glossary.html#head" title="1. A dense, often spheric inflorescence of sessile or subsessile flowers.<br>2. In Asteraceae and some other groups, a head-like inflorescence is one in which sessile or subsessile inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, are attached in a short dense cluster without an evident axis or branches." class="keyTextEm">$1ead</a>$2!){
+				}
+				if(s!<<208>>(H| h)eads<<208>>!<a href="\/IJM_glossary.html#heads" title="1. A dense, often spheric inflorescence of sessile or subsessile flowers.<br>2. In Asteraceae and some other groups, a head-like inflorescence is one in which sessile or subsessile inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, are attached in a short dense cluster without an evident axis or branches." class="keyTextEm">$1eads</a>$2!){
+				}
+				if(s!<<209>>(H| h)emispheric<<209>>!<a href="\/IJM_glossary.html#hemispheric" title="Shaped like a dome or half sphere." class="keyTextEm">$1emispheric</a>$2!){
+				}
+				if(s!<<210>>(H| h)erb<<210>>!<a href="\/IJM_glossary.html#herb" title="Plant that, at least above ground, is generally non-woody and of less than one year or growing season in duration." class="keyTextEm">$1erb</a>$2!){
+				}
+				if(s!<<211>>(H| h)erbs<<211>>!<a href="\/IJM_glossary.html#herbs" title="Plant that, at least above ground, is generally non-woody and of less than one year or growing season in duration." class="keyTextEm">$1erbs</a>$2!){
+				}
+				if(s!<<212>>(H| h)erbaceous<<212>>!<a href="\/IJM_glossary.html#herbaceous" title="Lacking wood; having the characteristics of an herb." class="keyTextEm">$1erbaceous</a>$2!){
+				}
+				if(s!<<213>>(H| h)erbage<<213>>!<a href="\/IJM_glossary.html#herbage" title="The above-ground, non-woody parts of a plant, including especially the leaves and young stems taken together, excluding flowers and fruits." class="keyTextEm">$1erbage</a>$2!){
+				}
+				if(s!<<214>>(H| h)eterostylous<<214>>!<a href="\/IJM_glossary.html#heterostylous" title="Pertaining to a taxon in which individual plants produce only one of two or more flower types, each differing in style (and generally stamen) length." class="keyTextEm">$1eterostylous</a>$2!){
+				}
+				if(s!<<215>>(H| h)ypanthium<<215>>!<a href="\/IJM_glossary.html#hypanthium" title="Structure generally in the shape of a tube, cup, or bowl, derived from the fused lower portions of the perianth and stamens, from which these parts seem to arise, and to which the ovary wall is fused in an inferior ovary (to which the ovary wall is partially fused in a half-inferior ovary; from which the ovary is free in a superior ovary)." class="keyTextEm">$1ypanthium</a>$2!){
+				}
+				if(s!<<216>>(H| h)ypanthia<<216>>!<a href="\/IJM_glossary.html#hypanthia" title="Structure generally in the shape of a tube, cup, or bowl, derived from the fused lower portions of the perianth and stamens, from which these parts seem to arise, and to which the ovary wall is fused in an inferior ovary (to which the ovary wall is partially fused in a half-inferior ovary; from which the ovary is free in a superior ovary)." class="keyTextEm">$1ypanthia</a>$2!){
+				}
+				if(s!<<217>>(I| i)ncluded<<217>>!<a href="\/IJM_glossary.html#included" title="Not protruding out of surrounding structure(s) (e.g., stamens included in corolla)." class="keyTextEm">$1ncluded</a>$2!){
+				}
+				if(s!<<218>>(I| i)ndehiscent<<218>>!<a href="\/IJM_glossary.html#indehiscent" title="Not opening inherently to release contents; usually pertaining to fruits." class="keyTextEm">$1ndehiscent</a>$2!){
+				}
+				if(s!<<219>>(I| i)ndusium<<219>>!<a href="\/IJM_glossary.html#indusium" title="In many ferns, a veil- or scale-like outgrowth of the leaf surface that covers a sorus." class="keyTextEm">$1ndusium</a>$2!){
+				}
+				if(s!<<220>>(I| i)ndusia<<220>>!<a href="\/IJM_glossary.html#indusia" title="In many ferns, a veil- or scale-like outgrowth of the leaf surface that covers a sorus." class="keyTextEm">$1ndusia</a>$2!){
+				}
+				if(s!<<221>>(I| i)nferior<<221>>!<a href="\/IJM_glossary.html#inferior" title="An ovary that is fused to the fused lower portions of the perianth and stamens (i.e., to the hypanthium), to the extent that these structures appear to arise at or above its summit" class="keyTextEm">$1nferior</a>$2!){
+				}
+				if(s!<<222>>(I| i)nflorescence<<222>>!<a href="\/IJM_glossary.html#inflorescence" title="An entire cluster or aggregation of flowers and associated structures (e.g., axes, bracts, bractlets, pedicels); often difficult to determine as to type and boundaries but generally excluding full-sized foliage leaves." class="keyTextEm">$1nflorescence</a>$2!){
+				}
+				if(s!<<223>>(I| i)nflorescences<<223>>!<a href="\/IJM_glossary.html#inflorescences" title="An entire cluster or aggregation of flowers and associated structures (e.g., axes, bracts, bractlets, pedicels); often difficult to determine as to type and boundaries but generally excluding full-sized foliage leaves." class="keyTextEm">$1nflorescences</a>$2!){
+				}
+				if(s!<<224>>(I| i)nfraspecific<<224>>!<a href="\/IJM_glossary.html#infraspecific" title="Below the species level or within a species;  pertaining to variation within a species, whether taxonomically significant (i.e., characterizing subspecies or varieties) or not (e.g., characterizing forms or minor variants)." class="keyTextEm">$1nfraspecific</a>$2!){
+				}
+				if(s!<<225>>(I| i)ntergrade<<225>>!<a href="\/IJM_glossary.html#intergrade" title="To merge gradually from one extreme to another through a more or less continuous series of intermediates." class="keyTextEm">$1ntergrade</a>$2!){
+				}
+				if(s!<<226>>(I| i)ntermediate<<226>>!<a href="\/IJM_glossary.html#intermediate" title="Between extremes or parental taxa in size, shape, color, flowering time, habitat preferences, geographic ranges, or other ways." class="keyTextEm">$1ntermediate</a>$2!){
+				}
+				if(s!<<227>>(I| i)nternode<<227>>!<a href="\/IJM_glossary.html#internode" title="Segment of an axis (generally a stem) between successive positions (nodes) from which one or more structures (especially leaves, buds, branches, or flowers) arise." class="keyTextEm">$1nternode</a>$2!){
+				}
+				if(s!<<228>>(I| i)nternodes<<228>>!<a href="\/IJM_glossary.html#internodes" title="Segment of an axis (generally a stem) between successive positions (nodes) from which one or more structures (especially leaves, buds, branches, or flowers) arise." class="keyTextEm">$1nternodes</a>$2!){
+				}
+				if(s!<<229>>(I| i)nterrupted<<229>>!<a href="\/IJM_glossary.html#interrupted" title="Having parts spaced unevenly, clustered; pertaining especially to inflorescences in which the flowers are clustered." class="keyTextEm">$1nterrupted</a>$2!){
+				}
+				if(s!<<230>>(I| i)ntertidal<<230>>!<a href="\/IJM_glossary.html#intertidal" title="Pertaining to marine habitats that are submerged at high tide and exposed at low tide." class="keyTextEm">$1ntertidal</a>$2!){
+				}
+				if(s!<<231>>(I| i)nvolucel<<231>>!<a href="\/IJM_glossary.html#involucel" title="A secondary involucre (group of bracts) within an inflorescence (e.g., those subtending the secondary umbels in members of Apiaceae)." class="keyTextEm">$1nvolucel</a>$2!){
+				}
+				if(s!<<232>>(I| i)nvolucre<<232>>!<a href="\/IJM_glossary.html#involucre" title="Group of bracts more or less held together as a unit, subtending a flower, fruit (acorn cup), or inflorescence." class="keyTextEm">$1nvolucre</a>$2!){
+				}
+				if(s!<<233>>(I| i)nvolucres<<233>>!<a href="\/IJM_glossary.html#involucres" title="Group of bracts more or less held together as a unit, subtending a flower, fruit (acorn cup), or inflorescence." class="keyTextEm">$1nvolucres</a>$2!){
+				}
+				if(s!<<234>>(K| k)eel<<234>>!<a href="\/IJM_glossary.html#keel" title="1. Ridge or crease more or less centrally located on the long axis of a structure, generally on the abaxial side.  2. The two lowermost, fused petals of many members of Fabaceae." class="keyTextEm">$1eel</a>$2!){
+				}
+				if(s!<<235>>(K| k)eels<<235>>!<a href="\/IJM_glossary.html#keels" title="1. Ridge or crease more or less centrally located on the long axis of a structure, generally on the abaxial side.  2. The two lowermost, fused petals of many members of Fabaceae." class="keyTextEm">$1eels</a>$2!){
+				}
+				if(s!<<236>>(K| k)eeled<<236>>!<a href="\/IJM_glossary.html#keeled" title="1. Having a ridge or crease more or less centrally located on the long axis of a structure, generally on the abaxial side." class="keyTextEm">$1eeled</a>$2!){
+				}
+				if(s!<<237>>(L| l)amina<<237>>!<a href="\/IJM_glossary.html#lamina" title="In Asteraceae, the strap- or fan-shaped outer portion of the corolla of a ray flower, with generally 3 (sometimes 0, 2, or 4) lobes, or the similarly shaped, 3-lobed outer lip of the 2-lipped corolla of Trixis and Acourtia." class="keyTextEm">$1amina</a>$2!){
+				}
+				if(s!<<238>>(L| l)aminae<<238>>!<a href="\/IJM_glossary.html#laminae" title="In Asteraceae, the strap- or fan-shaped outer portion of the corolla of a ray flower, with generally 3 (sometimes 0, 2, or 4) lobes, or the similarly shaped, 3-lobed outer lip of the 2-lipped corolla of Trixis and Acourtia." class="keyTextEm">$1aminae</a>$2!){
+				}
+				if(s!<<239>>(L| l)anceolate<<239>>!<a href="\/IJM_glossary.html#lanceolate" title="Narrowly elongate, widest in the basal half, often tapered to an acute tip." class="keyTextEm">$1anceolate</a>$2!){
+				}
+				if(s!<<240>>(L| l)ateral<<240>>!<a href="\/IJM_glossary.html#lateral" title="Pertaining to the sides(s) of a structure; e.g., laterally compressed (flattened side-to-side), lateral branch, lateral appendage." class="keyTextEm">$1ateral</a>$2!){
+				}
+				if(s!<<241>>(L| l)eaf<<241>>!<a href="\/IJM_glossary.html#leaf" title="Organ arising from a stem, generally composed of a stalk (petiole) and a flat, expanded, green, photosynthetic area (blade); distinguished from a leaflet by the presence in its axil of a bud, branch, thorn, or flower; sometimes with lateral, basal appendages (stipules); either simple (toothed, lobed, or dissected but not divided into leaflets) or compound (divided into leaflets)." class="keyTextEm">$1eaf</a>$2!){
+				}
+				if(s!<<242>>(L| l)eaves<<242>>!<a href="\/IJM_glossary.html#leaves" title="Organ arising from a stem, generally composed of a stalk (petiole) and a flat, expanded, green, photosynthetic area (blade); distinguished from a leaflet by the presence in its axil of a bud, branch, thorn, or flower; sometimes with lateral, basal appendages (stipules); either simple (toothed, lobed, or dissected but not divided into leaflets) or compound (divided into leaflets)." class="keyTextEm">$1eaves</a>$2!){
+				}
+				if(s!<<243>>(L| l)eaflet<<243>>!<a href="\/IJM_glossary.html#leaflet" title="A leaf-like unit of a compound leaf; distinguished from a leaf by the absence in its axil of a bud, branch, thorn, or flower; lacking lateral, basal appendages (stipules); either simple (leaf 1-compound, with primary leaflets) or compound (leaf 2-compound, with primary and secondary leaflets; 3-compound, with primary, secondary, and tertiary leaflets, etc)." class="keyTextEm">$1eaflet</a>$2!){
+				}
+				if(s!<<244>>(L| l)eaflets<<244>>!<a href="\/IJM_glossary.html#leaflets" title="A leaf-like unit of a compound leaf; distinguished from a leaf by the absence in its axil of a bud, branch, thorn, or flower; lacking lateral, basal appendages (stipules); either simple (leaf 1-compound, with primary leaflets) or compound (leaf 2-compound, with primary and secondary leaflets; 3-compound, with primary, secondary, and tertiary leaflets, etc)." class="keyTextEm">$1eaflets</a>$2!){
+				}
+				if(s!<<245>>(L| l)egume<<245>>!<a href="\/IJM_glossary.html#legume" title="In Fabaceae (legume family), a dry or somewhat fleshy, one- to many-seeded fruit from a simple pistil, typically dehiscent longitudinally along two sutures and splitting into halves that remain joined at the base, sometimes indehiscent or breaking crosswise into one-seeded segments; a plant with such a fruit." class="keyTextEm">$1egume</a>$2!){
+				}
+				if(s!<<246>>(L| l)egumes<<246>>!<a href="\/IJM_glossary.html#legumes" title="In Fabaceae (legume family), a dry or somewhat fleshy, one- to many-seeded fruit from a simple pistil, typically dehiscent longitudinally along two sutures and splitting into halves that remain joined at the base, sometimes indehiscent or breaking crosswise into one-seeded segments; a plant with such a fruit." class="keyTextEm">$1egumes</a>$2!){
+				}
+				if(s!<<247>>(L| l)emma<<247>>!<a href="\/IJM_glossary.html#lemma" title="In Poaceae, the lower, generally larger of two sheathing bracts subtending a flower, generally ensheathing the palea (in a sterile lemma, the associated flower and sometimes palea are rudimentary or absent); with the palea and flower, comprising the floret." class="keyTextEm">$1emma</a>$2!){
+				}
+				if(s!<<248>>(L| l)emmas<<248>>!<a href="\/IJM_glossary.html#lemmas" title="In Poaceae, the lower, generally larger of two sheathing bracts subtending a flower, generally ensheathing the palea (in a sterile lemma, the associated flower and sometimes palea are rudimentary or absent); with the palea and flower, comprising the floret." class="keyTextEm">$1emmas</a>$2!){
+				}
+				if(s!<<249>>(L| l)enticel<<249>>!<a href="\/IJM_glossary.html#lenticel" title="Each of many spongy or calloused areas of various shapes, sizes, and colors, most commonly on surfaces of young stems (including twigs) or fruits." class="keyTextEm">$1enticel</a>$2!){
+				}
+				if(s!<<250>>(L| l)enticels<<250>>!<a href="\/IJM_glossary.html#lenticels" title="Each of many spongy or calloused areas of various shapes, sizes, and colors, most commonly on surfaces of young stems (including twigs) or fruits." class="keyTextEm">$1enticels</a>$2!){
+				}
+				if(s!<<251>>(L| l)enticular<<251>>!<a href="\/IJM_glossary.html#lenticular" title="Lens- or discus-shaped, with both major sides convex." class="keyTextEm">$1enticular</a>$2!){
+				}
+				if(s!<<252>>(L| l)igulate flower<<252>>!<a href="\/IJM_glossary.html#ligulate flower" title="In Asteraceae, a bisexual, bilateral flower with the outer portion of the corolla (the ligule) strap- or fan-shaped, 5-lobed; appearing only with other ligulate flowers in a liguliflorous head." class="keyTextEm">$1igulate flower</a>$2!){
+				}
+				if(s!<<253>>(L| l)igule<<253>>!<a href="\/IJM_glossary.html#ligule" title="1. In Asteraceae, the 5-lobed, strap- or fan-shaped outer portion of the corolla of a ligulate flower. 2. In most Poaceae and some other grass-like plants, an appendage at the adaxial junction of leaf sheath and blade, generally membranous, sometimes formed of hairs. 3. In Isoetes and, more obscurely, in Selaginella, a membrane that wholly or partially covers a sporangium." class="keyTextEm">$1igule</a>$2!){
+				}
+				if(s!<<254>>(L| l)igules<<254>>!<a href="\/IJM_glossary.html#ligules" title="1. In Asteraceae, the 5-lobed, strap- or fan-shaped outer portion of the corolla of a ligulate flower. 2. In most Poaceae and some other grass-like plants, an appendage at the adaxial junction of leaf sheath and blade, generally membranous, sometimes formed of hairs. 3. In Isoetes and, more obscurely, in Selaginella, a membrane that wholly or partially covers a sporangium." class="keyTextEm">$1igules</a>$2!){
+				}
+				if(s!<<255>>(L| l)iguliflorous<<255>>!<a href="\/IJM_glossary.html#liguliflorous" title="In Asteraceae, a head composed entirely of ligulate flowers." class="keyTextEm">$1iguliflorous</a>$2!){
+				}
+				if(s!<<256>>(L| l)imb<<256>>!<a href="\/IJM_glossary.html#limb" title="In calyces or corollas with fused sepals or petals, the expanded, often lobed portion distal to the tube or throat; in some free or nearly free sepals and petals, the expanded portion distal to the stalk-like base (claw)." class="keyTextEm">$1imb</a>$2!){
+				}
+				if(s!<<257>>(L| l)imbs<<257>>!<a href="\/IJM_glossary.html#limbs" title="In calyces or corollas with fused sepals or petals, the expanded, often lobed portion distal to the tube or throat; in some free or nearly free sepals and petals, the expanded portion distal to the stalk-like base (claw)." class="keyTextEm">$1imbs</a>$2!){
+				}
+				if(s!<<258>>(L| l)inear<<258>>!<a href="\/IJM_glossary.html#linear" title="Elongate, with nearly parallel sides; narrower than elliptic or oblong." class="keyTextEm">$1inear</a>$2!){
+				}
+				if(s!<<259>>(L| l)ip<<259>>!<a href="\/IJM_glossary.html#lip" title="1. Upper or lower of two parts in a bilateral, unequally divided calyx or corolla.  2. In Orchidaceae, generally the largest, lowest, most highly modified perianth part." class="keyTextEm">$1ip</a>$2!){
+				}
+				if(s!<<260>>(L| l)ips<<260>>!<a href="\/IJM_glossary.html#lips" title="1. Upper or lower of two parts in a bilateral, unequally divided calyx or corolla.  2. In Orchidaceae, generally the largest, lowest, most highly modified perianth part." class="keyTextEm">$1ips</a>$2!){
+				}
+				if(s!<<261>>(L| l)obe<<261>>!<a href="\/IJM_glossary.html#lobe" title="1. A major expansion or bulge, such as on the margin of a leaf, sepal, or petal, or on the surface of an ovary.  2. The free tips of otherwise fused structures, such as sepals or petals; larger than teeth." class="keyTextEm">$1obe</a>$2!){
+				}
+				if(s!<<262>>(L| l)obes<<262>>!<a href="\/IJM_glossary.html#lobes" title="1. A major expansion or bulge, such as on the margin of a leaf, sepal, or petal, or on the surface of an ovary.  2. The free tips of otherwise fused structures, such as sepals or petals; larger than teeth." class="keyTextEm">$1obes</a>$2!){
+				}
+				if(s!<<263>>(L| l)oculicidal<<263>>!<a href="\/IJM_glossary.html#loculicidal" title="Pertaining to dehiscence of a fruit (capsule) by a longitudinal line through the wall at or near the center of each chamber, such that each resulting segment corresponds to the two adjacent halves of two adjacent chambers, usually with a placenta-bearing septum centrally." class="keyTextEm">$1oculicidal</a>$2!){
+				}
+				if(s!<<264>>(L| l)ongitudinal<<264>>!<a href="\/IJM_glossary.html#longitudinal" title="Pertaining to length or the lengthwise dimension; parallel to the axis." class="keyTextEm">$1ongitudinal</a>$2!){
+				}
+				if(s!<<265>>(M| m)argin<<265>>!<a href="\/IJM_glossary.html#margin" title="The edge, generally of a leaf or perianth part." class="keyTextEm">$1argin</a>$2!){
+				}
+				if(s!<<266>>(M| m)argins<<266>>!<a href="\/IJM_glossary.html#margins" title="The edge, generally of a leaf or perianth part." class="keyTextEm">$1argins</a>$2!){
+				}
+				if(s!<<267>>(M| m)arsh<<267>>!<a href="\/IJM_glossary.html#marsh" title="Permanently or periodically inundated, mostly or completely treeless vegetation dominated by semi-aquatic herbs or subshrubs." class="keyTextEm">$1arsh</a>$2!){
+				}
+				if(s!<<268>>(M| m)arshes<<268>>!<a href="\/IJM_glossary.html#marshes" title="Permanently or periodically inundated, mostly or completely treeless vegetation dominated by semi-aquatic herbs or subshrubs." class="keyTextEm">$1arshes</a>$2!){
+				}
+				if(s!<<269>>(M| m)eadow<<269>>!<a href="\/IJM_glossary.html#meadow" title="Open grass- or sedge-dominated vegetation more or less surrounded by woodland or forest; meadow soils are generally seasonally moist and frequently are composed of fine-grained sediments." class="keyTextEm">$1eadow</a>$2!){
+				}
+				if(s!<<270>>(M| m)eadows<<270>>!<a href="\/IJM_glossary.html#meadows" title="Open grass- or sedge-dominated vegetation more or less surrounded by woodland or forest; meadow soils are generally seasonally moist and frequently are composed of fine-grained sediments." class="keyTextEm">$1eadows</a>$2!){
+				}
+				if(s!<<271>>(M| m)embranous<<271>>!<a href="\/IJM_glossary.html#membranous" title="Thin, dry or moist, pliable, often more or less translucent or variously colored, sometimes green.  (e.g., Leymus cinereus ligule)" class="keyTextEm">$1embranous</a>$2!){
+				}
+				if(s!<<272>>(M| m)ericarp<<272>>!<a href="\/IJM_glossary.html#mericarp" title="One of the (generally dry, indehiscent, 1-seeded) parts into which certain fruits (e.g. those of Apiaceae) separate at maturity." class="keyTextEm">$1ericarp</a>$2!){
+				}
+				if(s!<<273>>(M| m)ixed-evergreen forest<<273>>!<a href="\/IJM_glossary.html#mixed-evergreen forest" title="Vegetation dominated by a variable mixture of mostly or only hardwood tree species, most of which retain their leaves throughout the year; dominated by closely spaced +- tall trees." class="keyTextEm">$1ixed-evergreen forest</a>$2!){
+				}
+				if(s!<<274>>(M| m)onoecious<<274>>!<a href="\/IJM_glossary.html#monoecious" title="Pertaining to a taxon in which individuals produce both male and female reproductive structures, and do not produce bisexual reproductive structures.  (e.g., Alnus rhombifolia)" class="keyTextEm">$1onoecious</a>$2!){
+				}
+				if(s!<<275>>(M| m)onolete spore<<275>>!<a href="\/IJM_glossary.html#monolete spore" title="In spore-bearing plants, bilaterally symmetric spore on which the scar is linear and unbranched." class="keyTextEm">$1onolete spore</a>$2!){
+				}
+				if(s!<<276>>(M| m)ontane<<276>>!<a href="\/IJM_glossary.html#montane" title="Pertaining to mountains; vegetational--altitudinal zone between the foothill and subalpine zones." class="keyTextEm">$1ontane</a>$2!){
+				}
+				if(s!<<277>>(M| m)ucro<<277>>!<a href="\/IJM_glossary.html#mucro" title="An abrupt, short, sharp, narrow, terminal point, tip, or projection" class="keyTextEm">$1ucro</a>$2!){
+				}
+				if(s!<<278>>(M| m)ucronate<<278>>!<a href="\/IJM_glossary.html#mucronate" title="An abrupt, short, sharp, narrow, terminal point, tip, or projection" class="keyTextEm">$1ucronate</a>$2!){
+				}
+				if(s!<<279>>(N| n)ative<<279>>!<a href="\/IJM_glossary.html#native" title="Occurring naturally in an area, as neither a direct nor indirect consequence of human activity; indigenous; not alien." class="keyTextEm">$1ative</a>$2!){
+				}
+				if(s!<<280>>(N| n)aturalized<<280>>!<a href="\/IJM_glossary.html#naturalized" title="Alien (not native) and reproducing either sexually (e.g., by spores, seeds) or vegetatively (e.g., by sprouts, suckers) in the absence of any benefit, intentional or not, direct or indirect, of human activity, and thereby persisting beyond initial generation or establishment." class="keyTextEm">$1aturalized</a>$2!){
+				}
+				if(s!<<281>>(N| n)ectar<<281>>!<a href="\/IJM_glossary.html#nectar" title="A sugary solution, produced in nectaries, consumed primarily as an energy source by animal visitors, usually pollinators." class="keyTextEm">$1ectar</a>$2!){
+				}
+				if(s!<<282>>(N| n)ectary<<282>>!<a href="\/IJM_glossary.html#nectary" title="Variously shaped, nectar-producing structure(s) usually at or near the base of the inside of a flower (or sometimes elsewhere, such as in a perianth spur or on a petiole). (e.g., Symphoricarpos rotundifolius)" class="keyTextEm">$1ectary</a>$2!){
+				}
+				if(s!<<283>>(N| n)ectaries<<283>>!<a href="\/IJM_glossary.html#nectaries" title="Variously shaped, nectar-producing structure(s) usually at or near the base of the inside of a flower (or sometimes elsewhere, such as in a perianth spur or on a petiole). (e.g., Symphoricarpos rotundifolius)" class="keyTextEm">$1ectaries</a>$2!){
+				}
+				if(s!<<284>>(N| n)eedle<<284>>!<a href="\/IJM_glossary.html#needle" title="A narrowly linear, often waxy, generally evergreen leaf, especially of conifers." class="keyTextEm">$1eedle</a>$2!){
+				}
+				if(s!<<285>>(N| n)eedles<<285>>!<a href="\/IJM_glossary.html#needles" title="A narrowly linear, often waxy, generally evergreen leaf, especially of conifers." class="keyTextEm">$1eedles</a>$2!){
+				}
+				if(s!<<286>>(N| n)ode<<286>>!<a href="\/IJM_glossary.html#node" title="Position on a stem from which one or more structures (especially leaves, buds, branches, or flowers) arise." class="keyTextEm">$1ode</a>$2!){
+				}
+				if(s!<<287>>(N| n)odes<<287>>!<a href="\/IJM_glossary.html#nodes" title="Position on a stem from which one or more structures (especially leaves, buds, branches, or flowers) arise." class="keyTextEm">$1odes</a>$2!){
+				}
+				if(s!<<288>>(N| n)ut<<288>>!<a href="\/IJM_glossary.html#nut" title="Mostly dry, sometimes fleshy or pulpy, usually indehiscent fruit in which a single seed is encased in a hard shell.  (e.g., Quercus palmeri)" class="keyTextEm">$1ut</a>$2!){
+				}
+				if(s!<<289>>(N| n)uts<<289>>!<a href="\/IJM_glossary.html#nuts" title="Mostly dry, sometimes fleshy or pulpy, usually indehiscent fruit in which a single seed is encased in a hard shell.  (e.g., Quercus palmeri)" class="keyTextEm">$1uts</a>$2!){
+				}
+				if(s!<<290>>(N| n)utlet<<290>>!<a href="\/IJM_glossary.html#nutlet" title="Small, dry nut or nut-like fruit, usually several of which are produced by a single flower.  (e.g., Boraginaceae, Lamiaceae)" class="keyTextEm">$1utlet</a>$2!){
+				}
+				if(s!<<291>>(N| n)utlets<<291>>!<a href="\/IJM_glossary.html#nutlets" title="Small, dry nut or nut-like fruit, usually several of which are produced by a single flower.  (e.g., Boraginaceae, Lamiaceae)" class="keyTextEm">$1utlets</a>$2!){
+				}
+				if(s!<<292>>(O| o)blique<<292>>!<a href="\/IJM_glossary.html#oblique" title="Having unequal sides or an asymmetric base." class="keyTextEm">$1blique</a>$2!){
+				}
+				if(s!<<293>>(O| o)blong<<293>>!<a href="\/IJM_glossary.html#oblong" title="Longer than wide, with nearly parallel sides; wider than linear." class="keyTextEm">$1blong</a>$2!){
+				}
+				if(s!<<294>>(O| o)btuse<<294>>!<a href="\/IJM_glossary.html#obtuse" title="Having a short-tapered, blunt tip or base, the sides convex or straight and converging at more than a right angle." class="keyTextEm">$1btuse</a>$2!){
+				}
+				if(s!<<295>>(O| o)crea<<295>>!<a href="\/IJM_glossary.html#ocrea" title="A generally scarious sheath around the stem formed by the fusion of stipules." class="keyTextEm">$1crea</a>$2!){
+				}
+				if(s!<<296>>(O| o)creae<<296>>!<a href="\/IJM_glossary.html#ocreae" title="A generally scarious sheath around the stem formed by the fusion of stipules." class="keyTextEm">$1creae</a>$2!){
+				}
+				if(s!<<297>>(O| o)pen<<297>>!<a href="\/IJM_glossary.html#open" title="Uncongested or diffuse; especially pertaining to the disposition of flowers in an inflorescence." class="keyTextEm">$1pen</a>$2!){
+				}
+				if(s!<<298>>(O| o)pposite<<298>>!<a href="\/IJM_glossary.html#opposite" title="1.  Arranged in pairs along an axis - e.g., two leaves per node.  2.  Occurring in the same rank, directly above or below, as 'stamens opposite petals'.  3.  Located directly across from." class="keyTextEm">$1pposite</a>$2!){
+				}
+				if(s!<<299>>(O| o)vary<<299>>!<a href="\/IJM_glossary.html#ovary" title="Ovule-bearing, usually wider, basal portion of pistil, normally developing into a fruit as ovules become seeds; may be simple (one carpel, one chamber) or compound (two or more carpels, one or more chambers)." class="keyTextEm">$1vary</a>$2!){
+				}
+				if(s!<<300>>(O| o)varies<<300>>!<a href="\/IJM_glossary.html#ovaries" title="Ovule-bearing, usually wider, basal portion of pistil, normally developing into a fruit as ovules become seeds; may be simple (one carpel, one chamber) or compound (two or more carpels, one or more chambers)." class="keyTextEm">$1varies</a>$2!){
+				}
+				if(s!<<301>>(O| o)vary stalk<<301>>!<a href="\/IJM_glossary.html#ovary stalk" title="A pedestal-like, apical prolongation of a floral receptacle (often termed elsewhere a carpophore) or basal constriction of an ovary (often termed elsewhere a gynophore), above the level of perianth insertion, each with the result that the ovary or fruit appears to be stalked over and above the pedicel (whereas the demarcation between pedicel and ovary- or fruit-stalk is observable as the point of perianth insertion, carpophores generally are distinguished from gynophores only by anatomical study)." class="keyTextEm">$1vary stalk</a>$2!){
+				}
+				if(s!<<302>>(F| f)ruit stalk<<302>>!<a href="\/IJM_glossary.html#fruit stalk" title="A pedestal-like, apical prolongation of a floral receptacle (often termed elsewhere a carpophore) or basal constriction of an ovary (often termed elsewhere a gynophore), above the level of perianth insertion, each with the result that the ovary or fruit appears to be stalked over and above the pedicel (whereas the demarcation between pedicel and ovary- or fruit-stalk is observable as the point of perianth insertion, carpophores generally are distinguished from gynophores only by anatomical study)." class="keyTextEm">$1ruit stalk</a>$2!){
+				}
+				if(s!<<303>>(O| o)vate<<303>>!<a href="\/IJM_glossary.html#ovate" title="Egg-shaped (i.e., widest below the middle) in two dimensions (i.e., in one plane), as a leaf." class="keyTextEm">$1vate</a>$2!){
+				}
+				if(s!<<304>>(O| o)void<<304>>!<a href="\/IJM_glossary.html#ovoid" title="Egg-shaped (i.e., widest below the middle) in three dimensions, as a fruit." class="keyTextEm">$1void</a>$2!){
+				}
+				if(s!<<305>>(O| o)vule<<305>>!<a href="\/IJM_glossary.html#ovule" title="In gymnosperms and angiosperms, structure containing an egg, and normally developing into a seed after fertilization." class="keyTextEm">$1vule</a>$2!){
+				}
+				if(s!<<306>>(O| o)vules<<306>>!<a href="\/IJM_glossary.html#ovules" title="In gymnosperms and angiosperms, structure containing an egg, and normally developing into a seed after fertilization." class="keyTextEm">$1vules</a>$2!){
+				}
+				if(s!<<307>>(P| p)aleate<<307>>!<a href="\/IJM_glossary.html#paleate" title="1. In Asteraceae, a scale-like bract that subtends an individual flower on the receptacle (equal to 'chaff scale' in TJM), absent in some genera, restricted to a ring separating ray and disk flowers in most tarweed species. 2. In Poaceae, the distal, generally smaller of two sheathing bracts subtending a flower, generally two-veined and -keeled and ensheathed by the lemma; with the lemma and flower, comprising the floret." class="keyTextEm">$1aleate</a>$2!){
+				}
+				if(s!<<308>>(P| p)alea<<308>>!<a href="\/IJM_glossary.html#palea" title="1. In Asteraceae, a scale-like bract that subtends an individual flower on the receptacle (equal to 'chaff scale' in TJM), absent in some genera, restricted to a ring separating ray and disk flowers in most tarweed species. 2. In Poaceae, the distal, generally smaller of two sheathing bracts subtending a flower, generally two-veined and -keeled and ensheathed by the lemma; with the lemma and flower, comprising the floret." class="keyTextEm">$1alea</a>$2!){
+				}
+				if(s!<<309>>(P| p)aleae<<309>>!<a href="\/IJM_glossary.html#paleae" title="1. In Asteraceae, a scale-like bract that subtends an individual flower on the receptacle (equal to 'chaff scale' in TJM), absent in some genera, restricted to a ring separating ray and disk flowers in most tarweed species. 2. In Poaceae, the distal, generally smaller of two sheathing bracts subtending a flower, generally two-veined and -keeled and ensheathed by the lemma; with the lemma and flower, comprising the floret." class="keyTextEm">$1aleae</a>$2!){
+				}
+				if(s!<<310>>(P| p)almately<<310>>!<a href="\/IJM_glossary.html#palmately" title="More than two structures or parts (e.g., veins, lobes, or leaflets) radiating from a common point in two dimensions (i.e., in one plane)." class="keyTextEm">$1almately</a>$2!){
+				}
+				if(s!<<311>>(P| p)almate<<311>>!<a href="\/IJM_glossary.html#palmate" title="More than two structures or parts (e.g., veins, lobes, or leaflets) radiating from a common point in two dimensions (i.e., in one plane)." class="keyTextEm">$1almate</a>$2!){
+				}
+				if(s!<<312>>(P| p)anicle<<312>>!<a href="\/IJM_glossary.html#panicle" title="1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, a branched inflorescence in which the basal or lateral flowers (or some of them) open before the terminal or central flowers on any axis. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a panicle-like inflorescence is one in which at least some of  the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae),  instead of individual flowers, are attached (stalked or unstalked) to branches and not directly to the main axis of the inflorescence and in which floral development may or may not proceed as in 1." class="keyTextEm">$1anicle</a>$2!){
+				}
+				if(s!<<313>>(P| p)anicles<<313>>!<a href="\/IJM_glossary.html#panicles" title="1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, a branched inflorescence in which the basal or lateral flowers (or some of them) open before the terminal or central flowers on any axis. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a panicle-like inflorescence is one in which at least some of  the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae),  instead of individual flowers, are attached (stalked or unstalked) to branches and not directly to the main axis of the inflorescence and in which floral development may or may not proceed as in 1." class="keyTextEm">$1anicles</a>$2!){
+				}
+				if(s!<<314>>(P| p)apillate<<314>>!<a href="\/IJM_glossary.html#papillate" title="Pertaining to a surface (e.g., of a leaf, stigma, fruit) bearing small, rounded or conic protuberances (papillae)." class="keyTextEm">$1apillate</a>$2!){
+				}
+				if(s!<<315>>(P| p)appus<<315>>!<a href="\/IJM_glossary.html#pappus" title="In Asteraceae, the aggregate of structures such as awns, bristles, or scales arising from the top of the inferior ovary, in place of the calyx." class="keyTextEm">$1appus</a>$2!){
+				}
+				if(s!<<316>>(P| p)arasite<<316>>!<a href="\/IJM_glossary.html#parasite" title="A plant that benefits by taking resources from a physical connection to a host plant of another species; green parasites (hemiparasites) derive water and dissolved inorganic substances (e.g., mineral nutrients) from the connection and often are able to survive without it, while non-green parasites (holoparasites) obtain in addition energy-rich, organic compounds (products of photosynthesis) from the connection and cannot survive without it; the connection may or may not involve a fungal intermediate, and may or may not be detrimental to the host." class="keyTextEm">$1arasite</a>$2!){
+				}
+				if(s!<<317>>(P| p)arasites<<317>>!<a href="\/IJM_glossary.html#parasites" title="A plant that benefits by taking resources from a physical connection to a host plant of another species; green parasites (hemiparasites) derive water and dissolved inorganic substances (e.g., mineral nutrients) from the connection and often are able to survive without it, while non-green parasites (holoparasites) obtain in addition energy-rich, organic compounds (products of photosynthesis) from the connection and cannot survive without it; the connection may or may not involve a fungal intermediate, and may or may not be detrimental to the host." class="keyTextEm">$1arasites</a>$2!){
+				}
+				if(s!<<318>>(P| p)arietal<<318>>!<a href="\/IJM_glossary.html#parietal" title="Pertaining to placentas on the inside surface of the ovary wall in a compound ovary with one or more chambers." class="keyTextEm">$1arietal</a>$2!){
+				}
+				if(s!<<319>>(P| p)arietally<<319>>!<a href="\/IJM_glossary.html#parietally" title="Pertaining to placentas on the inside surface of the ovary wall in a compound ovary with one or more chambers." class="keyTextEm">$1arietally</a>$2!){
+				}
+				if(s!<<320>>(P| p)eat<<320>>!<a href="\/IJM_glossary.html#peat" title="Material formed by the partial decomposition in water of plant tissues, especially mosses (Sphagnum) or sedges." class="keyTextEm">$1eat</a>$2!){
+				}
+				if(s!<<321>>(P| p)eatland<<321>>!<a href="\/IJM_glossary.html#peatland" title="Moss- or herb-dominated freshwater wetland characterized by nutrient-deficient substrates and the accumulation of peat; often said (elsewhere, not in TJM2) to be bogs if acidic, fens if basic." class="keyTextEm">$1eatland</a>$2!){
+				}
+				if(s!<<322>>(P| p)eatlands<<322>>!<a href="\/IJM_glossary.html#peatlands" title="Moss- or herb-dominated freshwater wetland characterized by nutrient-deficient substrates and the accumulation of peat; often said (elsewhere, not in TJM2) to be bogs if acidic, fens if basic." class="keyTextEm">$1eatlands</a>$2!){
+				}
+				if(s!<<323>>(P| p)edicel<<323>>!<a href="\/IJM_glossary.html#pedicel" title="Stalk of an individual flower in an inflorescence, or the corresponding   structure in fruit." class="keyTextEm">$1edicel</a>$2!){
+				}
+				if(s!<<324>>(P| p)edicels<<324>>!<a href="\/IJM_glossary.html#pedicels" title="Stalk of an individual flower in an inflorescence, or the corresponding   structure in fruit." class="keyTextEm">$1edicels</a>$2!){
+				}
+				if(s!<<325>>(P| p)eduncle<<325>>!<a href="\/IJM_glossary.html#peduncle" title="Stalk of an individual flower borne singly, not in an inflorescence, or of an entire inflorescence, or the corresponding structure in fruit; the stalk subtending an involucre (e.g., in Asteraceae, Polygonaceae)." class="keyTextEm">$1eduncle</a>$2!){
+				}
+				if(s!<<326>>(P| p)eduncles<<326>>!<a href="\/IJM_glossary.html#peduncles" title="Stalk of an individual flower borne singly, not in an inflorescence, or of an entire inflorescence, or the corresponding structure in fruit; the stalk subtending an involucre (e.g., in Asteraceae, Polygonaceae)." class="keyTextEm">$1eduncles</a>$2!){
+				}
+				if(s!<<327>>(P| p)eltate<<327>>!<a href="\/IJM_glossary.html#peltate" title="With the stalk attached toward the middle, not at a margin, of a flat structure such as an indusium, scale, or leaf." class="keyTextEm">$1eltate</a>$2!){
+				}
+				if(s!<<328>>(P| p)endent<<328>>!<a href="\/IJM_glossary.html#pendent" title="Drooping, hanging, or suspended from a point of attachment above.  (e.g., Amelanchier utahensis fruit)" class="keyTextEm">$1endent</a>$2!){
+				}
+				if(s!<<329>>(P| p)erennial<<329>>!<a href="\/IJM_glossary.html#perennial" title="Completing life cycle (germination through death) in more than two years or growing seasons, generally non-woody (at least above ground) to woody; includes perennial herbs as well as subshrubs to trees; the abbreviation 'per' only refers to perennial herb, not to the word 'perennial' alone." class="keyTextEm">$1erennial</a>$2!){
+				}
+				if(s!<<330>>(P| p)erianth<<330>>!<a href="\/IJM_glossary.html#perianth" title="Calyx and corolla collectively, whether or not they are distinguishable." class="keyTextEm">$1erianth</a>$2!){
+				}
+				if(s!<<331>>(P| p)erianths<<331>>!<a href="\/IJM_glossary.html#perianths" title="Calyx and corolla collectively, whether or not they are distinguishable." class="keyTextEm">$1erianths</a>$2!){
+				}
+				if(s!<<332>>(P| p)erianth part<<332>>!<a href="\/IJM_glossary.html#perianth part" title="An individual member of a perianth; used whether or not calyx and corolla are distinguishable, but usually when they are not." class="keyTextEm">$1erianth part</a>$2!){
+				}
+				if(s!<<333>>(P| p)erigynium<<333>>!<a href="\/IJM_glossary.html#perigynium" title="Variously shaped, sac-like structure enclosing the ovary and achene in Carex and Kobresia." class="keyTextEm">$1erigynium</a>$2!){
+				}
+				if(s!<<334>>(P| p)ersistent<<334>>!<a href="\/IJM_glossary.html#persistent" title="Not falling off; remaining attached." class="keyTextEm">$1ersistent</a>$2!){
+				}
+				if(s!<<335>>(P| p)etal<<335>>!<a href="\/IJM_glossary.html#petal" title="Individual member of the corolla, whether fused or not; if fused, often equal in number to the number of corolla lobes; often conspicuously colored." class="keyTextEm">$1etal</a>$2!){
+				}
+				if(s!<<336>>(P| p)etals<<336>>!<a href="\/IJM_glossary.html#petals" title="Individual member of the corolla, whether fused or not; if fused, often equal in number to the number of corolla lobes; often conspicuously colored." class="keyTextEm">$1etals</a>$2!){
+				}
+				if(s!<<337>>(P| p)etiole<<337>>!<a href="\/IJM_glossary.html#petiole" title="Leaf stalk, connecting leaf blade to stem; sometimes more or less indistinct." class="keyTextEm">$1etiole</a>$2!){
+				}
+				if(s!<<338>>(P| p)etioles<<338>>!<a href="\/IJM_glossary.html#petioles" title="Leaf stalk, connecting leaf blade to stem; sometimes more or less indistinct." class="keyTextEm">$1etioles</a>$2!){
+				}
+				if(s!<<339>>(P| p)hyllary<<339>>!<a href="\/IJM_glossary.html#phyllary" title="In Asteraceae, a bract of the involucre." class="keyTextEm">$1hyllary</a>$2!){
+				}
+				if(s!<<340>>(P| p)hyllaries<<340>>!<a href="\/IJM_glossary.html#phyllaries" title="In Asteraceae, a bract of the involucre." class="keyTextEm">$1hyllaries</a>$2!){
+				}
+				if(s!<<341>>(P| p)inna<<341>>!<a href="\/IJM_glossary.html#pinna" title="In ferns, primary division of a compound or dissected frond blade." class="keyTextEm">$1inna</a>$2!){
+				}
+				if(s!<<342>>(P| p)innae<<342>>!<a href="\/IJM_glossary.html#pinnae" title="In ferns, primary division of a compound or dissected frond blade." class="keyTextEm">$1innae</a>$2!){
+				}
+				if(s!<<343>>(P| p)innate<<343>>!<a href="\/IJM_glossary.html#pinnate" title="Feather-like; pertaining to veins, lobes, leaflets, or other structures arranged in two dimensions (i.e., in one plane) along either side of an axis; a leaf is odd-pinnate if there is a terminal leaflet, even-pinnate if there is not, and either odd- or even-pinnate may be 1-pinnate (blade divided into primary leaflets), 2-pinnate (primary leaflets divided into secondary leaflets), 3-pinnate (secondary leaflets divided into tertiary leaflets), etc." class="keyTextEm">$1innate</a>$2!){
+				}
+				if(s!<<344>>(P| p)innately<<344>>!<a href="\/IJM_glossary.html#pinnately" title="Feather-like; pertaining to veins, lobes, leaflets, or other structures arranged in two dimensions (i.e., in one plane) along either side of an axis; a leaf is odd-pinnate if there is a terminal leaflet, even-pinnate if there is not, and either odd- or even-pinnate may be 1-pinnate (blade divided into primary leaflets), 2-pinnate (primary leaflets divided into secondary leaflets), 3-pinnate (secondary leaflets divided into tertiary leaflets), etc." class="keyTextEm">$1innately</a>$2!){
+				}
+				if(s!<<345>>(P| p)innule<<345>>!<a href="\/IJM_glossary.html#pinnule" title="In ferns, secondary division of a compound or dissected frond blade, primary division of a pinna." class="keyTextEm">$1innule</a>$2!){
+				}
+				if(s!<<346>>(P| p)innules<<346>>!<a href="\/IJM_glossary.html#pinnules" title="In ferns, secondary division of a compound or dissected frond blade, primary division of a pinna." class="keyTextEm">$1innules</a>$2!){
+				}
+				if(s!<<347>>(P| p)innulet<<347>>!<a href="\/IJM_glossary.html#pinnulet" title="In ferns, tertiary division of a compound or dissected frond blade, secondary division of a pinna, primary division of a pinnule." class="keyTextEm">$1innulet</a>$2!){
+				}
+				if(s!<<348>>(P| p)istil<<348>>!<a href="\/IJM_glossary.html#pistil" title="Female reproductive structure of a flower, composed of an ovule-containing ovary at the base, one or more pollen-receiving stigmas at the tip, and generally one or more styles between ovary and stigma.  A flower may have one or more simple pistils (each a single, free carpel with a single ovary chamber, placenta, and stigma) or one compound pistil (two or more fused or partially fused carpels, the exact number often equaling the number of ovary lobes, ovary chambers, placentas, styles, or stigmas)." class="keyTextEm">$1istil</a>$2!){
+				}
+				if(s!<<349>>(P| p)istils<<349>>!<a href="\/IJM_glossary.html#pistils" title="Female reproductive structure of a flower, composed of an ovule-containing ovary at the base, one or more pollen-receiving stigmas at the tip, and generally one or more styles between ovary and stigma.  A flower may have one or more simple pistils (each a single, free carpel with a single ovary chamber, placenta, and stigma) or one compound pistil (two or more fused or partially fused carpels, the exact number often equaling the number of ovary lobes, ovary chambers, placentas, styles, or stigmas)." class="keyTextEm">$1istils</a>$2!){
+				}
+				if(s!<<350>>(P| p)istillate<<350>>!<a href="\/IJM_glossary.html#pistillate" title="Pertaining to flowers, inflorescences, or plants with fertile pistils but sterile or missing stamens.  (e.g., Salix laevigata flower)" class="keyTextEm">$1istillate</a>$2!){
+				}
+				if(s!<<351>>(P| p)lacenta<<351>>!<a href="\/IJM_glossary.html#placenta" title="Structure or area to which ovules are attached in an ovary; variously shaped and positioned." class="keyTextEm">$1lacenta</a>$2!){
+				}
+				if(s!<<352>>(P| p)lacentas<<352>>!<a href="\/IJM_glossary.html#placentas" title="Structure or area to which ovules are attached in an ovary; variously shaped and positioned." class="keyTextEm">$1lacentas</a>$2!){
+				}
+				if(s!<<353>>(P| p)lanoconvex<<353>>!<a href="\/IJM_glossary.html#planoconvex" title="Flat or nearly so on one side, rounded on the other.  (e.g., Carex leporinella perigynium)" class="keyTextEm">$1lanoconvex</a>$2!){
+				}
+				if(s!<<354>>(P| p)leated<<354>>!<a href="\/IJM_glossary.html#pleated" title="Having accordion-like folds." class="keyTextEm">$1leated</a>$2!){
+				}
+				if(s!<<355>>(P| p)lumose<<355>>!<a href="\/IJM_glossary.html#plumose" title="Plume-like, usually with the parts arrayed in three dimensions around an axis, or in tufts held together at the base; usually pertaining to small, finely divided structures, such as certain stigmas and pappus elements." class="keyTextEm">$1lumose</a>$2!){
+				}
+				if(s!<<356>>(P| p)ollen<<356>>!<a href="\/IJM_glossary.html#pollen" title="In gymnosperms and angiosperms, structure containing the sperm; when sperm fertilizes an egg, the egg and surrounding ovule normally develop into a seed." class="keyTextEm">$1ollen</a>$2!){
+				}
+				if(s!<<357>>(P| p)ollination<<357>>!<a href="\/IJM_glossary.html#pollination" title="Placement of pollen, by an insect, the wind, or other vector, on a stigmatic or ovular surface, through which pollen tube growth and fertilization may occur; self-pollination involves only one plant, cross-pollination occurs between plants." class="keyTextEm">$1ollination</a>$2!){
+				}
+				if(s!<<358>>(P| p)ollinium<<358>>!<a href="\/IJM_glossary.html#pollinium" title="Especially in Asclepias and related genera, and in Orchidaceae, a mass of coherent pollen grains disseminated as a unit." class="keyTextEm">$1ollinium</a>$2!){
+				}
+				if(s!<<359>>(P| p)ollinia<<359>>!<a href="\/IJM_glossary.html#pollinia" title="Especially in Asclepias and related genera, and in Orchidaceae, a mass of coherent pollen grains disseminated as a unit." class="keyTextEm">$1ollinia</a>$2!){
+				}
+				if(s!<<360>>(P| p)olyploid<<360>>!<a href="\/IJM_glossary.html#polyploid" title="Having three or more sets of chromosomes; 3n, 4n, etc." class="keyTextEm">$1olyploid</a>$2!){
+				}
+				if(s!<<361>>(P| p)ome<<361>>!<a href="\/IJM_glossary.html#pome" title="In Rosaceae, a fleshy, indehiscent fruit, such as an apple or pear; derived from a compound, inferior ovary (represented as 2-5 papery-walled, radiating segments alternating with fleshy material) and surrounding hypanthium (represented as outer fleshy material and skin).  (e.g., Amelanchier utahensis fruit)" class="keyTextEm">$1ome</a>$2!){
+				}
+				if(s!<<362>>(P| p)rickle<<362>>!<a href="\/IJM_glossary.html#prickle" title="Sharp-pointed, stiff or somewhat flexible projection, originating at the epidermis, derived from epidermal cells and therefore neither subtending an axillary bud or branch nor subtended by a leaf or leaf scar, without leaves, leaf scars, buds, or branches; loosely used for any sharp projection. (e.g., Rosa woodsii stem)" class="keyTextEm">$1rickle</a>$2!){
+				}
+				if(s!<<363>>(P| p)rickles<<363>>!<a href="\/IJM_glossary.html#prickles" title="Sharp-pointed, stiff or somewhat flexible projection, originating at the epidermis, derived from epidermal cells and therefore neither subtending an axillary bud or branch nor subtended by a leaf or leaf scar, without leaves, leaf scars, buds, or branches; loosely used for any sharp projection. (e.g., Rosa woodsii stem)" class="keyTextEm">$1rickles</a>$2!){
+				}
+				if(s!<<364>>(P| p)rostrate<<364>>!<a href="\/IJM_glossary.html#prostrate" title="Lying flat on the ground." class="keyTextEm">$1rostrate</a>$2!){
+				}
+				if(s!<<365>>(P| p)rotandrous<<365>>!<a href="\/IJM_glossary.html#protandrous" title="Pertaining to a bisexual flower in which pollen release precedes stigma receptivity, or to a plant with staminate and pistillate flowers in which this is true, with the result that cross-pollination is favored." class="keyTextEm">$1rotandrous</a>$2!){
+				}
+				if(s!<<366>>(P| p)rotogynous<<366>>!<a href="\/IJM_glossary.html#protogynous" title="Pertaining to a bisexual flower in which stigma receptivity precedes pollen release, or to a plant with staminate and pistillate flowers in which this is true, with the result that cross-pollination is favored." class="keyTextEm">$1rotogynous</a>$2!){
+				}
+				if(s!<<367>>(P| p)roximal<<367>>!<a href="\/IJM_glossary.html#proximal" title="Closer to the base, origin, or point of attachment, or farther away from the edge or tip." class="keyTextEm">$1roximal</a>$2!){
+				}
+				if(s!<<368>>(P| p)roximally<<368>>!<a href="\/IJM_glossary.html#proximally" title="Closer to the base, origin, or point of attachment, or farther away from the edge or tip." class="keyTextEm">$1roximally</a>$2!){
+				}
+				if(s!<<369>>(P| p)uberulent<<369>>!<a href="\/IJM_glossary.html#puberulent" title="Minutely hairy." class="keyTextEm">$1uberulent</a>$2!){
+				}
+				if(s!<<370>>(R| r)aceme<<370>>!<a href="\/IJM_glossary.html#raceme" title="In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are borne on pedicels and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a raceme-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are stalked and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1." class="keyTextEm">$1aceme</a>$2!){
+				}
+				if(s!<<371>>(R| r)acemes<<371>>!<a href="\/IJM_glossary.html#racemes" title="In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are borne on pedicels and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a raceme-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are stalked and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1." class="keyTextEm">$1acemes</a>$2!){
+				}
+				if(s!<<372>>(R| r)achis<<372>>!<a href="\/IJM_glossary.html#rachis" title="In ferns, primary axis of a compound or dissected frond blade." class="keyTextEm">$1achis</a>$2!){
+				}
+				if(s!<<373>>(R| r)achides<<373>>!<a href="\/IJM_glossary.html#rachides" title="In ferns, primary axis of a compound or dissected frond blade." class="keyTextEm">$1achides</a>$2!){
+				}
+				if(s!<<374>>(R| r)adial<<374>>!<a href="\/IJM_glossary.html#radial" title="Divisible into mirror-image halves in three or more ways." class="keyTextEm">$1adial</a>$2!){
+				}
+				if(s!<<375>>(R| r)adiant<<375>>!<a href="\/IJM_glossary.html#radiant" title="In Asteraceae, a discoid head with a peripheral ring of flowers having much enlarged, often bilateral corollas." class="keyTextEm">$1adiant</a>$2!){
+				}
+				if(s!<<376>>(R| r)adiate<<376>>!<a href="\/IJM_glossary.html#radiate" title="In Asteraceae, a head composed of central disk flowers and marginal ray flowers." class="keyTextEm">$1adiate</a>$2!){
+				}
+				if(s!<<377>>(R| r)ank<<377>>!<a href="\/IJM_glossary.html#rank" title="1. A row or column of parts along an axis - e.g., leaves on an erect stem arranged in four vertical rows are 4-ranked.  2. In classification, a taxonomic level - e.g., family, genus, species, subspecies, variety." class="keyTextEm">$1ank</a>$2!){
+				}
+				if(s!<<378>>(R| r)anks<<378>>!<a href="\/IJM_glossary.html#ranks" title="1. A row or column of parts along an axis - e.g., leaves on an erect stem arranged in four vertical rows are 4-ranked.  2. In classification, a taxonomic level - e.g., family, genus, species, subspecies, variety." class="keyTextEm">$1anks</a>$2!){
+				}
+				if(s!<<379>>(R| r)anked<<379>>!<a href="\/IJM_glossary.html#ranked" title="1. A row or column of parts along an axis - e.g., leaves on an erect stem arranged in four vertical rows are 4-ranked.  2. In classification, a taxonomic level - e.g., family, genus, species, subspecies, variety." class="keyTextEm">$1anked</a>$2!){
+				}
+				if(s!<<380>>(R| r)are<<380>>!<a href="\/IJM_glossary.html#rare" title="Extremely unlikely to be present in appropriate habitats, often restricted to a small number of sites." class="keyTextEm">$1are</a>$2!){
+				}
+				if(s!<<381>>(R| r)ays<<381>>!<a href="\/IJM_glossary.html#rays" title="Each of a number of radiating axes, as a primary branch in a compound umbel." class="keyTextEm">$1ays</a>$2!){
+				}
+				if(s!<<382>>(R| r)ayed<<382>>!<a href="\/IJM_glossary.html#rayed" title="Having a number of radiating axes, as in the branches of a compound umbel." class="keyTextEm">$1ayed</a>$2!){
+				}
+				if(s!<<383>>(R| r)ay flower<<383>>!<a href="\/IJM_glossary.html#ray flower" title="In Asteraceae, a generally pistillate or sterile, bilateral flower with a flat, strap- or fan-shaped, often 3-lobed outer portion of the corolla (lamina); appearing in a ring around a central cluster of disk flowers." class="keyTextEm">$1ay flower</a>$2!){
+				}
+				if(s!<<384>>(R| r)eceptacle<<384>>!<a href="\/IJM_glossary.html#receptacle" title="1. In individual flowers, the structure to which flower parts are attached.  2. In heads or head-like inflorescences, especially in Asteraceae, the structure to which flowers or sometimes heads are attached." class="keyTextEm">$1eceptacle</a>$2!){
+				}
+				if(s!<<385>>(R| r)eceptacles<<385>>!<a href="\/IJM_glossary.html#receptacles" title="1. In individual flowers, the structure to which flower parts are attached.  2. In heads or head-like inflorescences, especially in Asteraceae, the structure to which flowers or sometimes heads are attached." class="keyTextEm">$1eceptacles</a>$2!){
+				}
+				if(s!<<386>>(R| r)ecurved<<386>>!<a href="\/IJM_glossary.html#recurved" title="Gradually curved downward or backward." class="keyTextEm">$1ecurved</a>$2!){
+				}
+				if(s!<<387>>(R| r)educed<<387>>!<a href="\/IJM_glossary.html#reduced" title="Smaller, less lobed, simpler, etc." class="keyTextEm">$1educed</a>$2!){
+				}
+				if(s!<<388>>(R| r)eflexed<<388>>!<a href="\/IJM_glossary.html#reflexed" title="Abruptly bent or curved downward or backward." class="keyTextEm">$1eflexed</a>$2!){
+				}
+				if(s!<<389>>(R| r)eniform<<389>>!<a href="\/IJM_glossary.html#reniform" title="Kidney-shaped; often pertaining to a leaf in which the blade base on both sides of the petiole is rounded and concave." class="keyTextEm">$1eniform</a>$2!){
+				}
+				if(s!<<390>>(R| r)hizome<<390>>!<a href="\/IJM_glossary.html#rhizome" title="1. In seed plants, stem that is often elongate, more or less horizontal, usually underground; distinguished from roots by bearing of leaves, leaf scars, axillary buds, etc. 2. In ferns, stem that is located underground, embedded in leaf litter, on rocks or in rock crevices, or on trees or tree branches, often scaly or hairy; distinguished from roots by bearing of fronds (roots rarely bear fronds), and their greater diameter." class="keyTextEm">$1hizome</a>$2!){
+				}
+				if(s!<<391>>(R| r)hizomes<<391>>!<a href="\/IJM_glossary.html#rhizomes" title="1. In seed plants, stem that is often elongate, more or less horizontal, usually underground; distinguished from roots by bearing of leaves, leaf scars, axillary buds, etc. 2. In ferns, stem that is located underground, embedded in leaf litter, on rocks or in rock crevices, or on trees or tree branches, often scaly or hairy; distinguished from roots by bearing of fronds (roots rarely bear fronds), and their greater diameter." class="keyTextEm">$1hizomes</a>$2!){
+				}
+				if(s!<<392>>(R| r)ib<<392>>!<a href="\/IJM_glossary.html#rib" title="1. Ridge, as on a fruit.  2. Raised vein, as on a leaf or perianth part.  (e.g., Carex hendersonii perigynium)" class="keyTextEm">$1ib</a>$2!){
+				}
+				if(s!<<393>>(R| r)ibs<<393>>!<a href="\/IJM_glossary.html#ribs" title="1. Ridge, as on a fruit.  2. Raised vein, as on a leaf or perianth part.  (e.g., Carex hendersonii perigynium)" class="keyTextEm">$1ibs</a>$2!){
+				}
+				if(s!<<394>>(R| r)ibbed<<394>>!<a href="\/IJM_glossary.html#ribbed" title="1. Having ridges, as on a fruit.  2. Having raised veins, as on a leaf or perianth part.  (e.g., Carex hendersonii perigynium)" class="keyTextEm">$1ibbed</a>$2!){
+				}
+				if(s!<<395>>(R| r)iparian<<395>>!<a href="\/IJM_glossary.html#riparian" title="Pertaining to communities that occupy the banks, channels, and flood plains of waterways." class="keyTextEm">$1iparian</a>$2!){
+				}
+				if(s!<<396>>(R| r)oot<<396>>!<a href="\/IJM_glossary.html#root" title="Generally underground axis or axes of a plant; distinguished from stems by not bearing leaves, leaf scars, axillary buds,  flowers, etc.; generally growing into the ground from the base of a stem, its functions include anchorage, absorption of water and nutrients, and food storage." class="keyTextEm">$1oot</a>$2!){
+				}
+				if(s!<<397>>(R| r)oots<<397>>!<a href="\/IJM_glossary.html#roots" title="Generally underground axis or axes of a plant; distinguished from stems by not bearing leaves, leaf scars, axillary buds,  flowers, etc.; generally growing into the ground from the base of a stem, its functions include anchorage, absorption of water and nutrients, and food storage." class="keyTextEm">$1oots</a>$2!){
+				}
+				if(s!<<398>>(R| r)osette<<398>>!<a href="\/IJM_glossary.html#rosette" title="A radiating cluster of leaves generally at or near ground level." class="keyTextEm">$1osette</a>$2!){
+				}
+				if(s!<<399>>(R| r)osettes<<399>>!<a href="\/IJM_glossary.html#rosettes" title="A radiating cluster of leaves generally at or near ground level." class="keyTextEm">$1osettes</a>$2!){
+				}
+				if(s!<<400>>(R| r)otate<<400>>!<a href="\/IJM_glossary.html#rotate" title="Wheel-shaped, spreading, or saucer-shaped; often applied to  a fused corolla with a short or nonexistent tube and a spreading limb." class="keyTextEm">$1otate</a>$2!){
+				}
+				if(s!<<401>>(R| r)uderal<<401>>!<a href="\/IJM_glossary.html#ruderal" title="A plant, usually alien, occurring in waste areas, along roadsides, and in other places disturbed by humans; pertaining to such a plant." class="keyTextEm">$1uderal</a>$2!){
+				}
+				if(s!<<402>>(S| s)agittate<<402>>!<a href="\/IJM_glossary.html#sagittate" title="Arrowhead-shaped, with two basal lobes oriented nearly parallel to the long axis." class="keyTextEm">$1agittate</a>$2!){
+				}
+				if(s!<<403>>(S| s)alverform<<403>>!<a href="\/IJM_glossary.html#salverform" title="Having a slender tube and an abruptly spreading, flat limb; often applied to a fused corolla." class="keyTextEm">$1alverform</a>$2!){
+				}
+				if(s!<<404>>(S| s)avanna<<404>>!<a href="\/IJM_glossary.html#savanna" title="Vegetation dominated by various species of grasses with scattered individual trees; with less canopy cover than a woodland (canopies do not touch)." class="keyTextEm">$1avanna</a>$2!){
+				}
+				if(s!<<405>>(S| s)cabrous<<405>>!<a href="\/IJM_glossary.html#scabrous" title="Rough to the touch, generally owing to short stiff hairs.  (e.g., Brickellia pappus)" class="keyTextEm">$1cabrous</a>$2!){
+				}
+				if(s!<<406>>(S| s)cale<<406>>!<a href="\/IJM_glossary.html#scale" title="1. Wide, appressed, membranous, epidermal outgrowth (e.g., Cheilanthes covillei) 2. Structure partially or entirely covering an over-wintering bud (bud scale) (e.g., Salix goodingii bud).  3. In gymnosperms, a woody, seed-bearing structure attached to the cone axis (cone scale) (e.g., Abies magnifica).  4. In Asteraceae, a flat, membranous pappus element (e.g., Hymenoxys hoopesii).  Leaves or bracts may be scale-like in one or more of the preceding ways." class="keyTextEm">$1cale</a>$2!){
+				}
+				if(s!<<407>>(S| s)cales<<407>>!<a href="\/IJM_glossary.html#scales" title="1. Wide, appressed, membranous, epidermal outgrowth (e.g., Cheilanthes covillei) 2. Structure partially or entirely covering an over-wintering bud (bud scale) (e.g., Salix goodingii bud).  3. In gymnosperms, a woody, seed-bearing structure attached to the cone axis (cone scale) (e.g., Abies magnifica).  4. In Asteraceae, a flat, membranous pappus element (e.g., Hymenoxys hoopesii).  Leaves or bracts may be scale-like in one or more of the preceding ways." class="keyTextEm">$1cales</a>$2!){
+				}
+				if(s!<<408>>(S| s)capose<<408>>!<a href="\/IJM_glossary.html#scapose" title="Pertaining to a plant or an inflorescence in which a relatively long peduncle (scape) arises, sometimes with leaf- or scale-like bracts but without true foliage leaves,  from a rosette or other arrangement of leaves at ground level." class="keyTextEm">$1capose</a>$2!){
+				}
+				if(s!<<409>>(S| s)car<<409>>!<a href="\/IJM_glossary.html#scar" title="Mark left by the natural separation of two structures, as a leaf scar on a stem." class="keyTextEm">$1car</a>$2!){
+				}
+				if(s!<<410>>(S| s)cars<<410>>!<a href="\/IJM_glossary.html#scars" title="Mark left by the natural separation of two structures, as a leaf scar on a stem." class="keyTextEm">$1cars</a>$2!){
+				}
+				if(s!<<411>>(S| s)carious<<411>>!<a href="\/IJM_glossary.html#scarious" title="Thin, dry, pliable, translucent or variously colored but not green.  (e.g., Carex incurviformis pistillate flower bract)" class="keyTextEm">$1carious</a>$2!){
+				}
+				if(s!<<412>>(S| s)cree<<412>>!<a href="\/IJM_glossary.html#scree" title="Relatively unstable, sloping accumulation of small rock fragments, often at a cliff base." class="keyTextEm">$1cree</a>$2!){
+				}
+				if(s!<<413>>(S| s)crub<<413>>!<a href="\/IJM_glossary.html#scrub" title="Vegetation dominated by shrubs; may be classified by habitat type or by dominant species; shrubland." class="keyTextEm">$1crub</a>$2!){
+				}
+				if(s!<<414>>(S| s)culpture<<414>>!<a href="\/IJM_glossary.html#sculpture" title="Surface ornamentation or topography, often visible only when magnified, as on a seed or pollen grain.  (e.g., Plagiobothrys nothofulvus nutlet)" class="keyTextEm">$1culpture</a>$2!){
+				}
+				if(s!<<415>>(S| s)eed<<415>>!<a href="\/IJM_glossary.html#seed" title="Any fertilized ovule, but in descriptions pertaining to the fully mature condition (i.e., at full cone or fruit maturation), unless noted otherwise." class="keyTextEm">$1eed</a>$2!){
+				}
+				if(s!<<416>>(S| s)eeds<<416>>!<a href="\/IJM_glossary.html#seeds" title="Any fertilized ovule, but in descriptions pertaining to the fully mature condition (i.e., at full cone or fruit maturation), unless noted otherwise." class="keyTextEm">$1eeds</a>$2!){
+				}
+				if(s!<<417>>(S| s)egment<<417>>!<a href="\/IJM_glossary.html#segment" title="1.  An ultimate or smallest division of a compound leaf (then the segment is also a leaflet) or dissected leaf  - not a marginal lobe, tooth, bristle, etc.  2.  A part into which an organ is naturally or apparently divisible, such as of a calyx, corolla, fruit, etc.  3.  A specified length, such as of a stem, root, style, etc." class="keyTextEm">$1egment</a>$2!){
+				}
+				if(s!<<418>>(S| s)egments<<418>>!<a href="\/IJM_glossary.html#segments" title="1.  An ultimate or smallest division of a compound leaf (then the segment is also a leaflet) or dissected leaf  - not a marginal lobe, tooth, bristle, etc.  2.  A part into which an organ is naturally or apparently divisible, such as of a calyx, corolla, fruit, etc.  3.  A specified length, such as of a stem, root, style, etc." class="keyTextEm">$1egments</a>$2!){
+				}
+				if(s!<<419>>(S| s)epal<<419>>!<a href="\/IJM_glossary.html#sepal" title="Individual member of the calyx, whether fused or not; if fused, often equal in number to the number of calyx lobes; generally green." class="keyTextEm">$1epal</a>$2!){
+				}
+				if(s!<<420>>(S| s)epals<<420>>!<a href="\/IJM_glossary.html#sepals" title="Individual member of the calyx, whether fused or not; if fused, often equal in number to the number of calyx lobes; generally green." class="keyTextEm">$1epals</a>$2!){
+				}
+				if(s!<<421>>(S| s)epticidal<<421>>!<a href="\/IJM_glossary.html#septicidal" title="Pertaining to dehiscence of a fruit (capsule) by a longitudinal line through the wall at or near the center of each septum, such that each resulting segment corresponds to a single chamber, with placentas placed variously." class="keyTextEm">$1epticidal</a>$2!){
+				}
+				if(s!<<422>>(S| s)eptum<<422>>!<a href="\/IJM_glossary.html#septum" title="Wall between chambers in a compound ovary." class="keyTextEm">$1eptum</a>$2!){
+				}
+				if(s!<<423>>(S| s)epta<<423>>!<a href="\/IJM_glossary.html#septa" title="Wall between chambers in a compound ovary." class="keyTextEm">$1epta</a>$2!){
+				}
+				if(s!<<424>>(S| s)eries<<424>>!<a href="\/IJM_glossary.html#series" title="A group of structures of one kind (e.g., involucral bracts, sepals, petals, stamens) of similar size or shape, usually more or less in a row or whorl." class="keyTextEm">$1eries</a>$2!){
+				}
+				if(s!<<425>>(S| s)erpentine<<425>>!<a href="\/IJM_glossary.html#serpentine" title="Pertaining to rocks, or soils derived from them, with generally low levels of calcium and other nutrients, and high levels of magnesium, iron, and certain toxic metals; many plant taxa are restricted to or excluded from serpentine." class="keyTextEm">$1erpentine</a>$2!){
+				}
+				if(s!<<426>>(S| s)erpentinitic<<426>>!<a href="\/IJM_glossary.html#serpentinitic" title="Pertaining to rocks, or soils derived from them, with generally low levels of calcium and other nutrients, and high levels of magnesium, iron, and certain toxic metals; many plant taxa are restricted to or excluded from serpentine." class="keyTextEm">$1erpentinitic</a>$2!){
+				}
+				if(s!<<427>>(S| s)errate<<427>>!<a href="\/IJM_glossary.html#serrate" title="Having margins with sharp, fine to coarse teeth generally pointing tipward, not outward; margins with such teeth on such primary teeth are doubly serrate." class="keyTextEm">$1errate</a>$2!){
+				}
+				if(s!<<428>>(S| s)essile<<428>>!<a href="\/IJM_glossary.html#sessile" title="Without a petiole, peduncle, pedicel, or other kind of stalk." class="keyTextEm">$1essile</a>$2!){
+				}
+				if(s!<<429>>(S| s)heath<<429>>!<a href="\/IJM_glossary.html#sheath" title="A surrounding or partially surrounding, often tubular structure or part of a structure, such as a leaf base in Apiaceae or Poaceae." class="keyTextEm">$1heath</a>$2!){
+				}
+				if(s!<<430>>(S| s)heaths<<430>>!<a href="\/IJM_glossary.html#sheaths" title="A surrounding or partially surrounding, often tubular structure or part of a structure, such as a leaf base in Apiaceae or Poaceae." class="keyTextEm">$1heaths</a>$2!){
+				}
+				if(s!<<431>>(S| s)hoot<<431>>!<a href="\/IJM_glossary.html#shoot" title="Pertaining collectively to a young stem or twig and its appendages (e.g., new growth in the spring), or to all above-ground parts of a plant (i.e., shoot system)." class="keyTextEm">$1hoot</a>$2!){
+				}
+				if(s!<<432>>(S| s)hoots<<432>>!<a href="\/IJM_glossary.html#shoots" title="Pertaining collectively to a young stem or twig and its appendages (e.g., new growth in the spring), or to all above-ground parts of a plant (i.e., shoot system)." class="keyTextEm">$1hoots</a>$2!){
+				}
+				if(s!<<433>>(S| s)hrub<<433>>!<a href="\/IJM_glossary.html#shrub" title="A woody plant of relatively short maximum height,  with generally many branches from the base." class="keyTextEm">$1hrub</a>$2!){
+				}
+				if(s!<<434>>(S| s)hrubs<<434>>!<a href="\/IJM_glossary.html#shrubs" title="A woody plant of relatively short maximum height,  with generally many branches from the base." class="keyTextEm">$1hrubs</a>$2!){
+				}
+				if(s!<<435>>(S| s)imple<<435>>!<a href="\/IJM_glossary.html#simple" title="Composed of a single part; undivided; unbranched." class="keyTextEm">$1imple</a>$2!){
+				}
+				if(s!<<436>>(S| s)inus<<436>>!<a href="\/IJM_glossary.html#sinus" title="Usually pertaining to margins of leaves, sepals, petals, or other parts, an indentation between adjacent lobes or teeth" class="keyTextEm">$1inus</a>$2!){
+				}
+				if(s!<<437>>(S| s)orus<<437>>!<a href="\/IJM_glossary.html#sorus" title="In many ferns, a distinct cluster of sporangia." class="keyTextEm">$1orus</a>$2!){
+				}
+				if(s!<<438>>(S| s)ori<<438>>!<a href="\/IJM_glossary.html#sori" title="In many ferns, a distinct cluster of sporangia." class="keyTextEm">$1ori</a>$2!){
+				}
+				if(s!<<439>>(S| s)pheric<<439>>!<a href="\/IJM_glossary.html#spheric" title="Globe- or ball-shaped; circular in three dimensions." class="keyTextEm">$1pheric</a>$2!){
+				}
+				if(s!<<440>>(S| s)pike<<440>>!<a href="\/IJM_glossary.html#spike" title="1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are sessile and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a spike-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are sessile and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1." class="keyTextEm">$1pike</a>$2!){
+				}
+				if(s!<<441>>(S| s)pikes<<441>>!<a href="\/IJM_glossary.html#spikes" title="1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are sessile and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a spike-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are sessile and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1." class="keyTextEm">$1pikes</a>$2!){
+				}
+				if(s!<<442>>(S| s)pikelet<<442>>!<a href="\/IJM_glossary.html#spikelet" title="1. In Poaceae, one or more florets (each a flower with subtending lemma and generally palea) and generally 2 subtending glumes; in a sterile spikelet, the flower(s) and sometimes palea(s) are rudimentary or absent. 2. In Cyperaceae, the smallest aggregation of flowers (generally more than 2) and associated bracts." class="keyTextEm">$1pikelet</a>$2!){
+				}
+				if(s!<<443>>(S| s)pikelets<<443>>!<a href="\/IJM_glossary.html#spikelets" title="1. In Poaceae, one or more florets (each a flower with subtending lemma and generally palea) and generally 2 subtending glumes; in a sterile spikelet, the flower(s) and sometimes palea(s) are rudimentary or absent. 2. In Cyperaceae, the smallest aggregation of flowers (generally more than 2) and associated bracts." class="keyTextEm">$1pikelets</a>$2!){
+				}
+				if(s!<<444>>(S| s)pine<<444>>!<a href="\/IJM_glossary.html#spine" title="Sharp-pointed, usually stiff projection, originating below the epidermis, derived from a leaf or leaf part (e.g., stipule, vein tip), and therefore often subtending an axillary bud or branch, without buds of its own; loosely used for any sharp projection. (e.g., Cirsium arvense leaf)" class="keyTextEm">$1pine</a>$2!){
+				}
+				if(s!<<445>>(S| s)pines<<445>>!<a href="\/IJM_glossary.html#spines" title="Sharp-pointed, usually stiff projection, originating below the epidermis, derived from a leaf or leaf part (e.g., stipule, vein tip), and therefore often subtending an axillary bud or branch, without buds of its own; loosely used for any sharp projection. (e.g., Cirsium arvense leaf)" class="keyTextEm">$1pines</a>$2!){
+				}
+				if(s!<<446>>(S| s)porangium<<446>>!<a href="\/IJM_glossary.html#sporangium" title="In non-seed plants, a case or sac in which spores are produced, and from which they are released." class="keyTextEm">$1porangium</a>$2!){
+				}
+				if(s!<<447>>(S| s)porangia<<447>>!<a href="\/IJM_glossary.html#sporangia" title="In non-seed plants, a case or sac in which spores are produced, and from which they are released." class="keyTextEm">$1porangia</a>$2!){
+				}
+				if(s!<<448>>(S| s)pore<<448>>!<a href="\/IJM_glossary.html#spore" title="In non-seed plants, one of very many minute, haploid cells (in mass, often appearing dust-like) dispersed from sporangia on a diploid parent plant (sporophyte), normally developing into a small haploid plant (gametophyte) that produces eggs, sperm, or both, the fusion of which results in new diploid offspring." class="keyTextEm">$1pore</a>$2!){
+				}
+				if(s!<<449>>(S| s)pores<<449>>!<a href="\/IJM_glossary.html#spores" title="In non-seed plants, one of very many minute, haploid cells (in mass, often appearing dust-like) dispersed from sporangia on a diploid parent plant (sporophyte), normally developing into a small haploid plant (gametophyte) that produces eggs, sperm, or both, the fusion of which results in new diploid offspring." class="keyTextEm">$1pores</a>$2!){
+				}
+				if(s!<<450>>(S| s)preading<<450>>!<a href="\/IJM_glossary.html#spreading" title="Oriented more or less perpendicularly to the axis of attachment; often, more or less horizontal." class="keyTextEm">$1preading</a>$2!){
+				}
+				if(s!<<451>>(S| s)pur<<451>>!<a href="\/IJM_glossary.html#spur" title="Hollow projection or expansion, generally of a perianth part and containing nectar.  (e.g., petals of Aquilegia formosa)" class="keyTextEm">$1pur</a>$2!){
+				}
+				if(s!<<452>>(S| s)purs<<452>>!<a href="\/IJM_glossary.html#spurs" title="Hollow projection or expansion, generally of a perianth part and containing nectar.  (e.g., petals of Aquilegia formosa)" class="keyTextEm">$1purs</a>$2!){
+				}
+				if(s!<<453>>(S| s)tamen<<453>>!<a href="\/IJM_glossary.html#stamen" title="Male reproductive structure of a flower, typically composed of a stalk-like filament and a terminal, pollen-producing anther.  Filaments sometimes partly fuse to the corolla, or to other filaments to form a tube." class="keyTextEm">$1tamen</a>$2!){
+				}
+				if(s!<<454>>(S| s)tamens<<454>>!<a href="\/IJM_glossary.html#stamens" title="Male reproductive structure of a flower, typically composed of a stalk-like filament and a terminal, pollen-producing anther.  Filaments sometimes partly fuse to the corolla, or to other filaments to form a tube." class="keyTextEm">$1tamens</a>$2!){
+				}
+				if(s!<<455>>(S| s)taminate<<455>>!<a href="\/IJM_glossary.html#staminate" title="Pertaining to flowers, inflorescences, or plants with fertile stamens but sterile or missing pistils.  (e.g., Salix laevigata flower)" class="keyTextEm">$1taminate</a>$2!){
+				}
+				if(s!<<456>>(S| s)taminode<<456>>!<a href="\/IJM_glossary.html#staminode" title="Sterile stamen, usually modified in appearance, sometimes petal-like or elaborate in structure.  (e.g., Penstemon palmeri)" class="keyTextEm">$1taminode</a>$2!){
+				}
+				if(s!<<457>>(S| s)taminodes<<457>>!<a href="\/IJM_glossary.html#staminodes" title="Sterile stamen, usually modified in appearance, sometimes petal-like or elaborate in structure.  (e.g., Penstemon palmeri)" class="keyTextEm">$1taminodes</a>$2!){
+				}
+				if(s!<<458>>(S| s)tellate<<458>>!<a href="\/IJM_glossary.html#stellate" title="Pertaining to a hair or other structure with three or more branches radiating in two or three dimensions from a common point." class="keyTextEm">$1tellate</a>$2!){
+				}
+				if(s!<<459>>(S| s)tem<<459>>!<a href="\/IJM_glossary.html#stem" title="Generally above-ground  but sometimes below-ground axis or axes of a plant; distinguished from roots by bearing leaves, leaf scars, axillary buds, flowers, nodes, etc." class="keyTextEm">$1tem</a>$2!){
+				}
+				if(s!<<460>>(S| s)tems<<460>>!<a href="\/IJM_glossary.html#stems" title="Generally above-ground  but sometimes below-ground axis or axes of a plant; distinguished from roots by bearing leaves, leaf scars, axillary buds, flowers, nodes, etc." class="keyTextEm">$1tems</a>$2!){
+				}
+				if(s!<<461>>(S| s)terile<<461>>!<a href="\/IJM_glossary.html#sterile" title="Not reproductively functional; pertaining to a plant or plant part that does not produce or is not associated with the production of functional spores, pollen, ovules, or seeds (e.g., sterile frond, sterile stamen, sterile flower, sterile floret)." class="keyTextEm">$1terile</a>$2!){
+				}
+				if(s!<<462>>(S| s)tigma<<462>>!<a href="\/IJM_glossary.html#stigma" title="The part of a pistil on which pollen germinates, generally terminal and elevated above the ovary on a style, usually sticky or hairy, sometimes lobed." class="keyTextEm">$1tigma</a>$2!){
+				}
+				if(s!<<463>>(S| s)tigmas<<463>>!<a href="\/IJM_glossary.html#stigmas" title="The part of a pistil on which pollen germinates, generally terminal and elevated above the ovary on a style, usually sticky or hairy, sometimes lobed." class="keyTextEm">$1tigmas</a>$2!){
+				}
+				if(s!<<464>>(S| s)tigmata<<464>>!<a href="\/IJM_glossary.html#stigmata" title="The part of a pistil on which pollen germinates, generally terminal and elevated above the ovary on a style, usually sticky or hairy, sometimes lobed." class="keyTextEm">$1tigmata</a>$2!){
+				}
+				if(s!<<465>>(S| s)tipe<<465>>!<a href="\/IJM_glossary.html#stipe" title="In ferns, a frond stalk (analogous to a petiole of a leaf), connecting blade to rhizome." class="keyTextEm">$1tipe</a>$2!){
+				}
+				if(s!<<466>>(S| s)tipes<<466>>!<a href="\/IJM_glossary.html#stipes" title="In ferns, a frond stalk (analogous to a petiole of a leaf), connecting blade to rhizome." class="keyTextEm">$1tipes</a>$2!){
+				}
+				if(s!<<467>>(S| s)tipule<<467>>!<a href="\/IJM_glossary.html#stipule" title="Appendage at base of petiole, generally paired, variable in form but often leaf- or scale-like, sometimes a spine." class="keyTextEm">$1tipule</a>$2!){
+				}
+				if(s!<<468>>(S| s)tipules<<468>>!<a href="\/IJM_glossary.html#stipules" title="Appendage at base of petiole, generally paired, variable in form but often leaf- or scale-like, sometimes a spine." class="keyTextEm">$1tipules</a>$2!){
+				}
+				if(s!<<469>>(S| s)tolon<<469>>!<a href="\/IJM_glossary.html#stolon" title="A normally thin, elongate stem lying more or less flat on the ground and forming roots as well as erect stems or shoots (which become new, clonal plants) at generally widely spaced nodes; runner." class="keyTextEm">$1tolon</a>$2!){
+				}
+				if(s!<<470>>(S| s)tolons<<470>>!<a href="\/IJM_glossary.html#stolons" title="A normally thin, elongate stem lying more or less flat on the ground and forming roots as well as erect stems or shoots (which become new, clonal plants) at generally widely spaced nodes; runner." class="keyTextEm">$1tolons</a>$2!){
+				}
+				if(s!<<471>>(S| s)toma<<471>>!<a href="\/IJM_glossary.html#stoma" title="A minute pore on a leaf  (less often, stem or other structure)  through which gases pass into or out of a plant (generally, carbon dioxide in, oxygen and water vapor out); generally closed during times of water stress; sometimes used in identification." class="keyTextEm">$1toma</a>$2!){
+				}
+				if(s!<<472>>(S| s)tomata<<472>>!<a href="\/IJM_glossary.html#stomata" title="A minute pore on a leaf  (less often, stem or other structure)  through which gases pass into or out of a plant (generally, carbon dioxide in, oxygen and water vapor out); generally closed during times of water stress; sometimes used in identification." class="keyTextEm">$1tomata</a>$2!){
+				}
+				if(s!<<473>>(S| s)tomate<<473>>!<a href="\/IJM_glossary.html#stomate" title="A minute pore on a leaf  (less often, stem or other structure)  through which gases pass into or out of a plant (generally, carbon dioxide in, oxygen and water vapor out); generally closed during times of water stress; sometimes used in identification." class="keyTextEm">$1tomate</a>$2!){
+				}
+				if(s!<<474>>(S| s)toma<<474>>!<a href="\/IJM_glossary.html#stoma" title="A minute pore on a leaf  (less often, stem or other structure)  through which gases pass into or out of a plant (generally, carbon dioxide in, oxygen and water vapor out); generally closed during times of water stress; sometimes used in identification." class="keyTextEm">$1toma</a>$2!){
+				}
+				if(s!<<475>>(S| s)tone<<475>>!<a href="\/IJM_glossary.html#stone" title="In a drupe, the very hard inner ovary wall and the generally single seed it surrounds; occurring one or more per flower, free or variously fused.  (e.g., Prunus emarginata fruit)" class="keyTextEm">$1tone</a>$2!){
+				}
+				if(s!<<476>>(S| s)tones<<476>>!<a href="\/IJM_glossary.html#stones" title="In a drupe, the very hard inner ovary wall and the generally single seed it surrounds; occurring one or more per flower, free or variously fused.  (e.g., Prunus emarginata fruit)" class="keyTextEm">$1tones</a>$2!){
+				}
+				if(s!<<477>>(S| s)tout<<477>>!<a href="\/IJM_glossary.html#stout" title="Thick, sturdy, not slender." class="keyTextEm">$1tout</a>$2!){
+				}
+				if(s!<<478>>(S| s)triate<<478>>!<a href="\/IJM_glossary.html#striate" title="With fine, longitudinal channels, lines, or ridges." class="keyTextEm">$1triate</a>$2!){
+				}
+				if(s!<<479>>(S| s)trigose<<479>>!<a href="\/IJM_glossary.html#strigose" title="With stiff, straight, sharp, appressed hairs." class="keyTextEm">$1trigose</a>$2!){
+				}
+				if(s!<<480>>(S| s)tyle<<480>>!<a href="\/IJM_glossary.html#style" title="In many but not all pistils, the stalk-like part that connects ovary to stigma." class="keyTextEm">$1tyle</a>$2!){
+				}
+				if(s!<<481>>(S| s)tyles<<481>>!<a href="\/IJM_glossary.html#styles" title="In many but not all pistils, the stalk-like part that connects ovary to stigma." class="keyTextEm">$1tyles</a>$2!){
+				}
+				if(s!<<482>>(S| s)ubalpine<<482>>!<a href="\/IJM_glossary.html#subalpine" title="Pertaining to the vegetational--altitudinal zone just below timberline, between the montane and the alpine." class="keyTextEm">$1ubalpine</a>$2!){
+				}
+				if(s!<<483>>(S| s)ubmersed<<483>>!<a href="\/IJM_glossary.html#submersed" title="Pertaining to a plant normally rooted and remaining underwater, or to a part of such a plant normally held underwater." class="keyTextEm">$1ubmersed</a>$2!){
+				}
+				if(s!<<484>>(S| s)ubshrub<<484>>!<a href="\/IJM_glossary.html#subshrub" title="A plant with the lower stems woody, the upper stems and twigs not woody (or less so) and dying back seasonally." class="keyTextEm">$1ubshrub</a>$2!){
+				}
+				if(s!<<485>>(S| s)ubshrubs<<485>>!<a href="\/IJM_glossary.html#subshrubs" title="A plant with the lower stems woody, the upper stems and twigs not woody (or less so) and dying back seasonally." class="keyTextEm">$1ubshrubs</a>$2!){
+				}
+				if(s!<<486>>(S| s)ubtend<<486>>!<a href="\/IJM_glossary.html#subtend" title="Occurring immediately below, as sepals subtending petals or leaves subtending axillary buds." class="keyTextEm">$1ubtend</a>$2!){
+				}
+				if(s!<<487>>(S| s)ubtidal<<487>>!<a href="\/IJM_glossary.html#subtidal" title="Pertaining to marine aquatic habitats that are continuously submerged, even at low tide." class="keyTextEm">$1ubtidal</a>$2!){
+				}
+				if(s!<<488>>(S| s)uperior<<488>>!<a href="\/IJM_glossary.html#superior" title="An ovary that is free from the perianth and stamens, or free from the fused lower portions of these structures (i.e., free from the hypanthium), to the extent that these structures appear to arise at its base, and it appears to arise from the top of the receptacle" class="keyTextEm">$1uperior</a>$2!){
+				}
+				if(s!<<489>>(S| s)uture<<489>>!<a href="\/IJM_glossary.html#suture" title="Groove or line of dehiscence or fusion." class="keyTextEm">$1uture</a>$2!){
+				}
+				if(s!<<490>>(S| s)utures<<490>>!<a href="\/IJM_glossary.html#sutures" title="Groove or line of dehiscence or fusion." class="keyTextEm">$1utures</a>$2!){
+				}
+				if(s!<<491>>(S| s)wamp<<491>>!<a href="\/IJM_glossary.html#swamp" title="Shrub- or tree-dominated vegetation that occurs in permanently wet soils with standing water." class="keyTextEm">$1wamp</a>$2!){
+				}
+				if(s!<<492>>(S| s)wamps<<492>>!<a href="\/IJM_glossary.html#swamps" title="Shrub- or tree-dominated vegetation that occurs in permanently wet soils with standing water." class="keyTextEm">$1wamps</a>$2!){
+				}
+				if(s!<<493>>(T| t)alus<<493>>!<a href="\/IJM_glossary.html#talus" title="Relatively stable, sloping accumulation of large rock fragments, often at a cliff base." class="keyTextEm">$1alus</a>$2!){
+				}
+				if(s!<<494>>(T| t)apered<<494>>!<a href="\/IJM_glossary.html#tapered" title="Gradually (not abruptly) narrower or smaller at base or tip." class="keyTextEm">$1apered</a>$2!){
+				}
+				if(s!<<495>>(T| t)aproot<<495>>!<a href="\/IJM_glossary.html#taproot" title="A primary root that grows more or less straight down into soil, is tapered to the end, and has smaller, lateral branches (e.g., carrot)." class="keyTextEm">$1aproot</a>$2!){
+				}
+				if(s!<<496>>(T| t)aproots<<496>>!<a href="\/IJM_glossary.html#taproots" title="A primary root that grows more or less straight down into soil, is tapered to the end, and has smaller, lateral branches (e.g., carrot)." class="keyTextEm">$1aproots</a>$2!){
+				}
+				if(s!<<497>>(T| t)axon<<497>>!<a href="\/IJM_glossary.html#taxon" title="In classification, a group of organisms (such as plants) at any rank (e.g., species, genus, family); taxonomy is the science of classifying organisms." class="keyTextEm">$1axon</a>$2!){
+				}
+				if(s!<<498>>(T| t)axa<<498>>!<a href="\/IJM_glossary.html#taxa" title="In classification, a group of organisms (such as plants) at any rank (e.g., species, genus, family); taxonomy is the science of classifying organisms." class="keyTextEm">$1axa</a>$2!){
+				}
+				if(s!<<499>>(T| t)endril<<499>>!<a href="\/IJM_glossary.html#tendril" title="A slender, generally coiling structure (generally stem, stipule, or leaf tip) by which a climbing plant becomes attached to its support.  (e.g., Lathyrus lanszwertii leaf)" class="keyTextEm">$1endril</a>$2!){
+				}
+				if(s!<<500>>(T| t)endrils<<500>>!<a href="\/IJM_glossary.html#tendrils" title="A slender, generally coiling structure (generally stem, stipule, or leaf tip) by which a climbing plant becomes attached to its support.  (e.g., Lathyrus lanszwertii leaf)" class="keyTextEm">$1endrils</a>$2!){
+				}
+				if(s!<<501>>(T| t)erminal<<501>>!<a href="\/IJM_glossary.html#terminal" title="Pertaining to the tip of a structure (e.g., terminal bud)." class="keyTextEm">$1erminal</a>$2!){
+				}
+				if(s!<<502>>(T| t)ernate<<502>>!<a href="\/IJM_glossary.html#ternate" title="Lobed or compound into three parts, once, as a clover leaf (e.g.,  Trifolium wormskioldii), or more than once; in a ternate-pinnate leaf, the leaf is divided into three leaflets, each of which is pinnately compound (e.g., Aralia californica); three structures or parts (e.g., veins, lobes, or leaflets) radiating from a common point." class="keyTextEm">$1ernate</a>$2!){
+				}
+				if(s!<<503>>(T| t)horn<<503>>!<a href="\/IJM_glossary.html#thorn" title="Sharp-pointed, usually stiff projection, originating below the epidermis, derived from a branch and therefore often subtended by a leaf or leaf scar, sometimes with leaf scars and buds of its own; loosely used for any sharp projection. (e.g., Castela emoryi)" class="keyTextEm">$1horn</a>$2!){
+				}
+				if(s!<<504>>(T| t)horns<<504>>!<a href="\/IJM_glossary.html#thorns" title="Sharp-pointed, usually stiff projection, originating below the epidermis, derived from a branch and therefore often subtended by a leaf or leaf scar, sometimes with leaf scars and buds of its own; loosely used for any sharp projection. (e.g., Castela emoryi)" class="keyTextEm">$1horns</a>$2!){
+				}
+				if(s!<<505>>(T| t)hroat<<505>>!<a href="\/IJM_glossary.html#throat" title="In calyces or corollas with fused sepals or petals, the expanded, fused portion distal to the tube and proximal to the limb." class="keyTextEm">$1hroat</a>$2!){
+				}
+				if(s!<<506>>(T| t)hroats<<506>>!<a href="\/IJM_glossary.html#throats" title="In calyces or corollas with fused sepals or petals, the expanded, fused portion distal to the tube and proximal to the limb." class="keyTextEm">$1hroats</a>$2!){
+				}
+				if(s!<<507>>(T| t)imberline<<507>>!<a href="\/IJM_glossary.html#timberline" title="Region in high mountains where subalpine forests give way to treeless alpine vegetation." class="keyTextEm">$1imberline</a>$2!){
+				}
+				if(s!<<508>>(T| t)omentose<<508>>!<a href="\/IJM_glossary.html#tomentose" title="Covered with densely interwoven, generally matted hairs." class="keyTextEm">$1omentose</a>$2!){
+				}
+				if(s!<<509>>(T| t)ooth<<509>>!<a href="\/IJM_glossary.html#tooth" title="1. A small, pointed projection, such as on the margin of a leaf, sepal, or petal.  2. The free tips of otherwise fused structures, such as sepals or petals (somewhat archaic usage); smaller than lobes." class="keyTextEm">$1ooth</a>$2!){
+				}
+				if(s!<<510>>(T| t)eeth<<510>>!<a href="\/IJM_glossary.html#teeth" title="1. A small, pointed projection, such as on the margin of a leaf, sepal, or petal.  2. The free tips of otherwise fused structures, such as sepals or petals (somewhat archaic usage); smaller than lobes." class="keyTextEm">$1eeth</a>$2!){
+				}
+				if(s!<<511>>(T| t)ransverse<<511>>!<a href="\/IJM_glossary.html#transverse" title="Pertaining to width or the widthwise dimension; perpendicular to the axis." class="keyTextEm">$1ransverse</a>$2!){
+				}
+				if(s!<<512>>(T| t)ree<<512>>!<a href="\/IJM_glossary.html#tree" title="A woody plant of medium to tall maximum height, with generally one trunk from the base.  (e.g., Carnegiea gigantea)" class="keyTextEm">$1ree</a>$2!){
+				}
+				if(s!<<513>>(T| t)rees<<513>>!<a href="\/IJM_glossary.html#trees" title="A woody plant of medium to tall maximum height, with generally one trunk from the base.  (e.g., Carnegiea gigantea)" class="keyTextEm">$1rees</a>$2!){
+				}
+				if(s!<<514>>(T| t)rilete spore<<514>>!<a href="\/IJM_glossary.html#trilete spore" title="In spore-bearing plants, radially symmetric spore on which the scar comprises three radiating branches." class="keyTextEm">$1rilete spore</a>$2!){
+				}
+				if(s!<<515>>(T| t)runcate<<515>>!<a href="\/IJM_glossary.html#truncate" title="Abruptly (not gradually) narrower or smaller at base or tip, as if cut straight across or nearly so." class="keyTextEm">$1runcate</a>$2!){
+				}
+				if(s!<<516>>(T| t)rophophore<<516>>!<a href="\/IJM_glossary.html#trophophore" title="The sterile blade of moonworts (Botrychium) and adders-tongues (Ophioglossum) that is photosynthetic and mostly does not bear sporangia." class="keyTextEm">$1rophophore</a>$2!){
+				}
+				if(s!<<517>>(T| t)ube<<517>>!<a href="\/IJM_glossary.html#tube" title="In calyces or corollas with fused sepals or petals, the often more or less cylindric, fused portion at the base, proximal to the throat and limb." class="keyTextEm">$1ube</a>$2!){
+				}
+				if(s!<<518>>(T| t)ubes<<518>>!<a href="\/IJM_glossary.html#tubes" title="In calyces or corollas with fused sepals or petals, the often more or less cylindric, fused portion at the base, proximal to the throat and limb." class="keyTextEm">$1ubes</a>$2!){
+				}
+				if(s!<<519>>(T| t)uber<<519>>!<a href="\/IJM_glossary.html#tuber" title="Short, thickened, fleshy, usually starchy, underground stem for storage (of water, food, or both) and sometimes propagation (e.g., potato)." class="keyTextEm">$1uber</a>$2!){
+				}
+				if(s!<<520>>(T| t)ubers<<520>>!<a href="\/IJM_glossary.html#tubers" title="Short, thickened, fleshy, usually starchy, underground stem for storage (of water, food, or both) and sometimes propagation (e.g., potato)." class="keyTextEm">$1ubers</a>$2!){
+				}
+				if(s!<<521>>(T| t)ubercle<<521>>!<a href="\/IJM_glossary.html#tubercle" title="Small, wart-like projection.  (e.g., Cryptantha muricata nutlet)" class="keyTextEm">$1ubercle</a>$2!){
+				}
+				if(s!<<522>>(T| t)ubercles<<522>>!<a href="\/IJM_glossary.html#tubercles" title="Small, wart-like projection.  (e.g., Cryptantha muricata nutlet)" class="keyTextEm">$1ubercles</a>$2!){
+				}
+				if(s!<<523>>(T| t)wig<<523>>!<a href="\/IJM_glossary.html#twig" title="In woody plants, a terminal stem segment, produced during the current or most recent growth period." class="keyTextEm">$1wig</a>$2!){
+				}
+				if(s!<<524>>(T| t)wigs<<524>>!<a href="\/IJM_glossary.html#twigs" title="In woody plants, a terminal stem segment, produced during the current or most recent growth period." class="keyTextEm">$1wigs</a>$2!){
+				}
+				if(s!<<525>>(T| t)wining<<525>>!<a href="\/IJM_glossary.html#twining" title="Climbing by the twisting or coiling of stems, tendrils, or other structures.  (e.g., Antirrhinum filipes)" class="keyTextEm">$1wining</a>$2!){
+				}
+				if(s!<<526>>(U| u)ltimate<<526>>!<a href="\/IJM_glossary.html#ultimate" title="Last, most distal, or smallest, as all the tips of a branching stem or the smallest divisions (segments) of a compound leaf or dissected leaf." class="keyTextEm">$1ltimate</a>$2!){
+				}
+				if(s!<<527>>(U| u)mbel<<527>>!<a href="\/IJM_glossary.html#umbel" title="1. In flowering plants excluding Asteraceae and some other groups, an inflorescence in which three to many pedicels and, if compound, branches (rays) radiate from a common point; characteristic of but not confined to Apiaceae.  2. In Asteraceae and some other groups, an umbel-like inflorescence is one in which three to many stalked inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, radiate from a common point of attachment without an evident axis or branches." class="keyTextEm">$1mbel</a>$2!){
+				}
+				if(s!<<528>>(U| u)mbels<<528>>!<a href="\/IJM_glossary.html#umbels" title="1. In flowering plants excluding Asteraceae and some other groups, an inflorescence in which three to many pedicels and, if compound, branches (rays) radiate from a common point; characteristic of but not confined to Apiaceae.  2. In Asteraceae and some other groups, an umbel-like inflorescence is one in which three to many stalked inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, radiate from a common point of attachment without an evident axis or branches." class="keyTextEm">$1mbels</a>$2!){
+				}
+				if(s!<<529>>(U| u)nderstory<<529>>!<a href="\/IJM_glossary.html#understory" title="Layer of vegetation growing beneath a canopy of taller plants." class="keyTextEm">$1nderstory</a>$2!){
+				}
+				if(s!<<530>>(U| u)nisexual<<530>>!<a href="\/IJM_glossary.html#unisexual" title="Either male or female reproductive parts occurring and functional in the same plant or structure (e.g., flower, spikelet, inforescence)." class="keyTextEm">$1nisexual</a>$2!){
+				}
+				if(s!<<531>>(U| u)rn-shaped<<531>>!<a href="\/IJM_glossary.html#urn-shaped" title="Widening more or less abruptly at the base and then gradually or abruptly narrowed toward the tip." class="keyTextEm">$1rn-shaped</a>$2!){
+				}
+				if(s!<<532>>(U| u)tricle<<532>>!<a href="\/IJM_glossary.html#utricle" title="Mostly dry, dehiscent or indehiscent fruit from a generally compound pistil in which a balloon- or bladder-like ovary wall loosely encloses (or, in some Amaranthaceae, is adherent to) a single seed." class="keyTextEm">$1tricle</a>$2!){
+				}
+				if(s!<<533>>(U| u)tricles<<533>>!<a href="\/IJM_glossary.html#utricles" title="Mostly dry, dehiscent or indehiscent fruit from a generally compound pistil in which a balloon- or bladder-like ovary wall loosely encloses (or, in some Amaranthaceae, is adherent to) a single seed." class="keyTextEm">$1tricles</a>$2!){
+				}
+				if(s!<<534>>(V| v)alve<<534>>!<a href="\/IJM_glossary.html#valve" title="1. In legumes or capsules opening by longitudinal lines, one of the parts into which the fruit is dehiscent.  2. In anthers, the flap of tissue resulting from dehiscence by a curved line. (e.g., Lauraceae, some Berberidaceae).  3. In Ophioglossaceae, one of the parts into which the sporangium is dehiscent." class="keyTextEm">$1alve</a>$2!){
+				}
+				if(s!<<535>>(V| v)alves<<535>>!<a href="\/IJM_glossary.html#valves" title="1. In legumes or capsules opening by longitudinal lines, one of the parts into which the fruit is dehiscent.  2. In anthers, the flap of tissue resulting from dehiscence by a curved line. (e.g., Lauraceae, some Berberidaceae).  3. In Ophioglossaceae, one of the parts into which the sporangium is dehiscent." class="keyTextEm">$1alves</a>$2!){
+				}
+				if(s!<<536>>(V| v)ascular<<536>>!<a href="\/IJM_glossary.html#vascular" title="Pertaining to plant veins or to plants with veins." class="keyTextEm">$1ascular</a>$2!){
+				}
+				if(s!<<537>>(V| v)ein<<537>>!<a href="\/IJM_glossary.html#vein" title="1. Tissue specialized for transport of substances within a plant, water and dissolved inorganic substances (e.g., mineral nutrients) through the xylem, energy-rich, organic compounds (products of photosynthesis) through the phloem.  2. A strand of such tissue, often seen as a line in surface view and as a bundle in transverse section." class="keyTextEm">$1ein</a>$2!){
+				}
+				if(s!<<538>>(V| v)eins<<538>>!<a href="\/IJM_glossary.html#veins" title="1. Tissue specialized for transport of substances within a plant, water and dissolved inorganic substances (e.g., mineral nutrients) through the xylem, energy-rich, organic compounds (products of photosynthesis) through the phloem.  2. A strand of such tissue, often seen as a line in surface view and as a bundle in transverse section." class="keyTextEm">$1eins</a>$2!){
+				}
+				if(s!<<539>>(V| v)ernal pool<<539>>!<a href="\/IJM_glossary.html#vernal pool" title="Shallow, ephemeral body of water (i.e., one that becomes dry by spring or early summer) that occupies a depression, with underlying hardpan, claypan, or bedrock, in a grassland, foothill woodland, or chaparral." class="keyTextEm">$1ernal pool</a>$2!){
+				}
+				if(s!<<540>>(V| v)ernal pools<<540>>!<a href="\/IJM_glossary.html#vernal pools" title="Shallow, ephemeral body of water (i.e., one that becomes dry by spring or early summer) that occupies a depression, with underlying hardpan, claypan, or bedrock, in a grassland, foothill woodland, or chaparral." class="keyTextEm">$1ernal pools</a>$2!){
+				}
+				if(s!<<541>>(V| v)estigial<<541>>!<a href="\/IJM_glossary.html#vestigial" title="Rudimentary; pertaining to a structure that is undeveloped, poorly developed, or degenerate and therefore non-functional." class="keyTextEm">$1estigial</a>$2!){
+				}
+				if(s!<<542>>(V| v)ine<<542>>!<a href="\/IJM_glossary.html#vine" title="A trailing, twining, or climbing plant, usually attached to its support by the twisting or coiling of stems, tendrils, or other structures.   (e.g., Phaseolus filiformis)" class="keyTextEm">$1ine</a>$2!){
+				}
+				if(s!<<543>>(V| v)ines<<543>>!<a href="\/IJM_glossary.html#vines" title="A trailing, twining, or climbing plant, usually attached to its support by the twisting or coiling of stems, tendrils, or other structures.   (e.g., Phaseolus filiformis)" class="keyTextEm">$1ines</a>$2!){
+				}
+				if(s!<<544>>(W| w)aif<<544>>!<a href="\/IJM_glossary.html#waif" title="Alien, adventive; reproducing neither sexually (e.g., by spores, seeds) nor vegetatively (e.g., by sprouts, suckers) in the absence of any benefit, intentional or not, direct or indirect, of human activity, and therefore not persisting beyond initial generation or establishment, or reproducing to some extent but not persisting for more than a few generations or well beyond initial establishment and therefore not completely naturalized; generally not considered to be part of the flora, but of interest because of their potential to become naturalized, and thereby to have become so." class="keyTextEm">$1aif</a>$2!){
+				}
+				if(s!<<545>>(W| w)aifs<<545>>!<a href="\/IJM_glossary.html#waifs" title="Alien, adventive; reproducing neither sexually (e.g., by spores, seeds) nor vegetatively (e.g., by sprouts, suckers) in the absence of any benefit, intentional or not, direct or indirect, of human activity, and therefore not persisting beyond initial generation or establishment, or reproducing to some extent but not persisting for more than a few generations or well beyond initial establishment and therefore not completely naturalized; generally not considered to be part of the flora, but of interest because of their potential to become naturalized, and thereby to have become so." class="keyTextEm">$1aifs</a>$2!){
+				}
+				if(s!<<546>>(W| w)ash<<546>>!<a href="\/IJM_glossary.html#wash" title="Normally dry drainage channel with only occasional surface flow (e.g., flash floods), in some cases with water movement and availability below in times of no surface flow." class="keyTextEm">$1ash</a>$2!){
+				}
+				if(s!<<547>>(W| w)ashes<<547>>!<a href="\/IJM_glossary.html#washes" title="Normally dry drainage channel with only occasional surface flow (e.g., flash floods), in some cases with water movement and availability below in times of no surface flow." class="keyTextEm">$1ashes</a>$2!){
+				}
+				if(s!<<548>>(W| w)horled<<548>>!<a href="\/IJM_glossary.html#whorled" title="Arranged in groups of three or more at nodes or positions along an axis (e.g., three leaves per node)." class="keyTextEm">$1horled</a>$2!){
+				}
+				if(s!<<549>>(W| w)horl<<549>>!<a href="\/IJM_glossary.html#whorl" title="Arranged in groups of three or more at nodes or positions along an axis (e.g., three leaves per node)." class="keyTextEm">$1horl</a>$2!){
+				}
+				if(s!<<550>>(W| w)ing<<550>>!<a href="\/IJM_glossary.html#wing" title="1. Thin, flat extension or appendage of a surface or margin.  2. In many members of Fabaceae and in some other groups, each of two lateral petals." class="keyTextEm">$1ing</a>$2!){
+				}
+				if(s!<<551>>(W| w)ings<<551>>!<a href="\/IJM_glossary.html#wings" title="1. Thin, flat extension or appendage of a surface or margin.  2. In many members of Fabaceae and in some other groups, each of two lateral petals." class="keyTextEm">$1ings</a>$2!){
+				}
+				if(s!<<552>>(W| w)iry<<552>>!<a href="\/IJM_glossary.html#wiry" title="Pertaining to roots, stems, hairs, and other structures that are slender, stiff, and tough." class="keyTextEm">$1iry</a>$2!){
+				}
+				if(s!<<553>>(W| w)ood<<553>>!<a href="\/IJM_glossary.html#wood" title="Hardened, thickened, vascular tissue (xylem) under the bark of subshrubs, shrubs, trees, and some vines; number of concentric rings in wood often corresponds to years or growing seasons." class="keyTextEm">$1ood</a>$2!){
+				}
+				if(s!<<554>>(W| w)oody<<554>>!<a href="\/IJM_glossary.html#woody" title="Hardened, thickened, vascular tissue (xylem) under the bark of subshrubs, shrubs, trees, and some vines; number of concentric rings in wood often corresponds to years or growing seasons." class="keyTextEm">$1oody</a>$2!){
+				}
+				if(s!<<555>>(W| w)oodland<<555>>!<a href="\/IJM_glossary.html#woodland" title="Vegetation dominated by small- to medium-sized trees, often with less continuous canopy cover than a forest and more than a savanna (canopies do not always touch)." class="keyTextEm">$1oodland</a>$2!){
+				}
+				if(s!<<556>>(W| w)oodlands<<556>>!<a href="\/IJM_glossary.html#woodlands" title="Vegetation dominated by small- to medium-sized trees, often with less continuous canopy cover than a forest and more than a savanna (canopies do not always touch)." class="keyTextEm">$1oodlands</a>$2!){
+				}
+

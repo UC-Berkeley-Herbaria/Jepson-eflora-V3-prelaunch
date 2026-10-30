@@ -1,0 +1,1113 @@
+				if(s!<<1>>(A| a)baxial<<1>>!<span title="The side or surface of a structure away from the axis on which the structure is borne (e.g., the lower surface of a leaf, the outer surface of a petal)." style="text-decoration: underline;text-decoration-style:dashed">$1baxial</span>$2!){
+				}
+				if(s!<<2>>(A| a)chene<<2>>!<span title="Dry, indehiscent, 1-seeded fruit from a 1-chambered ovary, sometimes winged, often appearing to be a naked seed. A 1-seeded dry fruit derived from an inferior ovary of > 1 carpel (e.g., Asteraceae, Dipsacaceae) is sometimes called a cypsela." style="text-decoration: underline;text-decoration-style:dashed">$1chene</span>$2!){
+				}
+				if(s!<<3>>(A| a)chenes<<3>>!<span title="Dry, indehiscent, 1-seeded fruit from a 1-chambered ovary, sometimes winged, often appearing to be a naked seed. A 1-seeded dry fruit derived from an inferior ovary of > 1 carpel (e.g., Asteraceae, Dipsacaceae) is sometimes called a cypsela." style="text-decoration: underline;text-decoration-style:dashed">$1chenes</span>$2!){
+				}
+				if(s!<<4>>(A| a)cidic<<4>>!<span title="Soil or water with a low pH, often found in habitats such as coniferous forests and bogs where decomposition of plant remains liberates an excess of hydrogen ions." style="text-decoration: underline;text-decoration-style:dashed">$1cidic</span>$2!){
+				}
+				if(s!<<5>>(A| a)cuminate<<5>>!<span title="Having a long-tapered, sharp tip, the sides concave." style="text-decoration: underline;text-decoration-style:dashed">$1cuminate</span>$2!){
+				}
+				if(s!<<6>>(A| a)cute<<6>>!<span title="Having a short-tapered, sharp tip, the sides convex or straight and converging at less than a right angle." style="text-decoration: underline;text-decoration-style:dashed">$1cute</span>$2!){
+				}
+				if(s!<<7>>(A| a)daxial<<7>>!<span title="The side or surface of a structure toward the axis on which the structure is borne (e.g., the upper surface of a leaf, the inner surface of a petal)." style="text-decoration: underline;text-decoration-style:dashed">$1daxial</span>$2!){
+				}
+				if(s!<<8>>(A| a)dherent<<8>>!<span title="Sticking to and sometimes appearing fused to another part of like or unlike kind, but separable from it, such as 'perianth adherent to fruit'." style="text-decoration: underline;text-decoration-style:dashed">$1dherent</span>$2!){
+				}
+				if(s!<<9>>(A| a)dventitious <<9>>!<span title="Arising at unusual times or places, such as  roots on aerial stems." style="text-decoration: underline;text-decoration-style:dashed">$1dventitious </span>$2!){
+				}
+				if(s!<<10>>(A| a)lien<<10>>!<span title="Not native; introduced purposely or accidentally into an area." style="text-decoration: underline;text-decoration-style:dashed">$1lien</span>$2!){
+				}
+				if(s!<<11>>(A| a)lkali<<11>>!<span title="Soil or water with a high pH (i.e., basic), often found in areas where evaporation concentrates dissolved solutes." style="text-decoration: underline;text-decoration-style:dashed">$1lkali</span>$2!){
+				}
+				if(s!<<12>>(A| a)lkaline<<12>>!<span title="Soil or water with a high pH (i.e., basic), often found in areas where evaporation concentrates dissolved solutes." style="text-decoration: underline;text-decoration-style:dashed">$1lkaline</span>$2!){
+				}
+				if(s!<<13>>(A| a)lluvial<<13>>!<span title="Pertaining to sediments deposited by flowing water." style="text-decoration: underline;text-decoration-style:dashed">$1lluvial</span>$2!){
+				}
+				if(s!<<14>>(A| a)lpine<<14>>!<span title="Pertaining to the vegetational--altitudinal zone above timberline; zone above the subalpine." style="text-decoration: underline;text-decoration-style:dashed">$1lpine</span>$2!){
+				}
+				if(s!<<15>>(A| a)lternate<<15>>!<span title="1. Arranged singly, often spirally, along an axis - e.g., one leaf per node. 2. Occurring in different ranks, appearing to be between, not directly above or below, as 'stamens alternate petals'." style="text-decoration: underline;text-decoration-style:dashed">$1lternate</span>$2!){
+				}
+				if(s!<<16>>(A| a)ngiosperm<<16>>!<span title="Plant that bears flowers (hence, 'flowering plant'), in which 'vesseled seeds' (hence, angio-sperm) are enclosed in an ovary; woody to herbaceous." style="text-decoration: underline;text-decoration-style:dashed">$1ngiosperm</span>$2!){
+				}
+				if(s!<<17>>(A| a)ngiosperms<<17>>!<span title="Plant that bears flowers (hence, 'flowering plant'), in which 'vesseled seeds' (hence, angio-sperm) are enclosed in an ovary; woody to herbaceous." style="text-decoration: underline;text-decoration-style:dashed">$1ngiosperms</span>$2!){
+				}
+				if(s!<<18>>(A| a)nnual<<18>>!<span title="Completing life cycle (germination through death) in one year or growing season, generally non-woody." style="text-decoration: underline;text-decoration-style:dashed">$1nnual</span>$2!){
+				}
+				if(s!<<19>>(A| a)nnulus<<19>>!<span title="On the sporangium of most ferns, a row of cells with partly thickened walls that functions in the release of spores." style="text-decoration: underline;text-decoration-style:dashed">$1nnulus</span>$2!){
+				}
+				if(s!<<20>>(A| a)nnuli<<20>>!<span title="On the sporangium of most ferns, a row of cells with partly thickened walls that functions in the release of spores." style="text-decoration: underline;text-decoration-style:dashed">$1nnuli</span>$2!){
+				}
+				if(s!<<21>>(A| a)nther<<21>>!<span title="Pollen-bearing portion of a stamen, including one, two, or four pollen sacs." style="text-decoration: underline;text-decoration-style:dashed">$1nther</span>$2!){
+				}
+				if(s!<<22>>(A| a)nthers<<22>>!<span title="Pollen-bearing portion of a stamen, including one, two, or four pollen sacs." style="text-decoration: underline;text-decoration-style:dashed">$1nthers</span>$2!){
+				}
+				if(s!<<23>>(A| a)ppressed<<23>>!<span title="Parallel or nearly parallel to and often in contact with surface of origin; used to describe the disposition of hairs, leaves, pedicels, etc." style="text-decoration: underline;text-decoration-style:dashed">$1ppressed</span>$2!){
+				}
+				if(s!<<24>>(A| a)pogamous<<24>>!<span title=" Forming a sporophyte (the generation in a vascular plant life cycle that is conspicuous, 2n, and produces spores, which give rise to gametophytes) from a gametophyte (the generation in a vascular plant life cycle that is inconspicuous, n, and produces sperms and eggs, which usually unite in fertilization to give rise to sporophytes) by direct, asexual development, rather than by fertilization of eggs by sperms." style="text-decoration: underline;text-decoration-style:dashed">$1pogamous</span>$2!){
+				}
+				if(s!<<25>>(A| a)quatic<<25>>!<span title="Growing under, in, or on water (generally fresh; if brackish, saline, or marine, so indicated), whether rooted in bottom or floating, and including plants with parts of shoots submersed but with other parts above water; excluding plants of seeps or wet rocks. (e.g., Potamogeton gramineus)" style="text-decoration: underline;text-decoration-style:dashed">$1quatic</span>$2!){
+				}
+				if(s!<<26>>(A| a)reole<<26>>!<span title="1. In Cactaceae, a well-defined, axillary area bearing one to many spines and generally other, shorter structures  (e.g., Ferocactus cylindraceus).  2.  In general, each of many areas defined by smallest veins on a leaf ." style="text-decoration: underline;text-decoration-style:dashed">$1reole</span>$2!){
+				}
+				if(s!<<27>>(A| a)reoles<<27>>!<span title="1. In Cactaceae, a well-defined, axillary area bearing one to many spines and generally other, shorter structures  (e.g., Ferocactus cylindraceus).  2.  In general, each of many areas defined by smallest veins on a leaf ." style="text-decoration: underline;text-decoration-style:dashed">$1reoles</span>$2!){
+				}
+				if(s!<<28>>(A| a)ril<<28>>!<span title="Fleshy, corky, or bony appendage arising at or near the point of seed attachment, sometimes completely covering the seed." style="text-decoration: underline;text-decoration-style:dashed">$1ril</span>$2!){
+				}
+				if(s!<<29>>(A| a)rils<<29>>!<span title="Fleshy, corky, or bony appendage arising at or near the point of seed attachment, sometimes completely covering the seed." style="text-decoration: underline;text-decoration-style:dashed">$1rils</span>$2!){
+				}
+				if(s!<<30>>(A| a)rmed<<30>>!<span title="Bearing prickles, spines, or thorns." style="text-decoration: underline;text-decoration-style:dashed">$1rmed</span>$2!){
+				}
+				if(s!<<31>>(A| a)scending<<31>>!<span title="Curving or angling upward from base, or about 30-60 degrees less than vertical or away from axis of attachment." style="text-decoration: underline;text-decoration-style:dashed">$1scending</span>$2!){
+				}
+				if(s!<<32>>(A| a)symmetric<<32>>!<span title="Not divisible into identical or mirror-image halves." style="text-decoration: underline;text-decoration-style:dashed">$1symmetric</span>$2!){
+				}
+				if(s!<<33>>(A| a)uricle<<33>>!<span title="In Poaceae, a structure, often lanceolate, projecting from both margins of the leaf lateral to the ligule." style="text-decoration: underline;text-decoration-style:dashed">$1uricle</span>$2!){
+				}
+				if(s!<<34>>(A| a)uricles<<34>>!<span title="In Poaceae, a structure, often lanceolate, projecting from both margins of the leaf lateral to the ligule." style="text-decoration: underline;text-decoration-style:dashed">$1uricles</span>$2!){
+				}
+				if(s!<<35>>(A| a)wn<<35>>!<span title="1. Bristle-like appendage or elongation, generally terminal.  2. Stiff, needle-like pappus element in Asteraceae." style="text-decoration: underline;text-decoration-style:dashed">$1wn</span>$2!){
+				}
+				if(s!<<36>>(A| a)wns<<36>>!<span title="1. Bristle-like appendage or elongation, generally terminal.  2. Stiff, needle-like pappus element in Asteraceae." style="text-decoration: underline;text-decoration-style:dashed">$1wns</span>$2!){
+				}
+				if(s!<<37>>(A| a)xil<<37>>!<span title="Distal, adaxial angle between an appendage or branch and a main axis (e.g., between leaf and stem, or between lateral vein and midrib on a leaf)." style="text-decoration: underline;text-decoration-style:dashed">$1xil</span>$2!){
+				}
+				if(s!<<38>>(A| a)xils<<38>>!<span title="Distal, adaxial angle between an appendage or branch and a main axis (e.g., between leaf and stem, or between lateral vein and midrib on a leaf)." style="text-decoration: underline;text-decoration-style:dashed">$1xils</span>$2!){
+				}
+				if(s!<<39>>(A| a)xile<<39>>!<span title="Pertaining to an axis, as of a placenta along the central axis in a compound ovary with more than one chamber." style="text-decoration: underline;text-decoration-style:dashed">$1xile</span>$2!){
+				}
+				if(s!<<40>>(A| a)xillary<<40>>!<span title="Pertaining to or within an axil, especially a leaf axil." style="text-decoration: underline;text-decoration-style:dashed">$1xillary</span>$2!){
+				}
+				if(s!<<41>>(A| a)xis<<41>>!<span title="Line of direction, growth, or extension; structure occupying such a position - e.g., the main stem of a plant or inflorescence, the midrib of a leaf." style="text-decoration: underline;text-decoration-style:dashed">$1xis</span>$2!){
+				}
+				if(s!<<42>>(A| a)xes<<42>>!<span title="Line of direction, growth, or extension; structure occupying such a position - e.g., the main stem of a plant or inflorescence, the midrib of a leaf." style="text-decoration: underline;text-decoration-style:dashed">$1xes</span>$2!){
+				}
+				if(s!<<43>>(B| b)anner<<43>>!<span title="Uppermost, often largest petal of many members of Fabaceae." style="text-decoration: underline;text-decoration-style:dashed">$1anner</span>$2!){
+				}
+				if(s!<<44>>(B| b)arbed<<44>>!<span title="Having sharp, normally downward- or backward-pointing projections.  Said of an awn, bristle, or other structure." style="text-decoration: underline;text-decoration-style:dashed">$1arbed</span>$2!){
+				}
+				if(s!<<45>>(B| b)ark<<45>>!<span title="Tough tissue (including phloem) covering the wood (hardened xylem) of subshrubs, shrubs, trees, and some vines." style="text-decoration: underline;text-decoration-style:dashed">$1ark</span>$2!){
+				}
+				if(s!<<46>>(B| b)asal<<46>>!<span title="At or near the base of a plant or plant part.  Especially said of leaves clustered near the ground or of a placenta confined to the base of an ovary." style="text-decoration: underline;text-decoration-style:dashed">$1asal</span>$2!){
+				}
+				if(s!<<47>>(B| b)eak<<47>>!<span title=" Generally distal or terminal, narrowed, generally sterile part of fruit or surrounding structures (e.g., Ambrosia bur, Carex perigynium)." style="text-decoration: underline;text-decoration-style:dashed">$1eak</span>$2!){
+				}
+				if(s!<<48>>(B| b)eaks<<48>>!<span title=" Generally distal or terminal, narrowed, generally sterile part of fruit or surrounding structures (e.g., Ambrosia bur, Carex perigynium)." style="text-decoration: underline;text-decoration-style:dashed">$1eaks</span>$2!){
+				}
+				if(s!<<49>>(B| b)erry<<49>>!<span title="Fleshy, indehiscent fruit in which the seeds are generally more than 1 and are not encased in a stone. (e.g., Solanum americanum)" style="text-decoration: underline;text-decoration-style:dashed">$1erry</span>$2!){
+				}
+				if(s!<<50>>(B| b)iennial<<50>>!<span title="Completing life cycle (germination through death) in two years or growing seasons (generally flowering only in the second), non-woody (at least above ground), often with a rosette the first growing season." style="text-decoration: underline;text-decoration-style:dashed">$1iennial</span>$2!){
+				}
+				if(s!<<51>>(B| b)ilateral<<51>>!<span title="Divisible into mirror-image halves in only one way." style="text-decoration: underline;text-decoration-style:dashed">$1ilateral</span>$2!){
+				}
+				if(s!<<52>>(B| b)iradial<<52>>!<span title="Divisible into mirror-image halves in two ways; isobilateral." style="text-decoration: underline;text-decoration-style:dashed">$1iradial</span>$2!){
+				}
+				if(s!<<53>>(B| b)isexual<<53>>!<span title="Both male and female reproductive parts occurring and functional in the same plant or structure (e.g., flower, spikelet, inflorescence)." style="text-decoration: underline;text-decoration-style:dashed">$1isexual</span>$2!){
+				}
+				if(s!<<54>>(B| b)lade<<54>>!<span title="Expanded portion of a leaf, petal, or other structure, generally flat but sometimes rolled, cylindric, wavy, or cupped." style="text-decoration: underline;text-decoration-style:dashed">$1lade</span>$2!){
+				}
+				if(s!<<55>>(B| b)lades<<55>>!<span title="Expanded portion of a leaf, petal, or other structure, generally flat but sometimes rolled, cylindric, wavy, or cupped." style="text-decoration: underline;text-decoration-style:dashed">$1lades</span>$2!){
+				}
+				if(s!<<56>>(B| b)rackish<<56>>!<span title="Somewhat salty, generally a mixture of saline and fresh water." style="text-decoration: underline;text-decoration-style:dashed">$1rackish</span>$2!){
+				}
+				if(s!<<57>>(B| b)ract<<57>>!<span title="Reduced, leaf- or scale-like structure subtending a branch, cone scale, peduncle, pedicel, or flower." style="text-decoration: underline;text-decoration-style:dashed">$1ract</span>$2!){
+				}
+				if(s!<<58>>(B| b)racts<<58>>!<span title="Reduced, leaf- or scale-like structure subtending a branch, cone scale, peduncle, pedicel, or flower." style="text-decoration: underline;text-decoration-style:dashed">$1racts</span>$2!){
+				}
+				if(s!<<59>>(B| b)ractlet<<59>>!<span title="1. Relatively small, generally secondary bract within an inflorescence.  2. Bract-like structure on a pedicel that often does not directly subtend another structure." style="text-decoration: underline;text-decoration-style:dashed">$1ractlet</span>$2!){
+				}
+				if(s!<<60>>(B| b)ractlets<<60>>!<span title="1. Relatively small, generally secondary bract within an inflorescence.  2. Bract-like structure on a pedicel that often does not directly subtend another structure." style="text-decoration: underline;text-decoration-style:dashed">$1ractlets</span>$2!){
+				}
+				if(s!<<61>>(B| b)ristle<<61>>!<span title="1. Relatively large, generally stiff, more or less straight hair. (e.g., Navarretia breweri) 2. In Asteraceae, fine, cylindric or minutely flattened pappus element (e.g., Calycoseris parryi) or epidermal outgrowth on the receptacle (e.g., Centaurea solstitialis)." style="text-decoration: underline;text-decoration-style:dashed">$1ristle</span>$2!){
+				}
+				if(s!<<62>>(B| b)ristles<<62>>!<span title="1. Relatively large, generally stiff, more or less straight hair. (e.g., Navarretia breweri) 2. In Asteraceae, fine, cylindric or minutely flattened pappus element (e.g., Calycoseris parryi) or epidermal outgrowth on the receptacle (e.g., Centaurea solstitialis)." style="text-decoration: underline;text-decoration-style:dashed">$1ristles</span>$2!){
+				}
+				if(s!<<63>>(B| b)ud<<63>>!<span title="1. An incompletely developed, more or less embryonic shoot, usually covered with bud scales.  2. An unopened flower, often protected by sepals." style="text-decoration: underline;text-decoration-style:dashed">$1ud</span>$2!){
+				}
+				if(s!<<64>>(B| b)uds<<64>>!<span title="1. An incompletely developed, more or less embryonic shoot, usually covered with bud scales.  2. An unopened flower, often protected by sepals." style="text-decoration: underline;text-decoration-style:dashed">$1uds</span>$2!){
+				}
+				if(s!<<65>>(B| b)ulb<<65>>!<span title="Short underground stem and the fleshy leaves or leaf bases attached to and surrounding it (e.g., an onion)." style="text-decoration: underline;text-decoration-style:dashed">$1ulb</span>$2!){
+				}
+				if(s!<<66>>(B| b)ulbs<<66>>!<span title="Short underground stem and the fleshy leaves or leaf bases attached to and surrounding it (e.g., an onion)." style="text-decoration: underline;text-decoration-style:dashed">$1ulbs</span>$2!){
+				}
+				if(s!<<67>>(B| b)ulblet<<67>>!<span title="1. Small bulb generally produced at the base of a bulb.  2. Any small, bulb-like structure that propagates a plant, often in a leaf or bract axil." style="text-decoration: underline;text-decoration-style:dashed">$1ulblet</span>$2!){
+				}
+				if(s!<<68>>(B| b)ulblets<<68>>!<span title="1. Small bulb generally produced at the base of a bulb.  2. Any small, bulb-like structure that propagates a plant, often in a leaf or bract axil." style="text-decoration: underline;text-decoration-style:dashed">$1ulblets</span>$2!){
+				}
+				if(s!<<69>>(B| b)ur<<69>>!<span title="Fruit or fruiting inflorescence with awns or bristles, often barbed.  (e.g., Xanthium strumarium)" style="text-decoration: underline;text-decoration-style:dashed">$1ur</span>$2!){
+				}
+				if(s!<<70>>(C| c)allus<<70>>!<span title="1. In some Poaceae, enlarged or projected hard base of floret; sometimes hairy or sharp-pointed. 2. A firm protuberance." style="text-decoration: underline;text-decoration-style:dashed">$1allus</span>$2!){
+				}
+				if(s!<<71>>(C| c)alyx<<71>>!<span title="Collective term for sepals; outermost or lowermost whorl of flower parts, generally green and enclosing remainder of flower in bud.  Sometimes indistinguishable from corolla." style="text-decoration: underline;text-decoration-style:dashed">$1alyx</span>$2!){
+				}
+				if(s!<<72>>(C| c)anescent<<72>>!<span title="Covered with dense, fine, generally grayish white hairs.  (e.g., Phoenicaulis cheiranthoides leaf)" style="text-decoration: underline;text-decoration-style:dashed">$1anescent</span>$2!){
+				}
+				if(s!<<73>>(C| c)apsule<<73>>!<span title="Dry fruit from compound pistil, nearly always dehiscent (irregularly or by pores, slits, or lines of separation)." style="text-decoration: underline;text-decoration-style:dashed">$1apsule</span>$2!){
+				}
+				if(s!<<74>>(C| c)apsules<<74>>!<span title="Dry fruit from compound pistil, nearly always dehiscent (irregularly or by pores, slits, or lines of separation)." style="text-decoration: underline;text-decoration-style:dashed">$1apsules</span>$2!){
+				}
+				if(s!<<75>>(C| c)arpel<<75>>!<span title="The basic female structure of a flower, evolved from a fertile leaf.  Carpels are free or variously fused into a compound pistil, the number of carpels then often equal to the number of stigmas, styles, or chambers of the ovary." style="text-decoration: underline;text-decoration-style:dashed">$1arpel</span>$2!){
+				}
+				if(s!<<76>>(C| c)arpels<<76>>!<span title="The basic female structure of a flower, evolved from a fertile leaf.  Carpels are free or variously fused into a compound pistil, the number of carpels then often equal to the number of stigmas, styles, or chambers of the ovary." style="text-decoration: underline;text-decoration-style:dashed">$1arpels</span>$2!){
+				}
+				if(s!<<77>>(C| c)artilaginous<<77>>!<span title="thickened, usually whitish, sometimes flexible; in ferns, applied especially to margins of blades." style="text-decoration: underline;text-decoration-style:dashed">$1artilaginous</span>$2!){
+				}
+				if(s!<<78>>(C| c)atkin<<78>>!<span title="Spike or spike-like (e.g., Alnus) inflorescence of unisexual flowers with inconspicuous perianths (generally wind-pollinated), usually pendent and often with conspicuous bracts." style="text-decoration: underline;text-decoration-style:dashed">$1atkin</span>$2!){
+				}
+				if(s!<<79>>(C| c)atkins<<79>>!<span title="Spike or spike-like (e.g., Alnus) inflorescence of unisexual flowers with inconspicuous perianths (generally wind-pollinated), usually pendent and often with conspicuous bracts." style="text-decoration: underline;text-decoration-style:dashed">$1atkins</span>$2!){
+				}
+				if(s!<<80>>(C| c)audex<<80>>!<span title="Generally short, sometimes woody, more or less vertical stem of a perennial, at or beneath ground level." style="text-decoration: underline;text-decoration-style:dashed">$1audex</span>$2!){
+				}
+				if(s!<<81>>(C| c)audices<<81>>!<span title="Generally short, sometimes woody, more or less vertical stem of a perennial, at or beneath ground level." style="text-decoration: underline;text-decoration-style:dashed">$1audices</span>$2!){
+				}
+				if(s!<<82>>(C| c)auline<<82>>!<span title="Pertaining to structures, especially leaves, borne along (i.e., not confined to the base of) an elongate, above-ground  stem; not basal." style="text-decoration: underline;text-decoration-style:dashed">$1auline</span>$2!){
+				}
+				if(s!<<83>>(C| c)espitose<<83>>!<span title="Having a densely clumped, tufted, matted, or cushion-like growth form." style="text-decoration: underline;text-decoration-style:dashed">$1espitose</span>$2!){
+				}
+				if(s!<<84>>(C| c)hamber<<84>>!<span title="Compartment or cavity within an ovary, capsule, or other hollow structure." style="text-decoration: underline;text-decoration-style:dashed">$1hamber</span>$2!){
+				}
+				if(s!<<85>>(C| c)hambers<<85>>!<span title="Compartment or cavity within an ovary, capsule, or other hollow structure." style="text-decoration: underline;text-decoration-style:dashed">$1hambers</span>$2!){
+				}
+				if(s!<<86>>(C| c)haparral<<86>>!<span title="Vegetation dominated by mostly evergreen shrubs with thick, leathery leaves and stiff branches." style="text-decoration: underline;text-decoration-style:dashed">$1haparral</span>$2!){
+				}
+				if(s!<<87>>(C| c)iliate<<87>>!<span title="Having generally straight, conspicuous hairs along margins or edges." style="text-decoration: underline;text-decoration-style:dashed">$1iliate</span>$2!){
+				}
+				if(s!<<88>>(C| c)ircumboreal<<88>>!<span title="Occurring around the world at northern latitudes." style="text-decoration: underline;text-decoration-style:dashed">$1ircumboreal</span>$2!){
+				}
+				if(s!<<89>>(C| c)ircumscissile<<89>>!<span title="Dehiscence, usually of a fruit (capsule), by a transverse line, the top coming off as a lid." style="text-decoration: underline;text-decoration-style:dashed">$1ircumscissile</span>$2!){
+				}
+				if(s!<<90>>(C| c)law<<90>>!<span title="Stalk-like base of some free or nearly free sepals or petals." style="text-decoration: underline;text-decoration-style:dashed">$1law</span>$2!){
+				}
+				if(s!<<91>>(C| c)laws<<91>>!<span title="Stalk-like base of some free or nearly free sepals or petals." style="text-decoration: underline;text-decoration-style:dashed">$1laws</span>$2!){
+				}
+				if(s!<<92>>(C| c)leistogamous<<92>>!<span title="Bud-like, unopening flowers that are generally self-fertilized." style="text-decoration: underline;text-decoration-style:dashed">$1leistogamous</span>$2!){
+				}
+				if(s!<<93>>(C| c)lone<<93>>!<span title="Genetically identical individuals resulting from asexual reproduction (fragmentation of rhizomes or stolons, budding, etc.); often used for an apparent population, the members of which are or were connected (e.g., aspens, cattails, duckweeds, sumacs)." style="text-decoration: underline;text-decoration-style:dashed">$1lone</span>$2!){
+				}
+				if(s!<<94>>(C| c)lones<<94>>!<span title="Genetically identical individuals resulting from asexual reproduction (fragmentation of rhizomes or stolons, budding, etc.); often used for an apparent population, the members of which are or were connected (e.g., aspens, cattails, duckweeds, sumacs)." style="text-decoration: underline;text-decoration-style:dashed">$1lones</span>$2!){
+				}
+				if(s!<<95>>(C| c)losed-cone forest<<95>>!<span title="Vegetation dominated by species of Pinus or Cupressus in which the seed cones persist unopened on the branches for extended periods of time; dominated by closely spaced +- tall trees." style="text-decoration: underline;text-decoration-style:dashed">$1losed-cone forest</span>$2!){
+				}
+				if(s!<<96>>(C| c)oastal redwood<<96>>!<span title="Vegetation dominated by Sequoia sempervirens, occurring on slopes and canyons of coastal mountain ranges; dominated by closely spaced +- tall trees." style="text-decoration: underline;text-decoration-style:dashed">$1oastal redwood</span>$2!){
+				}
+				if(s!<<97>>(C| c)oastal scrub<<97>>!<span title="Coastal vegetation dominated mostly by shrubs with flexible branches, e.g., Baccharis pilularis, Artemesia californica" style="text-decoration: underline;text-decoration-style:dashed">$1oastal scrub</span>$2!){
+				}
+				if(s!<<98>>(C| c)oastal strand<<98>>!<span title="Beach and foredune habitat, characterized by sandy soils, strong winds, salt spray, and wave action." style="text-decoration: underline;text-decoration-style:dashed">$1oastal strand</span>$2!){
+				}
+				if(s!<<99>>(C| c)ollar<<99>>!<span title="1. In Poaceae, the abaxial junction of leaf sheath and blade. 2. Raised, inflated, or wing-like, encircling projection (e.g., the seeds of Delphinium luteum, D. nudicaule)" style="text-decoration: underline;text-decoration-style:dashed">$1ollar</span>$2!){
+				}
+				if(s!<<100>>(C| c)ollars<<100>>!<span title="1. In Poaceae, the abaxial junction of leaf sheath and blade. 2. Raised, inflated, or wing-like, encircling projection (e.g., the seeds of Delphinium luteum, D. nudicaule)" style="text-decoration: underline;text-decoration-style:dashed">$1ollars</span>$2!){
+				}
+				if(s!<<101>>(C| c)olumn<<101>>!<span title="Structure at the center of an orchid flower formed by fusion of stamen(s) and style." style="text-decoration: underline;text-decoration-style:dashed">$1olumn</span>$2!){
+				}
+				if(s!<<102>>(C| c)olumns<<102>>!<span title="Structure at the center of an orchid flower formed by fusion of stamen(s) and style." style="text-decoration: underline;text-decoration-style:dashed">$1olumns</span>$2!){
+				}
+				if(s!<<103>>(C| c)ompound<<103>>!<span title="1. Composed of two or more parts, as a compound leaf composed of leaflets or a compound pistil composed of fused or partly fused carpels.  2. Repeating a structural pattern (a compound umbel is an umbel of umbels)." style="text-decoration: underline;text-decoration-style:dashed">$1ompound</span>$2!){
+				}
+				if(s!<<104>>(C| c)ompressed<<104>>!<span title="Flattened side-to-side or front-to-back." style="text-decoration: underline;text-decoration-style:dashed">$1ompressed</span>$2!){
+				}
+				if(s!<<105>>(C| c)oncave<<105>>!<span title="Hollowed or indented, as the interior of a curved surface." style="text-decoration: underline;text-decoration-style:dashed">$1oncave</span>$2!){
+				}
+				if(s!<<106>>(C| c)one<<106>>!<span title="Reproductive structure composed of an axis, scales, and sometimes bracts.  1.  Non-woody structure producing spores (e.g., clubmosses, horsetails) or pollen (e.g., male cone of conifers).  2. Generally woody structure producing seeds (e.g., female cones of most conifers).  (e.g., Abies concolor)" style="text-decoration: underline;text-decoration-style:dashed">$1one</span>$2!){
+				}
+				if(s!<<107>>(C| c)ones<<107>>!<span title="Reproductive structure composed of an axis, scales, and sometimes bracts.  1.  Non-woody structure producing spores (e.g., clubmosses, horsetails) or pollen (e.g., male cone of conifers).  2. Generally woody structure producing seeds (e.g., female cones of most conifers).  (e.g., Abies concolor)" style="text-decoration: underline;text-decoration-style:dashed">$1ones</span>$2!){
+				}
+				if(s!<<108>>(C| c)onic<<108>>!<span title="Three-dimensional, defined by a wide, more or less round base, the sides evenly tapered to a narrow tip." style="text-decoration: underline;text-decoration-style:dashed">$1onic</span>$2!){
+				}
+				if(s!<<109>>(C| c)oniferous forest<<109>>!<span title="Vegetation dominated by trees belonging to various species of conifers (e.g., firs, pines, redwoods); dominated by closely spaced +- tall trees." style="text-decoration: underline;text-decoration-style:dashed">$1oniferous forest</span>$2!){
+				}
+				if(s!<<110>>(C| c)ontinuous<<110>>!<span title="Having parts spaced evenly and without interruption, not clumped; pertaining especially to  inflorescences in which the flowers are evenly spaced." style="text-decoration: underline;text-decoration-style:dashed">$1ontinuous</span>$2!){
+				}
+				if(s!<<111>>(C| c)onvex<<111>>!<span title="Rounded outward, as the exterior of a curved surface." style="text-decoration: underline;text-decoration-style:dashed">$1onvex</span>$2!){
+				}
+				if(s!<<112>>(C| c)ordate<<112>>!<span title="Heart-shaped; often pertaining to a leaf in which the blade base on both sides of the petiole is rounded and convex." style="text-decoration: underline;text-decoration-style:dashed">$1ordate</span>$2!){
+				}
+				if(s!<<113>>(C| c)orm<<113>>!<span title="Short, thick, unbranched, underground stem often surrounded by dry (not fleshy) leaves or leaf bases. (e.g., Muilla maritima)" style="text-decoration: underline;text-decoration-style:dashed">$1orm</span>$2!){
+				}
+				if(s!<<114>>(C| c)orms<<114>>!<span title="Short, thick, unbranched, underground stem often surrounded by dry (not fleshy) leaves or leaf bases. (e.g., Muilla maritima)" style="text-decoration: underline;text-decoration-style:dashed">$1orms</span>$2!){
+				}
+				if(s!<<115>>(C| c)orolla<<115>>!<span title="Collective term for petals; whorl of flower parts immediately inside or above calyx, often large and brightly colored.  Sometimes indistinguishable from calyx." style="text-decoration: underline;text-decoration-style:dashed">$1orolla</span>$2!){
+				}
+				if(s!<<116>>(C| c)orollas<<116>>!<span title="Collective term for petals; whorl of flower parts immediately inside or above calyx, often large and brightly colored.  Sometimes indistinguishable from calyx." style="text-decoration: underline;text-decoration-style:dashed">$1orollas</span>$2!){
+				}
+				if(s!<<117>>(C| c)osta<<117>>!<span title="In ferns, primary axis of a pinna." style="text-decoration: underline;text-decoration-style:dashed">$1osta</span>$2!){
+				}
+				if(s!<<118>>(C| c)ostule<<118>>!<span title="In ferns, primary axis of a pinnule." style="text-decoration: underline;text-decoration-style:dashed">$1ostule</span>$2!){
+				}
+				if(s!<<119>>(C| c)ostulet<<119>>!<span title="In ferns, primary axis of a pinnulet." style="text-decoration: underline;text-decoration-style:dashed">$1ostulet</span>$2!){
+				}
+				if(s!<<120>>(C| c)otyledon<<120>>!<span title="Seed-leaf; a modified leaf present in the seed, often functioning for food storage.  Persistent in some annuals and of aid in their identification.  (e.g., Lupinus microcarpus)" style="text-decoration: underline;text-decoration-style:dashed">$1otyledon</span>$2!){
+				}
+				if(s!<<121>>(C| c)otyledons<<121>>!<span title="Seed-leaf; a modified leaf present in the seed, often functioning for food storage.  Persistent in some annuals and of aid in their identification.  (e.g., Lupinus microcarpus)" style="text-decoration: underline;text-decoration-style:dashed">$1otyledons</span>$2!){
+				}
+				if(s!<<122>>(C| c)renate<<122>>!<span title="Pertaining to margins with shallow, rounded teeth, between which are usually acute sinuses (i.e., scalloped)" style="text-decoration: underline;text-decoration-style:dashed">$1renate</span>$2!){
+				}
+				if(s!<<123>>(C| c)ylindric<<123>>!<span title="Elongate, with parallel sides and, at any point, round in transverse section." style="text-decoration: underline;text-decoration-style:dashed">$1ylindric</span>$2!){
+				}
+				if(s!<<124>>(C| c)yme<<124>>!<span title="1. In flowering plants excluding Asteraceae and some other groups, a branched inflorescence in which the central or uppermost flower opens before the peripheral or lowermost flowers on any axis.  see 2. In Asteraceae and some other groups, a cyme-like inflorescence is one in which the central or uppermost inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, develop and mature before the peripheral or lowermost inflorescence units on any axis." style="text-decoration: underline;text-decoration-style:dashed">$1yme</span>$2!){
+				}
+				if(s!<<125>>(C| c)ymes<<125>>!<span title="1. In flowering plants excluding Asteraceae and some other groups, a branched inflorescence in which the central or uppermost flower opens before the peripheral or lowermost flowers on any axis.  see 2. In Asteraceae and some other groups, a cyme-like inflorescence is one in which the central or uppermost inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, develop and mature before the peripheral or lowermost inflorescence units on any axis." style="text-decoration: underline;text-decoration-style:dashed">$1ymes</span>$2!){
+				}
+				if(s!<<126>>(D| d)eciduous<<126>>!<span title="Falling off naturally.  1. Pertaining to leaves that all fall seasonally, or to plants that are seasonally leafless. 2.  Pertaining to structures, such as hairs or flower parts, that fall early or readily." style="text-decoration: underline;text-decoration-style:dashed">$1eciduous</span>$2!){
+				}
+				if(s!<<127>>(D| d)ecumbent<<127>>!<span title="lying mostly flat on the ground but with tips curving up." style="text-decoration: underline;text-decoration-style:dashed">$1ecumbent</span>$2!){
+				}
+				if(s!<<128>>(D| d)ecurrent<<128>>!<span title="Pertaining to a wing-like or ridge-like extension basal to  the apparent  or actual point of attachment, particularly a leaf base that appears to continue onto the stem." style="text-decoration: underline;text-decoration-style:dashed">$1ecurrent</span>$2!){
+				}
+				if(s!<<129>>(D| d)ehiscent<<129>>!<span title="Opening at maturity to release contents; usually pertaining to anthers or fruits." style="text-decoration: underline;text-decoration-style:dashed">$1ehiscent</span>$2!){
+				}
+				if(s!<<130>>(D| d)eltate<<130>>!<span title="More or less equilaterally triangular, with the corners rounded or not." style="text-decoration: underline;text-decoration-style:dashed">$1eltate</span>$2!){
+				}
+				if(s!<<131>>(D| d)ense<<131>>!<span title="Congested or compact; especially pertaining to the disposition of flowers in an inflorescence." style="text-decoration: underline;text-decoration-style:dashed">$1ense</span>$2!){
+				}
+				if(s!<<132>>(D| d)entate<<132>>!<span title="Having margins with sharp, relatively coarse teeth pointing outward, not tipward." style="text-decoration: underline;text-decoration-style:dashed">$1entate</span>$2!){
+				}
+				if(s!<<133>>(D| d)epressed<<133>>!<span title="Flattened from above and below, or with the center lower than the margins." style="text-decoration: underline;text-decoration-style:dashed">$1epressed</span>$2!){
+				}
+				if(s!<<134>>(D| d)esert<<134>>!<span title="Region and associated communities characterized by low and irregular precipitation and prolonged periods of drought." style="text-decoration: underline;text-decoration-style:dashed">$1esert</span>$2!){
+				}
+				if(s!<<135>>(D| d)ioecious<<135>>!<span title="Pertaining to a taxon in which individuals produce either male or female reproductive structures, and do not produce bisexual reproductive structures.  (e.g., Salix laevigata)" style="text-decoration: underline;text-decoration-style:dashed">$1ioecious</span>$2!){
+				}
+				if(s!<<136>>(D| d)igitate<<136>>!<span title="In Poaceae, pertaining to an inflorescence of two or more spike-like branches attached at the same point at the apex of the inflorescence stalk." style="text-decoration: underline;text-decoration-style:dashed">$1igitate</span>$2!){
+				}
+				if(s!<<137>>(D| d)iploid<<137>>!<span title="Having two sets of chromosomes (maternal and paternal); 2n." style="text-decoration: underline;text-decoration-style:dashed">$1iploid</span>$2!){
+				}
+				if(s!<<138>>(D| d)isciform head<<138>>!<span title="In Asteraceae, a head composed of disk flowers and marginal pistillate (or sterile) flowers with minute or missing laminae, superficially similar to discoid head." style="text-decoration: underline;text-decoration-style:dashed">$1isciform head</span>$2!){
+				}
+				if(s!<<139>>(D| d)iscoid head<<139>>!<span title="In Asteraceae, a head composed entirely of disk flowers." style="text-decoration: underline;text-decoration-style:dashed">$1iscoid head</span>$2!){
+				}
+				if(s!<<140>>(D| d)isk flower<<140>>!<span title="In Asteraceae, a generally bisexual (occasionally staminate or sterile, never pistillate), generally radial flower with a 5- (rarely 4-) lobed corolla; appearing without other flower types (in discoid head), or with marginal flowers of a different type (in radiate, radiant, or disciform heads)." style="text-decoration: underline;text-decoration-style:dashed">$1isk flower</span>$2!){
+				}
+				if(s!<<141>>(D| d)isk flowers<<141>>!<span title="In Asteraceae, a generally bisexual (occasionally staminate or sterile, never pistillate), generally radial flower with a 5- (rarely 4-) lobed corolla; appearing without other flower types (in discoid head), or with marginal flowers of a different type (in radiate, radiant, or disciform heads)." style="text-decoration: underline;text-decoration-style:dashed">$1isk flowers</span>$2!){
+				}
+				if(s!<<142>>(D| d)issected<<142>>!<span title="Deeply, often sharply cut but not compound; usually pertaining to leaves.  (e.g., Cymopteris deserticola)" style="text-decoration: underline;text-decoration-style:dashed">$1issected</span>$2!){
+				}
+				if(s!<<143>>(D| d)istal<<143>>!<span title="Farther away from the base, origin, or point of attachment, or closer to the edge or tip." style="text-decoration: underline;text-decoration-style:dashed">$1istal</span>$2!){
+				}
+				if(s!<<144>>(D| d)istally<<144>>!<span title="Farther away from the base, origin, or point of attachment, or closer to the edge or tip." style="text-decoration: underline;text-decoration-style:dashed">$1istally</span>$2!){
+				}
+				if(s!<<145>>(D| d)rupe<<145>>!<span title="Fleshy or pulpy, indehiscent, superficially berry-like fruit in which 1 seed is encased in a stone (as in cherries), or more than 1 seed is encased in an equal number of free or variously fused stones (as in manzanitas).  (e.g., Prunus emarginata fruit)" style="text-decoration: underline;text-decoration-style:dashed">$1rupe</span>$2!){
+				}
+				if(s!<<146>>(D| d)rupes<<146>>!<span title="Fleshy or pulpy, indehiscent, superficially berry-like fruit in which 1 seed is encased in a stone (as in cherries), or more than 1 seed is encased in an equal number of free or variously fused stones (as in manzanitas).  (e.g., Prunus emarginata fruit)" style="text-decoration: underline;text-decoration-style:dashed">$1rupes</span>$2!){
+				}
+				if(s!<<147>>(D| d)une<<147>>!<span title="Hill or ridge of sand formed by the wind." style="text-decoration: underline;text-decoration-style:dashed">$1une</span>$2!){
+				}
+				if(s!<<148>>(D| d)unes<<148>>!<span title="Hill or ridge of sand formed by the wind." style="text-decoration: underline;text-decoration-style:dashed">$1unes</span>$2!){
+				}
+				if(s!<<149>>(E| e)lliptic<<149>>!<span title="In the shape of a flattened circle or ellipse; wider than linear" style="text-decoration: underline;text-decoration-style:dashed">$1lliptic</span>$2!){
+				}
+				if(s!<<150>>(E| e)mergent<<150>>!<span title="Pertaining to a plant normally rooted underwater and extending above the water surface, or to a part of such a plant normally held above the water surface.  (e.g., Polygonum amphibium)" style="text-decoration: underline;text-decoration-style:dashed">$1mergent</span>$2!){
+				}
+				if(s!<<151>>(E| e)ndemic<<151>>!<span title="Native to and restricted to a defined geographic area." style="text-decoration: underline;text-decoration-style:dashed">$1ndemic</span>$2!){
+				}
+				if(s!<<152>>(E| e)ntire<<152>>!<span title="Having margins that are continuous and smooth (i.e., without teeth, lobes, etc.)." style="text-decoration: underline;text-decoration-style:dashed">$1ntire</span>$2!){
+				}
+				if(s!<<153>>(E| e)phemeral<<153>>!<span title="Lasting a short time.  1. Pertaining to individual plants, completing the life cycle (germination through death) or growth cycle in much less than one year.   2.  Pertaining to plant parts,  falling early or remaining functional for a relatively short time (e.g., less than a day for flower parts)." style="text-decoration: underline;text-decoration-style:dashed">$1phemeral</span>$2!){
+				}
+				if(s!<<154>>(E| e)pidermis<<154>>!<span title="Outermost cell layer (or layers) of non-woody plant parts." style="text-decoration: underline;text-decoration-style:dashed">$1pidermis</span>$2!){
+				}
+				if(s!<<155>>(E| e)pipetalous<<155>>!<span title="Pertaining to stamens that are fused to the petals to various extents and therefore appear to arise from them." style="text-decoration: underline;text-decoration-style:dashed">$1pipetalous</span>$2!){
+				}
+				if(s!<<156>>(E| e)rect<<156>>!<span title="Upright; vertically oriented." style="text-decoration: underline;text-decoration-style:dashed">$1rect</span>$2!){
+				}
+				if(s!<<157>>(E| e)stuarine<<157>>!<span title="Pertaining to aquatic habitats where freshwater from streams mixes with sea water in a protected area, resulting in a gradation of brackish waters with varying degrees of salinity." style="text-decoration: underline;text-decoration-style:dashed">$1stuarine</span>$2!){
+				}
+				if(s!<<158>>(E| e)vergreen<<158>>!<span title="Never leafless; usually pertaining to leaves that remain green and on the plant for more than one season, and that do not all fall seasonally, or to plants that are never leafless." style="text-decoration: underline;text-decoration-style:dashed">$1vergreen</span>$2!){
+				}
+				if(s!<<159>>(E| e)xceeding<<159>>!<span title="Surpassing tipward, due to relative orientation or length of the structures involved (e.g., lateral branches exceeding inflorescences; hoods exceeded by anther head in Asclepias californica; hoods slightly exceeding anther head in Asclepias erosa)." style="text-decoration: underline;text-decoration-style:dashed">$1xceeding</span>$2!){
+				}
+				if(s!<<160>>(E| e)xserted<<160>>!<span title="Protruding out of surrounding structure(s) (e.g., stamens exserted from corolla)." style="text-decoration: underline;text-decoration-style:dashed">$1xserted</span>$2!){
+				}
+				if(s!<<161>>(E| e)xtant<<161>>!<span title="Currently existing or surviving somewhere." style="text-decoration: underline;text-decoration-style:dashed">$1xtant</span>$2!){
+				}
+				if(s!<<162>>(E| e)xtinct<<162>>!<span title="No longer existing or surviving anywhere." style="text-decoration: underline;text-decoration-style:dashed">$1xtinct</span>$2!){
+				}
+				if(s!<<163>>(E| e)xtirpated<<163>>!<span title="No longer existing or surviving in a defined geographic area, as either a direct or indirect result of human activity." style="text-decoration: underline;text-decoration-style:dashed">$1xtirpated</span>$2!){
+				}
+				if(s!<<164>>(E| e)xudate<<164>>!<span title="Material discharged (exuded) from a plant, often with characteristic odor, color, or texture (e.g., sticky, gummy, slippery)." style="text-decoration: underline;text-decoration-style:dashed">$1xudate</span>$2!){
+				}
+				if(s!<<165>>(F| f)ertile<<165>>!<span title="Reproductively functional; pertaining to a plant or plant part that produces or is associated with the production of functional spores, pollen, ovules, or seeds (e.g., fertile frond, fertile stamen, fertile flower, fertile floret)." style="text-decoration: underline;text-decoration-style:dashed">$1ertile</span>$2!){
+				}
+				if(s!<<166>>(F| f)ibrous<<166>>!<span title="1. Pertaining to structures that are composed at least in part of more or less thread-like but usually tough elements (e.g., Yucca leaves).  2.  Pertaining to a root system composed of many roots similar in length and thickness (e.g., grass roots)." style="text-decoration: underline;text-decoration-style:dashed">$1ibrous</span>$2!){
+				}
+				if(s!<<167>>(F| f)ilament<<167>>!<span title="Anther-stalk portion of a stamen, often thread-like." style="text-decoration: underline;text-decoration-style:dashed">$1ilament</span>$2!){
+				}
+				if(s!<<168>>(F| f)ilaments<<168>>!<span title="Anther-stalk portion of a stamen, often thread-like." style="text-decoration: underline;text-decoration-style:dashed">$1ilaments</span>$2!){
+				}
+				if(s!<<169>>(F| f)leshy<<169>>!<span title="Thick and juicy; succulent.  (e.g., Sesuvium verrucosum)" style="text-decoration: underline;text-decoration-style:dashed">$1leshy</span>$2!){
+				}
+				if(s!<<170>>(F| f)loret<<170>>!<span title="In Poaceae, a single flower and its immediately subtending bracts (lemma and generally palea, the lemma subtending the palea when the latter is present); in a sterile floret, the flower and sometimes palea are rudimentary or absent." style="text-decoration: underline;text-decoration-style:dashed">$1loret</span>$2!){
+				}
+				if(s!<<171>>(F| f)lorets<<171>>!<span title="In Poaceae, a single flower and its immediately subtending bracts (lemma and generally palea, the lemma subtending the palea when the latter is present); in a sterile floret, the flower and sometimes palea are rudimentary or absent." style="text-decoration: underline;text-decoration-style:dashed">$1lorets</span>$2!){
+				}
+				if(s!<<172>>(F| f)ollicle<<172>>!<span title="Dry fruit from a simple pistil, dehiscent on only one side, along a single suture.  A single flower may develop into a simple fruit of 1 follicle or an aggregate fruit of several follicles." style="text-decoration: underline;text-decoration-style:dashed">$1ollicle</span>$2!){
+				}
+				if(s!<<173>>(F| f)ollicles<<173>>!<span title="Dry fruit from a simple pistil, dehiscent on only one side, along a single suture.  A single flower may develop into a simple fruit of 1 follicle or an aggregate fruit of several follicles." style="text-decoration: underline;text-decoration-style:dashed">$1ollicles</span>$2!){
+				}
+				if(s!<<174>>(F| f)oothill<<174>>!<span title="Slope at the base of a mountain; especially applied to such features in CA-FP." style="text-decoration: underline;text-decoration-style:dashed">$1oothill</span>$2!){
+				}
+				if(s!<<175>>(F| f)oothills<<175>>!<span title="Slope at the base of a mountain; especially applied to such features in CA-FP." style="text-decoration: underline;text-decoration-style:dashed">$1oothills</span>$2!){
+				}
+				if(s!<<176>>(F| f)orked<<176>>!<span title="Pertaining to a hair or other structure that branches into two parts." style="text-decoration: underline;text-decoration-style:dashed">$1orked</span>$2!){
+				}
+				if(s!<<177>>(F| f)ree<<177>>!<span title="Neither fused to nor adherent to other parts; distinct, separate." style="text-decoration: underline;text-decoration-style:dashed">$1ree</span>$2!){
+				}
+				if(s!<<178>>(F| f)ree-central<<178>>!<span title="Pertaining to a placenta along the central axis in a compound ovary with only one chamber." style="text-decoration: underline;text-decoration-style:dashed">$1ree-central</span>$2!){
+				}
+				if(s!<<179>>(F| f)ringed<<179>>!<span title="Having ragged or finely cut margins." style="text-decoration: underline;text-decoration-style:dashed">$1ringed</span>$2!){
+				}
+				if(s!<<180>>(F| f)rond<<180>>!<span title="In ferns, a leaf, often compound or dissected, borne on a rhizome." style="text-decoration: underline;text-decoration-style:dashed">$1rond</span>$2!){
+				}
+				if(s!<<181>>(F| f)ruit<<181>>!<span title="An ovary or ovaries and sometimes associated structures after ovule  fertilization (i.e., seed initiation).  A simple fruit develops from one ovary (e.g., cherry, apple, the latter derived largely from the hypanthium); aggregate and multiple fruits develop from ovaries of one and more than one flower, respectively, that remain distinct yet held together as a unit (e.g., a strawberry is an aggregate fruit of achenes held together by a juicy, red flower receptacle; a fig is a multiple fruit of achenes surrounded by a fleshy inflorescence receptacle." style="text-decoration: underline;text-decoration-style:dashed">$1ruit</span>$2!){
+				}
+				if(s!<<182>>(F| f)ruits<<182>>!<span title="An ovary or ovaries and sometimes associated structures after ovule  fertilization (i.e., seed initiation).  A simple fruit develops from one ovary (e.g., cherry, apple, the latter derived largely from the hypanthium); aggregate and multiple fruits develop from ovaries of one and more than one flower, respectively, that remain distinct yet held together as a unit (e.g., a strawberry is an aggregate fruit of achenes held together by a juicy, red flower receptacle; a fig is a multiple fruit of achenes surrounded by a fleshy inflorescence receptacle." style="text-decoration: underline;text-decoration-style:dashed">$1ruits</span>$2!){
+				}
+				if(s!<<183>>(F| f)unnel-shaped<<183>>!<span title="Widening from the base more or less gradually through the throat into an ascending, spreading, or recurved limb; often applied to a fused calyx or corolla." style="text-decoration: underline;text-decoration-style:dashed">$1unnel-shaped</span>$2!){
+				}
+				if(s!<<184>>(F| f)used<<184>>!<span title="United, as the petals together into a corolla tube or stamens onto petals; neither free nor adherent." style="text-decoration: underline;text-decoration-style:dashed">$1used</span>$2!){
+				}
+				if(s!<<185>>(F| f)usiform<<185>>!<span title="Elongate, widest at the middle, tapered to both ends." style="text-decoration: underline;text-decoration-style:dashed">$1usiform</span>$2!){
+				}
+				if(s!<<186>>(G| g)labrous<<186>>!<span title="Without hairs." style="text-decoration: underline;text-decoration-style:dashed">$1labrous</span>$2!){
+				}
+				if(s!<<187>>(G| g)land<<187>>!<span title="A small, often spheric body, on or embedded in the epidermis or at the tip of a hair, that exudes a generally sticky substance.  (e.g., Psorothamnus arborescens)" style="text-decoration: underline;text-decoration-style:dashed">$1land</span>$2!){
+				}
+				if(s!<<188>>(G| g)lands<<188>>!<span title="A small, often spheric body, on or embedded in the epidermis or at the tip of a hair, that exudes a generally sticky substance.  (e.g., Psorothamnus arborescens)" style="text-decoration: underline;text-decoration-style:dashed">$1lands</span>$2!){
+				}
+				if(s!<<189>>(G| g)landular<<189>>!<span title="A small, often spheric body, on or embedded in the epidermis or at the tip of a hair, that exudes a generally sticky substance.  (e.g., Psorothamnus arborescens)" style="text-decoration: underline;text-decoration-style:dashed">$1landular</span>$2!){
+				}
+				if(s!<<190>>(G| g)laucous<<190>>!<span title="Covered with a generally whitish or bluish, waxy or powdery film that is sometimes easily rubbed off." style="text-decoration: underline;text-decoration-style:dashed">$1laucous</span>$2!){
+				}
+				if(s!<<191>>(G| g)lume<<191>>!<span title="In Poaceae, each of generally two sheathing bracts that are the lowermost parts of a spikelet, subtending one or more florets." style="text-decoration: underline;text-decoration-style:dashed">$1lume</span>$2!){
+				}
+				if(s!<<192>>(G| g)lumes<<192>>!<span title="In Poaceae, each of generally two sheathing bracts that are the lowermost parts of a spikelet, subtending one or more florets." style="text-decoration: underline;text-decoration-style:dashed">$1lumes</span>$2!){
+				}
+				if(s!<<193>>(G| g)raduated<<193>>!<span title="In Asteraceae, pertaining to an involucre in which the phyllaries are of unequal length, with the outer shortest, the inner longest, and a gradual transition through multiple series between." style="text-decoration: underline;text-decoration-style:dashed">$1raduated</span>$2!){
+				}
+				if(s!<<194>>(G| g)ranular<<194>>!<span title="Covered with minute bumps." style="text-decoration: underline;text-decoration-style:dashed">$1ranular</span>$2!){
+				}
+				if(s!<<195>>(G| g)rassland<<195>>!<span title="Vegetation dominated by various species of grasses, often mixed with various other kinds of herbs (not grasses) and sometimes scattered, low-growing shrubs." style="text-decoration: underline;text-decoration-style:dashed">$1rassland</span>$2!){
+				}
+				if(s!<<196>>(G| g)rasslands<<196>>!<span title="Vegetation dominated by various species of grasses, often mixed with various other kinds of herbs (not grasses) and sometimes scattered, low-growing shrubs." style="text-decoration: underline;text-decoration-style:dashed">$1rasslands</span>$2!){
+				}
+				if(s!<<197>>(G| g)ymnosperm<<197>>!<span title="Plant that bears woody or fleshy cones, not flowers, in which 'naked seeds' (hence, gymno-sperm) are not enclosed in an ovary; woody, including e.g., pine, sequoia, ephedra, yew." style="text-decoration: underline;text-decoration-style:dashed">$1ymnosperm</span>$2!){
+				}
+				if(s!<<198>>(G| g)ymnosperms<<198>>!<span title="Plant that bears woody or fleshy cones, not flowers, in which 'naked seeds' (hence, gymno-sperm) are not enclosed in an ovary; woody, including e.g., pine, sequoia, ephedra, yew." style="text-decoration: underline;text-decoration-style:dashed">$1ymnosperms</span>$2!){
+				}
+				if(s!<<199>>(H| h)abit<<199>>!<span title="Characteristic mode of growth, general form, or shape of a plant (e.g., cespitose, herb, scapose, shrub)." style="text-decoration: underline;text-decoration-style:dashed">$1abit</span>$2!){
+				}
+				if(s!<<200>>(H| h)abits<<200>>!<span title="Characteristic mode of growth, general form, or shape of a plant (e.g., cespitose, herb, scapose, shrub)." style="text-decoration: underline;text-decoration-style:dashed">$1abits</span>$2!){
+				}
+				if(s!<<201>>(H| h)abitat<<201>>!<span title="Natural setting or conditions under which a plant lives (e.g., saltbush scrub, vernal pool, granitic soil among pines, montane forest)." style="text-decoration: underline;text-decoration-style:dashed">$1abitat</span>$2!){
+				}
+				if(s!<<202>>(H| h)abitats<<202>>!<span title="Natural setting or conditions under which a plant lives (e.g., saltbush scrub, vernal pool, granitic soil among pines, montane forest)." style="text-decoration: underline;text-decoration-style:dashed">$1abitats</span>$2!){
+				}
+				if(s!<<203>>(H| h)air<<203>>!<span title="Thread-like epidermal outgrowth." style="text-decoration: underline;text-decoration-style:dashed">$1air</span>$2!){
+				}
+				if(s!<<204>>(H| h)airs<<204>>!<span title="Thread-like epidermal outgrowth." style="text-decoration: underline;text-decoration-style:dashed">$1airs</span>$2!){
+				}
+				if(s!<<205>>(H| h)aploid<<205>>!<span title="Having one set of chromosomes (maternal or paternal); n." style="text-decoration: underline;text-decoration-style:dashed">$1aploid</span>$2!){
+				}
+				if(s!<<206>>(H| h)astate<<206>>!<span title="Arrowhead-shaped, with two basal lobes oriented more or less perpendicularly to the long axis." style="text-decoration: underline;text-decoration-style:dashed">$1astate</span>$2!){
+				}
+				if(s!<<207>>(H| h)ead<<207>>!<span title="1. A dense, often spheric inflorescence of sessile or subsessile flowers.<br>2. In Asteraceae and some other groups, a head-like inflorescence is one in which sessile or subsessile inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, are attached in a short dense cluster without an evident axis or branches." style="text-decoration: underline;text-decoration-style:dashed">$1ead</span>$2!){
+				}
+				if(s!<<208>>(H| h)eads<<208>>!<span title="1. A dense, often spheric inflorescence of sessile or subsessile flowers.<br>2. In Asteraceae and some other groups, a head-like inflorescence is one in which sessile or subsessile inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, are attached in a short dense cluster without an evident axis or branches." style="text-decoration: underline;text-decoration-style:dashed">$1eads</span>$2!){
+				}
+				if(s!<<209>>(H| h)emispheric<<209>>!<span title="Shaped like a dome or half sphere." style="text-decoration: underline;text-decoration-style:dashed">$1emispheric</span>$2!){
+				}
+				if(s!<<210>>(H| h)erb<<210>>!<span title="Plant that, at least above ground, is generally non-woody and of less than one year or growing season in duration." style="text-decoration: underline;text-decoration-style:dashed">$1erb</span>$2!){
+				}
+				if(s!<<211>>(H| h)erbs<<211>>!<span title="Plant that, at least above ground, is generally non-woody and of less than one year or growing season in duration." style="text-decoration: underline;text-decoration-style:dashed">$1erbs</span>$2!){
+				}
+				if(s!<<212>>(H| h)erbaceous<<212>>!<span title="Lacking wood; having the characteristics of an herb." style="text-decoration: underline;text-decoration-style:dashed">$1erbaceous</span>$2!){
+				}
+				if(s!<<213>>(H| h)erbage<<213>>!<span title="The above-ground, non-woody parts of a plant, including especially the leaves and young stems taken together, excluding flowers and fruits." style="text-decoration: underline;text-decoration-style:dashed">$1erbage</span>$2!){
+				}
+				if(s!<<214>>(H| h)eterostylous<<214>>!<span title="Pertaining to a taxon in which individual plants produce only one of two or more flower types, each differing in style (and generally stamen) length." style="text-decoration: underline;text-decoration-style:dashed">$1eterostylous</span>$2!){
+				}
+				if(s!<<215>>(H| h)ypanthium<<215>>!<span title="Structure generally in the shape of a tube, cup, or bowl, derived from the fused lower portions of the perianth and stamens, from which these parts seem to arise, and to which the ovary wall is fused in an inferior ovary (to which the ovary wall is partially fused in a half-inferior ovary; from which the ovary is free in a superior ovary)." style="text-decoration: underline;text-decoration-style:dashed">$1ypanthium</span>$2!){
+				}
+				if(s!<<216>>(H| h)ypanthia<<216>>!<span title="Structure generally in the shape of a tube, cup, or bowl, derived from the fused lower portions of the perianth and stamens, from which these parts seem to arise, and to which the ovary wall is fused in an inferior ovary (to which the ovary wall is partially fused in a half-inferior ovary; from which the ovary is free in a superior ovary)." style="text-decoration: underline;text-decoration-style:dashed">$1ypanthia</span>$2!){
+				}
+				if(s!<<217>>(I| i)ncluded<<217>>!<span title="Not protruding out of surrounding structure(s) (e.g., stamens included in corolla)." style="text-decoration: underline;text-decoration-style:dashed">$1ncluded</span>$2!){
+				}
+				if(s!<<218>>(I| i)ndehiscent<<218>>!<span title="Not opening inherently to release contents; usually pertaining to fruits." style="text-decoration: underline;text-decoration-style:dashed">$1ndehiscent</span>$2!){
+				}
+				if(s!<<219>>(I| i)ndusium<<219>>!<span title="In many ferns, a veil- or scale-like outgrowth of the leaf surface that covers a sorus." style="text-decoration: underline;text-decoration-style:dashed">$1ndusium</span>$2!){
+				}
+				if(s!<<220>>(I| i)ndusia<<220>>!<span title="In many ferns, a veil- or scale-like outgrowth of the leaf surface that covers a sorus." style="text-decoration: underline;text-decoration-style:dashed">$1ndusia</span>$2!){
+				}
+				if(s!<<221>>(I| i)nferior<<221>>!<span title="An ovary that is fused to the fused lower portions of the perianth and stamens (i.e., to the hypanthium), to the extent that these structures appear to arise at or above its summit" style="text-decoration: underline;text-decoration-style:dashed">$1nferior</span>$2!){
+				}
+				if(s!<<222>>(I| i)nflorescence<<222>>!<span title="An entire cluster or aggregation of flowers and associated structures (e.g., axes, bracts, bractlets, pedicels); often difficult to determine as to type and boundaries but generally excluding full-sized foliage leaves." style="text-decoration: underline;text-decoration-style:dashed">$1nflorescence</span>$2!){
+				}
+				if(s!<<223>>(I| i)nflorescences<<223>>!<span title="An entire cluster or aggregation of flowers and associated structures (e.g., axes, bracts, bractlets, pedicels); often difficult to determine as to type and boundaries but generally excluding full-sized foliage leaves." style="text-decoration: underline;text-decoration-style:dashed">$1nflorescences</span>$2!){
+				}
+				if(s!<<224>>(I| i)nfraspecific<<224>>!<span title="Below the species level or within a species;  pertaining to variation within a species, whether taxonomically significant (i.e., characterizing subspecies or varieties) or not (e.g., characterizing forms or minor variants)." style="text-decoration: underline;text-decoration-style:dashed">$1nfraspecific</span>$2!){
+				}
+				if(s!<<225>>(I| i)ntergrade<<225>>!<span title="To merge gradually from one extreme to another through a more or less continuous series of intermediates." style="text-decoration: underline;text-decoration-style:dashed">$1ntergrade</span>$2!){
+				}
+				if(s!<<226>>(I| i)ntermediate<<226>>!<span title="Between extremes or parental taxa in size, shape, color, flowering time, habitat preferences, geographic ranges, or other ways." style="text-decoration: underline;text-decoration-style:dashed">$1ntermediate</span>$2!){
+				}
+				if(s!<<227>>(I| i)nternode<<227>>!<span title="Segment of an axis (generally a stem) between successive positions (nodes) from which one or more structures (especially leaves, buds, branches, or flowers) arise." style="text-decoration: underline;text-decoration-style:dashed">$1nternode</span>$2!){
+				}
+				if(s!<<228>>(I| i)nternodes<<228>>!<span title="Segment of an axis (generally a stem) between successive positions (nodes) from which one or more structures (especially leaves, buds, branches, or flowers) arise." style="text-decoration: underline;text-decoration-style:dashed">$1nternodes</span>$2!){
+				}
+				if(s!<<229>>(I| i)nterrupted<<229>>!<span title="Having parts spaced unevenly, clustered; pertaining especially to inflorescences in which the flowers are clustered." style="text-decoration: underline;text-decoration-style:dashed">$1nterrupted</span>$2!){
+				}
+				if(s!<<230>>(I| i)ntertidal<<230>>!<span title="Pertaining to marine habitats that are submerged at high tide and exposed at low tide." style="text-decoration: underline;text-decoration-style:dashed">$1ntertidal</span>$2!){
+				}
+				if(s!<<231>>(I| i)nvolucel<<231>>!<span title="A secondary involucre (group of bracts) within an inflorescence (e.g., those subtending the secondary umbels in members of Apiaceae)." style="text-decoration: underline;text-decoration-style:dashed">$1nvolucel</span>$2!){
+				}
+				if(s!<<232>>(I| i)nvolucre<<232>>!<span title="Group of bracts more or less held together as a unit, subtending a flower, fruit (acorn cup), or inflorescence." style="text-decoration: underline;text-decoration-style:dashed">$1nvolucre</span>$2!){
+				}
+				if(s!<<233>>(I| i)nvolucres<<233>>!<span title="Group of bracts more or less held together as a unit, subtending a flower, fruit (acorn cup), or inflorescence." style="text-decoration: underline;text-decoration-style:dashed">$1nvolucres</span>$2!){
+				}
+				if(s!<<234>>(K| k)eel<<234>>!<span title="1. Ridge or crease more or less centrally located on the long axis of a structure, generally on the abaxial side.  2. The two lowermost, fused petals of many members of Fabaceae." style="text-decoration: underline;text-decoration-style:dashed">$1eel</span>$2!){
+				}
+				if(s!<<235>>(K| k)eels<<235>>!<span title="1. Ridge or crease more or less centrally located on the long axis of a structure, generally on the abaxial side.  2. The two lowermost, fused petals of many members of Fabaceae." style="text-decoration: underline;text-decoration-style:dashed">$1eels</span>$2!){
+				}
+				if(s!<<236>>(K| k)eeled<<236>>!<span title="1. Having a ridge or crease more or less centrally located on the long axis of a structure, generally on the abaxial side." style="text-decoration: underline;text-decoration-style:dashed">$1eeled</span>$2!){
+				}
+				if(s!<<237>>(L| l)amina<<237>>!<span title="In Asteraceae, the strap- or fan-shaped outer portion of the corolla of a ray flower, with generally 3 (sometimes 0, 2, or 4) lobes, or the similarly shaped, 3-lobed outer lip of the 2-lipped corolla of Trixis and Acourtia." style="text-decoration: underline;text-decoration-style:dashed">$1amina</span>$2!){
+				}
+				if(s!<<238>>(L| l)aminae<<238>>!<span title="In Asteraceae, the strap- or fan-shaped outer portion of the corolla of a ray flower, with generally 3 (sometimes 0, 2, or 4) lobes, or the similarly shaped, 3-lobed outer lip of the 2-lipped corolla of Trixis and Acourtia." style="text-decoration: underline;text-decoration-style:dashed">$1aminae</span>$2!){
+				}
+				if(s!<<239>>(L| l)anceolate<<239>>!<span title="Narrowly elongate, widest in the basal half, often tapered to an acute tip." style="text-decoration: underline;text-decoration-style:dashed">$1anceolate</span>$2!){
+				}
+				if(s!<<240>>(L| l)ateral<<240>>!<span title="Pertaining to the sides(s) of a structure; e.g., laterally compressed (flattened side-to-side), lateral branch, lateral appendage." style="text-decoration: underline;text-decoration-style:dashed">$1ateral</span>$2!){
+				}
+				if(s!<<241>>(L| l)eaf<<241>>!<span title="Organ arising from a stem, generally composed of a stalk (petiole) and a flat, expanded, green, photosynthetic area (blade); distinguished from a leaflet by the presence in its axil of a bud, branch, thorn, or flower; sometimes with lateral, basal appendages (stipules); either simple (toothed, lobed, or dissected but not divided into leaflets) or compound (divided into leaflets)." style="text-decoration: underline;text-decoration-style:dashed">$1eaf</span>$2!){
+				}
+				if(s!<<242>>(L| l)eaves<<242>>!<span title="Organ arising from a stem, generally composed of a stalk (petiole) and a flat, expanded, green, photosynthetic area (blade); distinguished from a leaflet by the presence in its axil of a bud, branch, thorn, or flower; sometimes with lateral, basal appendages (stipules); either simple (toothed, lobed, or dissected but not divided into leaflets) or compound (divided into leaflets)." style="text-decoration: underline;text-decoration-style:dashed">$1eaves</span>$2!){
+				}
+				if(s!<<243>>(L| l)eaflet<<243>>!<span title="A leaf-like unit of a compound leaf; distinguished from a leaf by the absence in its axil of a bud, branch, thorn, or flower; lacking lateral, basal appendages (stipules); either simple (leaf 1-compound, with primary leaflets) or compound (leaf 2-compound, with primary and secondary leaflets; 3-compound, with primary, secondary, and tertiary leaflets, etc)." style="text-decoration: underline;text-decoration-style:dashed">$1eaflet</span>$2!){
+				}
+				if(s!<<244>>(L| l)eaflets<<244>>!<span title="A leaf-like unit of a compound leaf; distinguished from a leaf by the absence in its axil of a bud, branch, thorn, or flower; lacking lateral, basal appendages (stipules); either simple (leaf 1-compound, with primary leaflets) or compound (leaf 2-compound, with primary and secondary leaflets; 3-compound, with primary, secondary, and tertiary leaflets, etc)." style="text-decoration: underline;text-decoration-style:dashed">$1eaflets</span>$2!){
+				}
+				if(s!<<245>>(L| l)egume<<245>>!<span title="In Fabaceae (legume family), a dry or somewhat fleshy, one- to many-seeded fruit from a simple pistil, typically dehiscent longitudinally along two sutures and splitting into halves that remain joined at the base, sometimes indehiscent or breaking crosswise into one-seeded segments; a plant with such a fruit." style="text-decoration: underline;text-decoration-style:dashed">$1egume</span>$2!){
+				}
+				if(s!<<246>>(L| l)egumes<<246>>!<span title="In Fabaceae (legume family), a dry or somewhat fleshy, one- to many-seeded fruit from a simple pistil, typically dehiscent longitudinally along two sutures and splitting into halves that remain joined at the base, sometimes indehiscent or breaking crosswise into one-seeded segments; a plant with such a fruit." style="text-decoration: underline;text-decoration-style:dashed">$1egumes</span>$2!){
+				}
+				if(s!<<247>>(L| l)emma<<247>>!<span title="In Poaceae, the lower, generally larger of two sheathing bracts subtending a flower, generally ensheathing the palea (in a sterile lemma, the associated flower and sometimes palea are rudimentary or absent); with the palea and flower, comprising the floret." style="text-decoration: underline;text-decoration-style:dashed">$1emma</span>$2!){
+				}
+				if(s!<<248>>(L| l)emmas<<248>>!<span title="In Poaceae, the lower, generally larger of two sheathing bracts subtending a flower, generally ensheathing the palea (in a sterile lemma, the associated flower and sometimes palea are rudimentary or absent); with the palea and flower, comprising the floret." style="text-decoration: underline;text-decoration-style:dashed">$1emmas</span>$2!){
+				}
+				if(s!<<249>>(L| l)enticel<<249>>!<span title="Each of many spongy or calloused areas of various shapes, sizes, and colors, most commonly on surfaces of young stems (including twigs) or fruits." style="text-decoration: underline;text-decoration-style:dashed">$1enticel</span>$2!){
+				}
+				if(s!<<250>>(L| l)enticels<<250>>!<span title="Each of many spongy or calloused areas of various shapes, sizes, and colors, most commonly on surfaces of young stems (including twigs) or fruits." style="text-decoration: underline;text-decoration-style:dashed">$1enticels</span>$2!){
+				}
+				if(s!<<251>>(L| l)enticular<<251>>!<span title="Lens- or discus-shaped, with both major sides convex." style="text-decoration: underline;text-decoration-style:dashed">$1enticular</span>$2!){
+				}
+				if(s!<<252>>(L| l)igulate flower<<252>>!<span title="In Asteraceae, a bisexual, bilateral flower with the outer portion of the corolla (the ligule) strap- or fan-shaped, 5-lobed; appearing only with other ligulate flowers in a liguliflorous head." style="text-decoration: underline;text-decoration-style:dashed">$1igulate flower</span>$2!){
+				}
+				if(s!<<253>>(L| l)igule<<253>>!<span title="1. In Asteraceae, the 5-lobed, strap- or fan-shaped outer portion of the corolla of a ligulate flower. 2. In most Poaceae and some other grass-like plants, an appendage at the adaxial junction of leaf sheath and blade, generally membranous, sometimes formed of hairs. 3. In Isoetes and, more obscurely, in Selaginella, a membrane that wholly or partially covers a sporangium." style="text-decoration: underline;text-decoration-style:dashed">$1igule</span>$2!){
+				}
+				if(s!<<254>>(L| l)igules<<254>>!<span title="1. In Asteraceae, the 5-lobed, strap- or fan-shaped outer portion of the corolla of a ligulate flower. 2. In most Poaceae and some other grass-like plants, an appendage at the adaxial junction of leaf sheath and blade, generally membranous, sometimes formed of hairs. 3. In Isoetes and, more obscurely, in Selaginella, a membrane that wholly or partially covers a sporangium." style="text-decoration: underline;text-decoration-style:dashed">$1igules</span>$2!){
+				}
+				if(s!<<255>>(L| l)iguliflorous<<255>>!<span title="In Asteraceae, a head composed entirely of ligulate flowers." style="text-decoration: underline;text-decoration-style:dashed">$1iguliflorous</span>$2!){
+				}
+				if(s!<<256>>(L| l)imb<<256>>!<span title="In calyces or corollas with fused sepals or petals, the expanded, often lobed portion distal to the tube or throat; in some free or nearly free sepals and petals, the expanded portion distal to the stalk-like base (claw)." style="text-decoration: underline;text-decoration-style:dashed">$1imb</span>$2!){
+				}
+				if(s!<<257>>(L| l)imbs<<257>>!<span title="In calyces or corollas with fused sepals or petals, the expanded, often lobed portion distal to the tube or throat; in some free or nearly free sepals and petals, the expanded portion distal to the stalk-like base (claw)." style="text-decoration: underline;text-decoration-style:dashed">$1imbs</span>$2!){
+				}
+				if(s!<<258>>(L| l)inear<<258>>!<span title="Elongate, with nearly parallel sides; narrower than elliptic or oblong." style="text-decoration: underline;text-decoration-style:dashed">$1inear</span>$2!){
+				}
+				if(s!<<259>>(L| l)ip<<259>>!<span title="1. Upper or lower of two parts in a bilateral, unequally divided calyx or corolla.  2. In Orchidaceae, generally the largest, lowest, most highly modified perianth part." style="text-decoration: underline;text-decoration-style:dashed">$1ip</span>$2!){
+				}
+				if(s!<<260>>(L| l)ips<<260>>!<span title="1. Upper or lower of two parts in a bilateral, unequally divided calyx or corolla.  2. In Orchidaceae, generally the largest, lowest, most highly modified perianth part." style="text-decoration: underline;text-decoration-style:dashed">$1ips</span>$2!){
+				}
+				if(s!<<261>>(L| l)obe<<261>>!<span title="1. A major expansion or bulge, such as on the margin of a leaf, sepal, or petal, or on the surface of an ovary.  2. The free tips of otherwise fused structures, such as sepals or petals; larger than teeth." style="text-decoration: underline;text-decoration-style:dashed">$1obe</span>$2!){
+				}
+				if(s!<<262>>(L| l)obes<<262>>!<span title="1. A major expansion or bulge, such as on the margin of a leaf, sepal, or petal, or on the surface of an ovary.  2. The free tips of otherwise fused structures, such as sepals or petals; larger than teeth." style="text-decoration: underline;text-decoration-style:dashed">$1obes</span>$2!){
+				}
+				if(s!<<263>>(L| l)oculicidal<<263>>!<span title="Pertaining to dehiscence of a fruit (capsule) by a longitudinal line through the wall at or near the center of each chamber, such that each resulting segment corresponds to the two adjacent halves of two adjacent chambers, usually with a placenta-bearing septum centrally." style="text-decoration: underline;text-decoration-style:dashed">$1oculicidal</span>$2!){
+				}
+				if(s!<<264>>(L| l)ongitudinal<<264>>!<span title="Pertaining to length or the lengthwise dimension; parallel to the axis." style="text-decoration: underline;text-decoration-style:dashed">$1ongitudinal</span>$2!){
+				}
+				if(s!<<265>>(M| m)argin<<265>>!<span title="The edge, generally of a leaf or perianth part." style="text-decoration: underline;text-decoration-style:dashed">$1argin</span>$2!){
+				}
+				if(s!<<266>>(M| m)argins<<266>>!<span title="The edge, generally of a leaf or perianth part." style="text-decoration: underline;text-decoration-style:dashed">$1argins</span>$2!){
+				}
+				if(s!<<267>>(M| m)arsh<<267>>!<span title="Permanently or periodically inundated, mostly or completely treeless vegetation dominated by semi-aquatic herbs or subshrubs." style="text-decoration: underline;text-decoration-style:dashed">$1arsh</span>$2!){
+				}
+				if(s!<<268>>(M| m)arshes<<268>>!<span title="Permanently or periodically inundated, mostly or completely treeless vegetation dominated by semi-aquatic herbs or subshrubs." style="text-decoration: underline;text-decoration-style:dashed">$1arshes</span>$2!){
+				}
+				if(s!<<269>>(M| m)eadow<<269>>!<span title="Open grass- or sedge-dominated vegetation more or less surrounded by woodland or forest; meadow soils are generally seasonally moist and frequently are composed of fine-grained sediments." style="text-decoration: underline;text-decoration-style:dashed">$1eadow</span>$2!){
+				}
+				if(s!<<270>>(M| m)eadows<<270>>!<span title="Open grass- or sedge-dominated vegetation more or less surrounded by woodland or forest; meadow soils are generally seasonally moist and frequently are composed of fine-grained sediments." style="text-decoration: underline;text-decoration-style:dashed">$1eadows</span>$2!){
+				}
+				if(s!<<271>>(M| m)embranous<<271>>!<span title="Thin, dry or moist, pliable, often more or less translucent or variously colored, sometimes green.  (e.g., Leymus cinereus ligule)" style="text-decoration: underline;text-decoration-style:dashed">$1embranous</span>$2!){
+				}
+				if(s!<<272>>(M| m)ericarp<<272>>!<span title="One of the (generally dry, indehiscent, 1-seeded) parts into which certain fruits (e.g. those of Apiaceae) separate at maturity." style="text-decoration: underline;text-decoration-style:dashed">$1ericarp</span>$2!){
+				}
+				if(s!<<273>>(M| m)ixed-evergreen forest<<273>>!<span title="Vegetation dominated by a variable mixture of mostly or only hardwood tree species, most of which retain their leaves throughout the year; dominated by closely spaced +- tall trees." style="text-decoration: underline;text-decoration-style:dashed">$1ixed-evergreen forest</span>$2!){
+				}
+				if(s!<<274>>(M| m)onoecious<<274>>!<span title="Pertaining to a taxon in which individuals produce both male and female reproductive structures, and do not produce bisexual reproductive structures.  (e.g., Alnus rhombifolia)" style="text-decoration: underline;text-decoration-style:dashed">$1onoecious</span>$2!){
+				}
+				if(s!<<275>>(M| m)onolete spore<<275>>!<span title="In spore-bearing plants, bilaterally symmetric spore on which the scar is linear and unbranched." style="text-decoration: underline;text-decoration-style:dashed">$1onolete spore</span>$2!){
+				}
+				if(s!<<276>>(M| m)ontane<<276>>!<span title="Pertaining to mountains; vegetational--altitudinal zone between the foothill and subalpine zones." style="text-decoration: underline;text-decoration-style:dashed">$1ontane</span>$2!){
+				}
+				if(s!<<277>>(M| m)ucro<<277>>!<span title="An abrupt, short, sharp, narrow, terminal point, tip, or projection" style="text-decoration: underline;text-decoration-style:dashed">$1ucro</span>$2!){
+				}
+				if(s!<<278>>(M| m)ucronate<<278>>!<span title="An abrupt, short, sharp, narrow, terminal point, tip, or projection" style="text-decoration: underline;text-decoration-style:dashed">$1ucronate</span>$2!){
+				}
+				if(s!<<279>>(N| n)ative<<279>>!<span title="Occurring naturally in an area, as neither a direct nor indirect consequence of human activity; indigenous; not alien." style="text-decoration: underline;text-decoration-style:dashed">$1ative</span>$2!){
+				}
+				if(s!<<280>>(N| n)aturalized<<280>>!<span title="Alien (not native) and reproducing either sexually (e.g., by spores, seeds) or vegetatively (e.g., by sprouts, suckers) in the absence of any benefit, intentional or not, direct or indirect, of human activity, and thereby persisting beyond initial generation or establishment." style="text-decoration: underline;text-decoration-style:dashed">$1aturalized</span>$2!){
+				}
+				if(s!<<281>>(N| n)ectar<<281>>!<span title="A sugary solution, produced in nectaries, consumed primarily as an energy source by animal visitors, usually pollinators." style="text-decoration: underline;text-decoration-style:dashed">$1ectar</span>$2!){
+				}
+				if(s!<<282>>(N| n)ectary<<282>>!<span title="Variously shaped, nectar-producing structure(s) usually at or near the base of the inside of a flower (or sometimes elsewhere, such as in a perianth spur or on a petiole). (e.g., Symphoricarpos rotundifolius)" style="text-decoration: underline;text-decoration-style:dashed">$1ectary</span>$2!){
+				}
+				if(s!<<283>>(N| n)ectaries<<283>>!<span title="Variously shaped, nectar-producing structure(s) usually at or near the base of the inside of a flower (or sometimes elsewhere, such as in a perianth spur or on a petiole). (e.g., Symphoricarpos rotundifolius)" style="text-decoration: underline;text-decoration-style:dashed">$1ectaries</span>$2!){
+				}
+				if(s!<<284>>(N| n)eedle<<284>>!<span title="A narrowly linear, often waxy, generally evergreen leaf, especially of conifers." style="text-decoration: underline;text-decoration-style:dashed">$1eedle</span>$2!){
+				}
+				if(s!<<285>>(N| n)eedles<<285>>!<span title="A narrowly linear, often waxy, generally evergreen leaf, especially of conifers." style="text-decoration: underline;text-decoration-style:dashed">$1eedles</span>$2!){
+				}
+				if(s!<<286>>(N| n)ode<<286>>!<span title="Position on a stem from which one or more structures (especially leaves, buds, branches, or flowers) arise." style="text-decoration: underline;text-decoration-style:dashed">$1ode</span>$2!){
+				}
+				if(s!<<287>>(N| n)odes<<287>>!<span title="Position on a stem from which one or more structures (especially leaves, buds, branches, or flowers) arise." style="text-decoration: underline;text-decoration-style:dashed">$1odes</span>$2!){
+				}
+				if(s!<<288>>(N| n)ut<<288>>!<span title="Mostly dry, sometimes fleshy or pulpy, usually indehiscent fruit in which a single seed is encased in a hard shell.  (e.g., Quercus palmeri)" style="text-decoration: underline;text-decoration-style:dashed">$1ut</span>$2!){
+				}
+				if(s!<<289>>(N| n)uts<<289>>!<span title="Mostly dry, sometimes fleshy or pulpy, usually indehiscent fruit in which a single seed is encased in a hard shell.  (e.g., Quercus palmeri)" style="text-decoration: underline;text-decoration-style:dashed">$1uts</span>$2!){
+				}
+				if(s!<<290>>(N| n)utlet<<290>>!<span title="Small, dry nut or nut-like fruit, usually several of which are produced by a single flower.  (e.g., Boraginaceae, Lamiaceae)" style="text-decoration: underline;text-decoration-style:dashed">$1utlet</span>$2!){
+				}
+				if(s!<<291>>(N| n)utlets<<291>>!<span title="Small, dry nut or nut-like fruit, usually several of which are produced by a single flower.  (e.g., Boraginaceae, Lamiaceae)" style="text-decoration: underline;text-decoration-style:dashed">$1utlets</span>$2!){
+				}
+				if(s!<<292>>(O| o)blique<<292>>!<span title="Having unequal sides or an asymmetric base." style="text-decoration: underline;text-decoration-style:dashed">$1blique</span>$2!){
+				}
+				if(s!<<293>>(O| o)blong<<293>>!<span title="Longer than wide, with nearly parallel sides; wider than linear." style="text-decoration: underline;text-decoration-style:dashed">$1blong</span>$2!){
+				}
+				if(s!<<294>>(O| o)btuse<<294>>!<span title="Having a short-tapered, blunt tip or base, the sides convex or straight and converging at more than a right angle." style="text-decoration: underline;text-decoration-style:dashed">$1btuse</span>$2!){
+				}
+				if(s!<<295>>(O| o)crea<<295>>!<span title="A generally scarious sheath around the stem formed by the fusion of stipules." style="text-decoration: underline;text-decoration-style:dashed">$1crea</span>$2!){
+				}
+				if(s!<<296>>(O| o)creae<<296>>!<span title="A generally scarious sheath around the stem formed by the fusion of stipules." style="text-decoration: underline;text-decoration-style:dashed">$1creae</span>$2!){
+				}
+				if(s!<<297>>(O| o)pen<<297>>!<span title="Uncongested or diffuse; especially pertaining to the disposition of flowers in an inflorescence." style="text-decoration: underline;text-decoration-style:dashed">$1pen</span>$2!){
+				}
+				if(s!<<298>>(O| o)pposite<<298>>!<span title="1.  Arranged in pairs along an axis - e.g., two leaves per node.  2.  Occurring in the same rank, directly above or below, as 'stamens opposite petals'.  3.  Located directly across from." style="text-decoration: underline;text-decoration-style:dashed">$1pposite</span>$2!){
+				}
+				if(s!<<299>>(O| o)vary<<299>>!<span title="Ovule-bearing, usually wider, basal portion of pistil, normally developing into a fruit as ovules become seeds; may be simple (one carpel, one chamber) or compound (two or more carpels, one or more chambers)." style="text-decoration: underline;text-decoration-style:dashed">$1vary</span>$2!){
+				}
+				if(s!<<300>>(O| o)varies<<300>>!<span title="Ovule-bearing, usually wider, basal portion of pistil, normally developing into a fruit as ovules become seeds; may be simple (one carpel, one chamber) or compound (two or more carpels, one or more chambers)." style="text-decoration: underline;text-decoration-style:dashed">$1varies</span>$2!){
+				}
+				if(s!<<301>>(O| o)vary stalk<<301>>!<span title="A pedestal-like, apical prolongation of a floral receptacle (often termed elsewhere a carpophore) or basal constriction of an ovary (often termed elsewhere a gynophore), above the level of perianth insertion, each with the result that the ovary or fruit appears to be stalked over and above the pedicel (whereas the demarcation between pedicel and ovary- or fruit-stalk is observable as the point of perianth insertion, carpophores generally are distinguished from gynophores only by anatomical study)." style="text-decoration: underline;text-decoration-style:dashed">$1vary stalk</span>$2!){
+				}
+				if(s!<<302>>(F| f)ruit stalk<<302>>!<span title="A pedestal-like, apical prolongation of a floral receptacle (often termed elsewhere a carpophore) or basal constriction of an ovary (often termed elsewhere a gynophore), above the level of perianth insertion, each with the result that the ovary or fruit appears to be stalked over and above the pedicel (whereas the demarcation between pedicel and ovary- or fruit-stalk is observable as the point of perianth insertion, carpophores generally are distinguished from gynophores only by anatomical study)." style="text-decoration: underline;text-decoration-style:dashed">$1ruit stalk</span>$2!){
+				}
+				if(s!<<303>>(O| o)vate<<303>>!<span title="Egg-shaped (i.e., widest below the middle) in two dimensions (i.e., in one plane), as a leaf." style="text-decoration: underline;text-decoration-style:dashed">$1vate</span>$2!){
+				}
+				if(s!<<304>>(O| o)void<<304>>!<span title="Egg-shaped (i.e., widest below the middle) in three dimensions, as a fruit." style="text-decoration: underline;text-decoration-style:dashed">$1void</span>$2!){
+				}
+				if(s!<<305>>(O| o)vule<<305>>!<span title="In gymnosperms and angiosperms, structure containing an egg, and normally developing into a seed after fertilization." style="text-decoration: underline;text-decoration-style:dashed">$1vule</span>$2!){
+				}
+				if(s!<<306>>(O| o)vules<<306>>!<span title="In gymnosperms and angiosperms, structure containing an egg, and normally developing into a seed after fertilization." style="text-decoration: underline;text-decoration-style:dashed">$1vules</span>$2!){
+				}
+				if(s!<<307>>(P| p)aleate<<307>>!<span title="1. In Asteraceae, a scale-like bract that subtends an individual flower on the receptacle (equal to 'chaff scale' in TJM), absent in some genera, restricted to a ring separating ray and disk flowers in most tarweed species. 2. In Poaceae, the distal, generally smaller of two sheathing bracts subtending a flower, generally two-veined and -keeled and ensheathed by the lemma; with the lemma and flower, comprising the floret." style="text-decoration: underline;text-decoration-style:dashed">$1aleate</span>$2!){
+				}
+				if(s!<<308>>(P| p)alea<<308>>!<span title="1. In Asteraceae, a scale-like bract that subtends an individual flower on the receptacle (equal to 'chaff scale' in TJM), absent in some genera, restricted to a ring separating ray and disk flowers in most tarweed species. 2. In Poaceae, the distal, generally smaller of two sheathing bracts subtending a flower, generally two-veined and -keeled and ensheathed by the lemma; with the lemma and flower, comprising the floret." style="text-decoration: underline;text-decoration-style:dashed">$1alea</span>$2!){
+				}
+				if(s!<<309>>(P| p)aleae<<309>>!<span title="1. In Asteraceae, a scale-like bract that subtends an individual flower on the receptacle (equal to 'chaff scale' in TJM), absent in some genera, restricted to a ring separating ray and disk flowers in most tarweed species. 2. In Poaceae, the distal, generally smaller of two sheathing bracts subtending a flower, generally two-veined and -keeled and ensheathed by the lemma; with the lemma and flower, comprising the floret." style="text-decoration: underline;text-decoration-style:dashed">$1aleae</span>$2!){
+				}
+				if(s!<<310>>(P| p)almately<<310>>!<span title="More than two structures or parts (e.g., veins, lobes, or leaflets) radiating from a common point in two dimensions (i.e., in one plane)." style="text-decoration: underline;text-decoration-style:dashed">$1almately</span>$2!){
+				}
+				if(s!<<311>>(P| p)almate<<311>>!<span title="More than two structures or parts (e.g., veins, lobes, or leaflets) radiating from a common point in two dimensions (i.e., in one plane)." style="text-decoration: underline;text-decoration-style:dashed">$1almate</span>$2!){
+				}
+				if(s!<<312>>(P| p)anicle<<312>>!<span title="1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, a branched inflorescence in which the basal or lateral flowers (or some of them) open before the terminal or central flowers on any axis. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a panicle-like inflorescence is one in which at least some of  the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae),  instead of individual flowers, are attached (stalked or unstalked) to branches and not directly to the main axis of the inflorescence and in which floral development may or may not proceed as in 1." style="text-decoration: underline;text-decoration-style:dashed">$1anicle</span>$2!){
+				}
+				if(s!<<313>>(P| p)anicles<<313>>!<span title="1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, a branched inflorescence in which the basal or lateral flowers (or some of them) open before the terminal or central flowers on any axis. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a panicle-like inflorescence is one in which at least some of  the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae),  instead of individual flowers, are attached (stalked or unstalked) to branches and not directly to the main axis of the inflorescence and in which floral development may or may not proceed as in 1." style="text-decoration: underline;text-decoration-style:dashed">$1anicles</span>$2!){
+				}
+				if(s!<<314>>(P| p)apillate<<314>>!<span title="Pertaining to a surface (e.g., of a leaf, stigma, fruit) bearing small, rounded or conic protuberances (papillae)." style="text-decoration: underline;text-decoration-style:dashed">$1apillate</span>$2!){
+				}
+				if(s!<<315>>(P| p)appus<<315>>!<span title="In Asteraceae, the aggregate of structures such as awns, bristles, or scales arising from the top of the inferior ovary, in place of the calyx." style="text-decoration: underline;text-decoration-style:dashed">$1appus</span>$2!){
+				}
+				if(s!<<316>>(P| p)arasite<<316>>!<span title="A plant that benefits by taking resources from a physical connection to a host plant of another species; green parasites (hemiparasites) derive water and dissolved inorganic substances (e.g., mineral nutrients) from the connection and often are able to survive without it, while non-green parasites (holoparasites) obtain in addition energy-rich, organic compounds (products of photosynthesis) from the connection and cannot survive without it; the connection may or may not involve a fungal intermediate, and may or may not be detrimental to the host." style="text-decoration: underline;text-decoration-style:dashed">$1arasite</span>$2!){
+				}
+				if(s!<<317>>(P| p)arasites<<317>>!<span title="A plant that benefits by taking resources from a physical connection to a host plant of another species; green parasites (hemiparasites) derive water and dissolved inorganic substances (e.g., mineral nutrients) from the connection and often are able to survive without it, while non-green parasites (holoparasites) obtain in addition energy-rich, organic compounds (products of photosynthesis) from the connection and cannot survive without it; the connection may or may not involve a fungal intermediate, and may or may not be detrimental to the host." style="text-decoration: underline;text-decoration-style:dashed">$1arasites</span>$2!){
+				}
+				if(s!<<318>>(P| p)arietal<<318>>!<span title="Pertaining to placentas on the inside surface of the ovary wall in a compound ovary with one or more chambers." style="text-decoration: underline;text-decoration-style:dashed">$1arietal</span>$2!){
+				}
+				if(s!<<319>>(P| p)arietally<<319>>!<span title="Pertaining to placentas on the inside surface of the ovary wall in a compound ovary with one or more chambers." style="text-decoration: underline;text-decoration-style:dashed">$1arietally</span>$2!){
+				}
+				if(s!<<320>>(P| p)eat<<320>>!<span title="Material formed by the partial decomposition in water of plant tissues, especially mosses (Sphagnum) or sedges." style="text-decoration: underline;text-decoration-style:dashed">$1eat</span>$2!){
+				}
+				if(s!<<321>>(P| p)eatland<<321>>!<span title="Moss- or herb-dominated freshwater wetland characterized by nutrient-deficient substrates and the accumulation of peat; often said (elsewhere, not in TJM2) to be bogs if acidic, fens if basic." style="text-decoration: underline;text-decoration-style:dashed">$1eatland</span>$2!){
+				}
+				if(s!<<322>>(P| p)eatlands<<322>>!<span title="Moss- or herb-dominated freshwater wetland characterized by nutrient-deficient substrates and the accumulation of peat; often said (elsewhere, not in TJM2) to be bogs if acidic, fens if basic." style="text-decoration: underline;text-decoration-style:dashed">$1eatlands</span>$2!){
+				}
+				if(s!<<323>>(P| p)edicel<<323>>!<span title="Stalk of an individual flower in an inflorescence, or the corresponding   structure in fruit." style="text-decoration: underline;text-decoration-style:dashed">$1edicel</span>$2!){
+				}
+				if(s!<<324>>(P| p)edicels<<324>>!<span title="Stalk of an individual flower in an inflorescence, or the corresponding   structure in fruit." style="text-decoration: underline;text-decoration-style:dashed">$1edicels</span>$2!){
+				}
+				if(s!<<325>>(P| p)eduncle<<325>>!<span title="Stalk of an individual flower borne singly, not in an inflorescence, or of an entire inflorescence, or the corresponding structure in fruit; the stalk subtending an involucre (e.g., in Asteraceae, Polygonaceae)." style="text-decoration: underline;text-decoration-style:dashed">$1eduncle</span>$2!){
+				}
+				if(s!<<326>>(P| p)eduncles<<326>>!<span title="Stalk of an individual flower borne singly, not in an inflorescence, or of an entire inflorescence, or the corresponding structure in fruit; the stalk subtending an involucre (e.g., in Asteraceae, Polygonaceae)." style="text-decoration: underline;text-decoration-style:dashed">$1eduncles</span>$2!){
+				}
+				if(s!<<327>>(P| p)eltate<<327>>!<span title="With the stalk attached toward the middle, not at a margin, of a flat structure such as an indusium, scale, or leaf." style="text-decoration: underline;text-decoration-style:dashed">$1eltate</span>$2!){
+				}
+				if(s!<<328>>(P| p)endent<<328>>!<span title="Drooping, hanging, or suspended from a point of attachment above.  (e.g., Amelanchier utahensis fruit)" style="text-decoration: underline;text-decoration-style:dashed">$1endent</span>$2!){
+				}
+				if(s!<<329>>(P| p)erennial<<329>>!<span title="Completing life cycle (germination through death) in more than two years or growing seasons, generally non-woody (at least above ground) to woody; includes perennial herbs as well as subshrubs to trees; the abbreviation 'per' only refers to perennial herb, not to the word 'perennial' alone." style="text-decoration: underline;text-decoration-style:dashed">$1erennial</span>$2!){
+				}
+				if(s!<<330>>(P| p)erianth<<330>>!<span title="Calyx and corolla collectively, whether or not they are distinguishable." style="text-decoration: underline;text-decoration-style:dashed">$1erianth</span>$2!){
+				}
+				if(s!<<331>>(P| p)erianths<<331>>!<span title="Calyx and corolla collectively, whether or not they are distinguishable." style="text-decoration: underline;text-decoration-style:dashed">$1erianths</span>$2!){
+				}
+				if(s!<<332>>(P| p)erianth part<<332>>!<span title="An individual member of a perianth; used whether or not calyx and corolla are distinguishable, but usually when they are not." style="text-decoration: underline;text-decoration-style:dashed">$1erianth part</span>$2!){
+				}
+				if(s!<<333>>(P| p)erigynium<<333>>!<span title="Variously shaped, sac-like structure enclosing the ovary and achene in Carex and Kobresia." style="text-decoration: underline;text-decoration-style:dashed">$1erigynium</span>$2!){
+				}
+				if(s!<<334>>(P| p)ersistent<<334>>!<span title="Not falling off; remaining attached." style="text-decoration: underline;text-decoration-style:dashed">$1ersistent</span>$2!){
+				}
+				if(s!<<335>>(P| p)etal<<335>>!<span title="Individual member of the corolla, whether fused or not; if fused, often equal in number to the number of corolla lobes; often conspicuously colored." style="text-decoration: underline;text-decoration-style:dashed">$1etal</span>$2!){
+				}
+				if(s!<<336>>(P| p)etals<<336>>!<span title="Individual member of the corolla, whether fused or not; if fused, often equal in number to the number of corolla lobes; often conspicuously colored." style="text-decoration: underline;text-decoration-style:dashed">$1etals</span>$2!){
+				}
+				if(s!<<337>>(P| p)etiole<<337>>!<span title="Leaf stalk, connecting leaf blade to stem; sometimes more or less indistinct." style="text-decoration: underline;text-decoration-style:dashed">$1etiole</span>$2!){
+				}
+				if(s!<<338>>(P| p)etioles<<338>>!<span title="Leaf stalk, connecting leaf blade to stem; sometimes more or less indistinct." style="text-decoration: underline;text-decoration-style:dashed">$1etioles</span>$2!){
+				}
+				if(s!<<339>>(P| p)hyllary<<339>>!<span title="In Asteraceae, a bract of the involucre." style="text-decoration: underline;text-decoration-style:dashed">$1hyllary</span>$2!){
+				}
+				if(s!<<340>>(P| p)hyllaries<<340>>!<span title="In Asteraceae, a bract of the involucre." style="text-decoration: underline;text-decoration-style:dashed">$1hyllaries</span>$2!){
+				}
+				if(s!<<341>>(P| p)inna<<341>>!<span title="In ferns, primary division of a compound or dissected frond blade." style="text-decoration: underline;text-decoration-style:dashed">$1inna</span>$2!){
+				}
+				if(s!<<342>>(P| p)innae<<342>>!<span title="In ferns, primary division of a compound or dissected frond blade." style="text-decoration: underline;text-decoration-style:dashed">$1innae</span>$2!){
+				}
+				if(s!<<343>>(P| p)innate<<343>>!<span title="Feather-like; pertaining to veins, lobes, leaflets, or other structures arranged in two dimensions (i.e., in one plane) along either side of an axis; a leaf is odd-pinnate if there is a terminal leaflet, even-pinnate if there is not, and either odd- or even-pinnate may be 1-pinnate (blade divided into primary leaflets), 2-pinnate (primary leaflets divided into secondary leaflets), 3-pinnate (secondary leaflets divided into tertiary leaflets), etc." style="text-decoration: underline;text-decoration-style:dashed">$1innate</span>$2!){
+				}
+				if(s!<<344>>(P| p)innately<<344>>!<span title="Feather-like; pertaining to veins, lobes, leaflets, or other structures arranged in two dimensions (i.e., in one plane) along either side of an axis; a leaf is odd-pinnate if there is a terminal leaflet, even-pinnate if there is not, and either odd- or even-pinnate may be 1-pinnate (blade divided into primary leaflets), 2-pinnate (primary leaflets divided into secondary leaflets), 3-pinnate (secondary leaflets divided into tertiary leaflets), etc." style="text-decoration: underline;text-decoration-style:dashed">$1innately</span>$2!){
+				}
+				if(s!<<345>>(P| p)innule<<345>>!<span title="In ferns, secondary division of a compound or dissected frond blade, primary division of a pinna." style="text-decoration: underline;text-decoration-style:dashed">$1innule</span>$2!){
+				}
+				if(s!<<346>>(P| p)innules<<346>>!<span title="In ferns, secondary division of a compound or dissected frond blade, primary division of a pinna." style="text-decoration: underline;text-decoration-style:dashed">$1innules</span>$2!){
+				}
+				if(s!<<347>>(P| p)innulet<<347>>!<span title="In ferns, tertiary division of a compound or dissected frond blade, secondary division of a pinna, primary division of a pinnule." style="text-decoration: underline;text-decoration-style:dashed">$1innulet</span>$2!){
+				}
+				if(s!<<348>>(P| p)istil<<348>>!<span title="Female reproductive structure of a flower, composed of an ovule-containing ovary at the base, one or more pollen-receiving stigmas at the tip, and generally one or more styles between ovary and stigma.  A flower may have one or more simple pistils (each a single, free carpel with a single ovary chamber, placenta, and stigma) or one compound pistil (two or more fused or partially fused carpels, the exact number often equaling the number of ovary lobes, ovary chambers, placentas, styles, or stigmas)." style="text-decoration: underline;text-decoration-style:dashed">$1istil</span>$2!){
+				}
+				if(s!<<349>>(P| p)istils<<349>>!<span title="Female reproductive structure of a flower, composed of an ovule-containing ovary at the base, one or more pollen-receiving stigmas at the tip, and generally one or more styles between ovary and stigma.  A flower may have one or more simple pistils (each a single, free carpel with a single ovary chamber, placenta, and stigma) or one compound pistil (two or more fused or partially fused carpels, the exact number often equaling the number of ovary lobes, ovary chambers, placentas, styles, or stigmas)." style="text-decoration: underline;text-decoration-style:dashed">$1istils</span>$2!){
+				}
+				if(s!<<350>>(P| p)istillate<<350>>!<span title="Pertaining to flowers, inflorescences, or plants with fertile pistils but sterile or missing stamens.  (e.g., Salix laevigata flower)" style="text-decoration: underline;text-decoration-style:dashed">$1istillate</span>$2!){
+				}
+				if(s!<<351>>(P| p)lacenta<<351>>!<span title="Structure or area to which ovules are attached in an ovary; variously shaped and positioned." style="text-decoration: underline;text-decoration-style:dashed">$1lacenta</span>$2!){
+				}
+				if(s!<<352>>(P| p)lacentas<<352>>!<span title="Structure or area to which ovules are attached in an ovary; variously shaped and positioned." style="text-decoration: underline;text-decoration-style:dashed">$1lacentas</span>$2!){
+				}
+				if(s!<<353>>(P| p)lanoconvex<<353>>!<span title="Flat or nearly so on one side, rounded on the other.  (e.g., Carex leporinella perigynium)" style="text-decoration: underline;text-decoration-style:dashed">$1lanoconvex</span>$2!){
+				}
+				if(s!<<354>>(P| p)leated<<354>>!<span title="Having accordion-like folds." style="text-decoration: underline;text-decoration-style:dashed">$1leated</span>$2!){
+				}
+				if(s!<<355>>(P| p)lumose<<355>>!<span title="Plume-like, usually with the parts arrayed in three dimensions around an axis, or in tufts held together at the base; usually pertaining to small, finely divided structures, such as certain stigmas and pappus elements." style="text-decoration: underline;text-decoration-style:dashed">$1lumose</span>$2!){
+				}
+				if(s!<<356>>(P| p)ollen<<356>>!<span title="In gymnosperms and angiosperms, structure containing the sperm; when sperm fertilizes an egg, the egg and surrounding ovule normally develop into a seed." style="text-decoration: underline;text-decoration-style:dashed">$1ollen</span>$2!){
+				}
+				if(s!<<357>>(P| p)ollination<<357>>!<span title="Placement of pollen, by an insect, the wind, or other vector, on a stigmatic or ovular surface, through which pollen tube growth and fertilization may occur; self-pollination involves only one plant, cross-pollination occurs between plants." style="text-decoration: underline;text-decoration-style:dashed">$1ollination</span>$2!){
+				}
+				if(s!<<358>>(P| p)ollinium<<358>>!<span title="Especially in Asclepias and related genera, and in Orchidaceae, a mass of coherent pollen grains disseminated as a unit." style="text-decoration: underline;text-decoration-style:dashed">$1ollinium</span>$2!){
+				}
+				if(s!<<359>>(P| p)ollinia<<359>>!<span title="Especially in Asclepias and related genera, and in Orchidaceae, a mass of coherent pollen grains disseminated as a unit." style="text-decoration: underline;text-decoration-style:dashed">$1ollinia</span>$2!){
+				}
+				if(s!<<360>>(P| p)olyploid<<360>>!<span title="Having three or more sets of chromosomes; 3n, 4n, etc." style="text-decoration: underline;text-decoration-style:dashed">$1olyploid</span>$2!){
+				}
+				if(s!<<361>>(P| p)ome<<361>>!<span title="In Rosaceae, a fleshy, indehiscent fruit, such as an apple or pear; derived from a compound, inferior ovary (represented as 2-5 papery-walled, radiating segments alternating with fleshy material) and surrounding hypanthium (represented as outer fleshy material and skin).  (e.g., Amelanchier utahensis fruit)" style="text-decoration: underline;text-decoration-style:dashed">$1ome</span>$2!){
+				}
+				if(s!<<362>>(P| p)rickle<<362>>!<span title="Sharp-pointed, stiff or somewhat flexible projection, originating at the epidermis, derived from epidermal cells and therefore neither subtending an axillary bud or branch nor subtended by a leaf or leaf scar, without leaves, leaf scars, buds, or branches; loosely used for any sharp projection. (e.g., Rosa woodsii stem)" style="text-decoration: underline;text-decoration-style:dashed">$1rickle</span>$2!){
+				}
+				if(s!<<363>>(P| p)rickles<<363>>!<span title="Sharp-pointed, stiff or somewhat flexible projection, originating at the epidermis, derived from epidermal cells and therefore neither subtending an axillary bud or branch nor subtended by a leaf or leaf scar, without leaves, leaf scars, buds, or branches; loosely used for any sharp projection. (e.g., Rosa woodsii stem)" style="text-decoration: underline;text-decoration-style:dashed">$1rickles</span>$2!){
+				}
+				if(s!<<364>>(P| p)rostrate<<364>>!<span title="Lying flat on the ground." style="text-decoration: underline;text-decoration-style:dashed">$1rostrate</span>$2!){
+				}
+				if(s!<<365>>(P| p)rotandrous<<365>>!<span title="Pertaining to a bisexual flower in which pollen release precedes stigma receptivity, or to a plant with staminate and pistillate flowers in which this is true, with the result that cross-pollination is favored." style="text-decoration: underline;text-decoration-style:dashed">$1rotandrous</span>$2!){
+				}
+				if(s!<<366>>(P| p)rotogynous<<366>>!<span title="Pertaining to a bisexual flower in which stigma receptivity precedes pollen release, or to a plant with staminate and pistillate flowers in which this is true, with the result that cross-pollination is favored." style="text-decoration: underline;text-decoration-style:dashed">$1rotogynous</span>$2!){
+				}
+				if(s!<<367>>(P| p)roximal<<367>>!<span title="Closer to the base, origin, or point of attachment, or farther away from the edge or tip." style="text-decoration: underline;text-decoration-style:dashed">$1roximal</span>$2!){
+				}
+				if(s!<<368>>(P| p)roximally<<368>>!<span title="Closer to the base, origin, or point of attachment, or farther away from the edge or tip." style="text-decoration: underline;text-decoration-style:dashed">$1roximally</span>$2!){
+				}
+				if(s!<<369>>(P| p)uberulent<<369>>!<span title="Minutely hairy." style="text-decoration: underline;text-decoration-style:dashed">$1uberulent</span>$2!){
+				}
+				if(s!<<370>>(R| r)aceme<<370>>!<span title="In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are borne on pedicels and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a raceme-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are stalked and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1." style="text-decoration: underline;text-decoration-style:dashed">$1aceme</span>$2!){
+				}
+				if(s!<<371>>(R| r)acemes<<371>>!<span title="In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are borne on pedicels and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a raceme-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are stalked and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1." style="text-decoration: underline;text-decoration-style:dashed">$1acemes</span>$2!){
+				}
+				if(s!<<372>>(R| r)achis<<372>>!<span title="In ferns, primary axis of a compound or dissected frond blade." style="text-decoration: underline;text-decoration-style:dashed">$1achis</span>$2!){
+				}
+				if(s!<<373>>(R| r)achides<<373>>!<span title="In ferns, primary axis of a compound or dissected frond blade." style="text-decoration: underline;text-decoration-style:dashed">$1achides</span>$2!){
+				}
+				if(s!<<374>>(R| r)adial<<374>>!<span title="Divisible into mirror-image halves in three or more ways." style="text-decoration: underline;text-decoration-style:dashed">$1adial</span>$2!){
+				}
+				if(s!<<375>>(R| r)adiant<<375>>!<span title="In Asteraceae, a discoid head with a peripheral ring of flowers having much enlarged, often bilateral corollas." style="text-decoration: underline;text-decoration-style:dashed">$1adiant</span>$2!){
+				}
+				if(s!<<376>>(R| r)adiate<<376>>!<span title="In Asteraceae, a head composed of central disk flowers and marginal ray flowers." style="text-decoration: underline;text-decoration-style:dashed">$1adiate</span>$2!){
+				}
+				if(s!<<377>>(R| r)ank<<377>>!<span title="1. A row or column of parts along an axis - e.g., leaves on an erect stem arranged in four vertical rows are 4-ranked.  2. In classification, a taxonomic level - e.g., family, genus, species, subspecies, variety." style="text-decoration: underline;text-decoration-style:dashed">$1ank</span>$2!){
+				}
+				if(s!<<378>>(R| r)anks<<378>>!<span title="1. A row or column of parts along an axis - e.g., leaves on an erect stem arranged in four vertical rows are 4-ranked.  2. In classification, a taxonomic level - e.g., family, genus, species, subspecies, variety." style="text-decoration: underline;text-decoration-style:dashed">$1anks</span>$2!){
+				}
+				if(s!<<379>>(R| r)anked<<379>>!<span title="1. A row or column of parts along an axis - e.g., leaves on an erect stem arranged in four vertical rows are 4-ranked.  2. In classification, a taxonomic level - e.g., family, genus, species, subspecies, variety." style="text-decoration: underline;text-decoration-style:dashed">$1anked</span>$2!){
+				}
+				if(s!<<380>>(R| r)are<<380>>!<span title="Extremely unlikely to be present in appropriate habitats, often restricted to a small number of sites." style="text-decoration: underline;text-decoration-style:dashed">$1are</span>$2!){
+				}
+				if(s!<<381>>(R| r)ays<<381>>!<span title="Each of a number of radiating axes, as a primary branch in a compound umbel." style="text-decoration: underline;text-decoration-style:dashed">$1ays</span>$2!){
+				}
+				if(s!<<382>>(R| r)ayed<<382>>!<span title="Having a number of radiating axes, as in the branches of a compound umbel." style="text-decoration: underline;text-decoration-style:dashed">$1ayed</span>$2!){
+				}
+				if(s!<<383>>(R| r)ay flower<<383>>!<span title="In Asteraceae, a generally pistillate or sterile, bilateral flower with a flat, strap- or fan-shaped, often 3-lobed outer portion of the corolla (lamina); appearing in a ring around a central cluster of disk flowers." style="text-decoration: underline;text-decoration-style:dashed">$1ay flower</span>$2!){
+				}
+				if(s!<<384>>(R| r)eceptacle<<384>>!<span title="1. In individual flowers, the structure to which flower parts are attached.  2. In heads or head-like inflorescences, especially in Asteraceae, the structure to which flowers or sometimes heads are attached." style="text-decoration: underline;text-decoration-style:dashed">$1eceptacle</span>$2!){
+				}
+				if(s!<<385>>(R| r)eceptacles<<385>>!<span title="1. In individual flowers, the structure to which flower parts are attached.  2. In heads or head-like inflorescences, especially in Asteraceae, the structure to which flowers or sometimes heads are attached." style="text-decoration: underline;text-decoration-style:dashed">$1eceptacles</span>$2!){
+				}
+				if(s!<<386>>(R| r)ecurved<<386>>!<span title="Gradually curved downward or backward." style="text-decoration: underline;text-decoration-style:dashed">$1ecurved</span>$2!){
+				}
+				if(s!<<387>>(R| r)educed<<387>>!<span title="Smaller, less lobed, simpler, etc." style="text-decoration: underline;text-decoration-style:dashed">$1educed</span>$2!){
+				}
+				if(s!<<388>>(R| r)eflexed<<388>>!<span title="Abruptly bent or curved downward or backward." style="text-decoration: underline;text-decoration-style:dashed">$1eflexed</span>$2!){
+				}
+				if(s!<<389>>(R| r)eniform<<389>>!<span title="Kidney-shaped; often pertaining to a leaf in which the blade base on both sides of the petiole is rounded and concave." style="text-decoration: underline;text-decoration-style:dashed">$1eniform</span>$2!){
+				}
+				if(s!<<390>>(R| r)hizome<<390>>!<span title="1. In seed plants, stem that is often elongate, more or less horizontal, usually underground; distinguished from roots by bearing of leaves, leaf scars, axillary buds, etc. 2. In ferns, stem that is located underground, embedded in leaf litter, on rocks or in rock crevices, or on trees or tree branches, often scaly or hairy; distinguished from roots by bearing of fronds (roots rarely bear fronds), and their greater diameter." style="text-decoration: underline;text-decoration-style:dashed">$1hizome</span>$2!){
+				}
+				if(s!<<391>>(R| r)hizomes<<391>>!<span title="1. In seed plants, stem that is often elongate, more or less horizontal, usually underground; distinguished from roots by bearing of leaves, leaf scars, axillary buds, etc. 2. In ferns, stem that is located underground, embedded in leaf litter, on rocks or in rock crevices, or on trees or tree branches, often scaly or hairy; distinguished from roots by bearing of fronds (roots rarely bear fronds), and their greater diameter." style="text-decoration: underline;text-decoration-style:dashed">$1hizomes</span>$2!){
+				}
+				if(s!<<392>>(R| r)ib<<392>>!<span title="1. Ridge, as on a fruit.  2. Raised vein, as on a leaf or perianth part.  (e.g., Carex hendersonii perigynium)" style="text-decoration: underline;text-decoration-style:dashed">$1ib</span>$2!){
+				}
+				if(s!<<393>>(R| r)ibs<<393>>!<span title="1. Ridge, as on a fruit.  2. Raised vein, as on a leaf or perianth part.  (e.g., Carex hendersonii perigynium)" style="text-decoration: underline;text-decoration-style:dashed">$1ibs</span>$2!){
+				}
+				if(s!<<394>>(R| r)ibbed<<394>>!<span title="1. Having ridges, as on a fruit.  2. Having raised veins, as on a leaf or perianth part.  (e.g., Carex hendersonii perigynium)" style="text-decoration: underline;text-decoration-style:dashed">$1ibbed</span>$2!){
+				}
+				if(s!<<395>>(R| r)iparian<<395>>!<span title="Pertaining to communities that occupy the banks, channels, and flood plains of waterways." style="text-decoration: underline;text-decoration-style:dashed">$1iparian</span>$2!){
+				}
+				if(s!<<396>>(R| r)oot<<396>>!<span title="Generally underground axis or axes of a plant; distinguished from stems by not bearing leaves, leaf scars, axillary buds,  flowers, etc.; generally growing into the ground from the base of a stem, its functions include anchorage, absorption of water and nutrients, and food storage." style="text-decoration: underline;text-decoration-style:dashed">$1oot</span>$2!){
+				}
+				if(s!<<397>>(R| r)oots<<397>>!<span title="Generally underground axis or axes of a plant; distinguished from stems by not bearing leaves, leaf scars, axillary buds,  flowers, etc.; generally growing into the ground from the base of a stem, its functions include anchorage, absorption of water and nutrients, and food storage." style="text-decoration: underline;text-decoration-style:dashed">$1oots</span>$2!){
+				}
+				if(s!<<398>>(R| r)osette<<398>>!<span title="A radiating cluster of leaves generally at or near ground level." style="text-decoration: underline;text-decoration-style:dashed">$1osette</span>$2!){
+				}
+				if(s!<<399>>(R| r)osettes<<399>>!<span title="A radiating cluster of leaves generally at or near ground level." style="text-decoration: underline;text-decoration-style:dashed">$1osettes</span>$2!){
+				}
+				if(s!<<400>>(R| r)otate<<400>>!<span title="Wheel-shaped, spreading, or saucer-shaped; often applied to  a fused corolla with a short or nonexistent tube and a spreading limb." style="text-decoration: underline;text-decoration-style:dashed">$1otate</span>$2!){
+				}
+				if(s!<<401>>(R| r)uderal<<401>>!<span title="A plant, usually alien, occurring in waste areas, along roadsides, and in other places disturbed by humans; pertaining to such a plant." style="text-decoration: underline;text-decoration-style:dashed">$1uderal</span>$2!){
+				}
+				if(s!<<402>>(S| s)agittate<<402>>!<span title="Arrowhead-shaped, with two basal lobes oriented nearly parallel to the long axis." style="text-decoration: underline;text-decoration-style:dashed">$1agittate</span>$2!){
+				}
+				if(s!<<403>>(S| s)alverform<<403>>!<span title="Having a slender tube and an abruptly spreading, flat limb; often applied to a fused corolla." style="text-decoration: underline;text-decoration-style:dashed">$1alverform</span>$2!){
+				}
+				if(s!<<404>>(S| s)avanna<<404>>!<span title="Vegetation dominated by various species of grasses with scattered individual trees; with less canopy cover than a woodland (canopies do not touch)." style="text-decoration: underline;text-decoration-style:dashed">$1avanna</span>$2!){
+				}
+				if(s!<<405>>(S| s)cabrous<<405>>!<span title="Rough to the touch, generally owing to short stiff hairs.  (e.g., Brickellia pappus)" style="text-decoration: underline;text-decoration-style:dashed">$1cabrous</span>$2!){
+				}
+				if(s!<<406>>(S| s)cale<<406>>!<span title="1. Wide, appressed, membranous, epidermal outgrowth (e.g., Cheilanthes covillei) 2. Structure partially or entirely covering an over-wintering bud (bud scale) (e.g., Salix goodingii bud).  3. In gymnosperms, a woody, seed-bearing structure attached to the cone axis (cone scale) (e.g., Abies magnifica).  4. In Asteraceae, a flat, membranous pappus element (e.g., Hymenoxys hoopesii).  Leaves or bracts may be scale-like in one or more of the preceding ways." style="text-decoration: underline;text-decoration-style:dashed">$1cale</span>$2!){
+				}
+				if(s!<<407>>(S| s)cales<<407>>!<span title="1. Wide, appressed, membranous, epidermal outgrowth (e.g., Cheilanthes covillei) 2. Structure partially or entirely covering an over-wintering bud (bud scale) (e.g., Salix goodingii bud).  3. In gymnosperms, a woody, seed-bearing structure attached to the cone axis (cone scale) (e.g., Abies magnifica).  4. In Asteraceae, a flat, membranous pappus element (e.g., Hymenoxys hoopesii).  Leaves or bracts may be scale-like in one or more of the preceding ways." style="text-decoration: underline;text-decoration-style:dashed">$1cales</span>$2!){
+				}
+				if(s!<<408>>(S| s)capose<<408>>!<span title="Pertaining to a plant or an inflorescence in which a relatively long peduncle (scape) arises, sometimes with leaf- or scale-like bracts but without true foliage leaves,  from a rosette or other arrangement of leaves at ground level." style="text-decoration: underline;text-decoration-style:dashed">$1capose</span>$2!){
+				}
+				if(s!<<409>>(S| s)car<<409>>!<span title="Mark left by the natural separation of two structures, as a leaf scar on a stem." style="text-decoration: underline;text-decoration-style:dashed">$1car</span>$2!){
+				}
+				if(s!<<410>>(S| s)cars<<410>>!<span title="Mark left by the natural separation of two structures, as a leaf scar on a stem." style="text-decoration: underline;text-decoration-style:dashed">$1cars</span>$2!){
+				}
+				if(s!<<411>>(S| s)carious<<411>>!<span title="Thin, dry, pliable, translucent or variously colored but not green.  (e.g., Carex incurviformis pistillate flower bract)" style="text-decoration: underline;text-decoration-style:dashed">$1carious</span>$2!){
+				}
+				if(s!<<412>>(S| s)cree<<412>>!<span title="Relatively unstable, sloping accumulation of small rock fragments, often at a cliff base." style="text-decoration: underline;text-decoration-style:dashed">$1cree</span>$2!){
+				}
+				if(s!<<413>>(S| s)crub<<413>>!<span title="Vegetation dominated by shrubs; may be classified by habitat type or by dominant species; shrubland." style="text-decoration: underline;text-decoration-style:dashed">$1crub</span>$2!){
+				}
+				if(s!<<414>>(S| s)culpture<<414>>!<span title="Surface ornamentation or topography, often visible only when magnified, as on a seed or pollen grain.  (e.g., Plagiobothrys nothofulvus nutlet)" style="text-decoration: underline;text-decoration-style:dashed">$1culpture</span>$2!){
+				}
+				if(s!<<415>>(S| s)eed<<415>>!<span title="Any fertilized ovule, but in descriptions pertaining to the fully mature condition (i.e., at full cone or fruit maturation), unless noted otherwise." style="text-decoration: underline;text-decoration-style:dashed">$1eed</span>$2!){
+				}
+				if(s!<<416>>(S| s)eeds<<416>>!<span title="Any fertilized ovule, but in descriptions pertaining to the fully mature condition (i.e., at full cone or fruit maturation), unless noted otherwise." style="text-decoration: underline;text-decoration-style:dashed">$1eeds</span>$2!){
+				}
+				if(s!<<417>>(S| s)egment<<417>>!<span title="1.  An ultimate or smallest division of a compound leaf (then the segment is also a leaflet) or dissected leaf  - not a marginal lobe, tooth, bristle, etc.  2.  A part into which an organ is naturally or apparently divisible, such as of a calyx, corolla, fruit, etc.  3.  A specified length, such as of a stem, root, style, etc." style="text-decoration: underline;text-decoration-style:dashed">$1egment</span>$2!){
+				}
+				if(s!<<418>>(S| s)egments<<418>>!<span title="1.  An ultimate or smallest division of a compound leaf (then the segment is also a leaflet) or dissected leaf  - not a marginal lobe, tooth, bristle, etc.  2.  A part into which an organ is naturally or apparently divisible, such as of a calyx, corolla, fruit, etc.  3.  A specified length, such as of a stem, root, style, etc." style="text-decoration: underline;text-decoration-style:dashed">$1egments</span>$2!){
+				}
+				if(s!<<419>>(S| s)epal<<419>>!<span title="Individual member of the calyx, whether fused or not; if fused, often equal in number to the number of calyx lobes; generally green." style="text-decoration: underline;text-decoration-style:dashed">$1epal</span>$2!){
+				}
+				if(s!<<420>>(S| s)epals<<420>>!<span title="Individual member of the calyx, whether fused or not; if fused, often equal in number to the number of calyx lobes; generally green." style="text-decoration: underline;text-decoration-style:dashed">$1epals</span>$2!){
+				}
+				if(s!<<421>>(S| s)epticidal<<421>>!<span title="Pertaining to dehiscence of a fruit (capsule) by a longitudinal line through the wall at or near the center of each septum, such that each resulting segment corresponds to a single chamber, with placentas placed variously." style="text-decoration: underline;text-decoration-style:dashed">$1epticidal</span>$2!){
+				}
+				if(s!<<422>>(S| s)eptum<<422>>!<span title="Wall between chambers in a compound ovary." style="text-decoration: underline;text-decoration-style:dashed">$1eptum</span>$2!){
+				}
+				if(s!<<423>>(S| s)epta<<423>>!<span title="Wall between chambers in a compound ovary." style="text-decoration: underline;text-decoration-style:dashed">$1epta</span>$2!){
+				}
+				if(s!<<424>>(S| s)eries<<424>>!<span title="A group of structures of one kind (e.g., involucral bracts, sepals, petals, stamens) of similar size or shape, usually more or less in a row or whorl." style="text-decoration: underline;text-decoration-style:dashed">$1eries</span>$2!){
+				}
+				if(s!<<425>>(S| s)erpentine<<425>>!<span title="Pertaining to rocks, or soils derived from them, with generally low levels of calcium and other nutrients, and high levels of magnesium, iron, and certain toxic metals; many plant taxa are restricted to or excluded from serpentine." style="text-decoration: underline;text-decoration-style:dashed">$1erpentine</span>$2!){
+				}
+				if(s!<<426>>(S| s)erpentinitic<<426>>!<span title="Pertaining to rocks, or soils derived from them, with generally low levels of calcium and other nutrients, and high levels of magnesium, iron, and certain toxic metals; many plant taxa are restricted to or excluded from serpentine." style="text-decoration: underline;text-decoration-style:dashed">$1erpentinitic</span>$2!){
+				}
+				if(s!<<427>>(S| s)errate<<427>>!<span title="Having margins with sharp, fine to coarse teeth generally pointing tipward, not outward; margins with such teeth on such primary teeth are doubly serrate." style="text-decoration: underline;text-decoration-style:dashed">$1errate</span>$2!){
+				}
+				if(s!<<428>>(S| s)essile<<428>>!<span title="Without a petiole, peduncle, pedicel, or other kind of stalk." style="text-decoration: underline;text-decoration-style:dashed">$1essile</span>$2!){
+				}
+				if(s!<<429>>(S| s)heath<<429>>!<span title="A surrounding or partially surrounding, often tubular structure or part of a structure, such as a leaf base in Apiaceae or Poaceae." style="text-decoration: underline;text-decoration-style:dashed">$1heath</span>$2!){
+				}
+				if(s!<<430>>(S| s)heaths<<430>>!<span title="A surrounding or partially surrounding, often tubular structure or part of a structure, such as a leaf base in Apiaceae or Poaceae." style="text-decoration: underline;text-decoration-style:dashed">$1heaths</span>$2!){
+				}
+				if(s!<<431>>(S| s)hoot<<431>>!<span title="Pertaining collectively to a young stem or twig and its appendages (e.g., new growth in the spring), or to all above-ground parts of a plant (i.e., shoot system)." style="text-decoration: underline;text-decoration-style:dashed">$1hoot</span>$2!){
+				}
+				if(s!<<432>>(S| s)hoots<<432>>!<span title="Pertaining collectively to a young stem or twig and its appendages (e.g., new growth in the spring), or to all above-ground parts of a plant (i.e., shoot system)." style="text-decoration: underline;text-decoration-style:dashed">$1hoots</span>$2!){
+				}
+				if(s!<<433>>(S| s)hrub<<433>>!<span title="A woody plant of relatively short maximum height,  with generally many branches from the base." style="text-decoration: underline;text-decoration-style:dashed">$1hrub</span>$2!){
+				}
+				if(s!<<434>>(S| s)hrubs<<434>>!<span title="A woody plant of relatively short maximum height,  with generally many branches from the base." style="text-decoration: underline;text-decoration-style:dashed">$1hrubs</span>$2!){
+				}
+				if(s!<<435>>(S| s)imple<<435>>!<span title="Composed of a single part; undivided; unbranched." style="text-decoration: underline;text-decoration-style:dashed">$1imple</span>$2!){
+				}
+				if(s!<<436>>(S| s)inus<<436>>!<span title="Usually pertaining to margins of leaves, sepals, petals, or other parts, an indentation between adjacent lobes or teeth" style="text-decoration: underline;text-decoration-style:dashed">$1inus</span>$2!){
+				}
+				if(s!<<437>>(S| s)orus<<437>>!<span title="In many ferns, a distinct cluster of sporangia." style="text-decoration: underline;text-decoration-style:dashed">$1orus</span>$2!){
+				}
+				if(s!<<438>>(S| s)ori<<438>>!<span title="In many ferns, a distinct cluster of sporangia." style="text-decoration: underline;text-decoration-style:dashed">$1ori</span>$2!){
+				}
+				if(s!<<439>>(S| s)pheric<<439>>!<span title="Globe- or ball-shaped; circular in three dimensions." style="text-decoration: underline;text-decoration-style:dashed">$1pheric</span>$2!){
+				}
+				if(s!<<440>>(S| s)pike<<440>>!<span title="1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are sessile and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a spike-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are sessile and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1." style="text-decoration: underline;text-decoration-style:dashed">$1pike</span>$2!){
+				}
+				if(s!<<441>>(S| s)pikes<<441>>!<span title="1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are sessile and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a spike-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are sessile and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1." style="text-decoration: underline;text-decoration-style:dashed">$1pikes</span>$2!){
+				}
+				if(s!<<442>>(S| s)pikelet<<442>>!<span title="1. In Poaceae, one or more florets (each a flower with subtending lemma and generally palea) and generally 2 subtending glumes; in a sterile spikelet, the flower(s) and sometimes palea(s) are rudimentary or absent. 2. In Cyperaceae, the smallest aggregation of flowers (generally more than 2) and associated bracts." style="text-decoration: underline;text-decoration-style:dashed">$1pikelet</span>$2!){
+				}
+				if(s!<<443>>(S| s)pikelets<<443>>!<span title="1. In Poaceae, one or more florets (each a flower with subtending lemma and generally palea) and generally 2 subtending glumes; in a sterile spikelet, the flower(s) and sometimes palea(s) are rudimentary or absent. 2. In Cyperaceae, the smallest aggregation of flowers (generally more than 2) and associated bracts." style="text-decoration: underline;text-decoration-style:dashed">$1pikelets</span>$2!){
+				}
+				if(s!<<444>>(S| s)pine<<444>>!<span title="Sharp-pointed, usually stiff projection, originating below the epidermis, derived from a leaf or leaf part (e.g., stipule, vein tip), and therefore often subtending an axillary bud or branch, without buds of its own; loosely used for any sharp projection. (e.g., Cirsium arvense leaf)" style="text-decoration: underline;text-decoration-style:dashed">$1pine</span>$2!){
+				}
+				if(s!<<445>>(S| s)pines<<445>>!<span title="Sharp-pointed, usually stiff projection, originating below the epidermis, derived from a leaf or leaf part (e.g., stipule, vein tip), and therefore often subtending an axillary bud or branch, without buds of its own; loosely used for any sharp projection. (e.g., Cirsium arvense leaf)" style="text-decoration: underline;text-decoration-style:dashed">$1pines</span>$2!){
+				}
+				if(s!<<446>>(S| s)porangium<<446>>!<span title="In non-seed plants, a case or sac in which spores are produced, and from which they are released." style="text-decoration: underline;text-decoration-style:dashed">$1porangium</span>$2!){
+				}
+				if(s!<<447>>(S| s)porangia<<447>>!<span title="In non-seed plants, a case or sac in which spores are produced, and from which they are released." style="text-decoration: underline;text-decoration-style:dashed">$1porangia</span>$2!){
+				}
+				if(s!<<448>>(S| s)pore<<448>>!<span title="In non-seed plants, one of very many minute, haploid cells (in mass, often appearing dust-like) dispersed from sporangia on a diploid parent plant (sporophyte), normally developing into a small haploid plant (gametophyte) that produces eggs, sperm, or both, the fusion of which results in new diploid offspring." style="text-decoration: underline;text-decoration-style:dashed">$1pore</span>$2!){
+				}
+				if(s!<<449>>(S| s)pores<<449>>!<span title="In non-seed plants, one of very many minute, haploid cells (in mass, often appearing dust-like) dispersed from sporangia on a diploid parent plant (sporophyte), normally developing into a small haploid plant (gametophyte) that produces eggs, sperm, or both, the fusion of which results in new diploid offspring." style="text-decoration: underline;text-decoration-style:dashed">$1pores</span>$2!){
+				}
+				if(s!<<450>>(S| s)preading<<450>>!<span title="Oriented more or less perpendicularly to the axis of attachment; often, more or less horizontal." style="text-decoration: underline;text-decoration-style:dashed">$1preading</span>$2!){
+				}
+				if(s!<<451>>(S| s)pur<<451>>!<span title="Hollow projection or expansion, generally of a perianth part and containing nectar.  (e.g., petals of Aquilegia formosa)" style="text-decoration: underline;text-decoration-style:dashed">$1pur</span>$2!){
+				}
+				if(s!<<452>>(S| s)purs<<452>>!<span title="Hollow projection or expansion, generally of a perianth part and containing nectar.  (e.g., petals of Aquilegia formosa)" style="text-decoration: underline;text-decoration-style:dashed">$1purs</span>$2!){
+				}
+				if(s!<<453>>(S| s)tamen<<453>>!<span title="Male reproductive structure of a flower, typically composed of a stalk-like filament and a terminal, pollen-producing anther.  Filaments sometimes partly fuse to the corolla, or to other filaments to form a tube." style="text-decoration: underline;text-decoration-style:dashed">$1tamen</span>$2!){
+				}
+				if(s!<<454>>(S| s)tamens<<454>>!<span title="Male reproductive structure of a flower, typically composed of a stalk-like filament and a terminal, pollen-producing anther.  Filaments sometimes partly fuse to the corolla, or to other filaments to form a tube." style="text-decoration: underline;text-decoration-style:dashed">$1tamens</span>$2!){
+				}
+				if(s!<<455>>(S| s)taminate<<455>>!<span title="Pertaining to flowers, inflorescences, or plants with fertile stamens but sterile or missing pistils.  (e.g., Salix laevigata flower)" style="text-decoration: underline;text-decoration-style:dashed">$1taminate</span>$2!){
+				}
+				if(s!<<456>>(S| s)taminode<<456>>!<span title="Sterile stamen, usually modified in appearance, sometimes petal-like or elaborate in structure.  (e.g., Penstemon palmeri)" style="text-decoration: underline;text-decoration-style:dashed">$1taminode</span>$2!){
+				}
+				if(s!<<457>>(S| s)taminodes<<457>>!<span title="Sterile stamen, usually modified in appearance, sometimes petal-like or elaborate in structure.  (e.g., Penstemon palmeri)" style="text-decoration: underline;text-decoration-style:dashed">$1taminodes</span>$2!){
+				}
+				if(s!<<458>>(S| s)tellate<<458>>!<span title="Pertaining to a hair or other structure with three or more branches radiating in two or three dimensions from a common point." style="text-decoration: underline;text-decoration-style:dashed">$1tellate</span>$2!){
+				}
+				if(s!<<459>>(S| s)tem<<459>>!<span title="Generally above-ground  but sometimes below-ground axis or axes of a plant; distinguished from roots by bearing leaves, leaf scars, axillary buds, flowers, nodes, etc." style="text-decoration: underline;text-decoration-style:dashed">$1tem</span>$2!){
+				}
+				if(s!<<460>>(S| s)tems<<460>>!<span title="Generally above-ground  but sometimes below-ground axis or axes of a plant; distinguished from roots by bearing leaves, leaf scars, axillary buds, flowers, nodes, etc." style="text-decoration: underline;text-decoration-style:dashed">$1tems</span>$2!){
+				}
+				if(s!<<461>>(S| s)terile<<461>>!<span title="Not reproductively functional; pertaining to a plant or plant part that does not produce or is not associated with the production of functional spores, pollen, ovules, or seeds (e.g., sterile frond, sterile stamen, sterile flower, sterile floret)." style="text-decoration: underline;text-decoration-style:dashed">$1terile</span>$2!){
+				}
+				if(s!<<462>>(S| s)tigma<<462>>!<span title="The part of a pistil on which pollen germinates, generally terminal and elevated above the ovary on a style, usually sticky or hairy, sometimes lobed." style="text-decoration: underline;text-decoration-style:dashed">$1tigma</span>$2!){
+				}
+				if(s!<<463>>(S| s)tigmas<<463>>!<span title="The part of a pistil on which pollen germinates, generally terminal and elevated above the ovary on a style, usually sticky or hairy, sometimes lobed." style="text-decoration: underline;text-decoration-style:dashed">$1tigmas</span>$2!){
+				}
+				if(s!<<464>>(S| s)tigmata<<464>>!<span title="The part of a pistil on which pollen germinates, generally terminal and elevated above the ovary on a style, usually sticky or hairy, sometimes lobed." style="text-decoration: underline;text-decoration-style:dashed">$1tigmata</span>$2!){
+				}
+				if(s!<<465>>(S| s)tipe<<465>>!<span title="In ferns, a frond stalk (analogous to a petiole of a leaf), connecting blade to rhizome." style="text-decoration: underline;text-decoration-style:dashed">$1tipe</span>$2!){
+				}
+				if(s!<<466>>(S| s)tipes<<466>>!<span title="In ferns, a frond stalk (analogous to a petiole of a leaf), connecting blade to rhizome." style="text-decoration: underline;text-decoration-style:dashed">$1tipes</span>$2!){
+				}
+				if(s!<<467>>(S| s)tipule<<467>>!<span title="Appendage at base of petiole, generally paired, variable in form but often leaf- or scale-like, sometimes a spine." style="text-decoration: underline;text-decoration-style:dashed">$1tipule</span>$2!){
+				}
+				if(s!<<468>>(S| s)tipules<<468>>!<span title="Appendage at base of petiole, generally paired, variable in form but often leaf- or scale-like, sometimes a spine." style="text-decoration: underline;text-decoration-style:dashed">$1tipules</span>$2!){
+				}
+				if(s!<<469>>(S| s)tolon<<469>>!<span title="A normally thin, elongate stem lying more or less flat on the ground and forming roots as well as erect stems or shoots (which become new, clonal plants) at generally widely spaced nodes; runner." style="text-decoration: underline;text-decoration-style:dashed">$1tolon</span>$2!){
+				}
+				if(s!<<470>>(S| s)tolons<<470>>!<span title="A normally thin, elongate stem lying more or less flat on the ground and forming roots as well as erect stems or shoots (which become new, clonal plants) at generally widely spaced nodes; runner." style="text-decoration: underline;text-decoration-style:dashed">$1tolons</span>$2!){
+				}
+				if(s!<<471>>(S| s)toma<<471>>!<span title="A minute pore on a leaf  (less often, stem or other structure)  through which gases pass into or out of a plant (generally, carbon dioxide in, oxygen and water vapor out); generally closed during times of water stress; sometimes used in identification." style="text-decoration: underline;text-decoration-style:dashed">$1toma</span>$2!){
+				}
+				if(s!<<472>>(S| s)tomata<<472>>!<span title="A minute pore on a leaf  (less often, stem or other structure)  through which gases pass into or out of a plant (generally, carbon dioxide in, oxygen and water vapor out); generally closed during times of water stress; sometimes used in identification." style="text-decoration: underline;text-decoration-style:dashed">$1tomata</span>$2!){
+				}
+				if(s!<<473>>(S| s)tomate<<473>>!<span title="A minute pore on a leaf  (less often, stem or other structure)  through which gases pass into or out of a plant (generally, carbon dioxide in, oxygen and water vapor out); generally closed during times of water stress; sometimes used in identification." style="text-decoration: underline;text-decoration-style:dashed">$1tomate</span>$2!){
+				}
+				if(s!<<474>>(S| s)toma<<474>>!<span title="A minute pore on a leaf  (less often, stem or other structure)  through which gases pass into or out of a plant (generally, carbon dioxide in, oxygen and water vapor out); generally closed during times of water stress; sometimes used in identification." style="text-decoration: underline;text-decoration-style:dashed">$1toma</span>$2!){
+				}
+				if(s!<<475>>(S| s)tone<<475>>!<span title="In a drupe, the very hard inner ovary wall and the generally single seed it surrounds; occurring one or more per flower, free or variously fused.  (e.g., Prunus emarginata fruit)" style="text-decoration: underline;text-decoration-style:dashed">$1tone</span>$2!){
+				}
+				if(s!<<476>>(S| s)tones<<476>>!<span title="In a drupe, the very hard inner ovary wall and the generally single seed it surrounds; occurring one or more per flower, free or variously fused.  (e.g., Prunus emarginata fruit)" style="text-decoration: underline;text-decoration-style:dashed">$1tones</span>$2!){
+				}
+				if(s!<<477>>(S| s)tout<<477>>!<span title="Thick, sturdy, not slender." style="text-decoration: underline;text-decoration-style:dashed">$1tout</span>$2!){
+				}
+				if(s!<<478>>(S| s)triate<<478>>!<span title="With fine, longitudinal channels, lines, or ridges." style="text-decoration: underline;text-decoration-style:dashed">$1triate</span>$2!){
+				}
+				if(s!<<479>>(S| s)trigose<<479>>!<span title="With stiff, straight, sharp, appressed hairs." style="text-decoration: underline;text-decoration-style:dashed">$1trigose</span>$2!){
+				}
+				if(s!<<480>>(S| s)tyle<<480>>!<span title="In many but not all pistils, the stalk-like part that connects ovary to stigma." style="text-decoration: underline;text-decoration-style:dashed">$1tyle</span>$2!){
+				}
+				if(s!<<481>>(S| s)tyles<<481>>!<span title="In many but not all pistils, the stalk-like part that connects ovary to stigma." style="text-decoration: underline;text-decoration-style:dashed">$1tyles</span>$2!){
+				}
+				if(s!<<482>>(S| s)ubalpine<<482>>!<span title="Pertaining to the vegetational--altitudinal zone just below timberline, between the montane and the alpine." style="text-decoration: underline;text-decoration-style:dashed">$1ubalpine</span>$2!){
+				}
+				if(s!<<483>>(S| s)ubmersed<<483>>!<span title="Pertaining to a plant normally rooted and remaining underwater, or to a part of such a plant normally held underwater." style="text-decoration: underline;text-decoration-style:dashed">$1ubmersed</span>$2!){
+				}
+				if(s!<<484>>(S| s)ubshrub<<484>>!<span title="A plant with the lower stems woody, the upper stems and twigs not woody (or less so) and dying back seasonally." style="text-decoration: underline;text-decoration-style:dashed">$1ubshrub</span>$2!){
+				}
+				if(s!<<485>>(S| s)ubshrubs<<485>>!<span title="A plant with the lower stems woody, the upper stems and twigs not woody (or less so) and dying back seasonally." style="text-decoration: underline;text-decoration-style:dashed">$1ubshrubs</span>$2!){
+				}
+				if(s!<<486>>(S| s)ubtend<<486>>!<span title="Occurring immediately below, as sepals subtending petals or leaves subtending axillary buds." style="text-decoration: underline;text-decoration-style:dashed">$1ubtend</span>$2!){
+				}
+				if(s!<<487>>(S| s)ubtidal<<487>>!<span title="Pertaining to marine aquatic habitats that are continuously submerged, even at low tide." style="text-decoration: underline;text-decoration-style:dashed">$1ubtidal</span>$2!){
+				}
+				if(s!<<488>>(S| s)uperior<<488>>!<span title="An ovary that is free from the perianth and stamens, or free from the fused lower portions of these structures (i.e., free from the hypanthium), to the extent that these structures appear to arise at its base, and it appears to arise from the top of the receptacle" style="text-decoration: underline;text-decoration-style:dashed">$1uperior</span>$2!){
+				}
+				if(s!<<489>>(S| s)uture<<489>>!<span title="Groove or line of dehiscence or fusion." style="text-decoration: underline;text-decoration-style:dashed">$1uture</span>$2!){
+				}
+				if(s!<<490>>(S| s)utures<<490>>!<span title="Groove or line of dehiscence or fusion." style="text-decoration: underline;text-decoration-style:dashed">$1utures</span>$2!){
+				}
+				if(s!<<491>>(S| s)wamp<<491>>!<span title="Shrub- or tree-dominated vegetation that occurs in permanently wet soils with standing water." style="text-decoration: underline;text-decoration-style:dashed">$1wamp</span>$2!){
+				}
+				if(s!<<492>>(S| s)wamps<<492>>!<span title="Shrub- or tree-dominated vegetation that occurs in permanently wet soils with standing water." style="text-decoration: underline;text-decoration-style:dashed">$1wamps</span>$2!){
+				}
+				if(s!<<493>>(T| t)alus<<493>>!<span title="Relatively stable, sloping accumulation of large rock fragments, often at a cliff base." style="text-decoration: underline;text-decoration-style:dashed">$1alus</span>$2!){
+				}
+				if(s!<<494>>(T| t)apered<<494>>!<span title="Gradually (not abruptly) narrower or smaller at base or tip." style="text-decoration: underline;text-decoration-style:dashed">$1apered</span>$2!){
+				}
+				if(s!<<495>>(T| t)aproot<<495>>!<span title="A primary root that grows more or less straight down into soil, is tapered to the end, and has smaller, lateral branches (e.g., carrot)." style="text-decoration: underline;text-decoration-style:dashed">$1aproot</span>$2!){
+				}
+				if(s!<<496>>(T| t)aproots<<496>>!<span title="A primary root that grows more or less straight down into soil, is tapered to the end, and has smaller, lateral branches (e.g., carrot)." style="text-decoration: underline;text-decoration-style:dashed">$1aproots</span>$2!){
+				}
+				if(s!<<497>>(T| t)axon<<497>>!<span title="In classification, a group of organisms (such as plants) at any rank (e.g., species, genus, family); taxonomy is the science of classifying organisms." style="text-decoration: underline;text-decoration-style:dashed">$1axon</span>$2!){
+				}
+				if(s!<<498>>(T| t)axa<<498>>!<span title="In classification, a group of organisms (such as plants) at any rank (e.g., species, genus, family); taxonomy is the science of classifying organisms." style="text-decoration: underline;text-decoration-style:dashed">$1axa</span>$2!){
+				}
+				if(s!<<499>>(T| t)endril<<499>>!<span title="A slender, generally coiling structure (generally stem, stipule, or leaf tip) by which a climbing plant becomes attached to its support.  (e.g., Lathyrus lanszwertii leaf)" style="text-decoration: underline;text-decoration-style:dashed">$1endril</span>$2!){
+				}
+				if(s!<<500>>(T| t)endrils<<500>>!<span title="A slender, generally coiling structure (generally stem, stipule, or leaf tip) by which a climbing plant becomes attached to its support.  (e.g., Lathyrus lanszwertii leaf)" style="text-decoration: underline;text-decoration-style:dashed">$1endrils</span>$2!){
+				}
+				if(s!<<501>>(T| t)erminal<<501>>!<span title="Pertaining to the tip of a structure (e.g., terminal bud)." style="text-decoration: underline;text-decoration-style:dashed">$1erminal</span>$2!){
+				}
+				if(s!<<502>>(T| t)ernate<<502>>!<span title="Lobed or compound into three parts, once, as a clover leaf (e.g.,  Trifolium wormskioldii), or more than once; in a ternate-pinnate leaf, the leaf is divided into three leaflets, each of which is pinnately compound (e.g., Aralia californica); three structures or parts (e.g., veins, lobes, or leaflets) radiating from a common point." style="text-decoration: underline;text-decoration-style:dashed">$1ernate</span>$2!){
+				}
+				if(s!<<503>>(T| t)horn<<503>>!<span title="Sharp-pointed, usually stiff projection, originating below the epidermis, derived from a branch and therefore often subtended by a leaf or leaf scar, sometimes with leaf scars and buds of its own; loosely used for any sharp projection. (e.g., Castela emoryi)" style="text-decoration: underline;text-decoration-style:dashed">$1horn</span>$2!){
+				}
+				if(s!<<504>>(T| t)horns<<504>>!<span title="Sharp-pointed, usually stiff projection, originating below the epidermis, derived from a branch and therefore often subtended by a leaf or leaf scar, sometimes with leaf scars and buds of its own; loosely used for any sharp projection. (e.g., Castela emoryi)" style="text-decoration: underline;text-decoration-style:dashed">$1horns</span>$2!){
+				}
+				if(s!<<505>>(T| t)hroat<<505>>!<span title="In calyces or corollas with fused sepals or petals, the expanded, fused portion distal to the tube and proximal to the limb." style="text-decoration: underline;text-decoration-style:dashed">$1hroat</span>$2!){
+				}
+				if(s!<<506>>(T| t)hroats<<506>>!<span title="In calyces or corollas with fused sepals or petals, the expanded, fused portion distal to the tube and proximal to the limb." style="text-decoration: underline;text-decoration-style:dashed">$1hroats</span>$2!){
+				}
+				if(s!<<507>>(T| t)imberline<<507>>!<span title="Region in high mountains where subalpine forests give way to treeless alpine vegetation." style="text-decoration: underline;text-decoration-style:dashed">$1imberline</span>$2!){
+				}
+				if(s!<<508>>(T| t)omentose<<508>>!<span title="Covered with densely interwoven, generally matted hairs." style="text-decoration: underline;text-decoration-style:dashed">$1omentose</span>$2!){
+				}
+				if(s!<<509>>(T| t)ooth<<509>>!<span title="1. A small, pointed projection, such as on the margin of a leaf, sepal, or petal.  2. The free tips of otherwise fused structures, such as sepals or petals (somewhat archaic usage); smaller than lobes." style="text-decoration: underline;text-decoration-style:dashed">$1ooth</span>$2!){
+				}
+				if(s!<<510>>(T| t)eeth<<510>>!<span title="1. A small, pointed projection, such as on the margin of a leaf, sepal, or petal.  2. The free tips of otherwise fused structures, such as sepals or petals (somewhat archaic usage); smaller than lobes." style="text-decoration: underline;text-decoration-style:dashed">$1eeth</span>$2!){
+				}
+				if(s!<<511>>(T| t)ransverse<<511>>!<span title="Pertaining to width or the widthwise dimension; perpendicular to the axis." style="text-decoration: underline;text-decoration-style:dashed">$1ransverse</span>$2!){
+				}
+				if(s!<<512>>(T| t)ree<<512>>!<span title="A woody plant of medium to tall maximum height, with generally one trunk from the base.  (e.g., Carnegiea gigantea)" style="text-decoration: underline;text-decoration-style:dashed">$1ree</span>$2!){
+				}
+				if(s!<<513>>(T| t)rees<<513>>!<span title="A woody plant of medium to tall maximum height, with generally one trunk from the base.  (e.g., Carnegiea gigantea)" style="text-decoration: underline;text-decoration-style:dashed">$1rees</span>$2!){
+				}
+				if(s!<<514>>(T| t)rilete spore<<514>>!<span title="In spore-bearing plants, radially symmetric spore on which the scar comprises three radiating branches." style="text-decoration: underline;text-decoration-style:dashed">$1rilete spore</span>$2!){
+				}
+				if(s!<<515>>(T| t)runcate<<515>>!<span title="Abruptly (not gradually) narrower or smaller at base or tip, as if cut straight across or nearly so." style="text-decoration: underline;text-decoration-style:dashed">$1runcate</span>$2!){
+				}
+				if(s!<<516>>(T| t)rophophore<<516>>!<span title="The sterile blade of moonworts (Botrychium) and adders-tongues (Ophioglossum) that is photosynthetic and mostly does not bear sporangia." style="text-decoration: underline;text-decoration-style:dashed">$1rophophore</span>$2!){
+				}
+				if(s!<<517>>(T| t)ube<<517>>!<span title="In calyces or corollas with fused sepals or petals, the often more or less cylindric, fused portion at the base, proximal to the throat and limb." style="text-decoration: underline;text-decoration-style:dashed">$1ube</span>$2!){
+				}
+				if(s!<<518>>(T| t)ubes<<518>>!<span title="In calyces or corollas with fused sepals or petals, the often more or less cylindric, fused portion at the base, proximal to the throat and limb." style="text-decoration: underline;text-decoration-style:dashed">$1ubes</span>$2!){
+				}
+				if(s!<<519>>(T| t)uber<<519>>!<span title="Short, thickened, fleshy, usually starchy, underground stem for storage (of water, food, or both) and sometimes propagation (e.g., potato)." style="text-decoration: underline;text-decoration-style:dashed">$1uber</span>$2!){
+				}
+				if(s!<<520>>(T| t)ubers<<520>>!<span title="Short, thickened, fleshy, usually starchy, underground stem for storage (of water, food, or both) and sometimes propagation (e.g., potato)." style="text-decoration: underline;text-decoration-style:dashed">$1ubers</span>$2!){
+				}
+				if(s!<<521>>(T| t)ubercle<<521>>!<span title="Small, wart-like projection.  (e.g., Cryptantha muricata nutlet)" style="text-decoration: underline;text-decoration-style:dashed">$1ubercle</span>$2!){
+				}
+				if(s!<<522>>(T| t)ubercles<<522>>!<span title="Small, wart-like projection.  (e.g., Cryptantha muricata nutlet)" style="text-decoration: underline;text-decoration-style:dashed">$1ubercles</span>$2!){
+				}
+				if(s!<<523>>(T| t)wig<<523>>!<span title="In woody plants, a terminal stem segment, produced during the current or most recent growth period." style="text-decoration: underline;text-decoration-style:dashed">$1wig</span>$2!){
+				}
+				if(s!<<524>>(T| t)wigs<<524>>!<span title="In woody plants, a terminal stem segment, produced during the current or most recent growth period." style="text-decoration: underline;text-decoration-style:dashed">$1wigs</span>$2!){
+				}
+				if(s!<<525>>(T| t)wining<<525>>!<span title="Climbing by the twisting or coiling of stems, tendrils, or other structures.  (e.g., Antirrhinum filipes)" style="text-decoration: underline;text-decoration-style:dashed">$1wining</span>$2!){
+				}
+				if(s!<<526>>(U| u)ltimate<<526>>!<span title="Last, most distal, or smallest, as all the tips of a branching stem or the smallest divisions (segments) of a compound leaf or dissected leaf." style="text-decoration: underline;text-decoration-style:dashed">$1ltimate</span>$2!){
+				}
+				if(s!<<527>>(U| u)mbel<<527>>!<span title="1. In flowering plants excluding Asteraceae and some other groups, an inflorescence in which three to many pedicels and, if compound, branches (rays) radiate from a common point; characteristic of but not confined to Apiaceae.  2. In Asteraceae and some other groups, an umbel-like inflorescence is one in which three to many stalked inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, radiate from a common point of attachment without an evident axis or branches." style="text-decoration: underline;text-decoration-style:dashed">$1mbel</span>$2!){
+				}
+				if(s!<<528>>(U| u)mbels<<528>>!<span title="1. In flowering plants excluding Asteraceae and some other groups, an inflorescence in which three to many pedicels and, if compound, branches (rays) radiate from a common point; characteristic of but not confined to Apiaceae.  2. In Asteraceae and some other groups, an umbel-like inflorescence is one in which three to many stalked inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, radiate from a common point of attachment without an evident axis or branches." style="text-decoration: underline;text-decoration-style:dashed">$1mbels</span>$2!){
+				}
+				if(s!<<529>>(U| u)nderstory<<529>>!<span title="Layer of vegetation growing beneath a canopy of taller plants." style="text-decoration: underline;text-decoration-style:dashed">$1nderstory</span>$2!){
+				}
+				if(s!<<530>>(U| u)nisexual<<530>>!<span title="Either male or female reproductive parts occurring and functional in the same plant or structure (e.g., flower, spikelet, inforescence)." style="text-decoration: underline;text-decoration-style:dashed">$1nisexual</span>$2!){
+				}
+				if(s!<<531>>(U| u)rn-shaped<<531>>!<span title="Widening more or less abruptly at the base and then gradually or abruptly narrowed toward the tip." style="text-decoration: underline;text-decoration-style:dashed">$1rn-shaped</span>$2!){
+				}
+				if(s!<<532>>(U| u)tricle<<532>>!<span title="Mostly dry, dehiscent or indehiscent fruit from a generally compound pistil in which a balloon- or bladder-like ovary wall loosely encloses (or, in some Amaranthaceae, is adherent to) a single seed." style="text-decoration: underline;text-decoration-style:dashed">$1tricle</span>$2!){
+				}
+				if(s!<<533>>(U| u)tricles<<533>>!<span title="Mostly dry, dehiscent or indehiscent fruit from a generally compound pistil in which a balloon- or bladder-like ovary wall loosely encloses (or, in some Amaranthaceae, is adherent to) a single seed." style="text-decoration: underline;text-decoration-style:dashed">$1tricles</span>$2!){
+				}
+				if(s!<<534>>(V| v)alve<<534>>!<span title="1. In legumes or capsules opening by longitudinal lines, one of the parts into which the fruit is dehiscent.  2. In anthers, the flap of tissue resulting from dehiscence by a curved line. (e.g., Lauraceae, some Berberidaceae).  3. In Ophioglossaceae, one of the parts into which the sporangium is dehiscent." style="text-decoration: underline;text-decoration-style:dashed">$1alve</span>$2!){
+				}
+				if(s!<<535>>(V| v)alves<<535>>!<span title="1. In legumes or capsules opening by longitudinal lines, one of the parts into which the fruit is dehiscent.  2. In anthers, the flap of tissue resulting from dehiscence by a curved line. (e.g., Lauraceae, some Berberidaceae).  3. In Ophioglossaceae, one of the parts into which the sporangium is dehiscent." style="text-decoration: underline;text-decoration-style:dashed">$1alves</span>$2!){
+				}
+				if(s!<<536>>(V| v)ascular<<536>>!<span title="Pertaining to plant veins or to plants with veins." style="text-decoration: underline;text-decoration-style:dashed">$1ascular</span>$2!){
+				}
+				if(s!<<537>>(V| v)ein<<537>>!<span title="1. Tissue specialized for transport of substances within a plant, water and dissolved inorganic substances (e.g., mineral nutrients) through the xylem, energy-rich, organic compounds (products of photosynthesis) through the phloem.  2. A strand of such tissue, often seen as a line in surface view and as a bundle in transverse section." style="text-decoration: underline;text-decoration-style:dashed">$1ein</span>$2!){
+				}
+				if(s!<<538>>(V| v)eins<<538>>!<span title="1. Tissue specialized for transport of substances within a plant, water and dissolved inorganic substances (e.g., mineral nutrients) through the xylem, energy-rich, organic compounds (products of photosynthesis) through the phloem.  2. A strand of such tissue, often seen as a line in surface view and as a bundle in transverse section." style="text-decoration: underline;text-decoration-style:dashed">$1eins</span>$2!){
+				}
+				if(s!<<539>>(V| v)ernal pool<<539>>!<span title="Shallow, ephemeral body of water (i.e., one that becomes dry by spring or early summer) that occupies a depression, with underlying hardpan, claypan, or bedrock, in a grassland, foothill woodland, or chaparral." style="text-decoration: underline;text-decoration-style:dashed">$1ernal pool</span>$2!){
+				}
+				if(s!<<540>>(V| v)ernal pools<<540>>!<span title="Shallow, ephemeral body of water (i.e., one that becomes dry by spring or early summer) that occupies a depression, with underlying hardpan, claypan, or bedrock, in a grassland, foothill woodland, or chaparral." style="text-decoration: underline;text-decoration-style:dashed">$1ernal pools</span>$2!){
+				}
+				if(s!<<541>>(V| v)estigial<<541>>!<span title="Rudimentary; pertaining to a structure that is undeveloped, poorly developed, or degenerate and therefore non-functional." style="text-decoration: underline;text-decoration-style:dashed">$1estigial</span>$2!){
+				}
+				if(s!<<542>>(V| v)ine<<542>>!<span title="A trailing, twining, or climbing plant, usually attached to its support by the twisting or coiling of stems, tendrils, or other structures.   (e.g., Phaseolus filiformis)" style="text-decoration: underline;text-decoration-style:dashed">$1ine</span>$2!){
+				}
+				if(s!<<543>>(V| v)ines<<543>>!<span title="A trailing, twining, or climbing plant, usually attached to its support by the twisting or coiling of stems, tendrils, or other structures.   (e.g., Phaseolus filiformis)" style="text-decoration: underline;text-decoration-style:dashed">$1ines</span>$2!){
+				}
+				if(s!<<544>>(W| w)aif<<544>>!<span title="Alien, adventive; reproducing neither sexually (e.g., by spores, seeds) nor vegetatively (e.g., by sprouts, suckers) in the absence of any benefit, intentional or not, direct or indirect, of human activity, and therefore not persisting beyond initial generation or establishment, or reproducing to some extent but not persisting for more than a few generations or well beyond initial establishment and therefore not completely naturalized; generally not considered to be part of the flora, but of interest because of their potential to become naturalized, and thereby to have become so." style="text-decoration: underline;text-decoration-style:dashed">$1aif</span>$2!){
+				}
+				if(s!<<545>>(W| w)aifs<<545>>!<span title="Alien, adventive; reproducing neither sexually (e.g., by spores, seeds) nor vegetatively (e.g., by sprouts, suckers) in the absence of any benefit, intentional or not, direct or indirect, of human activity, and therefore not persisting beyond initial generation or establishment, or reproducing to some extent but not persisting for more than a few generations or well beyond initial establishment and therefore not completely naturalized; generally not considered to be part of the flora, but of interest because of their potential to become naturalized, and thereby to have become so." style="text-decoration: underline;text-decoration-style:dashed">$1aifs</span>$2!){
+				}
+				if(s!<<546>>(W| w)ash<<546>>!<span title="Normally dry drainage channel with only occasional surface flow (e.g., flash floods), in some cases with water movement and availability below in times of no surface flow." style="text-decoration: underline;text-decoration-style:dashed">$1ash</span>$2!){
+				}
+				if(s!<<547>>(W| w)ashes<<547>>!<span title="Normally dry drainage channel with only occasional surface flow (e.g., flash floods), in some cases with water movement and availability below in times of no surface flow." style="text-decoration: underline;text-decoration-style:dashed">$1ashes</span>$2!){
+				}
+				if(s!<<548>>(W| w)horled<<548>>!<span title="Arranged in groups of three or more at nodes or positions along an axis (e.g., three leaves per node)." style="text-decoration: underline;text-decoration-style:dashed">$1horled</span>$2!){
+				}
+				if(s!<<549>>(W| w)horl<<549>>!<span title="Arranged in groups of three or more at nodes or positions along an axis (e.g., three leaves per node)." style="text-decoration: underline;text-decoration-style:dashed">$1horl</span>$2!){
+				}
+				if(s!<<550>>(W| w)ing<<550>>!<span title="1. Thin, flat extension or appendage of a surface or margin.  2. In many members of Fabaceae and in some other groups, each of two lateral petals." style="text-decoration: underline;text-decoration-style:dashed">$1ing</span>$2!){
+				}
+				if(s!<<551>>(W| w)ings<<551>>!<span title="1. Thin, flat extension or appendage of a surface or margin.  2. In many members of Fabaceae and in some other groups, each of two lateral petals." style="text-decoration: underline;text-decoration-style:dashed">$1ings</span>$2!){
+				}
+				if(s!<<552>>(W| w)iry<<552>>!<span title="Pertaining to roots, stems, hairs, and other structures that are slender, stiff, and tough." style="text-decoration: underline;text-decoration-style:dashed">$1iry</span>$2!){
+				}
+				if(s!<<553>>(W| w)ood<<553>>!<span title="Hardened, thickened, vascular tissue (xylem) under the bark of subshrubs, shrubs, trees, and some vines; number of concentric rings in wood often corresponds to years or growing seasons." style="text-decoration: underline;text-decoration-style:dashed">$1ood</span>$2!){
+				}
+				if(s!<<554>>(W| w)oody<<554>>!<span title="Hardened, thickened, vascular tissue (xylem) under the bark of subshrubs, shrubs, trees, and some vines; number of concentric rings in wood often corresponds to years or growing seasons." style="text-decoration: underline;text-decoration-style:dashed">$1oody</span>$2!){
+				}
+				if(s!<<555>>(W| w)oodland<<555>>!<span title="Vegetation dominated by small- to medium-sized trees, often with less continuous canopy cover than a forest and more than a savanna (canopies do not always touch)." style="text-decoration: underline;text-decoration-style:dashed">$1oodland</span>$2!){
+				}
+				if(s!<<556>>(W| w)oodlands<<556>>!<span title="Vegetation dominated by small- to medium-sized trees, often with less continuous canopy cover than a forest and more than a savanna (canopies do not always touch)." style="text-decoration: underline;text-decoration-style:dashed">$1oodlands</span>$2!){
+				}
+

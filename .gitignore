@@ -1,0 +1,17 @@
+# Ignore environment and configuration files with sensitive data
+.env
+config.php
+database.php
+
+# Ignore logs and temporary files
+*.log
+tmp/
+cache/
+
+# Ignore Mac or Windows specific system files
+.DS_Store
+Thumbs.db
+
+# Ignore IDE specific folders (like VS Code or PhpStorm local settings)
+.vscode/
+.idea/

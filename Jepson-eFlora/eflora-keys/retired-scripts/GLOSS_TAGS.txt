@@ -1,0 +1,2224 @@
+				if(s!Abaxial([ ,;<]+)!<<1>>Abaxial<<1>>$1!){
+				}
+				if(s! abaxial([ ,;<\v]+)! <<1>>abaxial<<1>>$1!){
+				}
+				if(s!Achene([ ,;<]+)!<<2>>Achene<<2>>$1!){
+				}
+				if(s! achene([ ,;<\v]+)! <<2>>achene<<2>>$1!){
+				}
+				if(s!Achenes([ ,;<]+)!<<3>>Achenes<<3>>$1!){
+				}
+				if(s! achenes([ ,;<\v]+)! <<3>>achenes<<3>>$1!){
+				}
+				if(s!Acidic([ ,;<]+)!<<4>>Acidic<<4>>$1!){
+				}
+				if(s! acidic([ ,;<\v]+)! <<4>>acidic<<4>>$1!){
+				}
+				if(s!Acuminate([ ,;<]+)!<<5>>Acuminate<<5>>$1!){
+				}
+				if(s! acuminate([ ,;<\v]+)! <<5>>acuminate<<5>>$1!){
+				}
+				if(s!Acute([ ,;<]+)!<<6>>Acute<<6>>$1!){
+				}
+				if(s! acute([ ,;<\v]+)! <<6>>acute<<6>>$1!){
+				}
+				if(s!Adaxial([ ,;<]+)!<<7>>Adaxial<<7>>$1!){
+				}
+				if(s! adaxial([ ,;<\v]+)! <<7>>adaxial<<7>>$1!){
+				}
+				if(s!Adherent([ ,;<]+)!<<8>>Adherent<<8>>$1!){
+				}
+				if(s! adherent([ ,;<\v]+)! <<8>>adherent<<8>>$1!){
+				}
+				if(s!Adventitious([ ,;<]+)!<<9>>Adventitious<<9>>$1!){
+				}
+				if(s! adventitious([ ,;<\v]+)! <<9>>adventitious<<9>>$1!){
+				}
+				if(s!Alien([ ,;<]+)!<<10>>Alien<<10>>$1!){
+				}
+				if(s! alien([ ,;<\v]+)! <<10>>alien<<10>>$1!){
+				}
+				if(s!Alkali([ ,;<]+)!<<11>>Alkali<<11>>$1!){
+				}
+				if(s! alkali([ ,;<\v]+)! <<11>>alkali<<11>>$1!){
+				}
+				if(s!Alkaline([ ,;<]+)!<<12>>Alkaline<<12>>$1!){
+				}
+				if(s! alkaline([ ,;<\v]+)! <<12>>alkaline<<12>>$1!){
+				}
+				if(s!Alluvial([ ,;<]+)!<<13>>Alluvial<<13>>$1!){
+				}
+				if(s! alluvial([ ,;<\v]+)! <<13>>alluvial<<13>>$1!){
+				}
+				if(s!Alpine([ ,;<]+)!<<14>>Alpine<<14>>$1!){
+				}
+				if(s! alpine([ ,;<\v]+)! <<14>>alpine<<14>>$1!){
+				}
+				if(s!Alternate([ ,;<]+)!<<15>>Alternate<<15>>$1!){
+				}
+				if(s! alternate([ ,;<\v]+)! <<15>>alternate<<15>>$1!){
+				}
+				if(s!Angiosperm([ ,;<]+)!<<16>>Angiosperm<<16>>$1!){
+				}
+				if(s! angiosperm([ ,;<\v]+)! <<16>>angiosperm<<16>>$1!){
+				}
+				if(s!Angiosperms([ ,;<]+)!<<17>>Angiosperms<<17>>$1!){
+				}
+				if(s! angiosperms([ ,;<\v]+)! <<17>>angiosperms<<17>>$1!){
+				}
+				if(s!Annual([ ,;<]+)!<<18>>Annual<<18>>$1!){
+				}
+				if(s! annual([ ,;<\v]+)! <<18>>annual<<18>>$1!){
+				}
+				if(s!Annulus([ ,;<]+)!<<19>>Annulus<<19>>$1!){
+				}
+				if(s! annulus([ ,;<\v]+)! <<19>>annulus<<19>>$1!){
+				}
+				if(s!Annuli([ ,;<]+)!<<20>>Annuli<<20>>$1!){
+				}
+				if(s! annuli([ ,;<\v]+)! <<20>>annuli<<20>>$1!){
+				}
+				if(s!Anther([ ,;<]+)!<<21>>Anther<<21>>$1!){
+				}
+				if(s! anther([ ,;<\v]+)! <<21>>anther<<21>>$1!){
+				}
+				if(s!Anthers([ ,;<]+)!<<22>>Anthers<<22>>$1!){
+				}
+				if(s! anthers([ ,;<\v]+)! <<22>>anthers<<22>>$1!){
+				}
+				if(s!Appressed([ ,;<]+)!<<23>>Appressed<<23>>$1!){
+				}
+				if(s! appressed([ ,;<\v]+)! <<23>>appressed<<23>>$1!){
+				}
+				if(s!Apogamous([ ,;<]+)!<<24>>Apogamous<<24>>$1!){
+				}
+				if(s! apogamous([ ,;<\v]+)! <<24>>apogamous<<24>>$1!){
+				}
+				if(s!Aquatic([ ,;<]+)!<<25>>Aquatic<<25>>$1!){
+				}
+				if(s! aquatic([ ,;<\v]+)! <<25>>aquatic<<25>>$1!){
+				}
+				if(s!Areole([ ,;<]+)!<<26>>Areole<<26>>$1!){
+				}
+				if(s! areole([ ,;<\v]+)! <<26>>areole<<26>>$1!){
+				}
+				if(s!Areoles([ ,;<]+)!<<27>>Areoles<<27>>$1!){
+				}
+				if(s! areoles([ ,;<\v]+)! <<27>>areoles<<27>>$1!){
+				}
+				if(s!Aril([ ,;<]+)!<<28>>Aril<<28>>$1!){
+				}
+				if(s! aril([ ,;<\v]+)! <<28>>aril<<28>>$1!){
+				}
+				if(s!Arils([ ,;<]+)!<<29>>Arils<<29>>$1!){
+				}
+				if(s! arils([ ,;<\v]+)! <<29>>arils<<29>>$1!){
+				}
+				if(s!Armed([ ,;<]+)!<<30>>Armed<<30>>$1!){
+				}
+				if(s! armed([ ,;<\v]+)! <<30>>armed<<30>>$1!){
+				}
+				if(s!Ascending([ ,;<]+)!<<31>>Ascending<<31>>$1!){
+				}
+				if(s! ascending([ ,;<\v]+)! <<31>>ascending<<31>>$1!){
+				}
+				if(s!Asymmetric([ ,;<]+)!<<32>>Asymmetric<<32>>$1!){
+				}
+				if(s! asymmetric([ ,;<\v]+)! <<32>>asymmetric<<32>>$1!){
+				}
+				if(s!Auricle([ ,;<]+)!<<33>>Auricle<<33>>$1!){
+				}
+				if(s! auricle([ ,;<\v]+)! <<33>>auricle<<33>>$1!){
+				}
+				if(s!Auricles([ ,;<]+)!<<34>>Auricles<<34>>$1!){
+				}
+				if(s! auricles([ ,;<\v]+)! <<34>>auricles<<34>>$1!){
+				}
+				if(s!Awn([ ,;<]+)!<<35>>Awn<<35>>$1!){
+				}
+				if(s! awn([ ,;<\v]+)! <<35>>awn<<35>>$1!){
+				}
+				if(s!Awns([ ,;<]+)!<<36>>Awns<<36>>$1!){
+				}
+				if(s! awns([ ,;<\v]+)! <<36>>awns<<36>>$1!){
+				}
+				if(s!Axil([ ,;<]+)!<<37>>Axil<<37>>$1!){
+				}
+				if(s! axil([ ,;<\v]+)! <<37>>axil<<37>>$1!){
+				}
+				if(s!Axils([ ,;<]+)!<<38>>Axils<<38>>$1!){
+				}
+				if(s! axils([ ,;<\v]+)! <<38>>axils<<38>>$1!){
+				}
+				if(s!Axile([ ,;<]+)!<<39>>Axile<<39>>$1!){
+				}
+				if(s! axile([ ,;<\v]+)! <<39>>axile<<39>>$1!){
+				}
+				if(s!Axillary([ ,;<]+)!<<40>>Axillary<<40>>$1!){
+				}
+				if(s! axillary([ ,;<\v]+)! <<40>>axillary<<40>>$1!){
+				}
+				if(s!Axis([ ,;<]+)!<<41>>Axis<<41>>$1!){
+				}
+				if(s! axis([ ,;<\v]+)! <<41>>axis<<41>>$1!){
+				}
+				if(s!Axes([ ,;<]+)!<<42>>Axes<<42>>$1!){
+				}
+				if(s! axes([ ,;<\v]+)! <<42>>axes<<42>>$1!){
+				}
+				if(s!Banner([ ,;<]+)!<<43>>Banner<<43>>$1!){
+				}
+				if(s! banner([ ,;<\v]+)! <<43>>banner<<43>>$1!){
+				}
+				if(s!Barbed([ ,;<]+)!<<44>>Barbed<<44>>$1!){
+				}
+				if(s! barbed([ ,;<\v]+)! <<44>>barbed<<44>>$1!){
+				}
+				if(s!Bark([ ,;<]+)!<<45>>Bark<<45>>$1!){
+				}
+				if(s! bark([ ,;<\v]+)! <<45>>bark<<45>>$1!){
+				}
+				if(s!Basal([ ,;<]+)!<<46>>Basal<<46>>$1!){
+				}
+				if(s! basal([ ,;<\v]+)! <<46>>basal<<46>>$1!){
+				}
+				if(s!Beak([ ,;<]+)!<<47>>Beak<<47>>$1!){
+				}
+				if(s! beak([ ,;<\v]+)! <<47>>beak<<47>>$1!){
+				}
+				if(s!Beaks([ ,;<]+)!<<48>>Beaks<<48>>$1!){
+				}
+				if(s! beaks([ ,;<\v]+)! <<48>>beaks<<48>>$1!){
+				}
+				if(s!Berry([ ,;<]+)!<<49>>Berry<<49>>$1!){
+				}
+				if(s! berry([ ,;<\v]+)! <<49>>berry<<49>>$1!){
+				}
+				if(s!Biennial([ ,;<]+)!<<50>>Biennial<<50>>$1!){
+				}
+				if(s! biennial([ ,;<\v]+)! <<50>>biennial<<50>>$1!){
+				}
+				if(s!Bilateral([ ,;<]+)!<<51>>Bilateral<<51>>$1!){
+				}
+				if(s! bilateral([ ,;<\v]+)! <<51>>bilateral<<51>>$1!){
+				}
+				if(s!Biradial([ ,;<]+)!<<52>>Biradial<<52>>$1!){
+				}
+				if(s! biradial([ ,;<\v]+)! <<52>>biradial<<52>>$1!){
+				}
+				if(s!Bisexual([ ,;<]+)!<<53>>Bisexual<<53>>$1!){
+				}
+				if(s! bisexual([ ,;<\v]+)! <<53>>bisexual<<53>>$1!){
+				}
+				if(s!Blade([ ,;<]+)!<<54>>Blade<<54>>$1!){
+				}
+				if(s! blade([ ,;<\v]+)! <<54>>blade<<54>>$1!){
+				}
+				if(s!Blades([ ,;<]+)!<<55>>Blades<<55>>$1!){
+				}
+				if(s! blades([ ,;<\v]+)! <<55>>blades<<55>>$1!){
+				}
+				if(s!Brackish([ ,;<]+)!<<56>>Brackish<<56>>$1!){
+				}
+				if(s! brackish([ ,;<\v]+)! <<56>>brackish<<56>>$1!){
+				}
+				if(s!Bract([ ,;<]+)!<<57>>Bract<<57>>$1!){
+				}
+				if(s! bract([ ,;<\v]+)! <<57>>bract<<57>>$1!){
+				}
+				if(s!Bracts([ ,;<]+)!<<58>>Bracts<<58>>$1!){
+				}
+				if(s! bracts([ ,;<\v]+)! <<58>>bracts<<58>>$1!){
+				}
+				if(s!Bractlet([ ,;<]+)!<<59>>Bractlet<<59>>$1!){
+				}
+				if(s! bractlet([ ,;<\v]+)! <<59>>bractlet<<59>>$1!){
+				}
+				if(s!Bractlets([ ,;<]+)!<<60>>Bractlets<<60>>$1!){
+				}
+				if(s! bractlets([ ,;<\v]+)! <<60>>bractlets<<60>>$1!){
+				}
+				if(s!Bristle([ ,;<]+)!<<61>>Bristle<<61>>$1!){
+				}
+				if(s! bristle([ ,;<\v]+)! <<61>>bristle<<61>>$1!){
+				}
+				if(s!Bristles([ ,;<]+)!<<62>>Bristles<<62>>$1!){
+				}
+				if(s! bristles([ ,;<\v]+)! <<62>>bristles<<62>>$1!){
+				}
+				if(s!Bud([ ,;<]+)!<<63>>Bud<<63>>$1!){
+				}
+				if(s! bud([ ,;<\v]+)! <<63>>bud<<63>>$1!){
+				}
+				if(s!Buds([ ,;<]+)!<<64>>Buds<<64>>$1!){
+				}
+				if(s! buds([ ,;<\v]+)! <<64>>buds<<64>>$1!){
+				}
+				if(s!Bulb([ ,;<]+)!<<65>>Bulb<<65>>$1!){
+				}
+				if(s! bulb([ ,;<\v]+)! <<65>>bulb<<65>>$1!){
+				}
+				if(s!Bulbs([ ,;<]+)!<<66>>Bulbs<<66>>$1!){
+				}
+				if(s! bulbs([ ,;<\v]+)! <<66>>bulbs<<66>>$1!){
+				}
+				if(s!Bulblet([ ,;<]+)!<<67>>Bulblet<<67>>$1!){
+				}
+				if(s! bulblet([ ,;<\v]+)! <<67>>bulblet<<67>>$1!){
+				}
+				if(s!Bulblets([ ,;<]+)!<<68>>Bulblets<<68>>$1!){
+				}
+				if(s! bulblets([ ,;<\v]+)! <<68>>bulblets<<68>>$1!){
+				}
+				if(s!Bur([ ,;<]+)!<<69>>Bur<<69>>$1!){
+				}
+				if(s! bur([ ,;<\v]+)! <<69>>bur<<69>>$1!){
+				}
+				if(s!Callus([ ,;<]+)!<<70>>Callus<<70>>$1!){
+				}
+				if(s! callus([ ,;<\v]+)! <<70>>callus<<70>>$1!){
+				}
+				if(s!Calyx([ ,;<]+)!<<71>>Calyx<<71>>$1!){
+				}
+				if(s! calyx([ ,;<\v]+)! <<71>>calyx<<71>>$1!){
+				}
+				if(s!Canescent([ ,;<]+)!<<72>>Canescent<<72>>$1!){
+				}
+				if(s! canescent([ ,;<\v]+)! <<72>>canescent<<72>>$1!){
+				}
+				if(s!Capsule([ ,;<]+)!<<73>>Capsule<<73>>$1!){
+				}
+				if(s! capsule([ ,;<\v]+)! <<73>>capsule<<73>>$1!){
+				}
+				if(s!Capsules([ ,;<]+)!<<74>>Capsules<<74>>$1!){
+				}
+				if(s! capsules([ ,;<\v]+)! <<74>>capsules<<74>>$1!){
+				}
+				if(s!Carpel([ ,;<]+)!<<75>>Carpel<<75>>$1!){
+				}
+				if(s! carpel([ ,;<\v]+)! <<75>>carpel<<75>>$1!){
+				}
+				if(s!Carpels([ ,;<]+)!<<76>>Carpels<<76>>$1!){
+				}
+				if(s! carpels([ ,;<\v]+)! <<76>>carpels<<76>>$1!){
+				}
+				if(s!Cartilaginous([ ,;<]+)!<<77>>Cartilaginous<<77>>$1!){
+				}
+				if(s! cartilaginous([ ,;<\v]+)! <<77>>cartilaginous<<77>>$1!){
+				}
+				if(s!Catkin([ ,;<]+)!<<78>>Catkin<<78>>$1!){
+				}
+				if(s! catkin([ ,;<\v]+)! <<78>>catkin<<78>>$1!){
+				}
+				if(s!Catkins([ ,;<]+)!<<79>>Catkins<<79>>$1!){
+				}
+				if(s! catkins([ ,;<\v]+)! <<79>>catkins<<79>>$1!){
+				}
+				if(s!Caudex([ ,;<]+)!<<80>>Caudex<<80>>$1!){
+				}
+				if(s! caudex([ ,;<\v]+)! <<80>>caudex<<80>>$1!){
+				}
+				if(s!Caudices([ ,;<]+)!<<81>>Caudices<<81>>$1!){
+				}
+				if(s! caudices([ ,;<\v]+)! <<81>>caudices<<81>>$1!){
+				}
+				if(s!Cauline([ ,;<]+)!<<82>>Cauline<<82>>$1!){
+				}
+				if(s! cauline([ ,;<\v]+)! <<82>>cauline<<82>>$1!){
+				}
+				if(s!Cespitose([ ,;<]+)!<<83>>Cespitose<<83>>$1!){
+				}
+				if(s! cespitose([ ,;<\v]+)! <<83>>cespitose<<83>>$1!){
+				}
+				if(s!Chamber([ ,;<]+)!<<84>>Chamber<<84>>$1!){
+				}
+				if(s! chamber([ ,;<\v]+)! <<84>>chamber<<84>>$1!){
+				}
+				if(s!Chambers([ ,;<]+)!<<85>>Chambers<<85>>$1!){
+				}
+				if(s! chambers([ ,;<\v]+)! <<85>>chambers<<85>>$1!){
+				}
+				if(s!Chaparral([ ,;<]+)!<<86>>Chaparral<<86>>$1!){
+				}
+				if(s! chaparral([ ,;<\v]+)! <<86>>chaparral<<86>>$1!){
+				}
+				if(s!Ciliate([ ,;<]+)!<<87>>Ciliate<<87>>$1!){
+				}
+				if(s! ciliate([ ,;<\v]+)! <<87>>ciliate<<87>>$1!){
+				}
+				if(s!Circumboreal([ ,;<]+)!<<88>>Circumboreal<<88>>$1!){
+				}
+				if(s! circumboreal([ ,;<\v]+)! <<88>>circumboreal<<88>>$1!){
+				}
+				if(s!Circumscissile([ ,;<]+)!<<89>>Circumscissile<<89>>$1!){
+				}
+				if(s! circumscissile([ ,;<\v]+)! <<89>>circumscissile<<89>>$1!){
+				}
+				if(s!Claw([ ,;<]+)!<<90>>Claw<<90>>$1!){
+				}
+				if(s! claw([ ,;<\v]+)! <<90>>claw<<90>>$1!){
+				}
+				if(s!Claws([ ,;<]+)!<<91>>Claws<<91>>$1!){
+				}
+				if(s! claws([ ,;<\v]+)! <<91>>claws<<91>>$1!){
+				}
+				if(s!Cleistogamous([ ,;<]+)!<<92>>Cleistogamous<<92>>$1!){
+				}
+				if(s! cleistogamous([ ,;<\v]+)! <<92>>cleistogamous<<92>>$1!){
+				}
+				if(s!Clone([ ,;<]+)!<<93>>Clone<<93>>$1!){
+				}
+				if(s! clone([ ,;<\v]+)! <<93>>clone<<93>>$1!){
+				}
+				if(s!Clones([ ,;<]+)!<<94>>Clones<<94>>$1!){
+				}
+				if(s! clones([ ,;<\v]+)! <<94>>clones<<94>>$1!){
+				}
+				if(s!Closed-cone forest([ ,;<]+)!<<95>>Closed-cone forest<<95>>$1!){
+				}
+				if(s! closed-cone forest([ ,;<\v]+)! <<95>>closed-cone forest<<95>>$1!){
+				}
+				if(s!Coastal redwood([ ,;<]+)!<<96>>Coastal redwood<<96>>$1!){
+				}
+				if(s! coastal redwood([ ,;<\v]+)! <<96>>coastal redwood<<96>>$1!){
+				}
+				if(s!Coastal scrub([ ,;<]+)!<<97>>Coastal scrub<<97>>$1!){
+				}
+				if(s! coastal scrub([ ,;<\v]+)! <<97>>coastal scrub<<97>>$1!){
+				}
+				if(s!Coastal strand([ ,;<]+)!<<98>>Coastal strand<<98>>$1!){
+				}
+				if(s! coastal strand([ ,;<\v]+)! <<98>>coastal strand<<98>>$1!){
+				}
+				if(s!Collar([ ,;<]+)!<<99>>Collar<<99>>$1!){
+				}
+				if(s! collar([ ,;<\v]+)! <<99>>collar<<99>>$1!){
+				}
+				if(s!Collars([ ,;<]+)!<<100>>Collars<<100>>$1!){
+				}
+				if(s! collars([ ,;<\v]+)! <<100>>collars<<100>>$1!){
+				}
+				if(s!Column([ ,;<]+)!<<101>>Column<<101>>$1!){
+				}
+				if(s! column([ ,;<\v]+)! <<101>>column<<101>>$1!){
+				}
+				if(s!Columns([ ,;<]+)!<<102>>Columns<<102>>$1!){
+				}
+				if(s! columns([ ,;<\v]+)! <<102>>columns<<102>>$1!){
+				}
+				if(s!Compound([ ,;<]+)!<<103>>Compound<<103>>$1!){
+				}
+				if(s! compound([ ,;<\v]+)! <<103>>compound<<103>>$1!){
+				}
+				if(s!Compressed([ ,;<]+)!<<104>>Compressed<<104>>$1!){
+				}
+				if(s! compressed([ ,;<\v]+)! <<104>>compressed<<104>>$1!){
+				}
+				if(s!Concave([ ,;<]+)!<<105>>Concave<<105>>$1!){
+				}
+				if(s! concave([ ,;<\v]+)! <<105>>concave<<105>>$1!){
+				}
+				if(s!Cone([ ,;<]+)!<<106>>Cone<<106>>$1!){
+				}
+				if(s! cone([ ,;<\v]+)! <<106>>cone<<106>>$1!){
+				}
+				if(s!Cones([ ,;<]+)!<<107>>Cones<<107>>$1!){
+				}
+				if(s! cones([ ,;<\v]+)! <<107>>cones<<107>>$1!){
+				}
+				if(s!Conic([ ,;<]+)!<<108>>Conic<<108>>$1!){
+				}
+				if(s! conic([ ,;<\v]+)! <<108>>conic<<108>>$1!){
+				}
+				if(s!Coniferous forest([ ,;<]+)!<<109>>Coniferous forest<<109>>$1!){
+				}
+				if(s! coniferous forest([ ,;<\v]+)! <<109>>coniferous forest<<109>>$1!){
+				}
+				if(s!Continuous([ ,;<]+)!<<110>>Continuous<<110>>$1!){
+				}
+				if(s! continuous([ ,;<\v]+)! <<110>>continuous<<110>>$1!){
+				}
+				if(s!Convex([ ,;<]+)!<<111>>Convex<<111>>$1!){
+				}
+				if(s! convex([ ,;<\v]+)! <<111>>convex<<111>>$1!){
+				}
+				if(s!Cordate([ ,;<]+)!<<112>>Cordate<<112>>$1!){
+				}
+				if(s! cordate([ ,;<\v]+)! <<112>>cordate<<112>>$1!){
+				}
+				if(s!Corm([ ,;<]+)!<<113>>Corm<<113>>$1!){
+				}
+				if(s! corm([ ,;<\v]+)! <<113>>corm<<113>>$1!){
+				}
+				if(s!Corms([ ,;<]+)!<<114>>Corms<<114>>$1!){
+				}
+				if(s! corms([ ,;<\v]+)! <<114>>corms<<114>>$1!){
+				}
+				if(s!Corolla([ ,;<]+)!<<115>>Corolla<<115>>$1!){
+				}
+				if(s! corolla([ ,;<\v]+)! <<115>>corolla<<115>>$1!){
+				}
+				if(s!Corollas([ ,;<]+)!<<116>>Corollas<<116>>$1!){
+				}
+				if(s! corollas([ ,;<\v]+)! <<116>>corollas<<116>>$1!){
+				}
+				if(s!Costa([ ,;<]+)!<<117>>Costa<<117>>$1!){
+				}
+				if(s! costa([ ,;<\v]+)! <<117>>costa<<117>>$1!){
+				}
+				if(s!Costule([ ,;<]+)!<<118>>Costule<<118>>$1!){
+				}
+				if(s! costule([ ,;<\v]+)! <<118>>costule<<118>>$1!){
+				}
+				if(s!Costulet([ ,;<]+)!<<119>>Costulet<<119>>$1!){
+				}
+				if(s! costulet([ ,;<\v]+)! <<119>>costulet<<119>>$1!){
+				}
+				if(s!Cotyledon([ ,;<]+)!<<120>>Cotyledon<<120>>$1!){
+				}
+				if(s! cotyledon([ ,;<\v]+)! <<120>>cotyledon<<120>>$1!){
+				}
+				if(s!Cotyledons([ ,;<]+)!<<121>>Cotyledons<<121>>$1!){
+				}
+				if(s! cotyledons([ ,;<\v]+)! <<121>>cotyledons<<121>>$1!){
+				}
+				if(s!Crenate([ ,;<]+)!<<122>>Crenate<<122>>$1!){
+				}
+				if(s! crenate([ ,;<\v]+)! <<122>>crenate<<122>>$1!){
+				}
+				if(s!Cylindric([ ,;<]+)!<<123>>Cylindric<<123>>$1!){
+				}
+				if(s! cylindric([ ,;<\v]+)! <<123>>cylindric<<123>>$1!){
+				}
+				if(s!Cyme([ ,;<]+)!<<124>>Cyme<<124>>$1!){
+				}
+				if(s! cyme([ ,;<\v]+)! <<124>>cyme<<124>>$1!){
+				}
+				if(s!Cymes([ ,;<]+)!<<125>>Cymes<<125>>$1!){
+				}
+				if(s! cymes([ ,;<\v]+)! <<125>>cymes<<125>>$1!){
+				}
+				if(s!Deciduous([ ,;<]+)!<<126>>Deciduous<<126>>$1!){
+				}
+				if(s! deciduous([ ,;<\v]+)! <<126>>deciduous<<126>>$1!){
+				}
+				if(s!Decumbent([ ,;<]+)!<<127>>Decumbent<<127>>$1!){
+				}
+				if(s! decumbent([ ,;<\v]+)! <<127>>decumbent<<127>>$1!){
+				}
+				if(s!Decurrent([ ,;<]+)!<<128>>Decurrent<<128>>$1!){
+				}
+				if(s! decurrent([ ,;<\v]+)! <<128>>decurrent<<128>>$1!){
+				}
+				if(s!Dehiscent([ ,;<]+)!<<129>>Dehiscent<<129>>$1!){
+				}
+				if(s! dehiscent([ ,;<\v]+)! <<129>>dehiscent<<129>>$1!){
+				}
+				if(s!Deltate([ ,;<]+)!<<130>>Deltate<<130>>$1!){
+				}
+				if(s! deltate([ ,;<\v]+)! <<130>>deltate<<130>>$1!){
+				}
+				if(s!Dense([ ,;<]+)!<<131>>Dense<<131>>$1!){
+				}
+				if(s! dense([ ,;<\v]+)! <<131>>dense<<131>>$1!){
+				}
+				if(s!Dentate([ ,;<]+)!<<132>>Dentate<<132>>$1!){
+				}
+				if(s! dentate([ ,;<\v]+)! <<132>>dentate<<132>>$1!){
+				}
+				if(s!Depressed([ ,;<]+)!<<133>>Depressed<<133>>$1!){
+				}
+				if(s! depressed([ ,;<\v]+)! <<133>>depressed<<133>>$1!){
+				}
+				if(s!Desert([ ,;<]+)!<<134>>Desert<<134>>$1!){
+				}
+				if(s! desert([ ,;<\v]+)! <<134>>desert<<134>>$1!){
+				}
+				if(s!Dioecious([ ,;<]+)!<<135>>Dioecious<<135>>$1!){
+				}
+				if(s! dioecious([ ,;<\v]+)! <<135>>dioecious<<135>>$1!){
+				}
+				if(s!Digitate([ ,;<]+)!<<136>>Digitate<<136>>$1!){
+				}
+				if(s! digitate([ ,;<\v]+)! <<136>>digitate<<136>>$1!){
+				}
+				if(s!Diploid([ ,;<]+)!<<137>>Diploid<<137>>$1!){
+				}
+				if(s! diploid([ ,;<\v]+)! <<137>>diploid<<137>>$1!){
+				}
+				if(s!Disciform head([ ,;<]+)!<<138>>Disciform head<<138>>$1!){
+				}
+				if(s! disciform head([ ,;<\v]+)! <<138>>disciform head<<138>>$1!){
+				}
+				if(s!Discoid head([ ,;<]+)!<<139>>Discoid head<<139>>$1!){
+				}
+				if(s! discoid head([ ,;<\v]+)! <<139>>discoid head<<139>>$1!){
+				}
+				if(s!Disk flower([ ,;<]+)!<<140>>Disk flower<<140>>$1!){
+				}
+				if(s! disk flower([ ,;<\v]+)! <<140>>disk flower<<140>>$1!){
+				}
+				if(s!Disk flowers([ ,;<]+)!<<141>>Disk flowers<<141>>$1!){
+				}
+				if(s! disk flowers([ ,;<\v]+)! <<141>>disk flowers<<141>>$1!){
+				}
+				if(s!Dissected([ ,;<]+)!<<142>>Dissected<<142>>$1!){
+				}
+				if(s! dissected([ ,;<\v]+)! <<142>>dissected<<142>>$1!){
+				}
+				if(s!Distal([ ,;<]+)!<<143>>Distal<<143>>$1!){
+				}
+				if(s! distal([ ,;<\v]+)! <<143>>distal<<143>>$1!){
+				}
+				if(s!Distally([ ,;<]+)!<<144>>Distally<<144>>$1!){
+				}
+				if(s! distally([ ,;<\v]+)! <<144>>distally<<144>>$1!){
+				}
+				if(s!Drupe([ ,;<]+)!<<145>>Drupe<<145>>$1!){
+				}
+				if(s! drupe([ ,;<\v]+)! <<145>>drupe<<145>>$1!){
+				}
+				if(s!Drupes([ ,;<]+)!<<146>>Drupes<<146>>$1!){
+				}
+				if(s! drupes([ ,;<\v]+)! <<146>>drupes<<146>>$1!){
+				}
+				if(s!Dune([ ,;<]+)!<<147>>Dune<<147>>$1!){
+				}
+				if(s! dune([ ,;<\v]+)! <<147>>dune<<147>>$1!){
+				}
+				if(s!Dunes([ ,;<]+)!<<148>>Dunes<<148>>$1!){
+				}
+				if(s! dunes([ ,;<\v]+)! <<148>>dunes<<148>>$1!){
+				}
+				if(s!Elliptic([ ,;<]+)!<<149>>Elliptic<<149>>$1!){
+				}
+				if(s! elliptic([ ,;<\v]+)! <<149>>elliptic<<149>>$1!){
+				}
+				if(s!Emergent([ ,;<]+)!<<150>>Emergent<<150>>$1!){
+				}
+				if(s! emergent([ ,;<\v]+)! <<150>>emergent<<150>>$1!){
+				}
+				if(s!Endemic([ ,;<]+)!<<151>>Endemic<<151>>$1!){
+				}
+				if(s! endemic([ ,;<\v]+)! <<151>>endemic<<151>>$1!){
+				}
+				if(s!Entire([ ,;<]+)!<<152>>Entire<<152>>$1!){
+				}
+				if(s! entire([ ,;<\v]+)! <<152>>entire<<152>>$1!){
+				}
+				if(s!Ephemeral([ ,;<]+)!<<153>>Ephemeral<<153>>$1!){
+				}
+				if(s! ephemeral([ ,;<\v]+)! <<153>>ephemeral<<153>>$1!){
+				}
+				if(s!Epidermis([ ,;<]+)!<<154>>Epidermis<<154>>$1!){
+				}
+				if(s! epidermis([ ,;<\v]+)! <<154>>epidermis<<154>>$1!){
+				}
+				if(s!Epipetalous([ ,;<]+)!<<155>>Epipetalous<<155>>$1!){
+				}
+				if(s! epipetalous([ ,;<\v]+)! <<155>>epipetalous<<155>>$1!){
+				}
+				if(s!Erect([ ,;<]+)!<<156>>Erect<<156>>$1!){
+				}
+				if(s! erect([ ,;<\v]+)! <<156>>erect<<156>>$1!){
+				}
+				if(s!Estuarine([ ,;<]+)!<<157>>Estuarine<<157>>$1!){
+				}
+				if(s! estuarine([ ,;<\v]+)! <<157>>estuarine<<157>>$1!){
+				}
+				if(s!Evergreen([ ,;<]+)!<<158>>Evergreen<<158>>$1!){
+				}
+				if(s! evergreen([ ,;<\v]+)! <<158>>evergreen<<158>>$1!){
+				}
+				if(s!Exceeding([ ,;<]+)!<<159>>Exceeding<<159>>$1!){
+				}
+				if(s! exceeding([ ,;<\v]+)! <<159>>exceeding<<159>>$1!){
+				}
+				if(s!Exserted([ ,;<]+)!<<160>>Exserted<<160>>$1!){
+				}
+				if(s! exserted([ ,;<\v]+)! <<160>>exserted<<160>>$1!){
+				}
+				if(s!Extant([ ,;<]+)!<<161>>Extant<<161>>$1!){
+				}
+				if(s! extant([ ,;<\v]+)! <<161>>extant<<161>>$1!){
+				}
+				if(s!Extinct([ ,;<]+)!<<162>>Extinct<<162>>$1!){
+				}
+				if(s! extinct([ ,;<\v]+)! <<162>>extinct<<162>>$1!){
+				}
+				if(s!Extirpated([ ,;<]+)!<<163>>Extirpated<<163>>$1!){
+				}
+				if(s! extirpated([ ,;<\v]+)! <<163>>extirpated<<163>>$1!){
+				}
+				if(s!Exudate([ ,;<]+)!<<164>>Exudate<<164>>$1!){
+				}
+				if(s! exudate([ ,;<\v]+)! <<164>>exudate<<164>>$1!){
+				}
+				if(s!Fertile([ ,;<]+)!<<165>>Fertile<<165>>$1!){
+				}
+				if(s! fertile([ ,;<\v]+)! <<165>>fertile<<165>>$1!){
+				}
+				if(s!Fibrous([ ,;<]+)!<<166>>Fibrous<<166>>$1!){
+				}
+				if(s! fibrous([ ,;<\v]+)! <<166>>fibrous<<166>>$1!){
+				}
+				if(s!Filament([ ,;<]+)!<<167>>Filament<<167>>$1!){
+				}
+				if(s! filament([ ,;<\v]+)! <<167>>filament<<167>>$1!){
+				}
+				if(s!Filaments([ ,;<]+)!<<168>>Filaments<<168>>$1!){
+				}
+				if(s! filaments([ ,;<\v]+)! <<168>>filaments<<168>>$1!){
+				}
+				if(s!Fleshy([ ,;<]+)!<<169>>Fleshy<<169>>$1!){
+				}
+				if(s! fleshy([ ,;<\v]+)! <<169>>fleshy<<169>>$1!){
+				}
+				if(s!Floret([ ,;<]+)!<<170>>Floret<<170>>$1!){
+				}
+				if(s! floret([ ,;<\v]+)! <<170>>floret<<170>>$1!){
+				}
+				if(s!Florets([ ,;<]+)!<<171>>Florets<<171>>$1!){
+				}
+				if(s! florets([ ,;<\v]+)! <<171>>florets<<171>>$1!){
+				}
+				if(s!Follicle([ ,;<]+)!<<172>>Follicle<<172>>$1!){
+				}
+				if(s! follicle([ ,;<\v]+)! <<172>>follicle<<172>>$1!){
+				}
+				if(s!Follicles([ ,;<]+)!<<173>>Follicles<<173>>$1!){
+				}
+				if(s! follicles([ ,;<\v]+)! <<173>>follicles<<173>>$1!){
+				}
+				if(s!Foothill([ ,;<]+)!<<174>>Foothill<<174>>$1!){
+				}
+				if(s! foothill([ ,;<\v]+)! <<174>>foothill<<174>>$1!){
+				}
+				if(s!Foothills([ ,;<]+)!<<175>>Foothills<<175>>$1!){
+				}
+				if(s! foothills([ ,;<\v]+)! <<175>>foothills<<175>>$1!){
+				}
+				if(s!Forked([ ,;<]+)!<<176>>Forked<<176>>$1!){
+				}
+				if(s! forked([ ,;<\v]+)! <<176>>forked<<176>>$1!){
+				}
+				if(s!Free([ ,;<]+)!<<177>>Free<<177>>$1!){
+				}
+				if(s! free([ ,;<\v]+)! <<177>>free<<177>>$1!){
+				}
+				if(s!Free-central([ ,;<]+)!<<178>>Free-central<<178>>$1!){
+				}
+				if(s! free-central([ ,;<\v]+)! <<178>>free-central<<178>>$1!){
+				}
+				if(s!Fringed([ ,;<]+)!<<179>>Fringed<<179>>$1!){
+				}
+				if(s! fringed([ ,;<\v]+)! <<179>>fringed<<179>>$1!){
+				}
+				if(s!Frond([ ,;<]+)!<<180>>Frond<<180>>$1!){
+				}
+				if(s! frond([ ,;<\v]+)! <<180>>frond<<180>>$1!){
+				}
+				if(s!Fruit([ ,;<]+)!<<181>>Fruit<<181>>$1!){
+				}
+				if(s! fruit([ ,;<\v]+)! <<181>>fruit<<181>>$1!){
+				}
+				if(s!Fruits([ ,;<]+)!<<182>>Fruits<<182>>$1!){
+				}
+				if(s! fruits([ ,;<\v]+)! <<182>>fruits<<182>>$1!){
+				}
+				if(s!Funnel-shaped([ ,;<]+)!<<183>>Funnel-shaped<<183>>$1!){
+				}
+				if(s! funnel-shaped([ ,;<\v]+)! <<183>>funnel-shaped<<183>>$1!){
+				}
+				if(s!Fused([ ,;<]+)!<<184>>Fused<<184>>$1!){
+				}
+				if(s! fused([ ,;<\v]+)! <<184>>fused<<184>>$1!){
+				}
+				if(s!Fusiform([ ,;<]+)!<<185>>Fusiform<<185>>$1!){
+				}
+				if(s! fusiform([ ,;<\v]+)! <<185>>fusiform<<185>>$1!){
+				}
+				if(s!Glabrous([ ,;<]+)!<<186>>Glabrous<<186>>$1!){
+				}
+				if(s! glabrous([ ,;<\v]+)! <<186>>glabrous<<186>>$1!){
+				}
+				if(s!Gland([ ,;<]+)!<<187>>Gland<<187>>$1!){
+				}
+				if(s! gland([ ,;<\v]+)! <<187>>gland<<187>>$1!){
+				}
+				if(s!Glands([ ,;<]+)!<<188>>Glands<<188>>$1!){
+				}
+				if(s! glands([ ,;<\v]+)! <<188>>glands<<188>>$1!){
+				}
+				if(s!Glandular([ ,;<]+)!<<189>>Glandular<<189>>$1!){
+				}
+				if(s! glandular([ ,;<\v]+)! <<189>>glandular<<189>>$1!){
+				}
+				if(s!Glaucous([ ,;<]+)!<<190>>Glaucous<<190>>$1!){
+				}
+				if(s! glaucous([ ,;<\v]+)! <<190>>glaucous<<190>>$1!){
+				}
+				if(s!Glume([ ,;<]+)!<<191>>Glume<<191>>$1!){
+				}
+				if(s! glume([ ,;<\v]+)! <<191>>glume<<191>>$1!){
+				}
+				if(s!Glumes([ ,;<]+)!<<192>>Glumes<<192>>$1!){
+				}
+				if(s! glumes([ ,;<\v]+)! <<192>>glumes<<192>>$1!){
+				}
+				if(s!Graduated([ ,;<]+)!<<193>>Graduated<<193>>$1!){
+				}
+				if(s! graduated([ ,;<\v]+)! <<193>>graduated<<193>>$1!){
+				}
+				if(s!Granular([ ,;<]+)!<<194>>Granular<<194>>$1!){
+				}
+				if(s! granular([ ,;<\v]+)! <<194>>granular<<194>>$1!){
+				}
+				if(s!Grassland([ ,;<]+)!<<195>>Grassland<<195>>$1!){
+				}
+				if(s! grassland([ ,;<\v]+)! <<195>>grassland<<195>>$1!){
+				}
+				if(s!Grasslands([ ,;<]+)!<<196>>Grasslands<<196>>$1!){
+				}
+				if(s! grasslands([ ,;<\v]+)! <<196>>grasslands<<196>>$1!){
+				}
+				if(s!Gymnosperm([ ,;<]+)!<<197>>Gymnosperm<<197>>$1!){
+				}
+				if(s! gymnosperm([ ,;<\v]+)! <<197>>gymnosperm<<197>>$1!){
+				}
+				if(s!Gymnosperms([ ,;<]+)!<<198>>Gymnosperms<<198>>$1!){
+				}
+				if(s! gymnosperms([ ,;<\v]+)! <<198>>gymnosperms<<198>>$1!){
+				}
+				if(s!Habit([ ,;<]+)!<<199>>Habit<<199>>$1!){
+				}
+				if(s! habit([ ,;<\v]+)! <<199>>habit<<199>>$1!){
+				}
+				if(s!Habits([ ,;<]+)!<<200>>Habits<<200>>$1!){
+				}
+				if(s! habits([ ,;<\v]+)! <<200>>habits<<200>>$1!){
+				}
+				if(s!Habitat([ ,;<]+)!<<201>>Habitat<<201>>$1!){
+				}
+				if(s! habitat([ ,;<\v]+)! <<201>>habitat<<201>>$1!){
+				}
+				if(s!Habitats([ ,;<]+)!<<202>>Habitats<<202>>$1!){
+				}
+				if(s! habitats([ ,;<\v]+)! <<202>>habitats<<202>>$1!){
+				}
+				if(s!Hair([ ,;<]+)!<<203>>Hair<<203>>$1!){
+				}
+				if(s! hair([ ,;<\v]+)! <<203>>hair<<203>>$1!){
+				}
+				if(s!Hairs([ ,;<]+)!<<204>>Hairs<<204>>$1!){
+				}
+				if(s! hairs([ ,;<\v]+)! <<204>>hairs<<204>>$1!){
+				}
+				if(s!Haploid([ ,;<]+)!<<205>>Haploid<<205>>$1!){
+				}
+				if(s! haploid([ ,;<\v]+)! <<205>>haploid<<205>>$1!){
+				}
+				if(s!Hastate([ ,;<]+)!<<206>>Hastate<<206>>$1!){
+				}
+				if(s! hastate([ ,;<\v]+)! <<206>>hastate<<206>>$1!){
+				}
+				if(s!Head([ ,;<]+)!<<207>>Head<<207>>$1!){
+				}
+				if(s! head([ ,;<\v]+)! <<207>>head<<207>>$1!){
+				}
+				if(s!Heads([ ,;<]+)!<<208>>Heads<<208>>$1!){
+				}
+				if(s! heads([ ,;<\v]+)! <<208>>heads<<208>>$1!){
+				}
+				if(s!Hemispheric([ ,;<]+)!<<209>>Hemispheric<<209>>$1!){
+				}
+				if(s! hemispheric([ ,;<\v]+)! <<209>>hemispheric<<209>>$1!){
+				}
+				if(s!Herb([ ,;<]+)!<<210>>Herb<<210>>$1!){
+				}
+				if(s! herb([ ,;<\v]+)! <<210>>herb<<210>>$1!){
+				}
+				if(s!Herbs([ ,;<]+)!<<211>>Herbs<<211>>$1!){
+				}
+				if(s! herbs([ ,;<\v]+)! <<211>>herbs<<211>>$1!){
+				}
+				if(s!Herbaceous([ ,;<]+)!<<212>>Herbaceous<<212>>$1!){
+				}
+				if(s! herbaceous([ ,;<\v]+)! <<212>>herbaceous<<212>>$1!){
+				}
+				if(s!Herbage([ ,;<]+)!<<213>>Herbage<<213>>$1!){
+				}
+				if(s! herbage([ ,;<\v]+)! <<213>>herbage<<213>>$1!){
+				}
+				if(s!Heterostylous([ ,;<]+)!<<214>>Heterostylous<<214>>$1!){
+				}
+				if(s! heterostylous([ ,;<\v]+)! <<214>>heterostylous<<214>>$1!){
+				}
+				if(s!Hypanthium([ ,;<]+)!<<215>>Hypanthium<<215>>$1!){
+				}
+				if(s! hypanthium([ ,;<\v]+)! <<215>>hypanthium<<215>>$1!){
+				}
+				if(s!Hypanthia([ ,;<]+)!<<216>>Hypanthia<<216>>$1!){
+				}
+				if(s! hypanthia([ ,;<\v]+)! <<216>>hypanthia<<216>>$1!){
+				}
+				if(s!Included([ ,;<]+)!<<217>>Included<<217>>$1!){
+				}
+				if(s! included([ ,;<\v]+)! <<217>>included<<217>>$1!){
+				}
+				if(s!Indehiscent([ ,;<]+)!<<218>>Indehiscent<<218>>$1!){
+				}
+				if(s! indehiscent([ ,;<\v]+)! <<218>>indehiscent<<218>>$1!){
+				}
+				if(s!Indusium([ ,;<]+)!<<219>>Indusium<<219>>$1!){
+				}
+				if(s! indusium([ ,;<\v]+)! <<219>>indusium<<219>>$1!){
+				}
+				if(s!Indusia([ ,;<]+)!<<220>>Indusia<<220>>$1!){
+				}
+				if(s! indusia([ ,;<\v]+)! <<220>>indusia<<220>>$1!){
+				}
+				if(s!Inferior([ ,;<]+)!<<221>>Inferior<<221>>$1!){
+				}
+				if(s! inferior([ ,;<\v]+)! <<221>>inferior<<221>>$1!){
+				}
+				if(s!Inflorescence([ ,;<]+)!<<222>>Inflorescence<<222>>$1!){
+				}
+				if(s! inflorescence([ ,;<\v]+)! <<222>>inflorescence<<222>>$1!){
+				}
+				if(s!Inflorescences([ ,;<]+)!<<223>>Inflorescences<<223>>$1!){
+				}
+				if(s! inflorescences([ ,;<\v]+)! <<223>>inflorescences<<223>>$1!){
+				}
+				if(s!Infraspecific([ ,;<]+)!<<224>>Infraspecific<<224>>$1!){
+				}
+				if(s! infraspecific([ ,;<\v]+)! <<224>>infraspecific<<224>>$1!){
+				}
+				if(s!Intergrade([ ,;<]+)!<<225>>Intergrade<<225>>$1!){
+				}
+				if(s! intergrade([ ,;<\v]+)! <<225>>intergrade<<225>>$1!){
+				}
+				if(s!Intermediate([ ,;<]+)!<<226>>Intermediate<<226>>$1!){
+				}
+				if(s! intermediate([ ,;<\v]+)! <<226>>intermediate<<226>>$1!){
+				}
+				if(s!Internode([ ,;<]+)!<<227>>Internode<<227>>$1!){
+				}
+				if(s! internode([ ,;<\v]+)! <<227>>internode<<227>>$1!){
+				}
+				if(s!Internodes([ ,;<]+)!<<228>>Internodes<<228>>$1!){
+				}
+				if(s! internodes([ ,;<\v]+)! <<228>>internodes<<228>>$1!){
+				}
+				if(s!Interrupted([ ,;<]+)!<<229>>Interrupted<<229>>$1!){
+				}
+				if(s! interrupted([ ,;<\v]+)! <<229>>interrupted<<229>>$1!){
+				}
+				if(s!Intertidal([ ,;<]+)!<<230>>Intertidal<<230>>$1!){
+				}
+				if(s! intertidal([ ,;<\v]+)! <<230>>intertidal<<230>>$1!){
+				}
+				if(s!Involucel([ ,;<]+)!<<231>>Involucel<<231>>$1!){
+				}
+				if(s! involucel([ ,;<\v]+)! <<231>>involucel<<231>>$1!){
+				}
+				if(s!Involucre([ ,;<]+)!<<232>>Involucre<<232>>$1!){
+				}
+				if(s! involucre([ ,;<\v]+)! <<232>>involucre<<232>>$1!){
+				}
+				if(s!Involucres([ ,;<]+)!<<233>>Involucres<<233>>$1!){
+				}
+				if(s! involucres([ ,;<\v]+)! <<233>>involucres<<233>>$1!){
+				}
+				if(s!Keel([ ,;<]+)!<<234>>Keel<<234>>$1!){
+				}
+				if(s! keel([ ,;<\v]+)! <<234>>keel<<234>>$1!){
+				}
+				if(s!Keels([ ,;<]+)!<<235>>Keels<<235>>$1!){
+				}
+				if(s! keels([ ,;<\v]+)! <<235>>keels<<235>>$1!){
+				}
+				if(s!Keeled([ ,;<]+)!<<236>>Keeled<<236>>$1!){
+				}
+				if(s! keeled([ ,;<\v]+)! <<236>>keeled<<236>>$1!){
+				}
+				if(s!Lamina([ ,;<]+)!<<237>>Lamina<<237>>$1!){
+				}
+				if(s! lamina([ ,;<\v]+)! <<237>>lamina<<237>>$1!){
+				}
+				if(s!Laminae([ ,;<]+)!<<238>>Laminae<<238>>$1!){
+				}
+				if(s! laminae([ ,;<\v]+)! <<238>>laminae<<238>>$1!){
+				}
+				if(s!Lanceolate([ ,;<]+)!<<239>>Lanceolate<<239>>$1!){
+				}
+				if(s! lanceolate([ ,;<\v]+)! <<239>>lanceolate<<239>>$1!){
+				}
+				if(s!Lateral([ ,;<]+)!<<240>>Lateral<<240>>$1!){
+				}
+				if(s! lateral([ ,;<\v]+)! <<240>>lateral<<240>>$1!){
+				}
+				if(s!Leaf([ ,;<]+)!<<241>>Leaf<<241>>$1!){
+				}
+				if(s! leaf([ ,;<\v]+)! <<241>>leaf<<241>>$1!){
+				}
+				if(s!Leaves([ ,;<]+)!<<242>>Leaves<<242>>$1!){
+				}
+				if(s! leaves([ ,;<\v]+)! <<242>>leaves<<242>>$1!){
+				}
+				if(s!Leaflet([ ,;<]+)!<<243>>Leaflet<<243>>$1!){
+				}
+				if(s! leaflet([ ,;<\v]+)! <<243>>leaflet<<243>>$1!){
+				}
+				if(s!Leaflets([ ,;<]+)!<<244>>Leaflets<<244>>$1!){
+				}
+				if(s! leaflets([ ,;<\v]+)! <<244>>leaflets<<244>>$1!){
+				}
+				if(s!Legume([ ,;<]+)!<<245>>Legume<<245>>$1!){
+				}
+				if(s! legume([ ,;<\v]+)! <<245>>legume<<245>>$1!){
+				}
+				if(s!Legumes([ ,;<]+)!<<246>>Legumes<<246>>$1!){
+				}
+				if(s! legumes([ ,;<\v]+)! <<246>>legumes<<246>>$1!){
+				}
+				if(s!Lemma([ ,;<]+)!<<247>>Lemma<<247>>$1!){
+				}
+				if(s! lemma([ ,;<\v]+)! <<247>>lemma<<247>>$1!){
+				}
+				if(s!Lemmas([ ,;<]+)!<<248>>Lemmas<<248>>$1!){
+				}
+				if(s! lemmas([ ,;<\v]+)! <<248>>lemmas<<248>>$1!){
+				}
+				if(s!Lenticel([ ,;<]+)!<<249>>Lenticel<<249>>$1!){
+				}
+				if(s! lenticel([ ,;<\v]+)! <<249>>lenticel<<249>>$1!){
+				}
+				if(s!Lenticels([ ,;<]+)!<<250>>Lenticels<<250>>$1!){
+				}
+				if(s! lenticels([ ,;<\v]+)! <<250>>lenticels<<250>>$1!){
+				}
+				if(s!Lenticular([ ,;<]+)!<<251>>Lenticular<<251>>$1!){
+				}
+				if(s! lenticular([ ,;<\v]+)! <<251>>lenticular<<251>>$1!){
+				}
+				if(s!Ligulate flower([ ,;<]+)!<<252>>Ligulate flower<<252>>$1!){
+				}
+				if(s! ligulate flower([ ,;<\v]+)! <<252>>ligulate flower<<252>>$1!){
+				}
+				if(s!Ligule([ ,;<]+)!<<253>>Ligule<<253>>$1!){
+				}
+				if(s! ligule([ ,;<\v]+)! <<253>>ligule<<253>>$1!){
+				}
+				if(s!Ligules([ ,;<]+)!<<254>>Ligules<<254>>$1!){
+				}
+				if(s! ligules([ ,;<\v]+)! <<254>>ligules<<254>>$1!){
+				}
+				if(s!Liguliflorous([ ,;<]+)!<<255>>Liguliflorous<<255>>$1!){
+				}
+				if(s! liguliflorous([ ,;<\v]+)! <<255>>liguliflorous<<255>>$1!){
+				}
+				if(s!Limb([ ,;<]+)!<<256>>Limb<<256>>$1!){
+				}
+				if(s! limb([ ,;<\v]+)! <<256>>limb<<256>>$1!){
+				}
+				if(s!Limbs([ ,;<]+)!<<257>>Limbs<<257>>$1!){
+				}
+				if(s! limbs([ ,;<\v]+)! <<257>>limbs<<257>>$1!){
+				}
+				if(s!Linear([ ,;<]+)!<<258>>Linear<<258>>$1!){
+				}
+				if(s! linear([ ,;<\v]+)! <<258>>linear<<258>>$1!){
+				}
+				if(s!Lip([ ,;<]+)!<<259>>Lip<<259>>$1!){
+				}
+				if(s! lip([ ,;<\v]+)! <<259>>lip<<259>>$1!){
+				}
+				if(s!Lips([ ,;<]+)!<<260>>Lips<<260>>$1!){
+				}
+				if(s! lips([ ,;<\v]+)! <<260>>lips<<260>>$1!){
+				}
+				if(s!Lobe([ ,;<]+)!<<261>>Lobe<<261>>$1!){
+				}
+				if(s! lobe([ ,;<\v]+)! <<261>>lobe<<261>>$1!){
+				}
+				if(s!Lobes([ ,;<]+)!<<262>>Lobes<<262>>$1!){
+				}
+				if(s! lobes([ ,;<\v]+)! <<262>>lobes<<262>>$1!){
+				}
+				if(s!Loculicidal([ ,;<]+)!<<263>>Loculicidal<<263>>$1!){
+				}
+				if(s! loculicidal([ ,;<\v]+)! <<263>>loculicidal<<263>>$1!){
+				}
+				if(s!Longitudinal([ ,;<]+)!<<264>>Longitudinal<<264>>$1!){
+				}
+				if(s! longitudinal([ ,;<\v]+)! <<264>>longitudinal<<264>>$1!){
+				}
+				if(s!Margin([ ,;<]+)!<<265>>Margin<<265>>$1!){
+				}
+				if(s! margin([ ,;<\v]+)! <<265>>margin<<265>>$1!){
+				}
+				if(s!Margins([ ,;<]+)!<<266>>Margins<<266>>$1!){
+				}
+				if(s! margins([ ,;<\v]+)! <<266>>margins<<266>>$1!){
+				}
+				if(s!Marsh([ ,;<]+)!<<267>>Marsh<<267>>$1!){
+				}
+				if(s! marsh([ ,;<\v]+)! <<267>>marsh<<267>>$1!){
+				}
+				if(s!Marshes([ ,;<]+)!<<268>>Marshes<<268>>$1!){
+				}
+				if(s! marshes([ ,;<\v]+)! <<268>>marshes<<268>>$1!){
+				}
+				if(s!Meadow([ ,;<]+)!<<269>>Meadow<<269>>$1!){
+				}
+				if(s! meadow([ ,;<\v]+)! <<269>>meadow<<269>>$1!){
+				}
+				if(s!Meadows([ ,;<]+)!<<270>>Meadows<<270>>$1!){
+				}
+				if(s! meadows([ ,;<\v]+)! <<270>>meadows<<270>>$1!){
+				}
+				if(s!Membranous([ ,;<]+)!<<271>>Membranous<<271>>$1!){
+				}
+				if(s! membranous([ ,;<\v]+)! <<271>>membranous<<271>>$1!){
+				}
+				if(s!Mericarp([ ,;<]+)!<<272>>Mericarp<<272>>$1!){
+				}
+				if(s! mericarp([ ,;<\v]+)! <<272>>mericarp<<272>>$1!){
+				}
+				if(s!Mixed-evergreen forest([ ,;<]+)!<<273>>Mixed-evergreen forest<<273>>$1!){
+				}
+				if(s! mixed-evergreen forest([ ,;<\v]+)! <<273>>mixed-evergreen forest<<273>>$1!){
+				}
+				if(s!Monoecious([ ,;<]+)!<<274>>Monoecious<<274>>$1!){
+				}
+				if(s! monoecious([ ,;<\v]+)! <<274>>monoecious<<274>>$1!){
+				}
+				if(s!Monolete spore([ ,;<]+)!<<275>>Monolete spore<<275>>$1!){
+				}
+				if(s! monolete spore([ ,;<\v]+)! <<275>>monolete spore<<275>>$1!){
+				}
+				if(s!Montane([ ,;<]+)!<<276>>Montane<<276>>$1!){
+				}
+				if(s! montane([ ,;<\v]+)! <<276>>montane<<276>>$1!){
+				}
+				if(s!Mucro([ ,;<]+)!<<277>>Mucro<<277>>$1!){
+				}
+				if(s! mucro([ ,;<\v]+)! <<277>>mucro<<277>>$1!){
+				}
+				if(s!Mucronate([ ,;<]+)!<<278>>Mucronate<<278>>$1!){
+				}
+				if(s! mucronate([ ,;<\v]+)! <<278>>mucronate<<278>>$1!){
+				}
+				if(s!Native([ ,;<]+)!<<279>>Native<<279>>$1!){
+				}
+				if(s! native([ ,;<\v]+)! <<279>>native<<279>>$1!){
+				}
+				if(s!Naturalized([ ,;<]+)!<<280>>Naturalized<<280>>$1!){
+				}
+				if(s! naturalized([ ,;<\v]+)! <<280>>naturalized<<280>>$1!){
+				}
+				if(s!Nectar([ ,;<]+)!<<281>>Nectar<<281>>$1!){
+				}
+				if(s! nectar([ ,;<\v]+)! <<281>>nectar<<281>>$1!){
+				}
+				if(s!Nectary([ ,;<]+)!<<282>>Nectary<<282>>$1!){
+				}
+				if(s! nectary([ ,;<\v]+)! <<282>>nectary<<282>>$1!){
+				}
+				if(s!Nectaries([ ,;<]+)!<<283>>Nectaries<<283>>$1!){
+				}
+				if(s! nectaries([ ,;<\v]+)! <<283>>nectaries<<283>>$1!){
+				}
+				if(s!Needle([ ,;<]+)!<<284>>Needle<<284>>$1!){
+				}
+				if(s! needle([ ,;<\v]+)! <<284>>needle<<284>>$1!){
+				}
+				if(s!Needles([ ,;<]+)!<<285>>Needles<<285>>$1!){
+				}
+				if(s! needles([ ,;<\v]+)! <<285>>needles<<285>>$1!){
+				}
+				if(s!Node([ ,;<]+)!<<286>>Node<<286>>$1!){
+				}
+				if(s! node([ ,;<\v]+)! <<286>>node<<286>>$1!){
+				}
+				if(s!Nodes([ ,;<]+)!<<287>>Nodes<<287>>$1!){
+				}
+				if(s! nodes([ ,;<\v]+)! <<287>>nodes<<287>>$1!){
+				}
+				if(s!Nut([ ,;<]+)!<<288>>Nut<<288>>$1!){
+				}
+				if(s! nut([ ,;<\v]+)! <<288>>nut<<288>>$1!){
+				}
+				if(s!Nuts([ ,;<]+)!<<289>>Nuts<<289>>$1!){
+				}
+				if(s! nuts([ ,;<\v]+)! <<289>>nuts<<289>>$1!){
+				}
+				if(s!Nutlet([ ,;<]+)!<<290>>Nutlet<<290>>$1!){
+				}
+				if(s! nutlet([ ,;<\v]+)! <<290>>nutlet<<290>>$1!){
+				}
+				if(s!Nutlets([ ,;<]+)!<<291>>Nutlets<<291>>$1!){
+				}
+				if(s! nutlets([ ,;<\v]+)! <<291>>nutlets<<291>>$1!){
+				}
+				if(s!Oblique([ ,;<]+)!<<292>>Oblique<<292>>$1!){
+				}
+				if(s! oblique([ ,;<\v]+)! <<292>>oblique<<292>>$1!){
+				}
+				if(s!Oblong([ ,;<]+)!<<293>>Oblong<<293>>$1!){
+				}
+				if(s! oblong([ ,;<\v]+)! <<293>>oblong<<293>>$1!){
+				}
+				if(s!Obtuse([ ,;<]+)!<<294>>Obtuse<<294>>$1!){
+				}
+				if(s! obtuse([ ,;<\v]+)! <<294>>obtuse<<294>>$1!){
+				}
+				if(s!Ocrea([ ,;<]+)!<<295>>Ocrea<<295>>$1!){
+				}
+				if(s! ocrea([ ,;<\v]+)! <<295>>ocrea<<295>>$1!){
+				}
+				if(s!Ocreae([ ,;<]+)!<<296>>Ocreae<<296>>$1!){
+				}
+				if(s! ocreae([ ,;<\v]+)! <<296>>ocreae<<296>>$1!){
+				}
+				if(s!Open([ ,;<]+)!<<297>>Open<<297>>$1!){
+				}
+				if(s! open([ ,;<\v]+)! <<297>>open<<297>>$1!){
+				}
+				if(s!Opposite([ ,;<]+)!<<298>>Opposite<<298>>$1!){
+				}
+				if(s! opposite([ ,;<\v]+)! <<298>>opposite<<298>>$1!){
+				}
+				if(s!Ovary([ ,;<]+)!<<299>>Ovary<<299>>$1!){
+				}
+				if(s! ovary([ ,;<\v]+)! <<299>>ovary<<299>>$1!){
+				}
+				if(s!Ovaries([ ,;<]+)!<<300>>Ovaries<<300>>$1!){
+				}
+				if(s! ovaries([ ,;<\v]+)! <<300>>ovaries<<300>>$1!){
+				}
+				if(s!Ovary stalk([ ,;<]+)!<<301>>Ovary stalk<<301>>$1!){
+				}
+				if(s! ovary stalk([ ,;<\v]+)! <<301>>ovary stalk<<301>>$1!){
+				}
+				if(s!Fruit stalk([ ,;<]+)!<<302>>Fruit stalk<<302>>$1!){
+				}
+				if(s! fruit stalk([ ,;<\v]+)! <<302>>fruit stalk<<302>>$1!){
+				}
+				if(s!Ovate([ ,;<]+)!<<303>>Ovate<<303>>$1!){
+				}
+				if(s! ovate([ ,;<\v]+)! <<303>>ovate<<303>>$1!){
+				}
+				if(s!Ovoid([ ,;<]+)!<<304>>Ovoid<<304>>$1!){
+				}
+				if(s! ovoid([ ,;<\v]+)! <<304>>ovoid<<304>>$1!){
+				}
+				if(s!Ovule([ ,;<]+)!<<305>>Ovule<<305>>$1!){
+				}
+				if(s! ovule([ ,;<\v]+)! <<305>>ovule<<305>>$1!){
+				}
+				if(s!Ovules([ ,;<]+)!<<306>>Ovules<<306>>$1!){
+				}
+				if(s! ovules([ ,;<\v]+)! <<306>>ovules<<306>>$1!){
+				}
+				if(s!Paleate([ ,;<]+)!<<307>>Paleate<<307>>$1!){
+				}
+				if(s! paleate([ ,;<\v]+)! <<307>>paleate<<307>>$1!){
+				}
+				if(s!Palea([ ,;<]+)!<<308>>Palea<<308>>$1!){
+				}
+				if(s! palea([ ,;<\v]+)! <<308>>palea<<308>>$1!){
+				}
+				if(s!Paleae([ ,;<]+)!<<309>>Paleae<<309>>$1!){
+				}
+				if(s! paleae([ ,;<\v]+)! <<309>>paleae<<309>>$1!){
+				}
+				if(s!Palmately([ ,;<]+)!<<310>>Palmately<<310>>$1!){
+				}
+				if(s! palmately([ ,;<\v]+)! <<310>>palmately<<310>>$1!){
+				}
+				if(s!Palmate([ ,;<]+)!<<311>>Palmate<<311>>$1!){
+				}
+				if(s! palmate([ ,;<\v]+)! <<311>>palmate<<311>>$1!){
+				}
+				if(s!Panicle([ ,;<]+)!<<312>>Panicle<<312>>$1!){
+				}
+				if(s! panicle([ ,;<\v]+)! <<312>>panicle<<312>>$1!){
+				}
+				if(s!Panicles([ ,;<]+)!<<313>>Panicles<<313>>$1!){
+				}
+				if(s! panicles([ ,;<\v]+)! <<313>>panicles<<313>>$1!){
+				}
+				if(s!Papillate([ ,;<]+)!<<314>>Papillate<<314>>$1!){
+				}
+				if(s! papillate([ ,;<\v]+)! <<314>>papillate<<314>>$1!){
+				}
+				if(s!Pappus([ ,;<]+)!<<315>>Pappus<<315>>$1!){
+				}
+				if(s! pappus([ ,;<\v]+)! <<315>>pappus<<315>>$1!){
+				}
+				if(s!Parasite([ ,;<]+)!<<316>>Parasite<<316>>$1!){
+				}
+				if(s! parasite([ ,;<\v]+)! <<316>>parasite<<316>>$1!){
+				}
+				if(s!Parasites([ ,;<]+)!<<317>>Parasites<<317>>$1!){
+				}
+				if(s! parasites([ ,;<\v]+)! <<317>>parasites<<317>>$1!){
+				}
+				if(s!Parietal([ ,;<]+)!<<318>>Parietal<<318>>$1!){
+				}
+				if(s! parietal([ ,;<\v]+)! <<318>>parietal<<318>>$1!){
+				}
+				if(s!Parietally([ ,;<]+)!<<319>>Parietally<<319>>$1!){
+				}
+				if(s! parietally([ ,;<\v]+)! <<319>>parietally<<319>>$1!){
+				}
+				if(s!Peat([ ,;<]+)!<<320>>Peat<<320>>$1!){
+				}
+				if(s! peat([ ,;<\v]+)! <<320>>peat<<320>>$1!){
+				}
+				if(s!Peatland([ ,;<]+)!<<321>>Peatland<<321>>$1!){
+				}
+				if(s! peatland([ ,;<\v]+)! <<321>>peatland<<321>>$1!){
+				}
+				if(s!Peatlands([ ,;<]+)!<<322>>Peatlands<<322>>$1!){
+				}
+				if(s! peatlands([ ,;<\v]+)! <<322>>peatlands<<322>>$1!){
+				}
+				if(s!Pedicel([ ,;<]+)!<<323>>Pedicel<<323>>$1!){
+				}
+				if(s! pedicel([ ,;<\v]+)! <<323>>pedicel<<323>>$1!){
+				}
+				if(s!Pedicels([ ,;<]+)!<<324>>Pedicels<<324>>$1!){
+				}
+				if(s! pedicels([ ,;<\v]+)! <<324>>pedicels<<324>>$1!){
+				}
+				if(s!Peduncle([ ,;<]+)!<<325>>Peduncle<<325>>$1!){
+				}
+				if(s! peduncle([ ,;<\v]+)! <<325>>peduncle<<325>>$1!){
+				}
+				if(s!Peduncles([ ,;<]+)!<<326>>Peduncles<<326>>$1!){
+				}
+				if(s! peduncles([ ,;<\v]+)! <<326>>peduncles<<326>>$1!){
+				}
+				if(s!Peltate([ ,;<]+)!<<327>>Peltate<<327>>$1!){
+				}
+				if(s! peltate([ ,;<\v]+)! <<327>>peltate<<327>>$1!){
+				}
+				if(s!Pendent([ ,;<]+)!<<328>>Pendent<<328>>$1!){
+				}
+				if(s! pendent([ ,;<\v]+)! <<328>>pendent<<328>>$1!){
+				}
+				if(s!Perennial([ ,;<]+)!<<329>>Perennial<<329>>$1!){
+				}
+				if(s! perennial([ ,;<\v]+)! <<329>>perennial<<329>>$1!){
+				}
+				if(s!Perianth([ ,;<]+)!<<330>>Perianth<<330>>$1!){
+				}
+				if(s! perianth([ ,;<\v]+)! <<330>>perianth<<330>>$1!){
+				}
+				if(s!Perianths([ ,;<]+)!<<331>>Perianths<<331>>$1!){
+				}
+				if(s! perianths([ ,;<\v]+)! <<331>>perianths<<331>>$1!){
+				}
+				if(s!Perianth part([ ,;<]+)!<<332>>Perianth part<<332>>$1!){
+				}
+				if(s! perianth part([ ,;<\v]+)! <<332>>perianth part<<332>>$1!){
+				}
+				if(s!Perigynium([ ,;<]+)!<<333>>Perigynium<<333>>$1!){
+				}
+				if(s! perigynium([ ,;<\v]+)! <<333>>perigynium<<333>>$1!){
+				}
+				if(s!Persistent([ ,;<]+)!<<334>>Persistent<<334>>$1!){
+				}
+				if(s! persistent([ ,;<\v]+)! <<334>>persistent<<334>>$1!){
+				}
+				if(s!Petal([ ,;<]+)!<<335>>Petal<<335>>$1!){
+				}
+				if(s! petal([ ,;<\v]+)! <<335>>petal<<335>>$1!){
+				}
+				if(s!Petals([ ,;<]+)!<<336>>Petals<<336>>$1!){
+				}
+				if(s! petals([ ,;<\v]+)! <<336>>petals<<336>>$1!){
+				}
+				if(s!Petiole([ ,;<]+)!<<337>>Petiole<<337>>$1!){
+				}
+				if(s! petiole([ ,;<\v]+)! <<337>>petiole<<337>>$1!){
+				}
+				if(s!Petioles([ ,;<]+)!<<338>>Petioles<<338>>$1!){
+				}
+				if(s! petioles([ ,;<\v]+)! <<338>>petioles<<338>>$1!){
+				}
+				if(s!Phyllary([ ,;<]+)!<<339>>Phyllary<<339>>$1!){
+				}
+				if(s! phyllary([ ,;<\v]+)! <<339>>phyllary<<339>>$1!){
+				}
+				if(s!Phyllaries([ ,;<]+)!<<340>>Phyllaries<<340>>$1!){
+				}
+				if(s! phyllaries([ ,;<\v]+)! <<340>>phyllaries<<340>>$1!){
+				}
+				if(s!Pinna([ ,;<]+)!<<341>>Pinna<<341>>$1!){
+				}
+				if(s! pinna([ ,;<\v]+)! <<341>>pinna<<341>>$1!){
+				}
+				if(s!Pinnae([ ,;<]+)!<<342>>Pinnae<<342>>$1!){
+				}
+				if(s! pinnae([ ,;<\v]+)! <<342>>pinnae<<342>>$1!){
+				}
+				if(s!Pinnate([ ,;<]+)!<<343>>Pinnate<<343>>$1!){
+				}
+				if(s! pinnate([ ,;<\v]+)! <<343>>pinnate<<343>>$1!){
+				}
+				if(s!Pinnately([ ,;<]+)!<<344>>Pinnately<<344>>$1!){
+				}
+				if(s! pinnately([ ,;<\v]+)! <<344>>pinnately<<344>>$1!){
+				}
+				if(s!Pinnule([ ,;<]+)!<<345>>Pinnule<<345>>$1!){
+				}
+				if(s! pinnule([ ,;<\v]+)! <<345>>pinnule<<345>>$1!){
+				}
+				if(s!Pinnules([ ,;<]+)!<<346>>Pinnules<<346>>$1!){
+				}
+				if(s! pinnules([ ,;<\v]+)! <<346>>pinnules<<346>>$1!){
+				}
+				if(s!Pinnulet([ ,;<]+)!<<347>>Pinnulet<<347>>$1!){
+				}
+				if(s! pinnulet([ ,;<\v]+)! <<347>>pinnulet<<347>>$1!){
+				}
+				if(s!Pistil([ ,;<]+)!<<348>>Pistil<<348>>$1!){
+				}
+				if(s! pistil([ ,;<\v]+)! <<348>>pistil<<348>>$1!){
+				}
+				if(s!Pistils([ ,;<]+)!<<349>>Pistils<<349>>$1!){
+				}
+				if(s! pistils([ ,;<\v]+)! <<349>>pistils<<349>>$1!){
+				}
+				if(s!Pistillate([ ,;<]+)!<<350>>Pistillate<<350>>$1!){
+				}
+				if(s! pistillate([ ,;<\v]+)! <<350>>pistillate<<350>>$1!){
+				}
+				if(s!Placenta([ ,;<]+)!<<351>>Placenta<<351>>$1!){
+				}
+				if(s! placenta([ ,;<\v]+)! <<351>>placenta<<351>>$1!){
+				}
+				if(s!Placentas([ ,;<]+)!<<352>>Placentas<<352>>$1!){
+				}
+				if(s! placentas([ ,;<\v]+)! <<352>>placentas<<352>>$1!){
+				}
+				if(s!Planoconvex([ ,;<]+)!<<353>>Planoconvex<<353>>$1!){
+				}
+				if(s! planoconvex([ ,;<\v]+)! <<353>>planoconvex<<353>>$1!){
+				}
+				if(s!Pleated([ ,;<]+)!<<354>>Pleated<<354>>$1!){
+				}
+				if(s! pleated([ ,;<\v]+)! <<354>>pleated<<354>>$1!){
+				}
+				if(s!Plumose([ ,;<]+)!<<355>>Plumose<<355>>$1!){
+				}
+				if(s! plumose([ ,;<\v]+)! <<355>>plumose<<355>>$1!){
+				}
+				if(s!Pollen([ ,;<]+)!<<356>>Pollen<<356>>$1!){
+				}
+				if(s! pollen([ ,;<\v]+)! <<356>>pollen<<356>>$1!){
+				}
+				if(s!Pollination([ ,;<]+)!<<357>>Pollination<<357>>$1!){
+				}
+				if(s! pollination([ ,;<\v]+)! <<357>>pollination<<357>>$1!){
+				}
+				if(s!Pollinium([ ,;<]+)!<<358>>Pollinium<<358>>$1!){
+				}
+				if(s! pollinium([ ,;<\v]+)! <<358>>pollinium<<358>>$1!){
+				}
+				if(s!Pollinia([ ,;<]+)!<<359>>Pollinia<<359>>$1!){
+				}
+				if(s! pollinia([ ,;<\v]+)! <<359>>pollinia<<359>>$1!){
+				}
+				if(s!Polyploid([ ,;<]+)!<<360>>Polyploid<<360>>$1!){
+				}
+				if(s! polyploid([ ,;<\v]+)! <<360>>polyploid<<360>>$1!){
+				}
+				if(s!Pome([ ,;<]+)!<<361>>Pome<<361>>$1!){
+				}
+				if(s! pome([ ,;<\v]+)! <<361>>pome<<361>>$1!){
+				}
+				if(s!Prickle([ ,;<]+)!<<362>>Prickle<<362>>$1!){
+				}
+				if(s! prickle([ ,;<\v]+)! <<362>>prickle<<362>>$1!){
+				}
+				if(s!Prickles([ ,;<]+)!<<363>>Prickles<<363>>$1!){
+				}
+				if(s! prickles([ ,;<\v]+)! <<363>>prickles<<363>>$1!){
+				}
+				if(s!Prostrate([ ,;<]+)!<<364>>Prostrate<<364>>$1!){
+				}
+				if(s! prostrate([ ,;<\v]+)! <<364>>prostrate<<364>>$1!){
+				}
+				if(s!Protandrous([ ,;<]+)!<<365>>Protandrous<<365>>$1!){
+				}
+				if(s! protandrous([ ,;<\v]+)! <<365>>protandrous<<365>>$1!){
+				}
+				if(s!Protogynous([ ,;<]+)!<<366>>Protogynous<<366>>$1!){
+				}
+				if(s! protogynous([ ,;<\v]+)! <<366>>protogynous<<366>>$1!){
+				}
+				if(s!Proximal([ ,;<]+)!<<367>>Proximal<<367>>$1!){
+				}
+				if(s! proximal([ ,;<\v]+)! <<367>>proximal<<367>>$1!){
+				}
+				if(s!Proximally([ ,;<]+)!<<368>>Proximally<<368>>$1!){
+				}
+				if(s! proximally([ ,;<\v]+)! <<368>>proximally<<368>>$1!){
+				}
+				if(s!Puberulent([ ,;<]+)!<<369>>Puberulent<<369>>$1!){
+				}
+				if(s! puberulent([ ,;<\v]+)! <<369>>puberulent<<369>>$1!){
+				}
+				if(s!Raceme([ ,;<]+)!<<370>>Raceme<<370>>$1!){
+				}
+				if(s! raceme([ ,;<\v]+)! <<370>>raceme<<370>>$1!){
+				}
+				if(s!Racemes([ ,;<]+)!<<371>>Racemes<<371>>$1!){
+				}
+				if(s! racemes([ ,;<\v]+)! <<371>>racemes<<371>>$1!){
+				}
+				if(s!Rachis([ ,;<]+)!<<372>>Rachis<<372>>$1!){
+				}
+				if(s! rachis([ ,;<\v]+)! <<372>>rachis<<372>>$1!){
+				}
+				if(s!Rachides([ ,;<]+)!<<373>>Rachides<<373>>$1!){
+				}
+				if(s! rachides([ ,;<\v]+)! <<373>>rachides<<373>>$1!){
+				}
+				if(s!Radial([ ,;<]+)!<<374>>Radial<<374>>$1!){
+				}
+				if(s! radial([ ,;<\v]+)! <<374>>radial<<374>>$1!){
+				}
+				if(s!Radiant([ ,;<]+)!<<375>>Radiant<<375>>$1!){
+				}
+				if(s! radiant([ ,;<\v]+)! <<375>>radiant<<375>>$1!){
+				}
+				if(s!Radiate([ ,;<]+)!<<376>>Radiate<<376>>$1!){
+				}
+				if(s! radiate([ ,;<\v]+)! <<376>>radiate<<376>>$1!){
+				}
+				if(s!Rank([ ,;<]+)!<<377>>Rank<<377>>$1!){
+				}
+				if(s! rank([ ,;<\v]+)! <<377>>rank<<377>>$1!){
+				}
+				if(s!Ranks([ ,;<]+)!<<378>>Ranks<<378>>$1!){
+				}
+				if(s! ranks([ ,;<\v]+)! <<378>>ranks<<378>>$1!){
+				}
+				if(s!Ranked([ ,;<]+)!<<379>>Ranked<<379>>$1!){
+				}
+				if(s! ranked([ ,;<\v]+)! <<379>>ranked<<379>>$1!){
+				}
+				if(s!Rare([ ,;<]+)!<<380>>Rare<<380>>$1!){
+				}
+				if(s! rare([ ,;<\v]+)! <<380>>rare<<380>>$1!){
+				}
+				if(s!Rays([ ,;<]+)!<<381>>Rays<<381>>$1!){
+				}
+				if(s! rays([ ,;<\v]+)! <<381>>rays<<381>>$1!){
+				}
+				if(s!Rayed([ ,;<]+)!<<382>>Rayed<<382>>$1!){
+				}
+				if(s! rayed([ ,;<\v]+)! <<382>>rayed<<382>>$1!){
+				}
+				if(s!Ray flower([ ,;<]+)!<<383>>Ray flower<<383>>$1!){
+				}
+				if(s! ray flower([ ,;<\v]+)! <<383>>ray flower<<383>>$1!){
+				}
+				if(s!Receptacle([ ,;<]+)!<<384>>Receptacle<<384>>$1!){
+				}
+				if(s! receptacle([ ,;<\v]+)! <<384>>receptacle<<384>>$1!){
+				}
+				if(s!Receptacles([ ,;<]+)!<<385>>Receptacles<<385>>$1!){
+				}
+				if(s! receptacles([ ,;<\v]+)! <<385>>receptacles<<385>>$1!){
+				}
+				if(s!Recurved([ ,;<]+)!<<386>>Recurved<<386>>$1!){
+				}
+				if(s! recurved([ ,;<\v]+)! <<386>>recurved<<386>>$1!){
+				}
+				if(s!Reduced([ ,;<]+)!<<387>>Reduced<<387>>$1!){
+				}
+				if(s! reduced([ ,;<\v]+)! <<387>>reduced<<387>>$1!){
+				}
+				if(s!Reflexed([ ,;<]+)!<<388>>Reflexed<<388>>$1!){
+				}
+				if(s! reflexed([ ,;<\v]+)! <<388>>reflexed<<388>>$1!){
+				}
+				if(s!Reniform([ ,;<]+)!<<389>>Reniform<<389>>$1!){
+				}
+				if(s! reniform([ ,;<\v]+)! <<389>>reniform<<389>>$1!){
+				}
+				if(s!Rhizome([ ,;<]+)!<<390>>Rhizome<<390>>$1!){
+				}
+				if(s! rhizome([ ,;<\v]+)! <<390>>rhizome<<390>>$1!){
+				}
+				if(s!Rhizomes([ ,;<]+)!<<391>>Rhizomes<<391>>$1!){
+				}
+				if(s! rhizomes([ ,;<\v]+)! <<391>>rhizomes<<391>>$1!){
+				}
+				if(s!Rib([ ,;<]+)!<<392>>Rib<<392>>$1!){
+				}
+				if(s! rib([ ,;<\v]+)! <<392>>rib<<392>>$1!){
+				}
+				if(s!Ribs([ ,;<]+)!<<393>>Ribs<<393>>$1!){
+				}
+				if(s! ribs([ ,;<\v]+)! <<393>>ribs<<393>>$1!){
+				}
+				if(s!Ribbed([ ,;<]+)!<<394>>Ribbed<<394>>$1!){
+				}
+				if(s! ribbed([ ,;<\v]+)! <<394>>ribbed<<394>>$1!){
+				}
+				if(s!Riparian([ ,;<]+)!<<395>>Riparian<<395>>$1!){
+				}
+				if(s! riparian([ ,;<\v]+)! <<395>>riparian<<395>>$1!){
+				}
+				if(s!Root([ ,;<]+)!<<396>>Root<<396>>$1!){
+				}
+				if(s! root([ ,;<\v]+)! <<396>>root<<396>>$1!){
+				}
+				if(s!Roots([ ,;<]+)!<<397>>Roots<<397>>$1!){
+				}
+				if(s! roots([ ,;<\v]+)! <<397>>roots<<397>>$1!){
+				}
+				if(s!Rosette([ ,;<]+)!<<398>>Rosette<<398>>$1!){
+				}
+				if(s! rosette([ ,;<\v]+)! <<398>>rosette<<398>>$1!){
+				}
+				if(s!Rosettes([ ,;<]+)!<<399>>Rosettes<<399>>$1!){
+				}
+				if(s! rosettes([ ,;<\v]+)! <<399>>rosettes<<399>>$1!){
+				}
+				if(s!Rotate([ ,;<]+)!<<400>>Rotate<<400>>$1!){
+				}
+				if(s! rotate([ ,;<\v]+)! <<400>>rotate<<400>>$1!){
+				}
+				if(s!Ruderal([ ,;<]+)!<<401>>Ruderal<<401>>$1!){
+				}
+				if(s! ruderal([ ,;<\v]+)! <<401>>ruderal<<401>>$1!){
+				}
+				if(s!Sagittate([ ,;<]+)!<<402>>Sagittate<<402>>$1!){
+				}
+				if(s! sagittate([ ,;<\v]+)! <<402>>sagittate<<402>>$1!){
+				}
+				if(s!Salverform([ ,;<]+)!<<403>>Salverform<<403>>$1!){
+				}
+				if(s! salverform([ ,;<\v]+)! <<403>>salverform<<403>>$1!){
+				}
+				if(s!Savanna([ ,;<]+)!<<404>>Savanna<<404>>$1!){
+				}
+				if(s! savanna([ ,;<\v]+)! <<404>>savanna<<404>>$1!){
+				}
+				if(s!Scabrous([ ,;<]+)!<<405>>Scabrous<<405>>$1!){
+				}
+				if(s! scabrous([ ,;<\v]+)! <<405>>scabrous<<405>>$1!){
+				}
+				if(s!Scale([ ,;<]+)!<<406>>Scale<<406>>$1!){
+				}
+				if(s! scale([ ,;<\v]+)! <<406>>scale<<406>>$1!){
+				}
+				if(s!Scales([ ,;<]+)!<<407>>Scales<<407>>$1!){
+				}
+				if(s! scales([ ,;<\v]+)! <<407>>scales<<407>>$1!){
+				}
+				if(s!Scapose([ ,;<]+)!<<408>>Scapose<<408>>$1!){
+				}
+				if(s! scapose([ ,;<\v]+)! <<408>>scapose<<408>>$1!){
+				}
+				if(s!Scar([ ,;<]+)!<<409>>Scar<<409>>$1!){
+				}
+				if(s! scar([ ,;<\v]+)! <<409>>scar<<409>>$1!){
+				}
+				if(s!Scars([ ,;<]+)!<<410>>Scars<<410>>$1!){
+				}
+				if(s! scars([ ,;<\v]+)! <<410>>scars<<410>>$1!){
+				}
+				if(s!Scarious([ ,;<]+)!<<411>>Scarious<<411>>$1!){
+				}
+				if(s! scarious([ ,;<\v]+)! <<411>>scarious<<411>>$1!){
+				}
+				if(s!Scree([ ,;<]+)!<<412>>Scree<<412>>$1!){
+				}
+				if(s! scree([ ,;<\v]+)! <<412>>scree<<412>>$1!){
+				}
+				if(s!Scrub([ ,;<]+)!<<413>>Scrub<<413>>$1!){
+				}
+				if(s! scrub([ ,;<\v]+)! <<413>>scrub<<413>>$1!){
+				}
+				if(s!Sculpture([ ,;<]+)!<<414>>Sculpture<<414>>$1!){
+				}
+				if(s! sculpture([ ,;<\v]+)! <<414>>sculpture<<414>>$1!){
+				}
+				if(s!Seed([ ,;<]+)!<<415>>Seed<<415>>$1!){
+				}
+				if(s! seed([ ,;<\v]+)! <<415>>seed<<415>>$1!){
+				}
+				if(s!Seeds([ ,;<]+)!<<416>>Seeds<<416>>$1!){
+				}
+				if(s! seeds([ ,;<\v]+)! <<416>>seeds<<416>>$1!){
+				}
+				if(s!Segment([ ,;<]+)!<<417>>Segment<<417>>$1!){
+				}
+				if(s! segment([ ,;<\v]+)! <<417>>segment<<417>>$1!){
+				}
+				if(s!Segments([ ,;<]+)!<<418>>Segments<<418>>$1!){
+				}
+				if(s! segments([ ,;<\v]+)! <<418>>segments<<418>>$1!){
+				}
+				if(s!Sepal([ ,;<]+)!<<419>>Sepal<<419>>$1!){
+				}
+				if(s! sepal([ ,;<\v]+)! <<419>>sepal<<419>>$1!){
+				}
+				if(s!Sepals([ ,;<]+)!<<420>>Sepals<<420>>$1!){
+				}
+				if(s! sepals([ ,;<\v]+)! <<420>>sepals<<420>>$1!){
+				}
+				if(s!Septicidal([ ,;<]+)!<<421>>Septicidal<<421>>$1!){
+				}
+				if(s! septicidal([ ,;<\v]+)! <<421>>septicidal<<421>>$1!){
+				}
+				if(s!Septum([ ,;<]+)!<<422>>Septum<<422>>$1!){
+				}
+				if(s! septum([ ,;<\v]+)! <<422>>septum<<422>>$1!){
+				}
+				if(s!Septa([ ,;<]+)!<<423>>Septa<<423>>$1!){
+				}
+				if(s! septa([ ,;<\v]+)! <<423>>septa<<423>>$1!){
+				}
+				if(s!Series([ ,;<]+)!<<424>>Series<<424>>$1!){
+				}
+				if(s! series([ ,;<\v]+)! <<424>>series<<424>>$1!){
+				}
+				if(s!Serpentine([ ,;<]+)!<<425>>Serpentine<<425>>$1!){
+				}
+				if(s! serpentine([ ,;<\v]+)! <<425>>serpentine<<425>>$1!){
+				}
+				if(s!Serpentinitic([ ,;<]+)!<<426>>Serpentinitic<<426>>$1!){
+				}
+				if(s! serpentinitic([ ,;<\v]+)! <<426>>serpentinitic<<426>>$1!){
+				}
+				if(s!Serrate([ ,;<]+)!<<427>>Serrate<<427>>$1!){
+				}
+				if(s! serrate([ ,;<\v]+)! <<427>>serrate<<427>>$1!){
+				}
+				if(s!Sessile([ ,;<]+)!<<428>>Sessile<<428>>$1!){
+				}
+				if(s! sessile([ ,;<\v]+)! <<428>>sessile<<428>>$1!){
+				}
+				if(s!Sheath([ ,;<]+)!<<429>>Sheath<<429>>$1!){
+				}
+				if(s! sheath([ ,;<\v]+)! <<429>>sheath<<429>>$1!){
+				}
+				if(s!Sheaths([ ,;<]+)!<<430>>Sheaths<<430>>$1!){
+				}
+				if(s! sheaths([ ,;<\v]+)! <<430>>sheaths<<430>>$1!){
+				}
+				if(s!Shoot([ ,;<]+)!<<431>>Shoot<<431>>$1!){
+				}
+				if(s! shoot([ ,;<\v]+)! <<431>>shoot<<431>>$1!){
+				}
+				if(s!Shoots([ ,;<]+)!<<432>>Shoots<<432>>$1!){
+				}
+				if(s! shoots([ ,;<\v]+)! <<432>>shoots<<432>>$1!){
+				}
+				if(s!Shrub([ ,;<]+)!<<433>>Shrub<<433>>$1!){
+				}
+				if(s! shrub([ ,;<\v]+)! <<433>>shrub<<433>>$1!){
+				}
+				if(s!Shrubs([ ,;<]+)!<<434>>Shrubs<<434>>$1!){
+				}
+				if(s! shrubs([ ,;<\v]+)! <<434>>shrubs<<434>>$1!){
+				}
+				if(s!Simple([ ,;<]+)!<<435>>Simple<<435>>$1!){
+				}
+				if(s! simple([ ,;<\v]+)! <<435>>simple<<435>>$1!){
+				}
+				if(s!Sinus([ ,;<]+)!<<436>>Sinus<<436>>$1!){
+				}
+				if(s! sinus([ ,;<\v]+)! <<436>>sinus<<436>>$1!){
+				}
+				if(s!Sorus([ ,;<]+)!<<437>>Sorus<<437>>$1!){
+				}
+				if(s! sorus([ ,;<\v]+)! <<437>>sorus<<437>>$1!){
+				}
+				if(s!Sori([ ,;<]+)!<<438>>Sori<<438>>$1!){
+				}
+				if(s! sori([ ,;<\v]+)! <<438>>sori<<438>>$1!){
+				}
+				if(s!Spheric([ ,;<]+)!<<439>>Spheric<<439>>$1!){
+				}
+				if(s! spheric([ ,;<\v]+)! <<439>>spheric<<439>>$1!){
+				}
+				if(s!Spike([ ,;<]+)!<<440>>Spike<<440>>$1!){
+				}
+				if(s! spike([ ,;<\v]+)! <<440>>spike<<440>>$1!){
+				}
+				if(s!Spikes([ ,;<]+)!<<441>>Spikes<<441>>$1!){
+				}
+				if(s! spikes([ ,;<\v]+)! <<441>>spikes<<441>>$1!){
+				}
+				if(s!Spikelet([ ,;<]+)!<<442>>Spikelet<<442>>$1!){
+				}
+				if(s! spikelet([ ,;<\v]+)! <<442>>spikelet<<442>>$1!){
+				}
+				if(s!Spikelets([ ,;<]+)!<<443>>Spikelets<<443>>$1!){
+				}
+				if(s! spikelets([ ,;<\v]+)! <<443>>spikelets<<443>>$1!){
+				}
+				if(s!Spine([ ,;<]+)!<<444>>Spine<<444>>$1!){
+				}
+				if(s! spine([ ,;<\v]+)! <<444>>spine<<444>>$1!){
+				}
+				if(s!Spines([ ,;<]+)!<<445>>Spines<<445>>$1!){
+				}
+				if(s! spines([ ,;<\v]+)! <<445>>spines<<445>>$1!){
+				}
+				if(s!Sporangium([ ,;<]+)!<<446>>Sporangium<<446>>$1!){
+				}
+				if(s! sporangium([ ,;<\v]+)! <<446>>sporangium<<446>>$1!){
+				}
+				if(s!Sporangia([ ,;<]+)!<<447>>Sporangia<<447>>$1!){
+				}
+				if(s! sporangia([ ,;<\v]+)! <<447>>sporangia<<447>>$1!){
+				}
+				if(s!Spore([ ,;<]+)!<<448>>Spore<<448>>$1!){
+				}
+				if(s! spore([ ,;<\v]+)! <<448>>spore<<448>>$1!){
+				}
+				if(s!Spores([ ,;<]+)!<<449>>Spores<<449>>$1!){
+				}
+				if(s! spores([ ,;<\v]+)! <<449>>spores<<449>>$1!){
+				}
+				if(s!Spreading([ ,;<]+)!<<450>>Spreading<<450>>$1!){
+				}
+				if(s! spreading([ ,;<\v]+)! <<450>>spreading<<450>>$1!){
+				}
+				if(s!Spur([ ,;<]+)!<<451>>Spur<<451>>$1!){
+				}
+				if(s! spur([ ,;<\v]+)! <<451>>spur<<451>>$1!){
+				}
+				if(s!Spurs([ ,;<]+)!<<452>>Spurs<<452>>$1!){
+				}
+				if(s! spurs([ ,;<\v]+)! <<452>>spurs<<452>>$1!){
+				}
+				if(s!Stamen([ ,;<]+)!<<453>>Stamen<<453>>$1!){
+				}
+				if(s! stamen([ ,;<\v]+)! <<453>>stamen<<453>>$1!){
+				}
+				if(s!Stamens([ ,;<]+)!<<454>>Stamens<<454>>$1!){
+				}
+				if(s! stamens([ ,;<\v]+)! <<454>>stamens<<454>>$1!){
+				}
+				if(s!Staminate([ ,;<]+)!<<455>>Staminate<<455>>$1!){
+				}
+				if(s! staminate([ ,;<\v]+)! <<455>>staminate<<455>>$1!){
+				}
+				if(s!Staminode([ ,;<]+)!<<456>>Staminode<<456>>$1!){
+				}
+				if(s! staminode([ ,;<\v]+)! <<456>>staminode<<456>>$1!){
+				}
+				if(s!Staminodes([ ,;<]+)!<<457>>Staminodes<<457>>$1!){
+				}
+				if(s! staminodes([ ,;<\v]+)! <<457>>staminodes<<457>>$1!){
+				}
+				if(s!Stellate([ ,;<]+)!<<458>>Stellate<<458>>$1!){
+				}
+				if(s! stellate([ ,;<\v]+)! <<458>>stellate<<458>>$1!){
+				}
+				if(s!Stem([ ,;<]+)!<<459>>Stem<<459>>$1!){
+				}
+				if(s! stem([ ,;<\v]+)! <<459>>stem<<459>>$1!){
+				}
+				if(s!Stems([ ,;<]+)!<<460>>Stems<<460>>$1!){
+				}
+				if(s! stems([ ,;<\v]+)! <<460>>stems<<460>>$1!){
+				}
+				if(s!Sterile([ ,;<]+)!<<461>>Sterile<<461>>$1!){
+				}
+				if(s! sterile([ ,;<\v]+)! <<461>>sterile<<461>>$1!){
+				}
+				if(s!Stigma([ ,;<]+)!<<462>>Stigma<<462>>$1!){
+				}
+				if(s! stigma([ ,;<\v]+)! <<462>>stigma<<462>>$1!){
+				}
+				if(s!Stigmas([ ,;<]+)!<<463>>Stigmas<<463>>$1!){
+				}
+				if(s! stigmas([ ,;<\v]+)! <<463>>stigmas<<463>>$1!){
+				}
+				if(s!Stigmata([ ,;<]+)!<<464>>Stigmata<<464>>$1!){
+				}
+				if(s! stigmata([ ,;<\v]+)! <<464>>stigmata<<464>>$1!){
+				}
+				if(s!Stipe([ ,;<]+)!<<465>>Stipe<<465>>$1!){
+				}
+				if(s! stipe([ ,;<\v]+)! <<465>>stipe<<465>>$1!){
+				}
+				if(s!Stipes([ ,;<]+)!<<466>>Stipes<<466>>$1!){
+				}
+				if(s! stipes([ ,;<\v]+)! <<466>>stipes<<466>>$1!){
+				}
+				if(s!Stipule([ ,;<]+)!<<467>>Stipule<<467>>$1!){
+				}
+				if(s! stipule([ ,;<\v]+)! <<467>>stipule<<467>>$1!){
+				}
+				if(s!Stipules([ ,;<]+)!<<468>>Stipules<<468>>$1!){
+				}
+				if(s! stipules([ ,;<\v]+)! <<468>>stipules<<468>>$1!){
+				}
+				if(s!Stolon([ ,;<]+)!<<469>>Stolon<<469>>$1!){
+				}
+				if(s! stolon([ ,;<\v]+)! <<469>>stolon<<469>>$1!){
+				}
+				if(s!Stolons([ ,;<]+)!<<470>>Stolons<<470>>$1!){
+				}
+				if(s! stolons([ ,;<\v]+)! <<470>>stolons<<470>>$1!){
+				}
+				if(s!Stoma([ ,;<]+)!<<471>>Stoma<<471>>$1!){
+				}
+				if(s! stoma([ ,;<\v]+)! <<471>>stoma<<471>>$1!){
+				}
+				if(s!Stomata([ ,;<]+)!<<472>>Stomata<<472>>$1!){
+				}
+				if(s! stomata([ ,;<\v]+)! <<472>>stomata<<472>>$1!){
+				}
+				if(s!Stomate([ ,;<]+)!<<473>>Stomate<<473>>$1!){
+				}
+				if(s! stomate([ ,;<\v]+)! <<473>>stomate<<473>>$1!){
+				}
+				if(s!Stoma([ ,;<]+)!<<474>>Stoma<<474>>$1!){
+				}
+				if(s! stoma([ ,;<\v]+)! <<474>>stoma<<474>>$1!){
+				}
+				if(s!Stone([ ,;<]+)!<<475>>Stone<<475>>$1!){
+				}
+				if(s! stone([ ,;<\v]+)! <<475>>stone<<475>>$1!){
+				}
+				if(s!Stones([ ,;<]+)!<<476>>Stones<<476>>$1!){
+				}
+				if(s! stones([ ,;<\v]+)! <<476>>stones<<476>>$1!){
+				}
+				if(s!Stout([ ,;<]+)!<<477>>Stout<<477>>$1!){
+				}
+				if(s! stout([ ,;<\v]+)! <<477>>stout<<477>>$1!){
+				}
+				if(s!Striate([ ,;<]+)!<<478>>Striate<<478>>$1!){
+				}
+				if(s! striate([ ,;<\v]+)! <<478>>striate<<478>>$1!){
+				}
+				if(s!Strigose([ ,;<]+)!<<479>>Strigose<<479>>$1!){
+				}
+				if(s! strigose([ ,;<\v]+)! <<479>>strigose<<479>>$1!){
+				}
+				if(s!Style([ ,;<]+)!<<480>>Style<<480>>$1!){
+				}
+				if(s! style([ ,;<\v]+)! <<480>>style<<480>>$1!){
+				}
+				if(s!Styles([ ,;<]+)!<<481>>Styles<<481>>$1!){
+				}
+				if(s! styles([ ,;<\v]+)! <<481>>styles<<481>>$1!){
+				}
+				if(s!Subalpine([ ,;<]+)!<<482>>Subalpine<<482>>$1!){
+				}
+				if(s! subalpine([ ,;<\v]+)! <<482>>subalpine<<482>>$1!){
+				}
+				if(s!Submersed([ ,;<]+)!<<483>>Submersed<<483>>$1!){
+				}
+				if(s! submersed([ ,;<\v]+)! <<483>>submersed<<483>>$1!){
+				}
+				if(s!Subshrub([ ,;<]+)!<<484>>Subshrub<<484>>$1!){
+				}
+				if(s! subshrub([ ,;<\v]+)! <<484>>subshrub<<484>>$1!){
+				}
+				if(s!Subshrubs([ ,;<]+)!<<485>>Subshrubs<<485>>$1!){
+				}
+				if(s! subshrubs([ ,;<\v]+)! <<485>>subshrubs<<485>>$1!){
+				}
+				if(s!Subtend([ ,;<]+)!<<486>>Subtend<<486>>$1!){
+				}
+				if(s! subtend([ ,;<\v]+)! <<486>>subtend<<486>>$1!){
+				}
+				if(s!Subtidal([ ,;<]+)!<<487>>Subtidal<<487>>$1!){
+				}
+				if(s! subtidal([ ,;<\v]+)! <<487>>subtidal<<487>>$1!){
+				}
+				if(s!Superior([ ,;<]+)!<<488>>Superior<<488>>$1!){
+				}
+				if(s! superior([ ,;<\v]+)! <<488>>superior<<488>>$1!){
+				}
+				if(s!Suture([ ,;<]+)!<<489>>Suture<<489>>$1!){
+				}
+				if(s! suture([ ,;<\v]+)! <<489>>suture<<489>>$1!){
+				}
+				if(s!Sutures([ ,;<]+)!<<490>>Sutures<<490>>$1!){
+				}
+				if(s! sutures([ ,;<\v]+)! <<490>>sutures<<490>>$1!){
+				}
+				if(s!Swamp([ ,;<]+)!<<491>>Swamp<<491>>$1!){
+				}
+				if(s! swamp([ ,;<\v]+)! <<491>>swamp<<491>>$1!){
+				}
+				if(s!Swamps([ ,;<]+)!<<492>>Swamps<<492>>$1!){
+				}
+				if(s! swamps([ ,;<\v]+)! <<492>>swamps<<492>>$1!){
+				}
+				if(s!Talus([ ,;<]+)!<<493>>Talus<<493>>$1!){
+				}
+				if(s! talus([ ,;<\v]+)! <<493>>talus<<493>>$1!){
+				}
+				if(s!Tapered([ ,;<]+)!<<494>>Tapered<<494>>$1!){
+				}
+				if(s! tapered([ ,;<\v]+)! <<494>>tapered<<494>>$1!){
+				}
+				if(s!Taproot([ ,;<]+)!<<495>>Taproot<<495>>$1!){
+				}
+				if(s! taproot([ ,;<\v]+)! <<495>>taproot<<495>>$1!){
+				}
+				if(s!Taproots([ ,;<]+)!<<496>>Taproots<<496>>$1!){
+				}
+				if(s! taproots([ ,;<\v]+)! <<496>>taproots<<496>>$1!){
+				}
+				if(s!Taxon([ ,;<]+)!<<497>>Taxon<<497>>$1!){
+				}
+				if(s! taxon([ ,;<\v]+)! <<497>>taxon<<497>>$1!){
+				}
+				if(s!Taxa([ ,;<]+)!<<498>>Taxa<<498>>$1!){
+				}
+				if(s! taxa([ ,;<\v]+)! <<498>>taxa<<498>>$1!){
+				}
+				if(s!Tendril([ ,;<]+)!<<499>>Tendril<<499>>$1!){
+				}
+				if(s! tendril([ ,;<\v]+)! <<499>>tendril<<499>>$1!){
+				}
+				if(s!Tendrils([ ,;<]+)!<<500>>Tendrils<<500>>$1!){
+				}
+				if(s! tendrils([ ,;<\v]+)! <<500>>tendrils<<500>>$1!){
+				}
+				if(s!Terminal([ ,;<]+)!<<501>>Terminal<<501>>$1!){
+				}
+				if(s! terminal([ ,;<\v]+)! <<501>>terminal<<501>>$1!){
+				}
+				if(s!Ternate([ ,;<]+)!<<502>>Ternate<<502>>$1!){
+				}
+				if(s! ternate([ ,;<\v]+)! <<502>>ternate<<502>>$1!){
+				}
+				if(s!Thorn([ ,;<]+)!<<503>>Thorn<<503>>$1!){
+				}
+				if(s! thorn([ ,;<\v]+)! <<503>>thorn<<503>>$1!){
+				}
+				if(s!Thorns([ ,;<]+)!<<504>>Thorns<<504>>$1!){
+				}
+				if(s! thorns([ ,;<\v]+)! <<504>>thorns<<504>>$1!){
+				}
+				if(s!Throat([ ,;<]+)!<<505>>Throat<<505>>$1!){
+				}
+				if(s! throat([ ,;<\v]+)! <<505>>throat<<505>>$1!){
+				}
+				if(s!Throats([ ,;<]+)!<<506>>Throats<<506>>$1!){
+				}
+				if(s! throats([ ,;<\v]+)! <<506>>throats<<506>>$1!){
+				}
+				if(s!Timberline([ ,;<]+)!<<507>>Timberline<<507>>$1!){
+				}
+				if(s! timberline([ ,;<\v]+)! <<507>>timberline<<507>>$1!){
+				}
+				if(s!Tomentose([ ,;<]+)!<<508>>Tomentose<<508>>$1!){
+				}
+				if(s! tomentose([ ,;<\v]+)! <<508>>tomentose<<508>>$1!){
+				}
+				if(s!Tooth([ ,;<]+)!<<509>>Tooth<<509>>$1!){
+				}
+				if(s! tooth([ ,;<\v]+)! <<509>>tooth<<509>>$1!){
+				}
+				if(s!Teeth([ ,;<]+)!<<510>>Teeth<<510>>$1!){
+				}
+				if(s! teeth([ ,;<\v]+)! <<510>>teeth<<510>>$1!){
+				}
+				if(s!Transverse([ ,;<]+)!<<511>>Transverse<<511>>$1!){
+				}
+				if(s! transverse([ ,;<\v]+)! <<511>>transverse<<511>>$1!){
+				}
+				if(s!Tree([ ,;<]+)!<<512>>Tree<<512>>$1!){
+				}
+				if(s! tree([ ,;<\v]+)! <<512>>tree<<512>>$1!){
+				}
+				if(s!Trees([ ,;<]+)!<<513>>Trees<<513>>$1!){
+				}
+				if(s! trees([ ,;<\v]+)! <<513>>trees<<513>>$1!){
+				}
+				if(s!Trilete spore([ ,;<]+)!<<514>>Trilete spore<<514>>$1!){
+				}
+				if(s! trilete spore([ ,;<\v]+)! <<514>>trilete spore<<514>>$1!){
+				}
+				if(s!Truncate([ ,;<]+)!<<515>>Truncate<<515>>$1!){
+				}
+				if(s! truncate([ ,;<\v]+)! <<515>>truncate<<515>>$1!){
+				}
+				if(s!Trophophore([ ,;<]+)!<<516>>Trophophore<<516>>$1!){
+				}
+				if(s! trophophore([ ,;<\v]+)! <<516>>trophophore<<516>>$1!){
+				}
+				if(s!Tube([ ,;<]+)!<<517>>Tube<<517>>$1!){
+				}
+				if(s! tube([ ,;<\v]+)! <<517>>tube<<517>>$1!){
+				}
+				if(s!Tubes([ ,;<]+)!<<518>>Tubes<<518>>$1!){
+				}
+				if(s! tubes([ ,;<\v]+)! <<518>>tubes<<518>>$1!){
+				}
+				if(s!Tuber([ ,;<]+)!<<519>>Tuber<<519>>$1!){
+				}
+				if(s! tuber([ ,;<\v]+)! <<519>>tuber<<519>>$1!){
+				}
+				if(s!Tubers([ ,;<]+)!<<520>>Tubers<<520>>$1!){
+				}
+				if(s! tubers([ ,;<\v]+)! <<520>>tubers<<520>>$1!){
+				}
+				if(s!Tubercle([ ,;<]+)!<<521>>Tubercle<<521>>$1!){
+				}
+				if(s! tubercle([ ,;<\v]+)! <<521>>tubercle<<521>>$1!){
+				}
+				if(s!Tubercles([ ,;<]+)!<<522>>Tubercles<<522>>$1!){
+				}
+				if(s! tubercles([ ,;<\v]+)! <<522>>tubercles<<522>>$1!){
+				}
+				if(s!Twig([ ,;<]+)!<<523>>Twig<<523>>$1!){
+				}
+				if(s! twig([ ,;<\v]+)! <<523>>twig<<523>>$1!){
+				}
+				if(s!Twigs([ ,;<]+)!<<524>>Twigs<<524>>$1!){
+				}
+				if(s! twigs([ ,;<\v]+)! <<524>>twigs<<524>>$1!){
+				}
+				if(s!Twining([ ,;<]+)!<<525>>Twining<<525>>$1!){
+				}
+				if(s! twining([ ,;<\v]+)! <<525>>twining<<525>>$1!){
+				}
+				if(s!Ultimate([ ,;<]+)!<<526>>Ultimate<<526>>$1!){
+				}
+				if(s! ultimate([ ,;<\v]+)! <<526>>ultimate<<526>>$1!){
+				}
+				if(s!Umbel([ ,;<]+)!<<527>>Umbel<<527>>$1!){
+				}
+				if(s! umbel([ ,;<\v]+)! <<527>>umbel<<527>>$1!){
+				}
+				if(s!Umbels([ ,;<]+)!<<528>>Umbels<<528>>$1!){
+				}
+				if(s! umbels([ ,;<\v]+)! <<528>>umbels<<528>>$1!){
+				}
+				if(s!Understory([ ,;<]+)!<<529>>Understory<<529>>$1!){
+				}
+				if(s! understory([ ,;<\v]+)! <<529>>understory<<529>>$1!){
+				}
+				if(s!Unisexual([ ,;<]+)!<<530>>Unisexual<<530>>$1!){
+				}
+				if(s! unisexual([ ,;<\v]+)! <<530>>unisexual<<530>>$1!){
+				}
+				if(s!Urn-shaped([ ,;<]+)!<<531>>Urn-shaped<<531>>$1!){
+				}
+				if(s! urn-shaped([ ,;<\v]+)! <<531>>urn-shaped<<531>>$1!){
+				}
+				if(s!Utricle([ ,;<]+)!<<532>>Utricle<<532>>$1!){
+				}
+				if(s! utricle([ ,;<\v]+)! <<532>>utricle<<532>>$1!){
+				}
+				if(s!Utricles([ ,;<]+)!<<533>>Utricles<<533>>$1!){
+				}
+				if(s! utricles([ ,;<\v]+)! <<533>>utricles<<533>>$1!){
+				}
+				if(s!Valve([ ,;<]+)!<<534>>Valve<<534>>$1!){
+				}
+				if(s! valve([ ,;<\v]+)! <<534>>valve<<534>>$1!){
+				}
+				if(s!Valves([ ,;<]+)!<<535>>Valves<<535>>$1!){
+				}
+				if(s! valves([ ,;<\v]+)! <<535>>valves<<535>>$1!){
+				}
+				if(s!Vascular([ ,;<]+)!<<536>>Vascular<<536>>$1!){
+				}
+				if(s! vascular([ ,;<\v]+)! <<536>>vascular<<536>>$1!){
+				}
+				if(s!Vein([ ,;<]+)!<<537>>Vein<<537>>$1!){
+				}
+				if(s! vein([ ,;<\v]+)! <<537>>vein<<537>>$1!){
+				}
+				if(s!Veins([ ,;<]+)!<<538>>Veins<<538>>$1!){
+				}
+				if(s! veins([ ,;<\v]+)! <<538>>veins<<538>>$1!){
+				}
+				if(s!Vernal pool([ ,;<]+)!<<539>>Vernal pool<<539>>$1!){
+				}
+				if(s! vernal pool([ ,;<\v]+)! <<539>>vernal pool<<539>>$1!){
+				}
+				if(s!Vernal pools([ ,;<]+)!<<540>>Vernal pools<<540>>$1!){
+				}
+				if(s! vernal pools([ ,;<\v]+)! <<540>>vernal pools<<540>>$1!){
+				}
+				if(s!Vestigial([ ,;<]+)!<<541>>Vestigial<<541>>$1!){
+				}
+				if(s! vestigial([ ,;<\v]+)! <<541>>vestigial<<541>>$1!){
+				}
+				if(s!Vine([ ,;<]+)!<<542>>Vine<<542>>$1!){
+				}
+				if(s! vine([ ,;<\v]+)! <<542>>vine<<542>>$1!){
+				}
+				if(s!Vines([ ,;<]+)!<<543>>Vines<<543>>$1!){
+				}
+				if(s! vines([ ,;<\v]+)! <<543>>vines<<543>>$1!){
+				}
+				if(s!Waif([ ,;<]+)!<<544>>Waif<<544>>$1!){
+				}
+				if(s! waif([ ,;<\v]+)! <<544>>waif<<544>>$1!){
+				}
+				if(s!Waifs([ ,;<]+)!<<545>>Waifs<<545>>$1!){
+				}
+				if(s! waifs([ ,;<\v]+)! <<545>>waifs<<545>>$1!){
+				}
+				if(s!Wash([ ,;<]+)!<<546>>Wash<<546>>$1!){
+				}
+				if(s! wash([ ,;<\v]+)! <<546>>wash<<546>>$1!){
+				}
+				if(s!Washes([ ,;<]+)!<<547>>Washes<<547>>$1!){
+				}
+				if(s! washes([ ,;<\v]+)! <<547>>washes<<547>>$1!){
+				}
+				if(s!Whorled([ ,;<]+)!<<548>>Whorled<<548>>$1!){
+				}
+				if(s! whorled([ ,;<\v]+)! <<548>>whorled<<548>>$1!){
+				}
+				if(s!Whorl([ ,;<]+)!<<549>>Whorl<<549>>$1!){
+				}
+				if(s! whorl([ ,;<\v]+)! <<549>>whorl<<549>>$1!){
+				}
+				if(s!Wing([ ,;<]+)!<<550>>Wing<<550>>$1!){
+				}
+				if(s! wing([ ,;<\v]+)! <<550>>wing<<550>>$1!){
+				}
+				if(s!Wings([ ,;<]+)!<<551>>Wings<<551>>$1!){
+				}
+				if(s! wings([ ,;<\v]+)! <<551>>wings<<551>>$1!){
+				}
+				if(s!Wiry([ ,;<]+)!<<552>>Wiry<<552>>$1!){
+				}
+				if(s! wiry([ ,;<\v]+)! <<552>>wiry<<552>>$1!){
+				}
+				if(s!Wood([ ,;<]+)!<<553>>Wood<<553>>$1!){
+				}
+				if(s! wood([ ,;<\v]+)! <<553>>wood<<553>>$1!){
+				}
+				if(s!Woody([ ,;<]+)!<<554>>Woody<<554>>$1!){
+				}
+				if(s! woody([ ,;<\v]+)! <<554>>woody<<554>>$1!){
+				}
+				if(s!Woodland([ ,;<]+)!<<555>>Woodland<<555>>$1!){
+				}
+				if(s! woodland([ ,;<\v]+)! <<555>>woodland<<555>>$1!){
+				}
+				if(s!Woodlands([ ,;<]+)!<<556>>Woodlands<<556>>$1!){
+				}
+				if(s! woodlands([ ,;<\v]+)! <<556>>woodlands<<556>>$1!){
+				}

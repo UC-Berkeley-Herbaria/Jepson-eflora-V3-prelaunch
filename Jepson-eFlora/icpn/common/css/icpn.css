@@ -1,0 +1,1258 @@
+/* links */
+
+a.link {
+	color: #584F29 !important;  
+	/* #584F29 stone pine contrast */
+	text-decoration: none;
+	font-weight: 500 !important; /* This will be applied. */
+	/* This will be applied. */
+}
+
+a:visited {
+	color: #C4820E !important;
+	/* Medalist */
+	text-decoration: none;
+	font-weight: 500 !important; /* This will be applied. */
+	/* This will be applied. */
+}
+
+a:hover {
+	color: #006298 !important;
+	/* Stadium Blue */
+	text-decoration: underline;
+	font-weight: 900 !important; /* This will be applied. */
+}
+
+
+a.googleForm:link {
+	color: red !important; 
+	line-height:20px;
+	text-decoration: none;
+	font-weight: 900;
+	margin-top:0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	}
+
+a.googleForm:visited {
+	color: #7C0A02 !important; 
+	line-height:20px;
+	text-decoration: none;
+	font-weight: 900;
+	margin-top:0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	}
+
+a.googleForm:hover {
+	color: red  !important; 
+	line-height:20px;
+	text-decoration: underline;
+	font-weight: 900;
+	margin-top:0px;
+	font-family: Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	}
+
+a.efTitle:link {
+	color: #006298 !important; 
+	text-decoration: none;
+	}
+
+a.efTitle:visited {
+	color: #006298 !important; 
+	text-decoration: none;
+	}
+
+a.efTitle:hover {
+	color: #006298 !important;
+	text-decoration: underline;
+	}
+
+
+a.efTag:link {
+	color: #584F29 !important; 
+	text-decoration: none;
+	font-weight: 900 !important; /* This will be applied. */
+	font-size: 16px;
+	}
+
+a.efTag:visited {
+	color: #C4820E !important; 
+	text-decoration: none;
+	font-weight: 900 !important; /* This will be applied. */
+	font-size: 16px;
+	}
+
+a.efTag:hover {
+	color: #006298 !important;
+	text-decoration: underline;
+	font-weight: 900 !important; /* This will be applied. */
+	font-size: 18px;
+	}
+
+/* Body Styles */
+body {
+      background-color: #ffffff;
+      padding-left: 15px;
+		margin: 0;
+      font-family: Arial, sans-serif;
+  }
+
+.spacer_grey {
+	padding-bottom: 5px;
+	border-bottom: solid 4px grey;
+	width: 100%;
+}
+
+.spacer_lightgrey {
+	padding-bottom: 5px;
+	border-bottom: solid 4px lightgrey;
+	width: 100%;
+}
+
+.spacer_blue {
+	border-bottom: solid 2px DarkSlateBlue;
+	width: 100%;
+}
+
+
+.index-container {
+   /* Moves the whole division 25px from the left */
+    margin-left: 25px; 
+    /* Layout control */
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+}
+
+.grey-bar {
+    /* Each bar takes up 30% of the viewport height */
+    height: 4px; 
+    width: 30%;
+    background-color: #808080; /* Standard grey */
+}
+
+.index-content {
+    /* This ensures the middle content takes up the remaining 50% */
+    flex-grow: 1;
+    padding: 10px;
+}
+
+
+/* Header Styles */
+
+
+header {
+    width: 100%;
+    /* Use min-height, not height. This allows the header to GROW 
+       if the content needs more space on small screens */
+    min-height: 150px; 
+    display: flex;
+    flex-direction: column;
+    /* This ensures it stays in the natural flow of the page */
+    position: relative; 
+}
+
+/* 1. TOP BLUE BAR */
+.blue-bar {
+    background-color: #010133;
+    color: white;
+    width: 100%;
+    min-height: 50px; 
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allows text to wrap on mobile without overlapping */
+}
+
+.ucb-title { width: 10%; font-weight: bold; white-space: nowrap; }
+.blue-nav { width: 30%; font-size: 12px; }
+.blue-nav a:link { color: white !important; text-decoration: none; }
+.blue-nav a:visited { color: #FFE88D !important; text-decoration: none; }
+.blue-nav a:hover { color: #FFE88D !important; text-decoration: underline; }
+
+/* 2. WHITE SECTION */
+.white-section {
+    width: 100%;
+    /* Changed height to min-height */
+    min-height: 100px; 
+    display: flex;
+    flex-direction: row;
+    background-color: #ffffff;
+}
+
+/* Logo Container: 25% */
+.logo-container {
+    width: 25%;
+    box-sizing: border-box;
+    margin-top: 25px; 
+
+}
+
+.logo-container img {
+    width: 100%;
+    height: auto; /* Changed from fixed height to auto */
+    display: block;
+}
+
+/* CONTENT CONTAINER: 75% */
+.content-container {
+    width: 75%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+}
+
+/* Row 1: Banner Box */
+.banner-box {
+    width: 100%;
+    min-width: 0; /* Prevents flex items from overflowing in Safari */
+}
+
+.banner-box img {
+    width: 100%;
+	max-width: 100%; /* Add this for safari*/
+    height: auto;
+    /* This removes the default gap below images */
+    display: block; 
+}
+
+/* Row 2: Navigation Box */
+.nav-box {
+    width: 100%;
+    display: flex;
+    flex-direction: row; 
+    flex-wrap: wrap; /* Essential to prevent overlap when window is narrow */
+    padding-left: 10px;
+    box-sizing: border-box;
+    /* REMOVED negative margin-top as it causes overlap */
+    margin-top: 5px;
+}
+
+.nav-box a {
+    text-decoration: none;
+    color: white !important; 
+    font-weight: bold;
+    font-style: italic;
+    font-size: 18px;
+    margin: 5px 10px; /* Adjusted margin */
+}
+
+.nav-box a:visited { color: #9FD1FF !important; text-decoration: none; }
+.nav-box a:hover { text-decoration: underline !important; }
+
+/* 3. bottom BLUE BAR */
+.lower-blue-bar {
+    background-color: #010133;
+    color: white;
+    width: 100%;
+    min-height: 50px; 
+    padding: 0 20px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    flex-wrap: wrap; /* Allows text to wrap on mobile without overlapping */
+}
+
+  
+/* ID Styles */
+
+#map_canvas {
+	margin-left: auto;
+	margin-right: auto;
+	display: block;
+	float: left;
+	width: 467px;
+	height: 445px;
+	padding: 10px;
+}
+
+#content-left {
+	width: 10px;
+}
+
+#content-left ul {
+	padding-left: 20px;
+}
+
+#content-main {
+	border: 1px solid #BBBBBB;
+	margin-left: 10px;
+	width: 800px;
+}
+
+#content-right {
+	border: 1px solid #BBBBBB;
+	margin-left: 10px;
+	width: 200px;
+}
+
+#content-right-min {
+	width: 20px;
+}
+
+#content {
+	border-top: 2px solid #BBBBBB;
+	border-bottom: 2px solid #BBBBBB;
+	margin-top: 10px;
+	margin-left: 20px;
+	margin-right: 20px;
+}
+
+#content-top {
+	border-top: 2px solid #BBBBBB;
+	margin-left: 20px;
+	margin-top: 10px;
+	margin-right: 20px;
+}
+
+
+#efTable table {
+	/*border-collapse: collapse;*/
+	/*hide for now, these conflict with the taxonomy table formatting*/
+	/*border-style: hidden; */
+	/* hide standard table (collapsed) border */
+	box-shadow: none;
+	background-color: #F4FAFF;
+	margin: 0;
+}
+
+#efTable td {
+	vertical-align: top;
+	margin: 0;
+}
+
+
+#normalTable td {
+	line-height: 18px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+
+/* Key Indent classes & ID's */
+
+.keyText {
+		display: inline-block !important;
+  color:#000000;
+  line-height:18px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+  text-indent: -.1in;
+  }
+
+#keyText7 {
+		display: inline-block !important;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		text-indent: 5px;
+  }
+
+#keyText10 {
+		display: inline-block !important;
+  color: blue;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		text-indent: 15px;
+  }
+
+#keyText14 {
+		display: inline-block !important;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		text-indent: 25px;
+  }
+
+#keyText21 {
+		display: inline-block !important;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		text-indent: 35px;
+  }
+
+#keyText28 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		text-indent: 45px;
+  }
+
+#keyText35 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 55px;
+  }
+
+#keyText42 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 65px;
+  }
+
+#keyText49 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 75px;
+  }
+
+#keyText56 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 85px;
+  }
+
+#keyText63 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 95px;
+  }
+
+#keyText70 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 105px;
+  }
+
+#keyText77 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 110px;
+  }
+
+#keyText84 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 115px;
+  }
+
+#keyText91 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 120px;
+  }
+
+#keyText98 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 125px;
+  }
+
+#keyText105 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 135px;
+  }
+
+#keyText112 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 140px;
+  }
+
+
+#keyText119 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 145px;
+  }
+
+
+#keyText126 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 150px;
+  }
+
+#keyText133 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		padding-left: 155px;
+  }
+
+#keyText0 {
+		display: inline-block;
+  color:#000000;
+  line-height:40px;
+  margin-top:0px;
+  margin-bottom:2px;
+  font-family: Verdana, Arial, Helvetica, sans-serif;
+  font-size: 16px;
+		text-indent: -5px;
+  }
+
+/* eFloraTable Class Styles */
+
+.eFloraTable table {
+	border: 1px solid;
+	border-spacing: 5px;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.eFloraTable th td {
+	color: black;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+
+.eFloraTable {
+	margin: 0px;
+	padding: 0px;
+	border-collapse: collapse;
+
+}
+
+.eFloraTable table {
+	border: 1px solid;
+	border-spacing: 5px;
+	height: 100%;
+	margin: 0px;
+	padding: 0px;
+}
+
+.eFloraTable th td {
+	color: black;
+	font-size: 16px;
+	line-height: 18px;
+}
+
+.eFloraTable tr:last-child td:last-child {
+	-moz-border-radius-bottomright: 0px;
+	-webkit-border-bottom-right-radius: 0px;
+	border-bottom-right-radius: 0px;
+}
+
+.eFloraTable table tr:first-child td:first-child {
+	-moz-border-radius-topleft: 0px;
+	-webkit-border-top-left-radius: 0px;
+	border-top-left-radius: 0px;
+}
+
+.eFloraTable table tr:first-child td:last-child {
+	-moz-border-radius-topright: 0px;
+	-webkit-border-top-right-radius: 0px;
+	border-top-right-radius: 0px;
+}
+
+.eFloraTable tr:last-child td:first-child {
+	-moz-border-radius-bottomleft: 0px;
+	-webkit-border-bottom-left-radius: 0px;
+	border-bottom-left-radius: 0px;
+}
+
+.eFloraTable tr:hover td {}
+
+.eFloraTable tr:nth-child(odd) {
+	background-color: #CFE4FC;
+}
+
+.eFloraTable tr:nth-child(even) {
+	background-color: #f1f8fe;
+}
+
+.eFloraTable td {
+	vertical-align: middle;
+	width: 20%;
+	border: 0px solid #264ec0;
+	border-width: 0px 0px 0px 0px;
+	text-align: left;
+	padding: 5px 12px 5px 8px;
+	font-size: 16px;
+	font-family: Arial;
+	font-weight: normal;
+	color: #003366;
+}
+
+.eFloraTable tr:last-child td {
+	border-width: 0px 0px 0px 0px;
+}
+
+.eFloraTable tr td:last-child {
+	border-width: 0px 0px 0px 0px;
+}
+
+.eFloraTable tr:last-child td:last-child {
+	border-width: 0px 0px 0px 0px;
+}
+
+.eFloraTable tr:first-child td {
+	background: -o-linear-gradient(bottom, #264ec0 5%, #264ec0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #264ec0), color-stop(1, #264ec0));
+	background: -moz-linear-gradient(center top, #264ec0 5%, #264ec0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#264ec0", endColorstr="#264ec0");
+	background: -o-linear-gradient(top, #264ec0, 264ec0);
+	background-color: #264ec0;
+	border: 0px solid #264ec0;
+	text-align: left;
+	border-width: 0px 0px 0px 0px;
+	font-size: 16px;
+	font-family: Arial;
+	font-weight: bold;
+	color: #003366;
+}
+
+.eFloraTable tr:first-child:hover td {
+	background: -o-linear-gradient(bottom, #264ec0 5%, #264ec0 100%);
+	background: -webkit-gradient(linear, left top, left bottom, color-stop(0.05, #264ec0), color-stop(1, #264ec0));
+	background: -moz-linear-gradient(center top, #264ec0 5%, #264ec0 100%);
+	filter: progid:DXImageTransform.Microsoft.gradient(startColorstr="#264ec0", endColorstr="#264ec0");
+	background: -o-linear-gradient(top, #264ec0, 264ec0);
+
+	background-color: #264ec0;
+}
+
+.eFloraTable tr:first-child td:first-child {
+	border-width: 0px 0px 0px 0px;
+}
+
+.eFloraTable tr:first-child td:last-child {
+	border-width: 0px 0px 0px 0px;
+}
+
+
+/* EFLORA Keys Class Styles */
+
+.large-image {
+	box-shadow: 1px 1px 3px 3px rgba(127, 127, 127, 0.15);
+	width: 140px;
+	height: auto;
+	padding-left: 0px;
+	padding-right: 0px;
+}
+
+
+.dropdown {
+	display: inline;
+	position: relative;
+	padding: 0px;
+}
+
+.dropdown-content {
+	display: none;
+  position: absolute;
+	text-align: center;
+  background-color: #FFFFFF;
+	padding-left: 9px;
+	padding-right: 0px;
+  width: 140px;
+  box-shadow: 1px 1px 3px 3px rgba(127, 127, 127, 0.15);
+  z-index: 100;
+}
+
+.dropdown-content a {
+  color: black;
+  padding: 0px;
+  text-decoration: none;
+  display: block;
+}
+
+.dropdown-content a:hover {background-color: black;}
+
+.dropdown:hover .dropdown-content {display: inline;}
+
+.dropdown:hover .dropbtn {background-color: black;}
+
+.keyText {
+	color: #000000;
+	line-height: 18px;
+	margin-top: 0px;
+	margin-bottom: 2px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	text-indent: -.1in;
+}
+
+.keyTextEm {
+	color: #3264C8;
+	line-height: 18px;
+	margin-top: 0px;
+	margin-bottom: 2px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	letter-spacing: 0.05em;
+	font-weight: 400;
+	font-size: 16px;
+	text-indent: -.1in;
+}
+
+
+/* General Class Styles */
+
+.BodyText {
+	color: black;
+	line-height: 18px;
+	letter-spacing: 0.05em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+}
+
+
+.keyLinkBoxText {
+	color: black;
+	line-height: 18px;
+	letter-spacing: 0.05em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+}
+
+
+.pageMajorHeading {
+	color: #010133;
+	line-height: 20px;
+	letter-spacing: 0.05em;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 18px;
+	font-weight: bold;
+}
+
+.feedbackLink {
+	color: #FF0000;
+	font-size: 20px;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+}
+
+
+.hr_line_blue {
+	border-top: 1px solid #010133;
+	display: block;
+	height: 1px;
+	width: 90%;
+	border: 0;
+	margin: 1em 0;
+	padding: 0;
+}
+
+.hr_line_grey {
+	border-top: 1px solid #F4FAFF;
+	display: block;
+	height: 1px;
+	width: 90%;
+	border: 0;
+	margin: 1em 0;
+	padding: 0;
+}
+
+.commentText {
+	font-family: "Open Sans";
+	color: red;
+	font-weight: bold;
+	font-size: 20px;
+}
+
+td.center {
+	text-align: center;
+	align-items: center;
+	padding: 0;
+	margin: 0;
+	border-style: none;
+}
+
+td.spacer1 {
+	background: #F4FAFF;
+	padding: 0;
+	margin: 0;
+	border-style: none;
+}
+
+.taxonomy_table {
+	border-style: solid;
+	border-width: 1px;
+	border-spacing: 0;
+	border-collapse: collapse;
+	frame: box;
+	rules: all;
+
+}
+
+/* higher taxonomy table formatting */
+.taxonomy_table td {
+	line-height: 20px;
+	letter-spacing: 0.05em;
+	color: #003057;
+	font-family: Verdana, Arial, Helvetica, sans-serif;
+	font-size: 16px;
+	font-weight: bold;
+	border-style: solid;
+	border-width: 1px;
+	padding: 5px;
+}
+
+/*used in jquery toggles for higher taxonomy */
+.initiallyHidden {
+	display: none;
+}
+
+/*this method of hiding allows for getting the widths from the invisible table */
+.hidden {
+	position: absolute;
+	visibility: hidden;
+	display: block;
+}
+
+
+
+
+/* 13-02-2025 Start CSS */
+@media(max-width: 991px) {
+
+	table,
+	td,
+	tr {
+		display: block;
+		width: 100%;
+	}
+}
+
+/* 13-02-2025 End CSS */
+
+@media(max-width: 991px) {
+
+	table,
+	tbody,
+	td,
+	tr,
+	#EF_right td {
+		display: block;
+		width: 100% !important;
+	}
+
+	#map_canvas,
+	#EF_bottom td,
+	#EF_right td {
+		width: 100% !important;
+		float: none !important;
+		padding: 0 !important;
+		margin-top: 15px;
+	}
+
+	#content {
+		margin-left: 0px !important;
+		margin-right: 0px !important;
+		padding: 10px 0;
+		margin-top: 10px;
+	}
+
+	.section1,
+	.section2 {
+		width: 100%;
+		float: none;
+	}
+
+	.section1 {
+		text-align: center;
+		width: 100%;
+		float: none;
+		margin: 0 !important;
+		padding-top: 20px;
+	}
+
+	#content-top table:first-child span.pageAuthorLine {
+		display: block;
+		margin-bottom: 15px;
+	}
+
+	.section2 {
+		width: 100%;
+		margin-top: 0px !important;
+		margin-left: 0px !important;
+	}
+
+	.section2 .titleTextTag {
+		margin-bottom: 20px;
+	}
+
+	.section2 .titleTextTag {
+		margin-bottom: 20px;
+	}
+
+	.section2 .titleTextHead {
+		margin-top: 0 !important;
+	}
+
+	div#content-top {
+		margin: 0;
+		margin-top: 20px;
+		padding-top: 10px;
+	}
+
+	.pageMajorHeading {
+		margin-bottom: 10px;
+	}
+
+	table.taxonomy_table {
+		margin-bottom: 10px !important;
+	}
+
+	form input[type="submit"] {
+		margin-top: 10px;
+	}
+
+	#EF_bottom br {
+		display: none;
+	}
+
+	.smallText img {
+		margin-top: 15px;
+	}
+
+	#footer td {
+		height: auto;
+		padding: 10px 0;
+	}
+
+	#EF_citation p {
+		margin-bottom: 0;
+	}
+
+	#EF_citation p+p {
+		margin-top: 15px;
+	}
+}
+
+/* .smallText img {
+	width: 100%;
+} */
+
+/* 13-02-2025 End CSS */
+/* 17-02-2025 Start CSS */
+.togglemenu button {
+	outline: none;
+	border: none;
+	background-color: transparent;
+	padding: 0;
+	display: flex;
+	flex-direction: column;
+	gap: 3px;
+	justify-content: center;
+	width: 100%;
+	align-items: center;
+	cursor: pointer;
+}
+
+.togglemenu button span {
+	width: 20px;
+	height: 2px;
+	background-color: #ffffff;
+	position: relative;
+	display: block;
+	transition: all 0.5s ease-in-out;
+}
+
+.togglemenu {
+	/* margin-bottom: 20px; */
+	text-align: center;
+	z-index: 99;
+	/* margin-top: 5px; */
+}
+
+@media(min-width: 990px) {
+	.togglemenu {
+		display: none;
+		
+	}
+
+}
+
+@media(max-width: 990px) {
+	.header__logo {
+		display: flex;
+		align-items: center;
+		padding: 0 15px;
+		justify-content: space-between;
+		margin-bottom: 20px;
+		z-index: 1;
+		
+	}
+
+	.header__logo .section1 {
+		width: auto;
+	}
+
+	table.horizMenu {
+		position: fixed;
+		top: 0;
+		left: -310px;
+		width: 270px !important;
+		height: 100%;
+		transition: all 0.5s ease-in-out;
+		z-index: 99;
+	}
+
+	table.horizMenu.main {
+		left: 0;
+		transition: all 0.5s ease-in-out;
+		z-index: 99;
+	}
+
+	table.horizMenu ul li.globalNav {
+		float: none;
+		position: relative;
+	}
+
+	table.horizMenu nav {
+		margin: 0;
+		width: 100%;
+	}
+
+	table.horizMenu nav ul {
+		width: 100%;
+		padding: 0;
+	}
+
+	table.horizMenu nav ul ul {
+		top: 0;
+		z-index: 9999;
+		position: relative;
+	}
+
+	table.horizMenu ul li.globalNav ul li a {
+		padding: 15px;
+		font-size: 12px;
+	}
+
+	table.horizMenu ul li.globalNav a {
+		text-align: start;
+	}
+
+	.togglebtn.active span:first-child {
+		transform: rotate(45deg) translate(3px, 1px);
+		transition: all 0.5s ease-in-out;
+	}
+
+	.togglebtn.active span:last-child {
+		transform: rotate(-45deg) translate(6px, -4px);
+		transition: all 0.5s ease-in-out;
+	}
+
+	.togglebtn.active span:nth-child(2) {
+		opacity: 0;
+		transition: all 0.5s ease-in-out;
+	}
+
+	.summary__data--table tr {
+		display: table-row;
+	}
+
+	.summary__data--table td {
+		display: table-cell;
+	}
+}
+
+
+/* 17-02-2025 End CSS */
+/* 18-02-2025 End CSS */
+nav {
+	z-index: 0;
+}
+
+.summary__data--inner {
+	/* display: table; */
+	table-layout: fixed;
+	width: 100%;
+}
+
+.summary__data--table {
+	/* display: table-cell; */
+	overflow-x: auto;
+	width: 100%;
+}
+
+.style2 {color: #CC6600}
+
+@media(min-width: 990px) {
+	.mobile-container {
+		display: none;
+		
+	}
+
+}
+/* 2-07-2025 mobile vert-menu */
+
+.mobile-container {
+  max-width: 480px;
+  margin: auto;
+  background-color: #000080;
+  height: 45px;
+  color: white !important;
+  border-radius: 10px;
+}
+
+.VERTtopnav {
+  overflow: hidden;
+  background-color: #333;
+  position: relative;
+}
+
+.VERTtopnav #myLinks {
+  display: none;
+}
+
+.VERTtopnav a {
+  color: white !important;
+  padding: 5px 8px;
+  text-decoration: none;
+  font-size: 17px;
+  display: block;
+}
+
+.VERTtopnav a.icon {
+  background: black;
+  display: block;
+  position: absolute;
+  right: 0;
+  top: 0;
+}
+
+.VERTtopnav a:hover {
+  background-color: black;
+  color: white; !important;
+	font-weight: bold !important;
+
+}
+
+.VERTtopnav a.:visited {
+	color: white !important;
+	font-size: 18px;
+	text-decoration: none;
+	font-weight: bold !important;
+	/* This will be applied. */
+}
+
+
+
+.active {
+  background-color: #000080;
+  color: white !important;
+}
+
+/* main page css to make mobile vert-menu fit */
+
+.section1Main {
+	width: 10%;
+	float: left;
+	text-align: left;
+	margin-right: 30px !important;
+	margin-top: 10px !important;
+	  z-index: -99;
+}
+
+.section3Main {
+	width: 10%;
+	float: right;
+	text-align: right;
+	margin-left: 5px !important;
+	margin-top: -5px !important;
+	vertical-align: top;
+	  z-index: -99;
+}
+
+
+.mainBody {
+	width: 80vw;
+	margin-left: 35px !important;
+	margin-top: 10px !important;
+	vertical-align: top;
+	  z-index: -99;
+	border-bottom: solid 2px LightSkyBlue;
+
+}

@@ -1,0 +1,115 @@
+<!DOCTYPE html>
+
+<html lang="en"> 
+
+<html lang="en"><head>
+<title> About Yellow Flags, Jepson eFlora, CCH</title> 
+<meta charset="UTF-8">
+<meta name="description" content="The Consortium of California Herbaria is the organization that supports all herbaria in California.">
+  <meta name="keywords" content="Consortium of California Herbaria, CCH1, georeferencing, coordinates, biogeography, California Flora, Flora of California, Vascular Plants of California, Jepson Flora Project, Jepson eFlora">
+
+    <!-- CSS Standardized -->
+    <link href="/eflora/common/css/eflora-header.css" rel="stylesheet" type="text/css">
+    <link href="/eflora/common/css/jepson-main.css" rel="stylesheet" type="text/css">
+    <link href="/eflora/common/css/eflora.css" rel="stylesheet" type="text/css">
+
+    <link rel="shortcut icon" href="/eflora/common/images/JepsonLogoSmall.png" type="image/x-icon" />
+
+<!--mobile js script files-->
+<script src="common/js/dh_custom.js"></script>
+
+
+    <!-- Google Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T5YC99QF6Q');
+    </script>
+</head>
+
+<body>
+
+    <!-- ACCESSIBILITY: Skip to Content Link -->
+    <a href="#main-content" class="visually-hidden">Skip to main content</a>
+
+<!-- Header -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora-header.php'); ?>  
+
+
+    <main id="main-content" class="eflora-main">
+        
+        <section class="intro-copy">
+            <h1>Yellow Flags</h1>
+            <p class="bodyTextBlack">
+                In recent years, many California herbaria have digitized over 2 million specimen records in the Consortium of California Herbaria (CCH). Sixty-five percent are georeferenced, making data available for researchers studying climate change and conservation.
+            </p>
+            <p class="bodyTextBlack">
+                When seeking to understand a taxon's range, we computationally combine the <em>Jepson eFlora</em> range descriptions with georeferenced specimen distribution. When a specimen's location falls outside the range described in the eFlora, it is tagged with a <strong>"yellow flag."</strong>
+            </p>
+        </section>
+
+        <!-- MAP COMPARISON SECTION -->
+        <section class="data-section" style="margin: 40px 0;">
+            <h2>Case Study: <i>Xylococcus bicolor</i></h2>
+            <p>Analysis revealed many specimens in the Peninsular Ranges (PR) that weren't originally in the eFlora range statement. Author confirmation resulted in adding PR to the distribution, resolving the flags.</p>
+            
+            <div class="map-display-grid">
+                <div class="heath-bar">
+                    <img src="/eflora/common/images/Xylococcus_before.png" alt="Map of Xylococcus before yellow flag resolution showing specimens outside original range.">
+                    <p><strong>Before:</strong> Yellow flags outside original range.</p>
+                </div>
+                <div class="heath-bar">
+                    <img src="/eflora/common/images/Xylococcus_after.png" alt="Updated map of Xylococcus after PR was added to the range statement.">
+                    <p><strong>After:</strong> Range updated to include PR.</p>
+                </div>
+            </div>
+        </section>
+
+        <!-- CAUSES SECTION -->
+        <section class="data-section">
+            <h3>Why are flags generated?</h3>
+            <ul>
+                <li><strong>Incorrect Coordinates:</strong> Transcription or transcription errors in latitude/longitude.</li>
+                <li><strong>Mapping Errors:</strong> False positives near boundaries or very small region units (e.g., offshore islets).</li>
+                <li><strong>Misidentification:</strong> Specimens incorrectly keyed or taxonomic revisions not yet applied.</li>
+            </ul>
+
+            <div class="citation" style="background: #f0f7ff; border-left: 5px solid #003262; margin-top: 30px;">
+                <p><strong>Get Involved:</strong> We welcome input from field botanists to help resolve these flags. Please contact Staci Markos (<a href="mailto:smarkos@berkeley.edu">smarkos@berkeley.edu</a>) or submit comments directly through the CCH portal.</p>
+            </div>
+
+            <div style="margin-top: 40px; text-align: center;">
+                <a href="/consortium/100plusYFs.html" class="googleForm">View Names with 100+ Yellow Flags (I know this is still broke, I have to recreate it for herbariadb)</a>
+            </div>
+        </section>
+    </main>
+
+    <!-- Feedback Area -->
+    <section class="feedback-area center-text">
+        <a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">
+            Send us your feedback! Community input helps improve the Jepson eFlora.
+        </a>
+    </section>
+
+    <!-- FOOTER SECTION -->
+    <!-- CITATION -->
+    <footer class="treatment-citation" style="margin-top:40px; padding: 20px; background: #eee; border-left: 5px solid var(--ef-blue);">
+        <p><strong>Citation:</strong> Jepson Flora Project (eds.) <?php echo date("Y"); ?>, <i><?php echo $ScientificName; ?></i>, in <em>Jepson eFlora</em>, accessed on <?php echo date("F d, Y"); ?>.</p>
+    </footer>
+
+</main>
+
+<!-- Footer -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora-footer.php'); ?>
+
+</body>
+</html>
+
+<!--Removed Sidebars and Iframes: Sidebars are difficult to navigate on mobile and often confuse screen readers. The tools are now integrated into the main navigation or call-to-action buttons.-->
+<!--Map Layout: Replaced the side-by-side images with a .map-display-grid. On desktop, they appear side-by-side; on mobile, they stack automatically for visibility.-->
+<!--Black Footer Text: Per your previous request, the .legal and .copyright sections in the footer are forced to black text for readability, while the links maintain their contrast.-->
+<!--Semantic Headings: Replaced bolded paragraphs with actual <h2> and <h3> tags for logical document flow.-->
+<!--Button Styling: The link to "Names with 100+ yellow flags" is now a .googleForm styled button, making it easier to tap on touchscreens.-->
+<!--Responsive Images: Added alt text to the maps to describe the data they are showing, not just the file name.-->

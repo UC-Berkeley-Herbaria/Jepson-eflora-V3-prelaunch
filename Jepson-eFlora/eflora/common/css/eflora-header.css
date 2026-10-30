@@ -1,0 +1,175 @@
+/* Update Nav Specific Sizes */
+
+
+
+:root {
+    --berkeley-blue: #003262;
+    --white: #FFFFFF;
+    --focus-gold: #FDB515;
+    --max-width: 1200px;
+    /* Accessibility Standard Font Sizes */
+    --nav-font-size: 1.1rem; /* Approx 17.6px for high readability */
+    --mobile-nav-font-size: 1.2rem; /* Slightly larger for touch screens */
+}
+
+.herbaria-banner { 
+    width: 100%; 
+    font-family: Arial, Helvetica, sans-serif; 
+    line-height: 1.5; 
+}
+
+.header-inner { 
+    max-width: var(--max-width); 
+    margin: 0 auto; 
+    padding: 0 15px; 
+    display: flex; 
+    align-items: center; 
+    justify-content: space-between; 
+}
+
+/* --- Navigation Bars --- */
+.top-blue-bar, .bottom-blue-bar {
+    background-color: var(--berkeley-blue);
+    min-height: 54px; /* Sufficient touch height */
+    color: var(--white);
+}
+
+
+.top-blue-bar { 
+    min-height: 48px; /* Increased for WCAG 2.2 touch target minimums */
+    z-index: 1001; 
+    position: relative; 
+}
+
+/* --- Link Styling --- */
+.nav-list { 
+    list-style: none; 
+    margin: 0; 
+    padding: 0; 
+    display: flex; 
+    gap: 15px; 
+}
+
+.nav-list a { 
+    font-size: 1.125rem; /* Matches base 18px */
+    padding: 15px 12px;  /* Larger click surface */
+    font-weight: 600;
+    color: var(--white); 
+    text-decoration: none; 
+    font-weight: 600; /* Medium-Bold for better contrast readability */
+    display: inline-block;
+}
+
+.nav-list a:hover {
+    text-decoration: underline;
+}
+
+/* AAA Focus Ring */
+.nav-list a:focus, .menu-toggle:focus {
+    outline: 3px solid var(--focus-gold);
+    outline-offset: 2px;
+}
+
+/* --- Mobile Menu Styles --- */
+.menu-toggle {
+    display: flex;
+    align-items: center;
+    gap: 12px;
+    background: transparent;
+    border: 2px solid var(--white);
+    color: white;
+    padding: 12px 20px;
+    cursor: pointer;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+
+
+.hamburger {
+    width: 24px;
+    height: 3px;
+    background: white;
+    position: relative;
+}
+.hamburger::before, .hamburger::after {
+    content: '';
+    position: absolute;
+    width: 24px;
+    height: 3px;
+    background: white;
+    left: 0;
+}
+.hamburger::before { top: -8px; }
+.hamburger::after { top: 8px; }
+
+/* Desktop/Mobile display toggles */
+.desktop-only { display: none; }
+.mobile-only { display: block; }
+
+.bottom-blue-bar {
+    display: none; /* Hidden on mobile until toggled */
+    width: 100%;
+}
+
+.bottom-blue-bar.is-open {
+    display: block;
+    position: absolute;
+    left: 0;
+    top: 48px; 
+    z-index: 1000;
+    background: #00264d;
+    border-top: 1px solid rgba(255,255,255,0.2);
+}
+
+.bottom-blue-bar.is-open .nav-list {
+    flex-direction: column;
+    gap: 0;
+    padding: 10px 0;
+}
+
+.bottom-blue-bar.is-open .nav-list a {
+    font-size: var(--mobile-nav-font-size);
+    width: 100%;
+    padding: 15px 25px; /* Large easy-to-tap targets */
+    box-sizing: border-box;
+    border-bottom: 1px solid rgba(255,255,255,0.1);
+}
+
+/* --- Branding --- */
+.white-branding-section { padding: 20px 0; background: white; }
+.branding-flex { flex-direction: column; align-items: center; gap: 20px; }
+.logo-container img { max-width: 280px; height: auto; display: block; }
+.banner-img { max-width: 100%; height: auto; display: block; }
+
+
+/* --- Desktop Responsiveness (768px+) --- */
+@media (min-width: 992px) {
+    .menu-toggle, .mobile-only { display: none; }
+    .desktop-only { display: block; }
+    
+    .bottom-blue-bar {
+        display: block !important;
+        position: static;
+        min-height: 54px;
+    }
+
+	.bottom-blue-bar.is-open .nav-list a {
+      font-size: 1.25rem;
+      padding: 20px 30px;
+	}
+
+    .bottom-blue-bar .nav-list {
+        flex-direction: row;
+        justify-content: space-between;
+        width: 100%;
+    }
+
+    .branding-flex {
+        flex-direction: row;
+        justify-content: space-between;
+    }
+
+    .logo-container { flex: 0 0 25%; }
+    .banner-container { flex: 0 0 72%; }
+}

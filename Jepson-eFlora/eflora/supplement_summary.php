@@ -1,0 +1,555 @@
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head><title>Jepson Herbarium: Jepson Flora Project: Jepson eFlora</title> 
+<link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+
+<script type="text/javascript">
+
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27128382-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+</head>
+
+<body>
+
+<!-- Begin banner -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/header_jeps.php'); ?>
+<!-- End banner -->
+
+<!-- Beginning of horizontal menu -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/globalnav.php'); ?>
+<!-- End of horizontal menu -->
+
+<center>
+<P>
+       <span class="pageName"><a href="/IJM.html"><font size=5><a href="/IJM.html">Jepson eFlora</a></font></a></span>
+<br>
+<P>
+</center>
+
+<h2 align="center">
+Revision 1
+<br>
+July 2013
+</h2>
+
+<blockquote class="bodyText">
+Revision 1 involves treatments that have changed taxonomically (e.g., taxa added or deleted) since the publication of the second edition of <I>The Jepson Manual</I> (2012). A summary of the changes incorporated in the <i>eFlora</i> and in the PDF version of the supplement to the print book is presented below.
+<br>
+&nbsp;
+<br>
+
+
+<p class=bodyText>
+<b>Brief Summary of Changes in Revision 1</b>
+<br />	
+	<br /><b>FERNS</b>
+<br><b>Cyatheaceae:</b>
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=Sphaeropteris"><I>Sphaeropteris cooperi</I></a> added to flora as naturalized, requiring treatment of Cyatheaceae as well as its placement in Family Key, Group 3.	
+<br />	
+	<br /><b>ANGIOSPERMS</b>
+<br><b>Asteraceae:</b>	
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=Arida"><I>Arida</I></a> changed to <a href="/cgi-bin/get_IJM.pl?tid=Leucosyris"><I>Leucosyris</I></a>, which has nomenclatural priority; <I>Arida</I> changed to <I>Leucosyris</I> in keys to genera of Asteraceae: in key to genera of Asteraceae, Group 6, <I>A. carnosa</I> changed to <I>L. carnosa</I> at key lead 15 and the leads reversed for alphabetical order (p. 217 in TJM2); in key to genera of Asteraceae, Group 14, <I>A. arizonica</I> changed to <I>L. arida</I> at key lead 26, and the leads reversed for alphabetical order (p. 227 in TJM2).
+Note under <I>Machaeranthera</I> changed to: Other taxa in TJM (1993) moved to <I>Arida</I> in TJM2 (2012); taxa included in <I>Arida</I> in TJM2 (2012) moved to <I>Leucosyris</I>. <I>Arida</I> names included in illustrations on page 247 in TJM2 to be changed to follow revised taxonomy.
+<br><a href="/cgi-bin/get_IJM.pl?tid=Gamochaeta"><I>Gamochaeta</I></a>: one species newly naturalized in California, <I>G. argyrinea</I>, added to treatment, with incorporation of that species into key to species of <I>Gamochaeta</I>.
+	
+<br><b>Apocynaceae:</b>	
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=Asclepias"><I>Asclepias linaria</I></a> deleted (previous inclusion based on faulty locality data), with removal from key to members of <I>Asclepias</I> as well.
+
+<br><b>Boraginaceae:</b>
+<br />&nbsp;&nbsp;Segregation of <a href="/cgi-bin/get_IJM.pl?tid=Phacelia"><I>Phacelia dalesiana</I></a> to <a href="/cgi-bin/get_IJM.pl?tid=Howellanthus"><I>Howellanthus dalesianus</I></a>; thorough revision of remainder of <I>Phacelia</I> including some taxonomic changes. 	
+
+<br><b>Brassicaceae:</b>	
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=Thysanocarpus"><I>Thysanocarpus curvipes</I></a> divided into five subspecies. Varieties of <I>Thysanocarpus laciniatus</I> elevated to species.	
+
+<br><b>Chenopodiaceae:</b>	
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=Atriplex"><I>Atriplex</I></a>: Three taxa moved to new genera <I>Extriplex</I> and <I>Stutzia</I>, the rest retained in <I>Atriplex</I>, with incorporation of new genera into key to genera of Chenopodiaceae. 
+
+<br><b>Cistaceae:</b>
+<br />&nbsp;&nbsp;All members of <I>Helianthemum</I> transferred to <a href="/cgi-bin/get_IJM.pl?tid=Crocanthemum"><I>Crocanthemum</I></a>, with change from <I>Helianthemum</I> to <I>Crocanthemum</I> in key to genera of Cistaceae. <I>Helianthemum scoparium</I> split into four terminal taxa. 	
+	
+<br><b>Euphorbiaceae:</b>	
+<br />&nbsp;&nbsp;<i>Chamaesyce</i> transferred to <a href="/cgi-bin/get_IJM.pl?tid=Euphorbia"><I>Euphorbia</I></a>, with unification under the latter in key to genera of Euphorbiaceae, and incorporation into one key of taxa treated in keys to members of <I>Chamaesyce</I> and <I>Euphorbia</I> in TJM2, into one key; the revision for Supplement I also includes addition of a species new to science, <I>E. jaegeri</I>, as well as partial treatment of taxa shown to occur as waifs in the state, <I>E. myrsinites</I> and <I>E. rigida</I>, which previously had not been included at all on the grounds that they were garden weeds that had not escaped cultivation.
+
+<br><b>Lamiaceae:</b>
+<br />&nbsp;&nbsp;<I>Hyptis emoryi</I> becomes <a href="/cgi-bin/get_IJM.pl?tid=Condea"><I>Condea emoryi</I></a>, leaving no <I>Hyptis</I> in California. 	
+
+<br><b>Polemoniaceae:</b>
+<br />&nbsp;&nbsp;New taxa described in <a href="/cgi-bin/get_IJM.pl?tid=Navarretia"><I>Navarretia</I></a>; <I>Navarretia sinistra</I> and <I>N. intertexta</I> recircumscribed.	
+	
+<br><b>Primulaceae:</b>
+<br />&nbsp;&nbsp;<i>Dodecatheon</i>transferred to <a href="/cgi-bin/get_IJM.pl?tid=Primula"><i>Primula</i></a>, expanding the latter in California from one to twelve taxa. 
+  
+<br><b>Viscaceae:</b> 
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=Phoradendron"><I>Phoradendron</I></a>: ruling by nomenclature committee resulted in change from <I>P. serotinum</I> and subspp. to <I>P. leucarpum</I> and subspp., with corresponding changes in key to members of <I>Phoradendron</I>. 
+</p>
+
+
+
+<H3 align="center"><a href="http://ucjeps.berkeley.edu/eflora/TJM2_Supplement.pdf">Download Supplement 1 PDF</a></H3>
+<hr>
+<h2 align="center">
+<a name="rev2" id="rev2"></a>Revision 2
+<br>
+December 2014
+</h2>
+Revision 2 involves treatments that have changed taxonomically (e.g., taxa added or deleted) since the publication of the second edition of  <i>The Jepson Manual</i> (2012). A summary of the changes incorporated in the <i>eFlora</i> and in the PDF version of the second supplement to the print book is presented below.
+<br>
+&nbsp;
+<br>
+
+
+<P class=bodyText>
+<b>Brief Summary of Changes in Revision 2</b>
+<br />
+	<br /><b>FERNS</b>
+<br><b>Pteridaceae:</b> 
+<br />&nbsp;&nbsp;All CA members of <em>Cheilanthes</em> transferred to <a href="/cgi-bin/get_IJM.pl?tid=Myriopteris"><em>Myriopteris</em></a> 
+<br />
+	<br /><b>ANGIOSPERMS</b>
+<br><b>Adoxaceae:</b> 
+<br />&nbsp;&nbsp;<I><a href="/cgi-bin/get_IJM.pl?tid=48036">Viburnum opulus</a></I> added, as naturalized, replacing <em>Viburnum edule</em>
+<br />&nbsp;&nbsp;<em><a href="/cgi-bin/get_IJM.pl?tid=81254">Viburnum rigidum</a></em> added, as naturalized
+<br><b>Asteraceae:</b> 
+<br />&nbsp;&nbsp;<em><a href="/cgi-bin/get_IJM.pl?tid=2456">Dittrichia viscosa</a></em> added, as naturalized
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=99213"><em>Lagophylla diabolensis</em></a> newly described, added, as native
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=98665"><em>Pallenis maritima</em></a> added, as naturalized
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=95226"><em>Volutaria canariensis</em></a> added, as naturalized
+
+<br><b>Boraginaceae:</b>
+<br />&nbsp;&nbsp;<em>Hydrophyllum capitatum</em> var. <em>alpinum</em> changed to <a href="/cgi-bin/get_IJM.pl?tid=99771"><em>Hydrophyllum alpestre</em></a>
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=48535"><em>Wigandia urens</em></a> added, as naturalized
+
+<br><b>Cactaceae:</b>
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=80391"><em>Cylindropuntia acanthocarpa</em> var. <em>acanthocarpa</em></a> becomes the accepted name for <em>Cylindropuntia acanthocarpa</em> var. <em>coloradensis</em>, with the latter as a synonym</span>
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=99695"><em>Cylindropuntia chuckwallensis</em></a> newly described, added, as native</span>
+<br />&nbsp;&nbsp;<em>Cylindropuntia &times;fosbergii</em> changed to <a href="/cgi-bin/get_IJM.pl?tid=80396"><em>Cylindropuntia fosbergii</em></a>
+
+<br><b>Ericaceae:</b>
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=40453"><em>Pyrola aphylla</em></a> added, as native
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=99776"><em>Pyrola crypta</em></a> newly described, added, as native 
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=40456"><em>Pyrola dentata</em></a> added, as native
+
+<br><b>Fagaceae:</b>
+<br />&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?tid=40723"><em>Quercus robur</em></a> added, as waif
+
+<br><b>Montiaceae:</b>
+<br />&nbsp;&nbsp;<em>Calandrinia ciliata</em> replaced by <a href="/cgi-bin/get_IJM.pl?tid=95066"><em>Calandrinia menziesii</em></a> added, as native
+<br />&nbsp;&nbsp;<em>Calyptridium parryi</em> A. Gray var. <em>arizonicum</em> changed to <a href="/cgi-bin/get_IJM.pl?tid=95389"><em>Calyptridium arizonicum</em></a>, as native
+
+<br><b>Myrsinaceae:</b>
+<br />&nbsp;&nbsp;<em>Anagallis arvensis</em> changed to <a href="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=Lysimachia+arvensis"><em>Lysimachia arvensis</em></a>, as naturalized
+<br />&nbsp;&nbsp;<em>Anagallis minima</em> changed to <a href="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=Lysimachia+minima"><em>Lysimachia minima</em></a>, as native
+<br />&nbsp;&nbsp;<em>Anagallis monelli</em> changed to <a href="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=Lysimachia+monelli"><em>Lysimachia monelli</em></a>, as waif
+<br />&nbsp;&nbsp;<i>Anagallis</i> transferred to <i>Lysimachia</i>, leaving no <I>Anagallis</I> in California	
+<br />&nbsp;&nbsp;<em>Glaux maritima</em> changed to <a href="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=Lysimachia+maritima"><em>Lysimachia maritima</em></a>, as native
+<br />&nbsp;&nbsp;<i>Glaux</i> transferred to <i>Lysimachia</i>, leaving no <I>Glaux</I> in California
+<br />&nbsp;&nbsp;<em>Trientalis europaea</em> changed to <a href="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=Lysimachia+europaea"><em>Lysimachia europaea</em></a>, as native
+<br />&nbsp;&nbsp;<em>Trientalis latifolia</em> changed to <a href="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?tid=Lysimachia+latifolia"><em>Lysimachia latifolia</em></a>, as native
+<br />&nbsp;&nbsp;<i>Trientalis</i> transferred to <i>Lysimachia</i>, leaving no <I>Trientalis</I> in California
+	
+<br><b>Polemoniaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99435"><em>Polemonium eddyense</em></a> newly described, added, as native
+<br />&nbsp;&nbsp;<em>Polemonium occidentale</em> subsp. <em>occidentale</em> no longer recognized, treated as synonym of <a href="eflora_display.php?tid=38984"><em>Polemonium occidentale</em></a>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99202"><em>Polemonium pulcherrimum</em> var. <em>shastense</em></a> recognized, added, as native
+	
+<br><b>Polygonaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99777"><em>Chorizanthe minutiflora</em></a> newly described, added, as native
+
+	<br><b>Rosaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=65314"><em>Rosa woodsii</em> var. <em>glabrata</em></a> added, as native and belonging to <a href="eflora_display.php?tid=87494"><em>Rosa woodsii</em> subsp. <em>gratissima</em></a>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=65315"><em>Rosa woodsii</em> var. <em>gratissima</em></a> added, as native and belonging to <a href="eflora_display.php?tid=87494"><em>Rosa woodsii</em> subsp. <em>gratissima</em></a>
+<br />	
+<br /><b>MONOCOTS</b>
+<br><b>Cyperaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=98894"><em>Calliscirpus brachythrix</em></a> newly described, added, as native
+<br />&nbsp;&nbsp;<i>Eriophorum crinigerum</i> transferred to <a href="eflora_display.php?tid=98942"><i>Calliscirpus</i></a>, as <a href="eflora_display.php?tid=98895"><i>Calliscirpus criniger</i></a>, as native
+	
+	
+<br><b>Poaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=98887"><em>Agrostis lacuna-vernalis</em></a> newly described, added, as native
+<br>
+<br>
+
+<H3 align="center"><a href="http://ucjeps.berkeley.edu/eflora/TJM2_Supplement_II.pdf">Download Supplement 2 PDF</a></H3>
+
+<hr>
+<h2 align="center">
+<a name="rev3" id="rev3"></a>Revision 3
+<br>
+December 2015
+</h2>
+Revision 3 involves treatments that have changed taxonomically (e.g., taxa added or deleted) since the publication of the second edition of <i>The Jepson Manual</i> (2012). A summary of the changes incorporated in the <i>eFlora</i> and in the PDF version of the third supplement to the print book is presented below.
+<br>
+&nbsp;
+<br>
+
+
+<P class=bodyText>
+<b>Brief Summary of Changes in Revision 3</b><br>
+	
+<br /><b>ANGIOSPERMS</b>
+<br><b>Polemoniaceae:</b> 
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99214"><i>Eriastrum ertterae</i></a> newly described, added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99215"><i>Eriastrum rosamondense</i></a> newly described, added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99455"><i>Linanthus bernardinus</i></a> newly described, added, as native
+<br />
+<br /><b>MONOCOTS</b>
+<br><b>Cyperaceae:</b> 
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99296"><i>Carex cyrtostachya</i></a> newly described, added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=98712"><i>Carex orestera</i></a> newly described, added, as native, replacing <i>Carex albonigra</i>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99775"><i>Carex xerophila</i></a> newly described, added, as native
+<br />&nbsp;&nbsp;Plants called <i>Carex albonigra</i> in TJM2 are <a href="http://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=98712"><i>Carex orestera</i></a>; <i>Carex albonigra</i> is not in California
+<br><b>Juncaceae:</b> 
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=29620"><i>Juncus bulbosus</i></a> added, as naturalized
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=29639"><i>Juncus dichotomus</i></a> added, as naturalized
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=101077"><i>Juncus elliottii</i></a> added, as naturalized
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=98862"><i>Juncus trilocularis</i></a> newly described, added, as native, replacing <i>Juncus brachyphyllus</i>
+<br />&nbsp;&nbsp;Plants called <i>Juncus brachyphyllus</i> in TJM2; are <a href="eflora_display.php?tid=98862"><i>Juncus trilocularis</i></a>; <i>Juncus brachyphyllus</i> is not in California	
+	
+<H3 align="center"><a href="TJM2_Supplement_III.pdf">Download Supplement 3 PDF</a></H3>
+	
+<hr>
+<h2 align="center">
+<a name="rev4" id="rev4"></a>Revision 4
+<br>
+December 2016
+</h2>
+Revision 4 involves treatments that have changed taxonomically (e.g., taxa added or deleted) since the publication of the second edition of <i>The Jepson Manual</i> (2012). A summary of the changes incorporated in the <i>eFlora</i> is presented below.
+<br>
+&nbsp;
+<br>	
+	
+<P class=bodyText>
+<b>Brief Summary of Changes in Revision 4</b><br>
+<br />
+	<br /><b>FERNS</b>
+
+<br /><b>Athyriaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=10761"><i>Athyrium</i></a> transferred to <a href="eflora_display.php?tid=79419">Athyriaceae</a> from Woodsiaceae
+
+<br /><b>Blechnaceae:</b>
+<br />&nbsp;&nbsp;<i>Blechnum spicant</i> transferred to <a href="eflora_display.php?tid=69297"><i>Struthiopteris</i></a>, as <a href="eflora_display.php?tid=45778"><i>Struthiopteris spicant</i></a>, leaving no <I>Blechnum</I> in California
+
+<br /><b>Cystopteridaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=10766"><i>Cystopteris</i></a> transferred to <a href="eflora_display.php?tid=101729">Cystopteridaceae</a> from Woodsiaceae
+
+<br /><b>Pteridaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=100476"><i>Adiantum shastense</i></a> newly described, added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=101693"><i>Pentagramma glanduloviscida</i></a> newly described, added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=100960"><i>Pentagramma maxonii</i></a>, elevated to species rank from <i>Pentagramma triangularis</i> subsp. <i>maxonii</i>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=101694"><i>Pentagramma rebmanii</i></a>, elevated to species rank from <i>Pentagramma triangularis</i> subsp. <i>rebmanii</i>  (which was mentioned in a note under <i>Pentagramma triangularis</i> subsp. <i>triangularis</i> in TJM2)
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=100961"><i>Pentagramma viscosa</i></a>, elevated to species rank from <i>Pentagramma triangularis</i> subsp. <i>viscosa</i>.
+<br />
+<br /><b>ANGIOSPERMS</b>
+	
+<br /><b>Asteraceae:</b>
+<br />&nbsp;&nbsp;<i>Bahia neomexicana</i> transferred to <a href="eflora_display.php?tid=555"><i>Picradeniopsis</i></a>, changed to <a href="eflora_display.php?tid=101696"><i>Picradeniopsis multiflora</i></a>, leaving no <i>Bahia</i> in California
+<br />&nbsp;&nbsp;<i>Amauriopsis dissecta</i> transferred to <a href="eflora_display.php?tid=482"><i>Hymenothrix</i></a>, changed to <a href="eflora_display.php?tid=101695"><i>Hymenothrix dissecta</i></a>, leaving no <i>Amauriopsis</i> in California	
+	
+<br /><b>Boraginaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=94699"><i>Eriodictyon sessilifolium</i></a> new to California, added, as native
+
+<br /><b>Rhamnaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=100793"><i>Ceanothus decornutus</i></a> newly described, added as native, a segregate of <i>Ceanothus jepsonii</i>
+<br />&nbsp;&nbsp;Plants called <i>Ceanothus vestitus</i> in TJM2 are <a href="eflora_display.php?tid=94455"><i>Ceanothus pauciflorus</i></a>; <i>Ceanothus vestitus</i> is a synonym of <i>C. pauciflorus</i>
+<br /><br />
+
+<hr>
+<h2 align="center">
+<a name="rev5" id="rev5"></a>Revision 5
+<br>
+December 2017
+</h2>
+<p>
+Revision 5 involves treatments that have changed taxonomically (e.g., taxa added or deleted) since Revision 4 of the <i>Jepson eFlora</i> (2016). A summary of the changes incorporated in the <i>eFlora</i> is presented below.</p>
+<br>
+&nbsp;
+<br>	
+	
+<P class=bodyText>
+<b>Brief Summary of Changes in Revision 5</b><br>
+<br />
+	<br /><b>LYCOPHYTES</b>
+
+<br /><b>Selaginellaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=44058"><i>Selaginella kraussiana</i></a> added, as naturalized
+<br />
+<br /><b>ANGIOSPERMS</b>
+
+<br /><b>Apiaceae:</b>
+<br />&nbsp;&nbsp;<i>Lomatium dissectum</i> var. <i>multifidum</i> elevated to species rank as <a href="eflora_display.php?tid=103317"><i>Lomatium multifidum</i></a>, leaving no varieties in <a href="eflora_display.php?tid=31405"><i>Lomatium dissectum</i></a>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=103334"><i>Lomatium ravenii</i> var. <i>piutense</i></a> newly described, added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=103335"><i>Lomatium ravenii</i> var. <i>ravenii</i></a> recognized, as native
+<br />&nbsp;&nbsp;<i>Orogenia</i> transferred to <a href="eflora_display.php?tid=10198"><i>Lomatium</i></a>, <i>Orogenia fusiformis</i> changed to <a href="eflora_display.php?tid=103316"><i>Lomatium fusiformis</i></a>
+<br />&nbsp;&nbsp;<i>Sphenosciadium</i> transferred to <a href="eflora_display.php?tid=10358"><i>Angelica</i></a>, <i>Sphenosciadium capitellatum</i> changed to <a href="eflora_display.php?tid=101118"><i>Angelica capitellata</i></a>
+
+	
+<br /><b>Asteraceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=101119"><i>Antennaria sawyeri</i></a> newly described, added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99395"><i>Helianthus winteri</i></a> newly described, added, as native
+
+<br /><b>Crassulaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=100425"><i>Sedum citrinum</i></a> newly described, added, as native
+
+<br /><b>Ericaceae:</b>
+<br />&nbsp;&nbsp;<i>Pyrola chlorantha</i></a> removed, not in California
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=100790"><i>Vaccinium shastense</i></a> newly described, added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=100788"><i>Vaccinium shastense</i> subsp. <i>nevadense</i></a> newly described, added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=100789"><i>Vaccinium shastense</i> subsp. <i>shastense</i></a> recognized, as native
+
+<br /><b>Linaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=31174"><i>Linum trigynum</i></a> added, as naturalized
+
+<br /><b>Onagraceae:</b>
+<br />&nbsp;&nbsp;<i>Oenothera primiveris</i> subsp. <i>bufonis</i> no longer recognized, leaving no subspecies in <a href="eflora_display.php?tid=35043"><i>Oenothera primiveris</i></a>
+
+<br /><b>Orobanchaceae:</b>
+<br />&nbsp;&nbsp;All native taxa of <i>Orobanche</i> transferred to <a href="eflora_display.php?tid=103351"><i>Aphyllon</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche ramosa</i> changed to <a href="eflora_display.php?tid=103318"><i>Phelipanche ramosa</i></a>, leaving no <i>Orobanche</i> in California
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=103326"><i>Aphyllon epigalium</i></a> newly described, added as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=103327"><i>Aphyllon epigalium</i> subsp. <i>epigalium</i></a> recognized, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=103328"><i>Aphyllon epigalium</i> subsp. <i>notocalifornicum</i></a> newly described, added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=103313"><i>Aphyllon robbinsii</i></a> newly described, added as native
+<br />&nbsp;&nbsp;<i>Orobanche bulbosa</i> changed to <a href="eflora_display.php?tid=13614"><i>Aphyllon tuberosum</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche californica</i> changed to <a href="eflora_display.php?tid=103319"><i>Aphyllon californicum</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche californica</i> subsp. <i>californica</i> changed to <a href="eflora_display.php?tid=103320"><i>Aphyllon californicum</i> subsp. <i>californicum</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche californica</i> subsp. <i>condensa</i> changed to <a href="eflora_display.php?tid=103321"><i>Aphyllon californicum</i> subsp. <i>condensum</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche californica</i> subsp. <i>feudgei</i> changed to <a href="eflora_display.php?tid=103322"><i>Aphyllon californicum</i> subsp. <i>feudgei</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche californica</i> subsp. <i>grandis</i> changed to <a href="eflora_display.php?tid=103323"><i>Aphyllon californicum</i> subsp. <i>grande</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche californica</i> subsp. <i>grayana</i> changed to <a href="eflora_display.php?tid=103324"><i>Aphyllon californicum</i> subsp. <i>grayanum</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche californica</i> subsp. <i>jepsonii</i> changed to <a href="eflora_display.php?tid=103325"><i>Aphyllon californicum</i> subsp. <i>jepsonii</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche cooperi</i> changed to <a href="eflora_display.php?tid=13615"><i>Aphyllon cooperi</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche corymbosa</i> changed to <a href="eflora_display.php?tid=103309"><i>Aphyllon corymbosum</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche fasciculata</i> changed to <a href="eflora_display.php?tid=100018"><i>Aphyllon fasciculatum</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche parishii</i> changed to <a href="eflora_display.php?tid=103329"><i>Aphyllon parishii</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche parishii</i> subsp. <i>brachyloba</i> changed to <a href="eflora_display.php?tid=103330"><i>Aphyllon parishii</i> subsp. <i>brachylobum</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche parishii</i> subsp. <i>parishii</i> changed to <a href="eflora_display.php?tid=103331"><i>Aphyllon parishii</i> subsp. <i>parishii</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche pinorum</i> changed to <a href="eflora_display.php?tid=13618"><i>Aphyllon pinorum</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche uniflora</i> (misapplied; not in California) changed to <a href="eflora_display.php?tid=103312"><i>Aphyllon purpureum</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche valida</i> changed to <a href="eflora_display.php?tid=103314"><i>Aphyllon validum</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche valida</i> subsp. <i>howellii</i> changed to <a href="eflora_display.php?tid=103332"><i>Aphyllon validum</i> subsp. <i>howellii</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche valida</i> subsp. <i>valida</i> changed to <a href="eflora_display.php?tid=103333"><i>Aphyllon validum</i> subsp. <i>validum</i></a>
+<br />&nbsp;&nbsp;<i>Orobanche vallicola</i> changed to <a href="eflora_display.php?tid=103315"><i>Aphyllon vallicolum</i></a>
+
+<br /><b>Themidaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99705"><i>Triteleia piutensis</i></a> newly described, added, as native
+<br /><br />	
+
+<hr>
+<h2 align="center">
+<a name="rev6" id="rev6"></a>Revision 6
+<br>
+September 2018
+</h2>
+Revision 6 involves treatments that have changed taxonomically (e.g., taxa added or deleted) since Revision 5 of the <i>Jepson eFlora</i>. A summary of the changes incorporated in the <i>eFlora</i> is presented below.
+<br>
+&nbsp;
+<br>	
+	
+	
+	
+<P class=bodyText>
+<b>Brief Summary of Changes in Revision 6</b><br>
+<br />
+
+<br /><b>ANGIOSPERMS</b>
+
+<br /><b>Liliaceae:</b>
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=100791"><i>Erythronium shastense</i></a> newly described, added, as native.
+<br />
+<br /><b>Phrymaceae:</b>
+<br />&nbsp;&nbsp;All taxa of <i> <a href="eflora_display.php?tid=11384"><i>Mimulus</i></a> except <a href="eflora_display.php?tid=33706"><i>Mimulus ringens</i></a> transferred to <a href="eflora_display.php?tid=11356"><i>Diplacus</i></a>, <a href="eflora_display.php?tid=68484"><i>Erythranthe</i></a>, or <a href="eflora_display.php?tid=11383"><i>Mimetanthe</i></a>.
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99029"><i>Diplacus angustatus</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=23076"><i>Diplacus aridus</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=103313"><i>Diplacus </i>&times; <i>australis</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=23077"><i>Diplacus aurantiacus</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=103264"><i>Diplacus bicolor</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99037"><i>Diplacus bigelovii</i> <i>var.</i> <i>bigelovii</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99038"><i>Diplacus bigelovii</i> <i>var.</i> <i>cuspidatus</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99039"><i>Diplacus bolanderi</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99040"><i>Diplacus brandegeei</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99041"><i>Diplacus brevipes</i></a>  added, as native	
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=23082"><i>Diplacus calycinus</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=23083"><i>Diplacus clevelandii</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99044"><i>Diplacus compactus</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99046"><i>Diplacus congdonii</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99057"><i>Diplacus constrictus</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99049"><i>Diplacus cusickioides</i></a>  newly described, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99051"><i>Diplacus douglasii</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99052"><i>Diplacus fremontii</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=23086"><i>Diplacus grandiflorus</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=103819"><i>Diplacus graniticola</i></a>  newly described, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99056"><i>Diplacus jepsonii</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99057"><i>Diplacus johnstonii</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99058"><i>Diplacus kelloggii</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99059"><i>Diplacus layneae</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99060"><i>Diplacus leptaleus</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=23090"><i>Diplacus longiflorus</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=23088"><i>Diplacus linearis</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=23090"><i>Diplacus longiflorus</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99064"><i>Diplacus mephiticus</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99065"><i>Diplacus mohavensis</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99066"><i>Diplacus nanus</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99068"><i>Diplacus parryi</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=23092"><i>Diplacus parviflorus</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99069"><i>Diplacus pictus</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99070"><i>Diplacus pulchellus</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=23093"><i>Diplacus puniceus</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99071"><i>Diplacus pygmaeus</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99072"><i>Diplacus rattanii</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99074"><i>Diplacus rupicola</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99076"><i>Diplacus thompsonii</i></a>  newly described, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99077"><i>Diplacus torreyi</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99078"><i>Diplacus traskiae</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99079"><i>Diplacus tricolor</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99080"><i>Diplacus vandenbergensis</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99081"><i>Diplacus viscidus</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99084"><i>Erythranthe acutidens</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99085"><i>Erythranthe alsinoides</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99088"><i>Erythranthe androsacea</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99089"><i>Erythranthe arenaria</i></a> added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99090"><i>Erythranthe arenicola</i></a> added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99091"><i>Erythranthe arvensis</i></a> added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99093"><i>Erythranthe barbata</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99095"><i>Erythranthe bicolor</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99099"><i>Erythranthe breviflora</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99101"><i>Erythranthe breweri</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99104"><i>Erythranthe calcicola</i></a>  newly described, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=25147"><i>Erythranthe cardinalis</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99106"><i>Erythranthe carsonensis</i></a>  newly described, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99109"><i>Erythranthe corallina</i></a> added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99110"><i>Erythranthe cordata</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99113"><i>Erythranthe dentata</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99116"><i>Erythranthe diffusa</i></a> added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99117"><i>Erythranthe discolor</i></a> added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=100565"><i>Erythranthe erubescens</i></a>  newly described, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99119"><i>Erythranthe exigua</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99120"><i>Erythranthe filicaulis</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99121"><i>Erythranthe filicifolia</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99122"><i>Erythranthe floribunda</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99124"><i>Erythranthe geniculata</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99127"><i>Erythranthe glaucescens</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99128"><i>Erythranthe gracilipes</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99129"><i>Erythranthe grandis</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99131"><i>Erythranthe guttata</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=98707"><i>Erythranthe hardhamiae</i></a>  newly described, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99135"><i>Erythranthe inconspicua</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99137"><i>Erythranthe inflatula</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99142"><i>Erythranthe laciniata</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99144"><i>Erythranthe latidens</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99145"><i>Erythranthe lewisii</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99146"><i>Erythranthe linearifolia</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99150"><i>Erythranthe marmorata</i></a> added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99152"><i>Erythranthe microphylla</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99155"><i>Erythranthe montioides</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99156"><i>Erythranthe moschata</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99158"><i>Erythranthe nasuta</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99161"><i>Erythranthe norrisii</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99162"><i>Erythranthe nudata</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99165"><i>Erythranthe palmeri</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99166"><i>Erythranthe pardalis</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=98851"><i>Erythranthe parishii</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99171"><i>Erythranthe percaulis</i></a>  newly described, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99174"><i>Erythranthe primuloides</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=103336"><i>Erythranthe ptilota</i></a>  newly described, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99176"><i>Erythranthe pulsiferae</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99177"><i>Erythranthe purpurea</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99212"><i>Erythranthe rhodopetra</i></a>  newly described, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99179"><i>Erythranthe rubella</i></a>  added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99183"><i>Erythranthe shevockii</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=98967"><i>Erythranthe sierrae</i></a>  newly described, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99186"><i>Erythranthe suksdorfii</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=101121"><i>Erythranthe taylorii</i></a>  newly described, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99191"><i>Erythranthe tilingii</i></a>  added, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=101724"><i>Erythranthe trinitiensis</i></a>  newly described, as native
+<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=99193"><i>Erythranthe utahensis</i></a> added, as native
+	<br />&nbsp;&nbsp;<a href="eflora_display.php?tid=33500"><i>Mimetanthe pilosa</i></a> added, as native
+<br />	
+<br />&nbsp;&nbsp;<i>Mimulus alsinoides</i> changed to <a href="eflora_display.php?tid=99085"><i>Erythranthe alsinoides</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus androsaceus</i> changed to <a href="eflora_display.php?tid=99088"><i>Erythranthe androsacea</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus angustatus</i> changed to <a href="eflora_display.php?tid=99029"><i>Diplacus angustatus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus aurantiacus</i> var. <i>aridus</i> changed to <a href="eflora_display.php?tid=23076"><i>Diplacus aridus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus aurantiacus</i> var. <i>aurantiacus</i> changed to <a href="eflora_display.php?tid=23077"><i>Diplacus aurantiacus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus aurantiacus</i> var. <i>grandiflorus</i> changed to <a href="eflora_display.php?tid=23096"><i>Diplacus grandiflorus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus aurantiacus</i> var. <i>parviflorus</i> changed to <a href="eflora_display.php?tid=23092"><i>Diplacus parviflorus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus aurantiacus</i> var. <i>pubescens</i> changed to <a href="eflora_display.php?tid=23090"><i>Diplacus longiflorus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus aurantiacus</i> var. <i>puniceus</i> changed to <a href="eflora_display.php?tid=23093"><i>Diplacus puniceus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus bicolor</i> changed to <a href="eflora_display.php?tid=99095"><i>Erythranthe bicolor</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus bigelovii</i> var. <i>bigelovii</i> changed to <a href="eflora_display.php?tid=99037"><i>Diplacus bigelovii</i> var. <i>bigelovii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus bigelovii</i> var. <i>cuspidatus</i> changed to <a href="eflora_display.php?tid=99038"><i>Diplacus bigelovii</i> var. <i>cuspidatus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus bolanderi</i> changed to <a href="eflora_display.php?tid=99039"><i>Diplacus bolanderi</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus breviflorus</i> changed to <a href="eflora_display.php?tid=99099"><i>Erythranthe breviflora</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus brevipes</i> changed to <a href="eflora_display.php?tid=99041"><i>Diplacus brevipes</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus breweri</i> changed to <a href="eflora_display.php?tid=99101"><i>Erythranthe breweri</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus cardinalis</i> changed to <a href="eflora_display.php?tid=25147"><i>Erythranthe cardinalis</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus clevelandii</i> changed to <a href="eflora_display.php?tid=23083"><i>Diplacus clevelandii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus congdonii</i> changed to <a href="eflora_display.php?tid=99046"><i>Diplacus congdonii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus constrictus</i> changed to <a href="eflora_display.php?tid=99047"><i>Diplacus constrictus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus dentatus</i> changed to <a href="eflora_display.php?tid=99113"><i>Erythranthe dentata</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus douglasii</i> changed to <a href="eflora_display.php?tid=99051"><i>Diplacus douglasii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus evanescens</i> changed to <a href="eflora_display.php?tid=99137"><i>Erythranthe inflatula</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus exiguus</i> changed to <a href="eflora_display.php?tid=99119"><i>Erythranthe exigua</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus filicaulis</i> changed to <a href="eflora_display.php?tid=99120"><i>Erythranthe filicaulis</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus floribundus</i> changed to <a href="eflora_display.php?tid=99122"><i>Erythranthe floribunda</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus fremontii</i> var. <i>fremontii</i> changed to <a href="eflora_display.php?tid=99052"><i>Diplacus fremontii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus fremontii</i> var. <i>vandenbergensis</i> changed to <a href="eflora_display.php?tid=99080"><i>Diplacus vandenbergensis</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus glaucescens</i> changed to <a href="eflora_display.php?tid=99127"><i>Erythranthe glaucescens</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus gracilipes</i> changed to <a href="eflora_display.php?tid=99128"><i>Erythranthe gracilipes</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus guttatus</i> changed to <a href="eflora_display.php?tid=99131"><i>Erythranthe guttata</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus inconspicuus</i> changed to <a href="eflora_display.php?tid=99135"><i>Erythranthe inconspicua</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus johnstonii</i> changed to <a href="eflora_display.php?tid=99057"><i>Diplacus johnstonii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus kelloggii</i> changed to <a href="eflora_display.php?tid=99058"><i>Diplacus kelloggii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus laciniatus</i> changed to <a href="eflora_display.php?tid=99142"><i>Erythranthe laciniata</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus latidens</i> changed to <a href="eflora_display.php?tid=99144"><i>Erythranthe latidens</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus latifolius</i> changed to <a href="eflora_display.php?tid=99040"><i>Diplacus brandegeei</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus layneae</i> changed to <a href="eflora_display.php?tid=99059"><i>Diplacus layneae</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus leptaleus</i> changed to <a href="eflora_display.php?tid=99060"><i>Diplacus leptaleus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus lewisii</i> changed to <a href="eflora_display.php?tid=99145"><i>Erythranthe lewisii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus mohavensis</i> changed to <a href="eflora_display.php?tid=99065"><i>Diplacus mohavensis</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus montioides</i> changed to <a href="eflora_display.php?tid=99155"><i>Erythranthe montioides</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus moschatus</i> changed to <a href="eflora_display.php?tid=99156"><i>Erythranthe moschata</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus nanus</i> var. <i>jepsonii</i> changed to <a href="eflora_display.php?tid=99056"><i>Diplacus jepsonii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus nanus</i> var. <i>mephiticus</i> changed to <a href="eflora_display.php?tid=99064"><i>Diplacus mephiticus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus nanus</i> var. <i>nanus</i> changed to <a href="eflora_display.php?tid=99066"><i>Diplacus nanus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus norrisii</i> changed to <a href="eflora_display.php?tid=99161"><i>Erythranthe norrisii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus nudatus</i> changed to <a href="eflora_display.php?tid=99162"><i>Erythranthe nudata</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus palmeri</i> changed to <a href="eflora_display.php?tid=99165"><i>Erythranthe palmeri</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus parishii</i> changed to <a href="eflora_display.php?tid=98851"><i>Erythranthe parishii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus parryi</i> changed to <a href="eflora_display.php?tid=99068"><i>Diplacus parryi</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus pictus</i> changed to <a href="eflora_display.php?tid=99069"><i>Diplacus pictus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus pilosus</i> changed to <a href="eflora_display.php?tid=33500"><i>Mimetanthe pilosa</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus primuloides</i> var. <i>linearifolius</i> changed to <a href="eflora_display.php?tid=99146"><i>Erythranthe linearifolia</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus primuloides</i> var. <i>primuloides</i> changed to <a href="eflora_display.php?tid=99147"><i>Erythranthe primuloides</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus pulchellus</i> changed to <a href="eflora_display.php?tid=99070"><i>Diplacus pulchellus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus pulsiferae</i> changed to <a href="eflora_display.php?tid=99176"><i>Erythranthe pulsiferae</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus purpureus</i> changed to <a href="eflora_display.php?tid=99177"><i>Erythranthe purpurea</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus pygmaeus</i> changed to <a href="eflora_display.php?tid=99071"><i>Diplacus pygmaeus</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus rattanii</i> changed to <a href="eflora_display.php?tid=99072"><i>Diplacus rattanii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus rubellus</i> changed to <a href="eflora_display.php?tid=99179"><i>Erythranthe rubella</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus rupicola</i> changed to <a href="eflora_display.php?tid=99074"><i>Diplacus rupicola</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus shevockii</i> changed to <a href="eflora_display.php?tid=99183"><i>Erythranthe shevockii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus suksdorfii</i> changed to <a href="eflora_display.php?tid=99186"><i>Erythranthe suksdorfii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus tilingii</i> changed to <a href="eflora_display.php?tid=99191"><i>Erythranthe tilingii</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus torreyi</i> changed to <a href="eflora_display.php?tid=99077"><i>Diplacus torreyi</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus traskiae</i> changed to <a href="eflora_display.php?tid=99078"><i>Diplacus traskiae</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus tricolor</i> changed to <a href="eflora_display.php?tid=99079"><i>Diplacus tricolor</i></a>
+<br />&nbsp;&nbsp;<i>Mimulus viscidus</i> var. <i>compactus</i> changed to <a href="eflora_display.php?tid=99045"><i>Diplacus compactus</i></a>	
+<br />&nbsp;&nbsp;<i>Mimulus viscidus</i> var. <i>viscidus</i> changed to <a href="eflora_display.php?tid=99081"><i>Diplacus viscidus</i></a>	
+<br />&nbsp;&nbsp;<i>Mimulus whitneyi</i> changed to <a href="eflora_display.php?tid=103264"><i>Diplacus bicolor</i></a>
+
+<br /><br />	
+	
+<!-- Begin footer -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/footer.php'); ?>
+<!-- End footer -->
+
+</body>
+</html>

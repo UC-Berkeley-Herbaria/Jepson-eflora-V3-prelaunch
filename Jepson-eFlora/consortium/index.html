@@ -1,0 +1,157 @@
+
+<!DOCTYPE html>
+ 
+<html lang="en"> 
+
+<head>
+<title>CCH Main Page</title> 
+
+<meta charset="UTF-8">
+<meta name="description" content="The Consortium of California Herbaria is the organization that supports all herbaria in California.">
+  <meta name="keywords" content="Consortium of California Herbaria, CCH1, georeferencing, coordinates, biogeography, California Flora, Flora of California, Vascular Plants of California, Jepson Flora Project, Jepson eFlora">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+<link href="/common/css/search_consortium.css" rel="stylesheet" type="text/css">
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/4.7.0/css/font-awesome.min.css">
+	<link rel="shortcut icon" href="/common/images/cch/CCH_logo_02_80.png" type="image/x-icon">
+
+
+<!-- Google G4 Global site tag (gtag.js) - Google Analytics, replaces old UA tag-->
+<script async src="//www.googletagmanager.com/gtag/js?id=G-HWJ1N1S6S4"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-HWJ1N1S6S4');
+</script>
+
+<script>
+function openNav() {
+  document.getElementById("SidebarR").style.width = "250px";
+  document.getElementById("mainR").style.marginRight = "250px";
+}
+
+function closeNav() {
+  document.getElementById("SidebarR").style.width = "0";
+  document.getElementById("mainR").style.marginRight= "0";
+}
+</script>
+
+
+</head>
+<body onload="myFunction()">
+
+
+	<nav aria-label="side navigation menu" tabindex="0">
+<div class="header"></div>
+  <input type="checkbox" class="openSidebarMenu" id="openSidebarMenu">
+  <label for="openSidebarMenu" class="sidebarIconToggle">
+    <div class="spinner diagonal part-1"></div>
+    <div class="spinner horizontal"></div>
+    <div class="spinner diagonal part-2"></div>
+  </label>
+  <div id="sidebarMenu">
+    <ul class="sidebarMenuInner">
+      <li><a class="navbar" tabindex="0" href="https://cch2.org/portal/" target="_blank">CCH2: <span>Default Search Page</span></a></li>
+      <li><a class="navbar" tabindex="0" href="/eflora/" target="_blank">Jepson eFlora<span>search database</span></a></li>
+      <li><a class="navbar" tabindex="0" href="/interchange/" target="_blank">Index of California Plant Names<span>search database</span></a></li>
+      <li><a class="navbar" tabindex="0" href="/db/JPNI.html" target="_blank">Jepson Place Names Index<span>search database</span></a></li>
+    </ul>
+  </div>
+</div>
+
+<div id="main">
+  <button class="openbtn" onclick="openNav()">Links & Tools ☰ </button>  
+</div>
+
+<div id="SidebarR" class="sidebarR">
+  <a href="javascript:void(0)" class="closebtn" onclick="closeNav()">×</a>
+	<a class="navbar" tabindex="1" href="/consortium/" >Home</a>
+	<a class="navbar" tabindex="1" href="/consortium/about.html" target="_blank">About</a>
+	<a class="navbar" tabindex="1" href="/consortium/participants.php" target="_blank">Participants</a>
+	<a class="navbar" tabindex="1" href="/consortium/stats.html">CCH1 Search Statistics</a>
+<br><br>
+	<!--<a class="navbar" tabindex="1" href="/consortium/georef_map.html">Specimen Coordinates Map</a>
+	-->
+	<!--<a class="navbar" tabindex="1" href="/consortium/load_mapper.html">Georeference Verification</a>
+	-->
+	<!--<a class="navbar" tabindex="0" href="/consortium/georef_search.php">Search by Polygon</a></li>
+	-->
+	<!--<a class="navbar" tabindex="1" href="/consortium/georef_tools.php">Coordinate Mapping Tools</a>
+	-->
+	<!--<a class="navbar" tabindex="1" href="/consortium/load_mapper_multi.html">Multi-Mapper</a>
+	-->
+</div>
+
+	</nav>
+
+	<div class="cch-top-image-xy002crop">
+<!-- COMMON HEADER -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/cch1v2b_img_header.php'); ?>
+<!-- COMMON HEADER ENDS -->
+	</div>
+
+
+<div class="cchBody">
+<!-- Begin body section-->
+
+<h1>CCH Data Portals</h1>
+
+
+ 
+<p class="generalText">&nbsp;&nbsp;
+ The Consortium of California Herbaria (CCH) is the organization that supports all herbaria in California. Established in 2003, the Consortium now includes records from over 70 California herbaria. 
+ For more information about the CCH, see the about page (<a class="efTag" href="/consortium/about.html">https://ucjeps.berkeley.edu/consortium/about.html</a>).<br>
+ CCH manages two data portals and each has a special purpose.
+ </p>
+
+<!-- <p>&nbsp;&nbsp;<img alt="CCH Organization Ven Diagram" height="" src="/common/images/cch/CCH_diagram.jpg">
+ </p>-->
+
+
+<h2>CCH1</h2>
+<br>
+<br>
+<p class="generalText">Searching CCH1 is currently disabled while the site is under re-development. The CCH1 database is composed of augmented data from California vascular plant specimens housed in herbaria, worldwide.  There are two main data portal from which California data was harvested:<br>  
+<ul>
+<li>Specimens from around 200 worldwide herbaria can be found in <a href="https://www.gbif.org/occurrence/search">GBIF.</a></li>
+
+<li>Specimens from around 70 California herbaria can be found in <a href="https://www.cch2.org/portal/collections/index.php">CCH2.</a></li>
+</ul>
+
+<H2>CCH2</h2>
+<br>
+<br>
+
+<p class="generalText"><b>Consortium of California Herbaria Portal 2</b> serves data from all specimens (nonvascular and vascular) housed in CCH member herbaria.	
+	    </p>
+<br>
+<br>
+
+				<div class="block20">
+				<a class="buttonA" href="https://www.cch2.org/portal/collections/index.php">Search by fields</a>
+				</div>
+<br>
+<br>
+				<div class="block20">
+				<a class="buttonA" href="https://www.cch2.org/portal/collections/map/index.php">Search by geography</a>
+				</div>
+
+<br>
+<br>
+
+		<!--END Content Table-->	
+<div class ="spacer_grey">
+<br><br>
+<p class="bodyText">Please send questions or comments regarding the development and use of these pages to Jason Alexander (jason_alexander@berkeley.edu).<br>
+  </p>
+
+</div>
+
+<!-- Beginning of banner -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/footer.php'); ?>
+<!-- End of banner -->
+
+</body>
+</html>
