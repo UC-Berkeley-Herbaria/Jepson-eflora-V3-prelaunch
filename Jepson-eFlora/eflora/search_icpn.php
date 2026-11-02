@@ -55,15 +55,17 @@ $db = new SQLite3($database_location);
 
 <link href="/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
 
-<!-- Global site tag (gtag.js) - Google Analytics -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=UA-43909100-4"></script>
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
   gtag('js', new Date());
 
-  gtag('config', 'UA-43909100-4');
+  gtag('config', 'G-T5YC99QF6Q');
 </script>
+
+
 </head>
 
 <body onload="initialize()">
@@ -358,7 +360,10 @@ $results = $stmt->execute();
 
 ?>
 <br>
-<a href="mailto:interchange@lists.berkeley.edu"><span class="feedbackLink">Feedback/Contact<span></a><br>
+<!--<a href="mailto:interchange@lists.berkeley.edu"><span class="feedbackLink">Feedback/Contact<span></a><br>
+-->
+<p class=bodyText><a href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform"><font size=3 color="red">Please use this Google Form for Contact/Feedback</font></a>
+
 </td>
 </tr>
 </table>

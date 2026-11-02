@@ -1,50 +1,64 @@
 #NATIVE	ISOETACEAE	Isoetes	bolanderi	Engelm.				Isoetes bolanderi	Isoetes bolanderi Engelm.		syn: Isoetes bolanderi var. pygmaea (Engelm.) Clute		TJM1	LYCOPHYTES	0
 open(IN, "output/accepted_names.out") || die;
-while(<IN>){
-next unless m/ACEAE/;
-unshift(@AA,$_);
-}
+	while(<IN>){
+		next unless m/ACEAE/;
+		unshift(@AA,$_);
+	}
+
 foreach(@AA){
 #print;
 	($LN,$nativity, $family, $genus, $species, $species_author, $infraspecific_rank, $infraspecific_epithet, $infraspecific_author, $name_minus_authors, $name_plus_authors, $expanded_name, $synonyms, $common, $TJM1_TJM2, $major_clade, $endemicity)=split(/\t/);
 	$MC{$family}=$major_clade;
 	$genus_count++ unless $seen{$genus}++;
-	if($nativity=~/NATIVE/){
-		$native_species{$family}++ unless $seen{"$genus $species"}++;
-		if($infraspecific_epithet){
-			$native_MRT{$family}++;
-			$seen_MRT{"$genus $species"}++;
-		}
-		else{
-			$native_MRT{$family}++ unless $seen_MRT{"$genus $species"};
-		}
+		if($nativity =~ /^NATIVE OR NATURALIZED/){
+			$native_species{$family}++ unless $seen{"$genus $species"}++;
+				if($infraspecific_epithet){
+					$native_MRT{$family}++;
+					$seen_MRT{"$genus $species"}++;
+				}
+				else{
+					$native_MRT{$family}++ unless $seen_MRT{"$genus $species"};
+				}
 		$count_NNGenera{$family}++ unless $seen_NNG{$genus}++;
-$NN{$family}{$genus}++;
-	}
-	if($nativity=~/NATURALIZED/){
-		$naturalized_species{$family}++ unless $seen{"$genus $species"}++;
-		if($infraspecific_epithet){
-			$naturalized_MRT{$family}++;
-			$seen_MRT{"$genus $species"}++;
+		$NN{$family}{$genus}++;
 		}
-		else{
-			$naturalized_MRT{$family}++ unless $seen_MRT{"$genus $species"};
-		}
+		elsif($nativity =~ /^NATIVE/){
+			$native_species{$family}++ unless $seen{"$genus $species"}++;
+				if($infraspecific_epithet){
+					$native_MRT{$family}++;
+					$seen_MRT{"$genus $species"}++;
+				}
+				else{
+					$native_MRT{$family}++ unless $seen_MRT{"$genus $species"};
+				}
 		$count_NNGenera{$family}++ unless $seen_NNG{$genus}++;
-$NN{$family}{$genus}++;
-	}
-	if($nativity!~/NATIVE|NATURALIZED/){
-		$waif_species{$family}++ unless $seen{"$genus $species"}++;
-		if($infraspecific_epithet){
-			$waif_MRT{$family}++;
-			$seen_MRT{"$genus $species"}++;
+		$NN{$family}{$genus}++;
 		}
-		else{
-			$waif_MRT{$family}++ unless $seen_MRT{"$genus $species"};
+		elsif($nativity=~/^NATURALIZED/){
+			$naturalized_species{$family}++ unless $seen{"$genus $species"}++;
+				if($infraspecific_epithet){
+					$naturalized_MRT{$family}++;
+					$seen_MRT{"$genus $species"}++;
+				}
+				else{
+					$naturalized_MRT{$family}++ unless $seen_MRT{"$genus $species"};
+				}
+			$count_NNGenera{$family}++ unless $seen_NNG{$genus}++;
+			$NN{$family}{$genus}++;
 		}
-		#$count_WAIFGenera{$family}++ unless $seen_WAIF{$genus}++;
-$WAIF{$family}{$genus}++;
-	}
+		elsif($nativity !~ m/^(NATIVE|NATURALIZED)/){
+			$waif_species{$family}++ unless $seen{"$genus $species"}++;
+				if($infraspecific_epithet){
+					$waif_MRT{$family}++;
+					$seen_MRT{"$genus $species"}++;
+				}
+				else{
+					$waif_MRT{$family}++ unless $seen_MRT{"$genus $species"};
+				}
+			$count_WAIFGenera{$family}++ unless $seen_WAIF{$genus}++;
+			$WAIF{$family}{$genus}++;
+		}
+	
 	if($endemicity ==1){
 		if($infraspecific_epithet){
 			$endemic_MRT{$family}++;
@@ -65,7 +79,7 @@ print <<EOP;
 
 
 <head><title>Jepson Herbarium: Jepson Flora Project: Jepson eFlora: Table of Contents</title> 
-<link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+<link href="/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -171,7 +185,7 @@ print "<tr><td>$line</td></tr>\n";
 print <<EOP;
 </table>
 
-*Generally waifs; names are enclosed in square brackets in keys; descriptions appear only online.  
+*Generally waifs, agricultural weeds, and eradicated exotics; names are enclosed in square brackets in keys; descriptions appear only online.  
 <br>
 Minimum-rank taxa uncertain as to nativity: Typha angustifolia   (TYPHACEAE), Xanthium spinosum   (ASTERACEAE), Trichocoronis wrightii var. wrightii (ASTERACEAE) <br>
 <table class="bodyText">
@@ -180,9 +194,9 @@ Minimum-rank taxa uncertain as to nativity: Typha angustifolia   (TYPHACEAE), Xa
 <tr><th>Species:</th><td>$native_sp_count ($naturalized_sp_count) [$waif_sp_count]</td></tr>
 <tr><th>Minimum-rank taxa:</th><td>$native_MRT_count ($naturalized_MRT_count) [$waif_MRT_count]</td></tr>
 </table>
-<P>
-<B>NOTE</B>: The counts for native and naturalized species are higher here than in the print manual because of species for which there are multiple infraspecific taxa, but only one has a California range. In these cases, <em>The Jepson Manual</em>/Jepson eFlora only has a treatment at the infra level and not at the species level (For example, see <a href="http://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=54615"><em>Astragalus allochrousa</em> var. <em>playanus</em></a>). These cases were not counted in the species totals in the print manual but are included here.
-
+<p>
+<b>NOTE</b>: The counts for native and naturalized species are higher here than in the print manual because of species for which there are multiple infraspecific taxa, but only one has a California range. In these cases, <em>The Jepson Manual</em>/Jepson eFlora only has a treatment at the infra level and not at the species level (For example, see <a href="https://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=54615"><em>Astragalus allochrousa</em> var. <em>playanus</em></a>). These cases were not counted in the species totals in the print manual but are included here.
+</p>
 </td></tr></table>
 
 
@@ -192,7 +206,6 @@ Minimum-rank taxa uncertain as to nativity: Typha angustifolia   (TYPHACEAE), Xa
 <!-- Begin footer -->
 <?php include(\$_SERVER['DOCUMENT_ROOT'].'/common/php/footer.php'); ?>
 <!-- End footer -->
-<!--Copyright &copy; 2013 Regents of the University of California-->
 </body></html>
 
 EOP

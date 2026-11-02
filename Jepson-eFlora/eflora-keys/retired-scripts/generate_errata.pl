@@ -1,18 +1,40 @@
 ################
 #Add errata paragraphs after __END__
 ################
-open (ERR, ">output/eflora_errata_printed_list.txt")|| die;
+#open (ERR, ">output/eflora_errata_printed_list.txt")|| die;
+#The last of these files was produced in 2019; from 2020 onward, Tom no longer added page numbers to errata corrections
+#so the printed list was retired
 
 $/="";
 $today=localtime();
 $server_root = "\$_SERVER['DOCUMENT_ROOT']"; #because $_SERVER... is interpreted as a variable if entered directly in the print-to-EOP
+
 $errata_file="input/TJM2_Errata.txt";
 open(IN, "$errata_file") || die;
-open(OUT, "> output/errataxxxx.html") || die;
+open(OUT, "> output/errata.html") || die;
 $pagetop = <<EOP;
+<?php
+
+date_default_timezone_set('America/Los_Angeles');
+
+?>
+
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
-<head><title>Jepson Herbarium: Jepson Flora Project: Jepson Manual Errata</title> 
-<link href="/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+<?php 
+//add note or other code here for variables
+?>
+
+<head>
+<title>Jepson eFlora Errata Page, Jepson Flora Project: Jepson Manual, Jepson Herbarium, California Flora</title> 
+<meta charset="UTF-8">
+<meta name="description" content="The Jepson eFlora is the foremost authority on the native and naturalized vascular plants of California. For plants occurring in wildlands or otherwise outside of cultivation, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys."  />
+	<meta name="keywords" content="Jepson eFlora, Jepson Flora Project, California Flora, Flora of California, Vascular Plants of California">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	
+	<link href="/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+<link href="/common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
+	<link rel="shortcut icon" href="/common/images/JepsonLogoSmall.png" type="image/x-icon" />
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=UA-43909100-4"></script>
@@ -26,108 +48,246 @@ $pagetop = <<EOP;
 
 </head>
 <body>
+<table id="normaltable">
+  <tr>
+   <td class="spacer1"><img src="/common/images/common_spacer.gif" alt="" style="height:1px;width:5px;"></td>
+	<td>
+	 <table style="background-color: #E6F3FF"><!-- content table -->
+	  <tr>
+	   <td>
 <!-- Begin banner -->
 <?php include($server_root.'/common/php/header_jeps.php'); ?>
 <!-- End banner -->
+
 <!-- Beginning of horizontal menu -->
-<?php include($server_root.'/common/php/globalnav.php'); ?>
+<?php include($server_root.'/common/php/globalnav.php'); ?> 
 <!-- End of horizontal menu -->
-<h2>
-The Jepson Manual: Vascular Plants of California, Second Edition
-</h2>
-<h2>
+<div style="border-left-style: solid;border-left-color: #C0DFFD;border-right-style: solid;border-right-color: #C0DFFD;"><!-- Begin content divider -->
+	<table style="background-color: #E6F3FF"><!-- content table -->
+	 <tr>  
+	  <td style="vertical-align: top;">
+		<table id = "sideLinks" style="width:100%;">
+		<tr>
+			<td><!-- <<background test>> -->
+<!-- Start of sidebar menu-->
+<?php include($server_root.'/common/php/localnav_eflora_primary.php'); ?>
+<!-- End of sidebar --> 
+			</td>
+		</tr>
+		</table>
+	  </td>
+	  <td style="border-left-style: solid;border-left-color: #C0DFFD;"><img src="/common/images/common_spacer.gif" alt="" style="height:1px;width:15px;"></td>
+	  <td style="padding-top: 5px;vertical-align: top;width=90vw;">
+ <table id = "efTable">
+  <tr>
+    <td style="padding-top: 0;vertical-align: top;">
+     <div id="content-top">
+
+<p><span class="pageName">The Jepson Manual: Vascular Plants of California, Second Edition<br />
 Errata
-</h2>
+</span></p>
 $today
-<br>
-Questions, comments, additions: Contact rosatti at berkeley.edu
-<br>
-<a href="errata_by_date.html">Display by date of correction</a>
-<P>
+<p>Please send questions or comments regarding the content of these pages to Tom Rosatti (<a href="mailto:rosatti@berkeley.edu">rosatti at berkeley.edu</a>).
+</p>
+<p><a href="errata_by_date.html">Display by date of correction</a></p>
+<p>
 Note: the word "unabridged" pertains to information that is displayed only on-line.
-<br>Lines in blue are explanations, summaries, or details of the correction.
-<br>
+<br />Lines in blue are explanations, summaries, or details of the correction.
+<br />
 References to couplet and lead numbers refer to those numbers as they are in TJM2, first printing, some of which have been changed by this document, as indicated below, as appropriate.
+</p>
+
 EOP
+
+$pagebottom = <<EOP;
+<!-- End body section-->
+
+		</td>
+		</tr>
+		</table><!--close eflora table-->
+
+
+   </td>
+  </tr>
+</table> <!--close box outline table-->
+</div>  <!--close content division-->
+<!-- Begin footer -->
+<?php include($server_root.'/common/php/footer.php'); ?>
+<!-- End footer -->
+
+ 
+ 	</td>
+   <td class="spacer1"><img src="/common/images/common_spacer.gif" alt="" style="height:1px;width:15px;"></td>
+  </tr>
+ </table> <!--close outside normal table-->
+
+</body>
+</html>
+EOP
+
 print OUT $pagetop;
+
+
 $pagetop=~s!<a href="errata_by_date.html">Display by date of correction</a>! <a href="errata.html">Display by page number</a>!;
+
+print OUT <<EOP;
+<p>Search for "Beginning in 2020:" to find beginning point for corrections made in 2020 and beyond.</p>
+
+<p>Entries marked "superseded by Supplement I" (Supplement II, etc.) are those in taxa (usually genera) that have been revised since TJM2 and thereby comprise "The Jepson Manual: Vascular Plants of California, Second Edition. Supplement I" (Supplement II, etc.).<br />  
+(Supplement III, comprising revisions of Carex, Eriastrum, Juncus, and Linanthus, was posted 18 December 2015; 
+Supplement (Revision) IV (2016) though Supplement (Revision) VIII (2020) have yet to be indicated for the appropriate entries below).<br />
+An entry marked as having been superseded by a supplement could be identical to what is in TJM2 (except for the correction involved in that erratum) if the supplement (revision) involved no changes to that entry or, conversely, such an entry might bear very little resemblance to what is in TJM2 if the supplement (revision) involved extensive changes to that entry.  In some cases, the change involves the name of the plant itself (e.g., the entry for CHEILANTHES clevelandii has been superseded by Supplement II, where the taxon is treated as MYRIOPTERIS clevelandii), so the situation can be complex and confusing.
+</p>
+EOP
 	while(<DATA>){
 		@datelines=();
+
+next if m/^#/;
+next if m/^Beginning in 2020/;
+next if m/^EFLORA ONLY/i;
+
+if (m/\{[^}]+\}/){
+	s/\{[^}]+\}//;
+}
+
 			if (m/^p+\. (\d+)/){
 				$pageno=$1;
+				s/^(p+\.)/<p>$1/;
+				
 			}
-next unless s/^(p+\.)/<P>$1/;
-next if m/^<P>p.*\nUNABRIDGED/;
+			elsif(m/^[A-Z][A-Z][A-Z]+/){
+				$pageno="NULL";
+				s/^([A-Z]+)/<p>$1/;
+			}
+			elsif(m/^Supplement I/){
+				$pageno="NULL";
+				s/^(Supplement I)/<p>$1/;
+			}
+			elsif(m/^p.[ uxvi]/){
+				s/^(p. *([uxvi]+))/<p>$1/;
+				$pageno="$1";
+			}
+			elsif(m/^\+\+\++/){
+				#do not print
+			}
+			elsif(m/^\*\*\*+/){
+				#do not print
+			}
+			else{
+			print "BAD PAGE LINES: $_\n\n";
+			}
+
+	if(m/p2\n/){
+		s/p2\n/Corrected in second printing<\/p>\n/;
+	}
+	elsif(m/(\d\d\d\d) (\d+) (\d+)\n/){
+		s/(\d\d\d\d) (\d+) (\d+)\n/$1 $2 $3<\/p>\n/
+	}
+
+
 unless (m/\n\d\d\d\d \d\d \d\d/){
 s/$/\n2012 04 06/;
 #print;
 }
 @lines=split(/\n/);
 foreach(@lines){
-s/\x0D\x0A/\n/g; #remove stray windows line breaks
-next if m/^{\/.*} *$/;
-s/{\/.*?}//;
+
 s/^[*+](.*)/<font color="blue">$1<\/font>/;
-s/FRUIT:/FR:/;
-s/INFLORESCENCE:/INFL:/;
-   s/FLOWER:/FL:/;
-   s/LEAF:/LF:/;
-   s/STEM:/ST:/;
-   s/(UNABRIDGED NOTE:)/[pertaining to \L$1]/;
-   s/(UNABRIDGED SYNONYMS:)/[pertaining to \L$1]/;
-   s/(BIOREGIONAL DISTRIBUTION:)/[pertaining to \L$1]/;
-   s/(DISTRIBUTION OUTSIDE CALIFORNIA:)/[pertaining to \L$1]/;
-   s/(COMMON NAME:)/[pertaining to \L$1]/;
-   s/(ECOLOGY:)/[pertaining to \L$1]/;
-   s/(ELEVATION:)/[pertaining to \L$1]/;
-   s/(ETYMOLOGY:)/[pertaining to \L$1]/;
-   s/(FLOWERING TIME:)/[pertaining to \L$1]/;
-   s/(GENERA IN FAMILY:)/[pertaining to \L$1]/;
-   s/(HABIT\+:)/[pertaining to general description]/;
-   s/(NOTE:)/[pertaining to \L$1]/;
-   s/(REFERENCE:)/[pertaining to \L$1]/;
-   s/(RUNNING HEADER:)/[pertaining to \L$1]/;
-   s/(SPECIES IN GENUS:)/[pertaining to \L$1]/;
-   s/(SYNONYMS:)/[pertaining to \L$1]/;
-   s/(TAXON AUTHOR:)/[pertaining to \L$1]/;
-   s/(TOXICITY:)/[pertaining to \L$1]/;
-s/\xc2\xb1/+-/g;
+
+ if (m/(\xc2\xb1)/){
+ 	print "BAD CHARACHER ENCODING (1)==>$_\n"
+ }
+ if (m/(\xe2\x80\x94)/){
+ 	print "BAD CHARACHER ENCODING (2)==>$_\n"
+ }
+ if (m/(\xe2\x80\x93)/){
+ 	print "BAD CHARACHER ENCODING (3)==>$_\n"
+ }
+ if (m/(\xe2\x80\xa6)/){
+ 	print "BAD CHARACHER ENCODING (4)==>$_\n"
+ }
+ if (m/(\xe2\x80\x99)/){
+ 	print "BAD CHARACHER ENCODING (5)==>$_\n"
+ }
+ if (m/(\xe2\x80\x98)/){
+ 	print "BAD CHARACHER ENCODING (6)==>$_\n"
+ }
+ if (m/(\x0D\x0A)/){
+ 	print "BAD CHARACHER ENCODING (7)==>$_\n"
+ }
+
+
+
+#s/\xc2\xb1/+-/g;
+#s/\xe2\x80\x94/--/g;
+#s/\xe2\x80\x93/--/g;
+#s/\xe2\x80\xa6/./g;
+#s/\xe2\x80\x99/'/g;
+#s/\xe2\x80\x98/'/g;
+#s/\xc3\xba/&uacute;/g; 
+#s/\x0D\x0A/\n/g;
+#s/\x0D\x0A/\n/g; #remove stray windows line brea
+
 s/\+-/&plusmn;/g;
-s/\xe2\x80\x94/--/g;
-s/\xe2\x80\x93/--/g;
 s/---/&mdash;/g;
 s/--/&ndash;/g;
-s/\xe2\x80\xa6/./g;
-s/\xe2\x80\x99/'/g;
-s/\xe2\x80\x98/'/g;
-s/\xc3\xba/&uacute;/g; 
-s/\x0D\x0A/\n/g;
-s/->//;
+
+
 while(s/_/<em>/){
 s/_/<\/em>/;
 }
-s/p2$/Corrected in second printing/;
-print OUT "$_<br>\n";
-if(m/(\d\d\d\d) (\d+) (\d+)/){
-$date="$1$2$3";
+
+
+
+print OUT "$_<br />\n";
+
+	if(m/(\d\d\d\d) (\d+) (\d+)/){
+		$date="$1$2$3";
+	}
+
+push(@datelines,"$_<br />");
 }
-push(@datelines,"$_<br>");
-}
+
+
+
 $date_order{join("\n", @datelines)}=$date;
 $pageno{join("\n", @datelines)}=$pageno;
 }
-open(OUT, "> output/errata_by_datexxx.html") || die;
+
+print OUT $pagebottom;
+close (OUT);
+
+open(OUT, "> output/errata_by_date.html") || die;
 $pagetop=~s/Errata/Errata (ordered by date)/g;
 print OUT $pagetop;
-foreach(sort {$date_order{$a} <=> $date_order{$b} || $pageno{$a} <=> $pageno{$b} }(keys(%date_order))){
-s/p2$/Corrected in second printing/;
-print OUT "$_<br>\n";
+
+print OUT <<EOP;
+<p>Entries marked "superseded by Supplement I" (Supplement II, etc.) are those in taxa (usually genera) that have been revised since TJM2 and thereby comprise "The Jepson Manual: Vascular Plants of California, Second Edition. Supplement I" (Supplement II, etc.).<br />  
+(Supplement III, comprising revisions of Carex, Eriastrum, Juncus, and Linanthus, was posted 18 December 2015; 
+Supplement (Revision) IV (2016) though Supplement (Revision) VIII (2020) have yet to be indicated for the appropriate entries below).<br />
+An entry marked as having been superseded by a supplement could be identical to what is in TJM2 (except for the correction involved in that erratum) if the supplement (revision) involved no changes to that entry or, conversely, such an entry might bear very little resemblance to what is in TJM2 if the supplement (revision) involved extensive changes to that entry.  In some cases, the change involves the name of the plant itself (e.g., the entry for CHEILANTHES clevelandii has been superseded by Supplement II, where the taxon is treated as MYRIOPTERIS clevelandii), so the situation can be complex and confusing.
+</p>
+EOP
+
+next if m/^#/;
+next if m/^SUPPLEMENT.+/; #display the supplement divisiond only on normal errata page.  It looks like an error when included on a sorted by date page
+next if m/^eFlora only.+/i;
+next if m/^Beginning in 2020/;
+next if m/^\{/;
+
+	foreach(sort {$date_order{$a} <=> $date_order{$b} || $pageno{$a} <=> $pageno{$b} }(keys(%date_order))){
+
+		if(m/p2$/){
+			s/p2$/Corrected in second printing<\/p>/;
+		}
+		elsif(m/(\d\d\d\d) (\d+) (\d+)/){
+			s/(\d\d\d\d) (\d+) (\d+)/$1 $2 $3<\/p>/
+		}
+
+
+print OUT "$_<br />\n";
 }
-#foreach(sort {$pageno{$a} <=> $pageno{$b}}(keys(%pageno))){
-foreach(sort {$date_order{$a} <=> $date_order{$b} || $pageno{$a} <=> $pageno{$b} }(keys(%date_order))){
-print ERR "PAGENO: $pageno{$_}: DATE $date_order{$_}$_\n";
-print ERR "$_\n";
-}
+
 close(OUT);
 print <<EOP;
 OUTPUT: 
@@ -137,16 +297,16 @@ errata_by_date.html
 EOP
 ################
 __END__
-#Version Date: 10 Dec 2020
-#Old Version Dates: 20 March 2018, 10 April 2018; 17 April 2018; 24 April 2018; 1 May 2018; 8 May 2018; 15 May 2018; 22 May 2018; 29 May 2018; 5 June 2018; 12 June 2018; 26 June 2018; 10 July 2018; 17 July 2018; 1 Aug 2018; 6 Aug 2018; 14 Aug 2018; 28 Aug 2018; 4 Sep 2018; 11 Sep 2018; 9 Oct 2018; 16 Oct 2018; 23 Oct 2018; 9 Jan 2019; 15 Jan 2019; 17 Jan 2019; 22 Jan 2019; 29 Jan 2019; 5 Feb 2019; 12 Feb 2019;19 Feb 2019; 26 Feb 2019; 5 Mar 2019; 12 Mar 2019; 26 Mar 2019; 2 Apr 2019; 9 Apr 2019; 16 Apr 2019; 11 Jun 2019; 16 Jul 2019; 6 Aug 2019; 3 Sep 2019; 24 Sep 2019; 1 Oct 2019; 14 Oct 2019; 5 Nov 2019; 19 Nov 2019; 26 Nov 2019; 10 Dec 2019; 21 Jan 2020; 28 Jan 2020; 25 Feb 2020; 25 Mar 2020; 8 Apr 2020; 6 May 2020; 12 May 2020; 28 May 2020; 16 Jun 2020; 30 Jun 2020; 7 Jul 2020; 16 Jul 2020; 28 Jul 2020; 5 Aug 2020 (possibly a second copy was changed and uploaded after the first one on this date); 18 Aug 2020; 25 Aug 2020; 1 Sep 2020; 9 Sep 2020; 16 Sep 2020; 24 Sep 2020; 2 Oct 2020 (no changes made); 21 Oct 2020; 11 Nov 2020; 3 Dec 2020; 9 Dec 2020
+#Version Date: 18 Oct 2022    
+#Old Version Dates: 20 March 2018, 10 April 2018; 17 April 2018; 24 April 2018; 1 May 2018; 8 May 2018; 15 May 2018; 22 May 2018; 29 May 2018; 5 June 2018; 12 June 2018; 26 June 2018; 10 July 2018; 17 July 2018; 1 Aug 2018; 6 Aug 2018; 14 Aug 2018; 28 Aug 2018; 4 Sep 2018; 11 Sep 2018; 9 Oct 2018; 16 Oct 2018; 23 Oct 2018; 9 Jan 2019; 15 Jan 2019; 17 Jan 2019; 22 Jan 2019; 29 Jan 2019; 5 Feb 2019; 12 Feb 2019;19 Feb 2019; 26 Feb 2019; 5 Mar 2019; 12 Mar 2019; 26 Mar 2019; 2 Apr 2019; 9 Apr 2019; 16 Apr 2019; 11 Jun 2019; 16 Jul 2019; 6 Aug 2019; 3 Sep 2019; 24 Sep 2019; 1 Oct 2019; 14 Oct 2019; 5 Nov 2019; 19 Nov 2019; 26 Nov 2019; 10 Dec 2019; 21 Jan 2020; 28 Jan 2020; 25 Feb 2020; 25 Mar 2020; 8 Apr 2020; 6 May 2020; 12 May 2020; 28 May 2020; 16 Jun 2020; 30 Jun 2020; 7 Jul 2020; 16 Jul 2020; 28 Jul 2020; 5 Aug 2020 (possibly a second copy was changed and uploaded after the first one on this date); 18 Aug 2020; 25 Aug 2020; 1 Sep 2020; 9 Sep 2020; 16 Sep 2020; 24 Sep 2020; 2 Oct 2020 (no changes made); 21 Oct 2020; 11 Nov 2020; 3 Dec 2020; 9 Dec 2020; 10 Dec 2020; 11 Dec 2020; 14 Dec 2020; 18 Dec 2020; 13 Jan 2021; 2 Feb 2021; 11 Feb 2021; 16 Feb 2021; 25 Feb 2021; 9 Mar 2021; 17 Mar 2021; 23 Mar 2021; 30 Mar 2021; 6 Apr 2021; 27 Apr 2021; 19 May 2021; 3 Jun 2021; 16 Jun 2021; 21 Jul 2021; 4 Aug 2021; 24 Aug 2021; 8 Sep 2021; 16 Sep 2021; 2 Nov 2021; 10 Nov 2021; 11 Nov 2021; 02 Dec 2021; 14 Dec 2021; 14 Jan 2022; 19 Jan 2022; 8 Mar 2022; 15 Mar 2022; 22 Mar 2022; 31 Mar 2022;3 May 2022; 1 Jun 2022; 14 Jun 2022; 21 Jun 2022; 7 Jul 2022; 13 Jul 2022; 20 Jul 2022; 21 Jul 2022 (correction to work done yesterday, 20 Jul 2022); 23 Aug 2022; 31 Aug 2022; 13 Oct 2022
 
 #search for "Beginning in 2020:" to find beginning point for corrections made in 2020 and beyond
 
-8 May 2018 is the last day that corrections made to the eFlora and listed below were also made on hard-copy, as kept in a folder in Rosatti's office.
+#8 May 2018 is the last day that corrections made to the eFlora and listed below were also made on hard-copy, as kept in a folder in Rosatti's office.
 
-Entries marked "superseded by Supplement I" (Supplement II, etc.) are those in taxa (usually genera) that have been revised since TJM2 and thereby comprise "The Jepson Manual: Vascular Plants of California, Second Edition. Supplement I" (Supplement II, etc.).  (Supplement III, comprising revisions of Carex, Eriastrum, Juncus, and Linanthus, was posted 18 December 2015; Supplement IV, posted in December 2016, and Supplement V, posted in December 2017, have yet to be indicated for the appropriate entries below)  An entry marked as having been superseded by a supplement could be identical to what is in TJM2 (except for the correction involved in that erratum) if the supplement (revision) involved no changes to that entry or, conversely, such an entry might bear very little resemblance to what is in TJM2 if the supplement (revision) involved extensive changes to that entry.  In some cases, the change involves the name of the plant itself (e.g., the entry for CHEILANTHES clevelandii has been superseded by Supplement II, where the taxon is treated as MYRIOPTERIS clevelandii), so the situation can be complex and confusing.
+#Entries marked "superseded by Supplement I" (Supplement II, etc.) are those in taxa (usually genera) that have been revised since TJM2 and thereby comprise "The Jepson Manual: Vascular Plants of California, Second Edition. Supplement I" (Supplement II, etc.).  (Supplement III, comprising revisions of Carex, Eriastrum, Juncus, and Linanthus, was posted 18 December 2015; Supplement IV, posted in December 2016, and Supplement V, posted in December 2017, have yet to be indicated for the appropriate entries below)  An entry marked as having been superseded by a supplement could be identical to what is in TJM2 (except for the correction involved in that erratum) if the supplement (revision) involved no changes to that entry or, conversely, such an entry might bear very little resemblance to what is in TJM2 if the supplement (revision) involved extensive changes to that entry.  In some cases, the change involves the name of the plant itself (e.g., the entry for CHEILANTHES clevelandii has been superseded by Supplement II, where the taxon is treated as MYRIOPTERIS clevelandii), so the situation can be complex and confusing.
 
-Beginning chronologically with entries marked "2013 07 31", most abbreviations expanded to full words [reflecting situation in eFlora but not in TJM2, where abbreviations obviously are retained], except that abbreviations for the geographic subdivisions are retained.
+#Beginning chronologically with entries marked "2013 07 31", most abbreviations expanded to full words [reflecting situation in eFlora but not in TJM2, where abbreviations obviously are retained], except that abbreviations for the geographic subdivisions are retained.
 
 {/for changes to changes, use ' [replaces change(s) made on 2012 06 15]'}
 
@@ -265,7 +425,7 @@ p. 25
 GLOSSARY
 leaflet. Leaf-like unit of a compound leaf; distinguished from a leaf by the absence in its axil of a bud, branch, thorn, or flower; either simple (leaf 1-compound, with 1&deg; leaflets) or compound (leaf 2-compound, with 1&deg; and 2&deg; leaflets; 3-compound, with 1&deg;, 2&deg;, and 3&deg; leaflets; etc.).
 + comma made semicolon before 'etc.' near end [made on 2012 03 27]
-+ 'lacking lateral, basal appendages (stipules);' deleted, after '…branch, thorn, or flower;'
++ 'lacking lateral, basal appendages (stipules);' deleted, after '...branch, thorn, or flower;'
 2013 08 09 [in addition to change(s) made on 2012 03 27, above]
 
 p. 27
@@ -361,8 +521,8 @@ CASCADE RANGES REGION (CaR). This region, characterized by volcanics, is bounded
 2016 01 26
 
 p. 39
-Cascade Range Foothills Subregion (CaRF).  This subregion, in the southwestern part of CaR, is characterized by chaparral and blue-oak/foothill-pine woodland at about 100–500 m in elevation. The northern CaRF and northern NCoRI combined with the southern KR form a continuous horseshoe-shaped band of similar foothill vegetation along the northern margin of the GV.
-+ 'This subregion, in the southwestern part of CaR, is characterized by chaparral and blue-oak/foothill-pine woodland at about 100–500 m in elevation. The CaRF and the adjacent NCoRI and northern Sierra Nevada Foothills District (n SNF) comprise a horseshoe-shaped area of similar foothill vegetation around the northern boundaries of the GV.' made 'This subregion, in the southwestern part of CaR, is characterized by chaparral and blue-oak/foothill-pine woodland at about 100–500 m in elevation. The northern CaRF and northern NCoRI combined with the southern Kr form a continuous horseshoe-shaped band of similar foothill vegetation along the northern margin of the GV.'
+Cascade Range Foothills Subregion (CaRF).  This subregion, in the southwestern part of CaR, is characterized by chaparral and blue-oak/foothill-pine woodland at about 100--500 m in elevation. The northern CaRF and northern NCoRI combined with the southern KR form a continuous horseshoe-shaped band of similar foothill vegetation along the northern margin of the GV.
++ 'This subregion, in the southwestern part of CaR, is characterized by chaparral and blue-oak/foothill-pine woodland at about 100--500 m in elevation. The CaRF and the adjacent NCoRI and northern Sierra Nevada Foothills District (n SNF) comprise a horseshoe-shaped area of similar foothill vegetation around the northern boundaries of the GV.' made 'This subregion, in the southwestern part of CaR, is characterized by chaparral and blue-oak/foothill-pine woodland at about 100--500 m in elevation. The northern CaRF and northern NCoRI combined with the southern Kr form a continuous horseshoe-shaped band of similar foothill vegetation along the northern margin of the GV.'
 2016 01 26
 
 p. 43
@@ -377,12 +537,12 @@ Geographic Subdivisions of California
 
 p. 46
 San Gabriel Mountains District (SnGb), line 1
-+ 'This is a topographically well-defined …' made 'This district is a topographically well-defined ...'
++ 'This is a topographically well-defined ...' made 'This district is a topographically well-defined ...'
 2013 02 15
 
 p. 46
 San Jacinto Mountains District (SnJt), line 1
-+ 'The only district recognized in the PR, this is an area with …' made 'This district in the PR is an area with …'
++ 'The only district recognized in the PR, this is an area with ...' made 'This district in the PR is an area with ...'
 2013 02 15
 
 p. 47
@@ -499,7 +659,7 @@ KEY TO FAMILIES, Group 10
 p. 88
 KEY TO FAMILIES, Group 12
 27. Lvs fleshy, cylindric to +- flat .....-> CHENOPODIACEAE (_Suaeda_)
-+ 'Lf' made 'Lvs"
++ 'Lf' made 'Lvs'
 2012 03 27
 p2
 
@@ -599,13 +759,13 @@ KEY TO FAMILIES, Group 16
 
 p. 94
 KEY TO FAMILIES, Group 16
-27. Shrub, tree, or densely lfy rosette pl; lvs ± sword-like or ± grass-like, fibrous and/or fleshy, persisting > 1 yr
+27. Shrub, tree, or densely lfy rosette pl; lvs +- sword-like or +- grass-like, fibrous and/or fleshy, persisting > 1 yr
 28. Ovules 2 per chamber
 29. Fls bisexual; fr a berry .....-> LAXMANNIACEAE
 29' Fls gen unisexual (occ some bisexual); fr a papery capsule .....-> RUSCACEAE (_Nolina_) {G6,7,8,9}
 28' Ovules 3--many per chamber
 30. Perianth orange or red .....-> ASPHODELACEAE
-30' Perianth ± white
+30' Perianth +- white
 31. Lvs sword-like; style 1 or stigmas sessile .....-> AGAVACEAE (2)
 31' Lvs grass-like; styles 3 .....-> MELANTHIACEAE (_Xerophyllum_)
 + replaces lead 26. and couplets 27--30 as originally numbered in TJM2, but replaces lead 27. and couplets 28--31 after insertion of a new couplet 20 on 2012 03 27 and renumbering [in TJM2; not abbreviated in eFlora]
@@ -710,7 +870,7 @@ KEY TO FAMILIES, Group 21
 p. 103
 KEY TO FAMILIES, Group 21
 17. Stamens (4)5, free; leaves ovate or obovate to round, generally palmately 3--5-lobed, generally toothed; glands stalked or 0 .....-> GROSSULARIACEAE (2)
-+ 'Stamens 5" made 'Stamens (4)5'
++ 'Stamens 5' made 'Stamens (4)5'
 2015 02 11
 
 p. 103
@@ -759,12 +919,12 @@ p2
 
 p. 104
 KEY TO FAMILIES, Group 23
-6. Stamens > in number than petals …..RUTACEAE (_Cneoridium_)
+6. Stamens > in number than petals .....-> RUTACEAE (_Cneoridium_)
 6' Stamens = in number to petals
-7. Petals opposite stamens, gen +- cupped …..RHAMNACEAE {G12,21}
+7. Petals opposite stamens, gen +- cupped .....-> RHAMNACEAE {G12,21}
 7' Petals alternate stamens, gen +- flat
-8. Lvs opposite …..CELASTRACEAE
-8' Lvs +- whorled at some nodes, alternate at others …..PITTOSPORACEAE
+8. Lvs opposite .....-> CELASTRACEAE
+8' Lvs +- whorled at some nodes, alternate at others .....-> PITTOSPORACEAE
 + replaced couplets 6--8
 2013 02 07
 
@@ -793,7 +953,7 @@ KEY TO FAMILIES, Group 24
 39. Petals without fringed nectary pits .....-> CARYOPHYLLACEAE (4) {G6,8,15}
 39' Base or center of each petal with 2 fringed nectary pits (sometimes appearing as 1 due to overlapping fringes) --- petals actually fused but easily misinterpreted as free .....-> GENTIANACEAE (_Swertia_)
 38' Sepals evidently fused above base
-40. Style 1, unbranched … LYTHRACEAE (3) {G22}
+40. Style 1, unbranched .....-> LYTHRACEAE (3) {G22}
 40' Style or style branches >1
 41. Leaf +- linear, acute .....-> CARYOPHYLLACEAE (4) {G6,8,15}
 41' Leaf oblong to obovate, obtuse, margin often curled under and leaf appearing narrower .....-> FRANKENIACEAE (2)
@@ -803,7 +963,7 @@ KEY TO FAMILIES, Group 24
 p. 107
 KEY TO FAMILIES, Group 24
 34' Leaves alternate, sometimes all basal
-42. Style 1, unbranched … LYTHRACEAE (3) {G22}
+42. Style 1, unbranched .....-> LYTHRACEAE (3) {G22}
 42' Styles, style branches, or sessile stigmas >= 2
 43. Leaf linear, entire
 44. Leaves cauline; flowers solitary or in racemes, panicles, or cymes .....-> LINACEAE (2)
@@ -1256,7 +1416,7 @@ LEAF: 15--28 cm, thin, deep green, shiny, not glaucous; sheath persistent?.
 
 p. 146
 PINUS ponderosa var. pacifica
-NOTE: Some very large-coned plants in Santa Cruz Mountains …
+NOTE: Some very large-coned plants in Santa Cruz Mountains ...
 + 'larged-coned' made 'large-coned'
 2013 07 31
 
@@ -1426,8 +1586,8 @@ LEAF: 1--4 dm, ovate to triangular-ovate, 1--2-pinnate; leaflets 2--10 cm, lance
 
 p. 176
 CONIOSELINUM pacificum
-HABIT+: Plant 3–15 dm.
-+ '10—40' made '3–15'
+HABIT+: Plant 3--15 dm.
++ '10--40' made '3--15'
 2018 06 05
 
 p. 178
@@ -1639,7 +1799,7 @@ ASTERACEAE, Group 6
 35' Fls 10--many; per; pappus bristles minutely barbed
 36. Abaxial lf face glabrous or glandular to short bristly .....-> AGERATINA (2)
 36' Abaxial lf face white-tomentose .....-> LUINA
-+ key to members of Asteraceae, Group 6, couplet 35, replaced with the above [in TJM2; not abbreviated in eFlora, where "per" expanded to "perennial herb'], couplets previously numbered 36--64 renumbered, with 1 added to each
++ key to members of Asteraceae, Group 6, couplet 35, replaced with the above [in TJM2; not abbreviated in eFlora, where "per" expanded to "perennial herb"], couplets previously numbered 36--64 renumbered, with 1 added to each
 2013 08 08
 
 p. 218
@@ -2013,8 +2173,8 @@ BIOREGIONAL DISTRIBUTION: s CCo/SCoRO, s SCoRO, SCo, WTR (e Santa Ynez Mtns), PR
 p. 303
 (superseded by Supplement II)
 DITTRICHIA graveolens 
-RAY FLOWER: 10--12; ray 2–5(–7) mm, erect or spreading.
-+ 'ray 4--7 mm' made 'ray 2–5(–7) mm'
+RAY FLOWER: 10--12; ray 2--5(--7) mm, erect or spreading.
++ 'ray 4--7 mm' made 'ray 2--5(--7) mm'
 2014 05 30
 
 p. 303
@@ -2518,7 +2678,7 @@ FRUIT: angled, with wide brown glands extending down to +- middle of fr; tip 2-l
 p. 386
 MICROPUS
 INFLORESCENCE: heads disciform, +- sessile, 1 or 2--5 per dense group; involucre +- cup-like; phyllaries 4--6, equal, obovate, rounded, << paleae, scarious, persistent; receptacle length 0.5--1.8 &times; width, depressed or obovoid, glabrous; paleae of pistillate flowers each enclosing flower, deciduous with fruit, +- compressed-obovoid, obtuse, distally bulged out and hood- or helmet-like, generally woolly abaxially, obscurely parallel-veined (veins 5+), margin +- reflexed distally as scarious wing (wing adaxially +- lateral, projected upward or inward, +- visible in head); paleae of disk flowers 0, or 1--3, reduced, erect, +- folded, lanceolate, acute, papery, scarious, glabrous.
-+ '1 or 2--5 perennial herb (dense) group;' made '1 or 2--5 per dense group;'  [in eFlora, where "per" had been incorrectly expanded to "perennial herb'; abbreviations retained in TJM2, where "per" means "perennial herb" in some cases, and "per" in others (e.g., in this case, where the number of heads per dense group is intended -- also, parentheses around "dense" removed).]
++ '1 or 2--5 perennial herb (dense) group;' made '1 or 2--5 per dense group;'  [in eFlora, where "per" had been incorrectly expanded to "perennial herb"; abbreviations retained in TJM2, where "per" means "perennial herb" in some cases, and "per" in others (e.g., in this case, where the number of heads per dense group is intended -- also, parentheses around "dense" removed).]
 2014 06 18
 
 p. 389
@@ -2561,7 +2721,7 @@ HABIT+: Gen bien, coarse.
 p. 392
 ONOPORDUM acanthium subsp. acanthium
 HABIT+: Bien, per <= 30 dm, +- canescent-tomentose.
-+ 'Pl' made 'Bien, per' [in TJM2; not abbreviated in eFlora, where "per" expanded to "perennial herb'] 
++ 'Pl' made 'Bien, per' [in TJM2; not abbreviated in eFlora, where "per" expanded to "perennial herb"] 
 2013 07 31
 
 p. 394 [location or approximate location where synonym would have appeared in TJM2 had it not been listed in TJM1and therefore subsequently included only in eFlora]
@@ -2627,7 +2787,7 @@ TAXON AUTHOR: Nutt.
 p. 427
 STYLOCLINE
 INFLORESCENCE: heads disciform, +- sessile, 2--10 per dense group; involucre 0 or vestigial, simulated by paleae, or +- cup-like (then phyllaries 1--4, +- unequal, like reduced paleae); receptacle length (2.8)4--8 &times; width, +- cylindric to club-shaped, glabrous; paleae of pistillate flowers each generally enclosing flower, or outermost open, deciduous with fruit, +- boat-shaped, acute to obtuse, +- woolly abaxially, obscurely parallel-veined (veins 5+), margin reflexed distally or fully as scarious wing, wing terminal, erect to curved inward, visible in head; paleae of disk flowers generally 2--5, reduced, erect, +- folded, lanceolate, acute, papery, scarious, glabrous or cobwebby.
-+ '2--10 perennial herb (dense) group;' made '2--10 per dense group;' [in eFlora, where "per" had been incorrectly expanded to "perennial herb'; abbreviations retained in TJM2, where "per" means "perennial herb" in some cases, and "per" in others (e.g., in this case, where the number of heads per dense group is intended -- also, parentheses around "dense" removed).]
++ '2--10 perennial herb (dense) group;' made '2--10 per dense group;' [in eFlora, where "per" had been incorrectly expanded to "perennial herb"; abbreviations retained in TJM2, where "per" means "perennial herb" in some cases, and "per" in others (e.g., in this case, where the number of heads per dense group is intended -- also, parentheses around "dense" removed).]
 2014 06 26
 
 p. 430
@@ -2782,8 +2942,8 @@ COMMON NAME: SAND DUNE CRYPTANTHA
 p. 463
 CRYPTANTHA holoptera
 LEAF: 3--6 cm; basal, lower cauline gen few, elliptic to lanceolate, short-petioled, long-lived; upper sessile; short-rough-bulbous-based-bristly, bristles sparse abaxially.
-+ 'bristles parse abaxially' made 'bristles sparse abaxially"
-2013 02 21 ['bristles parse abaxially' made 'bristles sparse abaxially" in eFlora on 2013 02 21, but the change was not actually made on this page until 2014 04 11]
++ 'bristles parse abaxially' made 'bristles sparse abaxially'
+2013 02 21 ['bristles parse abaxially' made 'bristles sparse abaxially' in eFlora on 2013 02 21, but the change was not actually made on this page until 2014 04 11]
 
 p. 464
 CRYPTANTHA microstachys
@@ -2958,7 +3118,7 @@ p. 480
 NAMA
 4. Style 1, lobed < 1/2 length
 5. Corolla limb > 3.5 mm diam, lobes >= 2 mm wide .....-> N. aretioides
-6. Style 1--2 mm …-> var. californica
+6. Style 1--2 mm .....-> var. californica
 6' Style 3--7 mm .....-> var. multiflora
 5' Corolla limb < 3.5 mm diam, lobes < 2 mm wide .....-> N. densa 
 7. Pl gray-canescent, hairs gen spreading, rough; style 0.3--1 mm .....-> var. densa
@@ -2980,7 +3140,7 @@ LEAF: cauline, lower generally opposite, upper opposite or alternate, generally 
 
 p. 482
 NEMOPHILA maculata
-FLOWERING TIME: Mar—Jul
+FLOWERING TIME: Mar--Jul
 + 'May' made 'Mar'
 2016 04 21
 
@@ -3272,13 +3432,13 @@ BIOREGIONAL DISTRIBUTION: CCo, SW;
 
 p. 528
 BOECHERA inyoensis
-ELEVATION: 1200–4000 m.
+ELEVATION: 1200--4000 m.
 + '3500' made '4000'
 2019 11 19
 
 p. 530
 BOECHERA retrofracta
-ELEVATION: 900–3312 m.
+ELEVATION: 900--3312 m.
 + '2900' made '3312'
 2018 08 01
 
@@ -3346,8 +3506,8 @@ RARITY STATUS:
 
 p. 542
 DESCURAINIA pinnata
-FLOWER: petals 1–3 mm.
-+ 'petals, bright yellow to cream.' made 'petals 1–3 mm.'
+FLOWER: petals 1--3 mm.
++ 'petals, bright yellow to cream.' made 'petals 1--3 mm.'
 2018 05 29
 
 p. 542
@@ -3496,7 +3656,7 @@ PLANODES virginica
 p. 561
 RAPISTRUM
 HABIT+: Ann [per]; hairs simple [or 0].
-+ '[Ann] per' made 'Ann [per]' [in TJM2; not abbreviated in eFlora, where "per" expanded to "perennial herb']
++ '[Ann] per' made 'Ann [per]' [in TJM2; not abbreviated in eFlora, where "per" expanded to "perennial herb"]
 2014 07 23
 
 p. 561
@@ -3935,7 +4095,7 @@ LEAF: +- evenly spaced; blade 10--40 mm, linear to lance-linear; margin not papi
 
 p. 628
 MORTONIA utahensis
-ELEVATION: 350–2100 m.
+ELEVATION: 350--2100 m.
 + '750' made '350'
 2014 04 16 [on 2014 04 16, rounded to nearest 10 m (in conformance with JFP editorial policy), to 350 from 351 in original listing (which was posted on 2013 10 04)]
 
@@ -4032,7 +4192,7 @@ LEAF: gen reduced distally on st, +- lanceolate to oblanceolate or spoon-shaped,
 
 p. 645
 MONOLEPIS spathulata
-ELEVATION: 2000–3450 m.
+ELEVATION: 2000--3450 m.
 + '2700' made '3450'
 2019 11 12
 
@@ -4053,7 +4213,7 @@ p. 649
 CISTACEAE 
 2. Per or subshrub (sometimes fl in first year); basal lvs 0, cauline gen alternate; style < 2 mm .....-> CROCANTHEMUM
 2' Ann; basal lvs in rosette, often withering early, proximal cauline gen opposite, distal 0--few, alternate; style 0 .....-> TUBERARIA
-+ couplet 2 in key to genera of Cistaceae replaced with the above [in TJM2; not abbreviated in eFlora, where "per" expanded to "perennial herb']
++ couplet 2 in key to genera of Cistaceae replaced with the above [in TJM2; not abbreviated in eFlora, where "per" expanded to "perennial herb"]
 2013 07 31
 
 p. 650
@@ -4072,7 +4232,7 @@ NOTE: CA spp. esp abundant after fire, here retained in _Helianthemum_ (polyphyl
 p. 650
 (superseded by Supplement I)
 HELIANTHEMUM greenei
-STEM: 15–68 cm.
+STEM: 15--68 cm.
 + '30' made '68'
 2016 06 07
 
@@ -4085,7 +4245,7 @@ LEAF: basal in rosette, often withering early; proximal cauline gen opposite, di
 p. 654
 COMANDRACEAE
 FLOWER: bisexual [unisexual]; perianth lobes [4]5(6); stamens opposite petals, on fleshy disk; ovary inferior, chamber 1, ovules 2--4, suspended from top of free-central placenta, style 1, stigma lobes 2--4.
-+ 'calyx 0; petals 4–6;' made 'perianth lobes [4]5(6)'
++ 'calyx 0; petals 4--6;' made 'perianth lobes [4]5(6)'
 2018 09 04
 
 p. 654
@@ -5054,7 +5214,7 @@ NOTE: Some spp. variable, intergrading with others; some hybridization probable.
 p. 760
 LATHYRUS
 3' Inflorescence 2--4-fld; wings of st, petiole < 2 mm wide
-+ '1--4-fld' made '2--4-fld"  [in TJM2; not abbreviated in eFlora]
++ '1--4-fld' made '2--4-fld'  [in TJM2; not abbreviated in eFlora]
 2014 11 19
 
 p. 761 [location or approximate location where treatment would have appeared in TJM2 had the species been described and included by then] 
@@ -5091,7 +5251,7 @@ BIOREGIONAL DISTRIBUTION: NCo, NCoR, SnFrB;
 
 p. 764
 LOTUS
-1. Annual, hairy; inflorescence 1--3-flowered; corolla 5--8(12) mm …..-> L. angustissimus
+1. Annual, hairy; inflorescence 1--3-flowered; corolla 5--8(12) mm .....-> L. angustissimus
 + 'corolla 5--8(12)' made 'corolla 5--8(12) mm'
 2017 08 08
 
@@ -5383,7 +5543,7 @@ QUERCUS
 
 p. 804
 QUERCUS agrifolia var. agrifolia
-FLOWERING TIME: Mid Jan—Apr
+FLOWERING TIME: Mid Jan--Apr
 + 'Mar' made 'Mid Jan'
 2016 06 21
 
@@ -5414,7 +5574,7 @@ BIOREGIONAL DISTRIBUTION: KR, NCoRI, CaR, SN, SnFrB, SCoRO, ne WTR (Sierra Pelon
 
 p. 807
 QUERCUS kelloggii
-FLOWERING TIME: Mid Feb—May
+FLOWERING TIME: Mid Feb--May
 + 'Apr' made 'Mid Feb'
 2016 06 21
 
@@ -5450,14 +5610,14 @@ BIOREGIONAL DISTRIBUTION: KR, NCoR, CaRF, SNF, s SNH, Teh, ScV (Sutter Buttes), 
 
 p. 808
 QUERCUS wislizeni var. wislizeni
-FLOWERING TIME: Early Feb—May
+FLOWERING TIME: Early Feb--May
 + 'Mar' made 'Early Feb'
 2016 06 21
 
 p. 808
 FRANKENIA
-ETYMOLOGY: (Johann Frankenius, 1590—1661, Swedish botanist)
-+ 'colleague of Linnaeus' made '1590—1661, Swedish botanist'
+ETYMOLOGY: (Johann Frankenius, 1590--1661, Swedish botanist)
++ 'colleague of Linnaeus' made '1590--1661, Swedish botanist'
 2018 01 16
 
 p. 810
@@ -5578,7 +5738,7 @@ SYNONYMS: Philadelphus microphyllus var. stramineus (Rydb.) Henrickson; Philadel
 
 p. 830
 PHILADELPHUS microphyllus
-ELEVATION: 1340–3350 m.
+ELEVATION: 1340--3350 m.
 + '2840' made '3350'
 2019 11 26
 
@@ -6049,8 +6209,8 @@ FLOWER: sepals 3--4 mm, +- reniform to round, scarious; petals 4, +- 3 mm, rose;
 p. 902  
 (superseded by Supplement II)
 CALYPTRIDIUM pulchellum
-FLOWERING TIME: Apr—May
-+ 'Apr—Jul' made 'Apr—May'
+FLOWERING TIME: Apr--May
++ 'Apr--Jul' made 'Apr--May'
 2018 06 12
 
 p. 902  
@@ -6644,7 +6804,7 @@ BIOREGIONAL DISTRIBUTION: c NCo (Mendocino Co.), KR, NCoRO, NCoRI, n CaRF, SNF, 
 p. 959
 CASTILLEJA applegatei subsp. martinii
 BIOREGIONAL DISTRIBUTION: KR, NCoRO, NCoRI, e SnFrB, SCoR, SW (exc ChI), SNE, DMtns;
-+ 'SCoRI' made "SCoR'  
++ 'SCoRI' made 'SCoR'  
 2014 07 11
 
 p. 960
@@ -7180,8 +7340,8 @@ p2
 
 p. 1035
 LIMONIUM
-INFLORESCENCE: panicle, branched +- at plant base, flowers in sessile, 1–3(5)-flowered spike-like clusters, each 3-bracted at base, clusters evenly spaced along branches to crowded at branch tips.
-+ '1--3(5) flowered' made '1–3(5)-flowered'
+INFLORESCENCE: panicle, branched +- at plant base, flowers in sessile, 1--3(5)-flowered spike-like clusters, each 3-bracted at base, clusters evenly spaced along branches to crowded at branch tips.
++ '1--3(5) flowered' made '1--3(5)-flowered'
 2018 09 04
 
 p. 1040
@@ -7261,7 +7421,7 @@ p. 1057
 LEPTOSIPHON croceus
 TAXON AUTHOR: (Eastw.) Strother & Kersh
 + 'J.M. Porter & L.A. Johnson' made 'Strother & Kersh'
-NOTE: The combination Leptosiphon croceus (Eastw.) J.M. Porter & L.A. Johnson is not considered to have been validly published because the place of publication of the basionym was incorrectly cited by Porter & Johnson, a situation corrected by Strother & Kersh (Phytoneuron 2016-21: 1–2).
+NOTE: The combination Leptosiphon croceus (Eastw.) J.M. Porter & L.A. Johnson is not considered to have been validly published because the place of publication of the basionym was incorrectly cited by Porter & Johnson, a situation corrected by Strother & Kersh (Phytoneuron 2016-21: 1--2).
 + NOTE added
 2016 03 03
 
@@ -7380,7 +7540,7 @@ BIOREGIONAL DISTRIBUTION: SNE, D;
 p. 1060
 (superseded by Supplement III)
 LINANTHUS filiformis
-ELEVATION: 300–2800 m.
+ELEVATION: 300--2800 m.
 + '1800' made '2800'
 2019 11 12
 
@@ -8168,7 +8328,7 @@ TJM2 AUTHOR:
 p. 1119
 POLYGONUM aviculare subsp. depressum
 INFLORESCENCE: pedicels included, 1--2.5 mm; flowers 2--7, crowded distally or not.
-+ '1--2.5 mm flowers; 2–7,' made '1--2.5 mm; flowers 2–7,'
++ '1--2.5 mm flowers; 2--7,' made '1--2.5 mm; flowers 2--7,'
 2017 06 22
 
 p. 1120
@@ -8186,7 +8346,7 @@ BIOREGIONAL DISTRIBUTION: KR, NCoR, CaR, SN, SnBr, w MP;
 p. 1120
 POLYGONUM parryi
 NOTE:
-+ NOTE, 'Some pls from sw SnFrB (Santa Cruz Co.) have ocrea fibers ± like P. californi- cum and fr ± 2.5 mm, less shiny.', deleted
++ NOTE, 'Some pls from sw SnFrB (Santa Cruz Co.) have ocrea fibers +- like P. californi- cum and fr +- 2.5 mm, less shiny.', deleted
 2013 10 08
 
 p. 1121
@@ -8859,7 +9019,7 @@ ROSA
 p. 1201
 ROSA spithamea
 FLOWER: hypanthium gen 4--5 mm wide at fl, stalked-glandular, neck 3--4 mm wide; sepals gen glandular, entire, tip gen +- = body, entire; petals 10--15 mm, pink to red; pistils 10--20.
-+ 'hypanthium … glabrous, stalked-glandular' made 'hypanthium … stalked-glandular'
++ 'hypanthium ... glabrous, stalked-glandular' made 'hypanthium ... stalked-glandular'
 2013 02 28
 
 p. 1204
@@ -9016,7 +9176,7 @@ HABIT+: Tree < +- 20 m.
 p. 1228
 SALIX lasiandra
 PISTILLATE FLOWER: ovary glabrous, stalk 0.8--4 mm, style 0.2--0.8 mm; nectary adaxial.
-+ 'nectary adaxial;' deleted from beginning of statement, before 'ovary glabrous …' (stating it once is sufficient)
++ 'nectary adaxial;' deleted from beginning of statement, before 'ovary glabrous ...' (stating it once is sufficient)
 2012 08 27
 
 p. 1231
@@ -9457,8 +9617,8 @@ HABIT+: Ann [per].
 
 p. 1305
 CYPERACEAE
-FLOWER: unisexual or bisexual, small, generally wind-pollinated; perianth 0 or generally bristle like; stamens generally 3, anthers attached at base, 4 chambered; ovary superior, chamber 1, ovule 1, style 2–3(4)-branched.
-+ 'style 2--3-branched' made 'style 2–3(4)-branched'
+FLOWER: unisexual or bisexual, small, generally wind-pollinated; perianth 0 or generally bristle like; stamens generally 3, anthers attached at base, 4 chambered; ovary superior, chamber 1, ovule 1, style 2--3(4)-branched.
++ 'style 2--3-branched' made 'style 2--3(4)-branched'
 2019 01 17
 
 p. 1310
@@ -9621,7 +9781,7 @@ p. 1324
 (superseded by Supplement III)
 CAREX diandra
 BIOREGIONAL DISTRIBUTION: CaRH, SNH, MP;
-+ 'n&c SNH" made 'SNH' 
++ 'n&c SNH' made 'SNH' 
 2015 03 02
 
 p. 1324
@@ -9681,7 +9841,7 @@ p. 1326
 (superseded by Supplement III)
 CAREX haydeniana
 BIOREGIONAL DISTRIBUTION: SNH, Wrn, W&I, DMtns;
-+ 'c&s SNH" made 'SNH' 
++ 'c&s SNH' made 'SNH' 
 2015 03 02
 
 p. 1326
@@ -9871,7 +10031,7 @@ BIOREGIONAL DISTRIBUTION: KR, NCoR, CaRH, n SNF, SNH, SnFrB, SCoRO, TR, PR, MP, 
 p. 1337
 (superseded by Supplement III)
 CAREX subnigricans
-STEM: 2.5–20 cm.
+STEM: 2.5--20 cm.
 + '5' made '2.5'
 2016 06 07
 
@@ -10591,7 +10751,7 @@ TOXICITY: All taxa highly TOXIC (gen unpalatable) to livestock, humans from alka
 + 'All taxa highly TOXIC (gen unpalatable) to livestock, humans from alkaloids (esp in bulbs); caused serious illness to some members of Lewis and Clark Expedition.' made 'All taxa highly TOXIC (gen unpalatable) to livestock, humans from alkaloids (esp in bulbs).'
 2014 04 22 [on 2014 04 22, '; caused serious illness to some members of Lewis and Clark Expedition' deleted from this entry; on 2013 01 07, it was deleted from eFlora but not actually deleted from corrected statement in original listing of this entry (which was posted on 2013 01 07)]
 
-p. 1397
+p. 1397
 TRILLIUM
 3. Stamens < 1.25 &times; pistil; fl odor gen musty or fetid; w KR, SN (exc Teh), s CCo, SCoRO .....-> T. angustipetalum
 + 'ovary' made 'pistil'
@@ -10860,8 +11020,8 @@ INFLORESCENCE: 9--20 cm, dense, spikelets overlapping; branches ascending to ere
 
 p. 1431
 BROMUS sterilis
-SPIKELET: 20--35 mm, not strongly flattened; glumes glabrous or scabrous, upper 7.5--21 mm, 3(5)-veined, lower 6--14 mm, 1(3)-veined; florets 6--11; lemma 13--20 mm, back rounded, glabrous to scabrous, teeth 1–3 mm, awn 15--30 mm, straight; anthers 0.5--2 mm.
-+ 'teeth 0--22 mm' made 'teeth 1–3 mm' [was incorrectly made 'teeth 0--2 mm' on 2019 01 17]
+SPIKELET: 20--35 mm, not strongly flattened; glumes glabrous or scabrous, upper 7.5--21 mm, 3(5)-veined, lower 6--14 mm, 1(3)-veined; florets 6--11; lemma 13--20 mm, back rounded, glabrous to scabrous, teeth 1--3 mm, awn 15--30 mm, straight; anthers 0.5--2 mm.
++ 'teeth 0--22 mm' made 'teeth 1--3 mm' [was incorrectly made 'teeth 0--2 mm' on 2019 01 17]
 2019 01 29
 
 p. 1432
@@ -10997,7 +11157,7 @@ FRUIT: utricle-like, seed free from thin ovary wall.
 p. 1444
 ELYMUS
 SPIKELET: compressed laterally, glumes gen lanceolate to awn-like, occ 0, awned from tip or not; florets 1--11; breaking apart above glumes and between florets; lemma gen > glumes, gen rounded, 5--7-veined, tip acute to awned, awn straight or curved outward; palea <, =, or > lemma or 0; anthers 3(1), 1--8 mm.
-+ 'lemma … tip acute to awned' made 'lemma … tip gen acute to awned'
++ 'lemma ... tip acute to awned' made 'lemma ... tip gen acute to awned'
 2013 02 26
 
 p. 1444
@@ -11052,8 +11212,8 @@ TJM2 AUTHOR: James P. Smith, Jr. & Susan G. Aiken
 
 p. 1451
 FESTUCA
-SPIKELET: glumes 2, < lowest floret, unequal, lower sometimes minute, 1--3-veined, upper 3--5-veined; axis breaking above glumes and between florets, florets (1)2--10(17), gen bisexual; lemma 3–5(7)-veined, base gen glabrous, tip entire, occ minutely 2-toothed, awn 0 or terminal, gen straight, glabrous; palea +- = lemma; stamens 3 or 1.
-+ 'lemma base gen glabrous, 3--5(7)-veined, not converging at tip; awn (when present) gen terminal, straight, glabrous;' made 'lemma 3–5(7)-veined, base gen glabrous, tip entire, occ minutely 2-toothed, awn 0 or terminal, gen straight, glabrous;' [in TJM2; not abbreviated in eFlora]
+SPIKELET: glumes 2, < lowest floret, unequal, lower sometimes minute, 1--3-veined, upper 3--5-veined; axis breaking above glumes and between florets, florets (1)2--10(17), gen bisexual; lemma 3--5(7)-veined, base gen glabrous, tip entire, occ minutely 2-toothed, awn 0 or terminal, gen straight, glabrous; palea +- = lemma; stamens 3 or 1.
++ 'lemma base gen glabrous, 3--5(7)-veined, not converging at tip; awn (when present) gen terminal, straight, glabrous;' made 'lemma 3--5(7)-veined, base gen glabrous, tip entire, occ minutely 2-toothed, awn 0 or terminal, gen straight, glabrous;' [in TJM2; not abbreviated in eFlora]
 2013 11 08
 
 p. 1451
@@ -11135,6 +11295,11 @@ KOELERIA gerardi
 + 'KOELERIA gerardii' made 'KOELERIA gerardi'
 2014 01 14
 
+LUPINUS polyphyllus var. humicola
+TAXON AUTHOR: (A. Nelson) Barneby
++ 'TAXON AUTHOR.' made 'TAXON AUTHOR:'
+2022 06 01
+
 p. 1468
 ORCUTTIA inaequalis
 SYNONYMS: Orcuttia californica var. inaequalis (Hoover) Hoover
@@ -11179,8 +11344,8 @@ STEM: 10--79 cm, erect; nodes glabrous.
 
 p. 1472
 PENNISETUM clandestinum
-LEAF: sheath 1--10 cm, glabrous or hairy, +- inflated; ligule +- 1--2 mm; blade 1.5–15 cm, 1--6 mm wide, upper surface glabrous to short-hairy, flat or folded, tip obtuse.
-+ 'blade 1.5--3 cm' made 'blade 1.5–15 cm'
+LEAF: sheath 1--10 cm, glabrous or hairy, +- inflated; ligule +- 1--2 mm; blade 1.5--15 cm, 1--6 mm wide, upper surface glabrous to short-hairy, flat or folded, tip obtuse.
++ 'blade 1.5--3 cm' made 'blade 1.5--15 cm'
 2019 02 19
 
 p. 1472
@@ -11261,8 +11426,8 @@ POA
 
 p. 1478
 POA atropurpurea
-ELEVATION: 1250–2320 m.
-+ '1500--2200' made '1250–2320'
+ELEVATION: 1250--2320 m.
++ '1500--2200' made '1250--2320'
 2018 04 17
 
 p. 1479
@@ -11286,7 +11451,7 @@ NOTE: Widely planted as lawn or pasture grass. _Poa pratensis_ subsp. _agassizen
 p. 1480
 POA secunda
 SPIKELET: +- cylindric or little compressed; upper internodes generally > 1.2 mm; callus glabrous or with a ring of short hairs; lemma 3.5--5 mm, weakly keeled to rounded across lower back, glabrous to +- evenly short-hairy across body (rarely soft-hairy only on veins), smooth to scabrous.
-+ 'lemma 3.5--5 mm' made 'lemma 3.5–6 mm'
++ 'lemma 3.5--5 mm' made 'lemma 3.5--6 mm'
 2019 07 16
 
 p. 1480
@@ -11646,7 +11811,7 @@ STEM:
 
 Supplement I, p. 48
 CROCANTHEMUM greenei
-STEM: 15–68 cm.
+STEM: 15--68 cm.
 + '30' made '68'
 2016 06 07
 
@@ -11723,6 +11888,7 @@ BIOREGIONAL DISTRIBUTION: KR, NCoRO, NCoRI, CaRF, SN, GV, TR, PR;
 2016 05 24
 
 eFlora only
+
 HEDYCHIUM flavescens
 BIOREGIONAL DISTRIBUTION: SnFrB (Santa Cruz Co.); 
 + 'CCo (Santa Cruz Co.)' made 'SnFrB (Santa Cruz Co.)'  
@@ -11733,15 +11899,174 @@ SYNONYMS: Primula tetrandra (Suksd. ex Greene) Mast & Reveal; Dodecatheon alpinu
 + 'Dodecatheon tetrandum' made 'Dodecatheon tetrandrum'
 2019 02 19
 
++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++++
+*****************************************************************
+
+
 Beginning in 2020:
 
 EFLORA ONLY: On 21 Jan 2020 I made the decision to list further changes to the eflora here, with no reference to page numbers in TJM2 or the various Supplements. Indicated dates are the dates the changes were made to the underlying eFlora file, which appear in the eFlora online after the next update of the eFlora, which normally happens within a month or two.  If there is a correction that can be written in to a hardcopy of TJM2 as well, users should be able to figure that out from what is presented below. Entries are listed alphabetically by genus.
+
+ABRONIA maritima
+BIOREGIONAL DISTRIBUTION: c&s CCo, SCo, ChI;
++ 's CCo' made 'c&s CCo'
+2022 06 01
+
+ABRONIA umbellata
+HABIT+: Perennial herb, +- glabrous to glandular-hairy.
++ 'Annual,' made 'Perennial herb,'
+2022 03 31
+
+ACMISPON
+34. Stem, especially near tip, generally with spreading or obliquely directed, often straight, stiff hairs < 0.5 mm; corolla 4--6 mm; coastal and inland .....-> A. tomentosus
++ 'A. heermannii' made 'A. tomentosus'
+35. Corolla generally 4--5 mm; ovary generally finely strigose; SCo, SnBr, PR, DSon .....-> var. var. glabriusculus
++ 'var. heermannii' made 'var. glabriusculus'
+35' Corolla generally 5--6 mm; ovary generally soft spreading-hairy; NCo, NCoRO, CCo, SCoRO .....-> var. tomentosus
++ 'var. orbicularis' made 'var. tomentosus'
+36. Fruit included or +- exserted; leaflet hairs generally straight, tangled in age, generally obscuring surface; leaves silky-silvery .....-> A. argophyllus (2)
++ '36'' made '36.'
+37. Inflorescence generally < 1 cm wide, 4--8-flowered; corolla 6--10 mm; especially c SN and s .....-> var. argophyllus
++ '38.' made '37.'
+37' Inflorescence often +- 1.5 cm wide, 10--15-flowered; corolla 8--12 mm; n SN .....-> var. fremontii
++ '38'' made '37''
+36' Fruit exserted; leaflet hairs generally wavy, not obscuring surface; leaves gray or green .....-> A. decumbens
++ '36.' made '36''
++ 'nevadensis' made 'decumbens'
+38. Flowers generally 3--5 per inflorescence; calyx 6--7 mm, appearing blocky; banner abruptly upcurved 90&deg; TR, ne PR .....-> var. davidsonii
++ '37.' made '38.'
+38' Flowers generally 5--12 per inflorescence; calyx 5--10 mm, not appearing blocky; banner upcurved 30--90&deg; KR, NCoR, CaR, SN, CCo, SCo, w PR, DMtns .....-> var. decumbens
++ '37'' made '38''
++ 'var. nevadensis' made 'decumbens'
+2022 08 23
+
+ACMISPON decumbens
++ 'nevadensis' made 'decumbens'
+TAXON AUTHOR: (Benth.) Govaerts
++ '(S. Watson) Brouillet' made '(Benth.) Govaerts'
+SYNONYMS: Acmispon nevadensis (S. Watson) Brouillet, superfl.; Lotus nevadensis (S. Watson) Greene
++ 'Acmispon nevadensis (S. Watson) Brouillet, superfl.;' added
++ entry made alphabetical
+2022 08 23 
+
+ACMISPON decumbens var. davidsonii
++ 'nevadensis var. davidsonii' made 'decumbens var. davidsonii'
+TAXON AUTHOR: (Greene) Govaerts
++ '(Greene) Brouillet' made '(Greene) Govaerts'
+SYNONYMS: Acmispon nevadensis (S. Watson) Brouillet var. davidsonii (Greene) Brouillet, superfl.; Lotus davidsonii Greene; Lotus nevadensis (S. Watson) Greene var. davidsonii (Greene) Isely
++ 'Acmispon nevadensis (S. Watson) Brouillet var. davidsonii (Greene) Brouillet, superfl.;' added
++ entry made alphabetical
+2022 08 23
+
+ACMISPON decumbens var. decumbens
++ 'nevadensis var. nevadensis' made 'decumbens var. decumbens'
+TAXON AUTHOR: (Benth.) Govaerts
++ '(S. Watson) Brouillet' made '(Benth.) Govaerts'
+SYNONYMS: Acmispon nevadensis (S. Watson) Brouillet var. nevadensis, superfl.; Lotus douglasii Greene; Lotus nevadensis (S. Watson) Greene var. douglasii (Greene) Ottley; Lotus nevadensis var. nevadensis
++ 'Acmispon nevadensis (S. Watson) Brouillet var. nevadensis, superfl.;' added
++ entry made alphabetical
+2022 08 23
+
+ACMISPON tomentosus
++ 'heermannii' made 'tomentosus'
+TAXON AUTHOR: (Hook. & Arn.) Govaerts
++ '(Durand & Hilg.) Brouillet' made '(Hook. & Arn.) Govaerts'
+SYNONYMS: Acmispon heermannii  (Durand & Hilg.) Brouillet, superfl.; Lotus heermannii (Durand & Hilg.) Greene
++ 'Acmispon heermannii  (Durand & Hilg.) Brouillet, superfl.;' added
++ entry made alphabetical
+2022 08 23
+
+ACMISPON tomentosus var. glabriusculus
++ 'heermannii var. heermannii' made 'tomentosus var. glabriusculus'
+TAXON AUTHOR: (Hook. & Arn.) Govaerts
++ '(Durand & Hilg.) Brouillet' made '(Hook. & Arn.) Govaerts'
+SYNONYMS: Acmispon heermannii  (Durand & Hilg.) Brouillet var. heermannii, superfl.; Lotus heermannii var. heermannii
++ 'Acmispon heermannii  (Durand & Hilg.) Brouillet var. heermannii, superfl.;' added
++ entry made alphabetical
+2022 08 23
+
+ACMISPON tomentosus var. tomentosus
++ 'heermannii var. orbicularis' made 'tomentosus var. tomentosus
+TAXON AUTHOR: (A. Gray) Brouillet
++ '(A. Gray) Brouillet' made '(Hook. & Arn.) Govaerts'
+SYNONYMS: Acmispon heermannii (Durand & Hilg.) Brouillet var. orbicularis (A. Gray) Brouillet, superfl.; Lotus heermannii (Durand & Hilg.) Greene var. eriophorus (Greene) Ottley; Lotus heermannii var. orbicularis (A. Gray) Isely
++ 'Acmispon heermannii (Durand & Hilg.) Brouillet var. orbicularis (A. Gray) Brouillet, superfl.;' added
++ entry made alphabetical
+2022 08 23
 
 ACTAEA rubra
 BIOREGIONAL DISTRIBUTION: NW, CaR, SN (exc Teh), CCo, SnFrB, SCoRO, SnBr, MP;
 + 'CCo,' added
 + ', MP' added
 2020 04 08
+
+ADOXACEAE
++ 'ADOXACEAE' made 'VIBURNACEAE'
+NOTE: Incl in Caprifoliaceae in TJM (1993), and possibly in future. Viburnaceae adopted as a conserved name in 2016 [Taxon 65(4):878-879, August 2016], so must be used instead of Adoxaceae for all taxa previously said to belong to Adoxaceae.
++ 'Viburnaceae adopted as a conserved name in 2016 [Taxon 65(4):878-879, August 2016], so must be used instead of Adoxaceae for all taxa previously said to belong to Adoxaceae.' added.
+UNABRIDGED NOTE: Incl in Caprifoliaceae in TJM (1993), and possibly in future according to the Angiosperm Phylogeny Website (http://www.mobot.org/MOBOT/Research/APweb/welcome.html), which states, in part, "The whole lot might usefully be combined in a Caprifoliaceae s.l. (see also APG 2003), since similarities between the families are considerable and differences are mostly slight." Viburnaceae adopted as a conserved name in 2016 [Taxon 65(4):878-879, August 2016], so must be used instead of Adoxaceae for all taxa previously said to belong to Adoxaceae.
++ 'Viburnaceae adopted as a conserved name in 2016 [Taxon 65(4):878-879, August 2016], so must be used instead of Adoxaceae for all taxa previously said to belong to Adoxaceae.' added.
+2022 03 08
+
+
+AGROSTIS microphylla
+BIOREGIONAL DISTRIBUTION: NCo, s NCoR, GV, CCo, SCoRO, SCo;
++ 'SCoRO,' added
+2021 05 19
+
+AMSINCKIA lycopsoides
+NOTE: Homostylous. Hybridizes with _Amsinckia intermedia_.
++ '_Amsinckia menziesii_ var. _intermedia_.' Made '_Amsinckia intermedia_.'
+UNABRIDGED NOTE: Largest flowered populations restricted to northwestern ScV. In California often confused with _Amsinckia intermedia_.
++ '_Amsinckia menziesii_ var. _intermedia_.' Made '_Amsinckia intermedia_.'
+2021 02 11
+
+AMSINCKIA retrorsa
+UNABRIDGED NOTE: Occasionally hybridizes with _Amsinckia intermedia_. _Amsinckia retrorsa_ is confused with the very distinctive and uncommon _Amsinckia menziesii_; generally occurring as solitary individuals to occasionally small colonies.
++ '_Amsinckia menziesii_ var. _intermedia_' Made '_Amsinckia intermedia_'; '_Amsinckia menziesii_ var. _menziesii_' made '_Amsinckia menziesii_'
+2021 02 11
+
+ARCTOSTAPHYLOS
+57' Nascent inflorescence bracts glabrous or nonglandular- or glandular-hairy; KR, NCoRI (Colusa, Mendocino, Shasta, Trinity cos.; possibly Sonoma Co.), c&s NCoRO
++ '(Sonoma, Colusa, Shasta, Trinity cos.)' made '(Colusa, Mendocino, Shasta, Trinity cos.; possibly Sonoma Co.)'
+2021 08 24
+
+ARCTOSTAPHYLOS
+60. Leaf blade glaucous, canescent or densely white-tomentose, in age glabrous; ovary densely nonglandular-hairy; KR, NCoRI (Colusa, Mendocino, Shasta, Trinity cos.; possibly Sonoma Co.) .....-> A. malloryi
++ '(Sonoma, Colusa, Shasta, Trinity cos.)' made '(Colusa, Mendocino, Shasta, Trinity cos.; possibly Sonoma Co.)'
+2021 08 24
+
+ARCTOSTAPHYLOS malloryi
+BIOREGIONAL DISTRIBUTION: KR, NCoRI (Colusa, Mendocino, Shasta, Trinity cos.; possibly Sonoma Co.).
++ '(Sonoma, Colusa, Shasta, Trinity cos.)' made '(Colusa, Mendocino, Shasta, Trinity cos.; possibly Sonoma Co.)'
+2021 08 24
+
+ARISTOLOCHIA californica
+BIOREGIONAL DISTRIBUTION: KR, NCoRI, NCoRO, CaRF, n&c SNF, ScV, CCo, SnFrB.
++ 'NCoR' made 'NCoRI, NCoRO'; 'n SnJV,' deleted; ', n SCoRO' deleted
+2021 03 23
+
+ASTRAGALUS, Group 1:
+66' Flowers generally (8)10--40 per inflorescence, spreading or reflexed; fruit ascending or reflexed; stem > 15 cm; SNE, SNF, NCoRO, SnFrB
++ ', SnFrB' added
+67. Plant +- glabrous, especially at base, +- green; calyx 6.5--9 mm; corolla white; NCoRO, SnFrB .....-> A. agnicidus
++ ', SnFrB' added
+2022 03 31
+
+ASTRAGALUS agnicidus
+BIOREGIONAL DISTRIBUTION: NCoRO (s Humboldt, Mendocino cos.), SnFrB (Ben Lomond Mtn, Santa Cruz Co.).
++ ', SnFrB (Ben Lomond Mtn, Santa Cruz Co.)' added
+2022 03 31
+
+BELLARDIA trixago
+COMMON NAME: MEDITERRANEAN LINESEED
++ 'LINSEED' made 'LINESEED'
+2021 04 27
+
+BRODIAEA kinkiensis
+INFLORESCENCE: scapes 20--30 cm, slender; pedicels <= 8 cm.
++ '2--3 cm' made '20-30 cm'
+2021 04 27
 
 CALANDRINIA menziesii
 BIOREGIONAL DISTRIBUTION: CA-FP, DMoj (exc DMtns);
@@ -11753,6 +12078,21 @@ BIOREGIONAL DISTRIBUTION: e KR, nw CaRH;
 + 'nw CaR' made 'nw CaRH'; ', w MP' deleted
 2020 08 25
 
+CALOCHORTUS macrocarpus
+BIOREGIONAL DISTRIBUTION: n CaR, MP;
++ 'GB' made 'MP'
+2022 07 13
+
+CALYSTEGIA malacophylla subsp. malacophylla
+BIOREGIONAL DISTRIBUTION: KR, CaR, SN.
++ 'KR,' added
+2021 02 02
+
+CARDAMINE nuttallii
+LEAF: simple or compound, leaflets 3(5), terminal leaflet or simple leaf (0.9)1.3--4(5.2) cm, reniform to +- round, ovate, or oblong, base cordate to obtuse, margin crenate to dentate or 5--7-lobed; petiole (2)3--18(21) cm; cauline 1--3, leaflets 3(5), petioled, terminal 1--3.5(6) cm, widely ovate to oblong or linear.
++ 'rhizome simple or compound' made 'simple or compound'
+2021 03 17
+
 CAULANTHUS anceps
 BIOREGIONAL DISTRIBUTION: s SNF, Teh, sw SnJV, se SCoRO, SCoRI, n WTR.
 + 'Teh,' added
@@ -11762,6 +12102,11 @@ CAULANTHUS lemmonii
 SYNONYMS: Caulanthus coulteri S. Watson var. lemmonii (S. Watson) Munz; Streptanthus coulteri (S. Watson) A. Gray ex Greene var. lemmonii (S. Watson) Jeps.
 + '; Streptanthus lemmonii Jepson 1920, non S. Watson 1890' added
 2020 01 28
+
+CEANOTHUS pendletonensis
+FLOWERING TIME: Mar--Jun
++ 'Apr' made "Jun'
+2022 06 21
 
 CENCHRUS
 2' Sheaths compressed, but not strongly keeled; bracts 8--40, broader at base, 1--3 mm; spikelets 3.5--5.9 mm .....-> C. spinifex
@@ -11775,6 +12120,47 @@ TAXON AUTHOR: Cav.
 BIOREGIONAL DISTRIBUTION: GV, s CCo, SCoRO, SCo, PR, DMoj (near Daggett), DSon;
 + 's CCo, SCoRO,' added
 2020 08 18
+
+CENTAUREA
+15. Involucre 10--13 mm .....-> C. stoebe subsp. australis
++ 'micranthos' made 'australis'
+2022 10 18
+
+CENTAUREA stoebe L. subsp. australis
++ 'micranthos' made 'australis'
+TAXON AUTHOR: (Pančić ex A.Kern.) Greuter
++ '(Gugler) Hayek' made '(Pančić ex A.Kern.) Greuter'
+SYNONYMS: Centaurea maculosa Lam.; Centaurea australis Pančić ex A.Kern.; Centaurea sublanata Boiss. subsp. australis (Pančić ex A.Kern.) Nyman; Centaurea biebersteinii DC. subsp. australis (Pančić ex A.Kern.) Dostál; Centaurea stoebe L. subsp. micranthos (Griseb.) Hayek; Centaurea maculosa Lam. subsp. biebersteinii (DC.) Nyman
++ '; Centaurea australis Pančić ex A.Kern.; Centaurea sublanata Boiss. subsp. australis (Pančić ex A.Kern.) Nyman; Centaurea biebersteinii DC. subsp. australis (Pančić ex A.Kern.) Dostál; Centaurea stoebe L. subsp. micranthos (Griseb.) Hayek; Centaurea maculosa Lam. subsp. biebersteinii (DC.) Nyman' added
+2022 10 18
+
+CHLOROGALUM pomeridianum var. pomeridianum
+ELEVATION: < 1900 m.
++ '1500' made '1900'
+BIOREGIONAL DISTRIBUTION: NW, CaRF, SNF, n SNH, Teh, w GV, CW, SW;
++ 'CaRF,' 'Teh,' added
+2022 01 19
+
+CHORIZANTHE diffusa
+INFLORESCENCE: bracts 2, awns 0; involucre 2--2.5 mm, 3-angled, 6-ribbed, teeth 6, 0.5--1 mm, margins white, abaxial longest, awns 1--2 mm, hooked.
+FLOWER: 1, 2.5--3 mm, glabrous; perianth 2-colored, tube lemon-yellow, lobes white, entire; stamens 3--9.
++ 'margins white or +- pink to purple,' made 'margins white,'
+2021 11 02
+
+CLARKIA
+32. Flowers many on well-developed branches; c&s SNF, Teh .....-> C. speciosa subsp. polyantha
++ 's SNF' made 'c&s SNF'
+2021 06 16
+
+CLARKIA speciosa subsp. polyantha
+BIOREGIONAL DISTRIBUTION: c&s SNF, Teh.
++ 's SNF' made 'c&s SNF'
+2021 06 16
+
+CLAYTONIA perfoliata
+COMMON NAME: MINER'S LETTUCE
++ 'MINER'S LETTUCE' made 'ROOREH'
+2022 05 03
 
 CLEMATIS lasiantha
 BIOREGIONAL DISTRIBUTION: KR, NCoRI, NCoRO, CaRF, SNF, ScV (Sutter Buttes), CW, SW;
@@ -11791,6 +12177,13 @@ BIOREGIONAL DISTRIBUTION: SW, s DMoj;
 + 'DMtns (Little San Bernardino Mtns)' made 's DMoj'
 2020 06 16
 
+CORNUS sericea subsp. sericea
+BIOREGIONAL DISTRIBUTION: CA-FP, GB (uncommon s CA);
++ '(uncommon s CA).' made '(uncommon s CA);'
+DISTRIBUTION OUTSIDE CALIFORNIA: to Alaska, eastern Canada, Virginia, New Mexico, northern Mexico, introduced in western Europe.
++ DISTRIBUTION OUTSIDE CALIFORNIA added
+2021 11 02
+
 CRUCIANELLA angustifolia
 BIOREGIONAL DISTRIBUTION: s KR, NCoRI, s CaR, n SN, e ScV, SCoRO;
 + ', SCoRO' added
@@ -11801,6 +12194,16 @@ CUSCUTA
 + 'Calyx, corolla lobes tips' made 'Calyx, corolla lobe tips'
 2020 12 03
 
+CYNARA cardunculus L. subsp. flavescens
+LEAF: lobes tipped with needle-like spines 1--3 cm.
++ 'spines 1--3 cm margin.' Made 'spines 1--3 cm.'
+2021 02 11
+
+CYPRIPEDIUM californicum
+BIOREGIONAL DISTRIBUTION: KR, NCoRH, NCoRO, w CaR, n SN, nw SnFrB;
++ 'NCoRH,' added
+2021 03 23
+
 CYPRIPEDIUM montanum
 BIOREGIONAL DISTRIBUTION: NW (exc NCo), CaR, n&c SNH, sw SnFrB, MP;
 + 'NW' made 'NW (exc NCo)'; 'n&c SN' made 'n&c SNH'
@@ -11810,6 +12213,16 @@ CYPRIPEDIUM parviflorum Salisb. var. makasin
 BIOREGIONAL DISTRIBUTION: n SNH;
 + 'SN' made 'n SNH'
 2020 11 11
+
+CYSTOPTERIDACEAE
+LEAF: spirally arranged, short-spaced or distant, 5--40 cm, +- alike; stipe firm or fleshy, with 2 vascular strands, often expanded at base ("trophopods"); blade 2--3-pinnate-pinnately lobed, thin-herbaceous, broadest at the base or lanceolate, veins free, extending to leaf margin.
++ 'fleshly' made 'fleshy'
+2021 09 16
+
+DELPHINIUM
+26. Basal leaves generally 0 in flower; cauline leaves >= 3; NCoRI, CaRF, SNF, c&s SNH, ScV, e SnFrB .....-> subsp. hansenii
++ ', e SnFrB' added
+2021 04 06
 
 DELPHINIUM decorum Fisch. & C.A. Mey. subsp. decorum
 BIOREGIONAL DISTRIBUTION: NCo, n CCo, SnFrB.
@@ -11825,11 +12238,64 @@ DIPLACUS mephiticus
 SYNONYMS: Eunanus angustifolius Greene; Mimulus angustifolius (Greene) A.L. Grant; Mimulus coccineus Congdon; Mimulus coccineus var. wolfii (Eastw.) D.W. Taylor; Mimulus densus A.L. Grant; Mimulus mephiticus Greene; Mimulus nanus Hook. & Arn. var. mephiticus (Greene) D.M. Thomps.; Mimulus reifschneiderae Edwin; Mimulus stamineus A.L. Grant; Mimulus washoensis Edwin; Mimulus wolfii Eastw.
 + 'Mimulus nanus (Hook. & Arn.) var. mephiticus (Greene) D.M. Thomps.' Made 'Mimulus nanus Hook. & Arn. var. mephiticus (Greene) D.M. Thomps.'
 2020 07 28
+ELEVATION: 470-3975 m.
++ '1520--3445' made '470-3975'
+2022 07 13
+
+DOWNINGIA
+7. Upper corolla lobes densely hairy adaxially near tips .....-> var. mirabilis
++ 'eximia' made 'mirabilis'
+2022 03 22
+
+DOWNINGIA ornatissima var. mirabilis
++ 'eximia' made 'mirabilis'
+TAXON AUTHOR: (J. T. Howell) Schultheis & Zarucchi
++ '(Hoover) McVaugh' made '(J. T. Howell) Schultheis & Zarucchi'
+SYNONYMS: Downingia mirabilis J.T. Howell; Downingia mirabilis J.T. Howell var. eximia Hoover; Downingia ornatissima Greene var. eximia (Hoover) McVaugh
++ '; Downingia ornatissima Greene var. eximia (Hoover) McVaugh' added
+NOTE: Name correction discussed in Novon 25:488, 2016-2017.
++ NOTE added
+2022 03 22
+
+DRYOPTERIS arguta
+TAXON AUTHOR: (Kaulf.) Watt
++ 'Maxon' made 'Watt'
+2021 03 30
+
+DUDLEYA
+11. Leaves in &times;-section round nearly to base, 2--4 mm thick .....-> D. attenuata subsp. orcuttii
++ 'attenuata' made 'orcuttii'
+2022 07 20
+
+DUDLEYA attenuata subsp. orcuttii
++ 'DUDLEYA attenuata subsp. attenuata' made 'DUDLEYA attenuata subsp. orcuttii'
+TAXON AUTHOR: (Rose) Moran
++ '(S. Watson) Moran' made '(Rose) Moran'
+SYNONYMS: Dudleya attenuata subsp. attenuata, misappl. in TJM2
++ 'Dudleya attenuata subsp. orcuttii (Rose) Moran' made 'Dudleya attenuata subsp. attenuata, misappl. in TJM2'
+UNABRIDGED NOTE: _Dudleya attenuata_ subsp. _attenuata_ and _Dudleya attenuata_ subsp. _australis_ Moran in northern Baja California.
++ '_Dudleya attenuata_ subsp. _australis_ Moran in northern Baja California.' made '_Dudleya attenuata_ subsp. _attenuata_ and _Dudleya attenuata_ subsp. _australis_ Moran in northern Baja California.'
+2022 07 20
 
 EHRHARTA calycina
 BIOREGIONAL DISTRIBUTION: s NCoRO, s NCoRI, ScV, CCo, SCoRO, SW;
 + 'CCo,' added
 2020 10 21
+
+ERIGERON bloomeri var. bloomeri
+BIOREGIONAL DISTRIBUTION: KR, CaR, n SNH, GB;
++ 'KR,' added
+2022 08 31
+
+ERIOPHYLLUM congdonii
+BIOREGIONAL DISTRIBUTION: c SN (Mariposa Co.).
++ 'c SNF' made 'c SN'
+2022 06 21
+
+ERODIUM
+SPECIES IN GENUS: 79 species: temperate America, Eurasia, northern Africa, Australia.
++ '+- 74 species' made '79 species'
+2022 05 03
 
 ERODIUM cicutarium
 TAXON AUTHOR: (L.) L'H&eacute;r.
@@ -11856,6 +12322,16 @@ BIOREGIONAL DISTRIBUTION: NW, CaR, SNH, SCoRO, TR, SnJt, MP, W&I (White Mtns);
 + ', W&I (White Mtns)' added
 2020 01 21
 
+ERYTHRANTHE microphylla
+BIOREGIONAL DISTRIBUTION: CA;
++ 'NW, CaRH, SNH, WTR, SnBr, SnJt, n SNE (Sweetwater Mtns), W&I;' made 'CA'
+2021 02 16
+
+ERYTHRANTHE moschata
+BIOREGIONAL DISTRIBUTION: CA-FP (except GV), GB;
++ 'NW, CaR, MP;' made 'CA-FP (except GV), GB;'
+2021 02 16
+
 ERYTHRANTHE nasuta
 SYNONYMS: Mimulus nasutus Greene; Mimulus bakeri Gand.; Mimulus cuspidatus Greene; Mimulus erosus Greene; Mimulus guttatus DC. var. gracilis (A. Gray) G.R. Campbell; Mimulus guttatus var. nasutus (Greene) Jeps.; Mimulus langsdorffii Greene var. nasutus (Greene) Jeps.; Mimulus luteus L. var. gracilis A. Gray; Mimulus puncticalyx Gandoger; Mimulus sookensis B.G. Benedict, Modliszewski, Sweigart, N.H. Martin, Ganders & John H. Willis; Mimulus subreniformis Greene
 + 'Mimulus bakeri Gandoger' made 'Mimulus bakeri Gand.'
@@ -11866,6 +12342,26 @@ SYNONYMS: Mimulus pardalis Pennell; Mimulus cupriphilus Macnair; Mimulus guttatu
 + '; Mimulus guttatus DC. var. pardalis (Pennell) D.W. Taylor; Mimulus guttatus DC. var. cupriphilus (Macnair) D.W. Taylor' added
 2020 07 28
 
+ERYTHRANTHE rhodopetra
+FLOWERING TIME: Mar--May
++ 'Jun--May' made 'Mar--May'
+2021 02 16
+
+EUPHORBIA albomarginata
+BIOREGIONAL DISTRIBUTION: s SN, Teh, s SnJV, SW, W&I, D;
++ 's SnJV, SW, D;' made 's SN, Teh, s SnJV, SW, W&I, D;'
+2021 09 16
+
+FILAGO pyramidata var. pyramidata
+BIOREGIONAL DISTRIBUTION: NCoRI, n CCo, SnFrB;
++ 'n&c SnFrB' made 'SnFrB'
+2021 06 03
+
+FRITILLARIA biflora
+COMMON NAME: CHOCOLATE LILY
++ ', MISSION BELLS' deleted
+2022 05 03
+
 GARRYA
 2. Leaf margin +- to strongly wavy and often +- to strongly rolled under; pistillate flowers (1)3 per bract; inflorescence in fruit 18--28 mm wide; NCo, NCoRO, ScV, CCo, SnFrB, SCoRO .....-> G. elliptica
 + 'n SNF,' deleted
@@ -11875,6 +12371,21 @@ GARRYA elliptica
 BIOREGIONAL DISTRIBUTION: NCo, KR, NCoRO, CW (exc SCoRI);
 + 'n SNF,' deleted
 2020 01 21
+
+GERANIACEAE
+GENERA IN FAMILY: 6 genera, 709 species: temperate, +- tropics. Some cultivated for ornamental, perfume oils.
++ '+- 750 species' made '709 species'
+2022 05 03
+
+GERANIUM
+SPECIES IN GENUS: 307 species: temperate, tropical mountains.
++ '+- 400 species' made '307 species'
+2022 05 03
+
+GILIA tenuiflora subsp. tenuiflora
+BIOREGIONAL DISTRIBUTION: CCo, s SnFrB, SCoR.
++ 's SnFrB,' added
+2021 02 25
 
 GITHOPSIS
 STEM: gen erect, 2--40 cm, 4-angled, branched or not.
@@ -11906,10 +12417,30 @@ STEM: 2--40 cm.
 + 'erect,' deleted
 2020 06 30
 
+GRATIOLA ebracteata
+FLOWER: sepals free, equal, 4--7 mm, 6--15 mm in fruit, lanceolate, acuminate; corolla 5--8 mm, throat +- yellow, limb white, +- pink-tinged.
++ 'white +- pink-tinged' made 'white, +- pink-tinged'
+2021 02 25
+
+HESPEROCYPARIS pigmaea
++ 'pygmaea' made 'pigmaea'
+SYNONYMS: Callitropsis pygmaea (Lemmon) D.P. Little, orth. var.; Cupressus goveniana Gordon subsp. pygmaea (Lemmon) A. Camus, orth. var.; Cupressus goveniana Gordon subsp. pygmaea (Lemmon) Bartel, superfl., orth. var.; Cupressus goveniana subsp. pigmaea; Cupressus pygmaea (Lemmon) Sarg., orth. var.; Cupressus goveniana Gordon var. pygmaea Lemmon, orth. var.; Cupressus goveniana subsp. pygmaea (Lemmon) A. Camus, orth. var.; Cupressus goveniana Gordon var. pygmaea Lemmon, orth. var.
++ ', orth. var.' added to all names spelled 'pygmaea', deleted from Cupressus goveniana subsp. pigmaea
+2021 12 02
+
 HETEROTHECA villosa var. minor
 SYNONYMS: Heterotheca villosa var. hispida (Hook.) V.L. Harms; Heterotheca villosa var. villosa, misappl.; Chrysopsis villosa (Pursh) Nutt. ex DC. var. villosa, misappl.
 + '; Chrysopsis villosa (Pursh) Nutt. ex DC. var. villosa, misappl.' added
 2020 08 05
+
+HOOVERIA purpurea var. reducta
++ 'reductum' made 'reducta'
+2022 01 19
+
+HORDEUM depressum
+BIOREGIONAL DISTRIBUTION: CA-FP, western edge of DMoj exc DMtns;
++ 'CA (exc GB, DSon);' made 'CA-FP, western edge of DMoj exc DMtns;'
+2021 11 11
 
 HOSACKIA stipularis var. stipularis
 BIOREGIONAL DISTRIBUTION: NCo, NCoR, CW.
@@ -11921,6 +12452,18 @@ BIOREGIONAL DISTRIBUTION: e PR, D (exc DMtns);
 + 'D' made 'D (exc DMtns)'
 2020 02 25
 
+KEY TO FAMILIES, Group 17
+19. Leaves compound .....-> VIBURNACEAE (_Sambucus_)
++ 'ADOXACEAE' made 'VIBURNACEAE'
+20. Leaves 3--5-veined from base .....-> VIBURNACEAE (_Viburnum_)
++ 'ADOXACEAE' made 'VIBURNACEAE'
+2022 03 08
+
+LEERSIA oryzoides
+BIOREGIONAL DISTRIBUTION: CA-FP (exc SCoR);
++ 'CA-FP (exc CW);' made 'CA-FP (exc SCoR);'
+2021 03 23
+
 LEPIDIUM latipes
 STEM: erect to decumbent, 1 or several from base, 0.2--1.5(3.8) dm, simple or branched.
 + 'erect decumbent' made 'erect to decumbent'
@@ -11928,18 +12471,51 @@ STEM: erect to decumbent, 1 or several from base, 0.2--1.5(3.8) dm, simple or br
 
 LEPIDIUM oblongum
 STEM: erect to decumbent, generally several from base, (5)1--2.4(3.2) dm, branched distally.
-+ '(5)1--2.4(3.2) dm' made '(0.5)1–2.4(3.2) dm'
++ '(5)1--2.4(3.2) dm' made '(0.5)1--2.4(3.2) dm'
 2020 02 25
+
+LOBELIA cardinalis L. var. pseudosplendens
+BIOREGIONAL DISTRIBUTION: SnGb, SnBr, PR, s W&I (Inyo Mtns), DMtns (Panamint Range);
++ ', s W&I (Inyo Mtns)' added
+2021 01 13
 
 LOMATIUM caruifolium
 FRUIT: 6--13 mm, ovate to obovate, glabrous; wings < body in width.
 + '+- thick,' deleted
 2020 06 30
 
+MALVA
+6' Involucel < calyx; leaves sparsely stellate hairy; petals pale pink to white generally with 3 dark veins; stem base not woody .....-> M. multiflora
++ 'M. pseudolavatera' made 'M. multiflora'
+2022 07 13
+
+MALVA multiflora
++ 'pseudolavatera' made 'multiflora' [and description moved to conform to alphabetical order]
+TAXON AUTHOR: (Cav.) Soldano, Banfi & Galasso
++ 'Webb & Berthel.' made '(Cav.) Soldano, Banfi & Galasso'
+SYNONYMS: Lavatera cretica L.; Malva linnaei M.F. Ray superfl.; Malva pseudolavatera Webb. & Berthel.
++ '; Malva pseudolavatera Webb. & Berthel.' added
+2022 07 13
+
 MARAH fabacea
 BIOREGIONAL DISTRIBUTION: CA-FP (exc n NW, n CaR), w DMoj exc DMtns.
 + 'DMoj' made 'w DMoj exc DMtns'
 2020 06 30
+
+MICROPUS
+NOTE: Our species (sect. _Rhyncholepis_) may comprise a separate North American genus.
++ 'America.' made 'American'
+2022 01 14
+
+MONOTROPA uniflora
+BIOREGIONAL DISTRIBUTION: NCo, KR, NCoRO, s SnFrB;
++ ', s SnFrB' added
+2021 02 16
+
+MONTIA linearis
+TAXON AUTHOR: (Douglas) Greene
+'Hook.' made 'Douglas'
+2021 05 19
 
 NAVARRETIA
 45' Corolla 9--12 mm, > calyx, lobes dark to light blue to +- pink or +- white .....-> N. squarrosa
@@ -11956,10 +12532,48 @@ FLOWER: calyx 7--10 mm, lobes narrowly lanceolate; corolla 9--12 mm, > calyx, da
 + 'dark blue' made 'dark to light blue to +- pink or +- white'
 2020 09 16
 
+OENANTHE sarmentosa
+LEAF: petiole 2--35 cm; blade 7--30 cm, 6--25 cm wide, generally 2-pinnate, leaflets 1--6 cm, +- ovate, serrate to lobed; basal leaveslong-petioled, ± oblong-lanceolate, cauline shorter-petioled, ± triangular-ovate.
++ 'petiole 1--3.5 dm' made 'petiole 2--35 cm'
++ 'blade 1--3 dm' made 'blade 7--30 cm'
++ 'cauline leaves like basal' made 'basal leaves long-petioled, ± oblong-lanceolate, cauline shorter-petioled, ± triangular-ovate'
+2022 10 13
+
 OLEACEAE
 FLOWER: generally bisexual, generally radial; calyx generally minute (0), tube cup-shaped, teeth or lobes 4--15; petals (0)4--6(8), generally fused; nectar disk often present; stamens (0)2(4--5), epipetalous; pistil 1, ovary superior, chambers 2, each 2--4 ovuled, placenta axile, style 1, stigma generally 2-lobed.
 + 'calyx generally minute (0), tube cup-shaped, lobes 4--15' made 'calyx generally minute (0), tube cup-shaped, teeth or lobes 4--15'
 2020 07 16
+
+OREOCARYA subretusa
+TAXON AUTHOR: (I.M. Johnst.) Abrams
++ 'I.M. Johnst.' made '(I.M. Johnst.) Abrams'
+2022 06 01
+
+PACKERA multilobata
+ELEVATION: 1100--3445 m.
++ '3000' made '3445'
+2022 01 14
+
+PELARGONIUM
+SPECIES IN GENUS: 280 species: southern Africa, St. Helena, Asia Minor, Madagascar, Australia.
++ '+- 300 species' made '280 species'
+2022 05 03
+
+
+PENSTEMON centranthifolius
+TAXON AUTHOR: (Benth.) Benth. 
++ 'Benth.' made '(Benth.) Benth.'
+2021 12 02
+
+PHALARIS
+5. Panicle lanceolate, branched, lobed, often +- purple; glumes 4--5 mm; fertile lemma 2.5--4 mm, sterile lemma 1.5--2 mm .....-> P. arundinacea
++ 'occasionally' made 'often'
+2020 12 18
+
+PHALARIS arundinacea
+INFLORESCENCE: 5--40 cm, 2--15 cm wide, lanceolate, interrupted near base, lobed and branched, often +- purple.
++ 'branched in age' made 'branched'
+2020 12 18
 
 PHRYMACEAE
 3. Annual, calyx lobes +-= tube, with faint unraised midribs; plant hairs dense, long, soft, wavy .....-> MIMETANTHE
@@ -11968,14 +12582,44 @@ PHRYMACEAE
 + 'calyx lobes shorter than the calyx tube' made 'calyx lobes generally << tube'
 2020 11 11
 
+PINUS sabiniana
+TAXON AUTHOR: Douglas
++ 'D. Don' made 'Douglas'
+2022 01 19
+
 PLAGIOBOTHRYS scriptus
 COMMON NAME: SCRIBE'S POPCORNFLOWER
 + 'SCRIDGEE'S' made 'SCRIBE'S'
+
+PRIMULA clevelandii var. patula
+BIOREGIONAL DISTRIBUTION: CaRF, SNF, c SNH, GV, CW.
++ 'CaRF,' added
+2021 03 23
+
+PRIMULA hendersonii
+BIOREGIONAL DISTRIBUTION: NW, CaR, SNF, SNH, GV, SnFrB, CW, SnBr;
++ 'n SHN' made 'SNH'
+2021 03 23
+
+PSEUDOGNAPHALIUM beneolens
+BIOREGIONAL DISTRIBUTION: KR, NCoRO, NCoRI, SNF, n&s SNH, ScV, CW, SW;
++ 'KR, NCoRO, NCoRI, SNF, s SNH, ScV, SnFrB, SCoRO, SCo, SnGb, PR;' made 'KR, NCoRO, NCoRI, SNF, n&s SNH, ScV, CW, SW;'
+2021 11 11
+
+PSEUDOGNAPHALIUM biolettii
+TAXON AUTHOR: Anderb. ex G. L. Nesom
++ 'Anderb.' made 'Anderb. ex G. L. Nesom'
+2022 01 19
 
 PSEUDOTSUGA menziesii var. menziesii
 BIOREGIONAL DISTRIBUTION: NCo, KR, NCoR, CaRH, n&c SNH, CCo, SnFrB, SCoRO;
 + 'NCo,' added
 2020 07 07
+
+PYROLA picta
+SYNONYMS: 
++ 'Pyrola picta Sm. f. aphylla (Sm.) Camp; Pyrola picta subsp. dentata (Sm.) Piper' deleted
+2021 08 04
 
 QUERCUS vacciniifolia
 TAXON AUTHOR: Hittell
@@ -11997,25 +12641,72 @@ BIOREGIONAL DISTRIBUTION: CCo, SCo, w edge DMoj;
 + 'MP,' deleted
 2020 12 09
 
+SALIX lemmonii
+BIOREGIONAL DISTRIBUTION: KR, s NCoRO (Lake Co.), s NCoRI (Sonoma Co.), CaRH, SNH, SnBr, SnJt, Wrn;
++ ', Wrn' added
+2022 07 07
+
 SARCODES sanguinea
 BIOREGIONAL DISTRIBUTION: KR, NCoRO, NCoRH, CaRH, SNH, SCoRO, TR, e PR;
 + 'PR' made 'e PR'; ', MP' deleted
 2020 09 01
+
+SCORZONERA hispanica
+BIOREGIONAL DISTRIBUTION: KR, NCoRO, w SnFrB;
++ ', w SnFrB' added
+2021 06 16
+
+SCROPHULARIACEAE
+FLOWER: generally bisexual; calyx lobes 4--5; corolla bilateral to radial, lobes 4--5; stamens epipetalous, 4--5[6--8], 5th a staminode in _Scrophularia_; pistil 1, ovary superior, chambers generally 2, placentas axile, style 1, stigma lobes generally 2.
++ 'stamens epipetalous, 4--5,' made 'stamens epipetalous, 4--5[6--8],' 
+2022 03 15
+
+SEDUM paradisum subsp. paradisum
+TAXON AUTHOR: (Denton) Denton ex B.L. Wilson
++ '(Denton) Denton ex B.L. Wilson' added
+2022 08 31
 
 SEDUM praealtum
 BIOREGIONAL DISTRIBUTION: CCo (Santa Cruz Co.);
 + 'mouth of San Lorenzo River,' deleted
 2020 11 11
 
+SOLIDAGO elongata
+UNABRIDGED NOTE: _Solidago elongata_ Nutt. conserved against _Solidago elongata_ P&eacute;pin (ICN 2018, Shenzhen Code).
++ '_Solidago elongata_ Nutt. is proposed for conservation against _Solidago elongata_ P&eacute;pin.' made '_Solidago elongata_ Nutt. conserved against _Solidago elongata_ P&eacute;pin (ICN 2018, Shenzhen Code).'
+2021 09 08
+
 SPERGULARIA rubra
 BIOREGIONAL DISTRIBUTION: NW, CaR, c SNF, n&c SNH, GV, CW, SCo, SnGb, PR, DMtns;
 + 'ScV' made 'GV'
 2020 05 12
 
+STIPA
+14' Leaf blade 2--10 mm wide, flat; panicle 10--40 cm, proximal inflorescence nodes generally 3--7-branched .....-> S. miliacea var. miliacea
++ '3--7 branched' made '3--7-branched'
+2021 03 17
+
+STREPTANTHUS glandulosus
+NOTE: 8 subspecies recognized, all in California, most local.
++ '8 subspecies recognized, 7 in California, most local.' made '8 subspecies recognized, all in California, most local.
+UNABRIDGED NOTE: _Streptanthus glandulosus_ subsp. _josephinensis_ endemic to southwestern Oregon, northwestern California.
++ 'endemic to southwestern Oregon.' made 'endemic to southwestern Oregon, northwestern California.'  
+2021 07 21
+
 STREPTANTHUS tortuosus
 SYNONYMS: Streptanthus lemmonii S. Watson; Streptanthus tortuosus var. flavescens Jeps.; Streptanthus tortuosus var. orbiculatus (Greene) H.M. Hall; Streptanthus tortuosus var. suffrutescens (Greene) Jeps.; Streptanthus tortuosus var. oblongus Jeps.; Streptanthus tortuosus var. optatus Jeps.; Streptanthus tortuosus var. pallidus Jeps.; Streptanthus tortuosus var. tortuosus; Streptanthus tortuosus var. foliosus (Greene) D.W. Taylor
 + 'Streptanthus lemmonii S. Watson;' added
 2020 01 28
+
+STRUTHIOPTERIS spicant
+TAXON AUTHOR: (L.) Weiss
++ 'F.W. Weiss' made 'Weiss'
+2021 03 30
+
+THALICTRUM fendleri
+TAXON AUTHOR: Engelm. in A. Gray
++ 'ex' made 'in'
+2022 03 31
 
 TORREYA californica
 BIOREGIONAL DISTRIBUTION: NCo, NCoR, CaRF, s CaRH, SN, CCo, SnFrB, n SCoRI.
@@ -12029,11 +12720,38 @@ BIOREGIONAL DISTRIBUTION: CA-FP;
 + ', sw edge DMoj' deleted
 2020 07 07
 
+TRIANTHEMA portulacastrum
+BIOREGIONAL DISTRIBUTION: SnJV, e SCo, PR, D;
++ 'e SCo,' added; 'PR,' added
+2021 01 13
+
+TRIFOLIUM, Group 2
+13. Flowers generally 1--5 per inflorescence, bracts generally inconspicuous; corolla white to lavender-striate; plant generally small (see Group 1, couplet 13 for subspecies) .....-> T. monanthum (2)
++ 'varieties' made 'subspecies'
+2022 01 14
+
+TRIFOLIUM, Group 2
+47. Inflorescence < 1 cm wide, flowers generally 1--5, erect (see Group 1, couplet 13, for subspecies) .....-> T. monanthum (2)
++ 'varieties' made 'subspecies'
+2022 01 14
+
+TRISETUM
+3. Spikelets generally to base of panicle branches; lower inflorescence branches ascending to erect; lower glume 3--5 mm .....-> T. canescens
++ 'Florets' made 'Spikelets'
+3' Spikelets only at tips of panicle branches; lower inflorescence branches generally spreading; lower glume < 3 mm .....-> T. cernuum
++ 'Florets' made 'Spikelets'
+2021 06 03
+
 TRITELEIA laxa
 FLOWERING TIME: Mar--Jun
 + 'Apr' made 'Mar'
 2020 04 08
 
+URTICA dioica subsp. holosericea
+NOTE: Plants in shade tend to have wider leaves, fewer hairs, so approach _Urtica dioica_ subsp. _gracilis_. This name is a later homonym and therefore illegitimate, so that a new combination in Urtica dioica at the rank of subsp. needs to be made.
++ 'This name is a later homonym and therefore illegitimate, so that a new combination in Urtica dioica at the rank of subsp. needs to be made.' added
+2022 03 31
+ 
 VACCINIUM ovatum
 BIOREGIONAL DISTRIBUTION: NCo, KR, NCoRO, CCo, SnFrB, SCoRO, n ChI (Santa Cruz, Santa Rosa islands), WTR, PR (uncommon);
 + 'SCoRO,' added
@@ -12045,6 +12763,11 @@ VERONICA catenata
 DISTRIBUTION OUTSIDE CALIFORNIA: widespread United States, adjacent Canada.
 + '; native to Europe' deleted
 2020 08 25
+
+VINCA major
+ELEVATION: 2--1600 m.
++ '200' made '1600'
+2022 06 14
 
 YUCCA
 2. Stem +- 0 or short-decumbent, rosettes at tips, +- at ground; perianth parts 5--13 cm, fused > 1 mm; e D .....-> Y. baccata var. baccata
@@ -12071,4 +12794,5 @@ BIOREGIONAL DISTRIBUTION: e DMoj;
 YUCCA schidigera
 BIOREGIONAL DISTRIBUTION: SW (exc ChI, WTR & SnGb), s DMoj, nw DSon;
 + 's SW (San Diego Co.), s DMoj, nw DSon' made 'SW (exc ChI, WTR & SnGb), s DMoj, nw DSon
-2020 03 25 [position of ChI in string corrected 2020 04 08]
+[position of ChI in string corrected 2020 04 08]
+2020 03 25

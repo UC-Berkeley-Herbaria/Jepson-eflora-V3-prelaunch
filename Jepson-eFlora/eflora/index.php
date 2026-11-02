@@ -149,7 +149,7 @@ method=post>
 
 </td>
 <td>
-<p class="pageAuthorLine"> <a href="/IJM_keys/toc.html" class="tocLink" >Table of families and genera</a></p>
+<p class="pageAuthorLine"> <a href="/eflora/toc.html" class="tocLink" >Table of families and genera</a></p>
 <p class="pageAuthorLine"> <a href="/IJM_keys/IJM_fam_key.html" class="tocLink" >Key to families</a></p>
 <!--<p class="pageAuthorLine"> <a href="/eflora/key_list.html" class="tocLink" >Keys to genera in families</a></p>-->
 
@@ -173,8 +173,9 @@ and many errata and other small changes made relative to the print book.</span><
 	  <a href="/eflora/supplement_summary.html#rev5">Revision 5 (2017)</a>, 
 	  <a href="/eflora/supplement_summary.html#rev6">Revision 6 (2018)</a>, 
 	  <a href="/eflora/supplement_summary.html#rev7">Revision 7 (2019)</a>,
-	  <a href="/eflora/supplement_summary.html#rev8">Revision 8 (2020)</a>, 
-	  and <a href="/eflora/supplement_summary.html#rev9">Revision 9 (2021)</a>.</p></li>
+	  <a href="/eflora/supplement_summary.html#rev8">Revision 8 (2020)</a>,
+	  <a href="/eflora/supplement_summary.html#rev9">Revision 9 (2021)</a>,
+	  and <a href="/eflora/supplement_summary.html#rev10">Revision 10 (2022)</a>.</p></li>
 	  
 	  <li><p class="bodyText"><a href="/eflora/errata.html">
 	  List of all errata and other small changes.</a></p></li>
@@ -189,6 +190,7 @@ and many errata and other small changes made relative to the print book.</span><
 <span class="pageMajorHeading">Recent Major Updates</span>
 <br />
 <br />
+<p><strong>May 31, 2022:</strong> Revision 10 is posted online. <a href="/eflora/supplement_summary.html#rev10">Summary of Revision 10</a>.
 <p><strong>Dec. 23, 2021:</strong> Revision 9 is posted online. <a href="/eflora/supplement_summary.html#rev9">Summary of Revision 9</a>.
 <p><strong>Dec. 21, 2020:</strong> Revision 8 is posted online. <a href="/eflora/supplement_summary.html#rev8">Summary of Revision 8</a>.
 <p><strong>Dec. 20, 2019:</strong> Revision 7 is posted online. <a href="/eflora/supplement_summary.html#rev7">Summary of Revision 7</a>.

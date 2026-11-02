@@ -2,33 +2,22 @@
 
 
 <head><title>Jepson Herbarium: Jepson Flora Project: Jepson eFlora: Geography</title> 
-<link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript">
+<link href="/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-27128382-1']);
-  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
+  gtag('config', 'G-T5YC99QF6Q');
 </script>
-<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-43909100-1']);
-  _gaq.push(['_trackPageview']);
+<!-- Begin banner -->
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
 
-</script>
 </head>
 
 <body>
@@ -40,6 +29,10 @@
 <!-- Beginning of horizontal menu -->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/globalnav.php'); ?>
 <!-- End of horizontal menu -->
+
+<!-- Start of sidebar menu-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/localnav_media.php'); ?>
+<!-- End of sidebar --> 
 
  <table border="0">
    <tr>
@@ -54,7 +47,7 @@
        <td>&nbsp;</td>
        <td>&nbsp;</td>
 
-       <td width="100%"><span class="pageName"><a href="/IJM.html">Jepson eFlora:</a> Geographic subdivisions</span><br /><br />
+       <td width="100%"><span class="pageName"><a href="/eflora/">Jepson eFlora:</a> Geographic subdivisions</span><br /><br />
 
 </td>
 </tr>
@@ -89,16 +82,16 @@ Contact: Comments on this page should be sent to Tom Rosatti, Scientific Editor 
 	
 	
 <p class=bodyText>
-Citation for the whole project: Jepson Flora Project (eds.) [year] <em>Jepson eFlora</em>,  http://ucjeps.berkeley.edu/IJM.html [accessed on month, day, year]
+Citation for the whole project: Jepson Flora Project (eds.) [year] <em>Jepson eFlora</em>, https://ucjeps.berkeley.edu/eflora/ [accessed on month, day, year]
 <br>
 <br>
-<p class=bodyText>We now charge a service fee for the Geographical Subdivisions Map of California.  All new flora additions, data maintenance, GIS services, and data queries of the Jepson eFlora Website are funded in a large part by donations and grants.  This service fee is to help offset the rising costs of server maintenance, computer equipment, and staff.  The rate for educational, academic, or non-profit organizations is $75 and the rate for commercial or for-profit companies is $150.  Service fee rates can also be found on the <a href="http://ucjeps.berkeley.edu/main/policies.html#FEE">Policy page.</a></p>
+<p class=bodyText>We now charge a service fee for the Geographical Subdivisions Map of California.  All new flora additions, data maintenance, GIS services, and data queries of the Jepson eFlora Website are funded in a large part by donations and grants.  This service fee is to help offset the rising costs of server maintenance, computer equipment, and staff.  The rate for educational, academic, or non-profit organizations is $75 and the rate for commercial or for-profit companies is $150.  Service fee rates can also be found on the <a href="/main/policies.html#FEE">Policy page.</a></p>
 <p class=bodyText>To request a full image of the subdivision map or related GIS files, contact Jason Alexander (<a href = "mailto:jason_alexander@berkeley.edu">jason_alexander&#064;berkeley.edu</a>).</p> 
 <br>
 <br>
 <h3 align="center">GEOGRAPHIC SUBDIVISIONS OF CALIFORNIA</h3>
 <center>
-<img align="center" src="http://ucjeps.berkeley.edu/cgi-bin/new_jmap.pl?ffffffffff">
+<img align="center" src="/cgi-bin/new_jmap.pl?ffffffffff">
 </center>
 
 <p class=bodyText>Inclusion of geographic ranges of taxa, in addition
@@ -1031,22 +1024,10 @@ River. The Chuckwalla and Whipple mountains are in the DSon.</p>
 
 </table>
 	
-<!-- Begin footer -->
+<!--Begin footer-->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/footer.php'); ?>
-<!-- End footer -->
-<script type="text/javascript">
+<!--End footer-->
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-43909100-1']);
-  _gaq.push(['_trackPageview']);
-
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
-</script>
 </body>
 
 </html>
