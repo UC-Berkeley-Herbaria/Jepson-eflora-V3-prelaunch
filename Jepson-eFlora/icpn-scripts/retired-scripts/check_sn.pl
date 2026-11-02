@@ -1,7 +1,5 @@
 
-$smasch_ID_file="/JEPS-master/Jepson-eFlora/synonymy/input/smasch_taxon_ids.txt";
-#$ICPN_file="/JEPS-master/Interchange/input/icpn_current.txt";
-open(IN, "$smasch_ID_file") || die;
+open(IN, "../Jepson-eFlora/synonymy/input/smasch_taxon_ids.txt") || die;
 while(<IN>){
 	chomp;
 	($code,$name,@residue)=split(/\t/);
@@ -25,8 +23,8 @@ foreach(@ARGV){
 
 while(<IN>){
 
-	s/=====.*\n.//;
-
+	#s/=====.*\n.//;
+	s/=====.+\n//;
 
 	s/LINK.*FNA.*\n//;
 	s/LINK.*Check the California Weed.*\n//;
@@ -35,14 +33,21 @@ while(<IN>){
 	s/ \n/\n/g;
 s/(...)Effort: @/$1\nEffort: @/;
 
-	#if(m/^(Admin|Family:)/){
-	#	next;
-	#}
-
-	if(m/^[A-Z][A-Z][A-Z]/){
-		print OUT;
+	if(m/^(\.Admin|#)/){
 		next;
 	}
+
+
+	if(m/Previous JFP synonyms/){
+		next;
+	}
+
+
+	#if(m/^[A-Z][A-Z][A-Z]/){
+	#	print OUT;
+	#	next;
+	#}
+	
 	if(m/Current Status: 13/){
 		++$count;
 		#print "$count\n";
@@ -69,7 +74,37 @@ s/(...)Effort: @/$1\nEffort: @/;
 		warn $count5." skipping Streptanthus lemmonii Jepson 1920\n\n";
 		next;
 	}
-	
+
+	#if (m/\.Oreocarya nubigena Greene/){ #skip this duplicate entry
+		#if (m/Source: SMASCH types table/){
+
+			#++$count5;
+			#print ERR "skipping Oreocarya nubigena Greene duplicate\n";
+			#warn $count5." skipping Oreocarya nubigena Greene duplicate\n\n";
+			#next;
+		#}
+	#}
+#Family: BORAGINACEAE
+#Source: SMASCH types table
+#Current Status: tentative 1a, taxonomic or nomenclatural synonym for taxon native to CA
+#Current Name (T): Cryptantha nubigena
+
+	#if (m/\.Andersonglossum occidentale (A\. Gray) J\.I\. Cohen/){ #skip this duplicate entry
+		#if (m/Current Status: 1a/){
+		#	++$count5;
+		#	print ERR "skipping Andersonglossum occidentale duplicate\n";
+		#	warn $count5." skipping Andersonglossum occidentale duplicate\n\n";
+		#	next;
+		#}
+	#}
+
+
+	if (m/\.Linanthus aureus (Nutt.) Greene/){ #skip this homonym entry
+		++$count5;
+		print ERR "skipping Linanthus aureus (Nutt.) Greene\n";
+		warn $count5." skipping Linanthus aureus (Nutt.) Greene\n\n";
+		next;
+	}
 
 	if (m/\.Trifolium variegatum Nutt\. phase/){ #skip Trifolium phase names since they will not strip correctly nor will synonymy assign correctly
 		++$count2;
@@ -113,8 +148,8 @@ s/(...)Effort: @/$1\nEffort: @/;
 	s/^x?\.//; #Get rid of leading periods  -  29 Sep 2006 by CAM
 	
 #Delete Rosatti's "{/...} lines
-s/\n{\/.*}.*//g;
-s/{\/.*?}//g;
+s/\n\{\/.*\}.*//g;
+s/\{\/.*?\}//g;
 s/\nCurrent Status:([^ ])/\nCurrent Status: $1/;
 
 s/(Editorial Comments 2) +/$1: /;
@@ -168,7 +203,11 @@ s/\303\262/&ograve;/g;
 s/\303\242/&acirc;/g;
 s/<#f6>/&ouml;/g;
 
-	next if $. < 17;#defines the header section from the body based on the end line number where the first =========+========= is positioned  
+s/‐/--/g;
+s/“/"/g;
+s/”/"/g;
+
+	#next if $. < 17;#defines the header section from the body based on the end line number where the first =========+========= is positioned  
 
 
 #This lines need checked before each new upload as the lines number can change
@@ -193,7 +232,16 @@ s/<#f6>/&ouml;/g;
 		next;
 	}
 
-	$name = &get_taxon_name($lines[0]);
+
+	if ($lines[0] =~ m/^\.Leptosiphon aureus \(Nutt/){
+	#this is a work around for this homonym
+	#this is the only non-stripped name in the taxon ID file
+	#the partial author is needed to distinguish it from Leptosiphon aureus Benth.
+		$name = "Leptosiphon aureus Nutt.";
+	}
+	else{
+		$name = &get_taxon_name($lines[0]);
+	}
 	
 	#if($name=~/ subsp\. .*var\. /){
 	#	print ERR "skipping quadrinomial $name\n";
@@ -248,9 +296,9 @@ s/<#f6>/&ouml;/g;
 
 
 
-	if(m/\n[Pp]roblem:.*/){  #skip Rosatti's personal note lines, not to be included in ICPN, causing errors
+	if(m/\nProblem:.+/i){  #skip Rosatti's personal note lines, not to be included in ICPN, causing errors
 		warn "Rosatti note line still present in text file:\n$_\n";
-		next;
+		#delete this tag line below
 	}
 
 	if(m/\nCurrent Status:.*\nCurrent Status:.../ms){
@@ -284,10 +332,10 @@ s/<#f6>/&ouml;/g;
 				}
 				
 				$cur_name = &strip_name($cur_name);
-					unless($TID{$cur_name}){
-						warn "$.-->no code for $cur_name ==> stripped as $cur_name\n";
-						print NOCODE  "no code for $cur_name ==> stripped as $cur_name\n";
-					}
+					#unless($TID{$cur_name}){
+					#	warn "$.-->no code for $cur_name ==> stripped as $cur_name\n";
+					#	print NOCODE  "no code for $cur_name ==> stripped as $cur_name\n";
+					#}
 				
 				print OUT2 $name."\n".$cur.$cur_name."\n\n";
 			}
@@ -354,8 +402,10 @@ s/<#f6>/&ouml;/g;
 		s/^Assignment date: */AD: / ||
 		s/^Current Status Authority: */CSA: / ||
 		s/^Current Status: *(\d+[a-z]?).*/CS: $1/ ||
-		s/^Current Status: *(pending) (\d+[a-z]?).*/CS: $1_$2/ ||
-		s/^Current Status: *tentative (\d+[a-z]?).*/CS: $1_[t]/ ||
+		#s/^Current Status: *(pending) (\d+[a-z]?).*/CS: $1_$2/ ||
+		#s/^Current Status: *tentative (\d+[a-z]?).*/CS: $1_[t]/ ||
+		s/^Current Status: *(pending .*)/CS: $1/ ||
+		s/^Current Status: *(tentative .*)/CS: $1/ ||
 		s/^Current Status: */CS: / ||
 		s/^Current Status Date: */DD: / ||
 		s/^Decision [Dd]ate: */DD: / ||
@@ -382,6 +432,9 @@ s/<#f6>/&ouml;/g;
 		s/^Synonyms not explicitly cited in TJM: /SNTJM: /  ||
 		s/Synchronization with TJM2:/SNCH:/||
 		s/Pending:/PND:/) ||
+			s/[pP]roblem:.+// || #try to delete this line, a new tag developed by Tom for his use only
+			s/[pP]revious JFP synonyms:.+// || #try to delete this line, a new tag developed by Tom for his use only
+
 		push(@badtag, "$name [tag]: |$_");
 
 	}
@@ -407,13 +460,59 @@ s/<#f6>/&ouml;/g;
 		#($name)=m/^([^\s]+)/;
 	}
 
-		s/Current Status: *(pending) (\d+[a-z]?).*/Current Status: $1_$2/;
+		#s/Current Status: *(pending) (\d+[a-z]?).*/Current Status: $1_$2/;
 
 	print OUT $name."\n";
 	print OUT "TAN: ";
 	print OUT;
 	$lastline=$_;
 	}
+
+#these are not being created properly from the ICPN file for some unknown reason
+print OUT <<EOP;
+
+Leptosiphon aureus Nutt.
+TAN: Leptosiphon aureus (Nutt.) Benth. ex E. Vilm.
+Family: POLEMONIACEAE
+Source: added manually by Rosatti
+Notes on Publication of Name: from IPNI, Fl. Pleine Terre (ed. 2) 470. 1866
+Comments: treated as <sn>Linanthus aureus</sn> (Nutt.) Greene in TJM; author citation uncertain, Leptosiphon aureus (Nutt.) Benth. ex E. Vilm. in IPNI, Leptosiphon aureus (Nutt.) J. M. Porter & L. A. Johnson comb. nov. in Aliso 19(1): 80. 2000 [28 Jul 2000]; since TJM, treated as Leptosiphon aureus (Nutt.) J. M. Porter & L. A. Johnson by J. M. Porter & L. A. Johnson (A Phylogenetic Classification of Polemoniaceae, Aliso 19(1):55-91. 2000)
+Correspondence 1: [for Linanthus aureus] 14 May 2003 e-mail from Jeff Greenhouse: Dave Keil, in a 4/25/03 e-mail to M. Wetherwax, states "For Linanthus aureus (TJM p. 842) add WTR (n slope) and pinyon pine-oak-juniper woodland as habitat. We have several collections from the Mt. Pinos area (Fraser State Park, 5 mi w of Lebec, Rodin 5832; Valle Vista CG, Keil 12227; between Lake of the Woods and Fraser Park, Keil 12248). There are SMASCH records from this region as well." Bob Patterson (TJM author for Linanthus), in a 5/8/03 e-mail states "By all means make the changes for subsp. aureus (only). This range 'extension' doesn't surprise me at all. subsp. decorus, however, is a more eastern entity and I doubt that it occurs so far west." DECISION JAG/BGB 5/13/03: add WTR (n slope) to the range and pinyon pine-oak-juniper woodland to the habitat for Linanthus aureus per TJM author
+Editorial Comments 1: Correspondence 1 indicates that: according to Dave Keil, WTR (n slope) and pinyon pine-oak-juniper woodland should be added to the geographic range and habitat statement, respectively, for <sn>Linanthus aureus</sn>; however, according to Bob Patterson (TJM author for Linanthus), these changes are to be made only for <sn>Linanthus aureus subsp. aureus</sn>, as <sn>Linanthus aureus subsp. decorus</sn> is a more eastern entity and probably does not occur so far west.
+Correspondence 2:  15 Nov 2007 e-mail from Jeff Greenhouse: archived in Eudora mailbox "done ICPN".
+Editorial Comments 2:  Correspondence 2 indicates: that Leptosiphon aureus was published well before Porter & Johnson [Aliso 19(1): 80. 2000], in Les Fleurs de Pleine Terre (ed. 2):470--471 (1866); that the only indication of authorship of the publication in 1866 is "Vilmorin-Andrieux et Cie." on the title page; that TL-2 indicates that the director of this company ["Vilmorin-Andrieux et Cie."] in 1866 was Elisa de Vilmorin (E. Vilm.; not in APN but in accordance with principles in APN); that the species name was ascribed to "Benth." but followed by an unattributed description; that although the epithet of Gilia aurea Nutt. (Proceedings of the Academy of Natural Sciences of Philadelphia 4:11. 1848) was adopted by Vilmorin without explicitly citing a basionym, ICBN 2006 Art. 33.3 accepts this as a valid publication of a new combination.  [Therefore, author citation correct as indicated in this Index, 19 Nov 2007.]
+Correspondence 3: Treatment and author notes submitted for TJM2 by Robert W. Patterson & Robyn Battaglia
+Editorial Comments 3: Correspondence 3 indicates that for TJM2 Linanthus aureus (Nutt.) Greene is to be treated as a syn of Leptosiphon aureus (Nutt.) Benth. ex E. Vilm., with a note stating that a new name may be needed because Leptosiphon aureus might have been used earlier for a different taxon.
+Correspondence 4: Treatment and author notes submitted for Revision 9 of the Jepson eFlora
+Editorial Comments 4: Correspondence 4 indicates that Leptosiphon aureus (Nutt.) Benth. ex E. Vilm. is an illegitimate name (in that it is a later homonym of Leptosiphon aureus Benth.) and therefore Leptosiphon chrysanthus J.M. Porter & R. Patt. is to be used instead for this taxon.
+Summary: probable addition, different genus since TJM; addition, different genus since TJM; rejection, illegitimate name
+Current Status: 1b, unpublished, invalidly published, illegitimate, or rejected name for taxon native to CA
+Current Status Authority: JFP
+Current Status Date: 22 Dec 2021
+Effort: @; author citation to be checked [resolved]
+Current Name: Leptosiphon chrysanthus J.M. Porter & R. Patt.
+
+Leptosiphon acicularis
+TAN: Leptosiphon acicularis (Greene) Jeps.
+Family: POLEMONIACEAE
+Source: Correspondence 1
+Correspondence 1: 2 Feb 20004 e-mail from Doreen Smith: Hi Tom, I found the most recent article on the Linanthus/ Leptosiphon androsaceus complex in Madrono vol. 48, No. 2 pp.62-78 by Robyn Battaglia and Robert Patterson.//They give the name " Leptosiphon androsaceus Benth." in their treatment of this section of Linanthus/ Leptosiphon. The other changes of this section of" Linanthus" back to "Leptosiphon" are there too, several of those are in the other databases but this got missed.//Regards, Doreen Smith
+Editorial Comments 1: Correspondence 1 indicates that several taxonomic and nomenclatural changes in this group were made by Battaglia & Patterson in Madrono 48:62-78, 2001. [including Linanthus acicularis Greene treated as Leptosiphon acicularis (Greene) Jeps.]
+Correspondence 2: 23 Apr 2004 e-mail from Margriet Wetherwax, including copy of e-mail from Wetherwax to Misa Ward: Tom, ICPN has the same Madrono article cited - the 2 cited here are probably more helpful to the general public. Thanks, Margriet//Hi, Misa, The Madrono citation is ok, but the more important papers are//Bell, C.D., and R. Patterson. 2000. Molecular phylogeny and biogeography of Linanthus (Polemoniaceae). Amer. J. Bot. 87(12):1857-1870//Porter, J. Mark, and L.A. Johnson. 2000. A phylogenetic classification of Polemoniaceae. Aliso 19(1): 55-91.//The latter paper moved the various species of Linanthus into Leptosiphon.//The paper that is cited now just uses the Leptodactylon name, the other 2 papers explain why this is being done.//Best, Margriet
+Editorial Comments 2: Correspondence 2 cites two other papers of relevance: Bell, C. D., and R. Patterson. 2000. Molecular phylogeny and biogeography of Linanthus (Polemoniaceae). Amer. J. Bot. 87(12):1857-1870; Porter, J. M., and L. A. Johnson. 2000. A phylogenetic classification of Polemoniaceae. Aliso 19(1): 55-91.
+Correspondence 3: 1 Dec 2004 e-mail from Misa Ward:
+Editorial Comments 3: Correspondence appended verbatim is pertinent to TJM2 account: "Historical occurrences need verification. Does plant occur in CCA Co.? A synonym of Linanthus acicularis in The Jepson Manual. See Pittonia 2:259 (1892) for original description, and School fl. Pacif. Coast 77 (1902) for revised nomenclature."
+Correspondence 4: Treatment and author notes submitted for Revision 9 of the Jepson eFlora
+Editorial Comments 4: Correspondence 4 indicates that Leptosiphon acicularis (Greene) Jeps. is to be treated as Leptosiphon aureus Benth., which has nomenclatural priority.
+Summary: addition, different genus since TJM; rejection, due to nomenclatural priority
+Current Status: 1a, taxonomic or nomenclatural synonym for taxon native to CA
+Current Status Authority: JFP
+Current Status Date: 21 Dec 2021 
+Effort: @
+Current Name: Leptosiphon aureus Benth.
+
+EOP
+
 
 
 }
@@ -440,7 +539,7 @@ sub strip_name{
 #print "SAPONARIA: $_" if m/saponaria/;
 
 
-s/Uva-Ursi pechoensis.*/Uva-Ursi pechoensis/;
+s/Uva-Ursi pechoensis.*/Uva-ursi pechoensis/;
 
 if(m/^Fragaria ?.* ?ananassa Duchesne var. cuneifolia ?.*/){
 return("Fragaria X ananassa var. cuneifolia");
@@ -523,16 +622,16 @@ s/trichocarpa Torr\. & A\. Gray ex Hook\. filius/trichocarpa f./; #fix one forma
 s/Betula occidentalis Hook. filius inopina Jeps./Betula occidentalis f. inopina/; #fix one forma name that conflict with the filius names above
 
 
-s/^([A-Z][a-z-]+) (\b[-a-z]+) [,A-Za-z\d&;'().\- ]+ (\bsubvar\.|\bsubsp\.|\bvar\.|\bf\.|\bnothosubsp\.) ([a-z-]+) [,A-Za-z\d&;'().\- ]+/$1 $2 $3 $4/ ||
-s/^([A-Z][a-z-]+) (\b[-a-z]+) [,A-Za-z\d&;'().\- ]+ (\bsubvar\.|\bsubsp\.|\bvar\.|\bf\.|\bnothosubsp\.) ([-a-z]+)/$1 $2 $3 $4/ ||
-s/^([A-Z][a-z-]+) (\b[-a-z]+) (\bsubvar\.|\bsubsp\.|\bvar\.|\bf\.|\bnothosubsp\.) ([-a-z]+) [,A-Za-z\d&;'().\- ]+/$1 $2 $3 $4/ ||
-s/^([A-Z][a-z-]+) (\b[-a-z]+) (\bsubvar\.|\bsubsp\.|\bvar\.|\bf\.|\bnothosubsp\.) ([-a-z]+)/$1 $2 $3 $4/ ||
-s/^([A-Z][a-z-]+) (\bX [-a-z]+) [,A-Za-z\d&;'().\- ]+/$1 $2/||
-s/^([A-Z][a-z-]+) (\bX [-a-z]+)/$1 $2/||
-s/^([A-Z][a-z-]+) (\b[-a-z]+) [,A-Za-z\d&;'().\- ]+/$1 $2/||
-s/^([A-Z][a-z-]+) (\b[-a-z]+)/$1 $2/||
-s/^(X [A-Z][a-z-]+) (\b[-a-z]+) [,A-Za-z\d&;'().\- ]+/$1 $2/||
-s/^(X [A-Z][a-z-]+) (\b[-a-z]+)/$1 $2/;
+s/^([A-Z][a-z-]+) ([-a-z]+) [,A-Za-z\d&;'().\- ]+ (subvar\.|subsp\.|var\.|f\.|nothosubsp\.) ([a-z-]+) [,A-Za-z\d&;'().\- ]+/$1 $2 $3 $4/ ||
+s/^([A-Z][a-z-]+) ([-a-z]+) [,A-Za-z\d&;'().\- ]+ (subvar\.|subsp\.|var\.|f\.|nothosubsp\.) ([-a-z]+)/$1 $2 $3 $4/ ||
+s/^([A-Z][a-z-]+) ([-a-z]+) (subvar\.|subsp\.|var\.|f\.|nothosubsp\.) ([-a-z]+) [,A-Za-z\d&;'().\- ]+/$1 $2 $3 $4/ ||
+s/^([A-Z][a-z-]+) ([-a-z]+) (subvar\.|subsp\.|var\.|f\.|nothosubsp\.) ([-a-z]+)/$1 $2 $3 $4/ ||
+s/^([A-Z][a-z-]+) (X [-a-z]+) [,A-Za-z\d&;'().\- ]+/$1 $2/||
+s/^([A-Z][a-z-]+) (X [-a-z]+)/$1 $2/||
+s/^([A-Z][a-z-]+) ([-a-z]+) [,A-Za-z\d&;'().\- ]+/$1 $2/||
+s/^([A-Z][a-z-]+) ([-a-z]+)/$1 $2/||
+s/^(X [A-Z][a-z-]+) ([-a-z]+) [,A-Za-z\d&;'().\- ]+/$1 $2/||
+s/^(X [A-Z][a-z-]+) ([-a-z]+)/$1 $2/;
 s/  +/ /;
 s/ +$//;
 s/^ +//;

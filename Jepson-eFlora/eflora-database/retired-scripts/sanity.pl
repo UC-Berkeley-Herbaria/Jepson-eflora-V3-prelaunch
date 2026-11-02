@@ -23,109 +23,111 @@ $TNOAN{$name}=$code;
 "waste places","disturbed areas",
 );
 
+#there is currently a problem with sanity.pl not detecting tags in eflora files without a ':'
+#==> added to differentiate between capital tags with and without a ':' in the transformation below
 @field_list=(
-"CAPTION",
-"UNABRIDGED KEY LEAD",
-"TAXON AUTHOR",
-"COMMON NAME",
-"UNABRIDGED COMMON NAME",
-"TJM1 AUTHOR",
-"TJM2 AUTHOR",
-"TJMX AUTHOR",
-"TJMXX AUTHOR",
-"TJMXXX AUTHOR",
-"TJM4X AUTHOR",
-"TJM5X AUTHOR",
-"TJM6X AUTHOR",
-"TJM7X AUTHOR",
-"TJM8X AUTHOR",
-"TJM9X AUTHOR",
-"TJM10X AUTHOR",
-"AUTHORSHIP COMMENT",
-"HABIT+",
-"UNABRIDGED HABIT+",
-"PLANT BODY",
-"STEM",
-"STEMS",
-"STERILE STEM",
-"FERTILE STEM",
-"LEAF",
-"LEAVES",
-"SPINE",
-"SPINES",
-"FROND",
-"FRONDS",
-"INFLORESCENCE",
-"STAMINATE HEAD",
-"RAY OR PISTILLATE FLOWER",
-"PISTILLATE OR BISEXUAL HEAD",
-"PISTILLATE HEAD",
-"STAMINATE INFLORESCENCE",
-"PISTILLATE OR BISEXUAL INFLORESCENCE",
-"PISTILLATE INFLORESCENCE",
-"SPIKELET",
-"FERTILE SPIKELET",
-"STERILE SPIKELET",
-"DISTAL SPIKELET",
-"CENTRAL SPIKELET",
-"LATERAL SPIKELET",
-"STAMINATE SPIKELET",
-"PISTILLATE SPIKELET",
-"UNABRIDGED FLOWER",
-"FLOWER",
-"STAMINATE FLOWER",
-"PISTILLATE FLOWER",
-"RAY FLOWER",
-"DISK FLOWER",
-"UNABRIDGED DISK FLOWER",
-"CONE",
-"CONES",
-"POLLEN CONE",
-"SEED CONE",
-"BISEXUAL FLOWER",
-"FRUIT",
-"SEED",
-"SEEDS",
-"SPORANGIUM",
-"SPORANGIA",
-"SPORANGIUM CASES",
-"SPORANGIUM CASE",
-"MALE SPORANGIUM CASE",
-"FEMALE SPORANGIUM CASE",
-"SPORES",
-"CHROMOSOMES",
-"UNABRIDGED CHROMOSOMES",
-"RARITY STATUS",
+"CAPTION==>",
+"UNABRIDGED KEY LEAD==>",
+"TAXON AUTHOR==>",
+"COMMON NAME==>",
+"UNABRIDGED COMMON NAME==>",
+"TJM1 AUTHOR==>",
+"TJM2 AUTHOR==>",
+"TJMX AUTHOR==>",
+"TJMXX AUTHOR==>",
+"TJMXXX AUTHOR==>",
+"TJM4X AUTHOR==>",
+"TJM5X AUTHOR==>",
+"TJM6X AUTHOR==>",
+"TJM7X AUTHOR==>",
+"TJM8X AUTHOR==>",
+"TJM9X AUTHOR==>",
+"TJM10X AUTHOR==>",
+"AUTHORSHIP COMMENT==>",
+"HABIT+==>",
+"UNABRIDGED HABIT+==>",
+"PLANT BODY==>",
+"STEM==>",
+"STEMS==>",
+"STERILE STEM==>",
+"FERTILE STEM==>",
+"LEAF==>",
+"LEAVES==>",
+"SPINE==>",
+"SPINES==>",
+"FROND==>",
+"FRONDS==>",
+"INFLORESCENCE==>",
+"STAMINATE HEAD==>",
+"RAY OR PISTILLATE FLOWER==>",
+"PISTILLATE OR BISEXUAL HEAD==>",
+"PISTILLATE HEAD==>",
+"STAMINATE INFLORESCENCE==>",
+"PISTILLATE OR BISEXUAL INFLORESCENCE==>",
+"PISTILLATE INFLORESCENCE==>",
+"SPIKELET==>",
+"FERTILE SPIKELET==>",
+"STERILE SPIKELET==>",
+"DISTAL SPIKELET==>",
+"CENTRAL SPIKELET==>",
+"LATERAL SPIKELET==>",
+"STAMINATE SPIKELET==>",
+"PISTILLATE SPIKELET==>",
+"UNABRIDGED FLOWER==>",
+"FLOWER==>",
+"STAMINATE FLOWER==>",
+"PISTILLATE FLOWER==>",
+"RAY FLOWER==>",
+"DISK FLOWER==>",
+"UNABRIDGED DISK FLOWER==>",
+"CONE==>",
+"CONES==>",
+"POLLEN CONE==>",
+"SEED CONE==>",
+"BISEXUAL FLOWER==>",
+"FRUIT==>",
+"SEED==>",
+"SEEDS==>",
+"SPORANGIUM==>",
+"SPORANGIA==>",
+"SPORANGIUM CASES==>",
+"SPORANGIUM CASE==>",
+"MALE SPORANGIUM CASE==>",
+"FEMALE SPORANGIUM CASE==>",
+"SPORES==>",
+"CHROMOSOMES==>",
+"UNABRIDGED CHROMOSOMES==>",
+"RARITY STATUS==>",
 #Rarity Status used to be below Ecology in eflora_display.php and this file; however 90% of all records in Eflora_treatments had RarityStatus above ecology.
-"ECOLOGY",
-"UNABRIDGED ECOLOGY",
-"ELEVATION",
-"BIOREGIONAL DISTRIBUTION",
-"UNABRIDGED BIOREGIONAL DISTRIBUTION",
-"DISTRIBUTION OUTSIDE CALIFORNIA",
-"UNABRIDGED DISTRIBUTION OUTSIDE CALIFORNIA",
-"SPECIES IN GENUS",
-"UNABRIDGED SPECIES IN GENUS",
-"GENERA IN FAMILY",
-"UNABRIDGED GENERA IN FAMILY",
-"ETYMOLOGY",
-"UNABRIDGED ETYMOLOGY",
-"TOXICITY",
-"SYNONYMS",
-"UNABRIDGED SYNONYMS",
-"REFERENCE",
-"UNABRIDGED REFERENCE",
-"HORTICULTURAL INFORMATION",
-"UNABRIDGED HORTICULTURAL INFORMATION",
-"NOTE",
-"NOTES",
-"UNABRIDGED NOTE",
-"FLOWERING TIME",
-"FRUITING TIME",
-"CONING TIME",
-"AUTHORSHIP OF PARTS",
-"WEEDINESS",
-"SCIED",
+"ECOLOGY==>",
+"UNABRIDGED ECOLOGY==>",
+"ELEVATION==>",
+"BIOREGIONAL DISTRIBUTION==>",
+"UNABRIDGED BIOREGIONAL DISTRIBUTION==>",
+"DISTRIBUTION OUTSIDE CALIFORNIA==>",
+"UNABRIDGED DISTRIBUTION OUTSIDE CALIFORNIA==>",
+"SPECIES IN GENUS==>",
+"UNABRIDGED SPECIES IN GENUS==>",
+"GENERA IN FAMILY==>",
+"UNABRIDGED GENERA IN FAMILY==>",
+"ETYMOLOGY==>",
+"UNABRIDGED ETYMOLOGY==>",
+"TOXICITY==>",
+"SYNONYMS==>",
+"UNABRIDGED SYNONYMS==>",
+"REFERENCE==>",
+"UNABRIDGED REFERENCE==>",
+"HORTICULTURAL INFORMATION==>",
+"UNABRIDGED HORTICULTURAL INFORMATION==>",
+"NOTE==>",
+"NOTES==>",
+"UNABRIDGED NOTE==>",
+"FLOWERING TIME==>",
+"FRUITING TIME==>",
+"CONING TIME==>",
+"AUTHORSHIP OF PARTS==>",
+"WEEDINESS==>",
+"SCIED==>",
 );
 $field_order=1;
 grep($field_list{$_}=$field_order++,@field_list);
@@ -300,6 +302,44 @@ EOP
 			
 			foreach $sortline (@lines[3 .. $#lines]){
 				$sortline=~s/ +$//;
+
+				if($sortline=~m/^(HABIT) .+[^.].$/){
+					print "$file HABIT problem, missing '+' tag\t$sortline\n\n" unless $sortline=~/UNABRIDGED/;
+					
+				}
+
+				if($sortline=~m/^(UNABRIDGED HABIT+|SEED CONE|POLLEN CONE) [\+a-z0-1\(\[]+/){
+				#if($sortline=~m/^([A-Z]+[0-9X]*[+ ]?[A-Z]*)[^:]/){
+					print "$file TAG punctuation problem(1), missing ':' tag\t$sortline\n\n" unless $sortline=~/UNABRIDGED/;
+				}
+				elsif($sortline=~m/^(CONES|SEEDS) [\+a-z0-1\(\[]+/){
+				#if($sortline=~m/^([A-Z]+[0-9X]*[+ ]?[A-Z]*)[^:]/){
+					print "$file TAG punctuation problem(2), missing ':' tag\t$sortline\n\n" unless $sortline=~/UNABRIDGED/;	
+				}
+				elsif($sortline=~m/^(HABIT\+|COMMON NAME|CONE|SEED) [\+a-z0-1\(\[]+/){
+				#if($sortline=~m/^([A-Z]+[0-9X]*[+ ]?[A-Z]*)[^:]/){
+					print "$file TAG punctuation problem(3), missing ':' tag\t$sortline\n\n" unless $sortline=~/UNABRIDGED/;	
+				}
+				elsif($sortline=~m/^(CAPTION|UNABRIDGED KEY LEAD|TAXON AUTHOR|UNABRIDGED COMMON NAME)[^:][\+a-zA-Z0-1\(\[]+/){
+				#if($sortline=~m/^([A-Z]+[0-9X]*[+ ]?[A-Z]*)[^:]/){
+					print "$file TAG punctuation problem(4), missing ':' tag\t$sortline\n\n" unless $sortline=~/UNABRIDGED/;
+					
+				}
+				elsif($sortline=~m/^(TJM[12] AUTHOR|TJMX+ AUTHOR|TJM[4-9]X AUTHOR|TJM[1-9][0-9]X AUTHOR|AUTHORSHIP COMMENT|AUTHORSHIP OF PARTS)[^:][\+a-zA-Z0-1\(\[]+/){
+				#if($sortline=~m/^([A-Z]+[0-9X]*[+ ]?[A-Z]*)[^:]/){
+					print "$file TAG punctuation problem, missing ':' tag\t$sortline\n\n" unless $sortline=~/UNABRIDGED/;
+					
+				}
+				elsif($sortline=~m/^(PLANT BODY|STERILE STEM|FERTILE STEM|FROND|FRONDS) [\+a-zA-Z0-1\(\[]+/){
+				#if($sortline=~m/^([A-Z]+[0-9X]*[+ ]?[A-Z]*)[^:]/){
+					print "$file TAG punctuation problem, missing ':' tag\t$sortline\n\n" unless $sortline=~/UNABRIDGED/;
+					
+				}
+
+
+#STEM|STEMS|LEAF|LEAVES|
+#"INFLORESCENCE|STAMINATE HEAD|RAY OR PISTILLATE FLOWER|PISTILLATE OR BISEXUAL HEAD|PISTILLATE HEAD|STAMINATE INFLORESCENCE|PISTILLATE OR BISEXUAL INFLORESCENCE|PISTILLATE INFLORESCENCE",
+
 				if($sortline=~m/(pediceled|pedicle)/){
 					print "$file $1 Spelling problem $sortline\n\n";
 				}
@@ -307,7 +347,7 @@ EOP
 					print "$file Capitalization problem $sortline\n\n";
 				}
 				if($sortline=~m/(FLOWERING TIME): ...*(Spring|Summer|Fall|Winter)/){
-					print "$file SEASONCapitalization problem $sortline\n\n";
+					print "$file SEASON Capitalization problem $sortline\n\n";
 				}
 				if($sortline=~m/(....,;)/){
 					print "$file punctuation problem $1 $sortline\n\n";
@@ -424,7 +464,16 @@ EOP
 						print "$file - probable en-dash error (7) =$1: $sortline\n\n";
 					}
 				
-				if($sortline=~m/\blanceolate-(ovate|linear|elliptic|oblong|deltate)/ ){
+				if($sortline=~m/(to lanceolate-ovate in)/ ){
+						print "known false positive lanceolate dash problem ($1): $sortline\n";
+				}
+				elsif($sortline=~m/(, lanceolate-ovate,)/ ){
+						print "known false positive lanceolate dash problem ($1): $sortline\n";
+				}
+				elsif($sortline=~m/(nutlets lanceolate-ovate)/ ){
+						print "known false positive lanceolate dash problem ($1): $sortline\n";
+				}
+				elsif($sortline=~m/\blanceolate-(ovate|linear|elliptic|oblong|deltate)/ ){
 					print "$file - lanceolate dash problem $1: $sortline\n\n";
 				}
 				
@@ -440,7 +489,7 @@ EOP
 					}
 					
 					elsif(($sortline =~ m/-> \[[A-Z]\. [a-z-]+\]/) && ($sortline !~ m/UNABRIDGED KEY LEAD/)){
-						unless ($sortline =~ m/\[(A\. spinosus|A\. blitum|A\. caudatus|A\. viridis|A\. cruentus|A\. hypochondriacus|A\. fruticosa|A. &times;platyspina|A\. trifida|A\. annua|C\. bursifolia|G\. stachydifolia|M\. verna|D\. reptans|D\. nemorosa|O\. robusta|L\. erinus|L\. etrusca|C\. diffusum|D\. plumarius|S\. subulata|S\. pendula|S\. pseudatocion|C\. tricolor|C\. multicava|C\. ovata|E\. cyathophora|E\. davidii|E\. dentata|E\. rigida|E\. myrsinites|A\. decurrens|A\. mearnsii|A\. paradoxa|A\. podalyriifolia|A\. verticillata|A\. pycnantha|A\. retinodes|G\. maderensis|M\. scutellata|T\. resupinatum|T\. alexandrinum|V\. lathyroides|V\. pannonica|V\. disperma|V\. bithynica|V\. cracca|Q\. robur|E\. cygnorum|G\. texanum|P\. zonale|P\. capitatum|P\. vitifolium|H\. androsaemum|H\. hookerianum|L\. monelli|M\. nyctaginea|O\. rosea|O\. stricta|O\. bowiei|O\. purpurea|P\. argemone|P\. heterotepala|P\. tenuifolium|A\. orontium|A\. majus|L\. purpurea|V\. triphyllos|L\. brassicifolium|L\. preauxii|L\. sventenii|E\. polycladon|var\. glabratum|P\. orientalis|P\. fowleri|subsp\. buxiforme|subsp\. neglectum|subsp\. rurivagum|R\. acris|R\. bulbosus|R\. odorata|P\. coccinea|P\. crenulata|P\. atalantioides|A\. campestre|C\. parqui|P\. viscosa|P\. longifolia|U\. americana|U\. minor|A\. cepa|A\. aethiopicus|J\. anthelatus|A\. geniculata|B\. arvensis|M\. schreberi|subsp\. bulbosa)\]/g){
+						unless ($sortline =~ m/\[(A\. spinosus|A\. blitum|A\. caudatus|A\. viridis|A\. cruentus|A\. hypochondriacus|A\. fruticosa|A. &times;platyspina|A\. trifida|A\. annua|C\. bursifolia|G\. stachydifolia|M\. verna|D\. reptans|D\. nemorosa|O\. robusta|L\. erinus|L\. etrusca|C\. diffusum|D\. plumarius|S\. sexangulare|S\. subulata|S\. pendula|S\. pseudatocion|C\. tricolor|C\. multicava|C\. ovata|E\. cyathophora|E\. davidii|E\. dentata|E\. rigida|E\. myrsinites|A\. decurrens|A\. mearnsii|A\. paradoxa|A\. podalyriifolia|A\. verticillata|A\. pycnantha|A\. retinodes|G\. maderensis|M\. scutellata|T\. resupinatum|T\. alexandrinum|V\. lathyroides|V\. pannonica|V\. disperma|V\. bithynica|V\. cracca|Q\. robur|E\. cygnorum|G\. texanum|P\. zonale|P\. capitatum|P\. vitifolium|H\. androsaemum|H\. hookerianum|L\. monelli|M\. nyctaginea|O\. rosea|O\. stricta|O\. bowiei|O\. purpurea|P\. argemone|P\. heterotepala|P\. tenuifolium|A\. orontium|A\. majus|L\. purpurea|V\. triphyllos|L\. brassicifolium|L\. preauxii|L\. sventenii|E\. polycladon|var\. glabratum|P\. orientalis|P\. fowleri|subsp\. buxiforme|subsp\. neglectum|subsp\. rurivagum|R\. acris|R\. bulbosus|R\. odorata|P\. coccinea|P\. crenulata|P\. atalantioides|A\. campestre|C\. parqui|P\. viscosa|P\. longifolia|U\. americana|U\. minor|A\. cepa|A\. aethiopicus|J\. anthelatus|A\. geniculata|B\. arvensis|M\. schreberi|subsp\. bulbosa)\]/g){
 								#known non-tagged unabridged key leads from the printed manual, skip these false positives;
 							print "$file - possible UNABRIDGED KEY LEAD tag missing (2): $sortline\n\n";
 								#print only untagged and unabridged key lines that dont match the unabridged lines printed in the manual
@@ -589,7 +638,7 @@ EOP
 				if($sortline=~m/TIME: [A-Z]/ ){
 					unless($sortline=~m/(TIME: (All|Jun|Jul|Jan|Feb|Mar|Apr|May|Aug|Sep|Oct|Nov|Dec|Summer|Fall|Winter|Spring))/ ){
 								#known properly formatted time formats from printed manual, skip these false positives;
-						unless ($sortline =~ m/TIME: (Evidently unrecorded in California,|After summer rain,|Generally|Late|Early|Probably|Mostly|Mid) /g){
+						unless ($sortline =~ m/TIME: (Evidently unrecorded in California,|After summer rain,|Generally|Late|Early|Probably|Mostly|Mid|Likely) /g){
 								#known oddly formatted time formats from recent treatments, skip these false positives;
 							print "$file  -possible date problem $1: $sortline\n\n";
 						}
@@ -604,19 +653,21 @@ EOP
 				elsif($sortline=~m/TIME: [a-z]/ ){
 					print "$file  -possible date capitalization problem: $sortline\n\n";
 				}
+				
 				if($sortline=~m/( _ )/ ){
 					print "$file  - possible underline spacing problem $1: $sortline\n\n";
 				}
 
-				($tag=$sortline)=~s/:.*//;
+				($tag=$sortline)=~s/:.*/==>/;
+				#any line starting with all caps, without a ':' will display an error now
 				$tag=~s/^([A-Z_\+]+) [^A-Z].*/$1/;
 				unless($field_list{$tag}){
-					unless ($sortline =~/^\w*[0-9]['.]/ || $last_tag =~/RARITY/){
-						print "$file - unrecognized tag $tag $sortline\n\n" unless $tag=~/^\d+['.]/;
+					unless ($sortline =~/^\w*[0-9]['.=>]/ || $last_tag =~/RARITY/){
+						print "$file - unrecognized tag '$tag'--> $sortline\n\n" unless $tag=~/^\d+['.]/;
 					}
 				}
 				unless($field_list{$tag} > $field_list{$last_tag}){
-					unless ($sortline =~/^\w*[0-9]['.]/ || $last_tag =~/RARITY/ || $sortline=~/HORTIC/ || $last_tag=~/UNABRIDGED KEY LEAD/){
+					unless ($sortline =~/^\w*[0-9]['.=>]/ || $last_tag =~/RARITY/ || $sortline=~/HORTIC/ || $last_tag=~/UNABRIDGED KEY LEAD/){
 						print "$file - Out of order: $sortline : $field_list{$tag} tag=$tag last tag=$last_tag $lc\n\n";
 						#I have no clue what this line is doing.. dont think it works.. it is tossing out error for all unabridged key leads
 

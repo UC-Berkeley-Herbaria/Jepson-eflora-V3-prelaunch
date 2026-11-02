@@ -67,11 +67,17 @@
 
 <!--<span class="pageName">Filtered Keys using KeyBase</span>-->
 <P class=bodyText>
-<a href="http://keybase.rbg.vic.gov.au">KeyBase</a> is a dichotomous key platform hosted by <a href="http://www.rbg.vic.gov.au">Royal Botanical Gardens, Victoria</a>, with an interface that allows one to easily navigate dichotomous keys and "filter" them with a checklist, removing key leads that do not pertain to any terminal taxa in the checklist.
+<a href="https://keybase.rbg.vic.gov.au">KeyBase</a> is a dichotomous key platform hosted by <a href="https://www.rbg.vic.gov.au">
+Royal Botanical Gardens, Victoria</a>, with an interface that allows one to easily navigate dichotomous keys and "filter" them with a 
+checklist, removing key leads that do not pertain to any terminal taxa in the checklist.
 </P>
 
 <P class=bodyText>
-The Jepson eFlora dichotomous keys are fully integrated into KeyBase, essentially making a regional flora available for any of the Jepson bioregions. Select the region in which you found your plant, and you will be taken to a simplified version of the eFlora keys in KeyBase. (e.g. <a href="http://keybase.rbg.vic.gov.au/projects/show/11?filter_id=55b17602c0f1b">Key to Plants of the Sierra Nevada</a>, <a href="http://keybase.rbg.vic.gov.au/projects/show/11?filter_id=55b2b2c2b012a">Key to Plants of the San Gabriel Mountains</a>) Taxon names in KeyBase link back to Jepson eFlora taxon pages. 
+The Jepson eFlora dichotomous keys are fully integrated into KeyBase, essentially making a regional flora available for any of the 
+Jepson bioregions. Select the region in which you found your plant, and you will be taken to a simplified version of the eFlora keys in 
+KeyBase. (e.g. <a href="https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=55b17602c0f1b">Key to Plants of the Sierra Nevada</a>, 
+<a href="https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=55b2b2c2b012a">Key to Plants of the San Gabriel Mountains</a>) 
+Taxon names in KeyBase link back to Jepson eFlora taxon pages. 
 </P>
 
 <p class="pageSubheading">
@@ -79,11 +85,11 @@ The Jepson eFlora dichotomous keys are fully integrated into KeyBase, essentiall
 <select onchange="window.location=this.value">
 <option>Select a region</option>
 <?php 
-$keybase_URL='http://keybase.rbg.vic.gov.au/projects/show/11?filter_id='; 
+$keybase_URL='https://keybase.rbg.vic.gov.au/projects/show/11?filter_id='; 
 
 echo "<OPTION VALUE='".$keybase_URL."55b170288bcf6'>CA-FP"; 
 echo "<OPTION VALUE='".$keybase_URL."55b170cba8466'>&nbsp;&nbsp;NW";
-echo "<OPTION VALUE='".$keybase_URL."555f5b4bd9412'>&nbsp;&nbsp;&nbsp;&nbsp;NCo";
+echo "<OPTION VALUE='".$keybase_URL."55aff8e88ef27'>&nbsp;&nbsp;&nbsp;&nbsp;NCo";
 echo "<OPTION VALUE='".$keybase_URL."55b17156b4fee'>&nbsp;&nbsp;&nbsp;&nbsp;NCoR";
 echo "<OPTION VALUE='".$keybase_URL."55b171ec82777'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCoRO";
 echo "<OPTION VALUE='".$keybase_URL."55b1724878ef5'>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCoRI";
@@ -139,99 +145,141 @@ echo "<OPTION VALUE='".$keybase_URL."55b2c7111acde'>&nbsp;&nbsp;DSon";
 </select>
 </p>
 
-<p class="bodyText"><b>NOTE:</b> The KeyBase taxon filters are based on Jepson eFlora author's assertions of taxon ranges. As we have discovered from comparing <a href="/consortium/">Consortium of California Herbaria (CCH)</a> specimen records to eFlora authored ranges in the <a href="/consortium/about_yellow.html">Yellow Flag project</a>, there are many plant populations that occur outside the eFlora authored ranges. If a filtered key does not bring you to an answer that matches the plant you are identifying, try using a more relaxed filter (e.g. use the <a href="http://keybase.rbg.vic.gov.au/projects/show/11?filter_id=55b17602c0f1b">Sierra Nevada filter</a> instead of the <a href="http://keybase.rbg.vic.gov.au/projects/show/11?filter_id=55b1786030b36">Central Sierra Nevada Foothills filter</a>), or use the full key if necessary.</p>
+<p class="bodyText"><b>NOTE:</b> The KeyBase taxon filters are based on Jepson eFlora author's assertions of taxon ranges. 
+As we have discovered from comparing <a href="/consortium/">Consortium of California Herbaria (CCH)</a> 
+specimen records to eFlora authored ranges in the <a href="/consortium/about_yellow.html">Yellow Flag project</a>, 
+there are many plant populations that occur outside the eFlora authored ranges. 
+If a filtered key does not bring you to an answer that matches the plant you are identifying, 
+try using a more relaxed filter (e.g. use the 
+<a href="https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=55b17602c0f1b">Sierra Nevada filter</a> 
+instead of the <a href="https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=55b1786030b36">Central Sierra Nevada Foothills filter</a>),
+ or use the full key if necessary.</p>
 
-<p class="bodyText">For feedback regarding KeyBase software, contact Niels Klazenga (<a href="mailto:Niels.Klazenga@rbg.vic.gov.au">Niels.Klazenga@rbg.vic.gov.au</a>)
+<p class="bodyText">For feedback regarding KeyBase software, contact Niels Klazenga 
+(<a href="mailto:Niels.Klazenga@rbg.vic.gov.au">Niels.Klazenga@rbg.vic.gov.au</a>)
 <br>
-For feedback regarding how Jepson eFlora content is displayed in KeyBase, contact the Jepson Online Interchange (<a href="mailto:interchange@lists.berkeley.edu">interchange@lists.berkeley.edu</a>)
+For feedback regarding how Jepson eFlora content is displayed in KeyBase, contact Jason Alexander 
+(<a href="mailto:jason_alexander@berkeley.edu">jason_alexander@berkeley.edu</a>)
 </p>
 
-<hr width=90%><br>
-
-<table>
+<hr width=95%><br />
+<table width=100% valign=top>
 <tr>
-<td width=50% valign=top>
+<td width=45% valign=top>
 <!-- <img align="center" src="http://ucjeps.berkeley.edu/cgi-bin/new_jmap.pl?ffffffffff"> -->
 <img align="center"  src="/images/exploded_map.png">
 </td>
 
-<td width=25% valign=top>
-<span class="bodyText"><b>CA-FP</b> California Floristic Province<br></span>
-<br>
-<b>&nbsp;&nbsp;NW</b> Northwestern California<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;KR</b> <br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCo</b> North Coast<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCoR</b> North Coast Ranges<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCoRO</b> Outer North Coast Ranges<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCoRI</b> Inner North Coast Ranges<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCoRH</b> High North Coast Ranges<br>
-<br>
-<b>&nbsp;&nbsp;CaR</b> Cascade Ranges<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CaRF</b> Cascade Range Foothills<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CaRH</b> High Cascade Ranges<br>
-<br>
-<b>&nbsp;&nbsp;SN</b> Sierra Nevada<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SNF</b> Sierra Nevada Foothills<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nSNF</b> northern Sierra Nevada Foothills<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cSNF</b> central Sierra Nevada Foothills<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sSNF</b> southern Sierra Nevada Foothills<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SNH</b> High Sierra Nevada<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nSNH</b> northern High Sierra Nevada<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cSNH</b> central High Sierra Nevada<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sSNH</b> sourthern High Sierra Nevada<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Teh</b> Tehachapi Mountains Area<br>
-<br>
-<b>&nbsp;&nbsp;GV</b> Great Central Valley<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ScV</b> Sacramento Valley<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SnJV</b> San Joaquin Valley<br>
-<br>
-<b>&nbsp;&nbsp;CW</b> Central Western California<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;CCo</b> <br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SnFrB</b> <br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCoR</b> South Coast Ranges<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCoRO</b> Outer South Coast Ranges<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCoRI</b> Inner South Coast Ranges<br>
+<td width=50% valign=top>
+
+<table><tr><td valign="top">
+<p><span class="bodyText"><b>List California Floristic Provinces, Regions and Bioregions<br /></span>
+<b>(click on any link on the list below to view the filtered key)<br /><br /></span></p>
+</td></tr>
+<tr><td>
+
+<table><tr><td width=270px valign="top">
+<?php 
+$keybase_URL='https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=';
+echo '<p style="font-size:1.2em">';
+echo '<b>CA-FP</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'55b170288bcf6">California Floristic Province</a><br />';
+echo '</p>';
+echo '<p>';
+echo '<b>&nbsp;&nbsp;NW</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'55b170cba8466">Northwestern California</a><br />';
+echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;NCo</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'55aff8e88ef27">North Coast</a><br />';
+echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;NCoR</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'55b17156b4fee">North Coast Ranges</a><br />';
+echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCoRO</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'55b171ec82777">Outer North Coast Ranges</a><br />';
+echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCoRI</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'55b1724878ef5">Inner North Coast Ranges</a><br />';
+echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCoRH</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'55b172bf8d639">High North Coast Ranges</a><br />';
+echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;KR</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'55b1733fc8519">Klamath Ranges</a><br />';
+echo '</p>';
+?>
+<p>
+<b>&nbsp;&nbsp;CaR</b>&nbsp;&nbsp;Cascade Ranges<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;CaRF</b>&nbsp;&nbsp;Cascade Range Foothills<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;CaRH</b>&nbsp;&nbsp;High Cascade Ranges<br>
+</p>
+<p>
+<b>&nbsp;&nbsp;SN</b>&nbsp;&nbsp;Sierra Nevada<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;SNF</b>&nbsp;&nbsp;Sierra Nevada Foothills<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nSNF</b>&nbsp;&nbsp;northern Sierra Nevada Foothills<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cSNF</b>&nbsp;&nbsp;central Sierra Nevada Foothills<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sSNF</b>&nbsp;&nbsp;southern Sierra Nevada Foothills<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;SNH</b>&nbsp;&nbsp;High Sierra Nevada<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nSNH</b>&nbsp;&nbsp;northern High Sierra Nevada<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cSNH</b>&nbsp;&nbsp;central High Sierra Nevada<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sSNH</b>&nbsp;&nbsp;sourthern High Sierra Nevada<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;Teh</b>&nbsp;&nbsp;Tehachapi Mountains Area<br>
+</p>
+<p>
+<b>&nbsp;&nbsp;GV</b>&nbsp;&nbsp;Great Central Valley<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;ScV</b>&nbsp;&nbsp;Sacramento Valley<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;SnJV</b>&nbsp;&nbsp;San Joaquin Valley<br>
+</p>
+<p>
+<b>&nbsp;&nbsp;CW</b>&nbsp;&nbsp;Central Western California<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;CCo</b>&nbsp;&nbsp;Central Coast<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;SnFrB</b>&nbsp;&nbsp;San Francisco Bay Area<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;SCoR</b>&nbsp;&nbsp;South Coast Ranges<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCoRO</b>&nbsp;&nbsp;Outer South Coast Ranges<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCoRI</b>&nbsp;&nbsp;Inner South Coast Ranges<br>
+<p/>
 </td>
-<td width=25% valign="top">
-<b>&nbsp;&nbsp;SW</b> Southwestern California<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SCo</b> South Coast<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;ChI</b> Channel Islands<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nChI</b> northern Channel Islands<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sChI</b> southern Channel Islands<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PR</b> Peninsular Ranges<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SnJt</b> San Jacinto Mountains<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PR exc SnJt</b> PR excluding SnJt<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;TR</b> Transverse Ranges<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WTR</b> Western Transverse Ranges<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SnGb</b> San Gabriel Mountains<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SnBr</b> San Bernardino Mountains<br>
-<br><br><br>
-<span class="bodyText"><b>GB</b> Great Basin Province<br></span>
-<br>
-<b>&nbsp;&nbsp;MP</b> Modoc Plateau<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;Wrn</b> Warner Mountains<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;MP exc Wrn</b> MP excluding Wrn<br>
-<b>&nbsp;&nbsp;SNE</b> East of Sierra Nevada<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;W&amp;I</b> White and Inyo Mountains<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SNE exc W&amp;I</b> SNE excluding W&amp;I<br>
-<br><br><br>
-<span class="bodyText"><b>D</b> Desert Province<br></span>
-<br>
-<b>&nbsp;&nbsp;DMoj</b> Mojave Desert<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DMtns</b> Desert Mountains<br>
-<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;DMoj exc DMtns</b> DMoj excluding DMtns<br>
-<b>&nbsp;&nbsp;DSon</b> Sonoran Desert<br>
+<td width=320px valign="top">
+<p>
+<b>&nbsp;&nbsp;SW</b>&nbsp;&nbsp;Southwestern California<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;SCo</b>&nbsp;&nbsp;South Coast<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;ChI</b>&nbsp;&nbsp;Channel Islands<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;nChI</b>&nbsp;&nbsp;northern Channel Islands<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sChI</b>&nbsp;&nbsp;southern Channel Islands<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;PR</b>&nbsp;&nbsp;Peninsular Ranges<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SnJt</b>&nbsp;&nbsp;San Jacinto Mountains<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;PR exc SnJt</b>&nbsp;&nbsp;Peninsular Ranges excluding SnJt<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;TR</b>&nbsp;&nbsp;Transverse Ranges<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;WTR</b>&nbsp;&nbsp;Western Transverse Ranges<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SnGb</b>&nbsp;&nbsp;San Gabriel Mountains<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;SnBr</b>&nbsp;&nbsp;San Bernardino Mountains<br>
+</p>
+<p style="font-size:1.2em">
+<b>GB</b>&nbsp;&nbsp;Great Basin Province<br>
+</p>
+<p>
+<b>&nbsp;&nbsp;MP</b>&nbsp;&nbsp;Modoc Plateau<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;Wrn</b>&nbsp;&nbsp;Warner Mountains<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;MP exc Wrn</b>&nbsp;&nbsp;Modoc Plateau excluding Wrn<br>
+<b>&nbsp;&nbsp;SNE</b>&nbsp;&nbsp;East of Sierra Nevada<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;W&amp;I</b>&nbsp;&nbsp;White and Inyo Mountains<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;SNE exc W&amp;I</b>&nbsp;&nbsp;East of Sierra Nevada excluding W&amp;I<br>
+</p>
+<p style="font-size:1.2em">
+<b>D</b>&nbsp;&nbsp;Desert Province<br>
+</p>
+<p>
+<b>&nbsp;&nbsp;DMoj</b>&nbsp;&nbsp;Mojave Desert<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;DMtns</b>&nbsp;&nbsp;Desert Mountains<br>
+<b>&nbsp;&nbsp;&nbsp;&nbsp;DMoj exc DMtns</b>&nbsp;&nbsp;Mojave Desert excluding DMtns<br>
+<b>&nbsp;&nbsp;DSon</b>&nbsp;&nbsp;Sonoran Desert<br>
+</p>
+</td></tr>
+</table>
+
+</td></tr>
+</table>
+
 </td></tr>
 
 <tr><td>&nbsp;</td></tr>
 </table>
 
 <P class=bodyText>
-The Jepson eFlora divides California into 35 ecologically distinct "bioregions" for the purpose of indicating where plant taxa grow. These divisions are grouped into regions, which are grouped into three main "provinces", as shown in the maps above.
+The Jepson eFlora divides California into 35 ecologically distinct "bioregions" for the purpose of indicating where plant taxa grow. 
+These divisions are grouped into regions, which are grouped into three main "provinces", as shown in the maps above.
 </P>
 
 <P class=bodyText>
-Each terminal taxon treatment in the Jepson eFlora indicates the treatments in which the taxon is asserted to occur. Using this information, a checklist for any subregion, region or province can be made (see the <a href="/eflora/tools/">eFlora Tools page</a> for a tool that does exactly that).
+Each terminal taxon treatment in the Jepson eFlora indicates the treatments in which the taxon is asserted to occur. 
+Using this information, a checklist for any bioregion, region or province can be made (see the <a href="/eflora/tools/">eFlora Tools page</a>
+ for a tool that does exactly that).
 </P>
 <br>
 

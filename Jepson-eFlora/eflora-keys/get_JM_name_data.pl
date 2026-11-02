@@ -684,7 +684,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	ASTERACEAE	Ambrosia	eriocentra	(A. Gray) W.W. Payne				Ambrosia eriocentra	Ambrosia eriocentra (A. Gray) W.W. Payne			WOOLLY BUR-SAGE	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Ambrosia	ilicifolia	(A. Gray) W.W. Payne				Ambrosia ilicifolia	Ambrosia ilicifolia (A. Gray) W.W. Payne		syn: Franseria ilicifolia A. Gray	HOLLY-LEAVED BUR-SAGE	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Ambrosia	monogyra	(Torr. & A. Gray) Strother & B.G. Baldwin				Ambrosia monogyra	Ambrosia monogyra (Torr. & A. Gray) Strother & B.G. Baldwin		syn: Hymenoclea monogyra Torr. & A. Gray	SINGLEWHORL BURROBRUSH	TJM2	EUDICOTS	0
-0		ASTERACEAE	Ambrosia	&times;platyspina	(Seaman) Strother & B.G. Baldwin				Ambrosia &times;platyspina	Ambrosia &times;platyspina (Seaman) Strother & B.G. Baldwin				TJM2	EUDICOTS	0
+0	SPONTANEOUS HYBRID	ASTERACEAE	Ambrosia	&times;platyspina	(Seaman) Strother & B.G. Baldwin				Ambrosia &times;platyspina	Ambrosia &times;platyspina (Seaman) Strother & B.G. Baldwin		syn: Hymenoclea platyspina Seaman	HYBRID BUR-SAGE	TJM2	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Ambrosia	psilostachya	DC.				Ambrosia psilostachya	Ambrosia psilostachya DC.		syn: Ambrosia psilostachya DC. var. californica (Rydb.) S.F. Blake	WESTERN RAGWEED	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Ambrosia	pumila	(Nutt.) A. Gray				Ambrosia pumila	Ambrosia pumila (Nutt.) A. Gray			SAN DIEGO AMBROSIA	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Ambrosia	salsola	(Torr. & A. Gray) Strother & B.G. Baldwin				Ambrosia salsola	Ambrosia salsola (Torr. & A. Gray) Strother & B.G. Baldwin			COMMON BURROBRUSH, CHEESEBUSH	TJM2	EUDICOTS	0
@@ -862,7 +862,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	ASTERACEAE	Carlquistia	muirii	(A. Gray) B.G. Baldwin				Carlquistia muirii	Carlquistia muirii (A. Gray) B.G. Baldwin		syn: Raillardiopsis muirii (A. Gray) Rydb.	MUIR'S TARPLANT	TJM2	EUDICOTS	1
 0	NATURALIZED	ASTERACEAE	Carthamus	creticus	L.				Carthamus creticus	Carthamus creticus L.		syn: Carthamus baeticus (Boiss. & Reut.) Nyman; syn: Carthamus lanatus L. subsp. baeticus (Boiss. & Reut.) Nyman	SMOOTH DISTAFF THISTLE	TJM2	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Carthamus	lanatus	L.				Carthamus lanatus	Carthamus lanatus L.		syn: Carthamus lanatus subsp. lanatus	WOOLLY DISTAFF THISTLE	TJM1	EUDICOTS	0
-0		ASTERACEAE	Carthamus	leucocaulos	Sibth. & Sm.				Carthamus leucocaulos	Carthamus leucocaulos Sibth. & Sm.				TJM1	EUDICOTS	0
+0	EXTIRPATED ALIEN	ASTERACEAE	Carthamus	leucocaulos	Sibth. & Sm.				Carthamus leucocaulos	Carthamus leucocaulos Sibth. & Sm.			WHITESTEM DISTAFF THISTLE	TJM1	EUDICOTS	0
 0	WAIF	ASTERACEAE	Carthamus	tinctorius	L.				Carthamus tinctorius	Carthamus tinctorius L.			SAFFLOWER	TJM1	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Centaurea	benedicta	(L.) L.				Centaurea benedicta	Centaurea benedicta (L.) L.		syn: Cnicus benedictus L.	BLESSED THISTLE	TJM2	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Centaurea	calcitrapa	L.				Centaurea calcitrapa	Centaurea calcitrapa L.			PURPLE STAR-THISTLE	TJM1	EUDICOTS	0
@@ -983,7 +983,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATURALIZED	ASTERACEAE	Coreopsis	tinctoria	Nutt.				Coreopsis tinctoria	Coreopsis tinctoria Nutt.		syn: Coreopsis atkinsoniana Lindl.; syn: Coreopsis tinctoria Nutt. var. atkinsoniana (Lindl.) E.B. Sm.	CALLIOPSIS	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Corethrogyne	filaginifolia	(Hook. & Arn.) Nutt.				Corethrogyne filaginifolia	Corethrogyne filaginifolia (Hook. & Arn.) Nutt.		syn: Lessingia filaginifolia (Hook. & Arn.) M.A. Lane var. californica (DC.) M.A. Lane; syn: Lessingia filaginifolia var. filaginifolia		TJM2	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Cosmos	bipinnatus	Cav.				Cosmos bipinnatus	Cosmos bipinnatus Cav.			GARDEN COSMOS	TJM1	EUDICOTS	0
-0		ASTERACEAE	Cosmos	sulphureus	Cav.				Cosmos sulphureus	Cosmos sulphureus Cav.				TJM1	EUDICOTS	0
+0	GARDEN WEED	ASTERACEAE	Cosmos	sulphureus	Cav.				Cosmos sulphureus	Cosmos sulphureus Cav.				TJM1	EUDICOTS	0
 0	WAIF	ASTERACEAE	Cota	tinctoria	(L.) J. Gay ex Guss.				Cota tinctoria	Cota tinctoria (L.) J. Gay ex Guss.		syn: Anthemis tinctoria L.	GOLDEN MARGUERITE	TJM2	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Cotula	australis	(Sieber ex Spreng.) Hook. f.				Cotula australis	Cotula australis (Sieber ex Spreng.) Hook. f.			AUSTRALIAN COTULA	TJM1	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Cotula	coronopifolia	L.				Cotula coronopifolia	Cotula coronopifolia L.			BRASS-BUTTONS	TJM1	EUDICOTS	0
@@ -1006,6 +1006,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	ASTERACEAE	Crepis	occidentalis	Nutt.	subsp.	occidentalis		Crepis occidentalis subsp. occidentalis	Crepis occidentalis Nutt. subsp. occidentalis				TJM2	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Crepis	occidentalis	Nutt.	subsp.	pumila	(Rydb.) Babc. & Stebbins	Crepis occidentalis subsp. pumila	Crepis occidentalis Nutt. subsp. pumila (Rydb.) Babc. & Stebbins				TJM2	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Crepis	pleurocarpa	A. Gray				Crepis pleurocarpa	Crepis pleurocarpa A. Gray				TJM1	EUDICOTS	0
+0	NATURALIZED	ASTERACEAE	Crepis	pulchra	L.				Crepis pulchra	Crepis pulchra L.				TJM2	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Crepis	runcinata	(E. James) Torr. & A. Gray				Crepis runcinata	Crepis runcinata (E. James) Torr. & A. Gray				TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Crepis	runcinata	(E. James) Torr. & A. Gray	subsp.	andersonii	(A. Gray) Babc. & Stebbins	Crepis runcinata subsp. andersonii	Crepis runcinata (E. James) Torr. & A. Gray subsp. andersonii (A. Gray) Babc. & Stebbins		syn: Crepis runcinata var. andersonii (A. Gray) Cronquist		TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Crepis	runcinata	(E. James) Torr. & A. Gray	subsp.	hallii	Babc. & Stebbins	Crepis runcinata subsp. hallii	Crepis runcinata (E. James) Torr. & A. Gray subsp. hallii Babc. & Stebbins			HALL'S MEADOW HAWKSBEARD	TJM1	EUDICOTS	0
@@ -1053,6 +1054,11 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATURALIZED	ASTERACEAE	Dimorphotheca	sinuata	DC.				Dimorphotheca sinuata	Dimorphotheca sinuata DC.			NAMAQUALAND DAISY	TJM1	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Dittrichia	graveolens	(L.) Greuter				Dittrichia graveolens	Dittrichia graveolens (L.) Greuter			STINKWORT	TJM2	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Dittrichia	viscosa	(L.) Greuter				Dittrichia viscosa	Dittrichia viscosa (L.) Greuter			FALSE YELLOWHEAD	TJM2	EUDICOTS	0
+0	NATIVE	ASTERACEAE	Doellingeria	breweri	(A. Gray) Semple, Brouillet & G.A. Allen				Doellingeria breweri	Doellingeria breweri (A. Gray) Semple, Brouillet & G.A. Allen		syn: Aster breweri (A. Gray) Semple; syn: Chrysopsis breweri A. Gray; syn: Eucephalus breweri (A. Gray) G.L. Nesom		TJM2	EUDICOTS	1
+0	NATIVE	ASTERACEAE	Doellingeria	engelmannii	(D.C. Eaton) Semple, Brouillet & G.A. Allen				Doellingeria engelmannii	Doellingeria engelmannii (D.C. Eaton) Semple, Brouillet & G.A. Allen		syn: Aster engelmannii (D.C. Eaton) A. Gray; syn: Eucephalus engelmannii (D.C. Eaton) Greene		TJM2	EUDICOTS	0
+0	NATIVE	ASTERACEAE	Doellingeria	glabrata	(Greene) Semple, Brouillet & G.A. Allen				Doellingeria glabrata	Doellingeria glabrata (Greene) Semple, Brouillet & G.A. Allen		syn: Aster brickellioides Greene var. glabratus Greene; syn: Aster siskiyouensis A. Nelson & J.F. Macbr.; syn: Eucephalus glandulosus Eastw.; syn: Eucephalus glabratus (Greene) Greene	SISKIYOU ASTER	TJM2	EUDICOTS	0
+0	NATIVE	ASTERACEAE	Doellingeria	ledophylla	(A. Gray) Semple, Brouillet & G.A. Allen	var.	covillei	(Greene) Semple, Brouillet & G.A. Allen	Doellingeria ledophylla var. covillei	Doellingeria ledophylla (A. Gray) Semple, Brouillet & G.A. Allen var. covillei (Greene) Semple, Brouillet & G.A. Allen		syn: Aster ledophyllus (A. Gray) A. Gray var. covillei (Greene) Cronquist; syn: Eucephalus ledophyllus (A. Gray) Greene var. covillei (Greene) G.L. Nesom		TJM2	EUDICOTS	0
+0	NATIVE	ASTERACEAE	Doellingeria	tomentella	(Greene) Semple, Brouillet & G.A. Allen				Doellingeria tomentella	Doellingeria tomentella (Greene) Semple, Brouillet & G.A. Allen		syn: Sericocarpus tomentellus Greene; syn: Aster brickellioides Greene; syn: Eucephalus brickellioides (Greene) G.L. Nesom; syn: Eucephalus tomentellus (Greene) Greene	BRICKELLBUSH ASTER	TJM2	EUDICOTS	0
 0	WAIF	ASTERACEAE	Dyssodia	papposa	(Vent.) Hitchc.				Dyssodia papposa	Dyssodia papposa (Vent.) Hitchc.			DOGWEED	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Eastwoodia	elegans	Brandegee				Eastwoodia elegans	Eastwoodia elegans Brandegee				TJM1	EUDICOTS	1
 0	NATIVE	ASTERACEAE	Eatonella	nivea	(D.C. Eaton) A. Gray				Eatonella nivea	Eatonella nivea (D.C. Eaton) A. Gray				TJM1	EUDICOTS	0
@@ -1060,8 +1066,8 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	ASTERACEAE	Eclipta	prostrata	(L.) L.				Eclipta prostrata	Eclipta prostrata (L.) L.		syn: Eclipta alba (L.) Hassk.	FALSE DAISY	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Encelia	actoni	Elmer				Encelia actoni	Encelia actoni Elmer		syn: Encelia virginensis A. Nelson subsp. actoni (Elmer) D.D. Keck		TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Encelia	californica	Nutt.				Encelia californica	Encelia californica Nutt.				TJM1	EUDICOTS	0
-0		ASTERACEAE	Encelia	farinosa	A. Gray ex Torr. &times; E. frutescens (A. Gray) A. Gray				Encelia farinosa	Encelia farinosa A. Gray ex Torr. &times; E. frutescens (A. Gray) A. Gray				TJM1	EUDICOTS	0
-0	NATIVE	ASTERACEAE	Encelia	farinosa	A. Gray ex Torr.				Encelia farinosa	Encelia farinosa A. Gray ex Torr.		syn: Encelia farinosa var. phenicodonta (S.F. Blake) I.M. Johnst.	BRITTLEBUSH	TJM1	EUDICOTS	0
+0	SPONTANEOUS HYBRID	ASTERACEAE	Encelia	farinosa	A. Gray ex Torr. &times; E. frutescens (A. Gray) A. Gray				Encelia farinosa	Encelia farinosa A. Gray ex Torr. &times; E. frutescens (A. Gray) A. Gray		syn: Encelia farinosa var. phenicodonta (S.F. Blake) I.M. Johnst.		TJM1	EUDICOTS	0
+0	NATIVE	ASTERACEAE	Encelia	farinosa	A. Gray ex Torr.				Encelia farinosa	Encelia farinosa A. Gray ex Torr.			BRITTLEBUSH	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Encelia	frutescens	(A. Gray) A. Gray				Encelia frutescens	Encelia frutescens (A. Gray) A. Gray				TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Encelia	virginensis	A. Nelson				Encelia virginensis	Encelia virginensis A. Nelson				TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Enceliopsis	covillei	(A. Nelson) S.F. Blake				Enceliopsis covillei	Enceliopsis covillei (A. Nelson) S.F. Blake		syn: Enceliopsis argophylla (D.C. Eaton) A. Nelson var. grandiflora (M.E. Jones) Jeps.	PANAMINT DAISY	TJM1	EUDICOTS	1
@@ -1221,12 +1227,6 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	ASTERACEAE	Eriophyllum	pringlei	A. Gray				Eriophyllum pringlei	Eriophyllum pringlei A. Gray			PRINGLE'S WOOLLY SUNFLOWER	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Eriophyllum	staechadifolium	Lag.				Eriophyllum staechadifolium	Eriophyllum staechadifolium Lag.		syn: Eriophyllum staechadifolium var. artemisiifolium (Less.) J.F. Macbr.; syn: Eriophyllum staechadifolium var. depressum Greene	SEASIDE WOOLLY SUNFLOWER	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Eriophyllum	wallacei	(A. Gray) A. Gray				Eriophyllum wallacei	Eriophyllum wallacei (A. Gray) A. Gray		syn: Eriophyllum wallacei var. calvescens S.F. Blake; syn: Eriophyllum aureum Brandegee	WALLACE'S WOOLLY DAISY	TJM1	EUDICOTS	0
-0	NATIVE	ASTERACEAE	Eucephalus	breweri	(A. Gray) G.L. Nesom				Eucephalus breweri	Eucephalus breweri (A. Gray) G.L. Nesom		syn: Aster breweri (A. Gray) Semple; syn: Chrysopsis breweri A. Gray		TJM2	EUDICOTS	1
-0	NATIVE	ASTERACEAE	Eucephalus	engelmannii	(D.C. Eaton) Greene				Eucephalus engelmannii	Eucephalus engelmannii (D.C. Eaton) Greene		syn: Aster engelmannii (D.C. Eaton) A. Gray		TJM2	EUDICOTS	0
-0	NATIVE	ASTERACEAE	Eucephalus	glabratus	(Greene) Greene				Eucephalus glabratus	Eucephalus glabratus (Greene) Greene		syn: Aster brickellioides Greene var. glabratus Greene; syn: Aster siskiyouensis A. Nelson & J.F. Macbr.; syn: Eucephalus glandulosus Eastw.	SISKIYOU ASTER	TJM2	EUDICOTS	0
-0	NATIVE	ASTERACEAE	Eucephalus	ledophyllus	(A. Gray) Greene	var.	covillei	(Greene) G.L. Nesom	Eucephalus ledophyllus var. covillei	Eucephalus ledophyllus (A. Gray) Greene var. covillei (Greene) G.L. Nesom		syn: Aster ledophyllus (A. Gray) A. Gray var. covillei (Greene) Cronquist		TJM2	EUDICOTS	0
-0	NATIVE	ASTERACEAE	Eucephalus	tomentellus	(Greene) Greene				Eucephalus tomentellus	Eucephalus tomentellus (Greene) Greene		syn: Sericocarpus tomentellus Greene; syn: Aster brickellioides Greene; syn: Eucephalus brickellioides (Greene) G.L. Nesom	BRICKELLBUSH ASTER	TJM2	EUDICOTS	0
-0	NATIVE	ASTERACEAE	Eucephalus	vialis	Bradshaw				Eucephalus vialis	Eucephalus vialis Bradshaw		syn: Aster vialis (Bradshaw) S.F. Blake	WAYSIDE ASTER	TJM2	EUDICOTS	1
 0	NATURALIZED	ASTERACEAE	Euchiton	gymnocephalus	(DC.) Holub				Euchiton gymnocephalus	Euchiton gymnocephalus (DC.) Holub		syn: Gnaphalium collinum Labill., illeg.; syn: Gnaphalium gymnocephalum DC.	CREEPING CUDWEED	TJM2	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Euchiton	involucratus	(G. Forst.) Holub				Euchiton involucratus	Euchiton involucratus (G. Forst.) Holub			STAR COTTONLEAF	TJM2	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Euchiton	sphaericus	(Willd.) Holub				Euchiton sphaericus	Euchiton sphaericus (Willd.) Holub		syn: Gnaphalium japonicum Thunb., misappl.	GLOBE COTTONLEAF	TJM2	EUDICOTS	0
@@ -1288,7 +1288,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	ASTERACEAE	Hazardia	whitneyi	(A. Gray) Greene	var.	discoidea	(J.T. Howell) W.D. Clark	Hazardia whitneyi var. discoidea	Hazardia whitneyi (A. Gray) Greene var. discoidea (J.T. Howell) W.D. Clark		syn: Haplopappus whitneyi A. Gray subsp. discoideus (J.T. Howell) D.D. Keck		TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Hazardia	whitneyi	(A. Gray) Greene	var.	whitneyi		Hazardia whitneyi var. whitneyi	Hazardia whitneyi (A. Gray) Greene var. whitneyi				TJM1	EUDICOTS	1
 0	NATIVE	ASTERACEAE	Hecastocleis	shockleyi	A. Gray				Hecastocleis shockleyi	Hecastocleis shockleyi A. Gray				TJM1	EUDICOTS	0
-0	NATURALIZED	ASTERACEAE	Hedypnois	rhagadioloides	(L.) F. W. Schmidt				Hedypnois rhagadioloides	Hedypnois rhagadioloides (L.) F. W. Schmidt		syn: Hedypnois cretica (L.) Dum.Cours.	CRETE WEED	TJM2	EUDICOTS	0
+0	NATURALIZED	ASTERACEAE	Hedypnois	rhagadioloides	(L.) F.W. Schmidt				Hedypnois rhagadioloides	Hedypnois rhagadioloides (L.) F.W. Schmidt		syn: Hedypnois cretica (L.) Dum.Cours.	CRETE WEED	TJM2	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Helenium	amarum	(Raf.) H. Rock	var.	amarum		Helenium amarum var. amarum	Helenium amarum (Raf.) H. Rock var. amarum		syn: Gaillardia amara Raf.; syn: Helenium tenuifolium Nutt.		TJM2	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Helenium	autumnale	L.				Helenium autumnale	Helenium autumnale L.		syn: Helenium autumnale var. grandiflorum A. Gray; syn: Helenium autumnale var. montanum (Nutt.) Fernald; syn: Heleniastrum autumnale (L.) Kuntze; syn: Helenium altissimum Link; syn: Helenium autumnale var. canaliculatum (Lam.) Torr. & A. Gray; syn: Helenium autumnale var. fylesii B. Boivin; syn: Helenium autumnale var. parviflorum (Nutt.) Fernald; syn: Helenium canaliculatum Lam.; syn: Helenium edwardsianum Cory; syn: Helenium grandiflorum Nutt.; syn: Helenium huronense Britton; syn: Helenium latifolium Mill.; syn: Helenium macranthum Rydb.; syn: Helenium montanum Nutt.; syn: Helenium parviflorum Nutt.		TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Helenium	bigelovii	Torr. & A. Gray				Helenium bigelovii	Helenium bigelovii Torr. & A. Gray		syn: Heleniastrum bigelovii (A. Gray) Kuntze; syn: Heleniastrum occidentale Greene; syn: Heleniastrum rivulare Greene; syn: Helenium rivulare (Greene) Rydb.		TJM1	EUDICOTS	0
@@ -1300,11 +1300,10 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	ASTERACEAE	Helianthella	californica	A. Gray	var.	shastensis	W.A. Weber	Helianthella californica var. shastensis	Helianthella californica A. Gray var. shastensis W.A. Weber		syn: Helianthella californica subsp. shastensis (W.A. Weber) W.A. Weber		TJM1	EUDICOTS	1
 0	NATIVE	ASTERACEAE	Helianthella	castanea	Greene				Helianthella castanea	Helianthella castanea Greene			DIABLO HELIANTHELLA	TJM1	EUDICOTS	1
 0	NATIVE	ASTERACEAE	Helianthus	annuus	L.				Helianthus annuus	Helianthus annuus L.		syn: Helianthus annuus subsp. jaegeri (Heiser) Heiser; syn: Helianthus annuus subsp. lenticularis (Douglas) Cockerell; syn: Helianthus annuus var. macrocarpus (DC.) Cockerell		TJM1	EUDICOTS	0
-0	NATIVE	ASTERACEAE	Helianthus	bolanderi	A. Gray				Helianthus bolanderi	Helianthus bolanderi A. Gray			BOLANDER'S SUNFLOWER	TJM1	EUDICOTS	0
+0	NATIVE	ASTERACEAE	Helianthus	bolanderi	A. Gray				Helianthus bolanderi	Helianthus bolanderi A. Gray		syn: Helianthus exilis A. Gray	BOLANDER'S SUNFLOWER	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Helianthus	californicus	DC.				Helianthus californicus	Helianthus californicus DC.			CALIFORNIA SUNFLOWER	TJM1	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Helianthus	ciliaris	DC.				Helianthus ciliaris	Helianthus ciliaris DC.			BLUEWEED	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Helianthus	cusickii	A. Gray				Helianthus cusickii	Helianthus cusickii A. Gray			CUSICK'S SUNFLOWER	TJM1	EUDICOTS	0
-0	NATIVE	ASTERACEAE	Helianthus	exilis	A. Gray				Helianthus exilis	Helianthus exilis A. Gray			SERPENTINE SUNFLOWER	TJM2	EUDICOTS	1
 0	NATIVE	ASTERACEAE	Helianthus	gracilentus	A. Gray				Helianthus gracilentus	Helianthus gracilentus A. Gray			SLENDER SUNFLOWER	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Helianthus	inexpectatus	D.J. Keil & Elvin				Helianthus inexpectatus	Helianthus inexpectatus D.J. Keil & Elvin			NEWHALL SUNFLOWER	TJM2	EUDICOTS	1
 0	NATIVE	ASTERACEAE	Helianthus	niveus	(Benth.) Brandegee	subsp.	tephrodes	(A. Gray) Heiser	Helianthus niveus subsp. tephrodes	Helianthus niveus (Benth.) Brandegee subsp. tephrodes (A. Gray) Heiser			ALGODONES DUNES SUNFLOWER	TJM1	EUDICOTS	0
@@ -1350,7 +1349,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	ASTERACEAE	Heterotheca	shevockii	(Semple) Semple				Heterotheca shevockii	Heterotheca shevockii (Semple) Semple		syn: Heterotheca villosa var. shevockii Semple	SHEVOCK'S GOLDENASTER	TJM2	EUDICOTS	1
 0	NATIVE	ASTERACEAE	Heterotheca	subaxillaris	(Lam.) Britton & Rusby	subsp.	latifolia	(Buckley) Semple	Heterotheca subaxillaris subsp. latifolia	Heterotheca subaxillaris (Lam.) Britton & Rusby subsp. latifolia (Buckley) Semple		syn: Heterotheca psammophila B. Wagenkn.	CAMPHOR-WEED	TJM2	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Heterotheca	villosa	(Pursh) Shinners				Heterotheca villosa	Heterotheca villosa (Pursh) Shinners			HAIRY GOLDENASTER	TJM1	EUDICOTS	0
-0	NATIVE	ASTERACEAE	Heterotheca	villosa	(Pursh) Shinners	var.	minor	(Hook.) Semple	Heterotheca villosa var. minor	Heterotheca villosa (Pursh) Shinners var. minor (Hook.) Semple		syn: Heterotheca villosa var. hispida (Hook.) V.L. Harms; syn: Heterotheca villosa var. villosa, misappl.		TJM2	EUDICOTS	1
+0	NATIVE	ASTERACEAE	Heterotheca	villosa	(Pursh) Shinners	var.	minor	(Hook.) Semple	Heterotheca villosa var. minor	Heterotheca villosa (Pursh) Shinners var. minor (Hook.) Semple		syn: Heterotheca villosa var. hispida (Hook.) V.L. Harms; syn: Heterotheca villosa var. villosa, misappl.; syn: Chrysopsis villosa (Pursh) Nutt. ex DC. var. villosa, misappl.		TJM2	EUDICOTS	1
 0	NATIVE	ASTERACEAE	Heterotheca	villosa	(Pursh) Shinners	var.	scabra	(Eastw.) Semple	Heterotheca villosa var. scabra	Heterotheca villosa (Pursh) Shinners var. scabra (Eastw.) Semple				TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Hieracium	albiflorum	Hook.				Hieracium albiflorum	Hieracium albiflorum Hook.			WHITE HAWKWEED	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Hieracium	argutum	Nutt.				Hieracium argutum	Hieracium argutum Nutt.		syn: Hieracium argutum var. parishii (A. Gray) Jeps.	SOUTHERN HAWKWEED	TJM1	EUDICOTS	0
@@ -1647,7 +1646,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	ASTERACEAE	Pluchea	odorata	(L.) Cass.	var.	odorata		Pluchea odorata var. odorata	Pluchea odorata (L.) Cass. var. odorata			SALTMARSH-FLEABANE	TJM2	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Pluchea	sericea	(Nutt.) Coville				Pluchea sericea	Pluchea sericea (Nutt.) Coville			ARROW-WEED	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Porophyllum	gracile	Benth.				Porophyllum gracile	Porophyllum gracile Benth.			ODORA, SLENDER PORELEAF	TJM1	EUDICOTS	0
-0		ASTERACEAE	Porophyllum	ruderale	(Jacq.) Cass.	var.	macrocephalum	(DC.) Cronquist	Porophyllum ruderale var. macrocephalum	Porophyllum ruderale (Jacq.) Cass. var. macrocephalum (DC.) Cronquist				TJM2	EUDICOTS	0
+0	AGRICULTURAL WEED	ASTERACEAE	Porophyllum	ruderale	(Jacq.) Cass.	var.	macrocephalum	(DC.) Cronquist	Porophyllum ruderale var. macrocephalum	Porophyllum ruderale (Jacq.) Cass. var. macrocephalum (DC.) Cronquist			YERBA POROSA	TJM2	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Prenanthella	exigua	(A. Gray) Rydb.				Prenanthella exigua	Prenanthella exigua (A. Gray) Rydb.		syn: Lygodesmia exigua A. Gray	BRIGHTWHITE	TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Psathyrotes	annua	(Nutt.) A. Gray				Psathyrotes annua	Psathyrotes annua (Nutt.) A. Gray				TJM1	EUDICOTS	0
 0	NATIVE	ASTERACEAE	Psathyrotes	ramosissima	(Torr.) A. Gray				Psathyrotes ramosissima	Psathyrotes ramosissima (Torr.) A. Gray			TURTLEBACK	TJM1	EUDICOTS	0
@@ -1762,7 +1761,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	ASTERACEAE	Solidago	velutina	DC.	subsp.	sparsiflora	(A. Gray) Semple	Solidago velutina subsp. sparsiflora	Solidago velutina DC. subsp. sparsiflora (A. Gray) Semple		syn: Solidago sparsiflora A. Gray		TJM2	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Soliva	sessilis	Ruiz & Pav.				Soliva sessilis	Soliva sessilis Ruiz & Pav.		syn: Soliva daucifolia Nutt.; syn: Soliva pterosperma (Juss.) Less.		TJM1	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Sonchus	arvensis	L.				Sonchus arvensis	Sonchus arvensis L.			PERENNIAL SOW THISTLE	TJM1	EUDICOTS	0
-0		ASTERACEAE	Sonchus	arvensis	L.	subsp.	arvensis		Sonchus arvensis subsp. arvensis	Sonchus arvensis L. subsp. arvensis				TJM2	EUDICOTS	0
+0	AGRICULTURAL WEED	ASTERACEAE	Sonchus	arvensis	L.	subsp.	arvensis		Sonchus arvensis subsp. arvensis	Sonchus arvensis L. subsp. arvensis				TJM2	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Sonchus	arvensis	L.	subsp.	uliginosus	(M. Bieb.) Nyman	Sonchus arvensis subsp. uliginosus	Sonchus arvensis L. subsp. uliginosus (M. Bieb.) Nyman				TJM2	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Sonchus	asper	(L.) Hill	subsp.	asper		Sonchus asper subsp. asper	Sonchus asper (L.) Hill subsp. asper			PRICKLY SOW THISTLE	TJM1	EUDICOTS	0
 0	NATURALIZED	ASTERACEAE	Sonchus	oleraceus	L.				Sonchus oleraceus	Sonchus oleraceus L.			COMMON SOW THISTLE	TJM1	EUDICOTS	0
@@ -1890,7 +1889,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATURALIZED	BALSAMINACEAE	Impatiens	balfourii	Hook. f.				Impatiens balfourii	Impatiens balfourii Hook. f.			KASHMIR BALSAM	TJM2	EUDICOTS	0
 0	WAIF	BALSAMINACEAE	Impatiens	capensis	Meerb.				Impatiens capensis	Impatiens capensis Meerb.		syn: Impatiens noli-tangere L., misappl.	SPOTTED JEWELWEED	TJM2	EUDICOTS	0
 0	NATURALIZED	BALSAMINACEAE	Impatiens	glandulifera	Royle				Impatiens glandulifera	Impatiens glandulifera Royle			POLICEMAN'S HELMET	TJM2	EUDICOTS	0
-0		BASELLACEAE	Anredera	cordifolia	(Ten.) Steenis				Anredera cordifolia	Anredera cordifolia (Ten.) Steenis				TJM1	EUDICOTS	0
+0	AGRICULTURAL, GARDEN, OR URBAN WEED	BASELLACEAE	Anredera	cordifolia	(Ten.) Steenis				Anredera cordifolia	Anredera cordifolia (Ten.) Steenis		syn: Boussingaultia cordifolia Ten.; syn: Boussingaultia gracilis Miers; syn: Boussingaultia gracilis var. pseudobaselloides (Hauman) L.H. Bailey	MIGNONETTE VINE	TJM1	EUDICOTS	0
 0	NATIVE	BATACEAE	Batis	maritima	L.				Batis maritima	Batis maritima L.			SALTWORT, BEACHWORT	TJM1	EUDICOTS	0
 0	NATIVE	BERBERIDACEAE	Achlys	californica	I. Fukuda & H.G. Baker				Achlys californica	Achlys californica I. Fukuda & H.G. Baker				TJM1	EUDICOTS	0
 0	NATIVE	BERBERIDACEAE	Achlys	triphylla	(Sm.) DC.	subsp.	triphylla		Achlys triphylla subsp. triphylla	Achlys triphylla (Sm.) DC. subsp. triphylla				TJM1	EUDICOTS	0
@@ -1926,7 +1925,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATURALIZED	BIGNONIACEAE	Catalpa	bignonioides	Walter				Catalpa bignonioides	Catalpa bignonioides Walter				TJM2	EUDICOTS	0
 0	NATURALIZED	BIGNONIACEAE	Catalpa	speciosa	(Warder) Warder ex Engelm.				Catalpa speciosa	Catalpa speciosa (Warder) Warder ex Engelm.				TJM2	EUDICOTS	0
 0	NATIVE	BIGNONIACEAE	Chilopsis	linearis	(Cav.) Sweet	subsp.	arcuata	(Fosberg) Henrickson	Chilopsis linearis subsp. arcuata	Chilopsis linearis (Cav.) Sweet subsp. arcuata (Fosberg) Henrickson				TJM1	EUDICOTS	0
-0		BIGNONIACEAE	Jacaranda	mimosifolia	D. Don				Jacaranda mimosifolia	Jacaranda mimosifolia D. Don				TJM2	EUDICOTS	0
+0	URBAN WEED	BIGNONIACEAE	Jacaranda	mimosifolia	D. Don				Jacaranda mimosifolia	Jacaranda mimosifolia D. Don			BLUE JACARANDA	TJM2	EUDICOTS	0
 0	NATIVE	BORAGINACEAE	Amsinckia	douglasiana	A. DC.				Amsinckia douglasiana	Amsinckia douglasiana A. DC.			DOUGLAS' FIDDLENECK	TJM1	EUDICOTS	1
 0	NATIVE	BORAGINACEAE	Amsinckia	eastwoodiae	J.F. Macbr.				Amsinckia eastwoodiae	Amsinckia eastwoodiae J.F. Macbr.		syn: Amsinckia intermedia Fisch. & C.A. Mey. var. eastwoodiae (J.F. Macbr.) Jeps. & Hoover	EASTWOOD'S FIDDLENECK	TJM1	EUDICOTS	1
 0	NATIVE	BORAGINACEAE	Amsinckia	furcata	Suksd.				Amsinckia furcata	Amsinckia furcata Suksd.		syn: Amsinckia vernicosa var. furcata (Suksd.) Hoover ex Jeps.	FORKED FIDDLENECK	TJM2	EUDICOTS	1
@@ -1994,7 +1993,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	BORAGINACEAE	Cryptantha	micrantha	(Torr.) I.M. Johnst.				Cryptantha micrantha	Cryptantha micrantha (Torr.) I.M. Johnst.				TJM1	EUDICOTS	0
 0	NATIVE	BORAGINACEAE	Cryptantha	micrantha	(Torr.) I.M. Johnst.	var.	lepida	(A. Gray) I.M. Johnst.	Cryptantha micrantha var. lepida	Cryptantha micrantha (Torr.) I.M. Johnst. var. lepida (A. Gray) I.M. Johnst.			MOUNTAIN RED-ROOT CRYPTANTHA	TJM2	EUDICOTS	0
 0	NATIVE	BORAGINACEAE	Cryptantha	micrantha	(Torr.) I.M. Johnst.	var.	micrantha		Cryptantha micrantha var. micrantha	Cryptantha micrantha (Torr.) I.M. Johnst. var. micrantha			RED-ROOT CRYPTANTHA	TJM2	EUDICOTS	0
-0	NATIVE	BORAGINACEAE	Cryptantha	micromeres	(A. Gray) Greene				Cryptantha micromeres	Cryptantha micromeres (A. Gray) Greene		syn: Eritrichium micromeres A.Gray; syn: Krynitzkia micromeres (A.Gray) A.Gray; syn: Johnstonella micromeres (A.Gray) Hasenstab & M.G.Simpson	MINUTE-FLOWERED CRYPTANTHA	TJM1	EUDICOTS	0
+0	NATIVE	BORAGINACEAE	Cryptantha	micromeres	(A. Gray) Greene				Cryptantha micromeres	Cryptantha micromeres (A. Gray) Greene		syn: Eritrichium micromeres A. Gray; syn: Krynitzkia micromeres (A. Gray) A. Gray; syn: Johnstonella micromeres (A. Gray) Hasenstab & M.G. Simpson	MINUTE-FLOWERED CRYPTANTHA	TJM1	EUDICOTS	0
 0	NATIVE	BORAGINACEAE	Cryptantha	microstachys	(Greene ex A. Gray) Greene				Cryptantha microstachys	Cryptantha microstachys (Greene ex A. Gray) Greene			TEJON CRYPTANTHA	TJM1	EUDICOTS	0
 0	NATIVE	BORAGINACEAE	Cryptantha	milobakeri	I.M. Johnst.				Cryptantha milobakeri	Cryptantha milobakeri I.M. Johnst.		syn: Cryptantha torreyana var. scrutata Jeps.	MILO BAKER'S CRYPTANTHA	TJM1	EUDICOTS	0
 0	NATIVE	BORAGINACEAE	Cryptantha	mohavensis	(Greene) Greene				Cryptantha mohavensis	Cryptantha mohavensis (Greene) Greene			MOJAVE CRYPTANTHA	TJM1	EUDICOTS	1
@@ -2321,7 +2320,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	BORAGINACEAE	Plagiobothrys	reticulatus	(Piper) I.M. Johnst.	var.	reticulatus		Plagiobothrys reticulatus var. reticulatus	Plagiobothrys reticulatus (Piper) I.M. Johnst. var. reticulatus				TJM1	EUDICOTS	0
 0	NATIVE	BORAGINACEAE	Plagiobothrys	reticulatus	(Piper) I.M. Johnst.	var.	rossianorum	I.M. Johnst.	Plagiobothrys reticulatus var. rossianorum	Plagiobothrys reticulatus (Piper) I.M. Johnst. var. rossianorum I.M. Johnst.			FORT ROSS POPCORNFLOWER	TJM1	EUDICOTS	1
 0	NATIVE	BORAGINACEAE	Plagiobothrys	salsus	(Brandegee) I.M. Johnst.				Plagiobothrys salsus	Plagiobothrys salsus (Brandegee) I.M. Johnst.			DESERT POPCORNFLOWER	TJM1	EUDICOTS	0
-0	NATIVE	BORAGINACEAE	Plagiobothrys	scriptus	(Greene) I.M. Johnst.				Plagiobothrys scriptus	Plagiobothrys scriptus (Greene) I.M. Johnst.			SCRIDGEE'S POPCORNFLOWER	TJM1	EUDICOTS	1
+0	NATIVE	BORAGINACEAE	Plagiobothrys	scriptus	(Greene) I.M. Johnst.				Plagiobothrys scriptus	Plagiobothrys scriptus (Greene) I.M. Johnst.			SCRIBE'S POPCORNFLOWER	TJM1	EUDICOTS	1
 0	NATIVE	BORAGINACEAE	Plagiobothrys	shastensis	A. Gray				Plagiobothrys shastensis	Plagiobothrys shastensis A. Gray			SHASTA POPCORNFLOWER	TJM1	EUDICOTS	0
 0	NATIVE	BORAGINACEAE	Plagiobothrys	stipitatus	(Greene) I.M. Johnst.				Plagiobothrys stipitatus	Plagiobothrys stipitatus (Greene) I.M. Johnst.			GREAT VALLEY POPCORNFLOWER	TJM1	EUDICOTS	0
 0	NATIVE	BORAGINACEAE	Plagiobothrys	stipitatus	(Greene) I.M. Johnst.	var.	micranthus	(Piper) I.M. Johnst.	Plagiobothrys stipitatus var. micranthus	Plagiobothrys stipitatus (Greene) I.M. Johnst. var. micranthus (Piper) I.M. Johnst.				TJM1	EUDICOTS	0
@@ -2464,7 +2463,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	BRASSICACEAE	Caulanthus	heterophyllus	(Nutt.) Payson				Caulanthus heterophyllus	Caulanthus heterophyllus (Nutt.) Payson		syn: Caulanthus heterophyllus var. pseudosimulans R.E. Buck, ined.; syn: Streptanthus heterophyllus Nutt.; syn: Caulanthus stenocarpus Payson; syn: Guillenia heterophylla (Nutt.) O.E. Schulz		TJM1	EUDICOTS	0
 0	NATIVE	BRASSICACEAE	Caulanthus	inflatus	S. Watson				Caulanthus inflatus	Caulanthus inflatus S. Watson		syn: Streptanthus inflatus (S. Watson) Greene	DESERT CANDLE	TJM1	EUDICOTS	1
 0	NATIVE	BRASSICACEAE	Caulanthus	lasiophyllus	(Hook. & Arn.) Payson				Caulanthus lasiophyllus	Caulanthus lasiophyllus (Hook. & Arn.) Payson		syn: Guillenia lasiophylla (Hook. & Arn.) Greene; syn: Caulanthus lasiophyllus var. inalienus (B.L. Rob.) Payson; syn: Caulanthus lasiophyllus var. rigidus (Greene) Payson; syn: Caulanthus lasiophyllus var. utahensis (Rydb.) Payson; syn: Thelypodium lasiophyllum (Hook. & Arn.) Greene; syn: Thelypodium lasiophyllum var. lasiophyllum; syn: Thelypodium lasiophyllum var. utahense (Rydb.) Jeps.; syn: Thelypodium lasiophyllum var. inalienum B.L. Rob.; syn: Thelypodium lasiophyllum var. rigidum (Greene) B.L. Rob.	CALIFORNIA MUSTARD	TJM2	EUDICOTS	0
-0	NATIVE	BRASSICACEAE	Caulanthus	lemmonii	S. Watson				Caulanthus lemmonii	Caulanthus lemmonii S. Watson		syn: Caulanthus coulteri S. Watson var. lemmonii (S. Watson) Munz; syn: Streptanthus coulteri (S. Watson) A. Gray ex Greene var. lemmonii (S. Watson) Jeps.	LEMMON'S JEWELFLOWER	TJM2	EUDICOTS	1
+0	NATIVE	BRASSICACEAE	Caulanthus	lemmonii	S. Watson				Caulanthus lemmonii	Caulanthus lemmonii S. Watson		syn: Caulanthus coulteri S. Watson var. lemmonii (S. Watson) Munz; syn: Streptanthus coulteri (S. Watson) A. Gray ex Greene var. lemmonii (S. Watson) Jeps.; syn: Streptanthus lemmonii Jepson 1920, non S. Watson 1890	LEMMON'S JEWELFLOWER	TJM2	EUDICOTS	1
 0	NATIVE	BRASSICACEAE	Caulanthus	major	(M.E. Jones) Payson				Caulanthus major	Caulanthus major (M.E. Jones) Payson		syn: Streptanthus major (M.E. Jones) Jeps.; syn: Caulanthus major var. major; syn: Caulanthus major var. nevadensis Rollins		TJM1	EUDICOTS	0
 0	NATIVE	BRASSICACEAE	Caulanthus	pilosus	S. Watson				Caulanthus pilosus	Caulanthus pilosus S. Watson		syn: Streptanthus pilosus (S. Watson) Jeps.	CHOCOLATE DROPS	TJM1	EUDICOTS	0
 0	NATIVE	BRASSICACEAE	Caulanthus	simulans	Payson				Caulanthus simulans	Caulanthus simulans Payson		syn: Streptanthus simulans (Payson) Jeps.	PAYSON'S JEWELFLOWER	TJM1	EUDICOTS	1
@@ -2657,7 +2656,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	BRASSICACEAE	Streptanthus	oblanceolatus	T.W. Nelson & J.P. Nelson				Streptanthus oblanceolatus	Streptanthus oblanceolatus T.W. Nelson & J.P. Nelson			TRINITY RIVER JEWELFLOWER	TJM2	EUDICOTS	1
 0	NATIVE	BRASSICACEAE	Streptanthus	oliganthus	Rollins				Streptanthus oliganthus	Streptanthus oliganthus Rollins		syn: Streptanthus cordatus Nutt. var. exiguus Jeps.	MASONIC MOUNTAIN JEWELFLOWER	TJM1	EUDICOTS	0
 0	NATIVE	BRASSICACEAE	Streptanthus	polygaloides	A. Gray				Streptanthus polygaloides	Streptanthus polygaloides A. Gray			MILKWORT JEWELFLOWER	TJM1	EUDICOTS	1
-0	NATIVE	BRASSICACEAE	Streptanthus	tortuosus	Kellogg				Streptanthus tortuosus	Streptanthus tortuosus Kellogg		syn: Streptanthus tortuosus var. flavescens Jeps.; syn: Streptanthus tortuosus var. orbiculatus (Greene) H.M. Hall; syn: Streptanthus tortuosus var. suffrutescens (Greene) Jeps.; syn: Streptanthus tortuosus var. oblongus Jeps.; syn: Streptanthus tortuosus var. optatus Jeps.; syn: Streptanthus tortuosus var. pallidus Jeps.; syn: Streptanthus tortuosus var. tortuosus; syn: Streptanthus tortuosus var. foliosus (Greene) D.W. Taylor	MOUNTAIN JEWELFLOWER	TJM1	EUDICOTS	0
+0	NATIVE	BRASSICACEAE	Streptanthus	tortuosus	Kellogg				Streptanthus tortuosus	Streptanthus tortuosus Kellogg		syn: Streptanthus lemmonii S. Watson; syn: Streptanthus tortuosus var. flavescens Jeps.; syn: Streptanthus tortuosus var. orbiculatus (Greene) H.M. Hall; syn: Streptanthus tortuosus var. suffrutescens (Greene) Jeps.; syn: Streptanthus tortuosus var. oblongus Jeps.; syn: Streptanthus tortuosus var. optatus Jeps.; syn: Streptanthus tortuosus var. pallidus Jeps.; syn: Streptanthus tortuosus var. tortuosus; syn: Streptanthus tortuosus var. foliosus (Greene) D.W. Taylor	MOUNTAIN JEWELFLOWER	TJM1	EUDICOTS	0
 0	NATIVE	BRASSICACEAE	Streptanthus	vernalis	R. O'Donnell & R.W. Dolan				Streptanthus vernalis	Streptanthus vernalis R. O'Donnell & R.W. Dolan			EARLY JEWELFLOWER	TJM2	EUDICOTS	1
 0	NATIVE	BRASSICACEAE	Streptanthus	vimineus	(Greene) Al-Shehbaz & D.W. Taylor				Streptanthus vimineus	Streptanthus vimineus (Greene) Al-Shehbaz & D.W. Taylor				TJM2	EUDICOTS	1
 0	NATURALIZED	BRASSICACEAE	Strigosella	africana	(L.) Botsch.				Strigosella africana	Strigosella africana (L.) Botsch.		syn: Malcolmia africana (L.) W.T. Aiton		TJM2	EUDICOTS	0
@@ -2724,9 +2723,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	CACTACEAE	Opuntia	basilaris	Engelm. & J.M. Bigelow	var.	basilaris		Opuntia basilaris var. basilaris	Opuntia basilaris Engelm. & J.M. Bigelow var. basilaris		syn: Opuntia basilaris var. ramosa Parish; syn: Opuntia whitneyana E.M. Baxter	BEAVERTAIL	TJM1	EUDICOTS	0
 0	NATIVE	CACTACEAE	Opuntia	basilaris	Engelm. & J.M. Bigelow	var.	brachyclada	(Griffiths) Munz	Opuntia basilaris var. brachyclada	Opuntia basilaris Engelm. & J.M. Bigelow var. brachyclada (Griffiths) Munz		syn: Opuntia humistrata Griffiths	SHORT-JOINT BEAVERTAIL	TJM1	EUDICOTS	1
 0	NATIVE	CACTACEAE	Opuntia	basilaris	Engelm. & J.M. Bigelow	var.	treleasei	(J.M. Coult.) J.M. Coult. ex Toumey	Opuntia basilaris var. treleasei	Opuntia basilaris Engelm. & J.M. Bigelow var. treleasei (J.M. Coult.) J.M. Coult. ex Toumey		syn: Opuntia treleasei J.M. Coult.	BAKERSFIELD CACTUS	TJM1	EUDICOTS	1
-0	NATIVE	CACTACEAE	Opuntia	&times;charlestonensis	Clokey				Opuntia &times;charlestonensis	Opuntia &times;charlestonensis Clokey				TJM2	EUDICOTS	0
 0	NATIVE	CACTACEAE	Opuntia	chlorotica	Engelm. & J.M. Bigelow				Opuntia chlorotica	Opuntia chlorotica Engelm. & J.M. Bigelow			PANCAKE PRICKLY-PEAR	TJM1	EUDICOTS	0
-0	NATIVE	CACTACEAE	Opuntia	curvispina	Griffiths				Opuntia curvispina	Opuntia curvispina Griffiths				TJM2	EUDICOTS	0
 0	NATIVE	CACTACEAE	Opuntia	engelmannii	Salm-Dyck ex Engelm.	var.	engelmannii		Opuntia engelmannii var. engelmannii	Opuntia engelmannii Salm-Dyck ex Engelm. var. engelmannii		syn: Opuntia phaeacantha var. discata (Griffiths) L.D. Benson & Walk.	ENGELMANN PRICKLY-PEAR	TJM1	EUDICOTS	0
 0	NATURALIZED	CACTACEAE	Opuntia	ficus-indica	(L.) Mill.				Opuntia ficus-indica	Opuntia ficus-indica (L.) Mill.		syn: Opuntia megacantha Salm-Dyck, misappl.	MISSION PRICKLY-PEAR	TJM1	EUDICOTS	0
 0	NATIVE	CACTACEAE	Opuntia	fragilis	(Nutt.) Haw.				Opuntia fragilis	Opuntia fragilis (Nutt.) Haw.			BRITTLE PRICKLY-PEAR	TJM1	EUDICOTS	0
@@ -3127,7 +3124,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATURALIZED	CISTACEAE	Cistus	incanus	L.				Cistus incanus	Cistus incanus L.		syn: Cistus creticus L.; syn: Cistus incanus subsp. corsicus (Loisel.) Heywood; syn: Cistus incanus subsp. creticus (L.) Heywood; syn: Cistus incanus subsp. incanus; syn: Cistus villosus L.; syn: Cistus villosus var. corsicus (Loisel.) Grosser, ined.?; syn: Cistus villosus var. tauricus Grosser, ined.?; syn: Cistus villosus var. undulatus Grosse, ined.?		TJM2	EUDICOTS	0
 0	NATURALIZED	CISTACEAE	Cistus	ladanifer	L.				Cistus ladanifer	Cistus ladanifer L.			GUM CISTUS	TJM1	EUDICOTS	0
 0	NATURALIZED	CISTACEAE	Cistus	monspeliensis	L.				Cistus monspeliensis	Cistus monspeliensis L.				TJM1	EUDICOTS	0
-0		CISTACEAE	Cistus	psilosepalus	Sweet				Cistus psilosepalus	Cistus psilosepalus Sweet				TJM2	EUDICOTS	0
+0	URBAN WEED	CISTACEAE	Cistus	psilosepalus	Sweet				Cistus psilosepalus	Cistus psilosepalus Sweet				TJM2	EUDICOTS	0
 0	NATURALIZED	CISTACEAE	Cistus	salviifolius	L.				Cistus salviifolius	Cistus salviifolius L.		syn: Cistus salvifolius, orth. var.		TJM2	EUDICOTS	0
 0	NATIVE	CISTACEAE	Crocanthemum	aldersonii	(Greene) Janch.				Crocanthemum aldersonii	Crocanthemum aldersonii (Greene) Janch.		syn: Helianthemum aldersonii Greene; syn: Helianthemum scoparium Nutt. var. aldersonii (Greene) Munz; syn: Helianthemum scoparium Nutt. sensu TJM2 (2012), in part	ALDERSON'S RUSH-ROSE	TJM2	EUDICOTS	0
 0	NATIVE	CISTACEAE	Crocanthemum	greenei	(B.L. Rob.) Sorrie				Crocanthemum greenei	Crocanthemum greenei (B.L. Rob.) Sorrie		syn: Helianthemum greenei B.L. Rob.	ISLAND RUSH-ROSE	TJM2	EUDICOTS	1
@@ -3206,7 +3203,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	CONVOLVULACEAE	Cuscuta	denticulata	Engelm.				Cuscuta denticulata	Cuscuta denticulata Engelm.			SMALL-TOOTH DODDER	TJM1	EUDICOTS	0
 0	NATIVE	CONVOLVULACEAE	Cuscuta	howelliana	P. Rubtzov				Cuscuta howelliana	Cuscuta howelliana P. Rubtzov			BOGGS LAKE DODDER	TJM1	EUDICOTS	1
 0	NATIVE	CONVOLVULACEAE	Cuscuta	indecora	Choisy	var.	indecora		Cuscuta indecora var. indecora	Cuscuta indecora Choisy var. indecora		syn: Cuscuta hispidula Engelm.; syn: Cuscuta indecora var. bifida Yunck.; syn: Cuscuta indecora var. neuropetala (Engelm.) Hitchcock; syn: Cuscuta neuropetala Engelm.	LARGE-SEEDED DODDER	TJM1	EUDICOTS	0
-0		CONVOLVULACEAE	Cuscuta	japonica	Choisy	var.	formosana	(Hayata) Yunck.	Cuscuta japonica var. formosana	Cuscuta japonica Choisy var. formosana (Hayata) Yunck.				TJM2	EUDICOTS	0
+0	URBAN WEED EXPECTED IN WILDLANDS	CONVOLVULACEAE	Cuscuta	japonica	Choisy	var.	formosana	(Hayata) Yunck.	Cuscuta japonica var. formosana	Cuscuta japonica Choisy var. formosana (Hayata) Yunck.		syn: Cuscuta formosana Hayata	JAPANESE DODDER	TJM2	EUDICOTS	0
 0	NATIVE	CONVOLVULACEAE	Cuscuta	jepsonii	Yunck.				Cuscuta jepsonii	Cuscuta jepsonii Yunck.				TJM2	EUDICOTS	1
 0	NATIVE	CONVOLVULACEAE	Cuscuta	nevadensis	I.M. Johnst.				Cuscuta nevadensis	Cuscuta nevadensis I.M. Johnst.		syn: Cuscuta salina var. apoda (Yunck.) Yunck.; syn: Cuscuta veatchii var. apoda Yunck.; syn: Cuscuta vivipara Beliz, ined.		TJM2	EUDICOTS	0
 0	NATIVE	CONVOLVULACEAE	Cuscuta	obtusiflora	Kunth	var.	glandulosa	Engelm.	Cuscuta obtusiflora var. glandulosa	Cuscuta obtusiflora Kunth var. glandulosa Engelm.				TJM2	EUDICOTS	0
@@ -3214,7 +3211,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	CONVOLVULACEAE	Cuscuta	pacifica	Costea & M. Wright				Cuscuta pacifica	Cuscuta pacifica Costea & M. Wright			GOLDENTHREAD	TJM2	EUDICOTS	0
 0	NATIVE	CONVOLVULACEAE	Cuscuta	pacifica	Costea & M. Wright	var.	pacifica		Cuscuta pacifica var. pacifica	Cuscuta pacifica Costea & M. Wright var. pacifica		syn: Cuscuta salina Engelm. var. major Yunck.; syn: Cuscuta subinclusa Durand & Hilg. var. abbreviata Engelm.		TJM2	EUDICOTS	0
 0	NATIVE	CONVOLVULACEAE	Cuscuta	pacifica	Costea & M. Wright	var.	papillata	(Yunck.) Costea & M. Wright	Cuscuta pacifica var. papillata	Cuscuta pacifica Costea & M. Wright var. papillata (Yunck.) Costea & M. Wright		syn: Cuscuta salina var. papillata Yunck.		TJM2	EUDICOTS	1
-0		CONVOLVULACEAE	Cuscuta	reflexa	Roxb.				Cuscuta reflexa	Cuscuta reflexa Roxb.				TJM2	EUDICOTS	1
+0	EXTIRPATED WEED	CONVOLVULACEAE	Cuscuta	reflexa	Roxb.				Cuscuta reflexa	Cuscuta reflexa Roxb.			GIANT DODDER	TJM2	EUDICOTS	0
 0	NATIVE	CONVOLVULACEAE	Cuscuta	salina	Engelm.				Cuscuta salina	Cuscuta salina Engelm.			SALT DODDER	TJM1	EUDICOTS	0
 0	NATURALIZED	CONVOLVULACEAE	Cuscuta	suaveolens	Ser.				Cuscuta suaveolens	Cuscuta suaveolens Ser.			FRINGED DODDER	TJM2	EUDICOTS	0
 0	NATIVE	CONVOLVULACEAE	Cuscuta	subinclusa	Durand & Hilg.				Cuscuta subinclusa	Cuscuta subinclusa Durand & Hilg.				TJM1	EUDICOTS	0
@@ -3225,9 +3222,9 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	CONVOLVULACEAE	Dichondra	occidentalis	House				Dichondra occidentalis	Dichondra occidentalis House			WESTERN DICHONDRA	TJM1	EUDICOTS	0
 0	WAIF	CONVOLVULACEAE	Ipomoea	cairica	(L.) Sweet				Ipomoea cairica	Ipomoea cairica (L.) Sweet		syn: Ipomoea palmata Forssk.		TJM1	EUDICOTS	0
 0	WAIF	CONVOLVULACEAE	Ipomoea	hederacea	Jacq.				Ipomoea hederacea	Ipomoea hederacea Jacq.			IVY MORNING-GLORY	TJM2	EUDICOTS	0
-0		CONVOLVULACEAE	Ipomoea	indica	(Burm.) Merr.				Ipomoea indica	Ipomoea indica (Burm.) Merr.				TJM2	EUDICOTS	0
+0	URBAN WEED	CONVOLVULACEAE	Ipomoea	indica	(Burm.) Merr.				Ipomoea indica	Ipomoea indica (Burm.) Merr.		syn: Ipomoea acuminata (Vahl) Roem. & Schult., Ipomoea mutabilis Ker Gawl.		TJM2	EUDICOTS	0
 0	WAIF	CONVOLVULACEAE	Ipomoea	purpurea	(L.) Roth				Ipomoea purpurea	Ipomoea purpurea (L.) Roth			COMMON MORNING-GLORY	TJM1	EUDICOTS	0
-0		CONVOLVULACEAE	Ipomoea	triloba	L.				Ipomoea triloba	Ipomoea triloba L.				TJM1	EUDICOTS	0
+0	AGRICULTURAL WEED	CONVOLVULACEAE	Ipomoea	triloba	L.				Ipomoea triloba	Ipomoea triloba L.				TJM1	EUDICOTS	0
 0	NATIVE	CORNACEAE	Cornus	canadensis	L.				Cornus canadensis	Cornus canadensis L.			BUNCHBERRY	TJM1	EUDICOTS	0
 0	NATIVE	CORNACEAE	Cornus	glabrata	Benth.				Cornus glabrata	Cornus glabrata Benth.			BROWN DOGWOOD	TJM1	EUDICOTS	0
 0	NATIVE	CORNACEAE	Cornus	nuttallii	Audubon				Cornus nuttallii	Cornus nuttallii Audubon			MOUNTAIN DOGWOOD	TJM1	EUDICOTS	0
@@ -3641,7 +3638,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	FABACEAE	Acmispon	rubriflorus	(H. Sharsm.) D.D. Sokoloff				Acmispon rubriflorus	Acmispon rubriflorus (H. Sharsm.) D.D. Sokoloff		syn: Lotus rubriflorus H. Sharsm.	RED-FLOWERED BIRD'S-FOOT TREFOIL	TJM2	EUDICOTS	1
 0	NATIVE	FABACEAE	Acmispon	strigosus	(Nutt.) Brouillet				Acmispon strigosus	Acmispon strigosus (Nutt.) Brouillet		syn: Lotus strigosus (Nutt.) Greene; syn: Lotus strigosus var. hirtellus (Greene) Ottley; syn: Lotus strigosus var. tomentellus (Greene) Isely; syn: Lotus tomentellus Greene; syn: Acmispon strigosus (Nutt.) D.D.Sokoloff var. hirtellus (Greene) D.W. Taylor		TJM2	EUDICOTS	0
 0	NATIVE	FABACEAE	Acmispon	wrangelianus	(Fisch. & C.A. Mey.) D.D. Sokoloff				Acmispon wrangelianus	Acmispon wrangelianus (Fisch. & C.A. Mey.) D.D. Sokoloff		syn: Lotus wrangelianus Fisch. & C.A. Mey.; syn: Lotus subpinnatus Lag., misappl.		TJM2	EUDICOTS	1
-0		FABACEAE	Aeschynomene	rudis	Benth.				Aeschynomene rudis	Aeschynomene rudis Benth.				TJM1	EUDICOTS	1
+0	AGRICULTURAL WEED	FABACEAE	Aeschynomene	rudis	Benth.				Aeschynomene rudis	Aeschynomene rudis Benth.			ROUGH JOINTVETCH	TJM1	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Albizia	julibrissin	Durazz.				Albizia julibrissin	Albizia julibrissin Durazz.			SILK TREE, MIMOSA	TJM2	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Albizia	lophantha	(Willd.) Benth.				Albizia lophantha	Albizia lophantha (Willd.) Benth.		syn: Acacia lophantha Willd.; syn: Paraserianthes lophantha (Willd.) I. C. Nielsen	PLUME ACACIA	TJM1	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Alhagi	maurorum	Medik.				Alhagi maurorum	Alhagi maurorum Medik.		syn: Alhagi pseudalhagi (M. Bieb.) Desv.	CAMEL THORN	TJM2	EUDICOTS	0
@@ -3798,7 +3795,6 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	FABACEAE	Astragalus	tener	A. Gray	var.	ferrisiae	Liston	Astragalus tener var. ferrisiae	Astragalus tener A. Gray var. ferrisiae Liston			FERRIS' MILKVETCH	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Astragalus	tener	A. Gray	var.	tener		Astragalus tener var. tener	Astragalus tener A. Gray var. tener			ALKALI MILKVETCH	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Astragalus	tener	A. Gray	var.	titi	(Eastw.) Barneby	Astragalus tener var. titi	Astragalus tener A. Gray var. titi (Eastw.) Barneby			COASTAL DUNES MILKVETCH	TJM1	EUDICOTS	1
-0		FABACEAE	Astragalus	tephrodes	A. Gray	var.	brachylobus	(A. Gray) Barneby	Astragalus tephrodes var. brachylobus	Astragalus tephrodes A. Gray var. brachylobus (A. Gray) Barneby				TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Astragalus	tidestromii	(Rydb.) Clokey				Astragalus tidestromii	Astragalus tidestromii (Rydb.) Clokey			TIDESTROM'S MILKVETCH	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Astragalus	traskiae	Eastw.				Astragalus traskiae	Astragalus traskiae Eastw.			TRASK'S MILKVETCH	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Astragalus	tricarinatus	A. Gray				Astragalus tricarinatus	Astragalus tricarinatus A. Gray			TRIPLE-RIBBED MILKVETCH	TJM1	EUDICOTS	1
@@ -3838,7 +3834,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATURALIZED	FABACEAE	Gleditsia	triacanthos	L.				Gleditsia triacanthos	Gleditsia triacanthos L.			HONEY LOCUST	TJM2	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Glycyrrhiza	glabra	L.				Glycyrrhiza glabra	Glycyrrhiza glabra L.			LICORICE	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Glycyrrhiza	lepidota	Pursh				Glycyrrhiza lepidota	Glycyrrhiza lepidota Pursh			WILD LICORICE	TJM1	EUDICOTS	0
-0		FABACEAE	Halimodendron	halodendron	(Pall.) Voss				Halimodendron halodendron	Halimodendron halodendron (Pall.) Voss				TJM1	EUDICOTS	0
+0	AGRICULTURAL WEED	FABACEAE	Halimodendron	halodendron	(Pall.) Voss				Halimodendron halodendron	Halimodendron halodendron (Pall.) Voss			RUSSIAN SALT TREE	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Hoffmannseggia	glauca	(Ortega) Eifert				Hoffmannseggia glauca	Hoffmannseggia glauca (Ortega) Eifert		syn: Hoffmannseggia densiflora Benth.	PIG-NUT, HOG POTATO	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Hoffmannseggia	microphylla	Torr.				Hoffmannseggia microphylla	Hoffmannseggia microphylla Torr.		syn: Caesalpinia virgata Fisher		TJM2	EUDICOTS	0
 0	NATIVE	FABACEAE	Hoita	macrostachya	(DC.) Rydb.				Hoita macrostachya	Hoita macrostachya (DC.) Rydb.		syn: Psoralea hallii (Rydb.) Jeps. var. media Jeps., Psoralea macrostachya DC.		TJM1	EUDICOTS	0
@@ -3892,26 +3888,30 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	FABACEAE	Lathyrus	vestitus	Nutt.	var.	alefeldii	(T.G. White) Isely	Lathyrus vestitus var. alefeldii	Lathyrus vestitus Nutt. var. alefeldii (T.G. White) Isely		syn: Lathyrus alefeldii T.G. White; syn: Lathyrus laetiflorus subsp. alefeldii (T.G. White) Bradshaw		TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lathyrus	vestitus	Nutt.	var.	ochropetalus	(Piper) Isely	Lathyrus vestitus var. ochropetalus	Lathyrus vestitus Nutt. var. ochropetalus (Piper) Isely		syn: Lathyrus vestitus subsp. bolanderi (S. Watson) C.L. Hitchc., in part		TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lathyrus	vestitus	Nutt.	var.	vestitus		Lathyrus vestitus var. vestitus	Lathyrus vestitus Nutt. var. vestitus		syn: Lathyrus laetiflorus Greene; syn: Lathyrus laetiflorus subsp. barbarae (T.G. White) C.L. Hitchc.; syn: Lathyrus vestitus subsp. laetiflorus (Greene) Broich; syn: Lathyrus vestitus subsp. laevicarpus Broich; syn: Lathyrus vestitus subsp. puberulus (Greene) C.L. Hitchc.		TJM1	EUDICOTS	1
-0		FABACEAE	Lens	culinaris	Medik.				Lens culinaris	Lens culinaris Medik.				TJM1	EUDICOTS	1
+0	AGRICULTURAL, GARDEN, OR URBAN WEED	FABACEAE	Lens	culinaris	Medik.				Lens culinaris	Lens culinaris Medik.			LENTIL	TJM1	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Lotus	angustissimus	L.				Lotus angustissimus	Lotus angustissimus L.				TJM1	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Lotus	corniculatus	L.				Lotus corniculatus	Lotus corniculatus L.			BIRD'S-FOOT TREFOIL	TJM1	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Lotus	tenuis	Waldst. & Kit. ex Willd.				Lotus tenuis	Lotus tenuis Waldst. & Kit. ex Willd.		syn: Lotus glaber Mill., nom. rej.		TJM2	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Lotus	uliginosus	Schkuhr				Lotus uliginosus	Lotus uliginosus Schkuhr				TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	adsurgens	Drew				Lupinus adsurgens	Lupinus adsurgens Drew				TJM1	EUDICOTS	0
-0	NATIVE	FABACEAE	Lupinus	affinis	J. Agardh				Lupinus affinis	Lupinus affinis J. Agardh				TJM1	EUDICOTS	1
+0	NATIVE	FABACEAE	Lupinus	affinis	J. Agardh				Lupinus affinis	Lupinus affinis J. Agardh				TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	albicaulis	Douglas				Lupinus albicaulis	Lupinus albicaulis Douglas		syn: Lupinus sylvestris Drew		TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	albifrons	Benth.				Lupinus albifrons	Lupinus albifrons Benth.				TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	albifrons	Benth.	var.	abramsii	(C.P. Sm.) Hoover	Lupinus albifrons var. abramsii	Lupinus albifrons Benth. var. abramsii (C.P. Sm.) Hoover		syn: Lupinus abramsii C.P. Sm.	ABRAMS' LUPINE	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	albifrons	Benth.	var.	albifrons		Lupinus albifrons var. albifrons	Lupinus albifrons Benth. var. albifrons				TJM1	EUDICOTS	0
+0	NATIVE	FABACEAE	Lupinus	albifrons	Benth.	var.	austromontanus	(A. Heller) Jeps.	Lupinus albifrons var. austromontanus	Lupinus albifrons Benth. var. austromontanus (A. Heller) Jeps.				TJM2	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	albifrons	Benth.	var.	collinus	Greene	Lupinus albifrons var. collinus	Lupinus albifrons Benth. var. collinus Greene		syn: Lupinus albifrons Lindl. var. flumineus C.P. Sm.		TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	albifrons	Benth.	var.	douglasii	(J. Agardh) C.P. Sm.	Lupinus albifrons var. douglasii	Lupinus albifrons Benth. var. douglasii (J. Agardh) C.P. Sm.				TJM1	EUDICOTS	1
+0	NATIVE	FABACEAE	Lupinus	albifrons	Benth.	var.	hallii	(Abrams) Jeps.	Lupinus albifrons var. hallii	Lupinus albifrons Benth. var. hallii (Abrams) Jeps.		syn: Lupinus excubitus M.E. Jones var. hallii (Abrams) C.P. Sm.; syn: Lupinus paynei Davidson		TJM2	EUDICOTS	0
+0	NATIVE	FABACEAE	Lupinus	albifrons	Benth.	var.	johnstonii	(C.P. Sm.) Jeps.	Lupinus albifrons var. johnstonii	Lupinus albifrons Benth. var. johnstonii (C.P. Sm.) Jeps.		syn: Lupinus excubitus M.E. Jones var. johnstonii C.P. Sm.	INTERIOR BUSH LUPINE	TJM2	EUDICOTS	1
+0	NATIVE	FABACEAE	Lupinus	albifrons	Benth.	var.	medius	Jeps.	Lupinus albifrons var. medius	Lupinus albifrons Benth. var. medius Jeps.		syn: Lupinus excubitus M.E. Jones var. medius (Jeps.) Munz	MOUNTAIN SPRINGS BUSH LUPINE	TJM2	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	andersonii	S. Watson				Lupinus andersonii	Lupinus andersonii S. Watson				TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	angustiflorus	Eastw.				Lupinus angustiflorus	Lupinus angustiflorus Eastw.		syn: Lupinus andersonii S. Watson var. christinae (A. Heller) Munz		TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	antoninus	Eastw.				Lupinus antoninus	Lupinus antoninus Eastw.		syn: Lupinus adsurgens Drew var. lilacinus A. Heller, in part	ANTHONY PEAK LUPINE	TJM1	EUDICOTS	1
-0	NATIVE	FABACEAE	Lupinus	apertus	A. Heller				Lupinus apertus	Lupinus apertus A. Heller		syn: Lupinus andersonii S. Watson var. apertus (A. Heller) C.P. Sm.		TJM1	EUDICOTS	1
-0	NATIVE	FABACEAE	Lupinus	arboreus	Sims				Lupinus arboreus	Lupinus arboreus Sims			YELLOW BUSH LUPINE	TJM1	EUDICOTS	1
+0	NATIVE	FABACEAE	Lupinus	apertus	A. Heller				Lupinus apertus	Lupinus apertus A. Heller		syn: Lupinus andersonii S. Watson var. apertus (A. Heller) C.P. Sm.		TJM1	EUDICOTS	0
+0	NATIVE	FABACEAE	Lupinus	arboreus	Sims				Lupinus arboreus	Lupinus arboreus Sims			YELLOW BUSH LUPINE	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	arbustus	Douglas				Lupinus arbustus	Lupinus arbustus Douglas		syn: Lupinus arbustus subsp. calcaratus (Kellogg) D.B. Dunn; syn: Lupinus arbustus var. montanus (Howell) D.B. Dunn; syn: Lupinus arbustus subsp. silvicola (A. Heller) D.B. Dunn; syn: Lupinus silvicola A. Heller	SPUR LUPINE	TJM1	EUDICOTS	0
-0	NATIVE	FABACEAE	Lupinus	argenteus	Pursh				Lupinus argenteus	Lupinus argenteus Pursh				TJM1	EUDICOTS	0
+0	NATIVE	FABACEAE	Lupinus	argenteus	Pursh				Lupinus argenteus	Lupinus argenteus Pursh		syn: Lupinus alpestris A. Nels.		TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	argenteus	Pursh	var.	argenteus		Lupinus argenteus var. argenteus	Lupinus argenteus Pursh var. argenteus		syn: Lupinus argenteus var. tenellus (Douglas ex G. Don) D.B. Dunn; syn: Lupinus sublanatus Eastw.		TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	argenteus	Pursh	var.	heteranthus	(S. Watson) Barneby	Lupinus argenteus var. heteranthus	Lupinus argenteus Pursh var. heteranthus (S. Watson) Barneby		syn: Lupinus caudatus Kellogg; syn: Lupinus inyoensis A. Heller, in part		TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	argenteus	Pursh	var.	meionanthus	(A. Gray) Barneby	Lupinus argenteus var. meionanthus	Lupinus argenteus Pursh var. meionanthus (A. Gray) Barneby		syn: Lupinus meionanthus A. Gray		TJM1	EUDICOTS	0
@@ -3934,16 +3934,11 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	FABACEAE	Lupinus	constancei	T.W. Nelson & J.P. Nelson				Lupinus constancei	Lupinus constancei T.W. Nelson & J.P. Nelson			THE LASSICS LUPINE	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	covillei	Greene				Lupinus covillei	Lupinus covillei Greene		syn: Lupinus gracilentus Greene var. covillei (Greene) D.W. Taylor		TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	croceus	Eastw.				Lupinus croceus	Lupinus croceus Eastw.				TJM1	EUDICOTS	1
-0	NATIVE	FABACEAE	Lupinus	dalesiae	Eastw.				Lupinus dalesiae	Lupinus dalesiae Eastw.		syn: Lupinus adsurgens Drew var. undulatus C.P. Sm. in part	QUINCY LUPINE	TJM1	EUDICOTS	1
+0	NATIVE	FABACEAE	Lupinus	dalesiae	Eastw.				Lupinus dalesiae	Lupinus dalesiae Eastw.		syn: Lupinus adsurgens Drew var. undulatus C.P. Sm., in part	QUINCY LUPINE	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	duranii	Eastw.				Lupinus duranii	Lupinus duranii Eastw.		syn: Lupinus tegeticulatus Eastw. var. duranii (Eastw.) Barneby	MONO LAKE LUPINE	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	elatus	I.M. Johnst.				Lupinus elatus	Lupinus elatus I.M. Johnst.			SILKY LUPINE	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	elmeri	Greene				Lupinus elmeri	Lupinus elmeri Greene		syn: Lupinus albicaulis var. silvestris Greene, in part	SOUTH FORK MOUNTAIN LUPINE	TJM1	EUDICOTS	1
-0	NATIVE	FABACEAE	Lupinus	excubitus	M.E. Jones				Lupinus excubitus	Lupinus excubitus M.E. Jones			GRAPE SODA LUPINE	TJM1	EUDICOTS	0
-0	NATIVE	FABACEAE	Lupinus	excubitus	M.E. Jones	var.	austromontanus	(A. Heller) C.P. Sm.	Lupinus excubitus var. austromontanus	Lupinus excubitus M.E. Jones var. austromontanus (A. Heller) C.P. Sm.				TJM1	EUDICOTS	1
-0	NATIVE	FABACEAE	Lupinus	excubitus	M.E. Jones	var.	excubitus		Lupinus excubitus var. excubitus	Lupinus excubitus M.E. Jones var. excubitus				TJM1	EUDICOTS	1
-0	NATIVE	FABACEAE	Lupinus	excubitus	M.E. Jones	var.	hallii	(Abrams) C.P. Sm.	Lupinus excubitus var. hallii	Lupinus excubitus M.E. Jones var. hallii (Abrams) C.P. Sm.				TJM1	EUDICOTS	1
-0	NATIVE	FABACEAE	Lupinus	excubitus	M.E. Jones	var.	johnstonii	C.P. Sm.	Lupinus excubitus var. johnstonii	Lupinus excubitus M.E. Jones var. johnstonii C.P. Sm.			INTERIOR BUSH LUPINE	TJM1	EUDICOTS	1
-0	NATIVE	FABACEAE	Lupinus	excubitus	M.E. Jones	var.	medius	(Jeps.) Munz	Lupinus excubitus var. medius	Lupinus excubitus M.E. Jones var. medius (Jeps.) Munz			MOUNTAIN SPRINGS BUSH LUPINE	TJM1	EUDICOTS	1
+0	NATIVE	FABACEAE	Lupinus	excubitus	M.E. Jones				Lupinus excubitus	Lupinus excubitus M.E. Jones			GRAPE SODA LUPINE	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	flavoculatus	A. Heller				Lupinus flavoculatus	Lupinus flavoculatus A. Heller				TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	formosus	Greene				Lupinus formosus	Lupinus formosus Greene				TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	formosus	Greene	var.	formosus		Lupinus formosus var. formosus	Lupinus formosus Greene var. formosus				TJM1	EUDICOTS	1
@@ -3953,17 +3948,15 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	FABACEAE	Lupinus	grayi	S. Watson				Lupinus grayi	Lupinus grayi S. Watson				TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	guadalupensis	Greene				Lupinus guadalupensis	Lupinus guadalupensis Greene			GUADALUPE ISLAND LUPINE	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	hirsutissimus	Benth.				Lupinus hirsutissimus	Lupinus hirsutissimus Benth.			STINGING LUPINE	TJM1	EUDICOTS	0
-0	NATIVE	FABACEAE	Lupinus	holmgrenianus	C.P. Sm.				Lupinus holmgrenianus	Lupinus holmgrenianus C.P. Sm.		syn: Lupinus holmgrenanus, orth. var.; syn: Lupinus polyphyllus var. humicola (A. Nelson) Barneby, in part	HOLMGRENS' LUPINE	TJM2	EUDICOTS	0
-0	NATIVE	FABACEAE	Lupinus	hyacinthinus	Greene				Lupinus hyacinthinus	Lupinus hyacinthinus Greene		syn: Lupinus formosus Greene var. hyacinthinus (Greene) C.P. Sm.		TJM1	EUDICOTS	1
+0	NATIVE	FABACEAE	Lupinus	hyacinthinus	Greene				Lupinus hyacinthinus	Lupinus hyacinthinus Greene		syn: Lupinus formosus Greene var. hyacinthinus (Greene) C.P. Sm.		TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	lapidicola	A. Heller				Lupinus lapidicola	Lupinus lapidicola A. Heller			HELLER'S MOUNT EDDY LUPINE	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	latifolius	J. Agardh				Lupinus latifolius	Lupinus latifolius J. Agardh		syn: Lupinus rivularis Douglas ex Lindl., in part		TJM1	EUDICOTS	0
-0	NATIVE	FABACEAE	Lupinus	latifolius	J. Agardh	var.	barbatus	(L.F. Hend.) Munz	Lupinus latifolius var. barbatus	Lupinus latifolius J. Agardh var. barbatus (L.F. Hend.) Munz			BEARDED LUPINE	TJM1	EUDICOTS	1
-0	NATIVE	FABACEAE	Lupinus	latifolius	J. Agardh	var.	columbianus	(A. Heller) C.P. Sm.	Lupinus latifolius var. columbianus	Lupinus latifolius J. Agardh var. columbianus (A. Heller) C.P. Sm.				TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	latifolius	J. Agardh	var.	dudleyi	C.P. Sm.	Lupinus latifolius var. dudleyi	Lupinus latifolius J. Agardh var. dudleyi C.P. Sm.				TJM1	EUDICOTS	1
-0	NATIVE	FABACEAE	Lupinus	latifolius	J. Agardh	var.	latifolius		Lupinus latifolius var. latifolius	Lupinus latifolius J. Agardh var. latifolius				TJM1	EUDICOTS	0
-0	NATIVE	FABACEAE	Lupinus	latifolius	J. Agardh	var.	parishii	C.P. Sm.	Lupinus latifolius var. parishii	Lupinus latifolius J. Agardh var. parishii C.P. Sm.				TJM1	EUDICOTS	1
-0	NATIVE	FABACEAE	Lupinus	latifolius	J. Agardh	var.	viridifolius	(A. Heller) C.P. Sm.	Lupinus latifolius var. viridifolius	Lupinus latifolius J. Agardh var. viridifolius (A. Heller) C.P. Sm.		syn: Lupinus viridifolius A. Heller		TJM1	EUDICOTS	1
+0	NATIVE	FABACEAE	Lupinus	latifolius	J. Agardh	var.	latifolius		Lupinus latifolius var. latifolius	Lupinus latifolius J. Agardh var. latifolius		syn: Lupinus latifolius var. columbianus, in part		TJM1	EUDICOTS	0
+0	NATIVE	FABACEAE	Lupinus	latifolius	J. Agardh	var.	parishii	C.P. Sm.	Lupinus latifolius var. parishii	Lupinus latifolius J. Agardh var. parishii C.P. Sm.				TJM1	EUDICOTS	0
+0	NATIVE	FABACEAE	Lupinus	latifolius	J. Agardh	var.	viridifolius	(A. Heller) C.P. Sm.	Lupinus latifolius var. viridifolius	Lupinus latifolius J. Agardh var. viridifolius (A. Heller) C.P. Sm.		syn: Lupinus viridifolius A. Heller; syn: Lupinus latifolius var. barbatus (L.F. Hend.) Munz		TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	lepidus	Douglas ex Lindl.				Lupinus lepidus	Lupinus lepidus Douglas ex Lindl.			DWARF LUPINE	TJM1	EUDICOTS	0
+0	NATIVE	FABACEAE	Lupinus	lepidus	Douglas ex Lindl.	var.	aridus	(Douglas) Jeps.	Lupinus lepidus var. aridus	Lupinus lepidus Douglas ex Lindl. var. aridus (Douglas) Jeps.				TJM2	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	lepidus	Douglas ex Lindl.	var.	confertus	(Kellogg) C.P. Sm.	Lupinus lepidus var. confertus	Lupinus lepidus Douglas ex Lindl. var. confertus (Kellogg) C.P. Sm.		syn: Lupinus confertus Kellogg		TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	lepidus	Douglas ex Lindl.	var.	culbertsonii	(Greene) C.P. Sm.	Lupinus lepidus var. culbertsonii	Lupinus lepidus Douglas ex Lindl. var. culbertsonii (Greene) C.P. Sm.		syn: Lupinus culbertsonii Greene	HOCKETT MEADOWS LUPINE	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	lepidus	Douglas ex Lindl.	var.	lobbii	(S. Watson) C.L. Hitchc.	Lupinus lepidus var. lobbii	Lupinus lepidus Douglas ex Lindl. var. lobbii (S. Watson) C.L. Hitchc.		syn: Lupinus lyallii A. Gray var. danaus (A. Gray) S. Watson; syn: Lupinus lyallii var. lyallii; syn: Lupinus lobbii A. Gray ex S. Watson, nom. nud.		TJM1	EUDICOTS	0
@@ -3972,11 +3965,14 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	FABACEAE	Lupinus	lepidus	Douglas ex Lindl.	var.	utahensis	(S. Watson) C.L. Hitchc.	Lupinus lepidus var. utahensis	Lupinus lepidus Douglas ex Lindl. var. utahensis (S. Watson) C.L. Hitchc.		syn: Lupinus caespitosus Nutt.	STEMLESS LUPINE	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	leucophyllus	Douglas ex Lindl.				Lupinus leucophyllus	Lupinus leucophyllus Douglas ex Lindl.		syn: Lupinus leucophyllus var. canescens (Howell) C.P. Sm.		TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	littoralis	Douglas				Lupinus littoralis	Lupinus littoralis Douglas				TJM1	EUDICOTS	0
-0	NATIVE	FABACEAE	Lupinus	longifolius	(S. Watson) Abrams				Lupinus longifolius	Lupinus longifolius (S. Watson) Abrams				TJM1	EUDICOTS	1
+0	NATIVE	FABACEAE	Lupinus	littoralis	Douglas	var.	littoralis		Lupinus littoralis var. littoralis	Lupinus littoralis Douglas var. littoralis				TJM2	EUDICOTS	0
+0	NATIVE	FABACEAE	Lupinus	littoralis	Douglas	var.	variicolor	(Steud.) Isley	Lupinus littoralis var. variicolor	Lupinus littoralis Douglas var. variicolor (Steud.) Isley		syn: Lupinus variicolor Steud.		TJM2	EUDICOTS	1
+0	NATIVE	FABACEAE	Lupinus	longifolius	(S. Watson) Abrams				Lupinus longifolius	Lupinus longifolius (S. Watson) Abrams				TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	ludovicianus	Greene				Lupinus ludovicianus	Lupinus ludovicianus Greene			SAN LUIS OBISPO COUNTY LUPINE	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	luteolus	Kellogg				Lupinus luteolus	Lupinus luteolus Kellogg			BUTTER LUPINE	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	magnificus	M.E. Jones				Lupinus magnificus	Lupinus magnificus M.E. Jones				TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	magnificus	M.E. Jones	var.	glarecola	M.E. Jones	Lupinus magnificus var. glarecola	Lupinus magnificus M.E. Jones var. glarecola M.E. Jones			COSO MOUNTAINS LUPINE	TJM2	EUDICOTS	1
+0	NATIVE	FABACEAE	Lupinus	magnificus	M.E. Jones	var.	hesperius	(A. Heller) C.P. Sm.	Lupinus magnificus var. hesperius	Lupinus magnificus M.E. Jones var. hesperius (A. Heller) C.P. Sm.			MCGEE MEADOW LUPINE	TJM2	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	magnificus	M.E. Jones	var.	magnificus		Lupinus magnificus var. magnificus	Lupinus magnificus M.E. Jones var. magnificus			PANAMINT MOUNTAINS LUPINE	TJM2	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	microcarpus	Sims				Lupinus microcarpus	Lupinus microcarpus Sims			CHICK LUPINE	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	microcarpus	Sims	var.	densiflorus	(Benth.) Jeps.	Lupinus microcarpus var. densiflorus	Lupinus microcarpus Sims var. densiflorus (Benth.) Jeps.		syn: Lupinus densiflorus Benth.; syn: Lupinus densiflorus var. aureus (Kellogg) Munz; syn: Lupinus densiflorus var. lacteus (Kellogg) C.P. Sm. sensu Munz, in part		TJM1	EUDICOTS	1
@@ -3986,7 +3982,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	FABACEAE	Lupinus	nanus	Benth.				Lupinus nanus	Lupinus nanus Benth.		syn: Lupinus nanus subsp. apricus (Greene) D.B. Dunn; syn: Lupinus nanus subsp. menkerae (C.P. Sm.) D.B. Dunn; syn: Lupinus nanus subsp. latifolius (Benth.) D.B. Dunn; syn: Lupinus nanus var. maritimus Hoover; syn: Lupinus vallicola A. Heller		TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	nevadensis	A. Heller				Lupinus nevadensis	Lupinus nevadensis A. Heller			NEVADA LUPINE	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	nipomensis	Eastw.				Lupinus nipomensis	Lupinus nipomensis Eastw.			NIPOMO MESA LUPINE	TJM1	EUDICOTS	1
-0	NATIVE	FABACEAE	Lupinus	obtusilobus	A. Heller				Lupinus obtusilobus	Lupinus obtusilobus A. Heller				TJM1	EUDICOTS	1
+0	NATIVE	FABACEAE	Lupinus	obtusilobus	A. Heller				Lupinus obtusilobus	Lupinus obtusilobus A. Heller				TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	odoratus	A. Heller				Lupinus odoratus	Lupinus odoratus A. Heller			MOJAVE LUPINE	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	onustus	S. Watson				Lupinus onustus	Lupinus onustus S. Watson		syn: Lupinus violaceus A. Heller		TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	pachylobus	Greene				Lupinus pachylobus	Lupinus pachylobus Greene			BIG POD LUPINE	TJM1	EUDICOTS	1
@@ -3994,14 +3990,13 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	FABACEAE	Lupinus	peirsonii	H. Mason				Lupinus peirsonii	Lupinus peirsonii H. Mason			PEIRSON'S LUPINE	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	polyphyllus	Lindl.				Lupinus polyphyllus	Lupinus polyphyllus Lindl.				TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	polyphyllus	Lindl.	var.	burkei	(S. Watson) C.L. Hitchc.	Lupinus polyphyllus var. burkei	Lupinus polyphyllus Lindl. var. burkei (S. Watson) C.L. Hitchc.		syn: Lupinus polyphyllus subsp. bernardinus (Abrams ex C.P. Sm.) Munz; syn: Lupinus polyphyllus subsp. superbus (A. Heller) Munz		TJM1	EUDICOTS	0
-0	NATIVE	FABACEAE	Lupinus	polyphyllus	Lindl.	var.	pallidipes	(A. Heller) C.P. Sm.	Lupinus polyphyllus var. pallidipes	Lupinus polyphyllus Lindl. var. pallidipes (A. Heller) C.P. Sm.				TJM1	EUDICOTS	0
-0	NATIVE	FABACEAE	Lupinus	polyphyllus	Lindl.	var.	polyphyllus		Lupinus polyphyllus var. polyphyllus	Lupinus polyphyllus Lindl. var. polyphyllus				TJM1	EUDICOTS	0
+0	NATIVE	FABACEAE	Lupinus	polyphyllus	Lindl.	var.	polyphyllus		Lupinus polyphyllus var. polyphyllus	Lupinus polyphyllus Lindl. var. polyphyllus		syn: Lupinus polyphyllus var. pallidipes (A. Heller) C.P. Sm., in part		TJM1	EUDICOTS	0
+0	NATIVE	FABACEAE	Lupinus	polyphyllus	Lindl.	var.	saxosus	(Howell) Barneby	Lupinus polyphyllus var. saxosus	Lupinus polyphyllus Lindl. var. saxosus (Howell) Barneby		syn: Lupinus saxosus Howell		TJM2	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	pratensis	A. Heller				Lupinus pratensis	Lupinus pratensis A. Heller				TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	pratensis	A. Heller	var.	eriostachyus	C.P. Sm.	Lupinus pratensis var. eriostachyus	Lupinus pratensis A. Heller var. eriostachyus C.P. Sm.				TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	pratensis	A. Heller	var.	pratensis		Lupinus pratensis var. pratensis	Lupinus pratensis A. Heller var. pratensis				TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	pusillus	Pursh	var.	intermontanus	(A. Heller) C.P. Sm.	Lupinus pusillus var. intermontanus	Lupinus pusillus Pursh var. intermontanus (A. Heller) C.P. Sm.			INTERMONTANE LUPINE	TJM1	EUDICOTS	0
-0	NATIVE	FABACEAE	Lupinus	rivularis	Douglas ex Lindl.				Lupinus rivularis	Lupinus rivularis Douglas ex Lindl.				TJM1	EUDICOTS	0
-0	NATIVE	FABACEAE	Lupinus	saxosus	Howell				Lupinus saxosus	Lupinus saxosus Howell		syn: Lupinus polyphyllus Lindl. var. saxosus (Howell) Barneby		TJM1	EUDICOTS	0
+0	NATIVE	FABACEAE	Lupinus	rivularis	Douglas ex Lindl.				Lupinus rivularis	Lupinus rivularis Douglas ex Lindl.			RIVERBANK LUPINE	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	sericatus	Kellogg				Lupinus sericatus	Lupinus sericatus Kellogg			COBB MOUNTAIN LUPINE	TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Lupinus	shockleyi	S. Watson				Lupinus shockleyi	Lupinus shockleyi S. Watson			DESERT LUPINE	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	sparsiflorus	Benth.				Lupinus sparsiflorus	Lupinus sparsiflorus Benth.			COULTER'S LUPINE	TJM1	EUDICOTS	0
@@ -4012,13 +4007,12 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	FABACEAE	Lupinus	tracyi	Eastw.				Lupinus tracyi	Lupinus tracyi Eastw.			TRACY'S LUPINE	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	truncatus	Nutt.				Lupinus truncatus	Lupinus truncatus Nutt.				TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Lupinus	uncialis	S. Watson				Lupinus uncialis	Lupinus uncialis S. Watson			LILLIPUT LUPINE	TJM2	EUDICOTS	0
-0	NATIVE	FABACEAE	Lupinus	variicolor	Steud.				Lupinus variicolor	Lupinus variicolor Steud.				TJM1	EUDICOTS	1
 0	NATIVE	FABACEAE	Marina	orcuttii	(S. Watson) Barneby	var.	orcuttii		Marina orcuttii var. orcuttii	Marina orcuttii (S. Watson) Barneby var. orcuttii			CALIFORNIA MARINA	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Marina	parryi	(Torr. & A. Gray) Barneby				Marina parryi	Marina parryi (Torr. & A. Gray) Barneby		syn: Dalea parryi Torr. & A. Gray; syn: Parosela parryi (Torr. & A. Gray) A. Heller		TJM1	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Medicago	arabica	(L.) Huds.				Medicago arabica	Medicago arabica (L.) Huds.			BURCLOVER, SPOTTED BURCLOVER	TJM1	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Medicago	lupulina	L.				Medicago lupulina	Medicago lupulina L.		syn: Medicago lupulina var. cupaniana (Guss.) Boiss.	BLACK MEDICK	TJM1	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Medicago	minima	(L.) Bartal.				Medicago minima	Medicago minima (L.) Bartal.		syn: Medicago polymorpha L. var. minima L.	BURCLOVER	TJM1	EUDICOTS	0
-0		FABACEAE	Medicago	orbicularis	(L.) Bartal.				Medicago orbicularis	Medicago orbicularis (L.) Bartal.				TJM1	EUDICOTS	0
+0	AGRICULTURAL, GARDEN, OR URBAN WEED	FABACEAE	Medicago	orbicularis	(L.) Bartal.				Medicago orbicularis	Medicago orbicularis (L.) Bartal.				TJM1	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Medicago	polymorpha	L.				Medicago polymorpha	Medicago polymorpha L.		syn: Medicago hispida Gaertn.; syn: Medicago hispida var. confinis (W.D.J. Koch) Burnat; syn: Medicago hispida var. hispida; syn: Medicago polymorpha L. var. brevispina (Benth.) Heyn; syn: Medicago minima (L.) Bartal. var. brevispina Benth.; syn: Medicago minima subsp. brevispina (Benth.) Ponert	CALIFORNIA BURCLOVER	TJM1	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Medicago	praecox	DC.				Medicago praecox	Medicago praecox DC.				TJM1	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Medicago	rigidula	(L.) All.				Medicago rigidula	Medicago rigidula (L.) All.			TIFTON MEDICK, TIFTON BURCLOVER	TJM2	EUDICOTS	0
@@ -4079,7 +4073,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	FABACEAE	Sesbania	herbacea	(Mill.) McVaugh				Sesbania herbacea	Sesbania herbacea (Mill.) McVaugh		syn: Sesbania exaltata (Raf.) Cory	BIGPOD SESBANIA, COFFEE WEED, COLORADO RIVER HEMP	TJM2	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Sesbania	punicea	(Cav.) Benth.				Sesbania punicea	Sesbania punicea (Cav.) Benth.		syn: Sesbania tripetii Hort. ex F.T. Hubbard	SCARLET SESBAN	TJM2	EUDICOTS	0
 0	NATURALIZED	FABACEAE	Spartium	junceum	L.				Spartium junceum	Spartium junceum L.			SPANISH BROOM	TJM1	EUDICOTS	0
-0		FABACEAE	Sphaerophysa	salsula	(Pall.) DC.				Sphaerophysa salsula	Sphaerophysa salsula (Pall.) DC.				TJM1	EUDICOTS	0
+0	EXTIRPATED ALIEN	FABACEAE	Sphaerophysa	salsula	(Pall.) DC.				Sphaerophysa salsula	Sphaerophysa salsula (Pall.) DC.			AUSTRIAN PEAWEED	TJM1	EUDICOTS	0
 0	NATIVE	FABACEAE	Thermopsis	californica	S. Watson				Thermopsis californica	Thermopsis californica S. Watson				TJM2	EUDICOTS	0
 0	NATIVE	FABACEAE	Thermopsis	californica	S. Watson	var.	argentata	(Greene) C.J. Chen & B.L. Turner	Thermopsis californica var. argentata	Thermopsis californica S. Watson var. argentata (Greene) C.J. Chen & B.L. Turner		syn: Thermopsis argentata Greene; syn: Thermopsis macrophylla Hook. & Arn. var. argentata (Greene) Jeps.	SILVERY FALSE-LUPINE	TJM2	EUDICOTS	1
 0	NATIVE	FABACEAE	Thermopsis	californica	S. Watson	var.	californica		Thermopsis californica var. californica	Thermopsis californica S. Watson var. californica				TJM2	EUDICOTS	1
@@ -4232,7 +4226,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	FAGACEAE	Quercus	sadleriana	R. Br. ter				Quercus sadleriana	Quercus sadleriana R. Br. ter			DEER OAK	TJM1	EUDICOTS	0
 0	NATIVE	FAGACEAE	Quercus	tomentella	Engelm.				Quercus tomentella	Quercus tomentella Engelm.			ISLAND OAK	TJM1	EUDICOTS	0
 0	NATIVE	FAGACEAE	Quercus	turbinella	Greene				Quercus turbinella	Quercus turbinella Greene			SHRUB LIVE OAK	TJM1	EUDICOTS	0
-0	NATIVE	FAGACEAE	Quercus	vacciniifolia	Kellogg				Quercus vacciniifolia	Quercus vacciniifolia Kellogg			HUCKLEBERRY OAK	TJM2	EUDICOTS	0
+0	NATIVE	FAGACEAE	Quercus	vacciniifolia	Hittell				Quercus vacciniifolia	Quercus vacciniifolia Hittell			HUCKLEBERRY OAK	TJM2	EUDICOTS	0
 0	NATIVE	FAGACEAE	Quercus	wislizeni	A. DC.				Quercus wislizeni	Quercus wislizeni A. DC.			INTERIOR LIVE OAK	TJM1	EUDICOTS	0
 0	NATIVE	FAGACEAE	Quercus	wislizeni	A. DC.	var.	frutescens	Engelm.	Quercus wislizeni var. frutescens	Quercus wislizeni A. DC. var. frutescens Engelm.				TJM1	EUDICOTS	0
 0	NATIVE	FAGACEAE	Quercus	wislizeni	A. DC.	var.	wislizeni		Quercus wislizeni var. wislizeni	Quercus wislizeni A. DC. var. wislizeni				TJM1	EUDICOTS	0
@@ -4278,7 +4272,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	GENTIANACEAE	Gentianopsis	holopetala	(A. Gray) H.H. Iltis				Gentianopsis holopetala	Gentianopsis holopetala (A. Gray) H.H. Iltis		syn: Gentiana holopetala (A. Gray) T. Holm	SIERRA GENTIAN	TJM1	EUDICOTS	0
 0	NATIVE	GENTIANACEAE	Gentianopsis	simplex	(A. Gray) H.H. Iltis				Gentianopsis simplex	Gentianopsis simplex (A. Gray) H.H. Iltis		syn: Gentiana simplex A. Gray	HIKERS' GENTIAN	TJM1	EUDICOTS	0
 0	NATIVE	GENTIANACEAE	Swertia	perennis	L.				Swertia perennis	Swertia perennis L.		syn: Swertia covillei Greene	STAR SWERTIA	TJM1	EUDICOTS	0
-0		GENTIANACEAE	Zeltnera	arizonica	(A. Gray) G. Mans.				Zeltnera arizonica	Zeltnera arizonica (A. Gray) G. Mans.				TJM2	EUDICOTS	0
+0	NATIVE	GENTIANACEAE	Zeltnera	arizonica	(A. Gray) G. Mans.				Zeltnera arizonica	Zeltnera arizonica (A. Gray) G. Mans.		syn: Centaurium arizonicum (A. Gray) A. Heller	ARIZONA CENTAURY	TJM2	EUDICOTS	0
 0	NATIVE	GENTIANACEAE	Zeltnera	davyi	(Jeps.) G. Mans.				Zeltnera davyi	Zeltnera davyi (Jeps.) G. Mans.		syn: Centaurium davyi (Jeps.) Abrams; syn: Centaurium exaltatum (Griseb.) W. Wight ex Piper var. davyi Jeps.	DAVY'S CENTAURY	TJM2	EUDICOTS	1
 0	NATIVE	GENTIANACEAE	Zeltnera	exaltata	(Griseb.) G. Mans.				Zeltnera exaltata	Zeltnera exaltata (Griseb.) G. Mans.		syn: Centaurium exaltatum (Griseb.) Piper	TALL CENTAURY, DESERT CENTAURY	TJM2	EUDICOTS	0
 0	NATIVE	GENTIANACEAE	Zeltnera	muehlenbergii	(Griseb.) G. Mans.				Zeltnera muehlenbergii	Zeltnera muehlenbergii (Griseb.) G. Mans.		syn: Centaurium curvistamineum (Wittr.) Druce; syn: Centaurium floribundum (Benth.) B.L. Rob.; syn: Centaurium muehlenbergii (Griseb.) Piper	MONTEREY CENTAURY	TJM2	EUDICOTS	0
@@ -4288,10 +4282,10 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	GERANIACEAE	California	macrophylla	(Hook. & Arn.) J.J. Aldasoro, C. Navarro, P. Vargas, L. S&aacute;ez & C. Aedo				California macrophylla	California macrophylla (Hook. & Arn.) J.J. Aldasoro, C. Navarro, P. Vargas, L. S&aacute;ez & C. Aedo		syn: Erodium macrophyllum Hook. & Arn.; syn: Erodium macrophyllum Hook. & Arn. var. californicum (Greene) Jeps.	ROUND-LEAVED FILAREE	TJM2	EUDICOTS	0
 0	NATURALIZED	GERANIACEAE	Erodium	botrys	(Cav.) Bertol.				Erodium botrys	Erodium botrys (Cav.) Bertol.				TJM1	EUDICOTS	0
 0	NATURALIZED	GERANIACEAE	Erodium	brachycarpum	(Godr.) Thell.				Erodium brachycarpum	Erodium brachycarpum (Godr.) Thell.		syn: Erodium obtusiplicatum (Maire, Weiller, & Wilczek) J.T. Howell		TJM1	EUDICOTS	0
-0	NATURALIZED	GERANIACEAE	Erodium	cicutarium	(L.) Aiton				Erodium cicutarium	Erodium cicutarium (L.) Aiton			REDSTEM FILAREE	TJM1	EUDICOTS	0
+0	NATURALIZED	GERANIACEAE	Erodium	cicutarium	(L.) L'H&eacute;r.				Erodium cicutarium	Erodium cicutarium (L.) L'H&eacute;r.			REDSTEM FILAREE	TJM1	EUDICOTS	0
 0	WAIF	GERANIACEAE	Erodium	cygnorum	Nees				Erodium cygnorum	Erodium cygnorum Nees				TJM1	EUDICOTS	0
-0	NATURALIZED	GERANIACEAE	Erodium	malacoides	(L.) Aiton				Erodium malacoides	Erodium malacoides (L.) Aiton				TJM1	EUDICOTS	0
-0	NATURALIZED	GERANIACEAE	Erodium	moschatum	(L.) Aiton				Erodium moschatum	Erodium moschatum (L.) Aiton			GREENSTEM FILAREE	TJM1	EUDICOTS	0
+0	NATURALIZED	GERANIACEAE	Erodium	malacoides	(L.) L'H&eacute;r.				Erodium malacoides	Erodium malacoides (L.) L'H&eacute;r.				TJM1	EUDICOTS	0
+0	NATURALIZED	GERANIACEAE	Erodium	moschatum	(L.) L'H&eacute;r.				Erodium moschatum	Erodium moschatum (L.) L'H&eacute;r.			GREENSTEM FILAREE	TJM1	EUDICOTS	0
 0	NATIVE	GERANIACEAE	Erodium	texanum	A. Gray				Erodium texanum	Erodium texanum A. Gray			TEXAS FILAREE	TJM1	EUDICOTS	0
 0	NATURALIZED	GERANIACEAE	Geranium	aequale	(Bab.) Aedo				Geranium aequale	Geranium aequale (Bab.) Aedo				TJM2	EUDICOTS	0
 0	NATIVE	GERANIACEAE	Geranium	bicknellii	Britton				Geranium bicknellii	Geranium bicknellii Britton		syn: Geranium bicknellii var. longipes (S. Watson) Fernald		TJM1	EUDICOTS	0
@@ -4303,11 +4297,11 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATURALIZED	GERANIACEAE	Geranium	lucidum	L.				Geranium lucidum	Geranium lucidum L.				TJM2	EUDICOTS	0
 0	NATURALIZED	GERANIACEAE	Geranium	molle	L.				Geranium molle	Geranium molle L.				TJM1	EUDICOTS	0
 0	NATIVE	GERANIACEAE	Geranium	oreganum	Howell				Geranium oreganum	Geranium oreganum Howell		syn: Geranium viscosissimum var. incisum (Torr. & A. Gray) N.H. Holmgren		TJM1	EUDICOTS	0
-0		GERANIACEAE	Geranium	palmatum	Cav.				Geranium palmatum	Geranium palmatum Cav.				TJM2	EUDICOTS	0
+0	URBAN WEED	GERANIACEAE	Geranium	palmatum	Cav.				Geranium palmatum	Geranium palmatum Cav.		syn: Geranium anemonifolium Aiton, illeg.		TJM2	EUDICOTS	0
 0	NATURALIZED	GERANIACEAE	Geranium	potentilloides	DC.				Geranium potentilloides	Geranium potentilloides DC.		syn: Geranium microphyllum Hook. f.		TJM1	EUDICOTS	0
 0	NATURALIZED	GERANIACEAE	Geranium	purpureum	Vill.				Geranium purpureum	Geranium purpureum Vill.				TJM2	EUDICOTS	0
 0	NATURALIZED	GERANIACEAE	Geranium	pusillum	L.				Geranium pusillum	Geranium pusillum L.				TJM1	EUDICOTS	0
-0		GERANIACEAE	Geranium	pyrenaicum	Burm. f.				Geranium pyrenaicum	Geranium pyrenaicum Burm. f.				TJM2	EUDICOTS	0
+0	URBAN WEED	GERANIACEAE	Geranium	pyrenaicum	Burm. f.				Geranium pyrenaicum	Geranium pyrenaicum Burm. f.				TJM2	EUDICOTS	0
 0	NATIVE	GERANIACEAE	Geranium	richardsonii	Fisch. & Trautv.				Geranium richardsonii	Geranium richardsonii Fisch. & Trautv.				TJM1	EUDICOTS	0
 0	NATURALIZED	GERANIACEAE	Geranium	robertianum	L.				Geranium robertianum	Geranium robertianum L.				TJM1	EUDICOTS	0
 0	NATURALIZED	GERANIACEAE	Geranium	rotundifolium	L.				Geranium rotundifolium	Geranium rotundifolium L.				TJM2	EUDICOTS	0
@@ -4442,7 +4436,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATURALIZED	LAMIACEAE	Mentha	spicata	L.				Mentha spicata	Mentha spicata L.			SPEARMINT	TJM2	EUDICOTS	0
 0	NATURALIZED	LAMIACEAE	Mentha	suaveolens	Ehrh.				Mentha suaveolens	Mentha suaveolens Ehrh.		syn: Mentha rotundifolia (L.) Huds., misappl.	PINEAPPLE MINT	TJM1	EUDICOTS	0
 0	NATURALIZED	LAMIACEAE	Mentha	&times;villosa	Huds.				Mentha &times;villosa	Mentha &times;villosa Huds.			APPLE MINT	TJM2	EUDICOTS	0
-0		LAMIACEAE	Moluccella	laevis	L.				Moluccella laevis	Moluccella laevis L.				TJM1	EUDICOTS	0
+0	HISTORICAL WAIF	LAMIACEAE	Moluccella	laevis	L.				Moluccella laevis	Moluccella laevis L.				TJM1	EUDICOTS	0
 0	NATIVE	LAMIACEAE	Monarda	pectinata	Nutt.				Monarda pectinata	Monarda pectinata Nutt.			PLAINS BEE BALM	TJM1	EUDICOTS	0
 0	NATIVE	LAMIACEAE	Monardella	australis	Abrams				Monardella australis	Monardella australis Abrams				TJM1	EUDICOTS	0
 0	NATIVE	LAMIACEAE	Monardella	australis	Abrams	subsp.	australis		Monardella australis subsp. australis	Monardella australis Abrams subsp. australis		syn: Monardella odoratissima subsp. australis (Abrams) Epling		TJM2	EUDICOTS	1
@@ -4675,9 +4669,9 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATURALIZED	MALVACEAE	Abutilon	theophrasti	Medik.				Abutilon theophrasti	Abutilon theophrasti Medik.			VELVET-LEAF	TJM1	EUDICOTS	0
 0	NATURALIZED	MALVACEAE	Alcea	rosea	L.				Alcea rosea	Alcea rosea L.		syn: Althaea rosea (L.) Cav.	HOLLYHOCK	TJM1	EUDICOTS	0
 0	WAIF	MALVACEAE	Alyogyne	huegelii	(Endl.) Fryxell				Alyogyne huegelii	Alyogyne huegelii (Endl.) Fryxell			BLUE HIBISCUS	TJM2	EUDICOTS	0
-0		MALVACEAE	Anisodontea	capensis	(L.) D.M. Bates				Anisodontea capensis	Anisodontea capensis (L.) D.M. Bates				TJM2	EUDICOTS	0
+0	GARDEN AND URBAN WEED	MALVACEAE	Anisodontea	capensis	(L.) D.M. Bates				Anisodontea capensis	Anisodontea capensis (L.) D.M. Bates		syn: Malvastrum capense (L.) A. Gray & Harvey	CAPE MALLOW	TJM2	EUDICOTS	0
 0	NATURALIZED	MALVACEAE	Anoda	cristata	(L.) Schltdl.				Anoda cristata	Anoda cristata (L.) Schltdl.		syn: Anoda cristata var. digitata (A. Gray) Hochr.	VIOLETTAS	TJM1	EUDICOTS	0
-0		MALVACEAE	Anoda	pentaschista	A. Gray				Anoda pentaschista	Anoda pentaschista A. Gray				TJM2	EUDICOTS	0
+0	AGRICULTURAL WEED	MALVACEAE	Anoda	pentaschista	A. Gray				Anoda pentaschista	Anoda pentaschista A. Gray		syn: Anoda pentaschista var. obtusior B.L. Rob.	FIELD ANODA	TJM2	EUDICOTS	0
 0	NATIVE	MALVACEAE	Ayenia	compacta	Rose				Ayenia compacta	Ayenia compacta Rose		syn: Ayenia californica Jeps.	CALIFORNIA AYENIA	TJM1	EUDICOTS	0
 0	NATIVE	MALVACEAE	Eremalche	exilis	(A. Gray) Greene				Eremalche exilis	Eremalche exilis (A. Gray) Greene		syn: Malvastrum exilis A. Gray	WHITE MALLOW	TJM1	EUDICOTS	0
 0	NATIVE	MALVACEAE	Eremalche	parryi	(Greene) Greene				Eremalche parryi	Eremalche parryi (Greene) Greene				TJM1	EUDICOTS	0
@@ -4705,8 +4699,8 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	MALVACEAE	Malacothamnus	clementinus	(Munz & I.M. Johnst.) Kearney				Malacothamnus clementinus	Malacothamnus clementinus (Munz & I.M. Johnst.) Kearney			SAN CLEMENTE ISLAND BUSH-MALLOW	TJM1	EUDICOTS	1
 0	NATIVE	MALVACEAE	Malacothamnus	davidsonii	(B.L. Rob.) Greene				Malacothamnus davidsonii	Malacothamnus davidsonii (B.L. Rob.) Greene			DAVIDSON'S BUSH-MALLOW	TJM1	EUDICOTS	1
 0	NATIVE	MALVACEAE	Malacothamnus	densiflorus	(S. Watson) Greene				Malacothamnus densiflorus	Malacothamnus densiflorus (S. Watson) Greene		syn: Malacothamnus densiflorus var. densiflorus; syn: Malacothamnus densiflorus var. viscidus (Abrams) Kearney		TJM1	EUDICOTS	0
-0	NATIVE	MALVACEAE	Malacothamnus	fasciculatus	(Nutt. ex Torr. & A. Gray) Greene.				Malacothamnus fasciculatus	Malacothamnus fasciculatus (Nutt. ex Torr. & A. Gray) Greene.			CHAPARRAL MALLOW	TJM1	EUDICOTS	0
-0	NATIVE	MALVACEAE	Malacothamnus	fasciculatus	(Nutt. ex Torr. & A. Gray) Greene.	var.	catalinensis	(Eastw.) Kearney	Malacothamnus fasciculatus var. catalinensis	Malacothamnus fasciculatus (Nutt. ex Torr. & A. Gray) Greene. var. catalinensis (Eastw.) Kearney			SANTA CATALINA ISLAND BUSH-MALLOW	TJM2	EUDICOTS	1
+0	NATIVE	MALVACEAE	Malacothamnus	fasciculatus	(Nutt. ex Torr. & A. Gray) Greene				Malacothamnus fasciculatus	Malacothamnus fasciculatus (Nutt. ex Torr. & A. Gray) Greene			CHAPARRAL MALLOW	TJM1	EUDICOTS	0
+0	NATIVE	MALVACEAE	Malacothamnus	fasciculatus	(Nutt. ex Torr. & A. Gray) Greene	var.	catalinensis	(Eastw.) Kearney	Malacothamnus fasciculatus var. catalinensis	Malacothamnus fasciculatus (Nutt. ex Torr. & A. Gray) Greene var. catalinensis (Eastw.) Kearney			SANTA CATALINA ISLAND BUSH-MALLOW	TJM2	EUDICOTS	1
 0	NATIVE	MALVACEAE	Malacothamnus	fasciculatus	(Nutt. ex Torr. & A. Gray) Greene	var.	fasciculatus		Malacothamnus fasciculatus var. fasciculatus	Malacothamnus fasciculatus (Nutt. ex Torr. & A. Gray) Greene var. fasciculatus				TJM2	EUDICOTS	0
 0	NATIVE	MALVACEAE	Malacothamnus	fasciculatus	(Nutt. ex Torr. & A. Gray) Greene	var.	nesioticus	(B.L. Rob.) Kearney	Malacothamnus fasciculatus var. nesioticus	Malacothamnus fasciculatus (Nutt. ex Torr. & A. Gray) Greene var. nesioticus (B.L. Rob.) Kearney			SANTA CRUZ ISLAND BUSH-MALLOW	TJM2	EUDICOTS	1
 0	NATIVE	MALVACEAE	Malacothamnus	fasciculatus	(Nutt. ex Torr. & A. Gray) Greene	var.	nuttallii	(Abrams) Kearney	Malacothamnus fasciculatus var. nuttallii	Malacothamnus fasciculatus (Nutt. ex Torr. & A. Gray) Greene var. nuttallii (Abrams) Kearney				TJM2	EUDICOTS	1
@@ -4725,11 +4719,11 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATURALIZED	MALVACEAE	Malva	parviflora	L.				Malva parviflora	Malva parviflora L.			CHEESEWEED, LITTLE MALLOW	TJM1	EUDICOTS	0
 0	NATURALIZED	MALVACEAE	Malva	pseudolavatera	Webb & Berthel.				Malva pseudolavatera	Malva pseudolavatera Webb & Berthel.		syn: Lavatera cretica L.; syn: Malva linnaei M.F. Ray superfl.	CRETAN MALLOW	TJM2	EUDICOTS	0
 0	NATURALIZED	MALVACEAE	Malva	sylvestris	L.				Malva sylvestris	Malva sylvestris L.		syn: Malva sylvestris var. mauritiana (L.) Boiss.	HIGH MALLOW	TJM1	EUDICOTS	0
-0		MALVACEAE	Malva	verticillata	L.	var.	crispa	L.	Malva verticillata var. crispa	Malva verticillata L. var. crispa L.				TJM2	EUDICOTS	0
+0	GARDEN AND URBAN WEED	MALVACEAE	Malva	verticillata	L.	var.	crispa	L.	Malva verticillata var. crispa	Malva verticillata L. var. crispa L.		syn: Malva crispa (L.) L.	CRISPED MALLOW, CURLED MALLOW	TJM2	EUDICOTS	0
 0	NATIVE	MALVACEAE	Malvella	leprosa	(Ortega) Krapov.				Malvella leprosa	Malvella leprosa (Ortega) Krapov.		syn: Sida leprosa (Ortega) K. Schum. var. hederacea (Douglas) K. Schum.	ALKALI-MALLOW, WHITE-WEED	TJM1	EUDICOTS	0
 0	NATURALIZED	MALVACEAE	Modiola	caroliniana	(L.) G. Don				Modiola caroliniana	Modiola caroliniana (L.) G. Don			MODIOLA	TJM1	EUDICOTS	0
 0	WAIF	MALVACEAE	Sida	rhombifolia	L.				Sida rhombifolia	Sida rhombifolia L.			SIDA, RHOMBUS-LEAVED SIDA	TJM1	EUDICOTS	0
-0		MALVACEAE	Sida	spinosa	L.				Sida spinosa	Sida spinosa L.				TJM2	EUDICOTS	0
+0	AGRICULTURAL WEED	MALVACEAE	Sida	spinosa	L.				Sida spinosa	Sida spinosa L.			PRICKLY SIDA	TJM2	EUDICOTS	0
 0	NATIVE	MALVACEAE	Sidalcea	asprella	Greene				Sidalcea asprella	Sidalcea asprella Greene				TJM2	EUDICOTS	0
 0	NATIVE	MALVACEAE	Sidalcea	asprella	Greene	subsp.	asprella		Sidalcea asprella subsp. asprella	Sidalcea asprella Greene subsp. asprella		syn: Sidalcea malviflora (DC.) A. Gray subsp. asprella (Greene) C.L. Hitchc.	HARSH CHECKERBLOOM, SIERRA FOOTHILLS CHECKERBLOOM	TJM2	EUDICOTS	0
 0	NATIVE	MALVACEAE	Sidalcea	asprella	Greene	subsp.	nana	(Jeps.) S.R. Hill	Sidalcea asprella subsp. nana	Sidalcea asprella Greene subsp. nana (Jeps.) S.R. Hill		syn: Sidalcea malviflora (DC.) A. Gray subsp. nana (Jeps.) C.L. Hitchc.; syn: Sidalcea reptans Greene var. nana Jeps.	DWARF SIERRAN CHECKERBLOOM	TJM2	EUDICOTS	0
@@ -5440,7 +5434,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	PHRYMACEAE	Diplacus	leptaleus	(A. Gray) G.L. Nesom				Diplacus leptaleus	Diplacus leptaleus (A. Gray) G.L. Nesom		syn: Mimulus leptaleus A. Gray	LEAST FLOWERED MONKEYFLOWER	TJM2	EUDICOTS	0
 0	NATIVE	PHRYMACEAE	Diplacus	linearis	(Benth.) Greene				Diplacus linearis	Diplacus linearis (Benth.) Greene		syn: Diplacus fasciculatus (Pennell) McMinn; syn: Diplacus longiflorus Nutt. var. linearis (Benth.) McMinn; syn: Mimulus bifidus Pennell subsp. fasciculatus Pennell; syn: Mimulus glutinosus J.C. Wendl. var. linearis (Benth.) A. Gray; syn: Mimulus linearis Benth.; syn: Mimulus longiflorus (Nutt.) A.L. Grant var. linearis (Benth.) A.L. Grant	MONTEREY MONKEYFLOWER	TJM2	EUDICOTS	1
 0	NATIVE	PHRYMACEAE	Diplacus	longiflorus	Nutt.				Diplacus longiflorus	Diplacus longiflorus Nutt.		syn: Diplacus arachnoideus Greene; syn: Diplacus speciosus Burtt Davy; syn: Mimulus aurantiacus Curtis var. pubescens (Torr.) D.M. Thomps.; syn: Mimulus glutinosus J.C. Wendl. var. brachypus A. Gray; syn: Mimulus longiflorus (Nutt.) A.L. Grant; syn: Mimulus longiflorus var. rutilus A.L. Grant; syn: Diplacus rutilus (A.L. Grant) McMinn.		TJM2	EUDICOTS	0
-0	NATIVE	PHRYMACEAE	Diplacus	mephiticus	(Greene) G.L. Nesom				Diplacus mephiticus	Diplacus mephiticus (Greene) G.L. Nesom		syn: Eunanus angustifolius Greene; syn: Mimulus angustifolius (Greene) A.L. Grant; syn: Mimulus coccineus Congdon; syn: Mimulus coccineus var. wolfii (Eastw.) D.W. Taylor; syn: Mimulus densus A.L. Grant; syn: Mimulus mephiticus Greene; syn: Mimulus nanus (Hook. & Arn.) var. mephiticus (Greene) D.M. Thomps.; syn: Mimulus reifschneiderae Edwin; syn: Mimulus stamineus A.L. Grant; syn: Mimulus washoensis Edwin; syn: Mimulus wolfii Eastw.	SKUNKY MONKEYFLOWER	TJM2	EUDICOTS	0
+0	NATIVE	PHRYMACEAE	Diplacus	mephiticus	(Greene) G.L. Nesom				Diplacus mephiticus	Diplacus mephiticus (Greene) G.L. Nesom		syn: Eunanus angustifolius Greene; syn: Mimulus angustifolius (Greene) A.L. Grant; syn: Mimulus coccineus Congdon; syn: Mimulus coccineus var. wolfii (Eastw.) D.W. Taylor; syn: Mimulus densus A.L. Grant; syn: Mimulus mephiticus Greene; syn: Mimulus nanus Hook. & Arn. var. mephiticus (Greene) D.M. Thomps.; syn: Mimulus reifschneiderae Edwin; syn: Mimulus stamineus A.L. Grant; syn: Mimulus washoensis Edwin; syn: Mimulus wolfii Eastw.	SKUNKY MONKEYFLOWER	TJM2	EUDICOTS	0
 0	NATIVE	PHRYMACEAE	Diplacus	mohavensis	(Lemmon) G.L. Nesom				Diplacus mohavensis	Diplacus mohavensis (Lemmon) G.L. Nesom		syn: Mimulus mohavensis Lemmon	MOJAVE MONKEYFLOWER	TJM2	EUDICOTS	1
 0	NATIVE	PHRYMACEAE	Diplacus	nanus	(Hook. & Arn.) G.L. Nesom				Diplacus nanus	Diplacus nanus (Hook. & Arn.) G.L. Nesom		syn: Eunanus nanus (Hook. & Arn.) Holz.; syn: Eunanus tolmiei Benth.; syn: Mimulus nanus Hook. & Arn.; syn: Mimulus tolmiei (Benth.) Rydb.	DWARF MONKEYFLOWER	TJM2	EUDICOTS	0
 0	NATIVE	PHRYMACEAE	Diplacus	parryi	(A. Gray) G.L. Nesom & N.S. Fraga				Diplacus parryi	Diplacus parryi (A. Gray) G.L. Nesom & N.S. Fraga		syn: Mimulus parryi A. Gray	PARRY'S MONKEYFLOWER	TJM2	EUDICOTS	0
@@ -5496,11 +5490,11 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	PHRYMACEAE	Erythranthe	microphylla	(Benth.) G.L. Nesom				Erythranthe microphylla	Erythranthe microphylla (Benth.) G.L. Nesom		syn: Mimulus microphyllus Benth.; syn: Mimulus glareosus Greene; syn: Mimulus guttatus DC. var. depauperatus (A. Gray) A.L. Grant; syn: Mimulus guttatus var. insignis Greene; syn: Mimulus guttatus var. microphyllus (Benth.) Pennell; syn: Mimulus langsdorffii Greene var. insignis (Greene) Greene; syn: Mimulus langsdorffii var. microphyllus (Benth.) A. Nelson & Macbride; syn: Mimulus laxus M. Peck; syn: Mimulus luteus L. var. depauperatus A. Gray; syn: Mimulus nasutus Greene var. insignis (Greene) A.L. Grant; syn: Mimulus platycalyx Pennell		TJM2	EUDICOTS	0
 0	NATIVE	PHRYMACEAE	Erythranthe	montioides	(A. Gray) N.S. Fraga				Erythranthe montioides	Erythranthe montioides (A. Gray) N.S. Fraga		syn: Mimulus montioides A. Gray	MONTIA-LIKE MONKEYFLOWER	TJM2	EUDICOTS	1
 0	NATIVE	PHRYMACEAE	Erythranthe	moschata	(Lindl.) G.L. Nesom				Erythranthe moschata	Erythranthe moschata (Lindl.) G.L. Nesom		syn: Erythranthe inodora (Greene) G.L. Nesom; syn: Erythranthe moniliformis (Greene) G.L. Nesom; syn: Mimulus moschatus Lindl; syn: Mimulus crinitus A.L. Grant; syn: Mimulus guttatus DC. var. moschatus (Lindl.) Provancher; syn: Mimulus leibergii A.L. Grant; syn: Mimulus moniliformis Greene; syn: Mimulus moschatus var. moniliformis (Greene) Munz; syn: Mimulus moschatus Douglas ex Lindl. var. pallidiflorus Suksd.	MUSK MONKEYFLOWER	TJM2	EUDICOTS	0
-0	NATIVE	PHRYMACEAE	Erythranthe	nasuta	(Greene) G.L. Nesom				Erythranthe nasuta	Erythranthe nasuta (Greene) G.L. Nesom		syn: Mimulus nasutus Greene; syn: Mimulus bakeri Gandoger; syn: Mimulus cuspidatus Greene; syn: Mimulus erosus Greene; syn: Mimulus guttatus DC. var. gracilis (A. Gray) G.R. Campbell; syn: Mimulus guttatus var. nasutus (Greene) Jeps.; syn: Mimulus langsdorffii Greene var. nasutus (Greene) Jeps.; syn: Mimulus luteus L. var. gracilis A. Gray; syn: Mimulus puncticalyx Gandoger; syn: Mimulus sookensis B.G. Benedict, Modliszewski, Sweigart, N.H. Martin, Ganders & John H. Willis; syn: Mimulus subreniformis Greene		TJM2	EUDICOTS	0
+0	NATIVE	PHRYMACEAE	Erythranthe	nasuta	(Greene) G.L. Nesom				Erythranthe nasuta	Erythranthe nasuta (Greene) G.L. Nesom		syn: Mimulus nasutus Greene; syn: Mimulus bakeri Gand.; syn: Mimulus cuspidatus Greene; syn: Mimulus erosus Greene; syn: Mimulus guttatus DC. var. gracilis (A. Gray) G.R. Campbell; syn: Mimulus guttatus var. nasutus (Greene) Jeps.; syn: Mimulus langsdorffii Greene var. nasutus (Greene) Jeps.; syn: Mimulus luteus L. var. gracilis A. Gray; syn: Mimulus puncticalyx Gandoger; syn: Mimulus sookensis B.G. Benedict, Modliszewski, Sweigart, N.H. Martin, Ganders & John H. Willis; syn: Mimulus subreniformis Greene		TJM2	EUDICOTS	0
 0	NATIVE	PHRYMACEAE	Erythranthe	norrisii	(Heckard & Shevock) G.L. Nesom				Erythranthe norrisii	Erythranthe norrisii (Heckard & Shevock) G.L. Nesom		syn: Mimulus norrisii Heckard & Shevock	KAWEAH MONKEYFLOWER	TJM2	EUDICOTS	1
 0	NATIVE	PHRYMACEAE	Erythranthe	nudata	(Greene) G.L. Nesom				Erythranthe nudata	Erythranthe nudata (Greene) G.L. Nesom		syn: Mimulus nudatus Greene	BARE MONKEYFLOWER	TJM2	EUDICOTS	1
 0	NATIVE	PHRYMACEAE	Erythranthe	palmeri	(A. Gray) N.S. Fraga				Erythranthe palmeri	Erythranthe palmeri (A. Gray) N.S. Fraga		syn: Mimulus palmeri A. Gray	PALMER'S MONKEYFLOWER	TJM2	EUDICOTS	1
-0	NATIVE	PHRYMACEAE	Erythranthe	pardalis	(Pennell) G.L. Nesom				Erythranthe pardalis	Erythranthe pardalis (Pennell) G.L. Nesom		syn: Mimulus pardalis Pennell; syn: Mimulus cupriphilus Macnair	PENNELL'S PANTHER	TJM2	EUDICOTS	1
+0	NATIVE	PHRYMACEAE	Erythranthe	pardalis	(Pennell) G.L. Nesom				Erythranthe pardalis	Erythranthe pardalis (Pennell) G.L. Nesom		syn: Mimulus pardalis Pennell; syn: Mimulus cupriphilus Macnair; syn: Mimulus guttatus DC. var. pardalis (Pennell) D.W. Taylor; syn: Mimulus guttatus DC. var. cupriphilus (Macnair) D.W. Taylor	PENNELL'S PANTHER	TJM2	EUDICOTS	1
 0	NATIVE	PHRYMACEAE	Erythranthe	parishii	(Greene) G.L. Nesom & N.S. Fraga				Erythranthe parishii	Erythranthe parishii (Greene) G.L. Nesom & N.S. Fraga		syn: Mimulus parishii Greene	PARISH'S MONKEYFLOWER	TJM2	EUDICOTS	0
 0	NATIVE	PHRYMACEAE	Erythranthe	percaulis	G.L. Nesom				Erythranthe percaulis	Erythranthe percaulis G.L. Nesom			SERPENTINE CANYON MONKEYFLOWER	TJM2	EUDICOTS	1
 0	NATIVE	PHRYMACEAE	Erythranthe	primuloides	(Benth.) G.L. Nesom & N.S. Fraga				Erythranthe primuloides	Erythranthe primuloides (Benth.) G.L. Nesom & N.S. Fraga		syn: Mimulus primuloides Benth.; syn: Mimulus pilosellus Greene; syn: Mimulus primuloides var. minimus M. Peck; syn: Mimulus primuloides var. pilosellus (Greene) Smiley		TJM2	EUDICOTS	0
@@ -5529,6 +5523,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	WAIF	PITTOSPORACEAE	Pittosporum	tenuifolium	Gaertn.				Pittosporum tenuifolium	Pittosporum tenuifolium Gaertn.				TJM1	EUDICOTS	0
 0	NATURALIZED	PITTOSPORACEAE	Pittosporum	tobira	(Thunb.) W.T. Aiton				Pittosporum tobira	Pittosporum tobira (Thunb.) W.T. Aiton			JAPANESE PITTOSPORUM, MOCK ORANGE	TJM1	EUDICOTS	0
 0	NATURALIZED	PITTOSPORACEAE	Pittosporum	undulatum	Vent.				Pittosporum undulatum	Pittosporum undulatum Vent.			VICTORIAN BOX, MOCK ORANGE	TJM1	EUDICOTS	0
+0	NATIVE	PLANTAGINACEAE	Antirrhinum	confertiflorum	Benth. ex A. DC.				Antirrhinum confertiflorum	Antirrhinum confertiflorum Benth. ex A. DC.		syn: Mohavea confertiflora (Benth. ex A. DC.) A. Heller 	GHOST FLOWER	TJM2	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	cornutum	Benth.				Antirrhinum cornutum	Antirrhinum cornutum Benth.		syn: Sairocarpus cornutus (Benth.) D.A. Sutton		TJM1	EUDICOTS	1
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	coulterianum	Benth. ex A. DC.				Antirrhinum coulterianum	Antirrhinum coulterianum Benth. ex A. DC.		syn: Sairocarpus coulterianus (Benth. ex A.DC.) D.A. Sutton		TJM1	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	filipes	A. Gray				Antirrhinum filipes	Antirrhinum filipes A. Gray		syn: Neogaerrhinum filipes (A. Gray) Rothm.		TJM1	EUDICOTS	0
@@ -5536,13 +5531,14 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	kingii	S. Watson				Antirrhinum kingii	Antirrhinum kingii S. Watson		syn: Sairocarpus kingii (S. Watson) D.A. Sutton		TJM1	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	leptaleum	A. Gray				Antirrhinum leptaleum	Antirrhinum leptaleum A. Gray		syn: Antirrhinum cornutum Benth. var. leptaleum (A. Gray) Munz		TJM1	EUDICOTS	1
 0	WAIF	PLANTAGINACEAE	Antirrhinum	majus	L.				Antirrhinum majus	Antirrhinum majus L.				TJM1	EUDICOTS	0
-0	NATIVE	PLANTAGINACEAE	Antirrhinum	multiflorum	Pennell, illeg.				Antirrhinum multiflorum	Antirrhinum multiflorum Pennell, illeg.		syn: Antirrhinum glandulosum Lindl., illeg.; syn: Sairocarpus multiflorus D.A. Sutton		TJM1	EUDICOTS	1
+0	NATIVE	PLANTAGINACEAE	Antirrhinum	mohavea	D.J. Keil				Antirrhinum mohavea	Antirrhinum mohavea D.J. Keil		syn: Mohavea breviflora Coville	GOLDEN DESERT SNAPDRAGON	TJM2	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	nuttallianum	Benth. ex A. DC.				Antirrhinum nuttallianum	Antirrhinum nuttallianum Benth. ex A. DC.				TJM1	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	nuttallianum	Benth. ex A. DC.	subsp.	nuttallianum		Antirrhinum nuttallianum subsp. nuttallianum	Antirrhinum nuttallianum Benth. ex A. DC. subsp. nuttallianum				TJM1	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	nuttallianum	Benth. ex A. DC.	subsp.	subsessile	(A. Gray) D.M. Thomps.	Antirrhinum nuttallianum subsp. subsessile	Antirrhinum nuttallianum Benth. ex A. DC. subsp. subsessile (A. Gray) D.M. Thomps.				TJM1	EUDICOTS	0
 0	WAIF	PLANTAGINACEAE	Antirrhinum	orontium	L.				Antirrhinum orontium	Antirrhinum orontium L.		syn: Misopates orontium (L.) Raf.		TJM1	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	ovatum	Eastw.				Antirrhinum ovatum	Antirrhinum ovatum Eastw.			OVAL-LEAVED SNAPDRAGON	TJM1	EUDICOTS	1
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	subcordatum	A. Gray				Antirrhinum subcordatum	Antirrhinum subcordatum A. Gray		syn: Sairocarpus subcordatus (A. Gray) D.A. Sutton	DIMORPHIC SNAPDRAGON	TJM1	EUDICOTS	1
+0	NATIVE	PLANTAGINACEAE	Antirrhinum	thompsonii	D.J. Keil				Antirrhinum thompsonii	Antirrhinum thompsonii D.J. Keil		syn: Antirrhinum glandulosum Lindl., illeg.; syn: Antirrhinum multiflorum Pennell, illeg.; syn: Sairocarpus multiflorus D.A. Sutton		TJM2	EUDICOTS	1
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	vexillocalyculatum	Kellogg				Antirrhinum vexillocalyculatum	Antirrhinum vexillocalyculatum Kellogg		syn: Antirrhinum vexillo-calyculatum, orth. var.		TJM2	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	vexillocalyculatum	Kellogg	subsp.	breweri	(A. Gray) D.M. Thomps.	Antirrhinum vexillocalyculatum subsp. breweri	Antirrhinum vexillocalyculatum Kellogg subsp. breweri (A. Gray) D.M. Thomps.		syn: Antirrhinum breweri A. Gray; syn: Sairocarpus breweri (A. Gray) D.A. Sutton		TJM2	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	vexillocalyculatum	Kellogg	subsp.	intermedium	D.M. Thomps.	Antirrhinum vexillocalyculatum subsp. intermedium	Antirrhinum vexillocalyculatum Kellogg subsp. intermedium D.M. Thomps.				TJM2	EUDICOTS	1
@@ -5550,7 +5546,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	PLANTAGINACEAE	Antirrhinum	virga	A. Gray				Antirrhinum virga	Antirrhinum virga A. Gray		syn: Sairocarpus virga (A. Gray) D.A. Sutton	TWIG-LIKE SNAPDRAGON	TJM1	EUDICOTS	1
 0	NATIVE	PLANTAGINACEAE	Bacopa	eisenii	(Kellogg) Pennell				Bacopa eisenii	Bacopa eisenii (Kellogg) Pennell				TJM1	EUDICOTS	0
 0	NATURALIZED	PLANTAGINACEAE	Bacopa	monnieri	(L.) Wettst.				Bacopa monnieri	Bacopa monnieri (L.) Wettst.				TJM1	EUDICOTS	0
-0		PLANTAGINACEAE	Bacopa	repens	(Sw.) Wettst.				Bacopa repens	Bacopa repens (Sw.) Wettst.				TJM1	EUDICOTS	0
+0	AGRICULTURAL WEED	PLANTAGINACEAE	Bacopa	repens	(Sw.) Wettst.				Bacopa repens	Bacopa repens (Sw.) Wettst.				TJM1	EUDICOTS	0
 0	NATURALIZED	PLANTAGINACEAE	Bacopa	rotundifolia	(Michx.) Wettst.				Bacopa rotundifolia	Bacopa rotundifolia (Michx.) Wettst.		syn: Bacopa nobsiana H. Mason		TJM1	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Callitriche	fassettii	Schotsman				Callitriche fassettii	Callitriche fassettii Schotsman		syn: Callitriche hermaphroditica L., misappl.		TJM2	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Callitriche	heterophylla	Pursh				Callitriche heterophylla	Callitriche heterophylla Pursh				TJM1	EUDICOTS	0
@@ -5622,8 +5618,6 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	WAIF	PLANTAGINACEAE	Linaria	purpurea	(L.) Mill.				Linaria purpurea	Linaria purpurea (L.) Mill.				TJM1	EUDICOTS	0
 0	NATURALIZED	PLANTAGINACEAE	Linaria	vulgaris	Mill.				Linaria vulgaris	Linaria vulgaris Mill.			BUTTER-AND-EGGS	TJM1	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Maurandella	antirrhiniflora	(Humb. & Bonpl. ex Willd.) Rothm.				Maurandella antirrhiniflora	Maurandella antirrhiniflora (Humb. & Bonpl. ex Willd.) Rothm.		syn: Maurandya antirrhiniflora Humb. & Bonpl. ex Willd.; syn: Maurandya antirrhiniflora subsp. antirrhiniflora	VIOLET TWINING SNAPDRAGON	TJM2	EUDICOTS	0
-0	NATIVE	PLANTAGINACEAE	Mohavea	breviflora	Coville				Mohavea breviflora	Mohavea breviflora Coville				TJM1	EUDICOTS	0
-0	NATIVE	PLANTAGINACEAE	Mohavea	confertiflora	(Benth. ex A. DC.) A. Heller				Mohavea confertiflora	Mohavea confertiflora (Benth. ex A. DC.) A. Heller		syn: Antirrhinum confertiflorum Benth. ex A.DC.	GHOST FLOWER	TJM1	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Nothochelone	nemorosa	(Dougl. ex Lindl.) Straw				Nothochelone nemorosa	Nothochelone nemorosa (Dougl. ex Lindl.) Straw		syn: Chelone nemorosa Dougl. ex Lindl.; syn: Penstemon nemorosus (Dougl. ex Lindl.) Trautv.		TJM1	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Nuttallanthus	texanus	(Scheele) D.A. Sutton				Nuttallanthus texanus	Nuttallanthus texanus (Scheele) D.A. Sutton		syn: Linaria canadensis (L.) Dum.Cours. var. texana (Scheele) Pennell; syn: Linaria canadensis (L.) Chaz., in part, misappl.	BLUE TOADFLAX	TJM2	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Penstemon	albomarginatus	M.E. Jones				Penstemon albomarginatus	Penstemon albomarginatus M.E. Jones			WHITE-MARGINED BEARDTONGUE	TJM1	EUDICOTS	0
@@ -5740,7 +5734,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	PLANTAGINACEAE	Veronica	americana	Schwein. ex Benth.				Veronica americana	Veronica americana Schwein. ex Benth.			AMERICAN BROOKLIME	TJM1	EUDICOTS	0
 0	NATURALIZED	PLANTAGINACEAE	Veronica	anagallis-aquatica	L.				Veronica anagallis-aquatica	Veronica anagallis-aquatica L.			WATER SPEEDWELL	TJM1	EUDICOTS	0
 0	NATURALIZED	PLANTAGINACEAE	Veronica	arvensis	L.				Veronica arvensis	Veronica arvensis L.				TJM1	EUDICOTS	0
-0	NATURALIZED	PLANTAGINACEAE	Veronica	catenata	Pennell				Veronica catenata	Veronica catenata Pennell		syn: Veronica comosa K. Richt.	CHAIN SPEEDWELL	TJM1	EUDICOTS	0
+0	NATIVE	PLANTAGINACEAE	Veronica	catenata	Pennell				Veronica catenata	Veronica catenata Pennell		syn: Veronica comosa K. Richt.	CHAIN SPEEDWELL	TJM1	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Veronica	copelandii	Eastw.				Veronica copelandii	Veronica copelandii Eastw.			COPELAND'S SPEEDWELL	TJM1	EUDICOTS	1
 0	NATIVE	PLANTAGINACEAE	Veronica	cusickii	A. Gray				Veronica cusickii	Veronica cusickii A. Gray			CUSICK'S SPEEDWELL	TJM1	EUDICOTS	0
 0	NATIVE	PLANTAGINACEAE	Veronica	peregrina	L.	subsp.	xalapensis	(Kunth) Pennell	Veronica peregrina subsp. xalapensis	Veronica peregrina L. subsp. xalapensis (Kunth) Pennell			PURSLANE SPEEDWELL	TJM1	EUDICOTS	0
@@ -5888,7 +5882,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	POLEMONIACEAE	Ipomopsis	congesta	(Hook.) V.E. Grant				Ipomopsis congesta	Ipomopsis congesta (Hook.) V.E. Grant				TJM1	EUDICOTS	0
 0	NATIVE	POLEMONIACEAE	Ipomopsis	congesta	(Hook.) V.E. Grant	subsp.	congesta		Ipomopsis congesta subsp. congesta	Ipomopsis congesta (Hook.) V.E. Grant subsp. congesta				TJM1	EUDICOTS	0
 0	NATIVE	POLEMONIACEAE	Ipomopsis	congesta	(Hook.) V.E. Grant	subsp.	montana	(A. Nelson & P.B. Kenn.) V.E. Grant	Ipomopsis congesta subsp. montana	Ipomopsis congesta (Hook.) V.E. Grant subsp. montana (A. Nelson & P.B. Kenn.) V.E. Grant		syn: Ipomopsis congesta subsp. palmifrons (Brand) A.G. Day		TJM1	EUDICOTS	0
-0		POLEMONIACEAE	Ipomopsis	effusa	(A. Gray) Moran				Ipomopsis effusa	Ipomopsis effusa (A. Gray) Moran				TJM1	EUDICOTS	0
+0	EXTIRPATED WAIF	POLEMONIACEAE	Ipomopsis	effusa	(A. Gray) Moran				Ipomopsis effusa	Ipomopsis effusa (A. Gray) Moran			BAJA CALIFORNIA IPOMOPSIS	TJM1	EUDICOTS	0
 0	NATIVE	POLEMONIACEAE	Ipomopsis	polycladon	(Torr.) V.E. Grant				Ipomopsis polycladon	Ipomopsis polycladon (Torr.) V.E. Grant				TJM1	EUDICOTS	0
 0	NATIVE	POLEMONIACEAE	Ipomopsis	tenuifolia	(A. Gray) V.E. Grant				Ipomopsis tenuifolia	Ipomopsis tenuifolia (A. Gray) V.E. Grant		syn: Loeselia tenuifolia A. Gray	SLENDER-LEAVED IPOMOPSIS	TJM1	EUDICOTS	0
 0	NATIVE	POLEMONIACEAE	Ipomopsis	tenuituba	(Rydb.) V.E. Grant				Ipomopsis tenuituba	Ipomopsis tenuituba (Rydb.) V.E. Grant		syn: Ipomopsis aggregata subsp. attenuata (A. Gray) V.E. Grant & A.D. Grant, misappl.		TJM1	EUDICOTS	0
@@ -6271,7 +6265,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	POLYGONACEAE	Eriogonum	nudum	Benth.	var.	westonii	(S. Stokes) J.T. Howell	Eriogonum nudum var. westonii	Eriogonum nudum Benth. var. westonii (S. Stokes) J.T. Howell		syn: Eriogonum gramineum S. Stokes; syn: Eriogonum latifolium Sm. subsp. saxicola (A. Heller) S. Stokes; syn: Eriogonum latifolium subsp. westonii S. Stokes; syn: Eriogonum nudum subsp. saxicola (A. Heller) Munz; syn: Eriogonum saxicola A. Heller; syn: Eriogonum nudum var. gramineum (S. Stokes) Reveal	WESTON'S WILD BUCKWHEAT	TJM1	EUDICOTS	1
 0	NATIVE	POLYGONACEAE	Eriogonum	nummulare	M.E. Jones				Eriogonum nummulare	Eriogonum nummulare M.E. Jones		syn: Eriogonum dudleyanum S. Stokes; syn: Eriogonum kearneyi Tidestr.; syn: Eriogonum kearneyi subsp. monoense (S. Stokes) Munz ex Reveal; syn: Eriogonum kearneyi var. monoense (S. Stokes) Reveal; syn: Eriogonum nodosum Small var. kearneyi (Tidestr.) S. Stokes; syn: Eriogonum nodosum subsp. monoense S. Stokes	MONEY WILD BUCKWHEAT	TJM1	EUDICOTS	0
 0	NATIVE	POLYGONACEAE	Eriogonum	nutans	Torr. & A. Gray				Eriogonum nutans	Eriogonum nutans Torr. & A. Gray				TJM1	EUDICOTS	0
-0		POLYGONACEAE	Eriogonum	nutans	Torr. & A. Gray	var.	glabratum	Reveal	Eriogonum nutans var. glabratum	Eriogonum nutans Torr. & A. Gray var. glabratum Reveal				TJM2	EUDICOTS	0
+0	EXTIRPATED ALIEN	POLYGONACEAE	Eriogonum	nutans	Torr. & A. Gray	var.	glabratum	Reveal	Eriogonum nutans var. glabratum	Eriogonum nutans Torr. & A. Gray var. glabratum Reveal			DEETH WILD BUCKWHEAT	TJM2	EUDICOTS	0
 0	NATIVE	POLYGONACEAE	Eriogonum	nutans	Torr. & A. Gray	var.	nutans		Eriogonum nutans var. nutans	Eriogonum nutans Torr. & A. Gray var. nutans		syn: Eriogonum cernuum Nutt. var. purpurascens Torr. & A. Gray; syn: Eriogonum deflexum Torr. subsp. ultrum S. Stokes; syn: Eriogonum nutans Torr. & A. Gray var. brevipedicellatum S. Stokes; syn: Eriogonum rubiflorum M.E. Jones	DUGWAY WILD BUCKWHEAT	TJM2	EUDICOTS	0
 0	NATIVE	POLYGONACEAE	Eriogonum	ochrocephalum	S. Watson	var.	ochrocephalum		Eriogonum ochrocephalum var. ochrocephalum	Eriogonum ochrocephalum S. Watson var. ochrocephalum		syn: Eriogonum nevadense Gand.	OCHRE-FLOWERED BUCKWHEAT	TJM1	EUDICOTS	0
 0	NATIVE	POLYGONACEAE	Eriogonum	ordii	S. Watson				Eriogonum ordii	Eriogonum ordii S. Watson		syn: Eriogonum tenuissimum Eastw.	FORT MOHAVE WILD BUCKWHEAT	TJM1	EUDICOTS	1
@@ -6290,7 +6284,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	POLYGONACEAE	Eriogonum	parvifolium	Sm.				Eriogonum parvifolium	Eriogonum parvifolium Sm.		syn: Eriogonum parvifolium var. crassifolium Benth.; syn: Eriogonum parvifolium subsp. lucidum J.T. Howell ex S. Stokes; syn: Eriogonum parvifolium var. lucidum (J.T. Howell ex S. Stokes) Reveal; syn: Eriogonum parvifolium subsp. paynei C.B. Wolf ex Munz; syn: Eriogonum parvifolium var. paynei (C.B. Wolf ex Munz) Reveal	SEACLIFF WILD BUCKWHEAT	TJM1	EUDICOTS	1
 0	NATIVE	POLYGONACEAE	Eriogonum	pendulum	S. Watson				Eriogonum pendulum	Eriogonum pendulum S. Watson		syn: Eriogonum pendulum var. confertum S. Stokes	WALDO WILD BUCKWHEAT	TJM1	EUDICOTS	0
 0	NATIVE	POLYGONACEAE	Eriogonum	plumatella	Durand & Hilg.				Eriogonum plumatella	Eriogonum plumatella Durand & Hilg.		syn: Eriogonum nodosum Small var. jaegeri Munz & I.M. Johnst.; syn: Eriogonum palmeri S. Watson; syn: Eriogonum plumatella var. jaegeri (Munz & I.M. Johnst.) S. Stokes ex Munz	YUCCA WILD BUCKWHEAT	TJM1	EUDICOTS	0
-0		POLYGONACEAE	Eriogonum	polycladon	Benth.				Eriogonum polycladon	Eriogonum polycladon Benth.				TJM2	EUDICOTS	0
+0	EXTIRPATED ALIEN	POLYGONACEAE	Eriogonum	polycladon	Benth.				Eriogonum polycladon	Eriogonum polycladon Benth.		syn: Eriogonum densum Greene; syn: Eriogonum polycladon var. crispum Gand.; syn: Eriogonum polycladon var. mexicanum Gand.; syn: Eriogonum vimineum Douglas ex Benth. var. densum (Greene) S. Stokes; syn: Eriogonum vimineum subsp. polycladon (Benth.) S. Stoke	SORREL WILD BUCKWHEAT	TJM2	EUDICOTS	0
 0	NATIVE	POLYGONACEAE	Eriogonum	polypodum	Small				Eriogonum polypodum	Eriogonum polypodum Small		syn: Eriogonum umbellatum Torr. var. polypodum (Small) S. Stokes; syn: Eriogonum ursinum S. Watson var. venosum S. Stokes ex Smiley	TULARE COUNTY BUCKWHEAT	TJM1	EUDICOTS	1
 0	NATIVE	POLYGONACEAE	Eriogonum	prattenianum	Durand				Eriogonum prattenianum	Eriogonum prattenianum Durand				TJM1	EUDICOTS	0
 0	NATIVE	POLYGONACEAE	Eriogonum	prattenianum	Durand	var.	avium	Reveal & Shevock	Eriogonum prattenianum var. avium	Eriogonum prattenianum Durand var. avium Reveal & Shevock			KETTLE DOME BUCKWHEAT	TJM1	EUDICOTS	1
@@ -6443,7 +6437,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	POLYGONACEAE	Rumex	lacustris	Greene				Rumex lacustris	Rumex lacustris Greene		syn: Rumex salicifolius Weinm. var. lacustris (Greene) J.C. Hickman		TJM2	EUDICOTS	0
 0	NATURALIZED	POLYGONACEAE	Rumex	obtusifolius	L.				Rumex obtusifolius	Rumex obtusifolius L.		syn: Rumex obtusifolius subsp. agrestis (Fr.) Danser	BITTER DOCK	TJM1	EUDICOTS	0
 0	NATIVE	POLYGONACEAE	Rumex	occidentalis	S. Watson				Rumex occidentalis	Rumex occidentalis S. Watson		syn: Rumex fenestratus Greene	WESTERN DOCK	TJM1	EUDICOTS	0
-0		POLYGONACEAE	Rumex	palustris	Sm.				Rumex palustris	Rumex palustris Sm.				TJM2	EUDICOTS	0
+0	HISTORICAL WAIF	POLYGONACEAE	Rumex	palustris	Sm.				Rumex palustris	Rumex palustris Sm.				TJM2	EUDICOTS	0
 0	NATIVE	POLYGONACEAE	Rumex	paucifolius	Nutt.				Rumex paucifolius	Rumex paucifolius Nutt.		syn: Rumex paucifolius var. gracilescens Rech. f.		TJM1	EUDICOTS	0
 0	NATIVE	POLYGONACEAE	Rumex	persicarioides	L.				Rumex persicarioides	Rumex persicarioides L.				TJM2	EUDICOTS	0
 0	NATURALIZED	POLYGONACEAE	Rumex	pulcher	L.				Rumex pulcher	Rumex pulcher L.			FIDDLE DOCK	TJM1	EUDICOTS	0
@@ -6619,7 +6613,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	RANUNCULACEAE	Ranunculus	sceleratus	L.	var.	multifidus	Nutt.	Ranunculus sceleratus var. multifidus	Ranunculus sceleratus L. var. multifidus Nutt.				TJM2	EUDICOTS	0
 0	NATURALIZED	RANUNCULACEAE	Ranunculus	sceleratus	L.	var.	sceleratus		Ranunculus sceleratus var. sceleratus	Ranunculus sceleratus L. var. sceleratus				TJM2	EUDICOTS	0
 0	NATURALIZED	RANUNCULACEAE	Ranunculus	testiculatus	Crantz				Ranunculus testiculatus	Ranunculus testiculatus Crantz		syn: Ceratocephala testiculata (Crantz) Besser; syn: Ceratocephalus testiculatus (Crantz) Besser, orth. var.		TJM1	EUDICOTS	0
-0		RANUNCULACEAE	Ranunculus	trilobus	Desf.				Ranunculus trilobus	Ranunculus trilobus Desf.				TJM2	EUDICOTS	0
+0	EXTIRPATED WAIF	RANUNCULACEAE	Ranunculus	trilobus	Desf.				Ranunculus trilobus	Ranunculus trilobus Desf.				TJM2	EUDICOTS	0
 0	NATIVE	RANUNCULACEAE	Ranunculus	uncinatus	D. Don				Ranunculus uncinatus	Ranunculus uncinatus D. Don		syn: Ranunculus bongardii Greene; syn: Ranunculus uncinatus var. parviflorus (Torr.) L.D. Benson		TJM1	EUDICOTS	0
 0	NATIVE	RANUNCULACEAE	Thalictrum	alpinum	L.				Thalictrum alpinum	Thalictrum alpinum L.			ARCTIC MEADOW-RUE	TJM1	EUDICOTS	0
 0	NATIVE	RANUNCULACEAE	Thalictrum	fendleri	Engelm. ex A. Gray				Thalictrum fendleri	Thalictrum fendleri Engelm. ex A. Gray				TJM1	EUDICOTS	0
@@ -6654,6 +6648,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	RHAMNACEAE	Ceanothus	foliosus	Parry				Ceanothus foliosus	Ceanothus foliosus Parry				TJM1	EUDICOTS	0
 0	NATIVE	RHAMNACEAE	Ceanothus	foliosus	Parry	var.	foliosus		Ceanothus foliosus var. foliosus	Ceanothus foliosus Parry var. foliosus			WAVYLEAF CEANOTHUS	TJM1	EUDICOTS	1
 0	NATIVE	RHAMNACEAE	Ceanothus	foliosus	Parry	var.	medius	McMinn	Ceanothus foliosus var. medius	Ceanothus foliosus Parry var. medius McMinn			LA CUESTA CEANOTHUS	TJM1	EUDICOTS	1
+0	NATIVE	RHAMNACEAE	Ceanothus	foliosus	Parry	var.	viejasensis	D.O. Burge & Rebman	Ceanothus foliosus var. viejasensis	Ceanothus foliosus Parry var. viejasensis D.O. Burge & Rebman			VIEJAS MOUNTAIN CEANOTHUS	TJM2	EUDICOTS	1
 0	NATIVE	RHAMNACEAE	Ceanothus	foliosus	Parry	var.	vineatus	McMinn	Ceanothus foliosus var. vineatus	Ceanothus foliosus Parry var. vineatus McMinn			VINE HILL CEANOTHUS	TJM1	EUDICOTS	1
 0	NATIVE	RHAMNACEAE	Ceanothus	fresnensis	Abrams				Ceanothus fresnensis	Ceanothus fresnensis Abrams	Ceanothus fresnensis Dudley ex Abrams		FRESNO CEANOTHUS	TJM1	EUDICOTS	1
 0	NATIVE	RHAMNACEAE	Ceanothus	gloriosus	J.T. Howell				Ceanothus gloriosus	Ceanothus gloriosus J.T. Howell				TJM1	EUDICOTS	0
@@ -6687,6 +6682,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	RHAMNACEAE	Ceanothus	parryi	Trel.				Ceanothus parryi	Ceanothus parryi Trel.				TJM1	EUDICOTS	0
 0	NATIVE	RHAMNACEAE	Ceanothus	parvifolius	(S. Watson) Trel.				Ceanothus parvifolius	Ceanothus parvifolius (S. Watson) Trel.				TJM1	EUDICOTS	1
 0	NATIVE	RHAMNACEAE	Ceanothus	pauciflorus	DC.				Ceanothus pauciflorus	Ceanothus pauciflorus DC.		syn: Ceanothus greggii A. Gray var. vestitus (Greene) McMinn; syn: Ceanothus vestitus Greene	MOJAVE CEANOTHUS	TJM2	EUDICOTS	0
+0	NATIVE	RHAMNACEAE	Ceanothus	pendletonensis	D.O. Burge, Rebman & M.R. Mulligan				Ceanothus pendletonensis	Ceanothus pendletonensis D.O. Burge, Rebman & M.R. Mulligan			CAMP PENDLETON CEANOTHUS	TJM2	EUDICOTS	1
 0	NATIVE	RHAMNACEAE	Ceanothus	perplexans	Trel.				Ceanothus perplexans	Ceanothus perplexans Trel.		syn: Ceanothus greggii A. Gray var. perplexans (Trel.) Jeps.		TJM2	EUDICOTS	0
 0	NATIVE	RHAMNACEAE	Ceanothus	pinetorum	Coville				Ceanothus pinetorum	Ceanothus pinetorum Coville			KERN CEANOTHUS	TJM1	EUDICOTS	1
 0	NATIVE	RHAMNACEAE	Ceanothus	prostratus	Benth.				Ceanothus prostratus	Ceanothus prostratus Benth.				TJM1	EUDICOTS	0
@@ -6701,6 +6697,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	RHAMNACEAE	Ceanothus	spinosus	Nutt.				Ceanothus spinosus	Ceanothus spinosus Nutt.			GREENBARK CEANOTHUS	TJM1	EUDICOTS	0
 0	NATIVE	RHAMNACEAE	Ceanothus	thyrsiflorus	Eschsch.				Ceanothus thyrsiflorus	Ceanothus thyrsiflorus Eschsch.				TJM1	EUDICOTS	0
 0	NATIVE	RHAMNACEAE	Ceanothus	thyrsiflorus	Eschsch.	var.	griseus	Trel.	Ceanothus thyrsiflorus var. griseus	Ceanothus thyrsiflorus Eschsch. var. griseus Trel.		syn: Ceanothus griseus (Trel.) McMinn	CARMEL CEANOTHUS	TJM2	EUDICOTS	1
+0	NATIVE	RHAMNACEAE	Ceanothus	thyrsiflorus	Eschsch.	var.	obispoensis	D.O. Burge	Ceanothus thyrsiflorus var. obispoensis	Ceanothus thyrsiflorus Eschsch. var. obispoensis D.O. Burge			HOLLISTER PEAK CEANOTHUS	TJM2	EUDICOTS	1
 0	NATIVE	RHAMNACEAE	Ceanothus	thyrsiflorus	Eschsch.	var.	thyrsiflorus		Ceanothus thyrsiflorus var. thyrsiflorus	Ceanothus thyrsiflorus Eschsch. var. thyrsiflorus		syn: Ceanothus thyrsiflorus var. chandleri Jeps.; syn: Ceanothus thyrsiflorus var. repens McMinn	BLUE BLOSSOM	TJM2	EUDICOTS	0
 0	NATIVE	RHAMNACEAE	Ceanothus	tomentosus	Parry				Ceanothus tomentosus	Ceanothus tomentosus Parry		syn: Ceanothus tomentosus var. olivaceus Jeps.; syn: Ceanothus tomentosus var. tomentosus		TJM1	EUDICOTS	0
 0	NATIVE	RHAMNACEAE	Ceanothus	velutinus	Douglas				Ceanothus velutinus	Ceanothus velutinus Douglas		syn: Ceanothus velutinus var. hookeri M.C. Johnst., superfl.; syn: Ceanothus velutinus var. laevigatus Torr. & A. Gray; syn: Ceanothus velutinus var. velutinus		TJM1	EUDICOTS	0
@@ -6793,7 +6790,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	ROSACEAE	Drymocallis	pseudorupestris	(Rydb.) Rydb.	var.	saxicola	Ertter	Drymocallis pseudorupestris var. saxicola	Drymocallis pseudorupestris (Rydb.) Rydb. var. saxicola Ertter			CLIFF WOODBEAUTY	TJM2	EUDICOTS	0
 0	NATIVE	ROSACEAE	Drymocallis	rhomboidea	(Rydb.) Rydb.				Drymocallis rhomboidea	Drymocallis rhomboidea (Rydb.) Rydb.		syn: Potentilla glandulosa Lindl. subsp. globosa D.D. Keck; syn: Potentilla rhomboidea Rydb.		TJM2	EUDICOTS	0
 0	NATURALIZED	ROSACEAE	Duchesnea	indica	(Andrews) Focke	var.	indica		Duchesnea indica var. indica	Duchesnea indica (Andrews) Focke var. indica			MOCK-STRAWBERRY	TJM2	EUDICOTS	0
-0		ROSACEAE	Eriobotrya	japonica	(Thunb.) Lindl.				Eriobotrya japonica	Eriobotrya japonica (Thunb.) Lindl.				TJM2	EUDICOTS	0
+0	AGRICULTURAL, GARDEN, OR URBAN WEED	ROSACEAE	Eriobotrya	japonica	(Thunb.) Lindl.				Eriobotrya japonica	Eriobotrya japonica (Thunb.) Lindl.				TJM2	EUDICOTS	0
 0	NATIVE	ROSACEAE	Fallugia	paradoxa	(D. Don) Endl. ex Torr.				Fallugia paradoxa	Fallugia paradoxa (D. Don) Endl. ex Torr.				TJM1	EUDICOTS	0
 0	NATIVE	ROSACEAE	Fragaria	chiloensis	(L.) Mill.				Fragaria chiloensis	Fragaria chiloensis (L.) Mill.		syn: Fragaria chiloensis subsp. lucida (E. Vilm. ex J. Gay) Staudt; syn: Fragaria chiloensis subsp. pacifica Staudt	BEACH STRAWBERRY	TJM1	EUDICOTS	0
 0	NATIVE	ROSACEAE	Fragaria	vesca	L.				Fragaria vesca	Fragaria vesca L.		syn: Fragaria crinita Rydb.; syn: Fragaria vesca subsp. bracteata (A. Heller) Staudt; syn: Fragaria vesca subsp. californica (Cham. & Schltdl.) Staudt.	WOOD STRAWBERRY	TJM1	EUDICOTS	0
@@ -7279,7 +7276,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	SOLANACEAE	Solanum	americanum	Mill.				Solanum americanum	Solanum americanum Mill.		syn: Solanum nodiflorum Jacq.		TJM1	EUDICOTS	0
 0	NATURALIZED	SOLANACEAE	Solanum	aviculare	G. Forst.				Solanum aviculare	Solanum aviculare G. Forst.				TJM1	EUDICOTS	0
 0	NATURALIZED	SOLANACEAE	Solanum	carolinense	L.				Solanum carolinense	Solanum carolinense L.			CAROLINA HORSE-NETTLE	TJM1	EUDICOTS	0
-0		SOLANACEAE	Solanum	dimidiatum	Raf.				Solanum dimidiatum	Solanum dimidiatum Raf.				TJM1	EUDICOTS	0
+0	URBAN WEED	SOLANACEAE	Solanum	dimidiatum	Raf.				Solanum dimidiatum	Solanum dimidiatum Raf.		syn: Solanum torreyi A. Gray	TORREY'S NIGHTSHADE	TJM1	EUDICOTS	0
 0	NATIVE	SOLANACEAE	Solanum	douglasii	Dunal				Solanum douglasii	Solanum douglasii Dunal				TJM1	EUDICOTS	0
 0	NATURALIZED	SOLANACEAE	Solanum	dulcamara	L.				Solanum dulcamara	Solanum dulcamara L.				TJM1	EUDICOTS	0
 0	NATURALIZED	SOLANACEAE	Solanum	elaeagnifolium	Cav.				Solanum elaeagnifolium	Solanum elaeagnifolium Cav.			WHITE HORSE-NETTLE	TJM1	EUDICOTS	0
@@ -7423,20 +7420,20 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	AGAVACEAE	Agave	utahensis	Engelm.	var.	nevadensis	Engelm. ex Greenm. & Roush	Agave utahensis var. nevadensis	Agave utahensis Engelm. var. nevadensis Engelm. ex Greenm. & Roush		syn: Agave nevadensis (Engelm. ex Greenm. & Roush) Hester	CLARK MOUNTAIN AGAVE	TJM2	MONOCOTS	0
 0	NATIVE	AGAVACEAE	Camassia	leichtlinii	(Baker) S. Watson	subsp.	suksdorfii	(Greenm.) Gould	Camassia leichtlinii subsp. suksdorfii	Camassia leichtlinii (Baker) S. Watson subsp. suksdorfii (Greenm.) Gould		syn: Camassia quamash subsp. quamash, misappl.		TJM2	MONOCOTS	0
 0	NATIVE	AGAVACEAE	Camassia	quamash	(Pursh) Greene	subsp.	breviflora	Gould	Camassia quamash subsp. breviflora	Camassia quamash (Pursh) Greene subsp. breviflora Gould		syn: Camassia quamash (Pursh) Greene subsp. linearis Gould		TJM1	MONOCOTS	0
-0	NATIVE	AGAVACEAE	Chlorogalum	angustifolium	Kellogg				Chlorogalum angustifolium	Chlorogalum angustifolium Kellogg				TJM1	MONOCOTS	0
+0	NATIVE	AGAVACEAE	Chlorogalum	angustifolium	Kellogg				Chlorogalum angustifolium	Chlorogalum angustifolium Kellogg			NARROW-LEAVED SOAP PLANT	TJM1	MONOCOTS	0
 0	NATIVE	AGAVACEAE	Chlorogalum	grandiflorum	Hoover				Chlorogalum grandiflorum	Chlorogalum grandiflorum Hoover			RED HILLS SOAPROOT	TJM1	MONOCOTS	1
-0	NATIVE	AGAVACEAE	Chlorogalum	parviflorum	S. Watson				Chlorogalum parviflorum	Chlorogalum parviflorum S. Watson				TJM1	MONOCOTS	0
 0	NATIVE	AGAVACEAE	Chlorogalum	pomeridianum	(DC.) Kunth				Chlorogalum pomeridianum	Chlorogalum pomeridianum (DC.) Kunth				TJM1	MONOCOTS	0
-0	NATIVE	AGAVACEAE	Chlorogalum	pomeridianum	(DC.) Kunth	var.	divaricatum	(Lindl.) Hoover	Chlorogalum pomeridianum var. divaricatum	Chlorogalum pomeridianum (DC.) Kunth var. divaricatum (Lindl.) Hoover				TJM1	MONOCOTS	1
+0	NATIVE	AGAVACEAE	Chlorogalum	pomeridianum	(DC.) Kunth	var.	divaricatum	(Lindl.) Hoover	Chlorogalum pomeridianum var. divaricatum	Chlorogalum pomeridianum (DC.) Kunth var. divaricatum (Lindl.) Hoover			COASTAL SOAP PLANT	TJM1	MONOCOTS	1
 0	NATIVE	AGAVACEAE	Chlorogalum	pomeridianum	(DC.) Kunth	var.	minus	Hoover	Chlorogalum pomeridianum var. minus	Chlorogalum pomeridianum (DC.) Kunth var. minus Hoover			DWARF SOAPROOT	TJM1	MONOCOTS	1
-0	NATIVE	AGAVACEAE	Chlorogalum	pomeridianum	(DC.) Kunth	var.	pomeridianum		Chlorogalum pomeridianum var. pomeridianum	Chlorogalum pomeridianum (DC.) Kunth var. pomeridianum				TJM1	MONOCOTS	0
-0	NATIVE	AGAVACEAE	Chlorogalum	purpureum	Brandegee				Chlorogalum purpureum	Chlorogalum purpureum Brandegee				TJM1	MONOCOTS	0
-0	NATIVE	AGAVACEAE	Chlorogalum	purpureum	Brandegee	var.	purpureum		Chlorogalum purpureum var. purpureum	Chlorogalum purpureum Brandegee var. purpureum			SANTA LUCIA PURPLE AMOLE	TJM1	MONOCOTS	1
-0	NATIVE	AGAVACEAE	Chlorogalum	purpureum	Brandegee	var.	reductum	Hoover	Chlorogalum purpureum var. reductum	Chlorogalum purpureum Brandegee var. reductum Hoover			CAMATTA CANYON AMOLE	TJM1	MONOCOTS	1
+0	NATIVE	AGAVACEAE	Chlorogalum	pomeridianum	(DC.) Kunth	var.	pomeridianum		Chlorogalum pomeridianum var. pomeridianum	Chlorogalum pomeridianum (DC.) Kunth var. pomeridianum			COMMON SOAP PLANT	TJM1	MONOCOTS	0
 0	NATIVE	AGAVACEAE	Hastingsia	alba	(Durand) S. Watson				Hastingsia alba	Hastingsia alba (Durand) S. Watson		syn: Schoenolirion album Durand		TJM1	MONOCOTS	0
 0	NATIVE	AGAVACEAE	Hastingsia	serpentinicola	Becking				Hastingsia serpentinicola	Hastingsia serpentinicola Becking				TJM1	MONOCOTS	0
 0	NATIVE	AGAVACEAE	Hesperocallis	undulata	A. Gray				Hesperocallis undulata	Hesperocallis undulata A. Gray				TJM1	MONOCOTS	0
 0	NATIVE	AGAVACEAE	Hesperoyucca	whipplei	(Torr.) Trel.				Hesperoyucca whipplei	Hesperoyucca whipplei (Torr.) Trel.		syn: Yucca whipplei Torr.; syn: Hesperoyucca whipplei var. graminifolia Trel.; syn: Yucca californica Groenl.; syn: Yucca graminifolia Alph. Wood, illeg.; syn: Yucca nitida S. Watson; syn: Yucca ortgiesiana Roezl ex Ortgies; syn: Yucca whipplei subsp. caespitosa (M.E. Jones) A.L. Haines; syn: Yucca whipplei var. caespitosa M.E. Jones; syn: Yucca whipplei subsp. intermedia A.L. Haines; syn: Yucca whipplei var. intermedia (A.L. Haines) J.M. Webber; syn: Yucca whipplei subsp. parishii (M.E. Jones) A.L. Haines; syn: Yucca whipplei var. parishii M.E. Jones; syn: Yucca whipplei subsp. percursa A.L. Haines; syn: Yucca whipplei var. percursa (A.L. Haines) J.M. Webber		TJM2	MONOCOTS	0
+0	NATIVE	AGAVACEAE	Hooveria	parviflora	(S. Watson) D.W. Taylor & D.J. Keil				Hooveria parviflora	Hooveria parviflora (S. Watson) D.W. Taylor & D.J. Keil		syn: Chlorogalum parviflorum S. Watson		TJM2	MONOCOTS	0
+0	NATIVE	AGAVACEAE	Hooveria	purpurea	(Brandegee) D.W. Taylor & D.J. Keil				Hooveria purpurea	Hooveria purpurea (Brandegee) D.W. Taylor & D.J. Keil		syn: Chlorogalum purpureum Brandegee		TJM2	MONOCOTS	0
+0	NATIVE	AGAVACEAE	Hooveria	purpurea	(Brandegee) D.W. Taylor & D.J. Keil	var.	purpurea		Hooveria purpurea var. purpurea	Hooveria purpurea (Brandegee) D.W. Taylor & D.J. Keil var. purpurea		syn: Chlorogalum purpureum Brandegee var. purpureum	SANTA LUCIA PURPLE AMOLE	TJM2	MONOCOTS	1
+0	NATIVE	AGAVACEAE	Hooveria	purpurea	(Brandegee) D.W. Taylor & D.J. Keil	var.	reducta	(Hoover) D.W. Taylor & D.J. Keil	Hooveria purpurea var. reducta	Hooveria purpurea (Brandegee) D.W. Taylor & D.J. Keil var. reducta (Hoover) D.W. Taylor & D.J. Keil		syn: Chlorogalum purpureum Brandegee var. reductum Hoover	CAMATTA CANYON AMOLE	TJM2	MONOCOTS	1
 0	NATIVE	AGAVACEAE	Leucocrinum	montanum	Nutt. ex A. Gray.				Leucocrinum montanum	Leucocrinum montanum Nutt. ex A. Gray.				TJM1	MONOCOTS	0
 0	NATIVE	AGAVACEAE	Yucca	baccata	Torr.	var.	baccata		Yucca baccata var. baccata	Yucca baccata Torr. var. baccata			BANANA YUCCA, BLUE YUCCA	TJM2	MONOCOTS	0
 0	NATIVE	AGAVACEAE	Yucca	brevifolia	Engelm.				Yucca brevifolia	Yucca brevifolia Engelm.		syn: Yucca brevifolia var. herbertii (J.M. Webber) Munz; syn: Yucca brevifolia var. jaegeriana McKelvey; syn: Yucca jaegeriana (McKelvey) L.W. Lenz	JOSHUA TREE	TJM1	MONOCOTS	0
@@ -7650,7 +7647,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	CYPERACEAE	Carex	klamathensis	B.L. Wilson & Janeway				Carex klamathensis	Carex klamathensis B.L. Wilson & Janeway			KLAMATH SEDGE	TJM2	MONOCOTS	0
 0	NATIVE	CYPERACEAE	Carex	laeviculmis	Meinsh.				Carex laeviculmis	Carex laeviculmis Meinsh.		syn: Carex brunnescens (Pers.) Poir. misappl.	SMOOTH-STEMMED SEDGE	TJM1	MONOCOTS	0
 0	NATIVE	CYPERACEAE	Carex	lasiocarpa	Ehrh.				Carex lasiocarpa	Carex lasiocarpa Ehrh.			WOOLLY-FRUITED SEDGE	TJM1	MONOCOTS	1
-0		CYPERACEAE	Carex	leavenworthii	Dewey				Carex leavenworthii	Carex leavenworthii Dewey				TJM1	MONOCOTS	1
+0	URBAN WEED	CYPERACEAE	Carex	leavenworthii	Dewey				Carex leavenworthii	Carex leavenworthii Dewey			LEAVENWORTH SEDGE	TJM1	MONOCOTS	0
 0	NATIVE	CYPERACEAE	Carex	lemmonii	W. Boott				Carex lemmonii	Carex lemmonii W. Boott		syn: Carex albida L.H. Bailey; syn: Carex sonomensis Stacey	LEMMON'S SEDGE	TJM1	MONOCOTS	1
 0	NATIVE	CYPERACEAE	Carex	lenticularis	Michx.				Carex lenticularis	Carex lenticularis Michx.				TJM1	MONOCOTS	0
 0	NATIVE	CYPERACEAE	Carex	lenticularis	Michx.	var.	impressa	(L.H. Bailey) L.A. Standl.	Carex lenticularis var. impressa	Carex lenticularis Michx. var. impressa (L.H. Bailey) L.A. Standl.		syn: Carex paucicostata Mack.	TARN SEDGE	TJM1	MONOCOTS	0
@@ -7782,7 +7779,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	CYPERACEAE	Eleocharis	radicans	(Poir.) Kunth				Eleocharis radicans	Eleocharis radicans (Poir.) Kunth		syn: Scirpus radicans Poir.; syn: Eleocharis acicularis (L.) Roem. & Schult. var. radicans (Poir.) Britton; syn: Eleocharis lindheimeri Svenson.		TJM1	MONOCOTS	0
 0	NATIVE	CYPERACEAE	Eleocharis	rostellata	(Torr.) Torr.				Eleocharis rostellata	Eleocharis rostellata (Torr.) Torr.		syn: Scirpus rostellatus Torr.		TJM1	MONOCOTS	0
 0	NATIVE	CYPERACEAE	Eleocharis	suksdorfiana	Beauverd				Eleocharis suksdorfiana	Eleocharis suksdorfiana Beauverd		syn: Eleocharis pauciflora (Lightf.) Link var. suksdorfiana (Beauverd) Svenson; syn: Eleocharis quinqueflora (Hartmann) O. Schwarz var. suksdorfiana (Beauverd) J.T. Howell		TJM2	MONOCOTS	0
-0		CYPERACEAE	Eleocharis	tenuis	(Willd.) Schult.	var.	tenuis		Eleocharis tenuis var. tenuis	Eleocharis tenuis (Willd.) Schult. var. tenuis				TJM2	MONOCOTS	0
+0	HISTORICAL WAIF	CYPERACEAE	Eleocharis	tenuis	(Willd.) Schult.	var.	tenuis		Eleocharis tenuis var. tenuis	Eleocharis tenuis (Willd.) Schult. var. tenuis		syn: Scirpus tenuis Willd.		TJM2	MONOCOTS	0
 0	NATIVE	CYPERACEAE	Eleocharis	torticulmis	S.G. Sm.				Eleocharis torticulmis	Eleocharis torticulmis S.G. Sm.			CALIFORNIA TWISTED SPIKERUSH	TJM2	MONOCOTS	1
 0	NATIVE	CYPERACEAE	Eriophorum	gracile	W.D.J. Koch ex Roth				Eriophorum gracile	Eriophorum gracile W.D.J. Koch ex Roth			SLENDER COTTONGRASS	TJM1	MONOCOTS	0
 0	NATURALIZED	CYPERACEAE	Fimbristylis	autumnalis	(L.) Roem. & Schult.				Fimbristylis autumnalis	Fimbristylis autumnalis (L.) Roem. & Schult.		syn: Scirpus autumnalis L.		TJM2	MONOCOTS	0
@@ -7810,7 +7807,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	CYPERACEAE	Schoenoplectus	saximontanus	(Fernald) J. Raynal				Schoenoplectus saximontanus	Schoenoplectus saximontanus (Fernald) J. Raynal		syn: Scirpus saximontanus Fernald	ROCKY MOUNTAIN BULRUSH	TJM2	MONOCOTS	0
 0	NATIVE	CYPERACEAE	Schoenoplectus	subterminalis	(Torr.) Soj&aacute;k				Schoenoplectus subterminalis	Schoenoplectus subterminalis (Torr.) Soj&aacute;k		syn: Scirpus subterminalis Torr.	WATER BULRUSH	TJM2	MONOCOTS	0
 0	NATIVE	CYPERACEAE	Schoenoplectus	tabernaemontani	(C.C. Gmel.) Palla				Schoenoplectus tabernaemontani	Schoenoplectus tabernaemontani (C.C. Gmel.) Palla		syn: Scirpus tabernaemontani C.C. Gmel.	SOFT-STEM BULRUSH	TJM2	MONOCOTS	0
-0		CYPERACEAE	Schoenoplectus	triqueter	(L.) Palla				Schoenoplectus triqueter	Schoenoplectus triqueter (L.) Palla				TJM2	MONOCOTS	0
+0	HISTORICAL WAIF	CYPERACEAE	Schoenoplectus	triqueter	(L.) Palla				Schoenoplectus triqueter	Schoenoplectus triqueter (L.) Palla		syn: Scirpus triqueter L.	THREE-SIDED BULRUSH	TJM2	MONOCOTS	0
 0	NATIVE	CYPERACEAE	Schoenus	nigricans	L.				Schoenus nigricans	Schoenus nigricans L.			BLACK BOG-RUSH	TJM1	MONOCOTS	0
 0	NATIVE	CYPERACEAE	Scirpus	congdonii	Britton				Scirpus congdonii	Scirpus congdonii Britton				TJM1	MONOCOTS	0
 0	NATURALIZED	CYPERACEAE	Scirpus	cyperinus	(L.) Kunth				Scirpus cyperinus	Scirpus cyperinus (L.) Kunth				TJM2	MONOCOTS	0
@@ -7827,10 +7824,10 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATURALIZED	HYDROCHARITACEAE	Limnobium	spongia	(Bosc) Rich. ex Steud.				Limnobium spongia	Limnobium spongia (Bosc) Rich. ex Steud.		syn: Hydrocharis spongia Bosc; syn: Limnobium laevigatum (Willd.) Heine, misappl.	AMERICAN FROGBIT	TJM2	MONOCOTS	0
 0	NATIVE	HYDROCHARITACEAE	Najas	flexilis	(Willd.) Rostk. & W.L.E. Schmidt				Najas flexilis	Najas flexilis (Willd.) Rostk. & W.L.E. Schmidt			SLENDER WATER-NYMPH	TJM1	MONOCOTS	0
 0	NATURALIZED	HYDROCHARITACEAE	Najas	gracillima	(Engelm.) Magnus				Najas gracillima	Najas gracillima (Engelm.) Magnus			THREAD-LEAVED WATER-NYMPH	TJM1	MONOCOTS	0
-0		HYDROCHARITACEAE	Najas	graminea	Delile				Najas graminea	Najas graminea Delile				TJM1	MONOCOTS	0
+0	AGRICULTURAL WEED	HYDROCHARITACEAE	Najas	graminea	Delile				Najas graminea	Najas graminea Delile			RICE-FIELD WATER-NYMPH	TJM1	MONOCOTS	0
 0	NATIVE	HYDROCHARITACEAE	Najas	guadalupensis	(Spreng.) Magnus	subsp.	guadalupensis		Najas guadalupensis subsp. guadalupensis	Najas guadalupensis (Spreng.) Magnus subsp. guadalupensis			COMMON WATER-NYMPH	TJM2	MONOCOTS	0
 0	NATIVE	HYDROCHARITACEAE	Najas	marina	L.				Najas marina	Najas marina L.			HOLLY-LEAVED WATER-NYMPH	TJM1	MONOCOTS	0
-0		HYDROCHARITACEAE	Ottelia	alismoides	(L.) Pers.				Ottelia alismoides	Ottelia alismoides (L.) Pers.				TJM1	MONOCOTS	0
+0	EXTIRPATED ALIEN	HYDROCHARITACEAE	Ottelia	alismoides	(L.) Pers.				Ottelia alismoides	Ottelia alismoides (L.) Pers.				TJM1	MONOCOTS	0
 0	NATURALIZED	IRIDACEAE	Chasmanthe	floribunda	(Salisb.) N.E. Br.				Chasmanthe floribunda	Chasmanthe floribunda (Salisb.) N.E. Br.				TJM1	MONOCOTS	0
 0	NATURALIZED	IRIDACEAE	Crocosmia	&times;crocosmiiflora	(Lemoine) N.E. Br.				Crocosmia &times;crocosmiiflora	Crocosmia &times;crocosmiiflora (Lemoine) N.E. Br.				TJM2	MONOCOTS	0
 0	WAIF	IRIDACEAE	Freesia	leichtlinii	Klatt	subsp.	alba	(G.L. Mey.) J.C. Manning & Goldblatt	Freesia leichtlinii subsp. alba	Freesia leichtlinii Klatt subsp. alba (G.L. Mey.) J.C. Manning & Goldblatt		syn: Freesia alba (G.L. Mey.) Gumbl.		TJM2	MONOCOTS	0
@@ -8268,8 +8265,8 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	POACEAE	Bromus	richardsonii	Link				Bromus richardsonii	Bromus richardsonii Link		syn: Bromus ciliatus L. var. richardsonii (Link) Boivin	RICHARDSON'S BROME	TJM2	MONOCOTS	0
 0	NATURALIZED	POACEAE	Bromus	rubens	L.				Bromus rubens	Bromus rubens L.		syn: Bromus madritensis L. subsp. rubens (L.) Husn.	RED BROME	TJM2	MONOCOTS	0
 0	NATURALIZED	POACEAE	Bromus	secalinus	L.				Bromus secalinus	Bromus secalinus L.			RYE BROME	TJM1	MONOCOTS	0
-0		POACEAE	Bromus	sitchensis	Trin.				Bromus sitchensis	Bromus sitchensis Trin.				TJM2	MONOCOTS	0
-0		POACEAE	Bromus	sitchensis	Trin.	var.	carinatus	(Hook. & Arn.) R.E. Brainerd & Otting	Bromus sitchensis var. carinatus	Bromus sitchensis Trin. var. carinatus (Hook. & Arn.) R.E. Brainerd & Otting				TJM2	MONOCOTS	0
+0	NATIVE	POACEAE	Bromus	sitchensis	Trin.				Bromus sitchensis	Bromus sitchensis Trin.				TJM2	MONOCOTS	0
+0	NATIVE	POACEAE	Bromus	sitchensis	Trin.	var.	carinatus	(Hook. & Arn.) R.E. Brainerd & Otting	Bromus sitchensis var. carinatus	Bromus sitchensis Trin. var. carinatus (Hook. & Arn.) R.E. Brainerd & Otting		syn: Bromus carinatus Hook. & Arn.	CALIFORNIA BROME	TJM2	MONOCOTS	0
 0	NATIVE	POACEAE	Bromus	sitchensis	Trin.	var.	marginatus	(Nees) B. Boivin	Bromus sitchensis var. marginatus	Bromus sitchensis Trin. var. marginatus (Nees) B. Boivin		syn: Bromus breviaristatus Buckley; syn: Bromus carinatus Hook. & Arn. var. marginatus (Nees) Barkworth & Anderton; syn: Bromus luzonensis J. Presl; syn: Bromus marginatus Nees; syn: Bromus subvelutinus Shear	MOUNTAIN BROME	TJM2	MONOCOTS	0
 0	NATIVE	POACEAE	Bromus	sitchensis	Trin.	var.	maritimus	(Piper) Otting & R.E. Brainerd	Bromus sitchensis var. maritimus	Bromus sitchensis Trin. var. maritimus (Piper) Otting & R.E. Brainerd		syn: Bromus carinatus Hook. & Arn. var. maritimus (Piper) C.L. Hitchc.; syn: Bromus maritimus (Piper) Hitchc.; syn: Bromus marginatus subsp. maritimus Piper	MARITIME BROME	TJM2	MONOCOTS	0
 0	NATIVE	POACEAE	Bromus	sitchensis	Trin.	var.	polyanthus	(Scribn. ex Shear) R.E. Brainerd & Otting	Bromus sitchensis var. polyanthus	Bromus sitchensis Trin. var. polyanthus (Scribn. ex Shear) R.E. Brainerd & Otting		syn: Bromus polyanthus Scribn. ex Shear, Bromus polyanthus Scribn. ex Shear var. paniculatus Shear	GREAT BASIN BROME, COLORADO BROME	TJM2	MONOCOTS	0
@@ -8295,8 +8292,8 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	POACEAE	Calamagrostis	stricta	(Timm) Koeler	subsp.	inexpansa	(A. Gray) C.W. Greene	Calamagrostis stricta subsp. inexpansa	Calamagrostis stricta (Timm) Koeler subsp. inexpansa (A. Gray) C.W. Greene		syn: Calamagrostis crassiglumis Thurb.; syn: Calamagrostis inexpansa A. Gray		TJM1	MONOCOTS	0
 0	NATIVE	POACEAE	Calamagrostis	stricta	(Timm) Koeler	subsp.	stricta		Calamagrostis stricta subsp. stricta	Calamagrostis stricta (Timm) Koeler subsp. stricta				TJM1	MONOCOTS	0
 0	NATURALIZED	POACEAE	Cenchrus	echinatus	L.				Cenchrus echinatus	Cenchrus echinatus L.			SOUTHERN SANDBUR	TJM1	MONOCOTS	0
-0	NATURALIZED	POACEAE	Cenchrus	incertus	M.A. Curtis				Cenchrus incertus	Cenchrus incertus M.A. Curtis		syn: Cenchrus pauciflorus Benth.; syn: Cenchrus spinifex Cav.	COASTAL SANDBUR, COMMON SANDBUR	TJM1	MONOCOTS	0
 0	NATURALIZED	POACEAE	Cenchrus	longispinus	(Hack.) Fernald				Cenchrus longispinus	Cenchrus longispinus (Hack.) Fernald			MAT SANDBUR	TJM1	MONOCOTS	0
+0	NATURALIZED	POACEAE	Cenchrus	spinifex	Cav.				Cenchrus spinifex	Cenchrus spinifex Cav.		syn: Cenchrus pauciflorus Benth.; syn: Cenchrus spinifex Cav.	COASTAL SANDBUR, COMMON SANDBUR	TJM2	MONOCOTS	0
 0	NATURALIZED	POACEAE	Chloris	gayana	Kunth				Chloris gayana	Chloris gayana Kunth			RHODES GRASS	TJM1	MONOCOTS	0
 0	NATURALIZED	POACEAE	Chloris	truncata	R. Br.				Chloris truncata	Chloris truncata R. Br.			BLACK WINDMILL GRASS	TJM1	MONOCOTS	0
 0	NATURALIZED	POACEAE	Chloris	verticillata	Nutt.				Chloris verticillata	Chloris verticillata Nutt.			WINDMILL GRASS	TJM1	MONOCOTS	0
@@ -8334,10 +8331,10 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	POACEAE	Distichlis	spicata	(L.) Greene				Distichlis spicata	Distichlis spicata (L.) Greene		syn: Distichlis spicata var. divaricata Beetle; syn: Distichlis spicata var. nana Beetle; syn: Distichlis spicata var. stolonifera Beetle; syn: Distichlis spicata var. stricta (Torr.) Scribn.	SALT GRASS	TJM1	MONOCOTS	0
 0	NATURALIZED	POACEAE	Echinochloa	colona	(L.) Link				Echinochloa colona	Echinochloa colona (L.) Link		syn: Echinochloa colonum, orth. var.		TJM1	MONOCOTS	0
 0	NATURALIZED	POACEAE	Echinochloa	crus-galli	(L.) P. Beauv.				Echinochloa crus-galli	Echinochloa crus-galli (L.) P. Beauv.		syn: Echinochloa crus-galli subsp. spiralis (Vasinger) Tzvelev; syn: Echinochloa crus-galli var. zelayensis (Kunth) Hitchc.		TJM1	MONOCOTS	0
-0	NATURALIZED	POACEAE	Echinochloa	crus-pavonis	(Kunth) Schult.HABIT+:	var.	crus-pavonis		Echinochloa crus-pavonis var. crus-pavonis	Echinochloa crus-pavonis (Kunth) Schult.HABIT+: var. crus-pavonis				TJM2	MONOCOTS	0
+0	NATURALIZED	POACEAE	Echinochloa	crus-pavonis	(Kunth) Schult.	var.	crus-pavonis		Echinochloa crus-pavonis var. crus-pavonis	Echinochloa crus-pavonis (Kunth) Schult. var. crus-pavonis				TJM2	MONOCOTS	0
 0	WAIF	POACEAE	Echinochloa	esculenta	(A. Braun) H. Scholz				Echinochloa esculenta	Echinochloa esculenta (A. Braun) H. Scholz		syn: Echinochloa frumentacea Link, possibly misappl.		TJM2	MONOCOTS	0
 0	NATIVE	POACEAE	Echinochloa	muricata	(P. Beauv.) Fernald	var.	microstachya	Wiegand	Echinochloa muricata var. microstachya	Echinochloa muricata (P. Beauv.) Fernald var. microstachya Wiegand				TJM2	MONOCOTS	0
-0		POACEAE	Echinochloa	oryzicola	(Vasinger) Vasinger				Echinochloa oryzicola	Echinochloa oryzicola (Vasinger) Vasinger				TJM2	MONOCOTS	0
+0	AGRICULTURAL WEED	POACEAE	Echinochloa	oryzicola	(Vasinger) Vasinger				Echinochloa oryzicola	Echinochloa oryzicola (Vasinger) Vasinger		syn: Echinochloa phyllopogon auct. non Stapf		TJM2	MONOCOTS	0
 0	NATURALIZED	POACEAE	Echinochloa	oryzoides	(Ard.) Fritsch				Echinochloa oryzoides	Echinochloa oryzoides (Ard.) Fritsch		syn: Echinochloa phyllopogon (Stapf) Stapf ex Kossenko		TJM1	MONOCOTS	0
 0	NATURALIZED	POACEAE	Ehrharta	calycina	Sm.				Ehrharta calycina	Ehrharta calycina Sm.			PERENNIAL VELDT GRASS	TJM1	MONOCOTS	0
 0	NATURALIZED	POACEAE	Ehrharta	erecta	Lam.				Ehrharta erecta	Ehrharta erecta Lam.			PANIC VELDT GRASS	TJM1	MONOCOTS	0
@@ -8532,7 +8529,7 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	POACEAE	Phleum	alpinum	L.				Phleum alpinum	Phleum alpinum L.			ALPINE TIMOTHY, MOUNTAIN TIMOTHY	TJM1	MONOCOTS	0
 0	NATURALIZED	POACEAE	Phleum	pratense	L.				Phleum pratense	Phleum pratense L.			CULTIVATED TIMOTHY	TJM1	MONOCOTS	0
 0	NATIVE	POACEAE	Phragmites	australis	(Cav.) Steud.				Phragmites australis	Phragmites australis (Cav.) Steud.		syn: Phragmites australis var. berlandieri (E. Fourn.) C.F. Reed; syn: Phragmites berlandieri E. Fourn.; syn: Phragmites communis Trin.; syn: Phragmites communis var. berlandieri (E. Fourn.) Fernald	COMMON REED	TJM1	MONOCOTS	0
-0		POACEAE	Phyllostachys	aurea	Rivi&egrave;re & C. Rivi&egrave;re				Phyllostachys aurea	Phyllostachys aurea Rivi&egrave;re & C. Rivi&egrave;re				TJM2	MONOCOTS	0
+0	AGRICULTURAL, GARDEN, OR URBAN WEED	POACEAE	Phyllostachys	aurea	Rivi&egrave;re & C. Rivi&egrave;re				Phyllostachys aurea	Phyllostachys aurea Rivi&egrave;re & C. Rivi&egrave;re			FISHPOLE BAMBOO, GOLDEN BAMBOO	TJM2	MONOCOTS	0
 0	NATIVE	POACEAE	Pleuropogon	californicus	(Nees) Benth. ex Vasey				Pleuropogon californicus	Pleuropogon californicus (Nees) Benth. ex Vasey				TJM1	MONOCOTS	0
 0	NATIVE	POACEAE	Pleuropogon	californicus	(Nees) Benth. ex Vasey	var.	californicus		Pleuropogon californicus var. californicus	Pleuropogon californicus (Nees) Benth. ex Vasey var. californicus				TJM2	MONOCOTS	1
 0	NATIVE	POACEAE	Pleuropogon	californicus	(Nees) Benth. ex Vasey	var.	davyi	(L.D. Benson) But	Pleuropogon californicus var. davyi	Pleuropogon californicus (Nees) Benth. ex Vasey var. davyi (L.D. Benson) But		syn: Pleuropogon davyi L.D. Benson	DAVY'S SEMAPHORE GRASS	TJM2	MONOCOTS	1
@@ -8756,8 +8753,8 @@ LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific
 0	NATIVE	THEMIDACEAE	Dichelostemma	multiflorum	(Benth.) A. Heller				Dichelostemma multiflorum	Dichelostemma multiflorum (Benth.) A. Heller		syn: Brodiaea multiflora Benth.; syn: Brodiaea grandiflora Sm. var. brachypoda Torr.; syn: Brodiaea parviflora Torr. & A. Gray; syn: Dichelostemma parviflorum (Torr. & A. Gray) Keator; syn: Hookera multiflora (Benth.) Britten; syn: Hookera parviflora (Torr. & A. Gray) Kuntze	WILD HYACINTH	TJM1	MONOCOTS	0
 0	NATIVE	THEMIDACEAE	Dichelostemma	volubile	(Kellogg) A. Heller				Dichelostemma volubile	Dichelostemma volubile (Kellogg) A. Heller		syn: Macroscapa volubilis Kellogg; syn: Brodiaea californica (Torr.) Jeps. 1911, not Lindl. 1849; syn: Brodiaea volubilis (Kellogg) Baker; syn: Dichelostemma californicum (Torr.) Alph. Wood; syn: Hookera volubilis (Kellogg) Jeps.; syn: Rupalleya volubilis (Kellogg) Mori&egrave;re; syn: Stropholirion californicum Torr.	TWINING BRODIAEA, SNAKE LILY	TJM1	MONOCOTS	1
 0	NATIVE	THEMIDACEAE	Dipterostemon	capitatus	(Benth.) Rydb.				Dipterostemon capitatus	Dipterostemon capitatus (Benth.) Rydb.		syn: Brodiaea pulchella (Salib.) Greene; syn: Dichelostemma capitatum (Benth.) Alph. Wood; syn: Milla capitata (Benth.) Baker; syn: Hookera capitata (Benth.) Kuntze; syn: Dichelostemma pulchellum (Salis.) A. Heller	BLUE DICKS	TJM2	MONOCOTS	0
-0	NATIVE	THEMIDACEAE	Dipterostemon	capitatus	(Benth.) Rydb.	subsp.	capitatus		Dipterostemon capitatus subsp. capitatus	Dipterostemon capitatus (Benth.) Rydb. subsp. capitatus		syn: Brodiaea capitata Benth. var. insularis (Greene) J.F. Macbr.; syn: Brodiaea insularis Greene; syn: Dichelostemma insulare (Greene) Burnham; syn: Dipterostemon insularis (Greene) Rydb. 		TJM2	MONOCOTS	0
-0	NATIVE	THEMIDACEAE	Dipterostemon	capitatus	(Benth.) Rydb.	subsp.	lacuna-vernalis	(L.W. Lenz) R.E. Preston	Dipterostemon capitatus subsp. lacuna-vernalis	Dipterostemon capitatus (Benth.) Rydb. subsp. lacuna-vernalis (L.W. Lenz) R.E. Preston		syn: Dichelostemma lacuna-vernalis L.W. Lenz; syn: Dichelostemma capitatum subsp. lacuna-vernalis (L.W. Lenz) D.W. Taylor	VERNAL POOL BLUE DICKS	TJM2	MONOCOTS	0
+0	NATIVE	THEMIDACEAE	Dipterostemon	capitatus	(Benth.) Rydb.	subsp.	capitatus		Dipterostemon capitatus subsp. capitatus	Dipterostemon capitatus (Benth.) Rydb. subsp. capitatus		syn: Brodiaea capitata Benth. var. insularis (Greene) J.F. Macbr.; syn: Brodiaea insularis Greene; syn: Dichelostemma insulare (Greene) Burnham; syn: Dipterostemon insularis (Greene) Rydb.		TJM2	MONOCOTS	0
+0	NATIVE	THEMIDACEAE	Dipterostemon	capitatus	(Benth.) Rydb.	subsp.	lacuna-vernalis	(L.W. Lenz) R.E. Preston	Dipterostemon capitatus subsp. lacuna-vernalis	Dipterostemon capitatus (Benth.) Rydb. subsp. lacuna-vernalis (L.W. Lenz) R.E. Preston		syn: Dichelostemma lacuna-vernalis L.W. Lenz; syn: Dichelostemma capitatum subsp. lacuna-vernalis (L.W. Lenz) D.W. Taylor	VERNAL POOL BLUE DICKS	TJM2	MONOCOTS	1
 0	NATIVE	THEMIDACEAE	Dipterostemon	capitatus	(Benth.) Rydb.	subsp.	pauciflorus	(Torr.) R.E. Preston	Dipterostemon capitatus subsp. pauciflorus	Dipterostemon capitatus (Benth.) Rydb. subsp. pauciflorus (Torr.) R.E. Preston		syn: Brodiaea capitata Benth. var. pauciflora Torr.; syn: Brodiaea pulchella (Salisb.) Greene var. pauciflora (Torr.) C.V. Morton; syn: Dichelostemma capitatum subsp. pauciflorum (Torr.) Keator; syn: Dichelostemma pauciflorum (Torr.) Standl.; syn: Dichelostemma pulchellum (Salisb.) A. Heller var. pauciflorum (Torr.) Hoover; syn: Dipterostemon pauciflorus (Torr.) Rydb.; syn: Hookera pauciflora (Torr.) Tidestr.; syn: Milla capitata (Benth.) Baker var. pauciflora (Torr.) Baker		TJM2	MONOCOTS	0
 0	NATIVE	THEMIDACEAE	Muilla	coronata	Greene				Muilla coronata	Muilla coronata Greene			CROWNED MUILLA	TJM1	MONOCOTS	0
 0	NATIVE	THEMIDACEAE	Muilla	maritima	(Torr.) S. Watson				Muilla maritima	Muilla maritima (Torr.) S. Watson		syn: Bloomeria maritima (Torr.) J.F. Macbr.; syn: Bloomeria maritima var. serotina (Greene) J.F. Macbr.; syn: Hesperoscordum maritimum Torr.; syn: Milla maritima (Torr.) S. Watson; syn: Muilla serotina Greene; syn: Muilla tenuis Congdon	COMMON MUILLA	TJM1	MONOCOTS	0

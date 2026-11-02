@@ -1,16 +1,26 @@
 <?php
 date_default_timezone_set('America/Los_Angeles');
 $TaxonID = htmlspecialchars($_GET["tid"]);
+$TaxonName = htmlspecialchars($_GET["name"]);
 
 //Security mod to prevent cross-site scripting attacks
 $TaxonID = preg_replace("/[^0-9]/", "", $TaxonID);
+$TaxonName = preg_replace("/[^A-Za-z-_+]/", "", $TaxonName);
+
 
 require 'config/config.php';
 $db = new SQLite3($database_location);
 
+//prep value for searching
+$TaxonName = preg_replace("+", " ", $TaxonName);
+$TaxonName = preg_replace("_", " ", $TaxonName);
+$TaxonName = preg_replace(" ssp ", " subsp. ", $TaxonName);
+$TaxonName = preg_replace(" var ", " var. ", $TaxonName);
+$TaxonName = preg_replace(" subsp ", " subsp. ", $TaxonName);
+
 $results = $db->query('SELECT ID, ScientificName, TaxonAuthor, FormattedDisplayName, CommonName, Status, TJM2Author, ScientificEditor, Habit, PlantBody, Stem, SterileStem, FertileStem, Leaf, Spines, Inflorescence, StaminateHead, RayOrPistillateFlower, PistillateHead, StaminateInflorescence, PistillateOrBisexualInflorescence, PistillateInflorescence, Spikelet, FertileSpikelet, SterileSpikelet, DistalSpikelet, CentralSpikelet, LateralSpikelet, StaminateSpikelet, PistillateSpikelet, Flower, StaminateFlower, PistillateFlower, RayFlower, DiskFlower, Cone, PollenCone, SeedCone, BisexualFlower, Fruit, Seed, Sporangia, SporangiumCase, MaleSporangiumCase, FemaleSporangiumCase, Spores, Chromosomes, Ecology, RarityStatus, Elevation, BioregionalDistribution, OutsideCA, SpeciesInGenus, GeneraInFamily, Etymology, Toxicity, Synonyms, UnabridgedSynonyms, Reference, UnabridgedReference, Note, UnabridgedNote, FloweringTime, FloweringTimeCode, FruitingTime, Weediness, IsTerminalTaxon, HasKey, RevisionNumber, RevisionDate, DistCode 
 						FROM eflora_taxa
-						WHERE TaxonID='.$TaxonID.''); //16711 is the TaxonID for Calochortus amabilis, for example
+						WHERE ScientificName LIKE \''.$TaxonName.'\' OR TaxonID='.$TaxonID.' '; //16711 is the TaxonID for Calochortus amabilis, for example
 
 while ($row = $results->fetchArray()) {
 
@@ -311,14 +321,12 @@ while ($row = $results->fetchArray()) {
 }
 
 //get the illustration
-$results = $db->query('SELECT FileName, LargeFileName, VideoURL
+$results = $db->query('SELECT FileName 
 						FROM eflora_illustrations
 						WHERE TaxonID='.$TaxonID.''); //16711 is the TID for Calochortus amabilis, for example
 
 while ($row = $results->fetchArray()) {
 	$IllustrationFile = $row['FileName'];
-	$IllustrationLarge = $row['LargeFileName'];
-	$VIDEO = $row['VideoURL'];
 }
 
 //assign the JM author and revision number
@@ -367,13 +375,7 @@ if (isset($RevisionDate)){ $RevDate = $RevisionDate;}
 	else {$RevDate = "2012";} //2012 is the defaut revision date; theoretically all revised taxa would fall into one of above
 	
 //Before doing anything, if the TID isn't recognized, give a plain error screen
-
-//Security mod to prevent cross-site scripting attacks
-$ID = $TaxonID;
-
-
 if (!$ID){ //if TaxonID (pulled from URL) did not match a line in the database...
-
   echo "Taxon not recognized TID=".$TaxonID;
 
 
@@ -383,32 +385,27 @@ exit();
 }
 ?>
 
-<?php
 
-date_default_timezone_set('America/Los_Angeles');
-
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<!DOCTYPE html>
 <html xmlns="http://www.w3.org/1999/xhtml">
 <?php 
 // TID is passed to JS by using PHP to echo the value of $TaxonID to a JS variable TaxID 
 // Apparently there are better ways to do this using AJAX
+// Also, the header needs some work
 
 ?>
 
 <head>
-<title><?php echo "$ScientificName"?></title>
-<meta charset="UTF-8">
+<title><?php echo "$ScientificName"?></title> 
 <meta name="description" content="For vascular plants occurring in wildlands or otherwise outside of cultivation in California, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys.">
   <meta name="keywords" content="California Flora, Jepson eFlora, Flora of California, Vascular Plants of California, Jepson Flora Project, ">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <link href="/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
 <link href="/common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
-<link rel="shortcut icon" href="/common/images/JepsonLogoSmall.png" type="image/x-icon" />
+
 
 <!--jquery script files-->
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
 	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
@@ -435,6 +432,20 @@ date_default_timezone_set('America/Los_Angeles');
 
 <style type="text/css" media="screen">
 
+	#content-right-min {
+		width:20px;
+	}
+	#content {
+		border-top:2px solid #BBBBBB;
+		border-bottom:2px solid #BBBBBB;
+		margin-left:20px;
+		margin-right:20px;
+	}
+	#content-top {
+		border-top:2px solid #BBBBBB;
+		margin-left:20px;
+		margin-right:20px;
+	}
 </style>
 
 <!-- Global site tag (gtag.js) - Google Analytics -->
@@ -473,20 +484,9 @@ $(document).ready(function(){
 	$(".column3").attr("width", width3);
 });
 </script>
-
-
 </head>
 
 <body onload="initialize()">
-
-<table id="normaltable">
-  <tr>
-   <td class="spacer1"><img src="/common/images/common_spacer.gif" alt="" style="height:1px;width:5px;"></td>
-	<td>
-	 <table><!-- content table -->
-	  <tr>
-	   <td>
-<div>
 <!-- Begin banner -->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/header_jeps.php'); ?>
 <!-- End banner -->
@@ -494,19 +494,16 @@ $(document).ready(function(){
 <!-- Beginning of horizontal menu -->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/globalnav.php'); ?> 
 <!-- End of horizontal menu -->
-</div>
 
-<div>
- <table id = "efTable">
-  <tr>
-    <td style="padding-top: 0;vertical-align: top;width=90vw;">
-     <div id="content-top">
- 	 <table>
-	 <tr>
+
+<div id="content-top">
+<table border="0">
+	<tr>
 		<td><span class="pageName"><a href="/eflora/">Jepson eFlora:</a> Taxon page</span></td>
-	 </tr>
-	 <tr>
-		<td><span class="pageMajorHeading"><a name="TOP" id="TOP">Vascular Plants of California</a></span>
+
+	</tr>
+	<tr>
+       <td><span class="pageMajorHeading"><a name="TOP" id="TOP">Vascular Plants of California</a></span>
 		<br>
 			<span class="pageAuthorLine">
 				<a href="/IJM_keys/IJM_fam_key.html">Key to families</a>
@@ -514,11 +511,11 @@ $(document).ready(function(){
 				<a href="/IJM_keys/toc.html">Table of families and genera</a>
 			</span>	  
 		</td>
-	 </tr>
-	 </table>
+	</tr>
+</table>
 
-	 <table align="center" width="100%">
-	  <tr>
+<table align="center" width="100%">
+	<tr>
 		<td>
 			<?php echo '<a href="/eflora/eflora_display.php?tid='.$previousTaxonID.'"><IMG SRC="/common/images/icons/left.gif" BORDER=2 ALT="Previous taxon"></a>'?>
 		</td>
@@ -532,9 +529,9 @@ $(document).ready(function(){
 		<td align = "right">
 			<?php echo '<a href="/eflora/eflora_display.php?tid='.$nextTaxonID.'"><IMG SRC="/common/images/icons/right.gif" BORDER=2 ALT="Next taxon"></a>'?>
 		</td>
-	  </tr>
-	 </table>
-	 </div>
+	</tr>
+</table>
+</div>
 <br />
 <div id="content">
 
@@ -553,7 +550,7 @@ $(document).ready(function(){
 		<td>
 <!-- this hidden table provides the column width values (check1 through check3) which are used to assign consistent widths to the actual higher taxonomy tables-->
 	<div class="hidden">
-	<table class="taxonomy_table" style="padding: 5px;">
+	<table class='taxonomy_table'>
 	<tr><td id='check1'><b>Family: <?php if(isset($FamScientificName)){ echo"{$FamScientificName}";}?></b></td><td id='check2'><b><a href="#">View Description</a></b></td><td id='check3'><a href='#'>Dichotomous Key</a></td></tr>
 	<tr><td><b>Genus: <?php if(isset($GenScientificName)){ echo"{$GenScientificName}";}?></b></td><td><b><a href="#">View Description</a></b></td><td><a href='#'>Dichotomous Key</a></td></tr>
 	<tr><td><b>Species: <?php if(isset($SpecScientificName)){ echo"{$SpecScientificName}";}?></b></td><td><b><a href="#">View Description</a></b></td><td><a href='#'>Dichotomous Key</a></td></tr>
@@ -790,15 +787,6 @@ echo '</tr></table>';
 //if illustration exists, there are two table cells, else there is one
 if (isset($IllustrationFile)){
 	echo '<table width="100%"><tr><td width="60%" valign="top">';
-		#if (isset($VIDEO)){
-		#	echo '<p>VIDEO TEST FOUND</p>';
-		#}
-}
-elseif (isset($IllustrationLarge)){
-	echo '<table width="100%"><tr><td width="60%" valign="top">';
-}
-elseif (isset($VIDEO)){
-	echo '<table width="100%"><tr><td width="60%" valign="top">';
 }
 else {
 	echo '<table width="100%"><tr><td width="100%" valign="top">';
@@ -983,20 +971,6 @@ if ($RarityStatus){
 ?>
 
 
-<?php //photos from CalPhotos.
-
-require "$config_path"."calphotos_database_connection.php";
-
-$cp_ssp_name = str_replace(" subsp. ", " ssp. ", $ScientificName); //CalPhotos uses "ssp." and not "subsp."
-$cp_name = $cp_ssp_name;
-
-$aName = array("Dipterostemon capitatus ssp. capitatus","Dipterostemon capitatus ssp. pauciflorus","Dipterostemon capitatus ssp. lacuna-vernalis","Dipterostemon capitatus","Diplacus puniceus","Diplacus vandenbergensis","Mimetanthe pilosa","Erythranthe androsacea","Erythranthe arenaria","Erythranthe barbata","Erythranthe breviflora","Erythranthe corallina","Erythranthe cordata","Erythranthe dentata","Erythranthe diffusa","Erythranthe exigua","Erythranthe filicifolia","Erythranthe floribunda","Erythranthe geniculata","Erythranthe guttata","Erythranthe inconspicua","Erythranthe inflatula");
-
-?>
-
-
-
-
 <?php //get and print list of taxa within the genus (if a species or infra), or list of species within genus (if a genus)
 if (isset($GenTaxonID)) { //i.e. if the rank is lower than genus
 echo '<p><form>';
@@ -1059,100 +1033,15 @@ if (isset ($nextTaxonID)) { //i.e. always, except for the very last page
 
 
 <?php
-
-  if (isset($VIDEO)) {
-	echo '<td valign="top">';
-//display another section for records with videos
-	echo "<table>";
-	echo "<tr>";
-
-//now get an images from CalPhotos for the video link
-$vid_result = mysqli_query($mysqli, "SELECT taxon, kwid, copyright FROM img 
-WHERE genre = 'Plant' 
-AND photographer IN ('Chris Winchell', 'Peter Zika', 'Vernon Smith', 'Aaron E. Sims', 'Aaron Schusteff', 'Barry Breckling', 'Barry Rice', 'Carol W. Witham', 'Christopher Christie', 'Dana York', 'Dr. David A. Charlet', 'David Graber', 'Dean Kelch', 'Dieter Wilken', 'Gary A. Monroe', 'George W. Hartwell', 'Gerald and Buff Corsi', 'Harlan Lewis', 'Janell Hillman', 'James M. Andre', 'James Morefield', 'John Game', 'Julie Kierstead Nelson', 'Keir Morse', 'Larry Blakely', 'Lech Naumovich', 'Len Lindstrand III', 'Michael Charters', 'Michael G. Simpson', 'Neal Kramer', 'Bob Patterson', 'Robert E. Preston, Ph.D.', 'Roxanne Bittman', 'Ryan O\'Dell', 'Steve Matson', 'Steve Schoenig', 'Thomas M. Elder, M.D.', 'Thomas Stoughton', 'Toni Corelli', 'Tony Morosco', 'Dylan Neubauer')
-AND taxon LIKE '$cp_name%' 
-AND taxon NOT LIKE 'Echinopsis%'
-ORDER BY RAND() LIMIT 1;");
-
-	if (!$vid_result) {
-	//make a dummy file for specimens without images
-	}
-
-  while ($v_row = mysqli_fetch_array($vid_result))	{
-	$v_raw_taxon = $v_row['taxon'];
-	$v_taxon = str_replace(" ssp. ", " subsp. ", $v_raw_taxon);
-	$v_kwid = $v_row['kwid'];
-	$v_copyright = $v_row['copyright'];
-	$v_kwidarray = explode(" ",$v_kwid);
-	$v_kwid4thumb = "{$v_kwidarray[0]}_{$v_kwidarray[1]}/{$v_kwidarray[2]}/{$v_kwidarray[3]}"; //thumbnail links in format 0000_1111/2222/3333
-  }
-
-	echo '<td width="200px"><p><h3> Jepson Video for <i>';
-	echo str_replace(" var. ", "</i> var. <i>", $v_taxon);
-	echo '</i></h3>Click on the image below to watch the video.<br />';
-	echo '<a href="'.$VIDEO.'"><img border="0" src=https://calphotos.berkeley.edu/imgs/128x192/'.$v_kwid4thumb.'.jpeg alt="click for enlargement"></img></a><br />';
-	echo "&copy; {$v_copyright}";
-	echo '</p></td>';	
-
-
-	if (isset($IllustrationFile)) {
-		if (isset($IllustrationLarge)) {
-			echo '</tr><tr>';
-			echo '<td valign="top">';
-			echo '<center><h3>Botanical illustration including <i>'.$ScientificName.'</i>';	
-			echo '</i></h3></center>';
-	//this used a symbolic link for /usr/local/web/ucjeps_data/ucjeps_data/illustrations/, where all the illustration files were moved some time before 2015
-			echo '<div align = "center"><a href="/images/illustrations/revised/'.$IllustrationLarge.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/revised/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' " style="height:500px;"></a></div>';
-			echo '</td>';
-			echo "</tr></table>";
-			echo '</td>';
-		}
-		else{
-			echo '</tr><tr>';
-			echo '<td valign="top">';
-			echo '<center><h3>Botanical illustration including <i>'.$ScientificName.'</i>';	
-			echo '</i></h3></center>';
-	//this used a symbolic link for /usr/local/web/ucjeps_data/ucjeps_data/illustrations/, where all the illustration files were moved some time before 2015
-	//old version 2017 - echo '<center><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including <i>'.$ScientificName.'</i>" height="475" border="0" align="center"/></center>';
-	//old version 2015 - echo '<center><img src="'.$ILLUS.'" alt="botanical illustration including '.$ScientificName.'" height="475" border="0" align="center"/></center>';
-
-			echo '<div align = "center"><a href="/images/illustrations/'.$IllustrationFile.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' " style="height:500px;"></a></div>';
-			echo '</td>';
-			echo "</tr></table>";
-			echo '</td>';
-		}
-	}
-	else{
-		echo "</tr></table>";
-		echo '</td>';
-	}
-  }
-  else{
-	if (isset($IllustrationFile)) {
 //add second cell for illustration, if one is available
-		if (isset($IllustrationLarge)) {
-			echo '<td valign="top">';
-			echo '<center><h3>Botanical illustration including <i>'.$ScientificName.'</i>';	
-			echo '</i></h3></center>';
-	//this used a symbolic link for /usr/local/web/ucjeps_data/ucjeps_data/illustrations/, where all the illustration files were moved some time before 2015
-			echo '<div align = "center"><a href="/images/illustrations/revised/'.$IllustrationLarge.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/revised/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' " style="height:500px;"></a></div>';
-			echo '</td>';
-		}
-		else{
-			echo '<td valign="top">';
-			echo '<center><h3>Botanical illustration including <i>'.$ScientificName.'</i>';	
-			echo '</i></h3></center>';
-	//this used a symbolic link for /usr/local/web/ucjeps_data/ucjeps_data/illustrations/, where all the illustration files were moved some time before 2015
-	//old version 2017 - echo '<center><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including <i>'.$ScientificName.'</i>" height="475" border="0" align="center"/></center>';
-	//old version 2015 - echo '<center><img src="'.$ILLUS.'" alt="botanical illustration including '.$ScientificName.'" height="475" border="0" align="center"/></center>';
-			echo '<div align = "center"><a href="/images/illustrations/'.$IllustrationFile.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' " style="height:500px;"></a></div>';
-			echo '</td>';
-		}
-	}
-	else{
-		echo '</td>';
-	}
-  }
+if (isset($IllustrationFile)) {
+	echo '<td valign="top">';
+	echo '<center><h3>Botanical illustration including <i>'.$ScientificName;	
+	echo '</i></h3></center>';
+	//this link is a symbolic link for /usr/local/web/ucjeps_data/ucjeps_data/illustrations/, where all the illustration files were moved some time before 2015
+	echo '<center><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.'" height="475" border="0" align="center"/></center>';
+	echo '</td>';
+}
 ?>
 
 </tr>
@@ -1180,7 +1069,7 @@ ORDER BY RAND() LIMIT 1;");
 	  echo "<i>".$ScientificName."</i>, ";
 	  echo "in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, ";
 	  	if ($RevNumber){ echo $RevNumber.", ";}
-	  echo "https://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=".$TaxonID.", accessed on "?> <?php echo date ("F d, Y")?>.
+	  echo "/eflora/eflora_display.php?tid=".$TaxonID.", accessed on "?> <?php echo date ("F d, Y")?>.
 </p>
 <p class=bodyText>Citation for the whole project: Jepson Flora Project (eds.) <?php echo date ("Y") ?>, <em>Jepson eFlora</em>,  https://ucjeps.berkeley.edu/eflora/, accessed on <?php echo date ("F d, Y")?>.</p>
 
@@ -1220,9 +1109,15 @@ include($_SERVER['DOCUMENT_ROOT'].'/common/eflora_footer.php');
 <tr>
 <td width="100%" valign="top">
 
+<?php //photos from CalPhotos.
+require "$config_path"."calphotos_database_connection.php";
 
-<?php 
-//check for known synonyms that are not showing up with images in CalPhotos under the eFlora name
+$cp_ssp_name = str_replace(" subsp. ", " ssp. ", $ScientificName); //CalPhotos uses "ssp." and not "subsp."
+$cp_name = $cp_ssp_name;
+
+$aName = array("Dipterostemon capitatus ssp. capitatus","Dipterostemon capitatus ssp. pauciflorus","Dipterostemon capitatus ssp. lacuna-vernalis","Dipterostemon capitatus","Diplacus puniceus","Diplacus vandenbergensis","Mimetanthe pilosa","Erythranthe androsacea","Erythranthe arenaria","Erythranthe barbata","Erythranthe breviflora","Erythranthe corallina","Erythranthe cordata","Erythranthe dentata","Erythranthe diffusa","Erythranthe exigua","Erythranthe filicifolia","Erythranthe floribunda","Erythranthe geniculata","Erythranthe guttata","Erythranthe inconspicua","Erythranthe inflatula");
+
+
 $taxon_result_a = mysqli_query($mysqli, "SELECT taxon, kwid FROM img 
 WHERE genre = 'Plant' 
 AND photographer IN ('Chris Winchell', 'Peter Zika', 'Vernon Smith', 'Aaron E. Sims', 'Aaron Schusteff', 'Barry Breckling', 'Barry Rice', 'Carol W. Witham', 'Christopher Christie', 'Dana York', 'Dr. David A. Charlet', 'David Graber', 'Dean Kelch', 'Dieter Wilken', 'Gary A. Monroe', 'George W. Hartwell', 'Gerald and Buff Corsi', 'Harlan Lewis', 'Janell Hillman', 'James M. Andre', 'James Morefield', 'John Game', 'Julie Kierstead Nelson', 'Keir Morse', 'Larry Blakely', 'Lech Naumovich', 'Len Lindstrand III', 'Michael Charters', 'Michael G. Simpson', 'Neal Kramer', 'Bob Patterson', 'Robert E. Preston, Ph.D.', 'Roxanne Bittman', 'Ryan O\'Dell', 'Steve Matson', 'Steve Schoenig', 'Thomas M. Elder, M.D.', 'Thomas Stoughton', 'Toni Corelli', 'Tony Morosco', 'Dylan Neubauer')
@@ -1241,9 +1136,11 @@ while ($row = mysqli_fetch_array($taxon_result_a))	{
 
 if (!isset($kwid_syna)){
 
+
   if (in_array($cp_ssp_name, $aName)){
 
 //echo "The string '$aName' was found in the string '$cp_ssp_name'";
+//check for known synonyms that are not showing up with images in CalPhotos under the eFlora name
 			//echo "A. The string was found in '$cp_ssp_name' ";
 
 	if ($cp_ssp_name === "Erythranthe androsacea"){
@@ -1355,7 +1252,6 @@ if (!isset($kwid_syna)){
   }
 }
 
-
 //now get all the images from CalPhotos
 $result = mysqli_query($mysqli, "SELECT taxon, kwid, copyright FROM img 
 WHERE genre = 'Plant' 
@@ -1365,8 +1261,11 @@ AND taxon NOT LIKE 'Echinopsis%'
 ORDER BY RAND() LIMIT 6;");
 
 //CalPhotos has specimens of the south American Cactus genus Echinopsis which the code above cannot distinguish from Echinops (asteraceae) at the genus level.
-//pictures of the cactus are displaying on the genus page for Echinops
-
+//pcitures of the cactus are displaying on the genus page for Echinops
+//NOT LIKE line added to eliminate specimens of this genus from genus pages in the eFlora
+//AND state = '267588'
+//AND state LIKE 'CA'
+//AND captivity = '0'
  if (!$result) {
     die("<p>Error in executing the CalPhotos query : " .
         mysql_error() . "</p>");
@@ -1400,8 +1299,8 @@ if (isset($kwid)){
 else{//if there is no $kwid (i.e. no photos), do not print the "see more" link or the extra divider
 	echo '<p style="color:#BBBBB">No expert verified images found for <i>'.$ScientificName.'.</i></p>';
 }
-?>
 
+?>
 </td></tr></table>
 </div>
 <br />
@@ -1420,10 +1319,9 @@ echo "$regname"?>
 <br />1. You can change the display of the base map and layers by clicking on the layer control box in the upper right-hand corner.
 <br />2. California county polygons can be turned off and on in the layer control box.
 <br />3. Filling of Jepson subdivision polygons can be turned off and on in the layer control box.
-<br />4. Moving the cursor over any numbered cluster will show the range boundary of the included specimens (with a blue polygon).
-<br />5. <b>Marker clustering</b> can be turned off by clicking this link:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
-<?php echo '<a href="/eflora/eflora_display_N.php?tid='.$TaxonID.'#EFMAP">Marker Clustering OFF</a>'?>
-<br /><b>WARNING</b>: Turning this off might cause maps with large numbers of specimens to load slowly.
+<br />4. <b>Marker clustering</b> can be turned on by clicking this link:&nbsp;&nbsp;&nbsp;&nbsp;&nbsp; 
+<?php echo '<a href="/eflora/eflora_display.php?tid='.$TaxonID.'#EFMAP">Marker Clustering ON</a>'?>
+<br /><b>WARNING</b>: This page may load slowly if there are large numbers of specimens in the database.
 </td></tr>
 <tr>
 <td valign="top">
@@ -1446,12 +1344,14 @@ var map = L.map('map_canvas', {center: latlng, zoom: 5});
 
 
 	var FILL = L.layerGroup();
-	var COUNTY = L.layerGroup();	
+	var COUNTY = L.layerGroup();
+	var COAST = L.layerGroup();
 	
 	map.scrollWheelZoom.disable();
 	
 var cacount = "counties_TIGER2016.geojson"; //full json file for California County TIGER2016 
 var regfill = "JepsonV7.geojson"; //full json file for Jepson regions
+var coastline = "Jepson_new_coast.geojson"; //full json file for the new coastline boundary
 
 
 // loading GeoJSON file - files resides in same folder
@@ -2402,17 +2302,53 @@ L.geoJson(data, {
 });
 
 
+// loading coasttline GeoJSON file
+$.getJSON(coastline ,function(data){
+// L.geoJson function is used to parse geojson file and load on to map
+L.geoJson(data, {
+	style: function(feature) {
+		switch (feature.properties.NAME) {
+		case 'LAND': return {
+				color: "#ffa500",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'ISLAND FIX': return {
+				color: "#ffa500",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'OCEAN': return {
+				color: "#609a83",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'BAY': return {
+				color: "#609a83",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+		case 'HARBOR': return {
+				color: "#609a83",
+				weight: 1,
+				opacity: 1,
+				fill: false
+			};
+        }
+    }
+	}).addTo(map);
+});
 
-		//Custom radius and icon create function
-var markers = L.markerClusterGroup({ disableClusteringAtZoom: 9, maxClusterRadius: 25 });
-
-//var noCluster = L.layerGroup();
 
 $.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) {
 	var geojsonLayer = L.geoJson(data, {
 			// Make the popup
 		onEachFeature: function (feature, layer) {
-         layer.bindPopup(feature.properties.det_name+"<br /><a href=/cgi-bin/new_detail.pl?"+feature.properties.accid+">"+feature.properties.accid+"</a>");
+         layer.bindPopup(feature.properties.det_name+"<br /><a href=https://ucjeps.berkeley.edu/cgi-bin/new_detail.pl?"+feature.properties.accid+">"+feature.properties.accid+"</a>");
 		},
 		pointToLayer: function (feature, latlng) {
 			// Get the icon
@@ -2428,12 +2364,8 @@ $.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) {
 			})
 		  });
 		}
-	
-	});
-markers.addLayer(geojsonLayer);
-map.addLayer(markers);
+	}).addTo(COAST);
 });
-
 
 
 	// Adding open source layers, unlimited loads
@@ -2458,7 +2390,8 @@ map.addLayer(markers);
 	
 	var overlay = {
 		"Fill Jepson regions": FILL,
-		"Add County Boundaries": COUNTY
+		"Add County Boundaries": COUNTY,
+		"Add new coastline boundaries": COAST
 	};
 
 //"County boundaries": county
@@ -2518,33 +2451,13 @@ else {
 }	
 ?>
 
-<p>Duplicates counted once; synonyms included.<br />
-Species do not include records of infraspecific taxa, if there are more than 1 infraspecific taxon in CA.<br />
-Blue line denotes eFlora flowering time (fruiting time in some monocot genera).</p>
+<br>Duplicates counted once; synonyms included.
+<br>Species do not include records of infraspecific taxa, if there are more than 1 infraspecific taxon in CA.
+<br>Blue line denotes eFlora flowering time (fruiting time in some monocot genera).
 
 </td></tr>
 </table>
 </div>
-
-		</td>
-	</tr>
-	</table> <!--close efSide table-->
-<!--begin footer-->
+<!--Begin footer-->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/eflora_footer.php'); ?>
-<!--end footer-->
-
-	</div>
-   </td>
-  </tr>
-</table> <!--close content table-->
-  
-
- 
- 	</td>
-   <td class="spacer1"><img src="/common/images/common_spacer.gif" alt="" style="height:1px;width:5px;"></td>
-  </tr>
- </table> <!--close outside normal table-->
-
-
-</body>
-</html>
+<!--End footer-->

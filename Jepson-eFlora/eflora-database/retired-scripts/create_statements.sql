@@ -60,6 +60,7 @@ CREATE TABLE eflora_taxa (
 	SpeciesInGenus TEXT,
 	GeneraInFamily TEXT,
 	Etymology TEXT,
+	UnabridgedEtymology TEXT,
 	Toxicity TEXT,
 	Synonyms TEXT,
 	UnabridgedSynonyms TEXT,
@@ -74,7 +75,7 @@ CREATE TABLE eflora_taxa (
 	IsTerminalTaxon INTEGER,
 	HasKey INTEGER,
 	RevisionNumber TEXT,
-	RevisionDate TEXT,
+	RevisionDate INTEGER,
 	DistCode TEXT
 	);
 
@@ -84,7 +85,8 @@ CREATE TABLE eflora_illustrations (
 	ID INTEGER PRIMARY KEY,
 	TaxonID INTEGER,
 	FileName TEXT,
-	LargeFileName TEXT
+	LargeFileName TEXT,
+	VideoURL TEXT
 );
 
 DROP TABLE eflora_taxonomy;

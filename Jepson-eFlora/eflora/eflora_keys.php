@@ -38,83 +38,39 @@ if (!$TID){ //if TaxonID (pulled from URL) did not match a line in the database.
   echo "Taxon not recognized TID=".$TaxonID;
 
 
-header("Location: https://ucjeps.berkeley.edu/cgi-bin/get_cpn?".$TaxonID, true, 301);
+header("Location: https://ucjeps.berkeley.edu/cgi-bin/get_cpn.pl?".$TaxonID, true, 301);
 exit();
 
 }
 ?>
 
 
-<?php
-
-date_default_timezone_set('America/Los_Angeles');
+<!DOCTYPE html>
+<html xmlns="http://www.w3.org/1999/xhtml">
+<?php 
+// TID is passed to JS by using PHP to echo the value of $TaxonID to a JS variable TaxID 
+// Apparently there are better ways to do this using AJAX
+// Also, the header needs some work
 
 ?>
 
-
-<!DOCTYPE html>
- 
-<html lang="en"> 
-
 <head>
-<title><?php echo "$ScientificName"?> key to species, Jepson eFlora, California Flora</title> 
-<meta charset="UTF-8">
-<meta name="description" content="For vascular plants occurring in wildlands or otherwise outside of cultivation in California, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys.">
-  <meta name="keywords" content="California Flora, Jepson eFlora, Flora of California, Vascular Plants of California, Jepson Flora Project, ">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="/common/css/dropdowns.css" rel="stylesheet" type="text/css" />
-<link href="/common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
-<link rel="shortcut icon" href="/common/images/JepsonLogoSmall.png" type="image/x-icon" />
-
-<!--mobile js script files-->
-	<script src="/eflora/common/js/dh_custom.js"></script>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T5YC99QF6Q');
-</script>
-
-  <script>
-    function myFunction() {
-      var x = document.lastModified;
-      document.getElementById("demo").innerHTML = x;
-    }
-  </script>
-
-
-  <script>
-    function myFunction() {
-      var x = document.lastModified;
-      document.getElementById("demo").innerHTML = x;
-
-	var objToday = new Date(),
-		domEnder = function() { var a = objToday; if (/1/.test(parseInt((a + "").charAt(0)))) return "th"; a = parseInt((a + "").charAt(1)); return 1 == a ? "st" : 2 == a ? "nd" : 3 == a ? "rd" : "th" }(),
-		dayOfMonth = today + ( objToday.getDate() < 10) ? '0' + objToday.getDate() + domEnder : objToday.getDate() + domEnder,
-		months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'),
-		curMonth = months[objToday.getMonth()],
-		curYear = objToday.getFullYear();
-	var today = dayOfMonth + " " + curMonth + " " + curYear;
-
-	document.getElementById("DateA").innerHTML = today; 
-	document.getElementById("DateB").innerHTML = today; 
-
-    }
-  </script>
+<!--<title><?php echo "$ScientificName"?>==><?php echo "$MapName"?></title> --> <!--For variable testing-->
+<title><?php echo "$ScientificName"?> key to species, Jepson eFlora</title> 
+<link href="/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
 
 <style type="text/css">
 
 .large-image {
 	box-shadow: 1px 1px 3px 3px rgba(127, 127, 127, 0.15);
 	width: 140px;
-	height: auto;
 	padding-left: 0px;
 	padding-right: 0px;
+}
+
+
+.inline {
+	display: inline-block;
 }
 
 
@@ -151,10 +107,47 @@ date_default_timezone_set('America/Los_Angeles');
 
 </style>
 
+
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-27128382-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+
+</script>
+<script type="text/javascript">
+  var _gaq = _gaq || [];
+  _gaq.push(['_setAccount', 'UA-43909100-1']);
+  _gaq.push(['_trackPageview']);
+
+  (function() {
+    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
+    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
+    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
+  })();
+</script>
 </head>
 
-<body onload="myFunction()">
-
+<body>
+<script>
+window.onload = setInterval(clock,1000);
+function clock(){
+	var d = new Date();
+	var yr = d.getFullYear();
+	var month = d.getMonth();
+	var monthArr = ["January", "February","March", "April", "May", "June", "July", "August", "September", "October", "November","December"];
+	month = monthArr[month];
+	var date = d.getDate();
+  document.getElementById("year").innerHTML = yr;
+  document.getElementById("month").innerHTML = month+" "+yr;
+  document.getElementById("day").innerHTML = date;
+}
+</script>
 <!-- Begin banner -->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/header_jeps.php'); ?>
 <!-- End banner -->
@@ -163,42 +156,46 @@ date_default_timezone_set('America/Los_Angeles');
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/globalnav.php'); ?> 
 <!-- End of horizontal menu -->
 
-<main>
-    <div id="content-top">
-
-<h1>Jepson eFlora Key page for <?php echo "$ScientificName"?></h1>
-
-<!-- Begin spacer block-->
-	</div>
 
 <div id="content">
-<div class="efBody">
+<table border="0">
+	<tr>
+		<td><span class="pageName"><a href="/eflora/">Jepson eFlora:</a> Key page</span></td>
 
-
-<div class="efBody">
-<!-- Begin spacer block-->
-<div class="spacer_spacer_blue">
-<br>
-<p><a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">Please use this Google Form for Contact/Feedback</a>
-<br>
-</div>
-<!-- Begin spacer block-->
-<div class="spacer_spacer_blue">
-
-<h2><a name="TOP" id="TOP">Vascular Plants of California</a></h2>
+	</tr>
+	<tr>
+       <td><span class="pageMajorHeading"><a name="TOP" id="TOP">Vascular Plants of California</a></span>
 		<br>
-			<p class="generalTextBold">
-				<a class="efTag" href="/IJM_keys/IJM_fam_key.html">Key to families</a>
+			<span class="pageAuthorLine">
+				<a href="/IJM_fam_key.html">Key to families</a>
 				|
-				<a class="efTag" href="/IJM_keys/toc.html">Table of families and genera</a>
-			</p>	  
-<br>
-</div>
+				<a href="/IJM_toc.html">Table of families and genera</a>
+			</span>	  
+		</td>
+	</tr>
+</table>
+
+<div id="content">
+<table border="0">
+   <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>
+<!--eFlora index-->
+<?php include('common/eflora_index_bar.php'); ?>
+<!--end eFlora index-->
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+	</tr>
+   <tr>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+       <td>
 <?php
 $pattern = '/aceae$/';
 
 if (isset($FormattedKey)) {
-	echo '<h3>Key to '.$ScientificName.'</h3>';
+	echo '<h2>Key to '.$ScientificName.'</h2>';
 	echo '<p class=bodyText><a href="https://ucjeps.berkeley.edu/eflora/eflora_display.php?tid='.$TID.'"><h3>View taxon page for '.$ScientificName.'</h3></a></p>';
 	
 if (preg_match($pattern, $ScientificName)) {
@@ -212,24 +209,25 @@ else {
 	echo '<p class=bodyText>&nbsp;</p>';
 }
 ?>
+<p class=bodyText>
+<a href="&#109;&#97;&#105;&#108;to:rosatti&#064;berkeley.edu?subject=eFlora comment"><font size=3 color="red">Contact/Feedback</font></a>
+</p>
+<p class="bodyText">Citation for the whole project: Jepson Flora Project (eds.) <span id="year"></span>. Jepson eFlora, https://ucjeps.berkeley.edu/eflora/ [accessed on <span id="day"></span> <span id="month"></span>]</p> 
+
+<p class=bodyText>
+Citation for an individual treatment:  [Author of taxon treatment] [year]. [Taxon name] in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, [URL for treatment]. Accessed on <span id="day"></span> <span id="month"></span> <span id="year">.</p>
+
+<p class=bodyText>
+We encourage links to these pages, but the content may not be downloaded for reposting, repackaging, redistributing, or sale in any form, without written permission from The Jepson Herbarium.
 </p>
 
-
+		</td>
+       <td>&nbsp;</td>
+       <td>&nbsp;</td>
+   </tr>
+</table>
 </div>
-</div>
-</div>
-<div class ="hr_line_grey">
-<p class="footerText"><a href="/main/copyright.html"> Copyright</a> &copy; 2012 - <span id="currentYear"> </span>.  Regents of the University of California</p>
-<p class="footerText">We encourage links to these pages, but the content may not be downloaded for reposting, repackaging, redistributing, or sale in any form, without written permission from The University and Jepson Herbaria &mdash; <a href="/eflora/termsofuse.html">Terms of Use</a>.</p>
-<p class="footerText">Page last updated <span id='demo'></span>
-</p>
-</div>
-
-<!-- Get current year for copyright statement -->
-<script>
-  var currentYear = new Date().getFullYear(); 
-  document.getElementById("currentYear").innerText = currentYear; 
-</script>
-</body>
-</html>
-
+<!--Begin footer-->
+<?php include('common/eflora_footer.php'); ?>
+<!--End footer-->
+</body></html>
