@@ -10,7 +10,7 @@ $db = new SQLite3($database_location);
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head><title>California Flora - Jepson eFlora Search; Vascular Plants of California, Jepson Herbarium</title>
 
-<link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+<link href="/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
 
 <!-- Google analytics -->
 <script type="text/javascript">
@@ -29,7 +29,7 @@ $db = new SQLite3($database_location);
 
 <body onload="initialize()">
 <!-- Begin banner -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/header_jeps.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/header_jeps.php'); ?>
 <!-- End banner -->
 
 <!-- Beginning of horizontal menu -->
@@ -45,13 +45,13 @@ $db = new SQLite3($database_location);
    <tr>
        <td>&nbsp;</td>
        <td>&nbsp;</td>
-       <td width="100%"><span class="pageName"><a href="http://ucjeps.berkeley.edu/IJM.html">Jepson eFlora:</a> Search page</span>
+       <td width="100%"><span class="pageName"><a href="/eflora/">Jepson eFlora:</a> Search page</span>
        <br /><span class="pageMajorHeading"><a name="TOP" id="TOP">Vascular Plants of California</a></span>
 		<br />
 			<span class="pageAuthorLine">
-				<a href="http://ucjeps.berkeley.edu/IJM_fam_key.html">Key to families</a>
+				<a href="/IJM_keys/IJM_fam_key.html">Key to families</a>
 				|
-				<a href="http://ucjeps.berkeley.edu/IJM_toc.html">Table of families and genera</a>
+				<a href="/IJM_keys/toc.html">Table of families and genera</a>
 			</span>	  
 		</td>
 	</tr>
@@ -62,8 +62,8 @@ $db = new SQLite3($database_location);
 </td>
 <td width=90%>
 <!--eFlora index-->
-<?php include('common/eflora_index_bar.php'); ?>
-<hr align="left" width=528px>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/eflora_index_bar.php'); ?>
+<hr align="left" width=300px>
 </td>
 
 <td >
@@ -77,7 +77,7 @@ $db = new SQLite3($database_location);
 <tr>
 <td width="100%" valign="top">
 
-<form action="search_eflora.php" method="POST">
+<form action="/eflora/search_eflora.php" method="POST">
 <b>Scientific Name</b><br />		<input type="text" id="query_text" name="query">
 		<input type="submit" value="Submit Name" />
 </form>
@@ -104,16 +104,16 @@ if (preg_match("/^[A-Z]$/", $SearchTerm)) {
 		echo '<tr><td>Scientific Name</td><td>Common Name</td><td>Status</td></tr>';
 		if ($row['AcceptedNameTID']){ //if it has an AcceptedNameTID, then it's a synonym, so print the synonym line
 			$row['NativeStatus'] = str_replace("Noted Name", "Mentioned in<br>a note", $row['NativeStatus']);
-			echo '<tr><td><a href="eflora_display.php?tid='.$row['AcceptedNameTID'].'">'.$row['ScientificName'].'</a><br>(Under '.$row['AcceptedName'].')</td>';
+			echo '<tr><td><a href="/eflora/eflora_display.php?tid='.$row['AcceptedNameTID'].'">'.$row['ScientificName'].'</a><br>(Under '.$row['AcceptedName'].')</td>';
 			echo '<td>'.$row['CommonName'].'</td>';
 			echo '<td>'.ucfirst(strtolower($row['NativeStatus'])).'</td>';
 			echo '</tr>';
 		}
 		else { //else it is an accepted name, so print the full line
-			echo '<tr><td><a href="eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'].'</a>';
+			echo '<tr><td><a href="/eflora/eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'].'</a>';
 			if ($row['HasKey']){ //if it has a key, add the key text under the name
-				#echo '<br>&nbsp;&nbsp;<a href="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?key='.$row['TaxonID'].'">&#x21b3;&nbsp;&nbsp;Key to '.$row['ScientificName'].'</td>';
-				echo '<br>&nbsp;&nbsp;<a href="http://ucjeps.berkeley.edu/eflora/eflora_keys.php?key='.$row['TaxonID'].'">&#x21b3;&nbsp;&nbsp;Key to '.$row['ScientificName'].'</td>';
+				#echo '<br>&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?key='.$row['TaxonID'].'">&#x21b3;&nbsp;&nbsp;Key to '.$row['ScientificName'].'</td>';
+				echo '<br>&nbsp;&nbsp;<a href="/eflora/eflora_keys.php?key='.$row['TaxonID'].'">&#x21b3;&nbsp;&nbsp;Key to '.$row['ScientificName'].'</td>';
 
 			}
 			else {
@@ -125,16 +125,16 @@ if (preg_match("/^[A-Z]$/", $SearchTerm)) {
 		while ($row = $results->fetchArray()) {
 		if ($row['AcceptedNameTID']){ //if it has an AcceptedNameTID, then it's a synonym, so print the synonym line
 			$row['NativeStatus'] = str_replace("Noted Name", "Mentioned in<br>a note", $row['NativeStatus']);			
-			echo '<tr><td><a href="eflora_display.php?tid='.$row['AcceptedNameTID'].'">'.$row['ScientificName'].'</a><br>(Under '.$row['AcceptedName'].')</td>';
+			echo '<tr><td><a href="/eflora/eflora_display.php?tid='.$row['AcceptedNameTID'].'">'.$row['ScientificName'].'</a><br>(Under '.$row['AcceptedName'].')</td>';
 			echo '<td>'.$row['CommonName'].'</td>';
 			echo '<td>'.ucfirst(strtolower($row['NativeStatus'])).'</td>';
 			echo '</tr>';		
 		}
 		else { //else it is an accepted name, so print the full line
-			echo '<tr><td><a href="eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'].'</a>';
+			echo '<tr><td><a href="/eflora/eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'].'</a>';
 			if ($row['HasKey']){ //if it has a key, add the key text under the name
-				#echo '<br>&nbsp;&nbsp;<a href="http://ucjeps.berkeley.edu/cgi-bin/get_IJM.pl?key='.$row['TaxonID'].'">&#x21b3;&nbsp;&nbsp;Key to '.$row['ScientificName'].'</td>';
-				echo '<br>&nbsp;&nbsp;<a href="http://ucjeps.berkeley.edu/eflora/eflora_keys.php?key='.$row['TaxonID'].'">&#x21b3;&nbsp;&nbsp;Key to '.$row['ScientificName'].'</td>';
+				#echo '<br>&nbsp;&nbsp;<a href="/cgi-bin/get_IJM.pl?key='.$row['TaxonID'].'">&#x21b3;&nbsp;&nbsp;Key to '.$row['ScientificName'].'</td>';
+				echo '<br>&nbsp;&nbsp;<a href="/eflora/eflora_keys.php?key='.$row['TaxonID'].'">&#x21b3;&nbsp;&nbsp;Key to '.$row['ScientificName'].'</td>';
 
 
 			}
@@ -163,5 +163,5 @@ else {
 
 
 <!--Begin footer-->
-<?php include('common/eflora_footer.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/eflora_footer.php'); ?>
 <!--End footer-->

@@ -2,7 +2,7 @@
 
 
 <head><title>Jepson Herbarium: Jepson Flora Project: Jepson eFlora: Filter Keys</title> 
-<link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+<link href="/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
 <script type="text/javascript">
 
   var _gaq = _gaq || [];
@@ -41,6 +41,10 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/globalnav.php'); ?>
 <!-- End of horizontal menu -->
 
+<!-- Start of sidebar menu-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/localnav_media.php'); ?>
+<!-- End of sidebar --> 
+
  <table border="0">
    <tr>
 
@@ -54,7 +58,7 @@
        <td>&nbsp;</td>
        <td>&nbsp;</td>
 
-       <td width="100%"><span class="pageName"><a href="/IJM.html">Jepson eFlora:</a> Filtered Keys using KeyBase</span><br /><br />
+       <td width="100%"><span class="pageName"><a href="/eflora/">Jepson eFlora:</a> Filtered Keys using KeyBase</span><br /><br />
 
 </td>
 </tr>
@@ -135,7 +139,7 @@ echo "<OPTION VALUE='".$keybase_URL."55b2c7111acde'>&nbsp;&nbsp;DSon";
 </select>
 </p>
 
-<p class="bodyText"><b>NOTE:</b> The KeyBase taxon filters are based on Jepson eFlora author's assertions of taxon ranges. As we have discovered from comparing <a href=http://ucjeps.berkeley.edu/consortium>Consortium of California Herbaria (CCH)</a> specimen records to eFlora authored ranges in the <a href=http://ucjeps.berkeley.edu/consortium/about_yellow.html>Yellow Flag project</a>, there are many plant populations that occur outside the eFlora authored ranges. If a filtered key does not bring you to an answer that matches the plant you are identifying, try using a more relaxed filter (e.g. use the <a href="http://keybase.rbg.vic.gov.au/projects/show/11?filter_id=55b17602c0f1b">Sierra Nevada filter</a> instead of the <a href="http://keybase.rbg.vic.gov.au/projects/show/11?filter_id=55b1786030b36">Central Sierra Nevada Foothills filter</a>), or use the full key if necessary.</p>
+<p class="bodyText"><b>NOTE:</b> The KeyBase taxon filters are based on Jepson eFlora author's assertions of taxon ranges. As we have discovered from comparing <a href="/consortium/">Consortium of California Herbaria (CCH)</a> specimen records to eFlora authored ranges in the <a href="/consortium/about_yellow.html">Yellow Flag project</a>, there are many plant populations that occur outside the eFlora authored ranges. If a filtered key does not bring you to an answer that matches the plant you are identifying, try using a more relaxed filter (e.g. use the <a href="http://keybase.rbg.vic.gov.au/projects/show/11?filter_id=55b17602c0f1b">Sierra Nevada filter</a> instead of the <a href="http://keybase.rbg.vic.gov.au/projects/show/11?filter_id=55b1786030b36">Central Sierra Nevada Foothills filter</a>), or use the full key if necessary.</p>
 
 <p class="bodyText">For feedback regarding KeyBase software, contact Niels Klazenga (<a href="mailto:Niels.Klazenga@rbg.vic.gov.au">Niels.Klazenga@rbg.vic.gov.au</a>)
 <br>
@@ -148,7 +152,7 @@ For feedback regarding how Jepson eFlora content is displayed in KeyBase, contac
 <tr>
 <td width=50% valign=top>
 <!-- <img align="center" src="http://ucjeps.berkeley.edu/cgi-bin/new_jmap.pl?ffffffffff"> -->
-<img align="center"  src="exploded_map.png">
+<img align="center"  src="/images/exploded_map.png">
 </td>
 
 <td width=25% valign=top>
@@ -227,19 +231,19 @@ The Jepson eFlora divides California into 35 ecologically distinct "bioregions" 
 </P>
 
 <P class=bodyText>
-Each terminal taxon treatment in the Jepson eFlora indicates the treatments in which the taxon is asserted to occur. Using this information, a checklist for any subregion, region or province can be made (see the <a href="http://ucjeps.berkeley.edu/IJM_tools.html">eFlora Tools page</a> for a tool that does exactly that).
+Each terminal taxon treatment in the Jepson eFlora indicates the treatments in which the taxon is asserted to occur. Using this information, a checklist for any subregion, region or province can be made (see the <a href="/eflora/tools/">eFlora Tools page</a> for a tool that does exactly that).
 </P>
 <br>
 
 <P class=bodyText>
-For full descriptions of each bioregion, see <a href="http://ucjeps.berkeley.edu/eflora/geography.html">Geographic Subdivisions of California</a>
+For full descriptions of each bioregion, see <a href="/eflora/geography.html">Geographic Subdivisions of California</a>
 </P>
 
 </div>
 
-<!-- Begin banner -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/footer.php'); ?>
-<!-- End banner -->
+<!--Begin footer-->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/eflora_footer.php'); ?>
+<!--End footer-->
 
 </body>
 

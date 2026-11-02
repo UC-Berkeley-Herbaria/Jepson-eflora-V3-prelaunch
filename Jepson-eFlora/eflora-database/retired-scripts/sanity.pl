@@ -1,10 +1,12 @@
-open(IN,"/JEPS-master/Jepson-eFlora/synonymy/input/smasch_taxon_ids_CCH.txt") || die;
+use BerkeleyDB;
+
+
+open(IN,"/Users/Shared/Jepson-Master/Jepson-eFlora/synonymy/input/smasch_taxon_ids.txt") || die;
 while(<IN>){
 chomp;
 ($code,$name)=split(/\t/);
 $TNOAN{$name}=$code;
 }
-use BerkeleyDB;
 
 %proscribed=(
 "woodlands","woodland",
@@ -34,6 +36,11 @@ use BerkeleyDB;
 "TJMXXX AUTHOR",
 "TJM4X AUTHOR",
 "TJM5X AUTHOR",
+"TJM6X AUTHOR",
+"TJM7X AUTHOR",
+"TJM8X AUTHOR",
+"TJM9X AUTHOR",
+"TJM10X AUTHOR",
 "AUTHORSHIP COMMENT",
 "HABIT+",
 "UNABRIDGED HABIT+",
@@ -126,7 +133,7 @@ foreach(keys(%field_list)){
 #print "$_: $field_list{$_}\n";
 }
 #die;
-open(OUT, ">eflora.in");
+open(OUT, ">ouput/eflora.in");
 
 
 

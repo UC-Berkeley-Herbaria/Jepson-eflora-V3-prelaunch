@@ -4,12 +4,13 @@ DROP TABLE eflora_taxa;
 CREATE TABLE eflora_taxa (
 	ID INTEGER PRIMARY KEY,
 	TaxonID INTEGER,
+	AcceptedNameTID INTEGER,
 	ScientificName TEXT,
 	TaxonAuthor TEXT,
 	FormattedDisplayName TEXT,
 	CommonName TEXT,
 	KeyGroup TEXT,
-	NativeStatus TEXT,
+	Status TEXT,
 	TJM2Author TEXT,
 	ScientificEditor TEXT,
 	Habit TEXT,
@@ -66,18 +67,15 @@ CREATE TABLE eflora_taxa (
 	UnabridgedReference TEXT,
 	Note TEXT,
 	UnabridgedNote TEXT,
-	FLFRTimeCode TEXT,
 	FloweringTime TEXT,
+	FloweringTimeCode TEXT,
 	FruitingTime TEXT,
-	SporConeTime TEXT,
 	Weediness TEXT,
 	IsTerminalTaxon INTEGER,
 	HasKey INTEGER,
 	RevisionNumber TEXT,
 	RevisionDate TEXT,
-	DistCode TEXT,
-	DistArray TEXT,
-	AcceptedNameTID INTEGER
+	DistCode TEXT
 	);
 
 DROP TABLE eflora_illustrations;
@@ -85,7 +83,8 @@ DROP TABLE eflora_illustrations;
 CREATE TABLE eflora_illustrations (
 	ID INTEGER PRIMARY KEY,
 	TaxonID INTEGER,
-	FileName TEXT
+	FileName TEXT,
+	LargeFileName TEXT
 );
 
 DROP TABLE eflora_taxonomy;
@@ -145,8 +144,9 @@ DROP TABLE eflora_synonymy;
 
 CREATE TABLE eflora_synonymy (
 	ID INTEGER PRIMARY KEY,
-	NativeStatus TEXT,
 	ScientificName TEXT,
+	Status TEXT,
+	TaxonID TEXT,
 	AcceptedNameTID INTEGER
 );
 

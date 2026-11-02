@@ -14,7 +14,7 @@ print $query->header;                    # create the HTTP header
 
 <head>
 <title>Jepson Interchange: Manual Name Data Retrieval</title>
-<link href="http://ucjeps.berkeley.edu/common/styles/fieldbook.css" rel="stylesheet" type="text/css" />
+<link href="/common/styles/fieldbook.css" rel="stylesheet" type="text/css" />
 <Meta Name="keywords" Content="UC Berkeley Herbarium,
 Jepson Herbarium,
 taxonomy of California plants,
@@ -43,7 +43,7 @@ plant names
 <tr>
 <td rowspan="4" width="12" align="center" valign="middle"></td>
 <td rowspan="3" width="120" align="center" valign="middle">
-<a href="http://ucjeps.berkeley.edu/jeps/"><img src="http://ucjeps.berkeley.edu/common/images/logo_jeps_80.png" alt="Jepson Interchange " width="80" height="79" border="0" /></a></td>
+<a href="/jeps/"><img src="/common/images/logo_jeps_80.png" alt="Jepson Interchange " width="80" height="79" border="0" /></a></td>
 <td align="center">&nbsp;</td>
 <td rowspan="3" width="120" align="center" valign="middle"></td>
 <td rowspan="4" width="12" align="center" valign="middle"></td>
@@ -54,7 +54,7 @@ plant names
 </tr>
 
 <tr>
-<td align="center" valign="top"><a href="http://www.berkeley.edu" class="bannerTagLine">University of California, Berkeley</a></td>
+<td align="center" valign="top"><a href="https://www.berkeley.edu" class="bannerTagLine">University of California, Berkeley</a></td>
 </tr>
 
 <tr>
@@ -80,10 +80,10 @@ plant names
 <table class=horizMenu width="100%" border="0" cellspacing="0" cellpadding="0">
 <tr>
 <td height="21" width="640" align="right">
-<a href="http://ucjeps.berkeley.edu/main/directory.html" class="horizMenuActive">Directory</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="http://ucjeps.berkeley.edu/news/" class="horizMenuActive">News</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="http://ucjeps.berkeley.edu/main/sitemap.html" class="horizMenuActive">Site Map</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-<a href="http://ucjeps.berkeley.edu/" class="horizMenuActive">Home</a>      </td>
+<a href="/main/directory.html" class="horizMenuActive">Directory</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/news/" class="horizMenuActive">News</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/main/sitemap.html" class="horizMenuActive">Site Map</a> &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
+<a href="/" class="horizMenuActive">Home</a>      </td>
 <td />
 </tr>
 <tr>

@@ -1,7 +1,7 @@
 <html xmlns="http://www.w3.org/1999/xhtml">
 
 <head><title>Jepson Herbarium: Jepson Flora Project: Jepson eFlora</title> 
-<link href="/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+<link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
 </head>
 
 <body>
@@ -14,11 +14,6 @@
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/globalnav.php'); ?>
 <!-- End of horizontal menu -->
 
-<!-- Start of sidebar menu-->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/localnav_media.php'); ?>
-<!-- End of sidebar --> 
-
-
  <table border="0">
    <tr>
        <td>&nbsp;</td>
@@ -30,23 +25,38 @@
    <tr>
        <td>&nbsp;</td>
        <td>&nbsp;</td>
-       <td width="100%"><span class="pageName"><a href="/IJM.html">Jepson eFlora</a>: Update Summary for 2020</span><br /><br />
+       <td width="100%"><span class="pageName"><a href="/IJM.html">Jepson eFlora</a>: Update Summary for 2019</span><br /><br />
 </td>
 </tr>
 </table>
-<br>Tue Dec 10 14:18:18 2019: first update for eflora revision 7
-<br>Tue Dec 10 15:18:21 2019: Minor corrections
-<br>Wed Dec 11 14:14:16 2019: Minor corrections
+<br>Tue Feb 12 12:02:00 2019: major bug fix update for revision 6, new additions to eflora nomenlature
 
-<br>Mon Dec 16 15:59:42 2019: Revision 7 updates part II
+<br>Tue Feb 12 13:39:40 2019: Minor corrections
+<br>Thu Mar 21 11:59:54 2019: Minor corrections
+<br>Fri Apr  5 16:42:58 2019: Minor corrections
+<br>Mon Apr 22 16:53:18 2019: Minor corrections
+<br>Wed Apr 24 14:41:09 2019: Minor corrections
+<br>Thu Apr 25 17:29:01 2019: Minor corrections
+<br>Wed Jun 19 14:28:58 2019: fixes to expanded key and glossary terms
 
-<br>Tue Dec 17 14:24:24 2019: Revision 7 update, part III
-<br>Tue Dec 17 15:34:13 2019: Minor corrections
+<br>Wed Jun 19 16:03:12 2019: Minor corrections
+<br>Wed Jun 19 16:44:19 2019: Minor corrections
+<br>Thu Jun 20 16:22:12 2019: Minor corrections
+<br>Fri Jun 21 09:05:33 2019: reload of keys and fixing errors
 
-<br>Thu Dec 19 12:50:59 2019: Third major update for Revision 7
-<br>Thu Dec 19 13:17:06 2019: Minor corrections
-<br>Mon Jan 13 15:14:15 2020: update to keybase loading scripts
+<br>Fri Jun 21 11:54:24 2019: Minor corrections
+<br>Fri Jun 21 12:22:39 2019: Minor corrections
+<br>Fri Jun 21 14:12:12 2019: Minor corrections
+<br>Thu Jul 18 12:13:36 2019: Minor corrections
+<br>Mon Jul 29 14:48:14 2019: Minor corrections
+<br>Fri Sep 27 09:36:08 2019: Minor corrections
 
+<br>Tue Dec 10 14:14:58 2019: first update for eflora revision 7
+
+<br>Tue Dec 10 14:25:35 2019: Minor corrections
+<br>Tue Dec 10 14:32:14 2019: Minor corrections
+<br>Tue Dec 10 14:40:23 2019: Minor corrections
+<br>Tue Dec 10 14:55:51 2019: Minor corrections
 
 
  <table border="0">
@@ -60,7 +70,7 @@
    <tr>
        <td>&nbsp;</td>
        <td>&nbsp;</td>
-       <td width="100%"><span class="pageName"><a href="/eflora/">Jepson eFlora</a>: Revision History Archive</span><br /><br />
+       <td width="100%"><span class="pageName"><a href="/IJM.html">Jepson eFlora</a>: Revision History Archive</span><br /><br />
 </td>
 </tr>
 </table>
@@ -382,6 +392,7 @@
 <br>Thu Jun 20 14:46:27 2019: Minor corrections
 <br>Thu Jun 20 14:46:41 2019: Minor corrections
 <br>Thu Jun 20 14:49:00 2019: Minor corrections
+<br>Thu Jun 20 14:59:04 2019: [A[B[B
 
 <br>Thu Jun 20 15:54:46 2019: Minor corrections
 <br>Thu Jun 20 16:06:45 2019: Minor corrections
@@ -433,31 +444,3 @@
 <br>Tue Dec 10 14:32:14 2019: Minor corrections
 <br>Tue Dec 10 14:40:23 2019: Minor corrections
 <br>Tue Dec 10 14:55:51 2019: Minor corrections
-<br>Tue Dec 10 15:18:21 2019: Minor corrections
-<br>Wed Dec 11 13:03:11 2019: Minor corrections
-<br>Wed Dec 11 13:14:28 2019: Minor corrections
-<br>Wed Dec 11 13:19:19 2019: Minor corrections
-<br>Wed Dec 11 13:21:47 2019: Minor corrections
-<br>Wed Dec 11 13:26:52 2019: Minor corrections
-<br>Wed Dec 11 13:44:37 2019: Minor corrections
-<br>Wed Dec 11 13:55:41 2019: Minor corrections
-<br>Wed Dec 11 14:14:16 2019: Minor corrections
-<br>Mon Dec 16 15:59:42 2019: Revision 7 updates part II
-
-<br>Tue Dec 17 14:24:24 2019: Revision 7 update, part III
-
-<br>Tue Dec 17 15:34:13 2019: Minor corrections
-<br>Thu Dec 19 12:50:59 2019: Third major update for Revision 7
-
-<br>Thu Dec 19 13:03:24 2019: Minor corrections
-<br>Thu Dec 19 13:05:43 2019: Minor corrections
-<br>Thu Dec 19 13:07:55 2019: Minor corrections
-<br>Thu Dec 19 13:17:06 2019: Minor corrections
-<br>Mon Jan 13 15:14:15 2020: update to keybase loading scripts
-
-<br />
-<!--Begin footer-->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/eflora_footer.php'); ?>
-<!--End footer--><br>Thu Mar 12 16:34:20 2020: fix for some DIST codes being skipped for records with SNE exc W&I and PR sxc SnJt
-
-<br>Mon Jun  1 12:58:48 2020: Minor corrections
