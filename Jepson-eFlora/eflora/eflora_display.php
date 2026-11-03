@@ -70,14 +70,13 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 		$result = mysqli_query($db, $sql);
 
 //query and assign variable to each table field
-		while ($row = mysqli_fetch_array($result)) {
+		if ($result && mysqli_num_rows($result) > 0) {
+			$row = mysqli_fetch_assoc($result);
+		//while ($row = mysqli_fetch_array($result)) {
 
-// If no results are found, echo a message and stop
-			if ($row == false){
-				echo "<br><br><h1>The ID you are using is not an eflora accepted name and may be a synonym or removed from the database entirely. Please use this link and type in a name to search the eflora database:<br><br>";
-				echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
-				exit();
-			}
+
+	// Assigned safely here
+    // ... rest of your display logic
 
 //BEGIN temporary bug fix lines to add when needed
 //foreach ($row as $key=>$value) {
@@ -90,9 +89,6 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 			}
 			else{
 				$ID = null;
-				echo "<br><br><h1>The ID you are using is not an eflora accepted name and may be a synonym or removed from the database entirely. Please use this link and type in a name to search the eflora database:<br><br>";
-				echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
-				exit();
 			}
 	
 			if (!empty($row['ScientificName'])){
@@ -597,6 +593,30 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 	which is useful for seeing what you're getting
 	but is pretty ugly
 	*/
+		} else {
+
+			// 3. Fallback: TaxonID not found in eflora_taxa. Check eflora_synonymy.
+			$syn_sql = "SELECT AcceptedName FROM eflora_synonymy WHERE TaxonID = '" . mysqli_real_escape_string($conn, $TaxonID) . "' LIMIT 1";
+			$syn_result = mysqli_query($conn, $syn_sql);
+			
+			if ($syn_result && mysqli_num_rows($syn_result) > 0) {
+			    $syn_row = mysqli_fetch_assoc($syn_result);
+			    $acceptedName = trim($syn_row['AcceptedName']);
+			    
+			    // 4. Forward/Redirect to the search page URL with the accepted name
+			    if (!empty($acceptedName)) {
+			        $encodedName = urlencode($acceptedName);
+			        header("Location: https://herbariadb.berkeley.edu/eflora/search_eflora.php?name=" . $encodedName);
+			        exit(); // Always call exit after a header redirect to stop further script execution
+			    }
+			}
+			
+			// 5. Optional: If it's not in synonymy either, handle the "not found" error 
+			// (This is what caused your initial PHP Notice / 9999999 error earlier)
+			// Handle the error gracefully
+				echo "<br><br><h1>The ID you are using is not in the eflora database name may be a synonym or removed from the database entirely. Please use this link and type in a name to search the eflora database:<br><br>";
+				echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
+			exit(); // Stop execution so lines 1165/1166 don't throw notices
 		}
 	}
 	elseif(!empty($TaxonName))  {
@@ -614,14 +634,13 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 		$result = mysqli_query($db, $sql);
 
 //query and assign variable to each table field
-		while ($row = mysqli_fetch_array($result)) {
+		if ($result && mysqli_num_rows($result) > 0) {
+			$row = mysqli_fetch_assoc($result);
+		//while ($row = mysqli_fetch_array($result)) {
 
-// If no results are found, echo a message and stop
-			if ($row == false){
-				echo '<br><br><h1>The ScientificName '.$TaxonName.'</b> was not found in eflora taxon table.<br>Try another search.<br>';
-				echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
-				exit();
-			}
+
+	// Assigned safely here
+	// ... rest of your display logic
 
 //BEGIN temporary bug fix lines to add when needed
 //foreach ($row as $key=>$value) {
@@ -634,9 +653,6 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 			}
 			else{
 				$ID = null;
-				echo '<br><br><h1>The ScientificName '.$TaxonName.'</b> was not found in eflora taxon table.<br>Try another search.<br>';
-				echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
-				exit();
 			}
 	
 			if (!empty($row['ScientificName'])){
@@ -1141,6 +1157,30 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 //which is useful for seeing what you're getting
 //but is pretty ugly
 
+		} else {
+
+			// 3. Fallback: TaxonID not found in eflora_taxa. Check eflora_synonymy.
+			$syn_sql = "SELECT AcceptedName FROM eflora_synonymy WHERE AcceptedName = '" . mysqli_real_escape_string($conn, $TaxonName) . "' ";
+			$syn_result = mysqli_query($conn, $syn_sql);
+			
+			if ($syn_result && mysqli_num_rows($syn_result) > 0) {
+			    $syn_row = mysqli_fetch_assoc($syn_result);
+			    $acceptedName = trim($syn_row['AcceptedName']);
+			    
+			    // 4. Forward/Redirect to the search page URL with the accepted name
+			    if (!empty($acceptedName)) {
+			        $encodedName = urlencode($acceptedName);
+			        header("Location: https://herbariadb.berkeley.edu/eflora/search_eflora.php?name=" . $encodedName);
+			        exit(); // Always call exit after a header redirect to stop further script execution
+			    }
+			}
+			
+			// 5. Optional: If it's not in synonymy either, handle the "not found" error 
+			// (This is what caused your initial PHP Notice / 9999999 error earlier)
+			// Handle the error gracefully
+				echo "<br><br><h1>The name you are using is not in the eflora synonymy table and may be a synonym unknown to us or a name not recognized as part of the California flora. Please use this link and type in a name to make another search of the eflora database:<br><br>";
+				echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
+			exit(); // Stop execution so lines 1165/1166 don't throw notices
 		}
 	}
 	else{
@@ -3514,11 +3554,40 @@ document.addEventListener('DOMContentLoaded', function() {
   </section>
   <?php endif; ?>
 
-    <!-- Hero Header Section -->
-    <header class="hero-taxon">
-        <h2><?php echo $FormattedDisplayName; ?></h2>
-        <p class="common-name"><?php echo $CommonName; ?></p>
-    </header>
+
+  <?php 
+  	if (preg_match('/^[A-Za-z-]+aceae$|^[A-Za-z-]+$/', $ScientificName)) {
+
+    //Hero Header Section for family and genus//
+		echo '<header class="hero-taxon"> <h2>';
+		echo $FormattedDisplayName;
+		echo '</h2><p class="common-name">';
+		echo $CommonName;
+		echo '</p></header>';
+	} else { 
+
+// Hero Header Section for all other names
+echo '<header class="hero-taxon">';
+
+    // 1. Taxon Title & Common Name (Top Text)
+    echo '<h2>' . $FormattedDisplayName . '</h2>';
+    echo '<p class="common-name">' . $CommonName . '</p>';
+
+    // 2. Top Jump Bar (Now placed at the bottom, right above the border line)
+    echo '<nav class="eflora-jump-bar" aria-label="Taxon Section Jump Links">';
+    echo '<span class="jump-label">Jump to:</span>';
+    echo '<ul class="jump-links">';
+    echo '<li><a href="#section-images">Images</a></li>';
+    echo '<li><a href="#section-distribution">Distribution</a></li>';
+    echo '<li><a href="#section-specimens">Specimens</a></li>';
+    echo '<li><a href="#section-links">Links</a></li>';
+    echo '</ul></nav>';
+
+echo '</header>';
+	}
+  ?>
+
+
 <?php
 	if (isset($HasKey)){ echo "<p><b><a href='/eflora/eflora_keys.php?key=".$TID."'>Key to ".$ScientificName."</a></b></p>"; }
 ?>
@@ -3535,6 +3604,10 @@ document.addEventListener('DOMContentLoaded', function() {
     
     <!-- This section will now span the full width if $hasMedia is false -->
     <article class="treatment-text data-section">
+<!-- Target Section Examples -->
+		<section id="section-description" class="data-section">
+    <!-- Content -->
+
         <h3>Treatment Description</h3>
         <p><strong><?php echo $efloraStatus; ?></strong></p>
         <div class="morphology">
@@ -3613,6 +3686,8 @@ document.addEventListener('DOMContentLoaded', function() {
 
 
             </div>
+
+		</section>
 
             <!-- Taxa Dropdown -->
             <div class="search-group" style="margin-top:30px;">
@@ -3840,6 +3915,7 @@ if ($hasMedia):
 
 
 
+
     <!-- CITATION -->
     <footer class="treatment-citation" style="margin-top:40px; padding: 20px; background: #eee; border-left: 5px solid var(--ef-blue);">
 	<p><strong>Citation for this treatment:</strong> 
@@ -3881,8 +3957,22 @@ echo "        </a></section>";
 <?php 
 	} else {
 ?>
+<!-- Middle Jump Bar -->
+<nav class="eflora-jump-bar" aria-label="Taxon Section Jump Links - Middle">
+    <span class="jump-label">Jump to:</span>
+    <ul class="jump-links">
+        <li><a href="#section-description">Description</a></li>
+        <li><a href="#section-distribution">Distribution</a></li>
+        <li><a href="#section-specimens">Specimens</a></li>
+        <li><a href="#section-links">Links</a></li>
+    </ul>
+</nav>
+
+
     <!-- CALPHOTOS RESPONSIVE GALLERY -->
-    <section class="photo-gallery-section">
+	<section class="photo-gallery-section">
+	   <section id="section-images" class="data-section">
+		<!-- Content -->
         <h3 class="center-text">Images courtesy of CalPhotos</h3>
         <div class="i-align">
 <?php 
@@ -3972,13 +4062,20 @@ if (!empty($splitcontents)){
 
 ?>
         </div>
-    </section>
+	   </section>
+	</section>
+
+
 
     <!-- MAPS SECTION (Interactive hides on mobile) -->
     <section class="map-display-grid">
         <div class="static-map-box center-text data-section">
+
+			<section id="section-distribution" class="data-section">
+			<h3>eFlora Distribution Map</h3>
+
  
-			<h4>This map presents a visual display of a taxonâ€™s distribution in the geographic subdivisions (bioregions) of California as indicated by the Jepson eFlora author. 
+			<h4>This map presents a visual display of a taxonÕs distribution in the geographic subdivisions (bioregions) of California as indicated by the Jepson eFlora author. 
 			</h4>
 <h4><?php echo "<i>$ScientificName</i>&nbsp;&nbsp;&nbsp;&nbsp;";?>
  <?php
@@ -3989,18 +4086,22 @@ if (!empty($splitcontents)){
 <p>(Note: any qualifiers in the taxon distribution description, such as 'northern', 'southern', 'adjacent' etc., are not reflected in the map above, and in some cases indication of a taxon in a subdivision is based on a single collection or author-verified occurrence).
 </p>
 
+			</section>
         </div>
         
 
 
     <!-- RIGHT COLUMN: Specimen Map & Phenology -->
     <div class="bottom-column-right">
-        
+
+	  <section id="section-specimens" class="data-section">
+
         <!-- Box 3: Specimen Map & Text -->
         <section class="data-section specimen-map-container">
             <!-- Map hides on mobile via CSS -->
+
             <div class="interactive-map-wrapper">
-            <h3>Specimen Distribution (Interactive)</h3>
+            <h3>Specimen Distribution Map (Interactive)</h3>
 <b><a name="EFMAP" id="EFMAP"></a>MAP CONTROLS</b>
 <br>1. You can change the display of the base map in the upper right-hand corner.
 <br>2. County and Jepson bioregions can be turned off and on by using the check boxes in the control box.
@@ -5325,7 +5426,7 @@ $.getJSON(CABND ,function(data){
 
 
             </div>
-        </section>
+          </section>
 
         <!-- Box 4: Phenology / Heath Bar (Below Specimen Map Text) -->
         <section class="data-section phenology-box">
@@ -5358,9 +5459,10 @@ $.getJSON(CABND ,function(data){
             </ul>
 
         </section>
+	  </section>
 
-
-    <!-- EXTERNAL LINKS & PHENOLOGY -->
+	  <section id="section-links" class="data-section">
+     <!-- EXTERNAL LINKS & PHENOLOGY -->
 		<div class="links-legend-grid">
             <h3>External Resources</h3>
             <ul style="list-style: none; padding: 0;">
@@ -5495,6 +5597,7 @@ $displayName = htmlspecialchars($ScientificName);
             </ul>
 
 	    </div>
+	  </section>
 
 
     </div>
@@ -5504,6 +5607,18 @@ $displayName = htmlspecialchars($ScientificName);
 
     <!-- SEPARATOR BAR HERE -->
     <hr class="footer-separator">
+
+<!-- Bottom Jump Bar -->
+<nav class="eflora-jump-bar" aria-label="Taxon Section Jump Links - Bottom">
+    <span class="jump-label">Jump to:</span>
+    <ul class="jump-links">
+        <li><a href="#section-description">Description</a></li>
+        <li><a href="#section-images">Images</a></li>
+        <li><a href="#section-distribution">Distribution</a></li>
+        <li><a href="#section-specimens">Specimens</a></li>
+    </ul>
+</nav>
+
 
     <!-- Feedback CTA -->
     <section class="feedback-section center-text">
