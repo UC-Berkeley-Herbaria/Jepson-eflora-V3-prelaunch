@@ -1153,14 +1153,13 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 		//echo "Taxon not recognized NAME=".$TaxonName;
 		header("Location: search_icpn.php?name=".$TaxonName, true, 301);
 		exit();
- }
- else{
+ } else{
 	//get previous and next info based on ID
 		$previousID = $ID-1;
 		$nextID = $ID+1;
 
 		if (!empty($previousID)){
-			$sql = "SELECT sortID, TaxonID FROM eflora_taxonomy WHERE sortID=".$previousID." ";
+			$sql = "SELECT sortID, TaxonID, speciesName, infraName FROM eflora_taxonomy WHERE sortID=".$previousID." ";
 
 //BEGIN temporary bug fix lines to add when needed
 //echo '<br>'.$previousID.'<br>';
@@ -1191,6 +1190,21 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 				else{
 					$previousTaxonID = null;
 				}
+
+				if (!empty($row['SpeciesID'])){
+					$previousSpecID = $row['SpeciesID'];
+				}
+				else{
+					$previousSpecID = null;
+				}
+
+				if (!empty($row['infraName'])){
+					$previousInfraName = $row['infraName'];
+				}
+				else{
+					$previousInfraName = null;
+				}
+
 			}
 		}
 
@@ -1230,7 +1244,7 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 
 			}
 		}
-	}
+  }
 //END previousID AND nextID SQL QUERY ASSIGNMENT
 
 
@@ -2319,7 +2333,7 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
   //Species has neither GeneraInFamily, SpeciesInGenus nor ScientificEditor
   //SpeciesInGenus, GeneraInFamily and ScientificEditor removed
 		if (!empty($TID)){
-				$sql = "SELECT t.TaxonID, t.FamilyID";
+				$sql = "SELECT t.TaxonID, t.FamilyID, t.speciesName";
 //Species
 				$sql.= ", s.TaxonID, s.ScientificName, s.TaxonAuthor, s.CommonName";
 				$sql.= ", s.TJM2Author, s.Habit, s.PlantBody, s.Stem";
@@ -2357,8 +2371,8 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 //    echo $key."<br>";
 //}
 //END temp bug fix lines
-				if (!empty($row['ScientificName'])){
-					$SpecScientificName = $row['ScientificName'];
+				if (!empty($row['speciesName'])){
+					$SpecScientificName = $row['speciesName'];
 				}
 				else{
 					$SpecScientificName = null;
@@ -3196,7 +3210,7 @@ document.addEventListener('DOMContentLoaded', function() {
         <div class="taxonomy-row">
             <strong>Genus: <?php echo $GenScientificName; ?></strong>
 			<?php if($GenScientificName !== $ScientificName) echo'<button class="tax-toggle-btn" id="genuslink">View Description</button>';?>
-            <?php if($GenHasKey) echo "<a href='/eflora/eflora_keys.php?key=$GenTaxonID'>Dichotomous Key</a>"; ?>
+            <?php if($GenHasKey) echo "<div class='center-text'><a href='/eflora/eflora_keys.php?key=$GenTaxonID'>Dichotomous Key</a></div>"; ?>
         </div>
 
         <div id="genusdesc" class="initiallyHidden">
@@ -3264,72 +3278,227 @@ document.addEventListener('DOMContentLoaded', function() {
     <?php endif; ?>
 
 	<?php if (!empty($SpecScientificName)): ?>
-        <div class="taxonomy-row">
-            <strong>Species: <?php echo $SpecScientificName; ?></strong>
-			<?php if($SpecScientificName !== $ScientificName) echo'<button class="tax-toggle-btn" id="specieslink">View Description</button>';?>
-            <?php if($SpecHasKey) echo "<a href='/eflora/eflora_keys.php?key=$SpecTaxonID'>Dichotomous Key</a>"; ?>
-        </div>
-
-        <div id="speciesdesc" class="initiallyHidden">
+		<?php if (strpos($ScientificName, 'var.') !== false || strpos($ScientificName, 'subsp.') !== false || strpos($ScientificName, 'nothosubsp.') !== false): ?>
+		    <!-- Show this text when it contains 'var.' or 'subsp.' -->
 		<?php
-		if (!empty($SpecScientificName)){
-			echo "<p>";
-			if (!empty($SpecCommonName)){ echo "<b>Common Name:</b> {$SpecCommonName}<br>";}
-			if (!empty($SpecHabit)){ echo "<b>Habit:</b> {$SpecHabit} ";}
-			if (!empty($SpecPlantBody)){ echo "<b>Plant Body:</b> {$SpecPlantBody} ";}
-			if (!empty($SpecStem)){ echo "<b>Stem:</b> {$SpecStem} ";}
-			if (!empty($SpecSterileStem)){ echo "<b>Sterile Stem:</b> {$SpecSterileStem} ";}
-			if (!empty($SpecFertileStem)){ echo "<b>Fertile Stem:</b> {$SpecFertileStem} ";}
-			if (!empty($SpecLeaf)){ echo "<b>Leaf:</b> {$SpecLeaf} ";}
-			if (!empty($SpecSpines)){ echo "<b>Spines:</b> {$SpecSpines} ";}
-			if (!empty($SpecInflorescence)){ echo "<b>Inflorescence:</b> {$SpecInflorescence} ";}
-			if (!empty($SpecStaminateHead)){ echo "<b>Staminate Head:</b> {$SpecStaminateHead} ";}
-			if (!empty($SpecRayOrPistillateFlower)){ echo "<b>Ray Or Pistillate Flower:</b> {$SpecRayOrPistillateFlower} ";}
-			if (!empty($SpecPistillateHead)){ echo "<b>Pistillate Head:</b> {$SpecPistillateHead} ";}
-			if (!empty($SpecStaminateInflorescence)){ echo "<b>Staminate Inflorescence:</b> {$SpecStaminateInflorescence} ";}
-			if (!empty($SpecPistillateOrBisexualInflorescence)){ echo "<b>Pistillate Or Bisexual Inflorescence:</b> {$SpecPistillateOrBisexualInflorescence} ";}
-			if (!empty($SpecPistillateInflorescence)){ echo "<b>Pistillate Inflorescence:</b> {$SpecPistillateInflorescence} ";}
-			if (!empty($SpecSpikelet)){ echo "<b>Spikelet:</b> {$SpecSpikelet} ";}
-			if (!empty($SpecFertileSpikelet)){ echo "<b>Fertile Spikelet:</b> {$SpecFertileSpikelet} ";}
-			if (!empty($SpecSterileSpikelet)){ echo "<b>Sterile Spikelet:</b> {$SpecSterileSpikelet} ";}
-			if (!empty($SpecDistalSpikelet)){ echo "<b>Distal Spikelet:</b> {$SpecDistalSpikelet} ";}
-			if (!empty($SpecCentralSpikelet)){ echo "<b>Central Spikelet:</b> {$SpecCentralSpikelet}";}
-			if (!empty($SpecLateralSpikelet)){ echo "<b>Lateral Spikelet:</b> {$SpecLateralSpikelet}";}
-			if (!empty($SpecStaminateSpikelet)){ echo "<b>Staminate Spikelet:</b> {$SpecStaminateSpikelet} ";}
-			if (!empty($SpecPistillateSpikelet)){ echo "<b>Pistillate Spikelet:</b> {$SpecPistillateSpikelet} ";}
-			if (!empty($SpecFlower)){ echo "<b>Flower:</b> {$SpecFlower} ";}
-			if (!empty($SpecStaminateFlower)){ echo "<b>Staminate Flower:</b> {$SpecStaminateFlower} ";}
-			if (!empty($SpecPistillateFlower)){ echo "<b>Pistillate Flower:</b> {$SpecPistillateFlower} ";}
-			if (!empty($SpecRayFlower)){ echo "<b>Ray Flower:</b> {$SpecRayFlower} ";}
-			if (!empty($SpecDiskFlower)){ echo "<b>Disk Flower:</b> {$SpecDiskFlower} ";}
-			if (!empty($SpecCone)){ echo "<b>Cone:</b> {$SpecCone} ";}
-			if (!empty($SpecPollenCone)){ echo "<b>Pollen Cone:</b> {$SpecPollenCone} ";}
-			if (!empty($SpecSeedCone)){ echo "<b>Seed Cone:</b> {$SpecSeedCone} ";}
-			if (!empty($SpecBisexualFlower)){ echo "<b>Bisexual Flower:</b> {$SpecBisexualFlower} ";}
-			if (!empty($SpecFruit)){ echo "<b>Fruit:</b> {$SpecFruit} ";}
-			if (!empty($SpecSeed)){ echo "<b>Seed:</b> {$SpecSeed} ";}
-			if (!empty($SpecSporangia)){ echo "<b>Sporangia:</b> {$SpecSporangia} ";}
-			if (!empty($SpecSporangiumCase)){ echo "<b>Sporangium Case:</b> {$SpecSporangiumCase} ";}
-			if (!empty($SpecMaleSporangiumCase)){ echo "<b>Male Sporangium Case:</b> {$SpecMaleSporangiumCase} ";}
-			if (!empty($SpecFemaleSporangiumCase)){ echo "<b>Female Sporangium Case:</b> {$SpecFemaleSporangiumCase} ";}
-			if (!empty($SpecSpores)){ echo "<b>Spores:</b> {$SpecSpores} ";}
-			if (!empty($SpecChromosomes)){ echo "<b>Chromosomes:</b> {$SpecChromosomes}";}
-			echo "</p>"; //break between morphological fields and rest of fields
-			echo "<p>";
-			if (!empty($SpecEtymology)){ echo "<b>Etymology:</b> {$SpecEtymology} ";}
-			if (!empty($SpecToxicity)){ echo "<b>Toxicity:</b> {$SpecToxicity} ";}
-			if (!empty($SpecNote)){ echo "<b>Note:</b> {$SpecNote} ";}
-			echo "</p>";
-			echo "<p>";
-			if (!empty($SpecUnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$SpecUnabridgedNote}</span><br>";}
-			if (!empty($SpecTJM2Author)){ echo "<b>eFlora Treatment Author:</b> {$SpecTJM2Author}<br>";}
-			if (!empty($SpecReference)){ echo "<b>Reference:</b> {$SpecReference}<br>";}
-			if (!empty($SpecUnabridgedReference)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$SpecUnabridgedReference}</span><br>";}
-			echo "</p>";
-		}
-		?>
-        </div>
-    <?php endif; ?>
+				$sql = "SELECT sortID, SpeciesID FROM eflora_taxonomy WHERE TaxonID=".$TID." ";
+	
+	//BEGIN temporary bug fix lines to add when needed
+	//echo '<br>'.$sql.'<br>';
+	//echo '<br>'.$nextID.'<br>';
+	
+				if(!mysqli_query($db, $sql)){
+					die('Error: ' . mysqli_error($db));
+				}
+	
+				$result = mysqli_query($db, $sql);
+	
+	//query and assign variable to each table field
+				while ($row = mysqli_fetch_array($result)) {
+	
+	// If no results are found, echo a message and stop
+					if ($row == false){
+						echo '<b>The next ID was not found in the eflora taxon table.<br>Try another search.<br>';
+	    				exit;
+					}
+	//BEGIN temporary bug fix lines to add when needed
+	//foreach ($row as $key=>$value) {
+	//    echo $key."<br>";
+	//}
+	//END temp bug fix lines
+					// if (!empty($row(['TaxonID'])){    jg commented out
+					if (!empty($row['SpeciesID'])){
+						$currentSpecID = $row['SpeciesID'];
+					}
+					else{
+						$currentSpecID = null;
+					}
+	
+				}
+				$prevSort = $ID-1;
+				$sql = "SELECT sortID, SpeciesID FROM eflora_taxonomy WHERE sortID=".$prevSort." ";
+	
+	//BEGIN temporary bug fix lines to add when needed
+	//echo '<br>'.$sql.'<br>';
+	//echo '<br>'.$nextID.'<br>';
+	
+				if(!mysqli_query($db, $sql)){
+					die('Error: ' . mysqli_error($db));
+				}
+	
+				$result = mysqli_query($db, $sql);
+	
+	//query and assign variable to each table field
+				while ($row = mysqli_fetch_array($result)) {
+	
+	// If no results are found, echo a message and stop
+					if ($row == false){
+						echo '<b>The next ID was not found in the eflora taxon table.<br>Try another search.<br>';
+	    				exit;
+					}
+	//BEGIN temporary bug fix lines to add when needed
+	//foreach ($row as $key=>$value) {
+	//    echo $key."<br>";
+	//}
+	//END temp bug fix lines
+					// if (!empty($row(['TaxonID'])){    jg commented out
+					if (!empty($row['SpeciesID'])){
+						$prevSpecID = $row['SpeciesID'];
+					}
+					else{
+						$prevSpecID = null;
+					}
+	
+				}
+
+
+
+
+			?>
+			
+			<?php if ($currentSpecID == $prevSpecID): ?>
+        		<div class="taxonomy-row">
+			        <strong>Species: <?php echo $SpecScientificName; ?></strong>
+					<button class="tax-toggle-btn" id="specieslink">View Description</button>
+			        <?php if($SpecHasKey) echo "<div class='center-text'><a href='/eflora/eflora_keys.php?key=$SpecTaxonID'>Dichotomous Key</a></div>"; ?>
+				</div>
+			
+			    <div id="speciesdesc" class="initiallyHidden">
+					<?php
+					if (!empty($SpecScientificName)){
+						echo "<p>";
+						if (!empty($SpecCommonName)){ echo "<b>Common Name:</b> {$SpecCommonName}<br>";}
+						if (!empty($SpecHabit)){ echo "<b>Habit:</b> {$SpecHabit} ";}
+						if (!empty($SpecPlantBody)){ echo "<b>Plant Body:</b> {$SpecPlantBody} ";}
+						if (!empty($SpecStem)){ echo "<b>Stem:</b> {$SpecStem} ";}
+						if (!empty($SpecSterileStem)){ echo "<b>Sterile Stem:</b> {$SpecSterileStem} ";}
+						if (!empty($SpecFertileStem)){ echo "<b>Fertile Stem:</b> {$SpecFertileStem} ";}
+						if (!empty($SpecLeaf)){ echo "<b>Leaf:</b> {$SpecLeaf} ";}
+						if (!empty($SpecSpines)){ echo "<b>Spines:</b> {$SpecSpines} ";}
+						if (!empty($SpecInflorescence)){ echo "<b>Inflorescence:</b> {$SpecInflorescence} ";}
+						if (!empty($SpecStaminateHead)){ echo "<b>Staminate Head:</b> {$SpecStaminateHead} ";}
+						if (!empty($SpecRayOrPistillateFlower)){ echo "<b>Ray Or Pistillate Flower:</b> {$SpecRayOrPistillateFlower} ";}
+						if (!empty($SpecPistillateHead)){ echo "<b>Pistillate Head:</b> {$SpecPistillateHead} ";}
+						if (!empty($SpecStaminateInflorescence)){ echo "<b>Staminate Inflorescence:</b> {$SpecStaminateInflorescence} ";}
+						if (!empty($SpecPistillateOrBisexualInflorescence)){ echo "<b>Pistillate Or Bisexual Inflorescence:</b> {$SpecPistillateOrBisexualInflorescence} ";}
+						if (!empty($SpecPistillateInflorescence)){ echo "<b>Pistillate Inflorescence:</b> {$SpecPistillateInflorescence} ";}
+						if (!empty($SpecSpikelet)){ echo "<b>Spikelet:</b> {$SpecSpikelet} ";}
+						if (!empty($SpecFertileSpikelet)){ echo "<b>Fertile Spikelet:</b> {$SpecFertileSpikelet} ";}
+						if (!empty($SpecSterileSpikelet)){ echo "<b>Sterile Spikelet:</b> {$SpecSterileSpikelet} ";}
+						if (!empty($SpecDistalSpikelet)){ echo "<b>Distal Spikelet:</b> {$SpecDistalSpikelet} ";}
+						if (!empty($SpecCentralSpikelet)){ echo "<b>Central Spikelet:</b> {$SpecCentralSpikelet}";}
+						if (!empty($SpecLateralSpikelet)){ echo "<b>Lateral Spikelet:</b> {$SpecLateralSpikelet}";}
+						if (!empty($SpecStaminateSpikelet)){ echo "<b>Staminate Spikelet:</b> {$SpecStaminateSpikelet} ";}
+						if (!empty($SpecPistillateSpikelet)){ echo "<b>Pistillate Spikelet:</b> {$SpecPistillateSpikelet} ";}
+						if (!empty($SpecFlower)){ echo "<b>Flower:</b> {$SpecFlower} ";}
+						if (!empty($SpecStaminateFlower)){ echo "<b>Staminate Flower:</b> {$SpecStaminateFlower} ";}
+						if (!empty($SpecPistillateFlower)){ echo "<b>Pistillate Flower:</b> {$SpecPistillateFlower} ";}
+						if (!empty($SpecRayFlower)){ echo "<b>Ray Flower:</b> {$SpecRayFlower} ";}
+						if (!empty($SpecDiskFlower)){ echo "<b>Disk Flower:</b> {$SpecDiskFlower} ";}
+						if (!empty($SpecCone)){ echo "<b>Cone:</b> {$SpecCone} ";}
+						if (!empty($SpecPollenCone)){ echo "<b>Pollen Cone:</b> {$SpecPollenCone} ";}
+						if (!empty($SpecSeedCone)){ echo "<b>Seed Cone:</b> {$SpecSeedCone} ";}
+						if (!empty($SpecBisexualFlower)){ echo "<b>Bisexual Flower:</b> {$SpecBisexualFlower} ";}
+						if (!empty($SpecFruit)){ echo "<b>Fruit:</b> {$SpecFruit} ";}
+						if (!empty($SpecSeed)){ echo "<b>Seed:</b> {$SpecSeed} ";}
+						if (!empty($SpecSporangia)){ echo "<b>Sporangia:</b> {$SpecSporangia} ";}
+						if (!empty($SpecSporangiumCase)){ echo "<b>Sporangium Case:</b> {$SpecSporangiumCase} ";}
+						if (!empty($SpecMaleSporangiumCase)){ echo "<b>Male Sporangium Case:</b> {$SpecMaleSporangiumCase} ";}
+						if (!empty($SpecFemaleSporangiumCase)){ echo "<b>Female Sporangium Case:</b> {$SpecFemaleSporangiumCase} ";}
+						if (!empty($SpecSpores)){ echo "<b>Spores:</b> {$SpecSpores} ";}
+						if (!empty($SpecChromosomes)){ echo "<b>Chromosomes:</b> {$SpecChromosomes}";}
+						echo "</p>"; //break between morphological fields and rest of fields
+						echo "<p>";
+						if (!empty($SpecEtymology)){ echo "<b>Etymology:</b> {$SpecEtymology} ";}
+						if (!empty($SpecToxicity)){ echo "<b>Toxicity:</b> {$SpecToxicity} ";}
+						if (!empty($SpecNote)){ echo "<b>Note:</b> {$SpecNote} ";}
+						echo "</p>";
+						echo "<p>";
+						if (!empty($SpecUnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$SpecUnabridgedNote}</span><br>";}
+						if (!empty($SpecTJM2Author)){ echo "<b>eFlora Treatment Author:</b> {$SpecTJM2Author}<br>";}
+						if (!empty($SpecReference)){ echo "<b>Reference:</b> {$SpecReference}<br>";}
+						if (!empty($SpecUnabridgedReference)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$SpecUnabridgedReference}</span><br>";}
+						echo "</p>";
+					}
+					?>
+				</div>
+			<?php elseif ( ($currentSpecID !== $previousSpecID) && ( (empty($previousInfraName)) || strpos($ScientificName, 'var.') !== false || strpos($ScientificName, 'subsp.') !== false || strpos($ScientificName, 'nothosubsp.') !== false) ): ?>
+
+        		<div class="taxonomy-row">
+					<strong>XXSpecies: <?php echo $SpecScientificName; ?></strong>
+					<?php if($SpecHasKey) echo "<div class='center-text'><a href='/eflora/eflora_keys.php?key=$SpecTaxonID'>Dichotomous Key</a></div>"; ?>
+				</div>
+
+			<?php endif; ?>
+		<?php elseif ($SpecScientificName !== $ScientificName): ?>
+    <!-- Show this alternate text when the first condition is false, but this one is true -->
+    <!-- Alternate text for when ScientificName does not match SpecScientificName. -->
+        	<div class="taxonomy-row">
+		        <strong>Species: <?php echo $SpecScientificName; ?></strong>
+		        <?php if($SpecHasKey) echo "<div class='center-text'><a href='/eflora/eflora_keys.php?key=$SpecTaxonID'>Dichotomous Key</a></div>"; ?>
+			</div>
+		
+		    <div id="speciesdesc" class="initiallyHidden">
+				<?php
+				if (!empty($SpecScientificName)){
+					echo "<p>";
+					if (!empty($SpecCommonName)){ echo "<b>Common Name:</b> {$SpecCommonName}<br>";}
+					if (!empty($SpecHabit)){ echo "<b>Habit:</b> {$SpecHabit} ";}
+					if (!empty($SpecPlantBody)){ echo "<b>Plant Body:</b> {$SpecPlantBody} ";}
+					if (!empty($SpecStem)){ echo "<b>Stem:</b> {$SpecStem} ";}
+					if (!empty($SpecSterileStem)){ echo "<b>Sterile Stem:</b> {$SpecSterileStem} ";}
+					if (!empty($SpecFertileStem)){ echo "<b>Fertile Stem:</b> {$SpecFertileStem} ";}
+					if (!empty($SpecLeaf)){ echo "<b>Leaf:</b> {$SpecLeaf} ";}
+					if (!empty($SpecSpines)){ echo "<b>Spines:</b> {$SpecSpines} ";}
+					if (!empty($SpecInflorescence)){ echo "<b>Inflorescence:</b> {$SpecInflorescence} ";}
+					if (!empty($SpecStaminateHead)){ echo "<b>Staminate Head:</b> {$SpecStaminateHead} ";}
+					if (!empty($SpecRayOrPistillateFlower)){ echo "<b>Ray Or Pistillate Flower:</b> {$SpecRayOrPistillateFlower} ";}
+					if (!empty($SpecPistillateHead)){ echo "<b>Pistillate Head:</b> {$SpecPistillateHead} ";}
+					if (!empty($SpecStaminateInflorescence)){ echo "<b>Staminate Inflorescence:</b> {$SpecStaminateInflorescence} ";}
+					if (!empty($SpecPistillateOrBisexualInflorescence)){ echo "<b>Pistillate Or Bisexual Inflorescence:</b> {$SpecPistillateOrBisexualInflorescence} ";}
+					if (!empty($SpecPistillateInflorescence)){ echo "<b>Pistillate Inflorescence:</b> {$SpecPistillateInflorescence} ";}
+					if (!empty($SpecSpikelet)){ echo "<b>Spikelet:</b> {$SpecSpikelet} ";}
+					if (!empty($SpecFertileSpikelet)){ echo "<b>Fertile Spikelet:</b> {$SpecFertileSpikelet} ";}
+					if (!empty($SpecSterileSpikelet)){ echo "<b>Sterile Spikelet:</b> {$SpecSterileSpikelet} ";}
+					if (!empty($SpecDistalSpikelet)){ echo "<b>Distal Spikelet:</b> {$SpecDistalSpikelet} ";}
+					if (!empty($SpecCentralSpikelet)){ echo "<b>Central Spikelet:</b> {$SpecCentralSpikelet}";}
+					if (!empty($SpecLateralSpikelet)){ echo "<b>Lateral Spikelet:</b> {$SpecLateralSpikelet}";}
+					if (!empty($SpecStaminateSpikelet)){ echo "<b>Staminate Spikelet:</b> {$SpecStaminateSpikelet} ";}
+					if (!empty($SpecPistillateSpikelet)){ echo "<b>Pistillate Spikelet:</b> {$SpecPistillateSpikelet} ";}
+					if (!empty($SpecFlower)){ echo "<b>Flower:</b> {$SpecFlower} ";}
+					if (!empty($SpecStaminateFlower)){ echo "<b>Staminate Flower:</b> {$SpecStaminateFlower} ";}
+					if (!empty($SpecPistillateFlower)){ echo "<b>Pistillate Flower:</b> {$SpecPistillateFlower} ";}
+					if (!empty($SpecRayFlower)){ echo "<b>Ray Flower:</b> {$SpecRayFlower} ";}
+					if (!empty($SpecDiskFlower)){ echo "<b>Disk Flower:</b> {$SpecDiskFlower} ";}
+					if (!empty($SpecCone)){ echo "<b>Cone:</b> {$SpecCone} ";}
+					if (!empty($SpecPollenCone)){ echo "<b>Pollen Cone:</b> {$SpecPollenCone} ";}
+					if (!empty($SpecSeedCone)){ echo "<b>Seed Cone:</b> {$SpecSeedCone} ";}
+					if (!empty($SpecBisexualFlower)){ echo "<b>Bisexual Flower:</b> {$SpecBisexualFlower} ";}
+					if (!empty($SpecFruit)){ echo "<b>Fruit:</b> {$SpecFruit} ";}
+					if (!empty($SpecSeed)){ echo "<b>Seed:</b> {$SpecSeed} ";}
+					if (!empty($SpecSporangia)){ echo "<b>Sporangia:</b> {$SpecSporangia} ";}
+					if (!empty($SpecSporangiumCase)){ echo "<b>Sporangium Case:</b> {$SpecSporangiumCase} ";}
+					if (!empty($SpecMaleSporangiumCase)){ echo "<b>Male Sporangium Case:</b> {$SpecMaleSporangiumCase} ";}
+					if (!empty($SpecFemaleSporangiumCase)){ echo "<b>Female Sporangium Case:</b> {$SpecFemaleSporangiumCase} ";}
+					if (!empty($SpecSpores)){ echo "<b>Spores:</b> {$SpecSpores} ";}
+					if (!empty($SpecChromosomes)){ echo "<b>Chromosomes:</b> {$SpecChromosomes}";}
+					echo "</p>"; //break between morphological fields and rest of fields
+					echo "<p>";
+					if (!empty($SpecEtymology)){ echo "<b>Etymology:</b> {$SpecEtymology} ";}
+					if (!empty($SpecToxicity)){ echo "<b>Toxicity:</b> {$SpecToxicity} ";}
+					if (!empty($SpecNote)){ echo "<b>Note:</b> {$SpecNote} ";}
+					echo "</p>";
+					echo "<p>";
+					if (!empty($SpecUnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$SpecUnabridgedNote}</span><br>";}
+					if (!empty($SpecTJM2Author)){ echo "<b>eFlora Treatment Author:</b> {$SpecTJM2Author}<br>";}
+					if (!empty($SpecReference)){ echo "<b>Reference:</b> {$SpecReference}<br>";}
+					if (!empty($SpecUnabridgedReference)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$SpecUnabridgedReference}</span><br>";}
+					echo "</p>";
+				}
+				?>
+		    </div>
+		<?php endif; ?>
+	<?php endif; ?>
 
   </section>
   <?php endif; ?>
@@ -3690,12 +3859,15 @@ echo "        <a class=\"googleForm\" href=\"https://docs.google.com/forms/d/e/1
 echo "            Send us your feedback! Community input helps improve the Jepson eFlora.";
 echo "        </a></section>";
 
+?>
 
+<!-- Footer -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora-footer.php'); ?>
 
-echo "<!-- Footer -->";
-echo '<?php include($_SERVER[\'DOCUMENT_ROOT\'].\'/eflora/common/php/eflora-footer.php\'); ?>';echo '<?php include($_SERVER[\'DOCUMENT_ROOT\'].\'/eflora/common/php/eflora-footer.php\'); ?>';
-echo "</body></html>";
+</body>
+</html>
 
+<?php 
 	} else {
 ?>
     <!-- CALPHOTOS RESPONSIVE GALLERY -->
