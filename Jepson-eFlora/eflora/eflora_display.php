@@ -596,20 +596,20 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 		} else {
 
 			// 3. Fallback: TaxonID not found in eflora_taxa. Check eflora_synonymy.
-			$syn_sql = "SELECT AcceptedName FROM eflora_synonymy WHERE TaxonID = '" . mysqli_real_escape_string($conn, $TaxonID) . "' LIMIT 1";
-			$syn_result = mysqli_query($conn, $syn_sql);
+			$syn_sql = "SELECT AcceptedNameTID FROM eflora_synonymy WHERE TaxonID = '" . $TaxonID . "' LIMIT 1";
+			$syn_result = mysqli_query($db, $syn_sql);
 			
 			if ($syn_result && mysqli_num_rows($syn_result) > 0) {
 			    $syn_row = mysqli_fetch_assoc($syn_result);
-			    $acceptedName = trim($syn_row['AcceptedName']);
+			    $acceptedTID = trim($syn_row['AcceptedNameTID']);
 			    
 			    // 4. Forward/Redirect to the search page URL with the accepted name
-			    if (!empty($acceptedName)) {
-			        $encodedName = urlencode($acceptedName);
-			        header("Location: https://herbariadb.berkeley.edu/eflora/search_eflora.php?name=" . $encodedName);
+			    if (!empty($acceptedTID)) {
+			        $encodedTID = urlencode($acceptedTID);
+			        header("Location: https://herbariadb.berkeley.edu/eflora/eflora_display.php?tid=" . $encodedTID);
 			        exit(); // Always call exit after a header redirect to stop further script execution
 			    }
-			}
+			} 
 			
 			// 5. Optional: If it's not in synonymy either, handle the "not found" error 
 			// (This is what caused your initial PHP Notice / 9999999 error earlier)
@@ -1160,17 +1160,17 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 		} else {
 
 			// 3. Fallback: TaxonID not found in eflora_taxa. Check eflora_synonymy.
-			$syn_sql = "SELECT AcceptedName FROM eflora_synonymy WHERE AcceptedName = '" . mysqli_real_escape_string($conn, $TaxonName) . "' ";
-			$syn_result = mysqli_query($conn, $syn_sql);
+			$syn_sql = "SELECT AcceptedNameTID FROM eflora_synonymy WHERE ScientificName LIKE '" . $TaxonName . "' ";
+			$syn_result = mysqli_query($db, $syn_sql);
 			
 			if ($syn_result && mysqli_num_rows($syn_result) > 0) {
 			    $syn_row = mysqli_fetch_assoc($syn_result);
-			    $acceptedName = trim($syn_row['AcceptedName']);
+			    $acceptedTID = trim($syn_row['AcceptedNameTID']);
 			    
 			    // 4. Forward/Redirect to the search page URL with the accepted name
-			    if (!empty($acceptedName)) {
-			        $encodedName = urlencode($acceptedName);
-			        header("Location: https://herbariadb.berkeley.edu/eflora/search_eflora.php?name=" . $encodedName);
+			    if (!empty($acceptedTID)) {
+			        $encodedTID = urlencode($acceptedTID);
+			        header("Location: https://herbariadb.berkeley.edu/eflora/eflora_display.php?tid=" . $acceptedTID);
 			        exit(); // Always call exit after a header redirect to stop further script execution
 			    }
 			}
@@ -4075,7 +4075,7 @@ if (!empty($splitcontents)){
 			<h3>eFlora Distribution Map</h3>
 
  
-			<h4>This map presents a visual display of a taxon’s distribution in the geographic subdivisions (bioregions) of California as indicated by the Jepson eFlora author. 
+			<h4>This map presents a visual display of a taxon&prime;s distribution in the geographic subdivisions (bioregions) of California as indicated by the Jepson eFlora author. 
 			</h4>
 <h4><?php echo "<i>$ScientificName</i>&nbsp;&nbsp;&nbsp;&nbsp;";?>
  <?php
