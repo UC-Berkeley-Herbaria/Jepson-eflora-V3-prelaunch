@@ -3105,7 +3105,7 @@ document.addEventListener('DOMContentLoaded', function() {
 
     <!-- warning link -->
 <div class="center-text" style="margin-top: 30px;">
-    <p style="font-weight: bolder; color: #5c3160;">&rarr; The Jepson eFlora has migrated to a new URL.  During this week, users may notice some features are not fully accessible.  Please continue to use the feedback link during this transition time.</p>
+    <p style="font-weight: bolder; color: #5c3160;">&rarr; The <i>Jepson eFlora</i> has migrated to a new URL.  During this week, users may notice some features are not fully accessible.  Please continue to use the feedback link during this transition time.</p>
 </div>
 
 
@@ -3357,7 +3357,8 @@ document.addEventListener('DOMContentLoaded', function() {
 			?>
 			
 			<?php if ($currentSpecID == $prevSpecID): ?>
-        		<div class="taxonomy-row">
+				<!--this is stray </i> is added because there is some stray <i> in the above data somewhere-->
+        		</i><div class="taxonomy-row">
 			        <strong>Species: <?php echo $SpecScientificName; ?></strong>
 					<button class="tax-toggle-btn" id="specieslink">View Description</button>
 			        <?php if($SpecHasKey) echo "<div class='center-text'><a href='/eflora/eflora_keys.php?key=$SpecTaxonID'>Dichotomous Key</a></div>"; ?>
@@ -3423,9 +3424,10 @@ document.addEventListener('DOMContentLoaded', function() {
 					?>
 				</div>
 			<?php elseif ( ($currentSpecID !== $previousSpecID) && ( (empty($previousInfraName)) || strpos($ScientificName, 'var.') !== false || strpos($ScientificName, 'subsp.') !== false || strpos($ScientificName, 'nothosubsp.') !== false) ): ?>
-
+				<!--this is stray </i> is added because there is some stray <i> in the above data somewhere-->
+        		</i>
         		<div class="taxonomy-row">
-					<strong>XXSpecies: <?php echo $SpecScientificName; ?></strong>
+					<strong><strong>Species: <?php echo $SpecScientificName; ?></strong>
 					<?php if($SpecHasKey) echo "<div class='center-text'><a href='/eflora/eflora_keys.php?key=$SpecTaxonID'>Dichotomous Key</a></div>"; ?>
 				</div>
 
@@ -3433,8 +3435,10 @@ document.addEventListener('DOMContentLoaded', function() {
 		<?php elseif ($SpecScientificName !== $ScientificName): ?>
     <!-- Show this alternate text when the first condition is false, but this one is true -->
     <!-- Alternate text for when ScientificName does not match SpecScientificName. -->
-        	<div class="taxonomy-row">
-		        <strong>Species: <?php echo $SpecScientificName; ?></strong>
+				<!--this is stray </i> is added because there is some stray <i> in the above data somewhere-->
+        		</i>
+            	<div class="taxonomy-row">
+		        </i><strong>Species:<?php echo $SpecScientificName; ?></strong>
 		        <?php if($SpecHasKey) echo "<div class='center-text'><a href='/eflora/eflora_keys.php?key=$SpecTaxonID'>Dichotomous Key</a></div>"; ?>
 			</div>
 		
