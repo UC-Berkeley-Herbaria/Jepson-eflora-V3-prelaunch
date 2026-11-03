@@ -1,5 +1,5 @@
-
-$file="input_files/eflora_family_key.txt";
+	
+$file="input/eflora_family_key.txt";
 
 $file_expanded="output/eflora_family_key_expanded.txt";
 
@@ -2271,7 +2271,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<2>>Achene<<2>>!<u class="dotted" title="Dry, indehiscent, 1-seeded fruit from a 1-chambered ovary, sometimes winged, often appearing to be a naked seed. A 1-seeded dry fruit derived from an inferior ovary of > 1 carpel (e.g., Asteraceae, Dipsacaceae) is sometimes called a cypsela." >Achene</u>!){
 				}
-				if(s! <<2>>achene<<2>>!&nbsp;<div class="dropdown"><u class="dotted">achene</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/achene.jpg" class="large-image" alt="image missing" >Dry, indehiscent, 1-seeded fruit from a 1-chambered ovary, sometimes winged, often appearing to be a naked seed. A 1-seeded dry fruit derived from an inferior ovary of > 1 carpel (e.g., Asteraceae, Dipsacaceae) is sometimes called a cypsela.</div></div>!){
+				if(s! <<2>>achene<<2>>!&nbsp;<div class="dropdown"><u class="dotted">achene</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/achene.jpg" class="large-image" alt="image missing" >Dry, indehiscent, 1-seeded fruit from a 1-chambered ovary, sometimes winged, often appearing to be a naked seed. A 1-seeded dry fruit derived from an inferior ovary of > 1 carpel (e.g., Asteraceae, Dipsacaceae) is sometimes called a cypsela.</div></div>!){
 				}
 				if(s!<<3>>Achenes<<3>>!<u class="dotted" title="Dry, indehiscent, 1-seeded fruit from a 1-chambered ovary, sometimes winged, often appearing to be a naked seed. A 1-seeded dry fruit derived from an inferior ovary of > 1 carpel (e.g., Asteraceae, Dipsacaceae) is sometimes called a cypsela." >Achenes</u>!){
 				}
@@ -2283,11 +2283,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<5>>Acuminate<<5>>!<u class="dotted" title="Having a long-tapered, sharp tip, the sides concave." >Acuminate</u>!){
 				}
-				if(s! <<5>>acuminate<<5>>!&nbsp;<div class="dropdown"><u class="dotted">acuminate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/acuminate.jpg" class="large-image" alt="image missing" >Having a long-tapered, sharp tip, the sides concave.</div></div>!){
+				if(s! <<5>>acuminate<<5>>!&nbsp;<div class="dropdown"><u class="dotted">acuminate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/acuminate.jpg" class="large-image" alt="image missing" >Having a long-tapered, sharp tip, the sides concave.</div></div>!){
 				}
 				if(s!<<6>>Acute<<6>>!<u class="dotted" title="Having a short-tapered, sharp tip, the sides convex or straight and converging at less than a right angle." >Acute</u>!){
 				}
-				if(s! <<6>>acute<<6>>!&nbsp;<div class="dropdown"><u class="dotted">acute</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/acute.jpg" class="large-image" alt="image missing" >Having a short-tapered, sharp tip, the sides convex or straight and converging at less than a right angle.</div></div>!){
+				if(s! <<6>>acute<<6>>!&nbsp;<div class="dropdown"><u class="dotted">acute</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/acute.jpg" class="large-image" alt="image missing" >Having a short-tapered, sharp tip, the sides convex or straight and converging at less than a right angle.</div></div>!){
 				}
 				if(s!<<7>>Adaxial<<7>>!<u class="dotted" title="The side or surface of a structure toward the axis on which the structure is borne (e.g., the upper surface of a leaf, the inner surface of a petal)." >Adaxial</u>!){
 				}
@@ -2323,7 +2323,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<15>>Alternate<<15>>!<u class="dotted" title="1. Arranged singly, often spirally, along an axis - e.g., one leaf per node. 2. Occurring in different ranks, appearing to be between, not directly above or below, as 'stamens alternate petals'." >Alternate</u>!){
 				}
-				if(s! <<15>>alternate<<15>>!&nbsp;<div class="dropdown"><u class="dotted">alternate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/alternate.jpg" class="large-image" alt="image missing" >1. Arranged singly, often spirally, along an axis - e.g., one leaf per node. 2. Occurring in different ranks, appearing to be between, not directly above or below, as 'stamens alternate petals'.</div></div>!){
+				if(s! <<15>>alternate<<15>>!&nbsp;<div class="dropdown"><u class="dotted">alternate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/alternate.jpg" class="large-image" alt="image missing" >1. Arranged singly, often spirally, along an axis - e.g., one leaf per node. 2. Occurring in different ranks, appearing to be between, not directly above or below, as 'stamens alternate petals'.</div></div>!){
 				}
 				if(s!<<16>>Angiosperm<<16>>!<u class="dotted" title="Plant that bears flowers (hence, 'flowering plant'), in which 'vesseled seeds' (hence, angio-sperm) are enclosed in an ovary; woody to herbaceous." >Angiosperm</u>!){
 				}
@@ -2355,7 +2355,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<23>>Appressed<<23>>!<u class="dotted" title="Parallel or nearly parallel to and often in contact with surface of origin; used to describe the disposition of hairs, leaves, pedicels, etc." >Appressed</u>!){
 				}
-				if(s! <<23>>appressed<<23>>!&nbsp;<div class="dropdown"><u class="dotted">appressed</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/appressed.jpg" class="large-image" alt="image missing" >Parallel or nearly parallel to and often in contact with surface of origin; used to describe the disposition of hairs, leaves, pedicels, etc.</div></div>!){
+				if(s! <<23>>appressed<<23>>!&nbsp;<div class="dropdown"><u class="dotted">appressed</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/appressed.jpg" class="large-image" alt="image missing" >Parallel or nearly parallel to and often in contact with surface of origin; used to describe the disposition of hairs, leaves, pedicels, etc.</div></div>!){
 				}
 				if(s!<<24>>Apogamous<<24>>!<u class="dotted" title="Forming a sporophyte (the generation in a vascular plant life cycle that is conspicuous, 2n, and produces spores, which give rise to gametophytes) from a gametophyte (the generation in a vascular plant life cycle that is inconspicuous, n, and produces sperms and eggs, which usually unite in fertilization to give rise to sporophytes) by direct, asexual development, rather than by fertilization of eggs by sperms." >Apogamous</u>!){
 				}
@@ -2387,15 +2387,15 @@ warn "reading from $file\n";
 				}
 				if(s!<<31>>Ascending<<31>>!<u class="dotted" title="Curving or angling upward from base, or about 30-60 degrees less than vertical or away from axis of attachment." >Ascending</u>!){
 				}
-				if(s! <<31>>ascending<<31>>!&nbsp;<div class="dropdown"><u class="dotted">ascending</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/ascending-STEM.jpg" class="large-image" alt="image missing" >Curving or angling upward from base, or about 30-60 degrees less than vertical or away from axis of attachment.</div></div>!){
+				if(s! <<31>>ascending<<31>>!&nbsp;<div class="dropdown"><u class="dotted">ascending</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/ascending-STEM.jpg" class="large-image" alt="image missing" >Curving or angling upward from base, or about 30-60 degrees less than vertical or away from axis of attachment.</div></div>!){
 				}
 				if(s!<<32>>Asymmetric<<32>>!<u class="dotted" title="Not divisible into identical or mirror-image halves." >Asymmetric</u>!){
 				}
-				if(s! <<32>>asymmetric<<32>>!&nbsp;<div class="dropdown"><u class="dotted">asymmetric</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/asymmetric.jpg" class="large-image" alt="image missing" >Not divisible into identical or mirror-image halves.</div></div>!){
+				if(s! <<32>>asymmetric<<32>>!&nbsp;<div class="dropdown"><u class="dotted">asymmetric</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/asymmetric.jpg" class="large-image" alt="image missing" >Not divisible into identical or mirror-image halves.</div></div>!){
 				}
 				if(s!<<33>>Auricle<<33>>!<u class="dotted" title="In Poaceae, a structure, often lanceolate, projecting from both margins of the leaf lateral to the ligule." >Auricle</u>!){
 				}
-				if(s! <<33>>auricle<<33>>!&nbsp;<div class="dropdown"><u class="dotted">auricle</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/grass-leaf-auricle.jpg" class="large-image" alt="image missing" >In Poaceae, a structure, often lanceolate, projecting from both margins of the leaf lateral to the ligule.</div></div>!){
+				if(s! <<33>>auricle<<33>>!&nbsp;<div class="dropdown"><u class="dotted">auricle</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/grass-leaf-auricle.jpg" class="large-image" alt="image missing" >In Poaceae, a structure, often lanceolate, projecting from both margins of the leaf lateral to the ligule.</div></div>!){
 				}
 				if(s!<<34>>Auricles<<34>>!<u class="dotted" title="In Poaceae, a structure, often lanceolate, projecting from both margins of the leaf lateral to the ligule." >Auricles</u>!){
 				}
@@ -2403,15 +2403,15 @@ warn "reading from $file\n";
 				}
 				if(s!<<35>>Awn<<35>>!<u class="dotted" title="1. Bristle-like appendage or elongation, generally terminal.  2. Stiff, needle-like pappus element in Asteraceae." >Awn</u>!){
 				}
-				if(s! <<35>>awn<<35>>!&nbsp;<div class="dropdown"><u class="dotted">awn</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/awned.jpg" class="large-image" alt="image missing" >1. Bristle-like appendage or elongation, generally terminal.  2. Stiff, needle-like pappus element in Asteraceae.</div></div>!){
+				if(s! <<35>>awn<<35>>!&nbsp;<div class="dropdown"><u class="dotted">awn</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/awned.jpg" class="large-image" alt="image missing" >1. Bristle-like appendage or elongation, generally terminal.  2. Stiff, needle-like pappus element in Asteraceae.</div></div>!){
 				}
 				if(s!<<36>>Awns<<36>>!<u class="dotted" title="1. Bristle-like appendage or elongation, generally terminal.  2. Stiff, needle-like pappus element in Asteraceae." >Awns</u>!){
 				}
-				if(s! <<36>>awns<<36>>!&nbsp;<div class="dropdown"><u class="dotted">awns</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/awned.jpg" class="large-image" alt="image missing" >1. Bristle-like appendage or elongation, generally terminal.  2. Stiff, needle-like pappus element in Asteraceae.</div></div>!){
+				if(s! <<36>>awns<<36>>!&nbsp;<div class="dropdown"><u class="dotted">awns</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/awned.jpg" class="large-image" alt="image missing" >1. Bristle-like appendage or elongation, generally terminal.  2. Stiff, needle-like pappus element in Asteraceae.</div></div>!){
 				}
 				if(s!<<37>>Axil<<37>>!<u class="dotted" title="Distal, adaxial angle between an appendage or branch and a main axis (e.g., between leaf and stem, or between lateral vein and midrib on a leaf)." >Axil</u>!){
 				}
-				if(s! <<37>>axil<<37>>!&nbsp;<div class="dropdown"><u class="dotted">axil</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/axil.jpg" class="large-image" alt="image missing" >Distal, adaxial angle between an appendage or branch and a main axis (e.g., between leaf and stem, or between lateral vein and midrib on a leaf).</div></div>!){
+				if(s! <<37>>axil<<37>>!&nbsp;<div class="dropdown"><u class="dotted">axil</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/axil.jpg" class="large-image" alt="image missing" >Distal, adaxial angle between an appendage or branch and a main axis (e.g., between leaf and stem, or between lateral vein and midrib on a leaf).</div></div>!){
 				}
 				if(s!<<38>>Axils<<38>>!<u class="dotted" title="Distal, adaxial angle between an appendage or branch and a main axis (e.g., between leaf and stem, or between lateral vein and midrib on a leaf)." >Axils</u>!){
 				}
@@ -2419,11 +2419,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<39>>Axile<<39>>!<u class="dotted" title="Pertaining to an axis, as of a placenta along the central axis in a compound ovary with more than one chamber." >Axile</u>!){
 				}
-				if(s! <<39>>axile<<39>>!&nbsp;<div class="dropdown"><u class="dotted">axile</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/axile-placenta.jpg" class="large-image" alt="image missing" >Pertaining to an axis, as of a placenta along the central axis in a compound ovary with more than one chamber.</div></div>!){
+				if(s! <<39>>axile<<39>>!&nbsp;<div class="dropdown"><u class="dotted">axile</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/axile-placenta.jpg" class="large-image" alt="image missing" >Pertaining to an axis, as of a placenta along the central axis in a compound ovary with more than one chamber.</div></div>!){
 				}
 				if(s!<<40>>Axillary<<40>>!<u class="dotted" title="Pertaining to or within an axil, especially a leaf axil." >Axillary</u>!){
 				}
-				if(s! <<40>>axillary<<40>>!&nbsp;<div class="dropdown"><u class="dotted">axillary</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/axillary-bud.jpg" class="large-image" alt="image missing" >Pertaining to or within an axil, especially a leaf axil.</div></div>!){
+				if(s! <<40>>axillary<<40>>!&nbsp;<div class="dropdown"><u class="dotted">axillary</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/axillary-bud.jpg" class="large-image" alt="image missing" >Pertaining to or within an axil, especially a leaf axil.</div></div>!){
 				}
 				if(s!<<41>>Axis<<41>>!<u class="dotted" title="Line of direction, growth, or extension; structure occupying such a position - e.g., the main stem of a plant or inflorescence, the midrib of a leaf." >Axis</u>!){
 				}
@@ -2439,7 +2439,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<44>>Barbed<<44>>!<u class="dotted" title="Having sharp, normally downward- or backward-pointing projections.  Said of an awn, bristle, or other structure." >Barbed</u>!){
 				}
-				if(s! <<44>>barbed<<44>>!&nbsp;<div class="dropdown"><u class="dotted">barbed</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/barbed.jpg" class="large-image" alt="image missing" >Having sharp, normally downward- or backward-pointing projections.  Said of an awn, bristle, or other structure.</div></div>!){
+				if(s! <<44>>barbed<<44>>!&nbsp;<div class="dropdown"><u class="dotted">barbed</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/barbed.jpg" class="large-image" alt="image missing" >Having sharp, normally downward- or backward-pointing projections.  Said of an awn, bristle, or other structure.</div></div>!){
 				}
 				if(s!<<45>>Bark<<45>>!<u class="dotted" title="Tough tissue (including phloem) covering the wood (hardened xylem) of subshrubs, shrubs, trees, and some vines." >Bark</u>!){
 				}
@@ -2447,7 +2447,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<46>>Basal<<46>>!<u class="dotted" title="At or near the base of a plant or plant part.  Especially said of leaves clustered near the ground or of a placenta confined to the base of an ovary." >Basal</u>!){
 				}
-				if(s! <<46>>basal<<46>>!&nbsp;<div class="dropdown"><u class="dotted">basal</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/basal-rosette.jpg" class="large-image" alt="image missing" >At or near the base of a plant or plant part.  Especially said of leaves clustered near the ground or of a placenta confined to the base of an ovary.</div></div>!){
+				if(s! <<46>>basal<<46>>!&nbsp;<div class="dropdown"><u class="dotted">basal</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/basal-rosette.jpg" class="large-image" alt="image missing" >At or near the base of a plant or plant part.  Especially said of leaves clustered near the ground or of a placenta confined to the base of an ovary.</div></div>!){
 				}
 				if(s!<<47>>Beak<<47>>!<u class="dotted" title="Generally distal or terminal, narrowed, generally sterile part of fruit or surrounding structures (e.g., Ambrosia bur, Carex perigynium)." >Beak</u>!){
 				}
@@ -2467,19 +2467,19 @@ warn "reading from $file\n";
 				}
 				if(s!<<51>>Bilateral<<51>>!<u class="dotted" title="Divisible into mirror-image halves in only one way." >Bilateral</u>!){
 				}
-				if(s! <<51>>bilateral<<51>>!&nbsp;<div class="dropdown"><u class="dotted">bilateral</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/bilateral.jpg" class="large-image" alt="image missing" >Divisible into mirror-image halves in only one way.</div></div>!){
+				if(s! <<51>>bilateral<<51>>!&nbsp;<div class="dropdown"><u class="dotted">bilateral</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/bilateral.jpg" class="large-image" alt="image missing" >Divisible into mirror-image halves in only one way.</div></div>!){
 				}
 				if(s!<<52>>Biradial<<52>>!<u class="dotted" title="Divisible into mirror-image halves in two ways; isobilateral." >Biradial</u>!){
 				}
-				if(s! <<52>>biradial<<52>>!&nbsp;<div class="dropdown"><u class="dotted">biradial</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/biradial.jpg" class="large-image" alt="image missing" >Divisible into mirror-image halves in two ways; isobilateral.</div></div>!){
+				if(s! <<52>>biradial<<52>>!&nbsp;<div class="dropdown"><u class="dotted">biradial</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/biradial.jpg" class="large-image" alt="image missing" >Divisible into mirror-image halves in two ways; isobilateral.</div></div>!){
 				}
 				if(s!<<53>>Bisexual<<53>>!<u class="dotted" title="Both male and female reproductive parts occurring and functional in the same plant or structure (e.g., flower, spikelet, inflorescence)." >Bisexual</u>!){
 				}
-				if(s! <<53>>bisexual<<53>>!&nbsp;<div class="dropdown"><u class="dotted">bisexual</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/bisexual-flower.jpg" class="large-image" alt="image missing" >Both male and female reproductive parts occurring and functional in the same plant or structure (e.g., flower, spikelet, inflorescence).</div></div>!){
+				if(s! <<53>>bisexual<<53>>!&nbsp;<div class="dropdown"><u class="dotted">bisexual</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/bisexual-flower.jpg" class="large-image" alt="image missing" >Both male and female reproductive parts occurring and functional in the same plant or structure (e.g., flower, spikelet, inflorescence).</div></div>!){
 				}
 				if(s!<<54>>Blade<<54>>!<u class="dotted" title="Expanded portion of a leaf, petal, or other structure, generally flat but sometimes rolled, cylindric, wavy, or cupped." >Blade</u>!){
 				}
-				if(s! <<54>>blade<<54>>!&nbsp;<div class="dropdown"><u class="dotted">blade</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/grass-leaf-blade.jpg" class="large-image" alt="image missing" >Expanded portion of a leaf, petal, or other structure, generally flat but sometimes rolled, cylindric, wavy, or cupped.</div></div>!){
+				if(s! <<54>>blade<<54>>!&nbsp;<div class="dropdown"><u class="dotted">blade</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/grass-leaf-blade.jpg" class="large-image" alt="image missing" >Expanded portion of a leaf, petal, or other structure, generally flat but sometimes rolled, cylindric, wavy, or cupped.</div></div>!){
 				}
 				if(s!<<55>>Blades<<55>>!<u class="dotted" title="Expanded portion of a leaf, petal, or other structure, generally flat but sometimes rolled, cylindric, wavy, or cupped." >Blades</u>!){
 				}
@@ -2491,7 +2491,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<57>>Bract<<57>>!<u class="dotted" title="Reduced, leaf- or scale-like structure subtending a branch, cone scale, peduncle, pedicel, or flower." >Bract</u>!){
 				}
-				if(s! <<57>>bract<<57>>!&nbsp;<div class="dropdown"><u class="dotted">bract</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/bract.jpg" class="large-image" alt="image missing" >Reduced, leaf- or scale-like structure subtending a branch, cone scale, peduncle, pedicel, or flower.</div></div>!){
+				if(s! <<57>>bract<<57>>!&nbsp;<div class="dropdown"><u class="dotted">bract</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/bract.jpg" class="large-image" alt="image missing" >Reduced, leaf- or scale-like structure subtending a branch, cone scale, peduncle, pedicel, or flower.</div></div>!){
 				}
 				if(s!<<58>>Bracts<<58>>!<u class="dotted" title="Reduced, leaf- or scale-like structure subtending a branch, cone scale, peduncle, pedicel, or flower." >Bracts</u>!){
 				}
@@ -2515,11 +2515,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<63>>Bud<<63>>!<u class="dotted" title="1. An incompletely developed, more or less embryonic shoot, usually covered with bud scales.  2. An unopened flower, often protected by sepals." >Bud</u>!){
 				}
-				if(s! <<63>>bud<<63>>!&nbsp;<div class="dropdown"><u class="dotted">bud</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/bud-scale-scars.jpg" class="large-image" alt="image missing" >1. An incompletely developed, more or less embryonic shoot, usually covered with bud scales.  2. An unopened flower, often protected by sepals.</div></div>!){
+				if(s! <<63>>bud<<63>>!&nbsp;<div class="dropdown"><u class="dotted">bud</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/bud-scale-scars.jpg" class="large-image" alt="image missing" >1. An incompletely developed, more or less embryonic shoot, usually covered with bud scales.  2. An unopened flower, often protected by sepals.</div></div>!){
 				}
 				if(s!<<64>>Buds<<64>>!<u class="dotted" title="1. An incompletely developed, more or less embryonic shoot, usually covered with bud scales.  2. An unopened flower, often protected by sepals." >Buds</u>!){
 				}
-				if(s! <<64>>buds<<64>>!&nbsp;<div class="dropdown"><u class="dotted">buds</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/buds-and-scars.jpg" class="large-image" alt="image missing" >1. An incompletely developed, more or less embryonic shoot, usually covered with bud scales.  2. An unopened flower, often protected by sepals.</div></div>!){
+				if(s! <<64>>buds<<64>>!&nbsp;<div class="dropdown"><u class="dotted">buds</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/buds-and-scars.jpg" class="large-image" alt="image missing" >1. An incompletely developed, more or less embryonic shoot, usually covered with bud scales.  2. An unopened flower, often protected by sepals.</div></div>!){
 				}
 				if(s!<<65>>Bulb<<65>>!<u class="dotted" title="Short underground stem and the fleshy leaves or leaf bases attached to and surrounding it (e.g., an onion)." >Bulb</u>!){
 				}
@@ -2527,15 +2527,15 @@ warn "reading from $file\n";
 				}
 				if(s!<<66>>Bulbs<<66>>!<u class="dotted" title="Short underground stem and the fleshy leaves or leaf bases attached to and surrounding it (e.g., an onion)." >Bulbs</u>!){
 				}
-				if(s! <<66>>bulbs<<66>>!&nbsp;<div class="dropdown"><u class="dotted">bulbs</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/bulb.jpg" class="large-image" alt="image missing" >Short underground stem and the fleshy leaves or leaf bases attached to and surrounding it (e.g., an onion).</div></div>!){
+				if(s! <<66>>bulbs<<66>>!&nbsp;<div class="dropdown"><u class="dotted">bulbs</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/bulb.jpg" class="large-image" alt="image missing" >Short underground stem and the fleshy leaves or leaf bases attached to and surrounding it (e.g., an onion).</div></div>!){
 				}
 				if(s!<<67>>Bulblet<<67>>!<u class="dotted" title="1. Small bulb generally produced at the base of a bulb.  2. Any small, bulb-like structure that propagates a plant, often in a leaf or bract axil." >Bulblet</u>!){
 				}
-				if(s! <<67>>bulblet<<67>>!&nbsp;<div class="dropdown"><u class="dotted">bulblet</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/bulblet.jpg" class="large-image" alt="image missing" >1. Small bulb generally produced at the base of a bulb.  2. Any small, bulb-like structure that propagates a plant, often in a leaf or bract axil.</div></div>!){
+				if(s! <<67>>bulblet<<67>>!&nbsp;<div class="dropdown"><u class="dotted">bulblet</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/bulblet.jpg" class="large-image" alt="image missing" >1. Small bulb generally produced at the base of a bulb.  2. Any small, bulb-like structure that propagates a plant, often in a leaf or bract axil.</div></div>!){
 				}
 				if(s!<<68>>Bulblets<<68>>!<u class="dotted" title="1. Small bulb generally produced at the base of a bulb.  2. Any small, bulb-like structure that propagates a plant, often in a leaf or bract axil." >Bulblets</u>!){
 				}
-				if(s! <<68>>bulblets<<68>>!&nbsp;<div class="dropdown"><u class="dotted">bulblets</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/bulblet.jpg" class="large-image" alt="image missing" >1. Small bulb generally produced at the base of a bulb.  2. Any small, bulb-like structure that propagates a plant, often in a leaf or bract axil.</div></div>!){
+				if(s! <<68>>bulblets<<68>>!&nbsp;<div class="dropdown"><u class="dotted">bulblets</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/bulblet.jpg" class="large-image" alt="image missing" >1. Small bulb generally produced at the base of a bulb.  2. Any small, bulb-like structure that propagates a plant, often in a leaf or bract axil.</div></div>!){
 				}
 				if(s!<<69>>Bur<<69>>!<u class="dotted" title="Fruit or fruiting inflorescence with awns or bristles, often barbed.  (e.g., Xanthium strumarium)" >Bur</u>!){
 				}
@@ -2559,7 +2559,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<74>>Capsules<<74>>!<u class="dotted" title="Dry fruit from compound pistil, nearly always dehiscent (irregularly or by pores, slits, or lines of separation)." >Capsules</u>!){
 				}
-				if(s! <<74>>capsules<<74>>!&nbsp;<div class="dropdown"><u class="dotted">capsules</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/capsules.jpg" class="large-image" alt="image missing" >Dry fruit from compound pistil, nearly always dehiscent (irregularly or by pores, slits, or lines of separation).</div></div>!){
+				if(s! <<74>>capsules<<74>>!&nbsp;<div class="dropdown"><u class="dotted">capsules</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/capsules.jpg" class="large-image" alt="image missing" >Dry fruit from compound pistil, nearly always dehiscent (irregularly or by pores, slits, or lines of separation).</div></div>!){
 				}
 				if(s!<<75>>Carpel<<75>>!<u class="dotted" title="The basic female structure of a flower, evolved from a fertile leaf.  Carpels are free or variously fused into a compound pistil, the number of carpels then often equal to the number of stigmas, styles, or chambers of the ovary." >Carpel</u>!){
 				}
@@ -2575,15 +2575,15 @@ warn "reading from $file\n";
 				}
 				if(s!<<78>>Catkin<<78>>!<u class="dotted" title="Spike or spike-like (e.g., Alnus) inflorescence of unisexual flowers with inconspicuous perianths (generally wind-pollinated), usually pendent and often with conspicuous bracts." >Catkin</u>!){
 				}
-				if(s! <<78>>catkin<<78>>!&nbsp;<div class="dropdown"><u class="dotted">catkin</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/catkin.jpg" class="large-image" alt="image missing" >Spike or spike-like (e.g., Alnus) inflorescence of unisexual flowers with inconspicuous perianths (generally wind-pollinated), usually pendent and often with conspicuous bracts.</div></div>!){
+				if(s! <<78>>catkin<<78>>!&nbsp;<div class="dropdown"><u class="dotted">catkin</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/catkin.jpg" class="large-image" alt="image missing" >Spike or spike-like (e.g., Alnus) inflorescence of unisexual flowers with inconspicuous perianths (generally wind-pollinated), usually pendent and often with conspicuous bracts.</div></div>!){
 				}
 				if(s!<<79>>Catkins<<79>>!<u class="dotted" title="Spike or spike-like (e.g., Alnus) inflorescence of unisexual flowers with inconspicuous perianths (generally wind-pollinated), usually pendent and often with conspicuous bracts." >Catkins</u>!){
 				}
-				if(s! <<79>>catkins<<79>>!&nbsp;<div class="dropdown"><u class="dotted">catkins</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/catkin.jpg" class="large-image" alt="image missing" >Spike or spike-like (e.g., Alnus) inflorescence of unisexual flowers with inconspicuous perianths (generally wind-pollinated), usually pendent and often with conspicuous bracts.</div></div>!){
+				if(s! <<79>>catkins<<79>>!&nbsp;<div class="dropdown"><u class="dotted">catkins</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/catkin.jpg" class="large-image" alt="image missing" >Spike or spike-like (e.g., Alnus) inflorescence of unisexual flowers with inconspicuous perianths (generally wind-pollinated), usually pendent and often with conspicuous bracts.</div></div>!){
 				}
 				if(s!<<80>>Caudex<<80>>!<u class="dotted" title="Generally short, sometimes woody, more or less vertical stem of a perennial, at or beneath ground level." >Caudex</u>!){
 				}
-				if(s! <<80>>caudex<<80>>!&nbsp;<div class="dropdown"><u class="dotted">caudex</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/caudex.jpg" class="large-image" alt="image missing" >Generally short, sometimes woody, more or less vertical stem of a perennial, at or beneath ground level.</div></div>!){
+				if(s! <<80>>caudex<<80>>!&nbsp;<div class="dropdown"><u class="dotted">caudex</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/caudex.jpg" class="large-image" alt="image missing" >Generally short, sometimes woody, more or less vertical stem of a perennial, at or beneath ground level.</div></div>!){
 				}
 				if(s!<<81>>Caudices<<81>>!<u class="dotted" title="Generally short, sometimes woody, more or less vertical stem of a perennial, at or beneath ground level." >Caudices</u>!){
 				}
@@ -2595,7 +2595,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<83>>Cespitose<<83>>!<u class="dotted" title="Having a densely clumped, tufted, matted, or cushion-like growth form." >Cespitose</u>!){
 				}
-				if(s! <<83>>cespitose<<83>>!&nbsp;<div class="dropdown"><u class="dotted">cespitose</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/cespitose.jpg" class="large-image" alt="image missing" >Having a densely clumped, tufted, matted, or cushion-like growth form.</div></div>!){
+				if(s! <<83>>cespitose<<83>>!&nbsp;<div class="dropdown"><u class="dotted">cespitose</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/cespitose.jpg" class="large-image" alt="image missing" >Having a densely clumped, tufted, matted, or cushion-like growth form.</div></div>!){
 				}
 				if(s!<<84>>Chamber<<84>>!<u class="dotted" title="Compartment or cavity within an ovary, capsule, or other hollow structure." >Chamber</u>!){
 				}
@@ -2611,7 +2611,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<87>>Ciliate<<87>>!<u class="dotted" title="Having generally straight, conspicuous hairs along margins or edges." >Ciliate</u>!){
 				}
-				if(s! <<87>>ciliate<<87>>!&nbsp;<div class="dropdown"><u class="dotted">ciliate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/ciliate.jpg" class="large-image" alt="image missing" >Having generally straight, conspicuous hairs along margins or edges.</div></div>!){
+				if(s! <<87>>ciliate<<87>>!&nbsp;<div class="dropdown"><u class="dotted">ciliate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/ciliate.jpg" class="large-image" alt="image missing" >Having generally straight, conspicuous hairs along margins or edges.</div></div>!){
 				}
 				if(s!<<88>>Circumboreal<<88>>!<u class="dotted" title="Occurring around the world at northern latitudes." >Circumboreal</u>!){
 				}
@@ -2619,7 +2619,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<89>>Circumscissile<<89>>!<u class="dotted" title="Dehiscence, usually of a fruit (capsule), by a transverse line, the top coming off as a lid." >Circumscissile</u>!){
 				}
-				if(s! <<89>>circumscissile<<89>>!&nbsp;<div class="dropdown"><u class="dotted">circumscissile</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/circumscissile.jpg" class="large-image" alt="image missing" >Dehiscence, usually of a fruit (capsule), by a transverse line, the top coming off as a lid.</div></div>!){
+				if(s! <<89>>circumscissile<<89>>!&nbsp;<div class="dropdown"><u class="dotted">circumscissile</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/circumscissile.jpg" class="large-image" alt="image missing" >Dehiscence, usually of a fruit (capsule), by a transverse line, the top coming off as a lid.</div></div>!){
 				}
 				if(s!<<90>>Claw<<90>>!<u class="dotted" title="Stalk-like base of some free or nearly free sepals or petals." >Claw</u>!){
 				}
@@ -2667,7 +2667,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<101>>Column<<101>>!<u class="dotted" title="Structure at the center of an orchid flower formed by fusion of stamen(s) and style." >Column</u>!){
 				}
-				if(s! <<101>>column<<101>>!&nbsp;<div class="dropdown"><u class="dotted">column</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/orchid-column.jpg" class="large-image" alt="image missing" >Structure at the center of an orchid flower formed by fusion of stamen(s) and style.</div></div>!){
+				if(s! <<101>>column<<101>>!&nbsp;<div class="dropdown"><u class="dotted">column</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/orchid-column.jpg" class="large-image" alt="image missing" >Structure at the center of an orchid flower formed by fusion of stamen(s) and style.</div></div>!){
 				}
 				if(s!<<102>>Columns<<102>>!<u class="dotted" title="Structure at the center of an orchid flower formed by fusion of stamen(s) and style." >Columns</u>!){
 				}
@@ -2679,7 +2679,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<104>>Compressed<<104>>!<u class="dotted" title="Flattened side-to-side or front-to-back." >Compressed</u>!){
 				}
-				if(s! <<104>>compressed<<104>>!&nbsp;<div class="dropdown"><u class="dotted">compressed</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/compressed.jpg" class="large-image" alt="image missing" >Flattened side-to-side or front-to-back.</div></div>!){
+				if(s! <<104>>compressed<<104>>!&nbsp;<div class="dropdown"><u class="dotted">compressed</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/compressed.jpg" class="large-image" alt="image missing" >Flattened side-to-side or front-to-back.</div></div>!){
 				}
 				if(s!<<105>>Concave<<105>>!<u class="dotted" title="Hollowed or indented, as the interior of a curved surface." >Concave</u>!){
 				}
@@ -2711,7 +2711,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<112>>Cordate<<112>>!<u class="dotted" title="Heart-shaped; often pertaining to a leaf in which the blade base on both sides of the petiole is rounded and convex." >Cordate</u>!){
 				}
-				if(s! <<112>>cordate<<112>>!&nbsp;<div class="dropdown"><u class="dotted">cordate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/cordate.jpg" class="large-image" alt="image missing" >Heart-shaped; often pertaining to a leaf in which the blade base on both sides of the petiole is rounded and convex.</div></div>!){
+				if(s! <<112>>cordate<<112>>!&nbsp;<div class="dropdown"><u class="dotted">cordate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/cordate.jpg" class="large-image" alt="image missing" >Heart-shaped; often pertaining to a leaf in which the blade base on both sides of the petiole is rounded and convex.</div></div>!){
 				}
 				if(s!<<113>>Corm<<113>>!<u class="dotted" title="Short, thick, unbranched, underground stem often surrounded by dry (not fleshy) leaves or leaf bases. (e.g., Muilla maritima)" >Corm</u>!){
 				}
@@ -2731,7 +2731,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<117>>Costa<<117>>!<u class="dotted" title="In ferns, primary axis of a pinna." >Costa</u>!){
 				}
-				if(s! <<117>>costa<<117>>!&nbsp;<div class="dropdown"><u class="dotted">costa</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/fern-leaf-costa.jpg" class="large-image" alt="image missing" >In ferns, primary axis of a pinna.</div></div>!){
+				if(s! <<117>>costa<<117>>!&nbsp;<div class="dropdown"><u class="dotted">costa</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/fern-leaf-costa.jpg" class="large-image" alt="image missing" >In ferns, primary axis of a pinna.</div></div>!){
 				}
 				if(s!<<118>>Costule<<118>>!<u class="dotted" title="In ferns, primary axis of a pinnule." >Costule</u>!){
 				}
@@ -2751,19 +2751,19 @@ warn "reading from $file\n";
 				}
 				if(s!<<122>>Crenate<<122>>!<u class="dotted" title="Pertaining to margins with shallow, rounded teeth, between which are usually acute sinuses (i.e., scalloped)" >Crenate</u>!){
 				}
-				if(s! <<122>>crenate<<122>>!&nbsp;<div class="dropdown"><u class="dotted">crenate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/crenate.jpg" class="large-image" alt="image missing" >Pertaining to margins with shallow, rounded teeth, between which are usually acute sinuses (i.e., scalloped)</div></div>!){
+				if(s! <<122>>crenate<<122>>!&nbsp;<div class="dropdown"><u class="dotted">crenate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/crenate.jpg" class="large-image" alt="image missing" >Pertaining to margins with shallow, rounded teeth, between which are usually acute sinuses (i.e., scalloped)</div></div>!){
 				}
 				if(s!<<123>>Cylindric<<123>>!<u class="dotted" title="Elongate, with parallel sides and, at any point, round in transverse section." >Cylindric</u>!){
 				}
-				if(s! <<123>>cylindric<<123>>!&nbsp;<div class="dropdown"><u class="dotted">cylindric</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/cylindric.jpg" class="large-image" alt="image missing" >Elongate, with parallel sides and, at any point, round in transverse section.</div></div>!){
+				if(s! <<123>>cylindric<<123>>!&nbsp;<div class="dropdown"><u class="dotted">cylindric</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/cylindric.jpg" class="large-image" alt="image missing" >Elongate, with parallel sides and, at any point, round in transverse section.</div></div>!){
 				}
 				if(s!<<124>>Cyme<<124>>!<u class="dotted" title="1. In flowering plants excluding Asteraceae and some other groups, a branched inflorescence in which the central or uppermost flower opens before the peripheral or lowermost flowers on any axis.  see 2. In Asteraceae and some other groups, a cyme-like inflorescence is one in which the central or uppermost inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, develop and mature before the peripheral or lowermost inflorescence units on any axis." >Cyme</u>!){
 				}
-				if(s! <<124>>cyme<<124>>!&nbsp;<div class="dropdown"><u class="dotted">cyme</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/cyme.jpg" class="large-image" alt="image missing" >1. In flowering plants excluding Asteraceae and some other groups, a branched inflorescence in which the central or uppermost flower opens before the peripheral or lowermost flowers on any axis.  see 2. In Asteraceae and some other groups, a cyme-like inflorescence is one in which the central or uppermost inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, develop and mature before the peripheral or lowermost inflorescence units on any axis.</div></div>!){
+				if(s! <<124>>cyme<<124>>!&nbsp;<div class="dropdown"><u class="dotted">cyme</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/cyme.jpg" class="large-image" alt="image missing" >1. In flowering plants excluding Asteraceae and some other groups, a branched inflorescence in which the central or uppermost flower opens before the peripheral or lowermost flowers on any axis.  see 2. In Asteraceae and some other groups, a cyme-like inflorescence is one in which the central or uppermost inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, develop and mature before the peripheral or lowermost inflorescence units on any axis.</div></div>!){
 				}
 				if(s!<<125>>Cymes<<125>>!<u class="dotted" title="1. In flowering plants excluding Asteraceae and some other groups, a branched inflorescence in which the central or uppermost flower opens before the peripheral or lowermost flowers on any axis.  see 2. In Asteraceae and some other groups, a cyme-like inflorescence is one in which the central or uppermost inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, develop and mature before the peripheral or lowermost inflorescence units on any axis." >Cymes</u>!){
 				}
-				if(s! <<125>>cymes<<125>>!&nbsp;<div class="dropdown"><u class="dotted">cymes</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/cyme.jpg" class="large-image" alt="image missing" >1. In flowering plants excluding Asteraceae and some other groups, a branched inflorescence in which the central or uppermost flower opens before the peripheral or lowermost flowers on any axis.  see 2. In Asteraceae and some other groups, a cyme-like inflorescence is one in which the central or uppermost inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, develop and mature before the peripheral or lowermost inflorescence units on any axis.</div></div>!){
+				if(s! <<125>>cymes<<125>>!&nbsp;<div class="dropdown"><u class="dotted">cymes</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/cyme.jpg" class="large-image" alt="image missing" >1. In flowering plants excluding Asteraceae and some other groups, a branched inflorescence in which the central or uppermost flower opens before the peripheral or lowermost flowers on any axis.  see 2. In Asteraceae and some other groups, a cyme-like inflorescence is one in which the central or uppermost inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, develop and mature before the peripheral or lowermost inflorescence units on any axis.</div></div>!){
 				}
 				if(s!<<126>>Deciduous<<126>>!<u class="dotted" title="Falling off naturally.  1. Pertaining to leaves that all fall seasonally, or to plants that are seasonally leafless. 2.  Pertaining to structures, such as hairs or flower parts, that fall early or readily." >Deciduous</u>!){
 				}
@@ -2771,19 +2771,19 @@ warn "reading from $file\n";
 				}
 				if(s!<<127>>Decumbent<<127>>!<u class="dotted" title="lying mostly flat on the ground but with tips curving up." >Decumbent</u>!){
 				}
-				if(s! <<127>>decumbent<<127>>!&nbsp;<div class="dropdown"><u class="dotted">decumbent</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/decumbent.jpg" class="large-image" alt="image missing" >lying mostly flat on the ground but with tips curving up.</div></div>!){
+				if(s! <<127>>decumbent<<127>>!&nbsp;<div class="dropdown"><u class="dotted">decumbent</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/decumbent.jpg" class="large-image" alt="image missing" >lying mostly flat on the ground but with tips curving up.</div></div>!){
 				}
 				if(s!<<128>>Decurrent<<128>>!<u class="dotted" title="Pertaining to a wing-like or ridge-like extension basal to  the apparent  or actual point of attachment, particularly a leaf base that appears to continue onto the stem." >Decurrent</u>!){
 				}
-				if(s! <<128>>decurrent<<128>>!&nbsp;<div class="dropdown"><u class="dotted">decurrent</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/decurrent.jpg" class="large-image" alt="image missing" >Pertaining to a wing-like or ridge-like extension basal to  the apparent  or actual point of attachment, particularly a leaf base that appears to continue onto the stem.</div></div>!){
+				if(s! <<128>>decurrent<<128>>!&nbsp;<div class="dropdown"><u class="dotted">decurrent</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/decurrent.jpg" class="large-image" alt="image missing" >Pertaining to a wing-like or ridge-like extension basal to  the apparent  or actual point of attachment, particularly a leaf base that appears to continue onto the stem.</div></div>!){
 				}
 				if(s!<<129>>Dehiscent<<129>>!<u class="dotted" title="Opening at maturity to release contents; usually pertaining to anthers or fruits." >Dehiscent</u>!){
 				}
-				if(s! <<129>>dehiscent<<129>>!&nbsp;<div class="dropdown"><u class="dotted">dehiscent</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/dehiscent.jpg" class="large-image" alt="image missing" >Opening at maturity to release contents; usually pertaining to anthers or fruits.</div></div>!){
+				if(s! <<129>>dehiscent<<129>>!&nbsp;<div class="dropdown"><u class="dotted">dehiscent</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/dehiscent.jpg" class="large-image" alt="image missing" >Opening at maturity to release contents; usually pertaining to anthers or fruits.</div></div>!){
 				}
 				if(s!<<130>>Deltate<<130>>!<u class="dotted" title="More or less equilaterally triangular, with the corners rounded or not." >Deltate</u>!){
 				}
-				if(s! <<130>>deltate<<130>>!&nbsp;<div class="dropdown"><u class="dotted">deltate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/deltate.jpg" class="large-image" alt="image missing" >More or less equilaterally triangular, with the corners rounded or not.</div></div>!){
+				if(s! <<130>>deltate<<130>>!&nbsp;<div class="dropdown"><u class="dotted">deltate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/deltate.jpg" class="large-image" alt="image missing" >More or less equilaterally triangular, with the corners rounded or not.</div></div>!){
 				}
 				if(s!<<131>>Dense<<131>>!<u class="dotted" title="Congested or compact; especially pertaining to the disposition of flowers in an inflorescence." >Dense</u>!){
 				}
@@ -2791,11 +2791,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<132>>Dentate<<132>>!<u class="dotted" title="Having margins with sharp, relatively coarse teeth pointing outward, not tipward." >Dentate</u>!){
 				}
-				if(s! <<132>>dentate<<132>>!&nbsp;<div class="dropdown"><u class="dotted">dentate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/dentate.jpg" class="large-image" alt="image missing" >Having margins with sharp, relatively coarse teeth pointing outward, not tipward.</div></div>!){
+				if(s! <<132>>dentate<<132>>!&nbsp;<div class="dropdown"><u class="dotted">dentate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/dentate.jpg" class="large-image" alt="image missing" >Having margins with sharp, relatively coarse teeth pointing outward, not tipward.</div></div>!){
 				}
 				if(s!<<133>>Depressed<<133>>!<u class="dotted" title="Flattened from above and below, or with the center lower than the margins." >Depressed</u>!){
 				}
-				if(s! <<133>>depressed<<133>>!&nbsp;<div class="dropdown"><u class="dotted">depressed</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/depressed.jpg" class="large-image" alt="image missing" >Flattened from above and below, or with the center lower than the margins.</div></div>!){
+				if(s! <<133>>depressed<<133>>!&nbsp;<div class="dropdown"><u class="dotted">depressed</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/depressed.jpg" class="large-image" alt="image missing" >Flattened from above and below, or with the center lower than the margins.</div></div>!){
 				}
 				if(s!<<134>>Desert<<134>>!<u class="dotted" title="Region and associated communities characterized by low and irregular precipitation and prolonged periods of drought." >Desert</u>!){
 				}
@@ -2859,7 +2859,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<149>>Elliptic<<149>>!<u class="dotted" title="In the shape of a flattened circle or ellipse; wider than linear" >Elliptic</u>!){
 				}
-				if(s! <<149>>elliptic<<149>>!&nbsp;<div class="dropdown"><u class="dotted">elliptic</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/elliptic.jpg" class="large-image" alt="image missing" >In the shape of a flattened circle or ellipse; wider than linear</div></div>!){
+				if(s! <<149>>elliptic<<149>>!&nbsp;<div class="dropdown"><u class="dotted">elliptic</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/elliptic.jpg" class="large-image" alt="image missing" >In the shape of a flattened circle or ellipse; wider than linear</div></div>!){
 				}
 				if(s!<<150>>Emergent<<150>>!<u class="dotted" title="Pertaining to a plant normally rooted underwater and extending above the water surface, or to a part of such a plant normally held above the water surface.  (e.g., Polygonum amphibium)" >Emergent</u>!){
 				}
@@ -2871,7 +2871,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<152>>Entire<<152>>!<u class="dotted" title="Having margins that are continuous and smooth (i.e., without teeth, lobes, etc.)." >Entire</u>!){
 				}
-				if(s! <<152>>entire<<152>>!&nbsp;<div class="dropdown"><u class="dotted">entire</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/entire.jpg" class="large-image" alt="image missing" >Having margins that are continuous and smooth (i.e., without teeth, lobes, etc.).</div></div>!){
+				if(s! <<152>>entire<<152>>!&nbsp;<div class="dropdown"><u class="dotted">entire</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/entire.jpg" class="large-image" alt="image missing" >Having margins that are continuous and smooth (i.e., without teeth, lobes, etc.).</div></div>!){
 				}
 				if(s!<<153>>Ephemeral<<153>>!<u class="dotted" title="Lasting a short time.  1. Pertaining to individual plants, completing the life cycle (germination through death) or growth cycle in much less than one year.   2.  Pertaining to plant parts,  falling early or remaining functional for a relatively short time (e.g., less than a day for flower parts)." >Ephemeral</u>!){
 				}
@@ -2883,11 +2883,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<155>>Epipetalous<<155>>!<u class="dotted" title="Pertaining to stamens that are fused to the petals to various extents and therefore appear to arise from them." >Epipetalous</u>!){
 				}
-				if(s! <<155>>epipetalous<<155>>!&nbsp;<div class="dropdown"><u class="dotted">epipetalous</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/epipetalous-stamens.jpg" class="large-image" alt="image missing" >Pertaining to stamens that are fused to the petals to various extents and therefore appear to arise from them.</div></div>!){
+				if(s! <<155>>epipetalous<<155>>!&nbsp;<div class="dropdown"><u class="dotted">epipetalous</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/epipetalous-stamens.jpg" class="large-image" alt="image missing" >Pertaining to stamens that are fused to the petals to various extents and therefore appear to arise from them.</div></div>!){
 				}
 				if(s!<<156>>Erect<<156>>!<u class="dotted" title="Upright; vertically oriented." >Erect</u>!){
 				}
-				if(s! <<156>>erect<<156>>!&nbsp;<div class="dropdown"><u class="dotted">erect</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/erect.jpg" class="large-image" alt="image missing" >Upright; vertically oriented.</div></div>!){
+				if(s! <<156>>erect<<156>>!&nbsp;<div class="dropdown"><u class="dotted">erect</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/erect.jpg" class="large-image" alt="image missing" >Upright; vertically oriented.</div></div>!){
 				}
 				if(s!<<157>>Estuarine<<157>>!<u class="dotted" title="Pertaining to aquatic habitats where freshwater from streams mixes with sea water in a protected area, resulting in a gradation of brackish waters with varying degrees of salinity." >Estuarine</u>!){
 				}
@@ -2903,7 +2903,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<160>>Exserted<<160>>!<u class="dotted" title="Protruding out of surrounding structure(s) (e.g., stamens exserted from corolla)." >Exserted</u>!){
 				}
-				if(s! <<160>>exserted<<160>>!&nbsp;<div class="dropdown"><u class="dotted">exserted</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/exserted-stamens.jpg" class="large-image" alt="image missing" >Protruding out of surrounding structure(s) (e.g., stamens exserted from corolla).</div></div>!){
+				if(s! <<160>>exserted<<160>>!&nbsp;<div class="dropdown"><u class="dotted">exserted</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/exserted-stamens.jpg" class="large-image" alt="image missing" >Protruding out of surrounding structure(s) (e.g., stamens exserted from corolla).</div></div>!){
 				}
 				if(s!<<161>>Extant<<161>>!<u class="dotted" title="Currently existing or surviving somewhere." >Extant</u>!){
 				}
@@ -2927,7 +2927,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<166>>Fibrous<<166>>!<u class="dotted" title="1. Pertaining to structures that are composed at least in part of more or less thread-like but usually tough elements (e.g., Yucca leaves).  2.  Pertaining to a root system composed of many roots similar in length and thickness (e.g., grass roots)." >Fibrous</u>!){
 				}
-				if(s! <<166>>fibrous<<166>>!&nbsp;<div class="dropdown"><u class="dotted">fibrous</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/fibrous-roots.jpg" class="large-image" alt="image missing" >1. Pertaining to structures that are composed at least in part of more or less thread-like but usually tough elements (e.g., Yucca leaves).  2.  Pertaining to a root system composed of many roots similar in length and thickness (e.g., grass roots).</div></div>!){
+				if(s! <<166>>fibrous<<166>>!&nbsp;<div class="dropdown"><u class="dotted">fibrous</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/fibrous-roots.jpg" class="large-image" alt="image missing" >1. Pertaining to structures that are composed at least in part of more or less thread-like but usually tough elements (e.g., Yucca leaves).  2.  Pertaining to a root system composed of many roots similar in length and thickness (e.g., grass roots).</div></div>!){
 				}
 				if(s!<<167>>Filament<<167>>!<u class="dotted" title="Anther-stalk portion of a stamen, often thread-like." >Filament</u>!){
 				}
@@ -2947,7 +2947,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<171>>Florets<<171>>!<u class="dotted" title="In Poaceae, a single flower and its immediately subtending bracts (lemma and generally palea, the lemma subtending the palea when the latter is present); in a sterile floret, the flower and sometimes palea are rudimentary or absent." >Florets</u>!){
 				}
-				if(s! <<171>>florets<<171>>!&nbsp;<div class="dropdown"><u class="dotted">florets</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/grass-florets.jpg" class="large-image" alt="image missing" >In Poaceae, a single flower and its immediately subtending bracts (lemma and generally palea, the lemma subtending the palea when the latter is present); in a sterile floret, the flower and sometimes palea are rudimentary or absent.</div></div>!){
+				if(s! <<171>>florets<<171>>!&nbsp;<div class="dropdown"><u class="dotted">florets</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/grass-florets.jpg" class="large-image" alt="image missing" >In Poaceae, a single flower and its immediately subtending bracts (lemma and generally palea, the lemma subtending the palea when the latter is present); in a sterile floret, the flower and sometimes palea are rudimentary or absent.</div></div>!){
 				}
 				if(s!<<172>>Follicle<<172>>!<u class="dotted" title="Dry fruit from a simple pistil, dehiscent on only one side, along a single suture.  A single flower may develop into a simple fruit of 1 follicle or an aggregate fruit of several follicles." >Follicle</u>!){
 				}
@@ -2955,7 +2955,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<173>>Follicles<<173>>!<u class="dotted" title="Dry fruit from a simple pistil, dehiscent on only one side, along a single suture.  A single flower may develop into a simple fruit of 1 follicle or an aggregate fruit of several follicles." >Follicles</u>!){
 				}
-				if(s! <<173>>follicles<<173>>!&nbsp;<div class="dropdown"><u class="dotted">follicles</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/follicles.jpg" class="large-image" alt="image missing" >Dry fruit from a simple pistil, dehiscent on only one side, along a single suture.  A single flower may develop into a simple fruit of 1 follicle or an aggregate fruit of several follicles.</div></div>!){
+				if(s! <<173>>follicles<<173>>!&nbsp;<div class="dropdown"><u class="dotted">follicles</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/follicles.jpg" class="large-image" alt="image missing" >Dry fruit from a simple pistil, dehiscent on only one side, along a single suture.  A single flower may develop into a simple fruit of 1 follicle or an aggregate fruit of several follicles.</div></div>!){
 				}
 				if(s!<<174>>Foothill<<174>>!<u class="dotted" title="Slope at the base of a mountain; especially applied to such features in CA-FP." >Foothill</u>!){
 				}
@@ -2967,7 +2967,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<176>>Forked<<176>>!<u class="dotted" title="Pertaining to a hair or other structure that branches into two parts." >Forked</u>!){
 				}
-				if(s! <<176>>forked<<176>>!&nbsp;<div class="dropdown"><u class="dotted">forked</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/forked.jpg" class="large-image" alt="image missing" >Pertaining to a hair or other structure that branches into two parts.</div></div>!){
+				if(s! <<176>>forked<<176>>!&nbsp;<div class="dropdown"><u class="dotted">forked</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/forked.jpg" class="large-image" alt="image missing" >Pertaining to a hair or other structure that branches into two parts.</div></div>!){
 				}
 				if(s!<<177>>Free<<177>>!<u class="dotted" title="Neither fused to nor adherent to other parts; distinct, separate." >Free</u>!){
 				}
@@ -2975,11 +2975,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<178>>Free-central<<178>>!<u class="dotted" title="Pertaining to a placenta along the central axis in a compound ovary with only one chamber." >Free-central</u>!){
 				}
-				if(s! <<178>>free-central<<178>>!&nbsp;<div class="dropdown"><u class="dotted">free-central</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/free-central-placenta.jpg" class="large-image" alt="image missing" >Pertaining to a placenta along the central axis in a compound ovary with only one chamber.</div></div>!){
+				if(s! <<178>>free-central<<178>>!&nbsp;<div class="dropdown"><u class="dotted">free-central</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/free-central-placenta.jpg" class="large-image" alt="image missing" >Pertaining to a placenta along the central axis in a compound ovary with only one chamber.</div></div>!){
 				}
 				if(s!<<179>>Fringed<<179>>!<u class="dotted" title="Having ragged or finely cut margins." >Fringed</u>!){
 				}
-				if(s! <<179>>fringed<<179>>!&nbsp;<div class="dropdown"><u class="dotted">fringed</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/fringed.jpg" class="large-image" alt="image missing" >Having ragged or finely cut margins.</div></div>!){
+				if(s! <<179>>fringed<<179>>!&nbsp;<div class="dropdown"><u class="dotted">fringed</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/fringed.jpg" class="large-image" alt="image missing" >Having ragged or finely cut margins.</div></div>!){
 				}
 				if(s!<<180>>Frond<<180>>!<u class="dotted" title="In ferns, a leaf, often compound or dissected, borne on a rhizome." >Frond</u>!){
 				}
@@ -2995,7 +2995,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<183>>Funnel-shaped<<183>>!<u class="dotted" title="Widening from the base more or less gradually through the throat into an ascending, spreading, or recurved limb; often applied to a fused calyx or corolla." >Funnel-shaped</u>!){
 				}
-				if(s! <<183>>funnel-shaped<<183>>!&nbsp;<div class="dropdown"><u class="dotted">funnel-shaped</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/funnel-shaped.jpg" class="large-image" alt="image missing" >Widening from the base more or less gradually through the throat into an ascending, spreading, or recurved limb; often applied to a fused calyx or corolla.</div></div>!){
+				if(s! <<183>>funnel-shaped<<183>>!&nbsp;<div class="dropdown"><u class="dotted">funnel-shaped</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/funnel-shaped.jpg" class="large-image" alt="image missing" >Widening from the base more or less gradually through the throat into an ascending, spreading, or recurved limb; often applied to a fused calyx or corolla.</div></div>!){
 				}
 				if(s!<<184>>Fused<<184>>!<u class="dotted" title="United, as the petals together into a corolla tube or stamens onto petals; neither free nor adherent." >Fused</u>!){
 				}
@@ -3003,7 +3003,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<185>>Fusiform<<185>>!<u class="dotted" title="Elongate, widest at the middle, tapered to both ends." >Fusiform</u>!){
 				}
-				if(s! <<185>>fusiform<<185>>!&nbsp;<div class="dropdown"><u class="dotted">fusiform</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/fusiform.jpg" class="large-image" alt="image missing" >Elongate, widest at the middle, tapered to both ends.</div></div>!){
+				if(s! <<185>>fusiform<<185>>!&nbsp;<div class="dropdown"><u class="dotted">fusiform</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/fusiform.jpg" class="large-image" alt="image missing" >Elongate, widest at the middle, tapered to both ends.</div></div>!){
 				}
 				if(s!<<186>>Glabrous<<186>>!<u class="dotted" title="Without hairs." >Glabrous</u>!){
 				}
@@ -3027,7 +3027,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<191>>Glume<<191>>!<u class="dotted" title="In Poaceae, each of generally two sheathing bracts that are the lowermost parts of a spikelet, subtending one or more florets." >Glume</u>!){
 				}
-				if(s! <<191>>glume<<191>>!&nbsp;<div class="dropdown"><u class="dotted">glume</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/grass-glume.jpg" class="large-image" alt="image missing" >In Poaceae, each of generally two sheathing bracts that are the lowermost parts of a spikelet, subtending one or more florets.</div></div>!){
+				if(s! <<191>>glume<<191>>!&nbsp;<div class="dropdown"><u class="dotted">glume</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/grass-glume.jpg" class="large-image" alt="image missing" >In Poaceae, each of generally two sheathing bracts that are the lowermost parts of a spikelet, subtending one or more florets.</div></div>!){
 				}
 				if(s!<<192>>Glumes<<192>>!<u class="dotted" title="In Poaceae, each of generally two sheathing bracts that are the lowermost parts of a spikelet, subtending one or more florets." >Glumes</u>!){
 				}
@@ -3039,7 +3039,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<194>>Granular<<194>>!<u class="dotted" title="Covered with minute bumps." >Granular</u>!){
 				}
-				if(s! <<194>>granular<<194>>!&nbsp;<div class="dropdown"><u class="dotted">granular</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/granular.jpg" class="large-image" alt="image missing" >Covered with minute bumps.</div></div>!){
+				if(s! <<194>>granular<<194>>!&nbsp;<div class="dropdown"><u class="dotted">granular</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/granular.jpg" class="large-image" alt="image missing" >Covered with minute bumps.</div></div>!){
 				}
 				if(s!<<195>>Grassland<<195>>!<u class="dotted" title="Vegetation dominated by various species of grasses, often mixed with various other kinds of herbs (not grasses) and sometimes scattered, low-growing shrubs." >Grassland</u>!){
 				}
@@ -3087,11 +3087,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<206>>Hastate<<206>>!<u class="dotted" title="Arrowhead-shaped, with two basal lobes oriented more or less perpendicularly to the long axis." >Hastate</u>!){
 				}
-				if(s! <<206>>hastate<<206>>!&nbsp;<div class="dropdown"><u class="dotted">hastate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/hastate.jpg" class="large-image" alt="image missing" >Arrowhead-shaped, with two basal lobes oriented more or less perpendicularly to the long axis.</div></div>!){
+				if(s! <<206>>hastate<<206>>!&nbsp;<div class="dropdown"><u class="dotted">hastate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/hastate.jpg" class="large-image" alt="image missing" >Arrowhead-shaped, with two basal lobes oriented more or less perpendicularly to the long axis.</div></div>!){
 				}
 				if(s!<<207>>Head<<207>>!<u class="dotted" title="1. A dense, often spheric inflorescence of sessile or subsessile flowers.<br>2. In Asteraceae and some other groups, a head-like inflorescence is one in which sessile or subsessile inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, are attached in a short dense cluster without an evident axis or branches." >Head</u>!){
 				}
-				if(s! <<207>>head<<207>>!&nbsp;<div class="dropdown"><u class="dotted">head</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/head.jpg" class="large-image" alt="image missing" >1. A dense, often spheric inflorescence of sessile or subsessile flowers.<br>2. In Asteraceae and some other groups, a head-like inflorescence is one in which sessile or subsessile inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, are attached in a short dense cluster without an evident axis or branches.</div></div>!){
+				if(s! <<207>>head<<207>>!&nbsp;<div class="dropdown"><u class="dotted">head</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/head.jpg" class="large-image" alt="image missing" >1. A dense, often spheric inflorescence of sessile or subsessile flowers.<br>2. In Asteraceae and some other groups, a head-like inflorescence is one in which sessile or subsessile inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, are attached in a short dense cluster without an evident axis or branches.</div></div>!){
 				}
 				if(s!<<208>>Heads<<208>>!<u class="dotted" title="1. A dense, often spheric inflorescence of sessile or subsessile flowers.<br>2. In Asteraceae and some other groups, a head-like inflorescence is one in which sessile or subsessile inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, are attached in a short dense cluster without an evident axis or branches." >Heads</u>!){
 				}
@@ -3123,7 +3123,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<215>>Hypanthium<<215>>!<u class="dotted" title="Structure generally in the shape of a tube, cup, or bowl, derived from the fused lower portions of the perianth and stamens, from which these parts seem to arise, and to which the ovary wall is fused in an inferior ovary (to which the ovary wall is partially fused in a half-inferior ovary; from which the ovary is free in a superior ovary)." >Hypanthium</u>!){
 				}
-				if(s! <<215>>hypanthium<<215>>!&nbsp;<div class="dropdown"><u class="dotted">hypanthium</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/hypanthium.jpg" class="large-image" alt="image missing" >Structure generally in the shape of a tube, cup, or bowl, derived from the fused lower portions of the perianth and stamens, from which these parts seem to arise, and to which the ovary wall is fused in an inferior ovary (to which the ovary wall is partially fused in a half-inferior ovary; from which the ovary is free in a superior ovary).</div></div>!){
+				if(s! <<215>>hypanthium<<215>>!&nbsp;<div class="dropdown"><u class="dotted">hypanthium</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/hypanthium.jpg" class="large-image" alt="image missing" >Structure generally in the shape of a tube, cup, or bowl, derived from the fused lower portions of the perianth and stamens, from which these parts seem to arise, and to which the ovary wall is fused in an inferior ovary (to which the ovary wall is partially fused in a half-inferior ovary; from which the ovary is free in a superior ovary).</div></div>!){
 				}
 				if(s!<<216>>Hypanthia<<216>>!<u class="dotted" title="Structure generally in the shape of a tube, cup, or bowl, derived from the fused lower portions of the perianth and stamens, from which these parts seem to arise, and to which the ovary wall is fused in an inferior ovary (to which the ovary wall is partially fused in a half-inferior ovary; from which the ovary is free in a superior ovary)." >Hypanthia</u>!){
 				}
@@ -3131,15 +3131,15 @@ warn "reading from $file\n";
 				}
 				if(s!<<217>>Included<<217>>!<u class="dotted" title="Not protruding out of surrounding structure(s) (e.g., stamens included in corolla)." >Included</u>!){
 				}
-				if(s! <<217>>included<<217>>!&nbsp;<div class="dropdown"><u class="dotted">included</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/included-stamens.jpg" class="large-image" alt="image missing" >Not protruding out of surrounding structure(s) (e.g., stamens included in corolla).</div></div>!){
+				if(s! <<217>>included<<217>>!&nbsp;<div class="dropdown"><u class="dotted">included</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/included-stamens.jpg" class="large-image" alt="image missing" >Not protruding out of surrounding structure(s) (e.g., stamens included in corolla).</div></div>!){
 				}
 				if(s!<<218>>Indehiscent<<218>>!<u class="dotted" title="Not opening inherently to release contents; usually pertaining to fruits." >Indehiscent</u>!){
 				}
-				if(s! <<218>>indehiscent<<218>>!&nbsp;<div class="dropdown"><u class="dotted">indehiscent</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/indehiscent.jpg" class="large-image" alt="image missing" >Not opening inherently to release contents; usually pertaining to fruits.</div></div>!){
+				if(s! <<218>>indehiscent<<218>>!&nbsp;<div class="dropdown"><u class="dotted">indehiscent</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/indehiscent.jpg" class="large-image" alt="image missing" >Not opening inherently to release contents; usually pertaining to fruits.</div></div>!){
 				}
 				if(s!<<219>>Indusium<<219>>!<u class="dotted" title="In many ferns, a veil- or scale-like outgrowth of the leaf surface that covers a sorus." >Indusium</u>!){
 				}
-				if(s! <<219>>indusium<<219>>!&nbsp;<div class="dropdown"><u class="dotted">indusium</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/indusium.jpg" class="large-image" alt="image missing" >In many ferns, a veil- or scale-like outgrowth of the leaf surface that covers a sorus.</div></div>!){
+				if(s! <<219>>indusium<<219>>!&nbsp;<div class="dropdown"><u class="dotted">indusium</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/indusium.jpg" class="large-image" alt="image missing" >In many ferns, a veil- or scale-like outgrowth of the leaf surface that covers a sorus.</div></div>!){
 				}
 				if(s!<<220>>Indusia<<220>>!<u class="dotted" title="In many ferns, a veil- or scale-like outgrowth of the leaf surface that covers a sorus." >Indusia</u>!){
 				}
@@ -3171,11 +3171,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<227>>Internode<<227>>!<u class="dotted" title="Segment of an axis (generally a stem) between successive positions (nodes) from which one or more structures (especially leaves, buds, branches, or flowers) arise." >Internode</u>!){
 				}
-				if(s! <<227>>internode<<227>>!&nbsp;<div class="dropdown"><u class="dotted">internode</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/node-internode.jpg" class="large-image" alt="image missing" >Segment of an axis (generally a stem) between successive positions (nodes) from which one or more structures (especially leaves, buds, branches, or flowers) arise.</div></div>!){
+				if(s! <<227>>internode<<227>>!&nbsp;<div class="dropdown"><u class="dotted">internode</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/node-internode.jpg" class="large-image" alt="image missing" >Segment of an axis (generally a stem) between successive positions (nodes) from which one or more structures (especially leaves, buds, branches, or flowers) arise.</div></div>!){
 				}
 				if(s!<<228>>Internodes<<228>>!<u class="dotted" title="Segment of an axis (generally a stem) between successive positions (nodes) from which one or more structures (especially leaves, buds, branches, or flowers) arise." >Internodes</u>!){
 				}
-				if(s! <<228>>internodes<<228>>!&nbsp;<div class="dropdown"><u class="dotted">internodes</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/node-internode.jpg" class="large-image" alt="image missing" >Segment of an axis (generally a stem) between successive positions (nodes) from which one or more structures (especially leaves, buds, branches, or flowers) arise.</div></div>!){
+				if(s! <<228>>internodes<<228>>!&nbsp;<div class="dropdown"><u class="dotted">internodes</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/node-internode.jpg" class="large-image" alt="image missing" >Segment of an axis (generally a stem) between successive positions (nodes) from which one or more structures (especially leaves, buds, branches, or flowers) arise.</div></div>!){
 				}
 				if(s!<<229>>Interrupted<<229>>!<u class="dotted" title="Having parts spaced unevenly, clustered; pertaining especially to inflorescences in which the flowers are clustered." >Interrupted</u>!){
 				}
@@ -3187,11 +3187,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<231>>Involucel<<231>>!<u class="dotted" title="A secondary involucre (group of bracts) within an inflorescence (e.g., those subtending the secondary umbels in members of Apiaceae)." >Involucel</u>!){
 				}
-				if(s! <<231>>involucel<<231>>!&nbsp;<div class="dropdown"><u class="dotted">involucel</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/involucel.jpg" class="large-image" alt="image missing" >A secondary involucre (group of bracts) within an inflorescence (e.g., those subtending the secondary umbels in members of Apiaceae).</div></div>!){
+				if(s! <<231>>involucel<<231>>!&nbsp;<div class="dropdown"><u class="dotted">involucel</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/involucel.jpg" class="large-image" alt="image missing" >A secondary involucre (group of bracts) within an inflorescence (e.g., those subtending the secondary umbels in members of Apiaceae).</div></div>!){
 				}
 				if(s!<<232>>Involucre<<232>>!<u class="dotted" title="Group of bracts more or less held together as a unit, subtending a flower, fruit (acorn cup), or inflorescence." >Involucre</u>!){
 				}
-				if(s! <<232>>involucre<<232>>!&nbsp;<div class="dropdown"><u class="dotted">involucre</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/involucre.jpg" class="large-image" alt="image missing" >Group of bracts more or less held together as a unit, subtending a flower, fruit (acorn cup), or inflorescence.</div></div>!){
+				if(s! <<232>>involucre<<232>>!&nbsp;<div class="dropdown"><u class="dotted">involucre</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/involucre.jpg" class="large-image" alt="image missing" >Group of bracts more or less held together as a unit, subtending a flower, fruit (acorn cup), or inflorescence.</div></div>!){
 				}
 				if(s!<<233>>Involucres<<233>>!<u class="dotted" title="Group of bracts more or less held together as a unit, subtending a flower, fruit (acorn cup), or inflorescence." >Involucres</u>!){
 				}
@@ -3219,7 +3219,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<239>>Lanceolate<<239>>!<u class="dotted" title="Narrowly elongate, widest in the basal half, often tapered to an acute tip." >Lanceolate</u>!){
 				}
-				if(s! <<239>>lanceolate<<239>>!&nbsp;<div class="dropdown"><u class="dotted">lanceolate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/lanceolate.jpg" class="large-image" alt="image missing" >Narrowly elongate, widest in the basal half, often tapered to an acute tip.</div></div>!){
+				if(s! <<239>>lanceolate<<239>>!&nbsp;<div class="dropdown"><u class="dotted">lanceolate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/lanceolate.jpg" class="large-image" alt="image missing" >Narrowly elongate, widest in the basal half, often tapered to an acute tip.</div></div>!){
 				}
 				if(s!<<240>>Lateral<<240>>!<u class="dotted" title="Pertaining to the sides(s) of a structure; e.g., laterally compressed (flattened side-to-side), lateral branch, lateral appendage." >Lateral</u>!){
 				}
@@ -3227,7 +3227,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<241>>Leaf<<241>>!<u class="dotted" title="Organ arising from a stem, generally composed of a stalk (petiole) and a flat, expanded, green, photosynthetic area (blade); distinguished from a leaflet by the presence in its axil of a bud, branch, thorn, or flower; sometimes with lateral, basal appendages (stipules); either simple (toothed, lobed, or dissected but not divided into leaflets) or compound (divided into leaflets)." >Leaf</u>!){
 				}
-				if(s! <<241>>leaf<<241>>!&nbsp;<div class="dropdown"><u class="dotted">leaf</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/leaf.jpg" class="large-image" alt="image missing" >Organ arising from a stem, generally composed of a stalk (petiole) and a flat, expanded, green, photosynthetic area (blade); distinguished from a leaflet by the presence in its axil of a bud, branch, thorn, or flower; sometimes with lateral, basal appendages (stipules); either simple (toothed, lobed, or dissected but not divided into leaflets) or compound (divided into leaflets).</div></div>!){
+				if(s! <<241>>leaf<<241>>!&nbsp;<div class="dropdown"><u class="dotted">leaf</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/leaf.jpg" class="large-image" alt="image missing" >Organ arising from a stem, generally composed of a stalk (petiole) and a flat, expanded, green, photosynthetic area (blade); distinguished from a leaflet by the presence in its axil of a bud, branch, thorn, or flower; sometimes with lateral, basal appendages (stipules); either simple (toothed, lobed, or dissected but not divided into leaflets) or compound (divided into leaflets).</div></div>!){
 				}
 				if(s!<<242>>Leaves<<242>>!<u class="dotted" title="Organ arising from a stem, generally composed of a stalk (petiole) and a flat, expanded, green, photosynthetic area (blade); distinguished from a leaflet by the presence in its axil of a bud, branch, thorn, or flower; sometimes with lateral, basal appendages (stipules); either simple (toothed, lobed, or dissected but not divided into leaflets) or compound (divided into leaflets)." >Leaves</u>!){
 				}
@@ -3235,7 +3235,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<243>>Leaflet<<243>>!<u class="dotted" title="A leaf-like unit of a compound leaf; distinguished from a leaf by the absence in its axil of a bud, branch, thorn, or flower; lacking lateral, basal appendages (stipules); either simple (leaf 1-compound, with primary leaflets) or compound (leaf 2-compound, with primary and secondary leaflets; 3-compound, with primary, secondary, and tertiary leaflets, etc)." >Leaflet</u>!){
 				}
-				if(s! <<243>>leaflet<<243>>!&nbsp;<div class="dropdown"><u class="dotted">leaflet</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/primary-leaflet.jpg" class="large-image" alt="image missing" >A leaf-like unit of a compound leaf; distinguished from a leaf by the absence in its axil of a bud, branch, thorn, or flower; lacking lateral, basal appendages (stipules); either simple (leaf 1-compound, with primary leaflets) or compound (leaf 2-compound, with primary and secondary leaflets; 3-compound, with primary, secondary, and tertiary leaflets, etc).</div></div>!){
+				if(s! <<243>>leaflet<<243>>!&nbsp;<div class="dropdown"><u class="dotted">leaflet</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/primary-leaflet.jpg" class="large-image" alt="image missing" >A leaf-like unit of a compound leaf; distinguished from a leaf by the absence in its axil of a bud, branch, thorn, or flower; lacking lateral, basal appendages (stipules); either simple (leaf 1-compound, with primary leaflets) or compound (leaf 2-compound, with primary and secondary leaflets; 3-compound, with primary, secondary, and tertiary leaflets, etc).</div></div>!){
 				}
 				if(s!<<244>>Leaflets<<244>>!<u class="dotted" title="A leaf-like unit of a compound leaf; distinguished from a leaf by the absence in its axil of a bud, branch, thorn, or flower; lacking lateral, basal appendages (stipules); either simple (leaf 1-compound, with primary leaflets) or compound (leaf 2-compound, with primary and secondary leaflets; 3-compound, with primary, secondary, and tertiary leaflets, etc)." >Leaflets</u>!){
 				}
@@ -3251,11 +3251,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<247>>Lemma<<247>>!<u class="dotted" title="In Poaceae, the lower, generally larger of two sheathing bracts subtending a flower, generally ensheathing the palea (in a sterile lemma, the associated flower and sometimes palea are rudimentary or absent); with the palea and flower, comprising the floret." >Lemma</u>!){
 				}
-				if(s! <<247>>lemma<<247>>!&nbsp;<div class="dropdown"><u class="dotted">lemma</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/grass-lemma.jpg" class="large-image" alt="image missing" >In Poaceae, the lower, generally larger of two sheathing bracts subtending a flower, generally ensheathing the palea (in a sterile lemma, the associated flower and sometimes palea are rudimentary or absent); with the palea and flower, comprising the floret.</div></div>!){
+				if(s! <<247>>lemma<<247>>!&nbsp;<div class="dropdown"><u class="dotted">lemma</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/grass-lemma.jpg" class="large-image" alt="image missing" >In Poaceae, the lower, generally larger of two sheathing bracts subtending a flower, generally ensheathing the palea (in a sterile lemma, the associated flower and sometimes palea are rudimentary or absent); with the palea and flower, comprising the floret.</div></div>!){
 				}
 				if(s!<<248>>Lemmas<<248>>!<u class="dotted" title="In Poaceae, the lower, generally larger of two sheathing bracts subtending a flower, generally ensheathing the palea (in a sterile lemma, the associated flower and sometimes palea are rudimentary or absent); with the palea and flower, comprising the floret." >Lemmas</u>!){
 				}
-				if(s! <<248>>lemmas<<248>>!&nbsp;<div class="dropdown"><u class="dotted">lemmas</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/grass-lemma.jpg" class="large-image" alt="image missing" >In Poaceae, the lower, generally larger of two sheathing bracts subtending a flower, generally ensheathing the palea (in a sterile lemma, the associated flower and sometimes palea are rudimentary or absent); with the palea and flower, comprising the floret.</div></div>!){
+				if(s! <<248>>lemmas<<248>>!&nbsp;<div class="dropdown"><u class="dotted">lemmas</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/grass-lemma.jpg" class="large-image" alt="image missing" >In Poaceae, the lower, generally larger of two sheathing bracts subtending a flower, generally ensheathing the palea (in a sterile lemma, the associated flower and sometimes palea are rudimentary or absent); with the palea and flower, comprising the floret.</div></div>!){
 				}
 				if(s!<<249>>Lenticel<<249>>!<u class="dotted" title="Each of many spongy or calloused areas of various shapes, sizes, and colors, most commonly on surfaces of young stems (including twigs) or fruits." >Lenticel</u>!){
 				}
@@ -3263,7 +3263,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<250>>Lenticels<<250>>!<u class="dotted" title="Each of many spongy or calloused areas of various shapes, sizes, and colors, most commonly on surfaces of young stems (including twigs) or fruits." >Lenticels</u>!){
 				}
-				if(s! <<250>>lenticels<<250>>!&nbsp;<div class="dropdown"><u class="dotted">lenticels</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/lenticels.jpg" class="large-image" alt="image missing" >Each of many spongy or calloused areas of various shapes, sizes, and colors, most commonly on surfaces of young stems (including twigs) or fruits.</div></div>!){
+				if(s! <<250>>lenticels<<250>>!&nbsp;<div class="dropdown"><u class="dotted">lenticels</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/lenticels.jpg" class="large-image" alt="image missing" >Each of many spongy or calloused areas of various shapes, sizes, and colors, most commonly on surfaces of young stems (including twigs) or fruits.</div></div>!){
 				}
 				if(s!<<251>>Lenticular<<251>>!<u class="dotted" title="Lens- or discus-shaped, with both major sides convex." >Lenticular</u>!){
 				}
@@ -3275,7 +3275,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<253>>Ligule<<253>>!<u class="dotted" title="1. In Asteraceae, the 5-lobed, strap- or fan-shaped outer portion of the corolla of a ligulate flower. 2. In most Poaceae and some other grass-like plants, an appendage at the adaxial junction of leaf sheath and blade, generally membranous, sometimes formed of hairs. 3. In Isoetes and, more obscurely, in Selaginella, a membrane that wholly or partially covers a sporangium." >Ligule</u>!){
 				}
-				if(s! <<253>>ligule<<253>>!&nbsp;<div class="dropdown"><u class="dotted">ligule</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/grass-leaf-ligule.jpg" class="large-image" alt="image missing" >1. In Asteraceae, the 5-lobed, strap- or fan-shaped outer portion of the corolla of a ligulate flower. 2. In most Poaceae and some other grass-like plants, an appendage at the adaxial junction of leaf sheath and blade, generally membranous, sometimes formed of hairs. 3. In Isoetes and, more obscurely, in Selaginella, a membrane that wholly or partially covers a sporangium.</div></div>!){
+				if(s! <<253>>ligule<<253>>!&nbsp;<div class="dropdown"><u class="dotted">ligule</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/grass-leaf-ligule.jpg" class="large-image" alt="image missing" >1. In Asteraceae, the 5-lobed, strap- or fan-shaped outer portion of the corolla of a ligulate flower. 2. In most Poaceae and some other grass-like plants, an appendage at the adaxial junction of leaf sheath and blade, generally membranous, sometimes formed of hairs. 3. In Isoetes and, more obscurely, in Selaginella, a membrane that wholly or partially covers a sporangium.</div></div>!){
 				}
 				if(s!<<254>>Ligules<<254>>!<u class="dotted" title="1. In Asteraceae, the 5-lobed, strap- or fan-shaped outer portion of the corolla of a ligulate flower. 2. In most Poaceae and some other grass-like plants, an appendage at the adaxial junction of leaf sheath and blade, generally membranous, sometimes formed of hairs. 3. In Isoetes and, more obscurely, in Selaginella, a membrane that wholly or partially covers a sporangium." >Ligules</u>!){
 				}
@@ -3295,7 +3295,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<258>>Linear<<258>>!<u class="dotted" title="Elongate, with nearly parallel sides; narrower than elliptic or oblong." >Linear</u>!){
 				}
-				if(s! <<258>>linear<<258>>!&nbsp;<div class="dropdown"><u class="dotted">linear</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/linear.jpg" class="large-image" alt="image missing" >Elongate, with nearly parallel sides; narrower than elliptic or oblong.</div></div>!){
+				if(s! <<258>>linear<<258>>!&nbsp;<div class="dropdown"><u class="dotted">linear</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/linear.jpg" class="large-image" alt="image missing" >Elongate, with nearly parallel sides; narrower than elliptic or oblong.</div></div>!){
 				}
 				if(s!<<259>>Lip<<259>>!<u class="dotted" title="1. Upper or lower of two parts in a bilateral, unequally divided calyx or corolla.  2. In Orchidaceae, generally the largest, lowest, most highly modified perianth part." >Lip</u>!){
 				}
@@ -3307,15 +3307,15 @@ warn "reading from $file\n";
 				}
 				if(s!<<261>>Lobe<<261>>!<u class="dotted" title="1. A major expansion or bulge, such as on the margin of a leaf, sepal, or petal, or on the surface of an ovary.  2. The free tips of otherwise fused structures, such as sepals or petals; larger than teeth." >Lobe</u>!){
 				}
-				if(s! <<261>>lobe<<261>>!&nbsp;<div class="dropdown"><u class="dotted">lobe</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/lobe.jpg" class="large-image" alt="image missing" >1. A major expansion or bulge, such as on the margin of a leaf, sepal, or petal, or on the surface of an ovary.  2. The free tips of otherwise fused structures, such as sepals or petals; larger than teeth.</div></div>!){
+				if(s! <<261>>lobe<<261>>!&nbsp;<div class="dropdown"><u class="dotted">lobe</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/lobe.jpg" class="large-image" alt="image missing" >1. A major expansion or bulge, such as on the margin of a leaf, sepal, or petal, or on the surface of an ovary.  2. The free tips of otherwise fused structures, such as sepals or petals; larger than teeth.</div></div>!){
 				}
 				if(s!<<262>>Lobes<<262>>!<u class="dotted" title="1. A major expansion or bulge, such as on the margin of a leaf, sepal, or petal, or on the surface of an ovary.  2. The free tips of otherwise fused structures, such as sepals or petals; larger than teeth." >Lobes</u>!){
 				}
-				if(s! <<262>>lobes<<262>>!&nbsp;<div class="dropdown"><u class="dotted">lobes</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/lobe.jpg" class="large-image" alt="image missing" >1. A major expansion or bulge, such as on the margin of a leaf, sepal, or petal, or on the surface of an ovary.  2. The free tips of otherwise fused structures, such as sepals or petals; larger than teeth.</div></div>!){
+				if(s! <<262>>lobes<<262>>!&nbsp;<div class="dropdown"><u class="dotted">lobes</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/lobe.jpg" class="large-image" alt="image missing" >1. A major expansion or bulge, such as on the margin of a leaf, sepal, or petal, or on the surface of an ovary.  2. The free tips of otherwise fused structures, such as sepals or petals; larger than teeth.</div></div>!){
 				}
 				if(s!<<263>>Loculicidal<<263>>!<u class="dotted" title="Pertaining to dehiscence of a fruit (capsule) by a longitudinal line through the wall at or near the center of each chamber, such that each resulting segment corresponds to the two adjacent halves of two adjacent chambers, usually with a placenta-bearing septum centrally." >Loculicidal</u>!){
 				}
-				if(s! <<263>>loculicidal<<263>>!&nbsp;<div class="dropdown"><u class="dotted">loculicidal</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/loculicidal.jpg" class="large-image" alt="image missing" >Pertaining to dehiscence of a fruit (capsule) by a longitudinal line through the wall at or near the center of each chamber, such that each resulting segment corresponds to the two adjacent halves of two adjacent chambers, usually with a placenta-bearing septum centrally.</div></div>!){
+				if(s! <<263>>loculicidal<<263>>!&nbsp;<div class="dropdown"><u class="dotted">loculicidal</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/loculicidal.jpg" class="large-image" alt="image missing" >Pertaining to dehiscence of a fruit (capsule) by a longitudinal line through the wall at or near the center of each chamber, such that each resulting segment corresponds to the two adjacent halves of two adjacent chambers, usually with a placenta-bearing septum centrally.</div></div>!){
 				}
 				if(s!<<264>>Longitudinal<<264>>!<u class="dotted" title="Pertaining to length or the lengthwise dimension; parallel to the axis." >Longitudinal</u>!){
 				}
@@ -3399,19 +3399,19 @@ warn "reading from $file\n";
 				}
 				if(s!<<284>>Needle<<284>>!<u class="dotted" title="A narrowly linear, often waxy, generally evergreen leaf, especially of conifers." >Needle</u>!){
 				}
-				if(s! <<284>>needle<<284>>!&nbsp;<div class="dropdown"><u class="dotted">needle</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/needle.jpg" class="large-image" alt="image missing" >A narrowly linear, often waxy, generally evergreen leaf, especially of conifers.</div></div>!){
+				if(s! <<284>>needle<<284>>!&nbsp;<div class="dropdown"><u class="dotted">needle</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/needle.jpg" class="large-image" alt="image missing" >A narrowly linear, often waxy, generally evergreen leaf, especially of conifers.</div></div>!){
 				}
 				if(s!<<285>>Needles<<285>>!<u class="dotted" title="A narrowly linear, often waxy, generally evergreen leaf, especially of conifers." >Needles</u>!){
 				}
-				if(s! <<285>>needles<<285>>!&nbsp;<div class="dropdown"><u class="dotted">needles</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/needles.jpg" class="large-image" alt="image missing" >A narrowly linear, often waxy, generally evergreen leaf, especially of conifers.</div></div>!){
+				if(s! <<285>>needles<<285>>!&nbsp;<div class="dropdown"><u class="dotted">needles</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/needles.jpg" class="large-image" alt="image missing" >A narrowly linear, often waxy, generally evergreen leaf, especially of conifers.</div></div>!){
 				}
 				if(s!<<286>>Node<<286>>!<u class="dotted" title="Position on a stem from which one or more structures (especially leaves, buds, branches, or flowers) arise." >Node</u>!){
 				}
-				if(s! <<286>>node<<286>>!&nbsp;<div class="dropdown"><u class="dotted">node</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/node.jpg" class="large-image" alt="image missing" >Position on a stem from which one or more structures (especially leaves, buds, branches, or flowers) arise.</div></div>!){
+				if(s! <<286>>node<<286>>!&nbsp;<div class="dropdown"><u class="dotted">node</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/node.jpg" class="large-image" alt="image missing" >Position on a stem from which one or more structures (especially leaves, buds, branches, or flowers) arise.</div></div>!){
 				}
 				if(s!<<287>>Nodes<<287>>!<u class="dotted" title="Position on a stem from which one or more structures (especially leaves, buds, branches, or flowers) arise." >Nodes</u>!){
 				}
-				if(s! <<287>>nodes<<287>>!&nbsp;<div class="dropdown"><u class="dotted">nodes</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/node.jpg" class="large-image" alt="image missing" >Position on a stem from which one or more structures (especially leaves, buds, branches, or flowers) arise.</div></div>!){
+				if(s! <<287>>nodes<<287>>!&nbsp;<div class="dropdown"><u class="dotted">nodes</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/node.jpg" class="large-image" alt="image missing" >Position on a stem from which one or more structures (especially leaves, buds, branches, or flowers) arise.</div></div>!){
 				}
 				if(s!<<288>>Nut<<288>>!<u class="dotted" title="Mostly dry, sometimes fleshy or pulpy, usually indehiscent fruit in which a single seed is encased in a hard shell.  (e.g., Quercus palmeri)" >Nut</u>!){
 				}
@@ -3431,15 +3431,15 @@ warn "reading from $file\n";
 				}
 				if(s!<<292>>Oblique<<292>>!<u class="dotted" title="Having unequal sides or an asymmetric base." >Oblique</u>!){
 				}
-				if(s! <<292>>oblique<<292>>!&nbsp;<div class="dropdown"><u class="dotted">oblique</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/oblique.jpg" class="large-image" alt="image missing" >Having unequal sides or an asymmetric base.</div></div>!){
+				if(s! <<292>>oblique<<292>>!&nbsp;<div class="dropdown"><u class="dotted">oblique</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/oblique.jpg" class="large-image" alt="image missing" >Having unequal sides or an asymmetric base.</div></div>!){
 				}
 				if(s!<<293>>Oblong<<293>>!<u class="dotted" title="Longer than wide, with nearly parallel sides; wider than linear." >Oblong</u>!){
 				}
-				if(s! <<293>>oblong<<293>>!&nbsp;<div class="dropdown"><u class="dotted">oblong</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/oblong.jpg" class="large-image" alt="image missing" >Longer than wide, with nearly parallel sides; wider than linear.</div></div>!){
+				if(s! <<293>>oblong<<293>>!&nbsp;<div class="dropdown"><u class="dotted">oblong</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/oblong.jpg" class="large-image" alt="image missing" >Longer than wide, with nearly parallel sides; wider than linear.</div></div>!){
 				}
 				if(s!<<294>>Obtuse<<294>>!<u class="dotted" title="Having a short-tapered, blunt tip or base, the sides convex or straight and converging at more than a right angle." >Obtuse</u>!){
 				}
-				if(s! <<294>>obtuse<<294>>!&nbsp;<div class="dropdown"><u class="dotted">obtuse</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/obtuse.jpg" class="large-image" alt="image missing" >Having a short-tapered, blunt tip or base, the sides convex or straight and converging at more than a right angle.</div></div>!){
+				if(s! <<294>>obtuse<<294>>!&nbsp;<div class="dropdown"><u class="dotted">obtuse</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/obtuse.jpg" class="large-image" alt="image missing" >Having a short-tapered, blunt tip or base, the sides convex or straight and converging at more than a right angle.</div></div>!){
 				}
 				if(s!<<295>>Ocrea<<295>>!<u class="dotted" title="A generally scarious sheath around the stem formed by the fusion of stipules." >Ocrea</u>!){
 				}
@@ -3455,7 +3455,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<298>>Opposite<<298>>!<u class="dotted" title="1.  Arranged in pairs along an axis - e.g., two leaves per node.  2.  Occurring in the same rank, directly above or below, as 'stamens opposite petals'.  3.  Located directly across from." >Opposite</u>!){
 				}
-				if(s! <<298>>opposite<<298>>!&nbsp;<div class="dropdown"><u class="dotted">opposite</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/opposite.jpg" class="large-image" alt="image missing" >1.  Arranged in pairs along an axis - e.g., two leaves per node.  2.  Occurring in the same rank, directly above or below, as 'stamens opposite petals'.  3.  Located directly across from.</div></div>!){
+				if(s! <<298>>opposite<<298>>!&nbsp;<div class="dropdown"><u class="dotted">opposite</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/opposite.jpg" class="large-image" alt="image missing" >1.  Arranged in pairs along an axis - e.g., two leaves per node.  2.  Occurring in the same rank, directly above or below, as 'stamens opposite petals'.  3.  Located directly across from.</div></div>!){
 				}
 				if(s!<<299>>Ovary<<299>>!<u class="dotted" title="Ovule-bearing, usually wider, basal portion of pistil, normally developing into a fruit as ovules become seeds; may be simple (one carpel, one chamber) or compound (two or more carpels, one or more chambers)." >Ovary</u>!){
 				}
@@ -3475,7 +3475,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<303>>Ovate<<303>>!<u class="dotted" title="Egg-shaped (i.e., widest below the middle) in two dimensions (i.e., in one plane), as a leaf." >Ovate</u>!){
 				}
-				if(s! <<303>>ovate<<303>>!&nbsp;<div class="dropdown"><u class="dotted">ovate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/ovate.jpg" class="large-image" alt="image missing" >Egg-shaped (i.e., widest below the middle) in two dimensions (i.e., in one plane), as a leaf.</div></div>!){
+				if(s! <<303>>ovate<<303>>!&nbsp;<div class="dropdown"><u class="dotted">ovate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/ovate.jpg" class="large-image" alt="image missing" >Egg-shaped (i.e., widest below the middle) in two dimensions (i.e., in one plane), as a leaf.</div></div>!){
 				}
 				if(s!<<304>>Ovoid<<304>>!<u class="dotted" title="Egg-shaped (i.e., widest below the middle) in three dimensions, as a fruit." >Ovoid</u>!){
 				}
@@ -3495,7 +3495,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<308>>Palea<<308>>!<u class="dotted" title="1. In Asteraceae, a scale-like bract that subtends an individual flower on the receptacle (equal to 'chaff scale' in TJM), absent in some genera, restricted to a ring separating ray and disk flowers in most tarweed species. 2. In Poaceae, the distal, generally smaller of two sheathing bracts subtending a flower, generally two-veined and -keeled and ensheathed by the lemma; with the lemma and flower, comprising the floret." >Palea</u>!){
 				}
-				if(s! <<308>>palea<<308>>!&nbsp;<div class="dropdown"><u class="dotted">palea</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/grass-palea.jpg" class="large-image" alt="image missing" >1. In Asteraceae, a scale-like bract that subtends an individual flower on the receptacle (equal to 'chaff scale' in TJM), absent in some genera, restricted to a ring separating ray and disk flowers in most tarweed species. 2. In Poaceae, the distal, generally smaller of two sheathing bracts subtending a flower, generally two-veined and -keeled and ensheathed by the lemma; with the lemma and flower, comprising the floret.</div></div>!){
+				if(s! <<308>>palea<<308>>!&nbsp;<div class="dropdown"><u class="dotted">palea</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/grass-palea.jpg" class="large-image" alt="image missing" >1. In Asteraceae, a scale-like bract that subtends an individual flower on the receptacle (equal to 'chaff scale' in TJM), absent in some genera, restricted to a ring separating ray and disk flowers in most tarweed species. 2. In Poaceae, the distal, generally smaller of two sheathing bracts subtending a flower, generally two-veined and -keeled and ensheathed by the lemma; with the lemma and flower, comprising the floret.</div></div>!){
 				}
 				if(s!<<309>>Paleae<<309>>!<u class="dotted" title="1. In Asteraceae, a scale-like bract that subtends an individual flower on the receptacle (equal to 'chaff scale' in TJM), absent in some genera, restricted to a ring separating ray and disk flowers in most tarweed species. 2. In Poaceae, the distal, generally smaller of two sheathing bracts subtending a flower, generally two-veined and -keeled and ensheathed by the lemma; with the lemma and flower, comprising the floret." >Paleae</u>!){
 				}
@@ -3507,19 +3507,19 @@ warn "reading from $file\n";
 				}
 				if(s!<<311>>Palmate<<311>>!<u class="dotted" title="More than two structures or parts (e.g., veins, lobes, or leaflets) radiating from a common point in two dimensions (i.e., in one plane)." >Palmate</u>!){
 				}
-				if(s! <<311>>palmate<<311>>!&nbsp;<div class="dropdown"><u class="dotted">palmate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/palmate.jpg" class="large-image" alt="image missing" >More than two structures or parts (e.g., veins, lobes, or leaflets) radiating from a common point in two dimensions (i.e., in one plane).</div></div>!){
+				if(s! <<311>>palmate<<311>>!&nbsp;<div class="dropdown"><u class="dotted">palmate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/palmate.jpg" class="large-image" alt="image missing" >More than two structures or parts (e.g., veins, lobes, or leaflets) radiating from a common point in two dimensions (i.e., in one plane).</div></div>!){
 				}
 				if(s!<<312>>Panicle<<312>>!<u class="dotted" title="1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, a branched inflorescence in which the basal or lateral flowers (or some of them) open before the terminal or central flowers on any axis. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a panicle-like inflorescence is one in which at least some of  the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae),  instead of individual flowers, are attached (stalked or unstalked) to branches and not directly to the main axis of the inflorescence and in which floral development may or may not proceed as in 1." >Panicle</u>!){
 				}
-				if(s! <<312>>panicle<<312>>!&nbsp;<div class="dropdown"><u class="dotted">panicle</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/panicle.jpg" class="large-image" alt="image missing" >1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, a branched inflorescence in which the basal or lateral flowers (or some of them) open before the terminal or central flowers on any axis. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a panicle-like inflorescence is one in which at least some of  the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae),  instead of individual flowers, are attached (stalked or unstalked) to branches and not directly to the main axis of the inflorescence and in which floral development may or may not proceed as in 1.</div></div>!){
+				if(s! <<312>>panicle<<312>>!&nbsp;<div class="dropdown"><u class="dotted">panicle</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/panicle.jpg" class="large-image" alt="image missing" >1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, a branched inflorescence in which the basal or lateral flowers (or some of them) open before the terminal or central flowers on any axis. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a panicle-like inflorescence is one in which at least some of  the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae),  instead of individual flowers, are attached (stalked or unstalked) to branches and not directly to the main axis of the inflorescence and in which floral development may or may not proceed as in 1.</div></div>!){
 				}
 				if(s!<<313>>Panicles<<313>>!<u class="dotted" title="1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, a branched inflorescence in which the basal or lateral flowers (or some of them) open before the terminal or central flowers on any axis. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a panicle-like inflorescence is one in which at least some of  the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae),  instead of individual flowers, are attached (stalked or unstalked) to branches and not directly to the main axis of the inflorescence and in which floral development may or may not proceed as in 1." >Panicles</u>!){
 				}
-				if(s! <<313>>panicles<<313>>!&nbsp;<div class="dropdown"><u class="dotted">panicles</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/panicle.jpg" class="large-image" alt="image missing" >1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, a branched inflorescence in which the basal or lateral flowers (or some of them) open before the terminal or central flowers on any axis. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a panicle-like inflorescence is one in which at least some of  the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae),  instead of individual flowers, are attached (stalked or unstalked) to branches and not directly to the main axis of the inflorescence and in which floral development may or may not proceed as in 1.</div></div>!){
+				if(s! <<313>>panicles<<313>>!&nbsp;<div class="dropdown"><u class="dotted">panicles</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/panicle.jpg" class="large-image" alt="image missing" >1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, a branched inflorescence in which the basal or lateral flowers (or some of them) open before the terminal or central flowers on any axis. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a panicle-like inflorescence is one in which at least some of  the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae),  instead of individual flowers, are attached (stalked or unstalked) to branches and not directly to the main axis of the inflorescence and in which floral development may or may not proceed as in 1.</div></div>!){
 				}
 				if(s!<<314>>Papillate<<314>>!<u class="dotted" title="Pertaining to a surface (e.g., of a leaf, stigma, fruit) bearing small, rounded or conic protuberances (papillae)." >Papillate</u>!){
 				}
-				if(s! <<314>>papillate<<314>>!&nbsp;<div class="dropdown"><u class="dotted">papillate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/papillate.jpg" class="large-image" alt="image missing" >Pertaining to a surface (e.g., of a leaf, stigma, fruit) bearing small, rounded or conic protuberances (papillae).</div></div>!){
+				if(s! <<314>>papillate<<314>>!&nbsp;<div class="dropdown"><u class="dotted">papillate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/papillate.jpg" class="large-image" alt="image missing" >Pertaining to a surface (e.g., of a leaf, stigma, fruit) bearing small, rounded or conic protuberances (papillae).</div></div>!){
 				}
 				if(s!<<315>>Pappus<<315>>!<u class="dotted" title="In Asteraceae, the aggregate of structures such as awns, bristles, or scales arising from the top of the inferior ovary, in place of the calyx." >Pappus</u>!){
 				}
@@ -3535,7 +3535,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<318>>Parietal<<318>>!<u class="dotted" title="Pertaining to placentas on the inside surface of the ovary wall in a compound ovary with one or more chambers." >Parietal</u>!){
 				}
-				if(s! <<318>>parietal<<318>>!&nbsp;<div class="dropdown"><u class="dotted">parietal</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/parietal-placentas.jpg" class="large-image" alt="image missing" >Pertaining to placentas on the inside surface of the ovary wall in a compound ovary with one or more chambers.</div></div>!){
+				if(s! <<318>>parietal<<318>>!&nbsp;<div class="dropdown"><u class="dotted">parietal</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/parietal-placentas.jpg" class="large-image" alt="image missing" >Pertaining to placentas on the inside surface of the ovary wall in a compound ovary with one or more chambers.</div></div>!){
 				}
 				if(s!<<319>>Parietally<<319>>!<u class="dotted" title="Pertaining to placentas on the inside surface of the ovary wall in a compound ovary with one or more chambers." >Parietally</u>!){
 				}
@@ -3555,23 +3555,23 @@ warn "reading from $file\n";
 				}
 				if(s!<<323>>Pedicel<<323>>!<u class="dotted" title="Stalk of an individual flower in an inflorescence, or the corresponding   structure in fruit." >Pedicel</u>!){
 				}
-				if(s! <<323>>pedicel<<323>>!&nbsp;<div class="dropdown"><u class="dotted">pedicel</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/pedicel.jpg" class="large-image" alt="image missing" >Stalk of an individual flower in an inflorescence, or the corresponding   structure in fruit.</div></div>!){
+				if(s! <<323>>pedicel<<323>>!&nbsp;<div class="dropdown"><u class="dotted">pedicel</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/pedicel.jpg" class="large-image" alt="image missing" >Stalk of an individual flower in an inflorescence, or the corresponding   structure in fruit.</div></div>!){
 				}
 				if(s!<<324>>Pedicels<<324>>!<u class="dotted" title="Stalk of an individual flower in an inflorescence, or the corresponding   structure in fruit." >Pedicels</u>!){
 				}
-				if(s! <<324>>pedicels<<324>>!&nbsp;<div class="dropdown"><u class="dotted">pedicels</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/pedicel.jpg" class="large-image" alt="image missing" >Stalk of an individual flower in an inflorescence, or the corresponding   structure in fruit.</div></div>!){
+				if(s! <<324>>pedicels<<324>>!&nbsp;<div class="dropdown"><u class="dotted">pedicels</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/pedicel.jpg" class="large-image" alt="image missing" >Stalk of an individual flower in an inflorescence, or the corresponding   structure in fruit.</div></div>!){
 				}
 				if(s!<<325>>Peduncle<<325>>!<u class="dotted" title="Stalk of an individual flower borne singly, not in an inflorescence, or of an entire inflorescence, or the corresponding structure in fruit; the stalk subtending an involucre (e.g., in Asteraceae, Polygonaceae)." >Peduncle</u>!){
 				}
-				if(s! <<325>>peduncle<<325>>!&nbsp;<div class="dropdown"><u class="dotted">peduncle</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/peduncle.jpg" class="large-image" alt="image missing" >Stalk of an individual flower borne singly, not in an inflorescence, or of an entire inflorescence, or the corresponding structure in fruit; the stalk subtending an involucre (e.g., in Asteraceae, Polygonaceae).</div></div>!){
+				if(s! <<325>>peduncle<<325>>!&nbsp;<div class="dropdown"><u class="dotted">peduncle</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/peduncle.jpg" class="large-image" alt="image missing" >Stalk of an individual flower borne singly, not in an inflorescence, or of an entire inflorescence, or the corresponding structure in fruit; the stalk subtending an involucre (e.g., in Asteraceae, Polygonaceae).</div></div>!){
 				}
 				if(s!<<326>>Peduncles<<326>>!<u class="dotted" title="Stalk of an individual flower borne singly, not in an inflorescence, or of an entire inflorescence, or the corresponding structure in fruit; the stalk subtending an involucre (e.g., in Asteraceae, Polygonaceae)." >Peduncles</u>!){
 				}
-				if(s! <<326>>peduncles<<326>>!&nbsp;<div class="dropdown"><u class="dotted">peduncles</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/peduncle.jpg" class="large-image" alt="image missing" >Stalk of an individual flower borne singly, not in an inflorescence, or of an entire inflorescence, or the corresponding structure in fruit; the stalk subtending an involucre (e.g., in Asteraceae, Polygonaceae).</div></div>!){
+				if(s! <<326>>peduncles<<326>>!&nbsp;<div class="dropdown"><u class="dotted">peduncles</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/peduncle.jpg" class="large-image" alt="image missing" >Stalk of an individual flower borne singly, not in an inflorescence, or of an entire inflorescence, or the corresponding structure in fruit; the stalk subtending an involucre (e.g., in Asteraceae, Polygonaceae).</div></div>!){
 				}
 				if(s!<<327>>Peltate<<327>>!<u class="dotted" title="With the stalk attached toward the middle, not at a margin, of a flat structure such as an indusium, scale, or leaf." >Peltate</u>!){
 				}
-				if(s! <<327>>peltate<<327>>!&nbsp;<div class="dropdown"><u class="dotted">peltate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/peltate.jpg" class="large-image" alt="image missing" >With the stalk attached toward the middle, not at a margin, of a flat structure such as an indusium, scale, or leaf.</div></div>!){
+				if(s! <<327>>peltate<<327>>!&nbsp;<div class="dropdown"><u class="dotted">peltate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/peltate.jpg" class="large-image" alt="image missing" >With the stalk attached toward the middle, not at a margin, of a flat structure such as an indusium, scale, or leaf.</div></div>!){
 				}
 				if(s!<<328>>Pendent<<328>>!<u class="dotted" title="Drooping, hanging, or suspended from a point of attachment above.  (e.g., Amelanchier utahensis fruit)" >Pendent</u>!){
 				}
@@ -3579,7 +3579,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<329>>Perennial<<329>>!<u class="dotted" title="Completing life cycle (germination through death) in more than two years or growing seasons, generally non-woody (at least above ground) to woody; includes perennial herbs as well as subshrubs to trees; the abbreviation 'per' only refers to perennial herb, not to the word 'perennial' alone." >Perennial</u>!){
 				}
-				if(s! <<329>>perennial<<329>>!&nbsp;<div class="dropdown"><u class="dotted">perennial</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/perennial_root.jpg" class="large-image" alt="image missing" >Completing life cycle (germination through death) in more than two years or growing seasons, generally non-woody (at least above ground) to woody; includes perennial herbs as well as subshrubs to trees; the abbreviation 'per' only refers to perennial herb, not to the word 'perennial' alone.</div></div>!){
+				if(s! <<329>>perennial<<329>>!&nbsp;<div class="dropdown"><u class="dotted">perennial</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/perennial_root.jpg" class="large-image" alt="image missing" >Completing life cycle (germination through death) in more than two years or growing seasons, generally non-woody (at least above ground) to woody; includes perennial herbs as well as subshrubs to trees; the abbreviation 'per' only refers to perennial herb, not to the word 'perennial' alone.</div></div>!){
 				}
 				if(s!<<330>>Perianth<<330>>!<u class="dotted" title="Calyx and corolla collectively, whether or not they are distinguishable." >Perianth</u>!){
 				}
@@ -3595,7 +3595,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<333>>Perigynium<<333>>!<u class="dotted" title="Variously shaped, sac-like structure enclosing the ovary and achene in Carex and Kobresia." >Perigynium</u>!){
 				}
-				if(s! <<333>>perigynium<<333>>!&nbsp;<div class="dropdown"><u class="dotted">perigynium</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/perigynium.jpg" class="large-image" alt="image missing" >Variously shaped, sac-like structure enclosing the ovary and achene in Carex and Kobresia.</div></div>!){
+				if(s! <<333>>perigynium<<333>>!&nbsp;<div class="dropdown"><u class="dotted">perigynium</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/perigynium.jpg" class="large-image" alt="image missing" >Variously shaped, sac-like structure enclosing the ovary and achene in Carex and Kobresia.</div></div>!){
 				}
 				if(s!<<334>>Persistent<<334>>!<u class="dotted" title="Not falling off; remaining attached." >Persistent</u>!){
 				}
@@ -3611,11 +3611,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<337>>Petiole<<337>>!<u class="dotted" title="Leaf stalk, connecting leaf blade to stem; sometimes more or less indistinct." >Petiole</u>!){
 				}
-				if(s! <<337>>petiole<<337>>!&nbsp;<div class="dropdown"><u class="dotted">petiole</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/petioled.jpg" class="large-image" alt="image missing" >Leaf stalk, connecting leaf blade to stem; sometimes more or less indistinct.</div></div>!){
+				if(s! <<337>>petiole<<337>>!&nbsp;<div class="dropdown"><u class="dotted">petiole</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/petioled.jpg" class="large-image" alt="image missing" >Leaf stalk, connecting leaf blade to stem; sometimes more or less indistinct.</div></div>!){
 				}
 				if(s!<<338>>Petioles<<338>>!<u class="dotted" title="Leaf stalk, connecting leaf blade to stem; sometimes more or less indistinct." >Petioles</u>!){
 				}
-				if(s! <<338>>petioles<<338>>!&nbsp;<div class="dropdown"><u class="dotted">petioles</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/petioled.jpg" class="large-image" alt="image missing" >Leaf stalk, connecting leaf blade to stem; sometimes more or less indistinct.</div></div>!){
+				if(s! <<338>>petioles<<338>>!&nbsp;<div class="dropdown"><u class="dotted">petioles</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/petioled.jpg" class="large-image" alt="image missing" >Leaf stalk, connecting leaf blade to stem; sometimes more or less indistinct.</div></div>!){
 				}
 				if(s!<<339>>Phyllary<<339>>!<u class="dotted" title="In Asteraceae, a bract of the involucre." >Phyllary</u>!){
 				}
@@ -3627,7 +3627,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<341>>Pinna<<341>>!<u class="dotted" title="In ferns, primary division of a compound or dissected frond blade." >Pinna</u>!){
 				}
-				if(s! <<341>>pinna<<341>>!&nbsp;<div class="dropdown"><u class="dotted">pinna</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/fern-leaf-pinna.jpg" class="large-image" alt="image missing" >In ferns, primary division of a compound or dissected frond blade.</div></div>!){
+				if(s! <<341>>pinna<<341>>!&nbsp;<div class="dropdown"><u class="dotted">pinna</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/fern-leaf-pinna.jpg" class="large-image" alt="image missing" >In ferns, primary division of a compound or dissected frond blade.</div></div>!){
 				}
 				if(s!<<342>>Pinnae<<342>>!<u class="dotted" title="In ferns, primary division of a compound or dissected frond blade." >Pinnae</u>!){
 				}
@@ -3635,7 +3635,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<343>>Pinnate<<343>>!<u class="dotted" title="Feather-like; pertaining to veins, lobes, leaflets, or other structures arranged in two dimensions (i.e., in one plane) along either side of an axis; a leaf is odd-pinnate if there is a terminal leaflet, even-pinnate if there is not, and either odd- or even-pinnate may be 1-pinnate (blade divided into primary leaflets), 2-pinnate (primary leaflets divided into secondary leaflets), 3-pinnate (secondary leaflets divided into tertiary leaflets), etc." >Pinnate</u>!){
 				}
-				if(s! <<343>>pinnate<<343>>!&nbsp;<div class="dropdown"><u class="dotted">pinnate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/odd-pinnate.jpg" class="large-image" alt="image missing" >Feather-like; pertaining to veins, lobes, leaflets, or other structures arranged in two dimensions (i.e., in one plane) along either side of an axis; a leaf is odd-pinnate if there is a terminal leaflet, even-pinnate if there is not, and either odd- or even-pinnate may be 1-pinnate (blade divided into primary leaflets), 2-pinnate (primary leaflets divided into secondary leaflets), 3-pinnate (secondary leaflets divided into tertiary leaflets), etc.</div></div>!){
+				if(s! <<343>>pinnate<<343>>!&nbsp;<div class="dropdown"><u class="dotted">pinnate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/odd-pinnate.jpg" class="large-image" alt="image missing" >Feather-like; pertaining to veins, lobes, leaflets, or other structures arranged in two dimensions (i.e., in one plane) along either side of an axis; a leaf is odd-pinnate if there is a terminal leaflet, even-pinnate if there is not, and either odd- or even-pinnate may be 1-pinnate (blade divided into primary leaflets), 2-pinnate (primary leaflets divided into secondary leaflets), 3-pinnate (secondary leaflets divided into tertiary leaflets), etc.</div></div>!){
 				}
 				if(s!<<344>>Pinnately<<344>>!<u class="dotted" title="Feather-like; pertaining to veins, lobes, leaflets, or other structures arranged in two dimensions (i.e., in one plane) along either side of an axis; a leaf is odd-pinnate if there is a terminal leaflet, even-pinnate if there is not, and either odd- or even-pinnate may be 1-pinnate (blade divided into primary leaflets), 2-pinnate (primary leaflets divided into secondary leaflets), 3-pinnate (secondary leaflets divided into tertiary leaflets), etc." >Pinnately</u>!){
 				}
@@ -3643,7 +3643,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<345>>Pinnule<<345>>!<u class="dotted" title="In ferns, secondary division of a compound or dissected frond blade, primary division of a pinna." >Pinnule</u>!){
 				}
-				if(s! <<345>>pinnule<<345>>!&nbsp;<div class="dropdown"><u class="dotted">pinnule</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/fern-leaf-pinnule.jpg" class="large-image" alt="image missing" >In ferns, secondary division of a compound or dissected frond blade, primary division of a pinna.</div></div>!){
+				if(s! <<345>>pinnule<<345>>!&nbsp;<div class="dropdown"><u class="dotted">pinnule</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/fern-leaf-pinnule.jpg" class="large-image" alt="image missing" >In ferns, secondary division of a compound or dissected frond blade, primary division of a pinna.</div></div>!){
 				}
 				if(s!<<346>>Pinnules<<346>>!<u class="dotted" title="In ferns, secondary division of a compound or dissected frond blade, primary division of a pinna." >Pinnules</u>!){
 				}
@@ -3671,7 +3671,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<352>>Placentas<<352>>!<u class="dotted" title="Structure or area to which ovules are attached in an ovary; variously shaped and positioned." >Placentas</u>!){
 				}
-				if(s! <<352>>placentas<<352>>!&nbsp;<div class="dropdown"><u class="dotted">placentas</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/parietal-placentas.jpg" class="large-image" alt="image missing" >Structure or area to which ovules are attached in an ovary; variously shaped and positioned.</div></div>!){
+				if(s! <<352>>placentas<<352>>!&nbsp;<div class="dropdown"><u class="dotted">placentas</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/parietal-placentas.jpg" class="large-image" alt="image missing" >Structure or area to which ovules are attached in an ovary; variously shaped and positioned.</div></div>!){
 				}
 				if(s!<<353>>Planoconvex<<353>>!<u class="dotted" title="Flat or nearly so on one side, rounded on the other.  (e.g., Carex leporinella perigynium)" >Planoconvex</u>!){
 				}
@@ -3683,7 +3683,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<355>>Plumose<<355>>!<u class="dotted" title="Plume-like, usually with the parts arrayed in three dimensions around an axis, or in tufts held together at the base; usually pertaining to small, finely divided structures, such as certain stigmas and pappus elements." >Plumose</u>!){
 				}
-				if(s! <<355>>plumose<<355>>!&nbsp;<div class="dropdown"><u class="dotted">plumose</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/plumose.jpg" class="large-image" alt="image missing" >Plume-like, usually with the parts arrayed in three dimensions around an axis, or in tufts held together at the base; usually pertaining to small, finely divided structures, such as certain stigmas and pappus elements.</div></div>!){
+				if(s! <<355>>plumose<<355>>!&nbsp;<div class="dropdown"><u class="dotted">plumose</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/plumose.jpg" class="large-image" alt="image missing" >Plume-like, usually with the parts arrayed in three dimensions around an axis, or in tufts held together at the base; usually pertaining to small, finely divided structures, such as certain stigmas and pappus elements.</div></div>!){
 				}
 				if(s!<<356>>Pollen<<356>>!<u class="dotted" title="In gymnosperms and angiosperms, structure containing the sperm; when sperm fertilizes an egg, the egg and surrounding ovule normally develop into a seed." >Pollen</u>!){
 				}
@@ -3719,7 +3719,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<364>>Prostrate<<364>>!<u class="dotted" title="Lying flat on the ground." >Prostrate</u>!){
 				}
-				if(s! <<364>>prostrate<<364>>!&nbsp;<div class="dropdown"><u class="dotted">prostrate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/prostrate.jpg" class="large-image" alt="image missing" >Lying flat on the ground.</div></div>!){
+				if(s! <<364>>prostrate<<364>>!&nbsp;<div class="dropdown"><u class="dotted">prostrate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/prostrate.jpg" class="large-image" alt="image missing" >Lying flat on the ground.</div></div>!){
 				}
 				if(s!<<365>>Protandrous<<365>>!<u class="dotted" title="Pertaining to a bisexual flower in which pollen release precedes stigma receptivity, or to a plant with staminate and pistillate flowers in which this is true, with the result that cross-pollination is favored." >Protandrous</u>!){
 				}
@@ -3739,11 +3739,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<369>>Puberulent<<369>>!<u class="dotted" title="Minutely hairy." >Puberulent</u>!){
 				}
-				if(s! <<369>>puberulent<<369>>!&nbsp;<div class="dropdown"><u class="dotted">puberulent</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/puberulent.jpg" class="large-image" alt="image missing" >Minutely hairy.</div></div>!){
+				if(s! <<369>>puberulent<<369>>!&nbsp;<div class="dropdown"><u class="dotted">puberulent</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/puberulent.jpg" class="large-image" alt="image missing" >Minutely hairy.</div></div>!){
 				}
 				if(s!<<370>>Raceme<<370>>!<u class="dotted" title="In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are borne on pedicels and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a raceme-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are stalked and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1." >Raceme</u>!){
 				}
-				if(s! <<370>>raceme<<370>>!&nbsp;<div class="dropdown"><u class="dotted">raceme</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/raceme.jpg" class="large-image" alt="image missing" >In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are borne on pedicels and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a raceme-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are stalked and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1.</div></div>!){
+				if(s! <<370>>raceme<<370>>!&nbsp;<div class="dropdown"><u class="dotted">raceme</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/raceme.jpg" class="large-image" alt="image missing" >In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are borne on pedicels and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a raceme-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are stalked and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1.</div></div>!){
 				}
 				if(s!<<371>>Racemes<<371>>!<u class="dotted" title="In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are borne on pedicels and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a raceme-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are stalked and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1." >Racemes</u>!){
 				}
@@ -3751,7 +3751,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<372>>Rachis<<372>>!<u class="dotted" title="In ferns, primary axis of a compound or dissected frond blade." >Rachis</u>!){
 				}
-				if(s! <<372>>rachis<<372>>!&nbsp;<div class="dropdown"><u class="dotted">rachis</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/fern-leaf-rachis.jpg" class="large-image" alt="image missing" >In ferns, primary axis of a compound or dissected frond blade.</div></div>!){
+				if(s! <<372>>rachis<<372>>!&nbsp;<div class="dropdown"><u class="dotted">rachis</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/fern-leaf-rachis.jpg" class="large-image" alt="image missing" >In ferns, primary axis of a compound or dissected frond blade.</div></div>!){
 				}
 				if(s!<<373>>Rachides<<373>>!<u class="dotted" title="In ferns, primary axis of a compound or dissected frond blade." >Rachides</u>!){
 				}
@@ -3759,7 +3759,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<374>>Radial<<374>>!<u class="dotted" title="Divisible into mirror-image halves in three or more ways." >Radial</u>!){
 				}
-				if(s! <<374>>radial<<374>>!&nbsp;<div class="dropdown"><u class="dotted">radial</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/radial.jpg" class="large-image" alt="image missing" >Divisible into mirror-image halves in three or more ways.</div></div>!){
+				if(s! <<374>>radial<<374>>!&nbsp;<div class="dropdown"><u class="dotted">radial</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/radial.jpg" class="large-image" alt="image missing" >Divisible into mirror-image halves in three or more ways.</div></div>!){
 				}
 				if(s!<<375>>Radiant<<375>>!<u class="dotted" title="In Asteraceae, a discoid head with a peripheral ring of flowers having much enlarged, often bilateral corollas." >Radiant</u>!){
 				}
@@ -3807,7 +3807,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<386>>Recurved<<386>>!<u class="dotted" title="Gradually curved downward or backward." >Recurved</u>!){
 				}
-				if(s! <<386>>recurved<<386>>!&nbsp;<div class="dropdown"><u class="dotted">recurved</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/recurved.jpg" class="large-image" alt="image missing" >Gradually curved downward or backward.</div></div>!){
+				if(s! <<386>>recurved<<386>>!&nbsp;<div class="dropdown"><u class="dotted">recurved</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/recurved.jpg" class="large-image" alt="image missing" >Gradually curved downward or backward.</div></div>!){
 				}
 				if(s!<<387>>Reduced<<387>>!<u class="dotted" title="Smaller, less lobed, simpler, etc." >Reduced</u>!){
 				}
@@ -3815,15 +3815,15 @@ warn "reading from $file\n";
 				}
 				if(s!<<388>>Reflexed<<388>>!<u class="dotted" title="Abruptly bent or curved downward or backward." >Reflexed</u>!){
 				}
-				if(s! <<388>>reflexed<<388>>!&nbsp;<div class="dropdown"><u class="dotted">reflexed</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/reflexed.jpg" class="large-image" alt="image missing" >Abruptly bent or curved downward or backward.</div></div>!){
+				if(s! <<388>>reflexed<<388>>!&nbsp;<div class="dropdown"><u class="dotted">reflexed</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/reflexed.jpg" class="large-image" alt="image missing" >Abruptly bent or curved downward or backward.</div></div>!){
 				}
 				if(s!<<389>>Reniform<<389>>!<u class="dotted" title="Kidney-shaped; often pertaining to a leaf in which the blade base on both sides of the petiole is rounded and concave." >Reniform</u>!){
 				}
-				if(s! <<389>>reniform<<389>>!&nbsp;<div class="dropdown"><u class="dotted">reniform</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/reniform.jpg" class="large-image" alt="image missing" >Kidney-shaped; often pertaining to a leaf in which the blade base on both sides of the petiole is rounded and concave.</div></div>!){
+				if(s! <<389>>reniform<<389>>!&nbsp;<div class="dropdown"><u class="dotted">reniform</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/reniform.jpg" class="large-image" alt="image missing" >Kidney-shaped; often pertaining to a leaf in which the blade base on both sides of the petiole is rounded and concave.</div></div>!){
 				}
 				if(s!<<390>>Rhizome<<390>>!<u class="dotted" title="1. In seed plants, stem that is often elongate, more or less horizontal, usually underground; distinguished from roots by bearing of leaves, leaf scars, axillary buds, etc. 2. In ferns, stem that is located underground, embedded in leaf litter, on rocks or in rock crevices, or on trees or tree branches, often scaly or hairy; distinguished from roots by bearing of fronds (roots rarely bear fronds), and their greater diameter." >Rhizome</u>!){
 				}
-				if(s! <<390>>rhizome<<390>>!&nbsp;<div class="dropdown"><u class="dotted">rhizome</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/rhizome.jpg" class="large-image" alt="image missing" >1. In seed plants, stem that is often elongate, more or less horizontal, usually underground; distinguished from roots by bearing of leaves, leaf scars, axillary buds, etc. 2. In ferns, stem that is located underground, embedded in leaf litter, on rocks or in rock crevices, or on trees or tree branches, often scaly or hairy; distinguished from roots by bearing of fronds (roots rarely bear fronds), and their greater diameter.</div></div>!){
+				if(s! <<390>>rhizome<<390>>!&nbsp;<div class="dropdown"><u class="dotted">rhizome</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/rhizome.jpg" class="large-image" alt="image missing" >1. In seed plants, stem that is often elongate, more or less horizontal, usually underground; distinguished from roots by bearing of leaves, leaf scars, axillary buds, etc. 2. In ferns, stem that is located underground, embedded in leaf litter, on rocks or in rock crevices, or on trees or tree branches, often scaly or hairy; distinguished from roots by bearing of fronds (roots rarely bear fronds), and their greater diameter.</div></div>!){
 				}
 				if(s!<<391>>Rhizomes<<391>>!<u class="dotted" title="1. In seed plants, stem that is often elongate, more or less horizontal, usually underground; distinguished from roots by bearing of leaves, leaf scars, axillary buds, etc. 2. In ferns, stem that is located underground, embedded in leaf litter, on rocks or in rock crevices, or on trees or tree branches, often scaly or hairy; distinguished from roots by bearing of fronds (roots rarely bear fronds), and their greater diameter." >Rhizomes</u>!){
 				}
@@ -3855,15 +3855,15 @@ warn "reading from $file\n";
 				}
 				if(s!<<398>>Rosette<<398>>!<u class="dotted" title="A radiating cluster of leaves generally at or near ground level." >Rosette</u>!){
 				}
-				if(s! <<398>>rosette<<398>>!&nbsp;<div class="dropdown"><u class="dotted">rosette</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/basal-rosette.jpg" class="large-image" alt="image missing" >A radiating cluster of leaves generally at or near ground level.</div></div>!){
+				if(s! <<398>>rosette<<398>>!&nbsp;<div class="dropdown"><u class="dotted">rosette</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/basal-rosette.jpg" class="large-image" alt="image missing" >A radiating cluster of leaves generally at or near ground level.</div></div>!){
 				}
 				if(s!<<399>>Rosettes<<399>>!<u class="dotted" title="A radiating cluster of leaves generally at or near ground level." >Rosettes</u>!){
 				}
-				if(s! <<399>>rosettes<<399>>!&nbsp;<div class="dropdown"><u class="dotted">rosettes</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/basal-rosette.jpg" class="large-image" alt="image missing" >A radiating cluster of leaves generally at or near ground level.</div></div>!){
+				if(s! <<399>>rosettes<<399>>!&nbsp;<div class="dropdown"><u class="dotted">rosettes</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/basal-rosette.jpg" class="large-image" alt="image missing" >A radiating cluster of leaves generally at or near ground level.</div></div>!){
 				}
 				if(s!<<400>>Rotate<<400>>!<u class="dotted" title="Wheel-shaped, spreading, or saucer-shaped; often applied to  a fused corolla with a short or nonexistent tube and a spreading limb." >Rotate</u>!){
 				}
-				if(s! <<400>>rotate<<400>>!&nbsp;<div class="dropdown"><u class="dotted">rotate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/rotate.jpg" class="large-image" alt="image missing" >Wheel-shaped, spreading, or saucer-shaped; often applied to  a fused corolla with a short or nonexistent tube and a spreading limb.</div></div>!){
+				if(s! <<400>>rotate<<400>>!&nbsp;<div class="dropdown"><u class="dotted">rotate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/rotate.jpg" class="large-image" alt="image missing" >Wheel-shaped, spreading, or saucer-shaped; often applied to  a fused corolla with a short or nonexistent tube and a spreading limb.</div></div>!){
 				}
 				if(s!<<401>>Ruderal<<401>>!<u class="dotted" title="A plant, usually alien, occurring in waste areas, along roadsides, and in other places disturbed by humans; pertaining to such a plant." >Ruderal</u>!){
 				}
@@ -3871,11 +3871,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<402>>Sagittate<<402>>!<u class="dotted" title="Arrowhead-shaped, with two basal lobes oriented nearly parallel to the long axis." >Sagittate</u>!){
 				}
-				if(s! <<402>>sagittate<<402>>!&nbsp;<div class="dropdown"><u class="dotted">sagittate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/sagittate.jpg" class="large-image" alt="image missing" >Arrowhead-shaped, with two basal lobes oriented nearly parallel to the long axis.</div></div>!){
+				if(s! <<402>>sagittate<<402>>!&nbsp;<div class="dropdown"><u class="dotted">sagittate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/sagittate.jpg" class="large-image" alt="image missing" >Arrowhead-shaped, with two basal lobes oriented nearly parallel to the long axis.</div></div>!){
 				}
 				if(s!<<403>>Salverform<<403>>!<u class="dotted" title="Having a slender tube and an abruptly spreading, flat limb; often applied to a fused corolla." >Salverform</u>!){
 				}
-				if(s! <<403>>salverform<<403>>!&nbsp;<div class="dropdown"><u class="dotted">salverform</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/salverform.jpg" class="large-image" alt="image missing" >Having a slender tube and an abruptly spreading, flat limb; often applied to a fused corolla.</div></div>!){
+				if(s! <<403>>salverform<<403>>!&nbsp;<div class="dropdown"><u class="dotted">salverform</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/salverform.jpg" class="large-image" alt="image missing" >Having a slender tube and an abruptly spreading, flat limb; often applied to a fused corolla.</div></div>!){
 				}
 				if(s!<<404>>Savanna<<404>>!<u class="dotted" title="Vegetation dominated by various species of grasses with scattered individual trees; with less canopy cover than a woodland (canopies do not touch)." >Savanna</u>!){
 				}
@@ -3887,7 +3887,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<406>>Scale<<406>>!<u class="dotted" title="1. Wide, appressed, membranous, epidermal outgrowth (e.g., Cheilanthes covillei) 2. Structure partially or entirely covering an over-wintering bud (bud scale) (e.g., Salix goodingii bud).  3. In gymnosperms, a woody, seed-bearing structure attached to the cone axis (cone scale) (e.g., Abies magnifica).  4. In Asteraceae, a flat, membranous pappus element (e.g., Hymenoxys hoopesii).  Leaves or bracts may be scale-like in one or more of the preceding ways." >Scale</u>!){
 				}
-				if(s! <<406>>scale<<406>>!&nbsp;<div class="dropdown"><u class="dotted">scale</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/scale-like.jpg" class="large-image" alt="image missing" >1. Wide, appressed, membranous, epidermal outgrowth (e.g., Cheilanthes covillei) 2. Structure partially or entirely covering an over-wintering bud (bud scale) (e.g., Salix goodingii bud).  3. In gymnosperms, a woody, seed-bearing structure attached to the cone axis (cone scale) (e.g., Abies magnifica).  4. In Asteraceae, a flat, membranous pappus element (e.g., Hymenoxys hoopesii).  Leaves or bracts may be scale-like in one or more of the preceding ways.</div></div>!){
+				if(s! <<406>>scale<<406>>!&nbsp;<div class="dropdown"><u class="dotted">scale</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/scale-like.jpg" class="large-image" alt="image missing" >1. Wide, appressed, membranous, epidermal outgrowth (e.g., Cheilanthes covillei) 2. Structure partially or entirely covering an over-wintering bud (bud scale) (e.g., Salix goodingii bud).  3. In gymnosperms, a woody, seed-bearing structure attached to the cone axis (cone scale) (e.g., Abies magnifica).  4. In Asteraceae, a flat, membranous pappus element (e.g., Hymenoxys hoopesii).  Leaves or bracts may be scale-like in one or more of the preceding ways.</div></div>!){
 				}
 				if(s!<<407>>Scales<<407>>!<u class="dotted" title="1. Wide, appressed, membranous, epidermal outgrowth (e.g., Cheilanthes covillei) 2. Structure partially or entirely covering an over-wintering bud (bud scale) (e.g., Salix goodingii bud).  3. In gymnosperms, a woody, seed-bearing structure attached to the cone axis (cone scale) (e.g., Abies magnifica).  4. In Asteraceae, a flat, membranous pappus element (e.g., Hymenoxys hoopesii).  Leaves or bracts may be scale-like in one or more of the preceding ways." >Scales</u>!){
 				}
@@ -3895,15 +3895,15 @@ warn "reading from $file\n";
 				}
 				if(s!<<408>>Scapose<<408>>!<u class="dotted" title="Pertaining to a plant or an inflorescence in which a relatively long peduncle (scape) arises, sometimes with leaf- or scale-like bracts but without true foliage leaves,  from a rosette or other arrangement of leaves at ground level." >Scapose</u>!){
 				}
-				if(s! <<408>>scapose<<408>>!&nbsp;<div class="dropdown"><u class="dotted">scapose</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/scapose.jpg" class="large-image" alt="image missing" >Pertaining to a plant or an inflorescence in which a relatively long peduncle (scape) arises, sometimes with leaf- or scale-like bracts but without true foliage leaves,  from a rosette or other arrangement of leaves at ground level.</div></div>!){
+				if(s! <<408>>scapose<<408>>!&nbsp;<div class="dropdown"><u class="dotted">scapose</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/scapose.jpg" class="large-image" alt="image missing" >Pertaining to a plant or an inflorescence in which a relatively long peduncle (scape) arises, sometimes with leaf- or scale-like bracts but without true foliage leaves,  from a rosette or other arrangement of leaves at ground level.</div></div>!){
 				}
 				if(s!<<409>>Scar<<409>>!<u class="dotted" title="Mark left by the natural separation of two structures, as a leaf scar on a stem." >Scar</u>!){
 				}
-				if(s! <<409>>scar<<409>>!&nbsp;<div class="dropdown"><u class="dotted">scar</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/leaf-scar.jpg" class="large-image" alt="image missing" >Mark left by the natural separation of two structures, as a leaf scar on a stem.</div></div>!){
+				if(s! <<409>>scar<<409>>!&nbsp;<div class="dropdown"><u class="dotted">scar</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/leaf-scar.jpg" class="large-image" alt="image missing" >Mark left by the natural separation of two structures, as a leaf scar on a stem.</div></div>!){
 				}
 				if(s!<<410>>Scars<<410>>!<u class="dotted" title="Mark left by the natural separation of two structures, as a leaf scar on a stem." >Scars</u>!){
 				}
-				if(s! <<410>>scars<<410>>!&nbsp;<div class="dropdown"><u class="dotted">scars</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/buds-and-scars.jpg" class="large-image" alt="image missing" >Mark left by the natural separation of two structures, as a leaf scar on a stem.</div></div>!){
+				if(s! <<410>>scars<<410>>!&nbsp;<div class="dropdown"><u class="dotted">scars</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/buds-and-scars.jpg" class="large-image" alt="image missing" >Mark left by the natural separation of two structures, as a leaf scar on a stem.</div></div>!){
 				}
 				if(s!<<411>>Scarious<<411>>!<u class="dotted" title="Thin, dry, pliable, translucent or variously colored but not green.  (e.g., Carex incurviformis pistillate flower bract)" >Scarious</u>!){
 				}
@@ -3947,7 +3947,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<421>>Septicidal<<421>>!<u class="dotted" title="Pertaining to dehiscence of a fruit (capsule) by a longitudinal line through the wall at or near the center of each septum, such that each resulting segment corresponds to a single chamber, with placentas placed variously." >Septicidal</u>!){
 				}
-				if(s! <<421>>septicidal<<421>>!&nbsp;<div class="dropdown"><u class="dotted">septicidal</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/septicidal.jpg" class="large-image" alt="image missing" >Pertaining to dehiscence of a fruit (capsule) by a longitudinal line through the wall at or near the center of each septum, such that each resulting segment corresponds to a single chamber, with placentas placed variously.</div></div>!){
+				if(s! <<421>>septicidal<<421>>!&nbsp;<div class="dropdown"><u class="dotted">septicidal</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/septicidal.jpg" class="large-image" alt="image missing" >Pertaining to dehiscence of a fruit (capsule) by a longitudinal line through the wall at or near the center of each septum, such that each resulting segment corresponds to a single chamber, with placentas placed variously.</div></div>!){
 				}
 				if(s!<<422>>Septum<<422>>!<u class="dotted" title="Wall between chambers in a compound ovary." >Septum</u>!){
 				}
@@ -3971,15 +3971,15 @@ warn "reading from $file\n";
 				}
 				if(s!<<427>>Serrate<<427>>!<u class="dotted" title="Having margins with sharp, fine to coarse teeth generally pointing tipward, not outward; margins with such teeth on such primary teeth are doubly serrate." >Serrate</u>!){
 				}
-				if(s! <<427>>serrate<<427>>!&nbsp;<div class="dropdown"><u class="dotted">serrate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/serrate.jpg" class="large-image" alt="image missing" >Having margins with sharp, fine to coarse teeth generally pointing tipward, not outward; margins with such teeth on such primary teeth are doubly serrate.</div></div>!){
+				if(s! <<427>>serrate<<427>>!&nbsp;<div class="dropdown"><u class="dotted">serrate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/serrate.jpg" class="large-image" alt="image missing" >Having margins with sharp, fine to coarse teeth generally pointing tipward, not outward; margins with such teeth on such primary teeth are doubly serrate.</div></div>!){
 				}
 				if(s!<<428>>Sessile<<428>>!<u class="dotted" title="Without a petiole, peduncle, pedicel, or other kind of stalk." >Sessile</u>!){
 				}
-				if(s! <<428>>sessile<<428>>!&nbsp;<div class="dropdown"><u class="dotted">sessile</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/sessile.jpg" class="large-image" alt="image missing" >Without a petiole, peduncle, pedicel, or other kind of stalk.</div></div>!){
+				if(s! <<428>>sessile<<428>>!&nbsp;<div class="dropdown"><u class="dotted">sessile</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/sessile.jpg" class="large-image" alt="image missing" >Without a petiole, peduncle, pedicel, or other kind of stalk.</div></div>!){
 				}
 				if(s!<<429>>Sheath<<429>>!<u class="dotted" title="A surrounding or partially surrounding, often tubular structure or part of a structure, such as a leaf base in Apiaceae or Poaceae." >Sheath</u>!){
 				}
-				if(s! <<429>>sheath<<429>>!&nbsp;<div class="dropdown"><u class="dotted">sheath</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/grass-leaf-sheath.jpg" class="large-image" alt="image missing" >A surrounding or partially surrounding, often tubular structure or part of a structure, such as a leaf base in Apiaceae or Poaceae.</div></div>!){
+				if(s! <<429>>sheath<<429>>!&nbsp;<div class="dropdown"><u class="dotted">sheath</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/grass-leaf-sheath.jpg" class="large-image" alt="image missing" >A surrounding or partially surrounding, often tubular structure or part of a structure, such as a leaf base in Apiaceae or Poaceae.</div></div>!){
 				}
 				if(s!<<430>>Sheaths<<430>>!<u class="dotted" title="A surrounding or partially surrounding, often tubular structure or part of a structure, such as a leaf base in Apiaceae or Poaceae." >Sheaths</u>!){
 				}
@@ -4003,15 +4003,15 @@ warn "reading from $file\n";
 				}
 				if(s!<<435>>Simple<<435>>!<u class="dotted" title="Composed of a single part; undivided; unbranched." >Simple</u>!){
 				}
-				if(s! <<435>>simple<<435>>!&nbsp;<div class="dropdown"><u class="dotted">simple</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/simple-leaf.jpg" class="large-image" alt="image missing" >Composed of a single part; undivided; unbranched.</div></div>!){
+				if(s! <<435>>simple<<435>>!&nbsp;<div class="dropdown"><u class="dotted">simple</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/simple-leaf.jpg" class="large-image" alt="image missing" >Composed of a single part; undivided; unbranched.</div></div>!){
 				}
 				if(s!<<436>>Sinus<<436>>!<u class="dotted" title="Usually pertaining to margins of leaves, sepals, petals, or other parts, an indentation between adjacent lobes or teeth" >Sinus</u>!){
 				}
-				if(s! <<436>>sinus<<436>>!&nbsp;<div class="dropdown"><u class="dotted">sinus</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/sinus.jpg" class="large-image" alt="image missing" >Usually pertaining to margins of leaves, sepals, petals, or other parts, an indentation between adjacent lobes or teeth</div></div>!){
+				if(s! <<436>>sinus<<436>>!&nbsp;<div class="dropdown"><u class="dotted">sinus</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/sinus.jpg" class="large-image" alt="image missing" >Usually pertaining to margins of leaves, sepals, petals, or other parts, an indentation between adjacent lobes or teeth</div></div>!){
 				}
 				if(s!<<437>>Sorus<<437>>!<u class="dotted" title="In many ferns, a distinct cluster of sporangia." >Sorus</u>!){
 				}
-				if(s! <<437>>sorus<<437>>!&nbsp;<div class="dropdown"><u class="dotted">sorus</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/sorus.jpg" class="large-image" alt="image missing" >In many ferns, a distinct cluster of sporangia.</div></div>!){
+				if(s! <<437>>sorus<<437>>!&nbsp;<div class="dropdown"><u class="dotted">sorus</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/sorus.jpg" class="large-image" alt="image missing" >In many ferns, a distinct cluster of sporangia.</div></div>!){
 				}
 				if(s!<<438>>Sori<<438>>!<u class="dotted" title="In many ferns, a distinct cluster of sporangia." >Sori</u>!){
 				}
@@ -4023,7 +4023,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<440>>Spike<<440>>!<u class="dotted" title="1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are sessile and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a spike-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are sessile and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1." >Spike</u>!){
 				}
-				if(s! <<440>>spike<<440>>!&nbsp;<div class="dropdown"><u class="dotted">spike</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/spike.jpg" class="large-image" alt="image missing" >1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are sessile and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a spike-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are sessile and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1.</div></div>!){
+				if(s! <<440>>spike<<440>>!&nbsp;<div class="dropdown"><u class="dotted">spike</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/spike.jpg" class="large-image" alt="image missing" >1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are sessile and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a spike-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are sessile and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1.</div></div>!){
 				}
 				if(s!<<441>>Spikes<<441>>!<u class="dotted" title="1. In flowering plants excluding Asteraceae, Cyperaceae, Poaceae, and some other groups, an unbranched inflorescence in which the flowers are sessile and nearly always open from the bottom to the top of the inflorescence. 2. In Asteraceae, Cyperaceae,  Poaceae, and some other groups, a spike-like inflorescence is one in which the inflorescence units (e.g., heads in Asteraceae; spikelets in Cyperaceae and Poaceae), instead of individual flowers, are sessile and attached directly to the main axis of the inflorescence, not to branches, and in which floral development may or may not proceed as in 1." >Spikes</u>!){
 				}
@@ -4031,11 +4031,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<442>>Spikelet<<442>>!<u class="dotted" title="1. In Poaceae, one or more florets (each a flower with subtending lemma and generally palea) and generally 2 subtending glumes; in a sterile spikelet, the flower(s) and sometimes palea(s) are rudimentary or absent. 2. In Cyperaceae, the smallest aggregation of flowers (generally more than 2) and associated bracts." >Spikelet</u>!){
 				}
-				if(s! <<442>>spikelet<<442>>!&nbsp;<div class="dropdown"><u class="dotted">spikelet</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/grass-spikelet.jpg" class="large-image" alt="image missing" >1. In Poaceae, one or more florets (each a flower with subtending lemma and generally palea) and generally 2 subtending glumes; in a sterile spikelet, the flower(s) and sometimes palea(s) are rudimentary or absent. 2. In Cyperaceae, the smallest aggregation of flowers (generally more than 2) and associated bracts.</div></div>!){
+				if(s! <<442>>spikelet<<442>>!&nbsp;<div class="dropdown"><u class="dotted">spikelet</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/grass-spikelet.jpg" class="large-image" alt="image missing" >1. In Poaceae, one or more florets (each a flower with subtending lemma and generally palea) and generally 2 subtending glumes; in a sterile spikelet, the flower(s) and sometimes palea(s) are rudimentary or absent. 2. In Cyperaceae, the smallest aggregation of flowers (generally more than 2) and associated bracts.</div></div>!){
 				}
 				if(s!<<443>>Spikelets<<443>>!<u class="dotted" title="1. In Poaceae, one or more florets (each a flower with subtending lemma and generally palea) and generally 2 subtending glumes; in a sterile spikelet, the flower(s) and sometimes palea(s) are rudimentary or absent. 2. In Cyperaceae, the smallest aggregation of flowers (generally more than 2) and associated bracts." >Spikelets</u>!){
 				}
-				if(s! <<443>>spikelets<<443>>!&nbsp;<div class="dropdown"><u class="dotted">spikelets</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/grass-spikelet.jpg" class="large-image" alt="image missing" >1. In Poaceae, one or more florets (each a flower with subtending lemma and generally palea) and generally 2 subtending glumes; in a sterile spikelet, the flower(s) and sometimes palea(s) are rudimentary or absent. 2. In Cyperaceae, the smallest aggregation of flowers (generally more than 2) and associated bracts.</div></div>!){
+				if(s! <<443>>spikelets<<443>>!&nbsp;<div class="dropdown"><u class="dotted">spikelets</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/grass-spikelet.jpg" class="large-image" alt="image missing" >1. In Poaceae, one or more florets (each a flower with subtending lemma and generally palea) and generally 2 subtending glumes; in a sterile spikelet, the flower(s) and sometimes palea(s) are rudimentary or absent. 2. In Cyperaceae, the smallest aggregation of flowers (generally more than 2) and associated bracts.</div></div>!){
 				}
 				if(s!<<444>>Spine<<444>>!<u class="dotted" title="Sharp-pointed, usually stiff projection, originating below the epidermis, derived from a leaf or leaf part (e.g., stipule, vein tip), and therefore often subtending an axillary bud or branch, without buds of its own; loosely used for any sharp projection. (e.g., Cirsium arvense leaf)" >Spine</u>!){
 				}
@@ -4047,7 +4047,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<446>>Sporangium<<446>>!<u class="dotted" title="In non-seed plants, a case or sac in which spores are produced, and from which they are released." >Sporangium</u>!){
 				}
-				if(s! <<446>>sporangium<<446>>!&nbsp;<div class="dropdown"><u class="dotted">sporangium</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/sporangium.jpg" class="large-image" alt="image missing" >In non-seed plants, a case or sac in which spores are produced, and from which they are released.</div></div>!){
+				if(s! <<446>>sporangium<<446>>!&nbsp;<div class="dropdown"><u class="dotted">sporangium</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/sporangium.jpg" class="large-image" alt="image missing" >In non-seed plants, a case or sac in which spores are produced, and from which they are released.</div></div>!){
 				}
 				if(s!<<447>>Sporangia<<447>>!<u class="dotted" title="In non-seed plants, a case or sac in which spores are produced, and from which they are released." >Sporangia</u>!){
 				}
@@ -4063,7 +4063,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<450>>Spreading<<450>>!<u class="dotted" title="Oriented more or less perpendicularly to the axis of attachment; often, more or less horizontal." >Spreading</u>!){
 				}
-				if(s! <<450>>spreading<<450>>!&nbsp;<div class="dropdown"><u class="dotted">spreading</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/spreading.jpg" class="large-image" alt="image missing" >Oriented more or less perpendicularly to the axis of attachment; often, more or less horizontal.</div></div>!){
+				if(s! <<450>>spreading<<450>>!&nbsp;<div class="dropdown"><u class="dotted">spreading</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/spreading.jpg" class="large-image" alt="image missing" >Oriented more or less perpendicularly to the axis of attachment; often, more or less horizontal.</div></div>!){
 				}
 				if(s!<<451>>Spur<<451>>!<u class="dotted" title="Hollow projection or expansion, generally of a perianth part and containing nectar.  (e.g., petals of Aquilegia formosa)" >Spur</u>!){
 				}
@@ -4095,7 +4095,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<458>>Stellate<<458>>!<u class="dotted" title="Pertaining to a hair or other structure with three or more branches radiating in two or three dimensions from a common point." >Stellate</u>!){
 				}
-				if(s! <<458>>stellate<<458>>!&nbsp;<div class="dropdown"><u class="dotted">stellate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/stellate.jpg" class="large-image" alt="image missing" >Pertaining to a hair or other structure with three or more branches radiating in two or three dimensions from a common point.</div></div>!){
+				if(s! <<458>>stellate<<458>>!&nbsp;<div class="dropdown"><u class="dotted">stellate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/stellate.jpg" class="large-image" alt="image missing" >Pertaining to a hair or other structure with three or more branches radiating in two or three dimensions from a common point.</div></div>!){
 				}
 				if(s!<<459>>Stem<<459>>!<u class="dotted" title="Generally above-ground  but sometimes below-ground axis or axes of a plant; distinguished from roots by bearing leaves, leaf scars, axillary buds, flowers, nodes, etc." >Stem</u>!){
 				}
@@ -4131,7 +4131,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<467>>Stipule<<467>>!<u class="dotted" title="Appendage at base of petiole, generally paired, variable in form but often leaf- or scale-like, sometimes a spine." >Stipule</u>!){
 				}
-				if(s! <<467>>stipule<<467>>!&nbsp;<div class="dropdown"><u class="dotted">stipule</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/stipule.jpg" class="large-image" alt="image missing" >Appendage at base of petiole, generally paired, variable in form but often leaf- or scale-like, sometimes a spine.</div></div>!){
+				if(s! <<467>>stipule<<467>>!&nbsp;<div class="dropdown"><u class="dotted">stipule</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/stipule.jpg" class="large-image" alt="image missing" >Appendage at base of petiole, generally paired, variable in form but often leaf- or scale-like, sometimes a spine.</div></div>!){
 				}
 				if(s!<<468>>Stipules<<468>>!<u class="dotted" title="Appendage at base of petiole, generally paired, variable in form but often leaf- or scale-like, sometimes a spine." >Stipules</u>!){
 				}
@@ -4139,7 +4139,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<469>>Stolon<<469>>!<u class="dotted" title="A normally thin, elongate stem lying more or less flat on the ground and forming roots as well as erect stems or shoots (which become new, clonal plants) at generally widely spaced nodes; runner." >Stolon</u>!){
 				}
-				if(s! <<469>>stolon<<469>>!&nbsp;<div class="dropdown"><u class="dotted">stolon</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/stolon.jpg" class="large-image" alt="image missing" >A normally thin, elongate stem lying more or less flat on the ground and forming roots as well as erect stems or shoots (which become new, clonal plants) at generally widely spaced nodes; runner.</div></div>!){
+				if(s! <<469>>stolon<<469>>!&nbsp;<div class="dropdown"><u class="dotted">stolon</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/stolon.jpg" class="large-image" alt="image missing" >A normally thin, elongate stem lying more or less flat on the ground and forming roots as well as erect stems or shoots (which become new, clonal plants) at generally widely spaced nodes; runner.</div></div>!){
 				}
 				if(s!<<470>>Stolons<<470>>!<u class="dotted" title="A normally thin, elongate stem lying more or less flat on the ground and forming roots as well as erect stems or shoots (which become new, clonal plants) at generally widely spaced nodes; runner." >Stolons</u>!){
 				}
@@ -4179,7 +4179,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<479>>Strigose<<479>>!<u class="dotted" title="With stiff, straight, sharp, appressed hairs." >Strigose</u>!){
 				}
-				if(s! <<479>>strigose<<479>>!&nbsp;<div class="dropdown"><u class="dotted">strigose</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/strigose.jpg" class="large-image" alt="image missing" >With stiff, straight, sharp, appressed hairs.</div></div>!){
+				if(s! <<479>>strigose<<479>>!&nbsp;<div class="dropdown"><u class="dotted">strigose</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/strigose.jpg" class="large-image" alt="image missing" >With stiff, straight, sharp, appressed hairs.</div></div>!){
 				}
 				if(s!<<480>>Style<<480>>!<u class="dotted" title="In many but not all pistils, the stalk-like part that connects ovary to stigma." >Style</u>!){
 				}
@@ -4239,7 +4239,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<494>>Tapered<<494>>!<u class="dotted" title="Gradually (not abruptly) narrower or smaller at base or tip." >Tapered</u>!){
 				}
-				if(s! <<494>>tapered<<494>>!&nbsp;<div class="dropdown"><u class="dotted">tapered</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/tapered.jpg" class="large-image" alt="image missing" >Gradually (not abruptly) narrower or smaller at base or tip.</div></div>!){
+				if(s! <<494>>tapered<<494>>!&nbsp;<div class="dropdown"><u class="dotted">tapered</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/tapered.jpg" class="large-image" alt="image missing" >Gradually (not abruptly) narrower or smaller at base or tip.</div></div>!){
 				}
 				if(s!<<495>>Taproot<<495>>!<u class="dotted" title="A primary root that grows more or less straight down into soil, is tapered to the end, and has smaller, lateral branches (e.g., carrot)." >Taproot</u>!){
 				}
@@ -4295,11 +4295,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<508>>Tomentose<<508>>!<u class="dotted" title="Covered with densely interwoven, generally matted hairs." >Tomentose</u>!){
 				}
-				if(s! <<508>>tomentose<<508>>!&nbsp;<div class="dropdown"><u class="dotted">tomentose</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/tomentose.jpg" class="large-image" alt="image missing" >Covered with densely interwoven, generally matted hairs.</div></div>!){
+				if(s! <<508>>tomentose<<508>>!&nbsp;<div class="dropdown"><u class="dotted">tomentose</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/tomentose.jpg" class="large-image" alt="image missing" >Covered with densely interwoven, generally matted hairs.</div></div>!){
 				}
 				if(s!<<509>>Tooth<<509>>!<u class="dotted" title="1. A small, pointed projection, such as on the margin of a leaf, sepal, or petal.  2. The free tips of otherwise fused structures, such as sepals or petals (somewhat archaic usage); smaller than lobes." >Tooth</u>!){
 				}
-				if(s! <<509>>tooth<<509>>!&nbsp;<div class="dropdown"><u class="dotted">tooth</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/tooth-02.jpg" class="large-image" alt="image missing" >1. A small, pointed projection, such as on the margin of a leaf, sepal, or petal.  2. The free tips of otherwise fused structures, such as sepals or petals (somewhat archaic usage); smaller than lobes.</div></div>!){
+				if(s! <<509>>tooth<<509>>!&nbsp;<div class="dropdown"><u class="dotted">tooth</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/tooth-02.jpg" class="large-image" alt="image missing" >1. A small, pointed projection, such as on the margin of a leaf, sepal, or petal.  2. The free tips of otherwise fused structures, such as sepals or petals (somewhat archaic usage); smaller than lobes.</div></div>!){
 				}
 				if(s!<<510>>Teeth<<510>>!<u class="dotted" title="1. A small, pointed projection, such as on the margin of a leaf, sepal, or petal.  2. The free tips of otherwise fused structures, such as sepals or petals (somewhat archaic usage); smaller than lobes." >Teeth</u>!){
 				}
@@ -4323,7 +4323,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<515>>Truncate<<515>>!<u class="dotted" title="Abruptly (not gradually) narrower or smaller at base or tip, as if cut straight across or nearly so." >Truncate</u>!){
 				}
-				if(s! <<515>>truncate<<515>>!&nbsp;<div class="dropdown"><u class="dotted">truncate</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/truncate.jpg" class="large-image" alt="image missing" >Abruptly (not gradually) narrower or smaller at base or tip, as if cut straight across or nearly so.</div></div>!){
+				if(s! <<515>>truncate<<515>>!&nbsp;<div class="dropdown"><u class="dotted">truncate</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/truncate.jpg" class="large-image" alt="image missing" >Abruptly (not gradually) narrower or smaller at base or tip, as if cut straight across or nearly so.</div></div>!){
 				}
 				if(s!<<516>>Trophophore<<516>>!<u class="dotted" title="The sterile blade of moonworts (Botrychium) and adders-tongues (Ophioglossum) that is photosynthetic and mostly does not bear sporangia." >Trophophore</u>!){
 				}
@@ -4371,7 +4371,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<527>>Umbel<<527>>!<u class="dotted" title="1. In flowering plants excluding Asteraceae and some other groups, an inflorescence in which three to many pedicels and, if compound, branches (rays) radiate from a common point; characteristic of but not confined to Apiaceae.  2. In Asteraceae and some other groups, an umbel-like inflorescence is one in which three to many stalked inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, radiate from a common point of attachment without an evident axis or branches." >Umbel</u>!){
 				}
-				if(s! <<527>>umbel<<527>>!&nbsp;<div class="dropdown"><u class="dotted">umbel</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/umbel.jpg" class="large-image" alt="image missing" >1. In flowering plants excluding Asteraceae and some other groups, an inflorescence in which three to many pedicels and, if compound, branches (rays) radiate from a common point; characteristic of but not confined to Apiaceae.  2. In Asteraceae and some other groups, an umbel-like inflorescence is one in which three to many stalked inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, radiate from a common point of attachment without an evident axis or branches.</div></div>!){
+				if(s! <<527>>umbel<<527>>!&nbsp;<div class="dropdown"><u class="dotted">umbel</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/umbel.jpg" class="large-image" alt="image missing" >1. In flowering plants excluding Asteraceae and some other groups, an inflorescence in which three to many pedicels and, if compound, branches (rays) radiate from a common point; characteristic of but not confined to Apiaceae.  2. In Asteraceae and some other groups, an umbel-like inflorescence is one in which three to many stalked inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, radiate from a common point of attachment without an evident axis or branches.</div></div>!){
 				}
 				if(s!<<528>>Umbels<<528>>!<u class="dotted" title="1. In flowering plants excluding Asteraceae and some other groups, an inflorescence in which three to many pedicels and, if compound, branches (rays) radiate from a common point; characteristic of but not confined to Apiaceae.  2. In Asteraceae and some other groups, an umbel-like inflorescence is one in which three to many stalked inflorescence units (e.g., heads in Asteraceae, umbels enclosed by involucres in Eriogonum), instead of individual flowers, radiate from a common point of attachment without an evident axis or branches." >Umbels</u>!){
 				}
@@ -4387,11 +4387,11 @@ warn "reading from $file\n";
 				}
 				if(s!<<531>>Urn-shaped<<531>>!<u class="dotted" title="Widening more or less abruptly at the base and then gradually or abruptly narrowed toward the tip." >Urn-shaped</u>!){
 				}
-				if(s! <<531>>urn-shaped<<531>>!&nbsp;<div class="dropdown"><u class="dotted">urn-shaped</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/urn-shaped.jpg" class="large-image" alt="image missing" >Widening more or less abruptly at the base and then gradually or abruptly narrowed toward the tip.</div></div>!){
+				if(s! <<531>>urn-shaped<<531>>!&nbsp;<div class="dropdown"><u class="dotted">urn-shaped</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/urn-shaped.jpg" class="large-image" alt="image missing" >Widening more or less abruptly at the base and then gradually or abruptly narrowed toward the tip.</div></div>!){
 				}
 				if(s!<<532>>Utricle<<532>>!<u class="dotted" title="Mostly dry, dehiscent or indehiscent fruit from a generally compound pistil in which a balloon- or bladder-like ovary wall loosely encloses (or, in some Amaranthaceae, is adherent to) a single seed." >Utricle</u>!){
 				}
-				if(s! <<532>>utricle<<532>>!&nbsp;<div class="dropdown"><u class="dotted">utricle</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/utricle.jpg" class="large-image" alt="image missing" >Mostly dry, dehiscent or indehiscent fruit from a generally compound pistil in which a balloon- or bladder-like ovary wall loosely encloses (or, in some Amaranthaceae, is adherent to) a single seed.</div></div>!){
+				if(s! <<532>>utricle<<532>>!&nbsp;<div class="dropdown"><u class="dotted">utricle</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/utricle.jpg" class="large-image" alt="image missing" >Mostly dry, dehiscent or indehiscent fruit from a generally compound pistil in which a balloon- or bladder-like ovary wall loosely encloses (or, in some Amaranthaceae, is adherent to) a single seed.</div></div>!){
 				}
 				if(s!<<533>>Utricles<<533>>!<u class="dotted" title="Mostly dry, dehiscent or indehiscent fruit from a generally compound pistil in which a balloon- or bladder-like ovary wall loosely encloses (or, in some Amaranthaceae, is adherent to) a single seed." >Utricles</u>!){
 				}
@@ -4399,7 +4399,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<534>>Valve<<534>>!<u class="dotted" title="1. In legumes or capsules opening by longitudinal lines, one of the parts into which the fruit is dehiscent.  2. In anthers, the flap of tissue resulting from dehiscence by a curved line. (e.g., Lauraceae, some Berberidaceae).  3. In Ophioglossaceae, one of the parts into which the sporangium is dehiscent." >Valve</u>!){
 				}
-				if(s! <<534>>valve<<534>>!&nbsp;<div class="dropdown"><u class="dotted">valve</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/valve.jpg" class="large-image" alt="image missing" >1. In legumes or capsules opening by longitudinal lines, one of the parts into which the fruit is dehiscent.  2. In anthers, the flap of tissue resulting from dehiscence by a curved line. (e.g., Lauraceae, some Berberidaceae).  3. In Ophioglossaceae, one of the parts into which the sporangium is dehiscent.</div></div>!){
+				if(s! <<534>>valve<<534>>!&nbsp;<div class="dropdown"><u class="dotted">valve</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/valve.jpg" class="large-image" alt="image missing" >1. In legumes or capsules opening by longitudinal lines, one of the parts into which the fruit is dehiscent.  2. In anthers, the flap of tissue resulting from dehiscence by a curved line. (e.g., Lauraceae, some Berberidaceae).  3. In Ophioglossaceae, one of the parts into which the sporangium is dehiscent.</div></div>!){
 				}
 				if(s!<<535>>Valves<<535>>!<u class="dotted" title="1. In legumes or capsules opening by longitudinal lines, one of the parts into which the fruit is dehiscent.  2. In anthers, the flap of tissue resulting from dehiscence by a curved line. (e.g., Lauraceae, some Berberidaceae).  3. In Ophioglossaceae, one of the parts into which the sporangium is dehiscent." >Valves</u>!){
 				}
@@ -4455,7 +4455,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<548>>Whorled<<548>>!<u class="dotted" title="Arranged in groups of three or more at nodes or positions along an axis (e.g., three leaves per node)." >Whorled</u>!){
 				}
-				if(s! <<548>>whorled<<548>>!&nbsp;<div class="dropdown"><u class="dotted">whorled</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/whorled.jpg" class="large-image" alt="image missing" >Arranged in groups of three or more at nodes or positions along an axis (e.g., three leaves per node).</div></div>!){
+				if(s! <<548>>whorled<<548>>!&nbsp;<div class="dropdown"><u class="dotted">whorled</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/whorled.jpg" class="large-image" alt="image missing" >Arranged in groups of three or more at nodes or positions along an axis (e.g., three leaves per node).</div></div>!){
 				}
 				if(s!<<549>>Whorl<<549>>!<u class="dotted" title="Arranged in groups of three or more at nodes or positions along an axis (e.g., three leaves per node)." >Whorl</u>!){
 				}
@@ -4463,7 +4463,7 @@ warn "reading from $file\n";
 				}
 				if(s!<<550>>Wing<<550>>!<u class="dotted" title="1. Thin, flat extension or appendage of a surface or margin.  2. In many members of Fabaceae and in some other groups, each of two lateral petals." >Wing</u>!){
 				}
-				if(s! <<550>>wing<<550>>!&nbsp;<div class="dropdown"><u class="dotted">wing</u>&nbsp;<div class="dropdown-content"><img src="http://ucjeps.berkeley.edu/eflora/common/images/morph/winged-stem.jpg" class="large-image" alt="image missing" >1. Thin, flat extension or appendage of a surface or margin.  2. In many members of Fabaceae and in some other groups, each of two lateral petals.</div></div>!){
+				if(s! <<550>>wing<<550>>!&nbsp;<div class="dropdown"><u class="dotted">wing</u>&nbsp;<div class="dropdown-content"><img src="/eflora/common/images/morph/winged-stem.jpg" class="large-image" alt="image missing" >1. Thin, flat extension or appendage of a surface or margin.  2. In many members of Fabaceae and in some other groups, each of two lateral petals.</div></div>!){
 				}
 				if(s!<<551>>Wings<<551>>!<u class="dotted" title="1. Thin, flat extension or appendage of a surface or margin.  2. In many members of Fabaceae and in some other groups, each of two lateral petals." >Wings</u>!){
 				}
@@ -4477,9 +4477,9 @@ warn "reading from $file\n";
 				}
 				if(s! <<553>>wood<<553>>!&nbsp;<u class="dotted" title="Hardened, thickened, vascular tissue (xylem) under the bark of subshrubs, shrubs, trees, and some vines; number of concentric rings in wood often corresponds to years or growing seasons." >wood</u>!){
 				}
-				if(s!<<554>>Woody<<554>>!<u class="dotted" title="Hardened, thickened, vascular tissue (xylem) under the bark of subshrubs, shrubs, trees, and some vines; number of concentric rings in wood often corresponds to years or growing seasons." >Woody</u>!){
+				if(s!<<554>>Woody<<554>>!<u class="dotted" title="A woody plant is a perennial that produces extensive wood and bark. This hard, supportive tissue allows these plants (ex. trees, shrubs, some vines) to persist year-round. Wood, which consists mainly of xylem (reinforced conducting) tissue, transports water and provides support so that these plants have potential to grow taller and wider, and often to live longer, than herbaceous plants." >Woody</u>!){
 				}
-				if(s! <<554>>woody<<554>>!&nbsp;<u class="dotted" title="Hardened, thickened, vascular tissue (xylem) under the bark of subshrubs, shrubs, trees, and some vines; number of concentric rings in wood often corresponds to years or growing seasons." >woody</u>!){
+				if(s! <<554>>woody<<554>>!&nbsp;<u class="dotted" title="A woody plant is a perennial that produces extensive wood and bark. This hard, supportive tissue allows these plants (ex. trees, shrubs, some vines) to persist year-round. Wood, which consists mainly of xylem (reinforced conducting) tissue, transports water and provides support so that these plants have potential to grow taller and wider, and often to live longer, than herbaceous plants." >woody</u>!){
 				}
 				if(s!<<555>>Woodland<<555>>!<u class="dotted" title="Vegetation dominated by small- to medium-sized trees, often with less continuous canopy cover than a forest and more than a savanna (canopies do not always touch)." >Woodland</u>!){
 				}

@@ -1,11 +1,19 @@
+#!/usr/bin/perl
 
 
 #use warnings;
-use lib "/Users/Shared/Jepson-Master/Jepson-eFlora/Modules/";
-use CCH;
+#use strict;
+use POSIX qw(strftime);
 
-$todayJD = &CCH::get_today;
-#my $todayJD = &CCH::get_today_julian_day;
+
+#my $load_date = "2026-03-06";
+my $load_date = "2026-06-11";
+
+
+my $todayJD = &get_today;
+$todayJD =~ s/ *PDT//;
+$todayJD =~ s/ *PST//;
+
 my $log_file = 'output/eflora_log'.$todayJD.'.txt';
 	open(LOG, '>>', $log_file);
 
@@ -13,12 +21,12 @@ my $log_file = 'output/eflora_log'.$todayJD.'.txt';
 ####make the IJM_sequence files used for the second part 
 #this used to be created with format_for_i and added to the IJM.hash file
 
-open(IN, "/Users/Shared/Jepson-Master/Jepson-eFlora/synonymy/input/smasch_taxon_ids.txt") || die;
+open(IN, "../Synonymy/input/smasch_taxon_ids.txt") || die;
 local($/)="\n";
 while(<IN>){
 	chomp;
 	
-	($code,$name,@residue)=split(/\t/);
+	($code,$name)=split(/\t/);
 
 $name=~s/ X / &times;/;
 
@@ -26,10 +34,35 @@ $name=~s/ X / &times;/;
 	$CODE_TO_NAME{$code}=$name;
 }
 
+#0	13	Isoetaceae	Isoetaceae	
+#1	9464	Isoetes	Isoetaceae	
+#2	29370	Isoetes bolanderi	Isoetaceae	
+#3	29379	Isoetes echinospora	Isoetaceae	
 
+open(IN, "ouput/accepted_name_list.txt") || die;
+local($/)="\n";
+while(<IN>){
+	chomp;
+	
+	my ($sortID,$tid,$name,$family,$genus)=split(/\t/);
+
+	$ST{$tid}=$sortID;
+	$NM{$tid}=$CODE_TO_NAME{$name};
+	$GE{$tid}=$CODE_TO_NAME{$genus};
+	$FA{$tid}=$CODE_TO_NAME{$family};
+
+}
+
+
+
+
+#sqlite3
 open(OUT, ">output/load_taxonomy_table.sql") || die;
 
-open(IN, "/Users/Shared/Jepson-Master/Jepson-eFlora/eflora_keys/output/IJM_sequence.txt") || die;
+#mariaDB
+open(EF, ">output/load_eflora_taxonomy.sql") || die;
+
+open(IN, "../eflora_keys/output/IJM_sequence.txt") || die;
 while(<IN>){
 	$TaxonID = $FamilyID = $GenusID = $SpeciesID = "";
 	chomp;
@@ -85,6 +118,7 @@ while(<IN>){
 		++$null;
 	}
 
+#sqlite3
 print OUT <<EOP;
 INSERT INTO eflora_taxonomy(TaxonID, FamilyID, GenusID, SpeciesID)
 VALUES($TaxonID, $FamilyID, $GenusID, $SpeciesID)
@@ -92,8 +126,16 @@ VALUES($TaxonID, $FamilyID, $GenusID, $SpeciesID)
 
 EOP
 
+#mariaDB export
+		print EF "INSERT INTO eflora_taxonomy(TaxonID, FamilyID, GenusID, SpeciesID, Updated)\n";
+		print EF "VALUES(".$TaxonID.", ".$FamilyID.", ".$GenusID.", ".$SpeciesID.", '".$load_date."')\n";
+		#If the TaxonID in eflora_synonymy already exists, update selected fields only 
+		print EF "ON DUPLICATE KEY UPDATE FamilyID = ".$FamilyID.", GenusID = ".$GenusID.", SpeciesID = ".$SpeciesID.", Updated = '".$load_date."'\n";
+		print EF ";\n\n";
+
 }
 
+#sqlite3
 print OUT <<EOP;
 INSERT INTO eflora_taxonomy(TaxonID, FamilyID, GenusID, SpeciesID)
 VALUES(100435, 28, 423, NULL)
@@ -101,7 +143,12 @@ VALUES(100435, 28, 423, NULL)
 
 EOP
 
-
+#mariaDB export
+		print EF "INSERT INTO eflora_taxonomy(TaxonID, FamilyID, GenusID, SpeciesID, Updated)\n";
+		print EF "VALUES(100435, 28, 423, NULL, '".$load_date."')\n";
+		#If the TaxonID in eflora_synonymy already exists, update selected fields only 
+		print EF "ON DUPLICATE KEY UPDATE FamilyID = 28, GenusID = 423, SpeciesID = NULL, Updated = '".$load_date."'\n";
+		print EF ";\n\n";
 
 
 print LOG <<EOP;
@@ -134,3 +181,11 @@ EOP
 
 close (OUT);
 close (IN);
+
+sub get_today {
+#usage: add the following line before processing records:
+#$today_ymd = &CCH::get_today;
+#!/usr/local/bin/perl
+	my $datestring = strftime "%F %Z", localtime;
+	return ($datestring);
+}

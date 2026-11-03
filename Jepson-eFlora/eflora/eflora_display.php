@@ -2760,6 +2760,7 @@ but is pretty ugly
 date_default_timezone_set('America/Los_Angeles');
 
 ?>
+<!DOCTYPE html>
 <html lang="en">
 <head>
 <?php 
@@ -2778,8 +2779,9 @@ date_default_timezone_set('America/Los_Angeles');
 <link href="/common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
 <link rel="shortcut icon" href="/common/images/JepsonLogoSmall.png" type="image/x-icon" />
 
-<!--mobile js script files
-	<script src="/eflora/common/js/dh_custom.js"></script>-->
+<!--mobile js script files-->
+	<script src="/eflora/common/js/dh_custom.js"></script>
+
 
 <!--jquery script files-->
 	<script src="//code.jquery.com/jquery-latest.js"></script>
@@ -2789,33 +2791,19 @@ date_default_timezone_set('America/Los_Angeles');
 
 <!-- leaflet maps files and scripts -->
 
-<!--<link rel="stylesheet" href="https://unpkg.com/leaflet@1.4.0/dist/leaflet.css"
-   integrity="sha512-puBpdR0798OZvTTbP4A8Ix/l+A4dHDD0DGqYW6RQ+9jxkRFclaxxQb/SJAWZfWAkuyeQUytO7+7N4QKrDh+drA=="
-   crossorigin=""/>
--->
 <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 
-<!--
-<script src="//unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-<script src="//unpkg.com/leaflet@1.4.0/dist/leaflet.js"
-   integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
-   crossorigin=""></script>
--->
 <!-- Include Leaflet CSS and JavaScript files -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="//unpkg.com/leaflet/dist/leaflet.js"></script>
   <script src="//unpkg.com/leaflet/dist/leaflet.js"></script>
   
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 
 <script src='https://api.mapbox.com/mapbox.js/plugins/geojson-extent/v0.0.1/geojson-extent.js'></script>
 
-<!--<link rel="stylesheet" href="https://unpkg.com/leaflet-snap/leaflet.snap.css" />-->
-<!--  <script src="//unpkg.com/leaflet-snap/leaflet.snap.js"></script>-->
-<!--  <script src="//unpkg.com/leaflet-snap/leaflet.snap.js"></script>-->
-
-<!--  <link rel="stylesheet" href="https://unpkg.com/leaflet-snap@0.0.4/leaflet.snap.js" />-->
+<link rel="stylesheet" href="https://unpkg.com/leaflet-snap@0.0.4/leaflet.snap.js" />
 <script src="//unpkg.com/leaflet-snap@0.0.4/leaflet.snap.js"></script>
+
 
 
 <script type="text/javascript">
@@ -2826,185 +2814,6 @@ date_default_timezone_set('America/Los_Angeles');
 
 img {
 	max-width: 600px; 
-}
-
-.i-align {
-	display: inline;
-	margin-right: 10px;
-	margin-left: 10px;
-}
-
-.v-align {
-	display: inline-block;
-        vertical-align: top;
-        margin: 0;
-}
-
-div.image{
-	vertical-align: top;
-	display: inline-block;
-	margin-left: auto;
-	margin-right: auto;
-}
-
-span.tax{ 
-  vertical-align: top;
-  	display:block;
-  float:left;
-}
-
-span.copy{ 
-  vertical-align: bottom;
-  	display:block;
-  float:left;
-  }
-
-span.mid{ 
-  vertical-align: middle;
-  	display:block;
-  float:left;
-  }
-
-#ckboxes {	/* pushes checkbox a little from sidebar left edge */
-	padding-left: 10px;
-}
-
-/* ID Styles */
-
-
-
-
-#calphotos table {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	text-align: left;
-    border-collapse: collapse;
-    border-style: hidden; /* hide standard table (collapsed) border */
-
-}
-
-#calphotos tr {
-    vertical-align: top;
-
-}
-
-#calphotos td{
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	padding: 5px;
-	margin: 5px;
-
-}
-
-/* eflora default table */
-#EF_right table {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	margin: 5px;
-	padding: 5px;
-	width: 100%;
-	border: none;
-}
-
-
-#EF_right tbody {
-    vertical-align: top;
-    border: none;
-}
-
-
-#EF_right tr {
-    vertical-align: top;
-    border: none;
-}
-
-#EF_right td{
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	vertical-align: top;
-	border: none;
-	width: 70%;
-}
-
-
-#EF_left table {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	margin: auto;
-	width: 100%;
-	border: none;
-}
-
-
-#EF_left tbody {
-    vertical-align: top;
-    border: none;
-}
-
-
-#EF_left tr {
-    vertical-align: top;
-    border: none;
-	line-height: 1.5em;
-}
-
-#EF_left td{
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	vertical-align: top;
-	border: none;
-	width: 30%;
-}
-
-
-#EF_citation table {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	width: 100%;
-	border: none;
-	margin: auto;
-}
-
-
-#EF_citation tbody {
-    vertical-align: top;
-    border: none;
-}
-
-
-#EF_citation tr {
-    vertical-align: top;
-    border: none;
-}
-
-#EF_citation td{
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	vertical-align: top;
-	border: none;
-	width: 100%;
-	margin: auto;
-}
-
-
-
-#EF_bottom table {
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	margin: 5px;
-	padding: 5px;
-	width: 100%;
-	border: none;
-}
-
-
-#EF_bottom tbody {
-    vertical-align: top;
-    border: none;
-}
-
-
-#EF_bottom tr {
-    vertical-align: top;
-    border: none;
-}
-
-#EF_bottom td{
-	font-family: Verdana, Arial, Helvetica, sans-serif;
-	vertical-align: top;
-	border: none;
-	width: 50%;
 }
 
 </style>
@@ -3050,39 +2859,32 @@ $(document).ready(function(){
 
 </head>
 
-<!-- <body onload="initialize()">-->
-<body>
+<body onload="initialize()">
 
-<table id="normaltable">
-  <tr>
-   <td></td>
-	<td>
-	 <table><!-- content table -->
-	  <tr>
-	   <td>
-<div>
+
 <!-- Begin banner -->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/header_jeps.php'); ?>
 <!-- End banner -->
 
+
+
 <!-- Beginning of horizontal menu -->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/globalnav.php'); ?> 
 <!-- End of horizontal menu -->
-</div>
+
 
 <main>
-<div>
+    <div id="content-top">
+		<h1><a href="/eflora/">Jepson eFlora</a></h1>
+		<h2>Taxon Page</h2>
+	<div>
 
- <table id = "efTable">
-  <tr>
-    <td style="padding-top: 0;vertical-align: top;width=90vw;">
+	<table id = "efTable" style="vertical-align: top;width=90vw;">
+		<tr>
+		<td>
+			<?php echo '<a href="/eflora/eflora_display.php?tid='.$previousTaxonID.'"><IMG SRC="/common/images/icons/left.gif" BORDER=2 ALT="Previous taxon"></a>'?>
+		</td>
 
-     <div id="content-top">
- 	 <table>
-	 <tr>
-		<td><span class="pageName"><a href="/eflora/">Jepson eFlora:</a> Taxon page</span></td>
-	 </tr>
-	 <tr>
 		<td><span class="pageMajorHeading"><a name="TOP" id="TOP">Vascular Plants of California</a></span>
 		<br>
 			<span class="pageAuthorLine">
@@ -3091,14 +2893,13 @@ $(document).ready(function(){
 				<a href="/IJM_keys/toc.html">Table of families and genera</a>
 			</span>	  
 		</td>
+		<td align = "right">
+			<?php echo '<a href="/eflora/eflora_display.php?tid='.$nextTaxonID.'"><IMG SRC="/common/images/icons/right.gif" BORDER=2 ALT="Next taxon"></a>'?>
+		</td>
 	 </tr>
 	 </table>
 
-	 <table align="center" width="100%">
-	  <tr>
-		<td>
-			<?php echo '<a href="/eflora/eflora_display.php?tid='.$previousTaxonID.'"><IMG SRC="/common/images/icons/left.gif" BORDER=2 ALT="Previous taxon"></a>'?>
-		</td>
+	 <table >
 		<td>
 <!--eFlora index-->
 
@@ -3106,13 +2907,10 @@ $(document).ready(function(){
 
 <!--end eFlora index-->
 		</td>
-		<td align = "right">
-			<?php echo '<a href="/eflora/eflora_display.php?tid='.$nextTaxonID.'"><IMG SRC="/common/images/icons/right.gif" BORDER=2 ALT="Next taxon"></a>'?>
-		</td>
 	  </tr>
 	 </table>
+
 	 </div>
-<br />
 <div id="content">
 
 <table align="center" width="100%">
@@ -3598,12 +3396,8 @@ $CNPS_name = str_replace(" subsp. ", " ssp. ", $ScientificName);
 
 <?php //photos from CalPhotos.
 
-require "$config_path"."calphotos_database_connection.php";
-
 $cp_ssp_name = str_replace(" subsp. ", " ssp. ", $ScientificName); //CalPhotos uses "ssp." and not "subsp."
 $cp_name = $cp_ssp_name;
-
-$aName = array("Acmispon tomentosus var. tomentosus","Acmispon tomentosus var. glabriusculus","Bassia scoparia","Silene coniflora","Atocion armeria","Engellaria obtusa","Dianthus nudiflorus","Gypsophila vaccaria","Dipterostemon capitatus ssp. capitatus","Dipterostemon capitatus ssp. pauciflorus","Dipterostemon capitatus ssp. lacuna-vernalis","Dipterostemon capitatus","Diplacus puniceus","Diplacus vandenbergensis","Mimetanthe pilosa","Erythranthe androsacea","Erythranthe arenaria","Erythranthe barbata","Erythranthe breviflora","Erythranthe corallina","Erythranthe cordata","Erythranthe dentata","Erythranthe diffusa","Erythranthe exigua","Erythranthe filicifolia","Erythranthe floribunda","Erythranthe geniculata","Erythranthe guttata","Erythranthe inconspicua","Erythranthe inflatula");
 
 ?>
 
@@ -3818,272 +3612,80 @@ if (isset ($nextTaxonID)) { //i.e. always, except for the very last page
 
 <?php 
 //check for known synonyms that are not showing up with images in CalPhotos under the eFlora name
-$taxon_result_a = mysqli_query($mysqli, "SELECT taxon, kwid FROM img 
-WHERE genre = 'Plant' 
-AND photographer IN ('Chris Winchell', 'Peter Zika', 'Vernon Smith', 'Aaron E. Sims', 'Aaron Schusteff', 'Barry Breckling', 'Barry Rice', 'Carol W. Witham', 'Christopher Christie', 'Dana York', 'Dr. David A. Charlet', 'David Graber', 'Dean Kelch', 'Dieter Wilken', 'Gary A. Monroe', 'George W. Hartwell', 'Gerald and Buff Corsi', 'Harlan Lewis', 'Janell Hillman', 'James M. Andre', 'James Morefield', 'John Game', 'Julie Kierstead', 'Julie Kierstead Nelson', 'Keir Morse', 'Larry Blakely', 'Lech Naumovich', 'Len Lindstrand III', 'Michael Charters', 'Michael G. Simpson', 'Neal Kramer', 'Bob Patterson', 'Robert E. Preston, Ph.D.', 'Roxanne Bittman', 'Ryan O\'Dell', 'Steve Matson', 'Steve Schoenig', 'Thomas M. Elder, M.D.', 'Thomas Stoughton', 'Toni Corelli', 'Tony Morosco', 'Dylan Neubauer', 'Kjirsten Wayman')
-AND taxon LIKE '$cp_ssp_name%' 
-AND taxon NOT LIKE 'Echinopsis%'
-ORDER BY RAND() LIMIT 5;");
 
-	if (empty($taxon_result_a)) {
-		die("<p class=bodyText>Error in executing the CalPhotos query : " . mysql_error() . "</p>");
-	}
-
-while ($row = mysqli_fetch_array($taxon_result_a))	{
-	$syn_taxona = $row['taxon'];
-	$kwid_syna = $row['kwid'];
-}
-
-if (!empty($kwid_syna)){
-
-  if (in_array($cp_ssp_name, $aName)){
-
-//echo "The string '$aName' was found in the string '$cp_ssp_name'";
-			//echo "A. The string was found in '$cp_ssp_name' ";
-
-	if ($cp_ssp_name === "Erythranthe androsacea"){
-		$cp_name = str_replace("Erythranthe androsacea", "Mimulus androsaceus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Mimetanthe pilosa"){
-		$cp_name = str_replace("Mimetanthe pilosa", "Mimulus pilosus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Erythranthe arenaria"){
-		$cp_name = str_replace("Erythranthe arenaria", "Mimulus arenarius", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Erythranthe barbata"){
-		$cp_name = str_replace("Erythranthe barbata", "Mimulus barbatus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}	
-	elseif($cp_ssp_name === "Erythranthe breviflora"){
-		$cp_name = str_replace("Erythranthe breviflora", "Mimulus breviflorus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}	
-	elseif($cp_ssp_name === "Erythranthe corallina"){
-		$cp_name = str_replace("Erythranthe corallina", "Mimulus corallinus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}		
-	elseif($cp_ssp_name === "Erythranthe cordata"){
-		$cp_name = str_replace("Erythranthe cordata", "Mimulus cordatus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Erythranthe dentata"){
-		$cp_name = str_replace("Erythranthe dentata", "Mimulus dentatus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Erythranthe diffusa"){
-		$cp_name = str_replace("Erythranthe diffusa", "Mimulus diffusus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Erythranthe exigua"){
-		$cp_name = str_replace("Erythranthe exigua", "Mimulus exiguus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Erythranthe filicifolia"){
-		$cp_name = str_replace("Erythranthe filicifolia", "Mimulus filicifolius", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Erythranthe floribunda"){
-		$cp_name = str_replace("Erythranthe floribunda", "Mimulus floribundus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Erythranthe geniculata"){
-		$cp_name = str_replace("Erythranthe geniculata", "Mimulus geniculatus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Erythranthe guttata"){
-		$cp_name = str_replace("Erythranthe guttata", "Mimulus guttatus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Erythranthe inconspicua"){
-		$cp_name = str_replace("Erythranthe inconspicua", "Mimulus inconspicuus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Erythranthe inflatula"){
-		$cp_name = str_replace("Erythranthe inflatula", "Mimulus evanescens", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Diplacus vandenbergensis"){
-		$cp_name = str_replace("Diplacus vandenbergensis", "Mimulus fremontii var. vandenbergensis", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}	
-	elseif($cp_ssp_name === "Diplacus puniceus"){
-		$cp_name = str_replace("Diplacus puniceus", "Mimulus aurantiacus var. puniceus", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}	
-	elseif($cp_ssp_name === "Dipterostemon capitatus"){
-		$cp_name = str_replace("Dipterostemon capitatus", "Dichelostemma capitatum", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Dipterostemon capitatus ssp. pauciflorus"){
-		$cp_name = str_replace("Dipterostemon capitatus ssp. pauciflorus", "Dichelostemma capitatum ssp. pauciflorum", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Dipterostemon capitatus ssp. lacuna-vernalis"){
-		$cp_name = str_replace("Dipterostemon capitatus ssp. lacuna-vernalis", "Dichelostemma capitatum ssp. lacuna-vernalis", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Dipterostemon capitatus ssp. capitatus"){
-		$cp_name = str_replace("Dipterostemon capitatus ssp. capitatus", "Dichelostemma capitatum ssp. capitatum", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Cherleria biflora"){
-		$cp_name = str_replace("Cherleria biflora", "Minuartia obtusiloba", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Hartmaniella sierrae"){
-		$cp_name = str_replace("Hartmaniella sierrae", "Pseudostellaria sierrae", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Schizotechium jamesianum"){
-		$cp_name = str_replace("Schizotechium jamesianum", "Pseudostellaria jamesiana", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Engellaria obtusa"){
-		$cp_name = str_replace("Engellaria obtusa", "Stellaria obtusa", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Gypsophila vaccaria"){
-		$cp_name = str_replace("Gypsophila vaccaria", "Vaccaria hispanica", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Dianthus nudiflorus"){
-		$cp_name = str_replace("Dianthus nudiflorus", "Velezia rigida", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Atocion armeria"){
-		$cp_name = str_replace("Atocion armeria", "Silene armeria", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Bassia scoparia"){
-		$cp_name = str_replace("Bassia scoparia", "Kochia scoparia", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Acmispon tomentosus var. glabriusculus"){
-		$cp_name = str_replace("Acmispon tomentosus var. glabriusculus", "Acmispon heermannii var. heermannii", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	elseif($cp_ssp_name === "Acmispon tomentosus var. tomentosus"){
-		$cp_name = str_replace("Acmispon tomentosus var. tomentosus", "Acmispon heermannii var. orbicularis", $cp_ssp_name);
-		//echo "and now it is changed to the string '$cp_name'";
-	}
-	
-  }
-  else{
-
-	//echo "B. The string was found in '$cp_ssp_name' ";
-		if (preg_match("/^Erythranthe /", $cp_ssp_name)){
-			$cp_name = str_replace("Erythranthe ", "Mimulus ", $cp_ssp_name);
-			//echo "and now it is changed to the string '$cp_name'";
-		}
-		elseif (preg_match("/^Diplacus /", $cp_ssp_name)){
-			$cp_name = str_replace("Diplacus ", "Mimulus ", $cp_ssp_name);
-			//echo "and now it is changed to the string '$cp_name'";
-		}
-		elseif (preg_match("/^Dipterostemon /", $cp_ssp_name)){
-			$cp_name = str_replace("Dipterostemon ", "Dichelostemma ", $cp_ssp_name);
-			//echo "and now it is changed to the string '$cp_name'";
-		}
-		elseif (preg_match("/^Cherleria biflora/", $cp_ssp_name)){
-			$cp_name = str_replace("Cherleria biflora", "Minuartia obtusiloba", $cp_ssp_name);
-			//echo "and now it is changed to the string '$cp_name'";
-		}
-		elseif (preg_match("/^Sabulina /", $cp_ssp_name)){
-			$cp_name = str_replace("Sabulina ", "Minuartia ", $cp_ssp_name);
-			//echo "and now it is changed to the string '$cp_name'";
-		}
-		elseif (preg_match("/^Schizotechium jamesianum/", $cp_ssp_name)){
-			$cp_name = str_replace("Schizotechium jamesianum", "Pseudostellaria jamesiana", $cp_ssp_name);
-			//echo "and now it is changed to the string '$cp_name'";
-		}
-		elseif (preg_match("/^Silene greenei subsp\. angustifolia/", $cp_ssp_name)){
-			$cp_name = str_replace("Silene greenei subsp\. angustifolia", "Silene campanulata subsp. campanulata", $cp_ssp_name);
-			//echo "and now it is changed to the string '$cp_name'";
-		}
-		elseif (preg_match("/^Silene greenei subsp\. greenei/", $cp_ssp_name)){
-			$cp_name = str_replace("Silene greenei subsp\. greenei", "Silene campanulata subsp. glandulosa", $cp_ssp_name);
-			//echo "and now it is changed to the string '$cp_name'";
-		}
-		elseif (preg_match("/^Silene greenei/", $cp_ssp_name)){
-			$cp_name = str_replace("Silene greenei", "Silene campanulata", $cp_ssp_name);
-			//echo "and now it is changed to the string '$cp_name'";
-		}
-		elseif (preg_match("/^Neokochia /", $cp_ssp_name)){
-			$cp_name = str_replace("Neokochia ", "Kochia ", $cp_ssp_name);
-			//echo "and now it is changed to the string '$cp_name'";
-		}
-		elseif (preg_match("/^Acmispon nevadensis/", $cp_ssp_name)){
-			$cp_name = str_replace("Acmispon nevadensis", "Acmispon decumbens", $cp_ssp_name);
-			//echo "and now it is changed to the string '$cp_name'";
-		}
-		elseif (preg_match("/^Polygala /", $cp_ssp_name)){
-			$cp_name = str_replace("Polygala ", "Rhinotropis ", $cp_ssp_name);
-			//echo "and now it is changed to the string '$cp_name'";
-		}
-		elseif($cp_ssp_name === "Acmispon tomentosus"){
-			$cp_name = str_replace("Acmispon tomentosus", "Acmispon heermannii", $cp_ssp_name);
-			//echo "and now it is changed to the string '$cp_name'";
-		}
-
-  }
-}
-
-//now get all the images from CalPhotos
-$result = mysqli_query($mysqli, "SELECT taxon, kwid, copyright FROM img 
-WHERE genre LIKE 'Plant%'
-AND ( (photographer LIKE '%Kierstead%') OR (photographer IN ('George Butterworth', 'Chris Winchell', 'Peter Zika', 'Vernon Smith', 'Aaron E. Sims', 'Aaron Schusteff', 'Barry Breckling', 'Barry Rice', 'Carol W. Witham', 'Christopher Christie', 'Dana York', 'Dr. David A. Charlet', 'David Graber', 'Dean Kelch', 'Dieter Wilken', 'Gary A. Monroe', 'George W. Hartwell', 'Gerald and Buff Corsi', 'Harlan Lewis', 'Janell Hillman', 'James M. Andre', 'James Morefield', 'John Game', 'Julie Kierstead Nelson', 'Keir Morse', 'Larry Blakely', 'Lech Naumovich', 'Len Lindstrand III', 'Michael Charters', 'Michael G. Simpson', 'Neal Kramer', 'Bob Patterson', 'Robert E. Preston, Ph.D.', 'Roxanne Bittman', 'Ryan O\'Dell', 'Steve Matson', 'Steve Schoenig', 'Thomas M. Elder, M.D.', 'Thomas Stoughton', 'Toni Corelli', 'Tony Morosco', 'Dylan Neubauer', 'Kjirsten Wayman') ) )
-AND taxon LIKE '$cp_name%' 
-AND taxon NOT LIKE 'Echinopsis%'
-ORDER BY RAND() LIMIT 5;");
-
-//CalPhotos has specimens of the south American Cactus genus Echinopsis which the code above cannot distinguish from Echinops (asteraceae) at the genus level.
-//pictures of the cactus are displaying on the genus page for Echinops
-
-	if (empty($result)) {
-		die("<p class=bodyText>Error in executing the CalPhotos query : " .
-		mysql_error() . "</p>");
-	}
 
 echo '<table id="calphotos"><tr><td>';
-
-while ($row = mysqli_fetch_array($result))	{
-	$raw_taxon = $row['taxon'];
-	$taxon = str_replace(" ssp. ", " subsp. ", $raw_taxon);
-	$kwid = $row['kwid'];
-	$copyright = $row['copyright'];
-	$enlarge = str_replace(" ", "+", $kwid); //full image links in format 0000+1111+2222+3333
-	$kwidarray = explode(" ",$kwid);
-	$kwid4thumb = "{$kwidarray[0]}_{$kwidarray[1]}/{$kwidarray[2]}/{$kwidarray[3]}"; //thumbnail links in format 0000_1111/2222/3333
-
 	echo '<div class="i-align">';
-	if ( (!empty($taxon)) && (!empty($kwid)) ){
-			echo '<div class="v-align">';
-				echo '<div class=bodyText><i>';
-				echo str_replace(" var. ", "&nbsp;&nbsp;<br /></i> var. <i>", $taxon);
-				echo '</i></div>';
-			
-				echo '<div>';
-				echo '<a href="https://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&enlarge='.$enlarge.'"><img border="0" src=https://calphotos.berkeley.edu/imgs/128x192/'.$kwid4thumb.'.jpeg alt="click for image enlargement"></img></a>';
-				echo '</div>';
 
-				echo '<div>';
-				echo '&copy;';
-				echo $copyright.'</div>';
-			echo '</div>';
-	}
-	echo '</div>';
-}
+	$cp_search_name = str_replace(" ", "+", $cp_ssp_name);
+
+$homepage = file_get_contents("https://calphotos.berkeley.edu/cgi/api_taxon?taxon=".$cp_search_name."&us_state=CA&s=eflora");
+	$alreadyOutput = array();
+	$delimiter = "\n";
+	$splitcontents = explode($delimiter, $homepage);
+		if (!empty($splitcontents)){ 
+			foreach ( $splitcontents as $line ){
+				$bits = explode("\t", $line);
+
+
+					foreach($bits as $key => $value) {
+						$raw_taxon = $bits[0];
+						$taxon = str_replace(" ssp. ", " subsp. ", $raw_taxon);
+						$kwid = $bits[1];
+						$copyright = $bits[2];
+						$enlarge = str_replace(" ", "+", $kwid); //full image links in format 0000+1111+2222+3333
+						$kwidarray = explode(" ",$kwid);
+						$kwid4thumb = "{$kwidarray[0]}_{$kwidarray[1]}/{$kwidarray[2]}/{$kwidarray[3]}"; //thumbnail links in format 0000_1111/2222/3333
+						
+						
+
+						if(in_array($kwid, $alreadyOutput)){
+							continue;
+						}
+						$alreadyOutput[] = $kwid; 
+						//echo $kwid . "<br />";
+						
+						echo '<div class="i-align">';
+							if ( (!empty($taxon)) && (!empty($kwid)) ){
+								echo '<div class="v-align">';
+								echo '<div class=bodyText><i>';
+								echo str_replace(" var. ", "&nbsp;&nbsp;<br /></i> var. <i>", $taxon);
+								echo '</i></div>';
+			
+								echo '<div>';
+								echo '<a href="https://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&enlarge='.$enlarge.'"><img border="0" src=https://calphotos.berkeley.edu/imgs/128x192/'.$kwid4thumb.'.jpeg alt="click for image enlargement"></img></a>';
+								echo '</div>';
+
+								echo '<div>';
+								echo '&copy;';
+								echo $copyright.'</div>';
+								echo '</div>';
+							}
+							else{
+								//echo 'BAD ENCODING';
+							}
+						echo '</div>';
+
+  	// echo "<li>$key: $value</li>";
+					}
+			}
+
+//Sagina apetala	0000 0000 0320 1497	2020 Keir Morse
+	//echo "<p class=bodyText>FOUND-->".$cp_search_name."</p>";
+		}
+		else{//if there is no $kwid (i.e. no photos), do not print the "see more" link or the extra divider
+			echo '<p class=bodyText style="color:#BBBBB">No expert verified images found for <i>'.$ScientificName.'.</i></p>';
+		}
 
 echo "</td></tr></table>";
-if (!empty($kwid)){ 
+
+
+if (!empty($splitcontents)){ 
 	$cp_search_name = str_replace(" ", "+", $cp_ssp_name);
 	echo '<p class=bodyText><a href="https://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&where-genre=Plant&where-taxon='.$cp_ssp_name.'&title_tag='.$ScientificName.'">More photos of <i>'.$ScientificName.'</i><br /> in CalPhotos</a></p>';
 }
-else{//if there is no $kwid (i.e. no photos), do not print the "see more" link or the extra divider
-	echo '<p class=bodyText style="color:#BBBBB">No expert verified images found for <i>'.$ScientificName.'.</i></p>';
-}
+
+
 ?>
 
 </td></tr></table>
@@ -4142,7 +3744,7 @@ map.addControl(new L.Control.Fullscreen());
 	var jepsreg;
 	var geojsonLayerP;
 	var FILL = L.layerGroup();
-	var COUNTY = L.layerGroup();	
+	var COUNTY = L.layerGroup();
 	var REG = L.layerGroup();
 	
 	map.scrollWheelZoom.disable();
@@ -4158,17 +3760,10 @@ var bnd = "Jepson_regions_buffer_bnd.geojson"; //full json file for Jepson regio
 //$.getJSON('GEOJSON/'+MapName+'_4.geojson', function(data) { //Feb 2023
 //$.getJSON('GEOJSON/'+MapName+'_5.geojson', function(data) { //Feb 2024
 //$.getJSON('GEOJSON/'+MapName+'_6.geojson', function(data) { //MAR 2025
-//$.getJSON('GEOJSON/'+MapName+'_7.geojson', function(data) { //MAY 2025
-//$.getJSON('GEOJSON/'+MapName+'_8.geojson', function(data) { //MAY 2025
-//$.getJSON('GEOJSON/'+MapName+'_9.geojson', function(data) { //NOV 2025
+//$.getJSON('GEOJSON/'+MapName+'_8.geojson', function(data) { //MAY 2025        
+//$.getJSON('GEOJSON/'+MapName+'_9.geojson', function(data) { //NOV 2025        
 $.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) { //DEC 2025
-//
-//
-//
-//
-//
-//
-//
+
 	geojsonLayerP = L.geoJson(data, {
 			// Make the popup
 		pointToLayer: function (feature, latlng) {
@@ -4232,12 +3827,11 @@ $.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) { //DEC 2025
 			if (currentZoom <= 7) {
 
 				geojsonLayerP = L.geoJson(data, {
-			// Make the popup
-			
-//"DET": "Galium stellatum var. eremicum","CO": "San Bernardino","LOC"
+// Make the popup
+			                                                        
+//"DET": "Galium stellatum var. eremicum","CO": "San Bernardino","LOC"          
 					onEachFeature: function (feature, layer) {
 			         layer.bindPopup(feature.properties.DET+"<br /><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br />"+feature.properties.CO+" County<br />"+feature.properties.LOC);
-			         //layer.bindPopup(feature.properties.det_name+"<br />"+feature.properties.accid+"<br />CCH1 link disabled");
 					},
 					pointToLayer: function (feature, latlng) {
 			// Get the icon
@@ -4257,11 +3851,9 @@ $.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) { //DEC 2025
 				if (currentZoom <= 9) {
 
 					geojsonLayerP = L.geoJson(data, {
-					// Make the popup
+			// Make the popup
 						onEachFeature: function (feature, layer) {
 				         layer.bindPopup(feature.properties.DET+"<br /><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br />"+feature.properties.CO+" County<br />"+feature.properties.LOC);
-				         //layer.bindPopup(feature.properties.det_name+"<br /><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a>");
-				         //layer.bindPopup(feature.properties.det_name+"<br />"+feature.properties.accid+"<br />CCH1 link disabled");
 						},
 						pointToLayer: function (feature, latlng) {
 			// Get the icon
@@ -4280,12 +3872,9 @@ $.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) { //DEC 2025
 				else{
 
 					geojsonLayerP = L.geoJson(data, {
-						// Make the popup
+					// Make the popup
 						onEachFeature: function (feature, layer) {
 				         layer.bindPopup(feature.properties.DET+"<br /><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br />"+feature.properties.CO+" County<br />"+feature.properties.LOC);
-				    	 //layer.bindPopup(feature.properties.det_name+"<br /><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a>");
-				         //layer.bindPopup(feature.properties.det_name+"<br />"+feature.properties.accid+"<br />CCH1 link disabled");
-
 						},
 						pointToLayer: function (feature, latlng) {
 						// Get the icon
@@ -4682,7 +4271,7 @@ $.getJSON(cacount ,function(data){
 			};
         }
     }
-	}).addTo(COUNTY);
+	}).addTo(COUNTY); 
 });
 
 
@@ -5411,6 +5000,7 @@ echo '<a href="/consortium/list.php?taxon_name='.$hb_name.'"">View all CCH recor
 please e-mail Jason Alexander &nbsp;&nbsp;(<a class="CCHtable" href="mailto:jason_alexander@berkeley.edu">jason_alexander@berkeley.edu</a>).</span></li>
 </ul>
 
+<br />All markers link to CCH specimen records. The original determination is shown in the popup window.
 <br />Blue markers indicate specimens that map to one of the expected Jepson geographic subdivisions (see left map). Purple markers indicate specimens collected from a garden, greenhouse, or other non-wild location.
 <br />Yellow markers indicate records that may provide evidence for eFlora range revision or may have georeferencing or identification issues.
 <br /><b><a href="/consortium/about_yellow.html">READ ABOUT YELLOW FLAGS</a></b>
@@ -5437,31 +5027,13 @@ else {
 Species do not include records of infraspecific taxa, if there are more than 1 infraspecific taxon in CA.<br />
 Blue line denotes eFlora flowering time (fruiting time in some monocot genera).</p>
 
-</td></tr>
-</table>
-	
+</td></tr></table>	
 </div>
 </main>
-		</td>
-	</tr>
-	</table> <!--close efSide table-->
 
 <!--begin footer-->
 <?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/eflora_footer.php'); ?>
 <!--end footer-->
-	
-
-	</div>
-   </td>
-  </tr>
-</table> <!--close content table-->
-  
-
- 
- 	</td>
-	<td style="border-left-style: solid;border-left-color: #C0DFFD;"></td>
-  </tr>
- </table> <!--close outside normal table-->
 
 
 </body>

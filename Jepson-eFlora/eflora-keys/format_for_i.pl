@@ -1,8 +1,8 @@
 #formatter for eFlora that expects input with expanded abbreviations
-use lib '/Users/Shared/Jepson-Master/Jepson-eFlora/Modules';
+use lib '../Modules';
 use flatten;
 
-open(warn_cnps, ">/Users/Shared/Jepson-Master/Jepson-eFlora/eflora_database/output/CNPS_warning.txt") || die;
+open(warn_cnps, ">../eflora_database/output/CNPS_warning.txt") || die;
 #warn <<EOP;
 #NEED TO ADD IN AUTHORS WHERE THEY WERE DEEMED UNNECESSARY FOR PRINTED BOOK
 #EOP
@@ -14,13 +14,13 @@ $genus="AA";
 #$unlinked= unlink 'IJM.hash';
 
 
-open (OUT, ">input/eflora_keys.txt") || die;
-open (FORMAT, ">input/eflora_keys_formatted.txt") || die;
+open (OUT, ">../eflora_database/input/eflora_keys.txt") || die;
+open (FORMAT, ">../eflora_database/input/eflora_keys_formatted.txt") || die;
 open (KEY, ">input/eflora_keys_for_keybase.txt") || die;
 
 my ($id,$name,$cnps,$g,$mod);
 #open(IN, "/Users/Shared/Jepson-Master/Interchange/input/CNPS/CNPS_ID_master.txt") || die;
-open(IN, "/Users/Shared/Jepson-Master/Interchange/input/CNPS/CNPS-ID-EFLORA-converted.txt") || die;
+open(IN, "../../ICPN/input/CNPS/CNPS-ID-EFLORA-converted.txt") || die;
 while(<IN>){
 	chomp;
 #1124	Sidalcea pedata	1B.1	G1	05-26-2021
@@ -33,7 +33,7 @@ while(<IN>){
 }
 close(IN);
 
-open(IN, "/Users/Shared/Jepson-Master/Jepson-eFlora/synonymy/input/smasch_taxon_ids.txt") || die;
+open(IN, "../Synonymy/input/smasch_taxon_ids.txt") || die;
 local($/)="\n";
 while(<IN>){
 	chomp;
@@ -84,7 +84,7 @@ close(IN);
 #print "$_\n";
 #}
 
-my $file = "/Users/Shared/Jepson-Master/Jepson-eFlora/eflora_database/output/accepted_name_list.txt";
+my $file = "../eflora_database/output/accepted_name_list.txt";
 
 open(IN, "< $file") or die "Can't open $file for read: $!";
 local($/)="\n";
@@ -107,7 +107,7 @@ close(IN);
 
 
 
-$file="/Users/Shared/Jepson-Master/Jepson-eFlora/eflora_database/input/eflora_treatments.txt";
+$file="../eflora_database/input/eflora_treatments.txt";
 	undef($/);
 	open(IN,$file) || die "couldn't open $file\n";
 warn "reading from $file\n";
@@ -156,6 +156,7 @@ next if m/^CAPTION:/;
 					print ERR "UK: $uk\n\n";
 					$exclude=1;
 				}
+
 				if ($lines[0]=~/Group \d+/ && $lines[1]=~/^[A-Z]/){
 					print ERR "KEY $lines[0] $lines[0]\n\n";
 					$uk=shift(@lines);
@@ -163,22 +164,26 @@ next if m/^CAPTION:/;
 					$uk .= shift(@lines);
 					print ERR "KEY $lines[0] $lines[0]]\n\n";
 				}
+
 				if ($lines[0]=~/Key to (Groups|genera|California|pistillate|staminate)/i){
 					print ERR "KEY $lines[0]\n\n";
 					$uk=shift(@lines);
 					print ERR "KEY $lines[0]\n\n";
 				}
+
 				if ($lines[0]=~/^Group \d/){
 					print ERR "KEY $lines[0]\n\n";
 					$uk=shift(@lines);
 					print ERR "KEY $lines[0]\n\n";
 				}
+
 				if ($lines[0]=~/^SALIX Key/){
 					print ERR "KEY $lines[0]\n\n";
 					$uk=shift(@lines);
 					print ERR "KEY $lines[0]\n\n";
 				}
 				
+
 			foreach(@lines[0 .. $#lines]){
 				if(m/--[0-9]+\(--[0-9]/ || m/[0-9]--\)[0-9]+--/){
 					s/(--[0-9]+\()--([0-9]+)/$1$2/g;
@@ -728,7 +733,7 @@ next if m/^CAPTION:/;
 					}
 
 				$name_link= <<EOP;
-<a href="/cgi-bin/get_cpn.pl?$NAME_TO_CODE{$name_link}">[Online Interchange]</a>
+<a href="/eflora/icpn/icpn_display?tid=$NAME_TO_CODE{$name_link}">[ICPN]</a>
 EOP
 #print "3 NA $name_anchor\n";
 				}

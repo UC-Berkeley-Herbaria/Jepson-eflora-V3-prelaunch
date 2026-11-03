@@ -71,10 +71,10 @@ EOP
 ++$count;
 }
 #skip the one CULTIVATED PLANT from JFP-9 that has a species page
-#elsif(m/Asclepias curassavica/i){
-#	next;
+elsif(m/Asclepias curassavica/i){
+	next;
 
-#}
+}
 
 #Downingia yina, Astragalus nuttallianus var. austrinus, Astragalus tephrodes var. brachylobus are JFP-8 taxa that are not in California and should not be on the accepted names list
 elsif(m/(Downingia yina|Astragalus nuttallianus var\. austrinus|Astragalus tephrodes var. brachylobus)/i){

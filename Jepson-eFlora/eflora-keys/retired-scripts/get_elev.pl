@@ -1,18 +1,18 @@
 use BerkeleyDB;
- my $filename = "input/hash/JEPS_elev.hash";
+ my $filename = "output/JEPS_elev.hash";
     tie %jeps_elev, "BerkeleyDB::Hash",
                 -Filename => $filename,
         or die "Cannot open file $filename: $! $BerkeleyDB::Error\n" ;
 
-open(IN,"/Users/Shared/Jepson-Master/Jepson-eFlora/synonymy/input/smasch_taxon_ids.txt") || die;
+open(IN,"/Users/davidbaxter/DATA/smasch_taxon_ids.txt") || die;
 while(<IN>){
 chomp;
 ($code,$name)=split(/\t/);
 $TNOAN{$name}=$code;
 }
-open(WARNING,">output/stderr.txt") || die;
+open(WARNING,">stderr.txt") || die;
 $/="";
-$file="/Users/Shared/Jepson-Master/Jepson-eFlora/eflora_database/input/eflora_treatments.txt";
+$file="/JEPS-master/Jepson-eFlora/eflora_database/eflora_treatments.txt";
 open(IN,$file) || die "couldn't open $file\n";
 while(<IN>){
 	($first_line)=m/^(.*)/;
@@ -21,23 +21,21 @@ while(<IN>){
 		#print "$family\n";
 	}
 	if( m/NATIVE/){
-		$nativity="NAT";
+		$nativity="N";
 	}
 	else{
-		$nativity="EXO";
+		$nativity="A";
 	}
     	if(m/([A-Z-]+ .*)\nTAXON AUTHOR/){
         	$name=&strip_name($1);
     	}
-    	elsif(m/^(NATIVE OR NATURALIZED|NATIVE|NATURALIZED|POSSIBLY IN CA|WAIF|EXTIRPATED ALIEN|EXTIRPATED WAIF|EXTIRPATED WEED|EXTIRPATED|HISTORICAL WAIF|SPONTANEOUS HYBRID|AGRICULTURAL WEED|GARDEN WEED|URBAN WEED|GARDEN AND URBAN WEED|AGRICULTURAL, GARDEN, OR URBAN WEED|URBAN WEED EXPECTED IN WILDLANDS)\n([A-Z-]+ +.+)/||
-			m/^UNABRIDGED\n(HISTORICAL WAIF|AGRICULTURAL, GARDEN, OR URBAN WEED|URBAN WEED.*|AGRICULTURAL WEED|GARDEN WEED|GARDEN AND URBAN WEED|CULTIVATED PLANT|EXTIRPATED ALIEN|EXTIRPATED WEED|EXTIRPATED WAIF|NATIVE OR NATURALIZED|NATIVE|NATURALIZED|WAIF|SPONTANEOUS HYBRID)\n([A-Z-]+ +.+)/||
-			m/^(NATIVE)\nEXTIRPATED\n([A-Z-]+ +.+)/){
-        		$name=&strip_name($2);
-		}
-		else{
-			print WARNING "skipping $first_line following $name\n";
-			next;
-		}
+    	elsif(m/(NATIVE|NATURALIZED)\n([A-Z-]+ .*)/){
+        	$name=&strip_name($2);
+	}
+	else{
+		print WARNING "skipping $first_line following $name\n";
+		next;
+	}
 #print "$name\n" if $nativity eq "N";
 #next;
 	if(($elevation)=m/ELEVATION: (.*)/){
@@ -74,26 +72,18 @@ while(<IN>){
 				$max_e= $min_e=0 if $elevation=~/below.*tide/;
 				$native{$name}{max}=$max_e;
 				$native{$name}{min}=$min_e;
-				#print "ACC==>$name\t$min_e\t$max_e\n";
+				#print "$name\t$min_e\t$max_e\n";
 $jeps_elev{$name}="$min_e\t$max_e";
 				if(m/SYNONYMS: (.*)/){
-					s/&eacute;//g;
-					s/&\#\d+;//g;
-					#s/&\#263;//g;
-					
-					s/probably / /g;
-					
 					while(s/SYNONYMS: +(.*)//){
-						
                                 		@syns=split(/; +/,$1);
                                 		foreach(@syns){
                                         		s/Expanded author citation: //;
                                         		s/_//g;
-                                        		
 							next if s/, .*//;
                                         		$name= &strip_name($_);
-#$jeps_elev{$name}="$min_e\t$max_e";
-                                        		print "ELEV SYNS==>$name\t$min_e\t$max_e\n";
+$jeps_elev{$name}="$min_e\t$max_e";
+                                        		#print "$name\t$min_e\t$max_e\n";
                                 		}
                         		}
 				}
@@ -104,18 +94,15 @@ untie(%jeps_elev);
 foreach $name (sort(keys(%native))){
 #print "$TNOAN{$name} $native{$name}{max}\n" if ($native{$name}{max} && $native{$name}{max}< 300);
 }
-
 sub strip_name{
 local($_) = @_;
-			s/ \{\/.*//;
-			s/\/\{.*//;
-			s/ *\{.*//;
-s/&times;/ x /;
-       s/^([A-Z][-A-Za-z]+) *([xX]? *[-a-z]+).*\b(nothovar\.|nothosubsp\.|subsp\.|ssp\.|var\.|f\.) ([-a-z]+).*/$1 $2 $4/ ||
-s/^([A-Z][A-Za-z]+) ([-a-z]+).*/$1 $2/ ||
-s/^([A-Z][A-Za-z]+) *(x [-a-z]+).*/$1 $2/ ||
-s/^([x] *[A-Z][A-Za-z]+) *([x ]*[-a-z]+).*/$1 $2/ ||
-s/ (nothosubsp\.|nothovar\.|\subsp\.|ssp\.|var\.|f\.) / /;
+			s/ {\/.*//;
+			s/\/{.*//;
+			s/ *{.*//;
+s/&times;/X /;
+       s/^([A-Z][-A-Za-z]+) (X?[-a-z]+).*\b(nothosubsp\.|subsp\.|ssp\.|var\.|f\.) ([-a-z]+).*/$1 $2 $3 $4/ ||
+s/^([A-Z][A-Za-z]+) ([x ]*[-a-z]+).*/$1 $2/;
+s/ (subsp\.|var\.|f\.) / /;
 #return ucfirst((lc($_)));
 return (lc($_));
 }

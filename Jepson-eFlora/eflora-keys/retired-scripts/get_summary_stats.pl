@@ -128,9 +128,12 @@ print OUT <<EOP;
   <meta name="keywords" content="California Flora, Jepson eFlora, Flora of California, Vascular Plants of California, Jepson Flora Project, ">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="/common/css/jepson_eflora.css" rel="stylesheet" type="text/css">
-<link rel="shortcut icon" href="/common/images/JepsonLogoSmall.png" type="image/x-icon">
+	<link href="/common/css/dropdowns.css" rel="stylesheet" type="text/css" />
+	<link href="/common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
+		<link rel="shortcut icon" href="/common/images/JepsonLogoSmall.png" type="image/x-icon">
 
+<!--mobile js script files-->
+	<script src="/eflora/common/js/dh_custom.js"></script>
 
 <style type="text/css" media="screen">
 

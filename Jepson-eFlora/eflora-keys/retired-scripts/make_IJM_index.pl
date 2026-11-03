@@ -1,4 +1,4 @@
-open(IN, "../synonymy/smasch_taxon_ids.txt") || die;
+open(IN, "/Users/davidbaxter/DATA/smasch_taxon_ids.txt") || die;
 while(<IN>){
 chomp;
 s/X /&times;/;
@@ -6,9 +6,9 @@ s/X /&times;/;
 $TID{$name}=$code;
 $TNOAN{$code}=$name;
 }
-
+$TNOAN{"Centaurea jacea nothosubsp. pratensis"}=93858;
 close(IN);
-
+$TID{"Centaurea jacea nothosubsp. pratensis"}=93858;
 #<a href="/cgi-bin/get_IJM.pl?tid=66839">	Achnatherum occidentale*</a><br>
 open(IN,"index_suppl") || die;
 while(<IN>){
@@ -44,18 +44,8 @@ foreach $i (A .. Z){
 <html xmlns="http://www.w3.org/1999/xhtml">
 <head>
 	<title>Jepson Herbarium: Jepson Flora Project: eFlora index for $i</title> 
-	<link href="/common/styles/style_main_tjm2.css" rel="stylesheet" type="text/css" />
+	<link href="http://ucjeps.berkeley.edu/common/styles/style_main_tjm2.css" rel="stylesheet" type="text/css" />
 </head>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T5YC99QF6Q');
-</script>
 
 <body>
 
@@ -66,7 +56,7 @@ foreach $i (A .. Z){
   <tr>
       <td rowspan="4" width="12" align="center" valign="middle"></td>
       <td rowspan="3" width="120" align="center" valign="middle">
-        <a href="/jeps/"><img src="/common/images/logo_jeps_80.png" alt="Jepson Herbarium (JEPS)" width="80" height="79" border="0" /></a></td>
+        <a href="http://ucjeps.berkeley.edu/jeps/"><img src="http://ucjeps.berkeley.edu/common/images/logo_jeps_80.png" alt="Jepson Herbarium (JEPS)" width="80" height="79" border="0" /></a></td>
     <td align="center">&nbsp;</td>
     <td rowspan="3" width="120" align="center" valign="middle"></td>
     <td rowspan="4" width="12" align="center" valign="middle"></td>
@@ -74,14 +64,14 @@ foreach $i (A .. Z){
 
     <tr> <td align="center" valign="middle"><span class="bannerTitle">The Jepson Herbarium</span><br /></td> </tr>
 
-    <tr> <td align="center" valign="top"><a href="https://www.berkeley.edu" class="bannerTagLine">University of California, Berkeley</a></td> </tr>
+    <tr> <td align="center" valign="top"><a href="http://www.berkeley.edu" class="bannerTagLine">University of California, Berkeley</a></td> </tr>
 
      <tr> <td colspan="3" align="center"></td> </tr>
      
    <tr> <td height="8" colspan="5" align="center">&nbsp;</td> </tr>
    <tr class="bannerBottomBorder"> <td colspan="6" height="3"></td> </tr>
 
-    <tr> <td colspan="6"><img src="/common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td> </tr>
+    <tr> <td colspan="6"><img src="http://ucjeps.berkeley.edu/common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td> </tr>
   </table>
   <!-- End banner -->
 
@@ -90,19 +80,19 @@ foreach $i (A .. Z){
     <tr>
     <td height="21" width="640" align="right">
 
-      <a href="/main/directory.html" class="horizMenuActive">Directory</a>
+      <a href="http://ucjeps.berkeley.edu/main/directory.html" class="horizMenuActive">Directory</a>
   	  &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="/news/" class="horizMenuActive">News</a>
+        <a href="http://ucjeps.berkeley.edu/news/" class="horizMenuActive">News</a>
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="/main/sitemap.html" class="horizMenuActive">Site Map</a>	
+        <a href="http://ucjeps.berkeley.edu/main/sitemap.html" class="horizMenuActive">Site Map</a>	
   &nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
-        <a href="/" class="horizMenuActive">Home</a>	
+        <a href="http://ucjeps.berkeley.edu/" class="horizMenuActive">Home</a>	
     </td>
 
 <td />
   </tr>
    <tr>
-       <td colspan="6" bgcolor="#9FBFFF"><img src="/common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td>
+       <td colspan="6" bgcolor="#9FBFFF"><img src="http://ucjeps.berkeley.edu/common/images/common_spacer.gif" alt="" width="1" height="1" border="0" /></td>
      </tr>
  </table>
  <!-- End of horizontal menu -->
@@ -119,7 +109,7 @@ foreach $i (A .. Z){
        <td>&nbsp;</td>
        <td>&nbsp;</td>
 
-       <td width="100%"><span class="pageName"><a href="/eflora/">Jepson eFlora</a></span></td>
+       <td width="100%"><span class="pageName"><a href="/IJM.html">Jepson eFlora</a></span></td>
 </tr>
    <tr>
        <td>&nbsp;</td>
@@ -178,18 +168,18 @@ foreach (sort(keys(%code))){
 		@codes=split(/,/,$code{$_});
 		if($#codes==0){
 			print $outfile <<EOP;
-<a href="/cgi-bin/get_IJM?tid=$code{$_}">	$_</a> (under $TNOAN{$codes[0]})<br>
+<a href="/cgi-bin/get_IJM.pl?tid=$code{$_}">	$_</a> (under $TNOAN{$codes[0]})<br>
 EOP
 		}
 		else{
 			foreach $syn(@codes[0]){
 				unless($seen{$syn}++){
-					print $outfile qq{ <a href="/cgi-bin/get_IJM?tid=$syn">$_</a> (under $TNOAN{$syn}) };
+					print $outfile qq{ <a href="/cgi-bin/get_IJM.pl?tid=$syn">	$_</a> (under $TNOAN{$syn}) };
 				}
 			}
 			foreach $syn(@codes[1 .. $#codes]){
 				unless($seen{$syn}++){
-					print $outfile qq{ <a href="/cgi-bin/get_IJM?tid=$syn">(under $TNOAN{$syn})</a> };
+					print $outfile qq{ <a href="/cgi-bin/get_IJM.pl?tid=$syn">	(under $TNOAN{$syn})</a> };
 				}
 			}
 			print $outfile "<br>\n";
@@ -197,7 +187,7 @@ EOP
 	}
 	else{
 		print $outfile <<EOP;
-<a href="/cgi-bin/get_IJM?tid=$code{$_}">	$_</a><br>
+<a href="/cgi-bin/get_IJM.pl?tid=$code{$_}">	$_</a><br>
 EOP
 	}
 }
@@ -205,7 +195,6 @@ foreach $i (A .. Z){
 print "$i\n";
 close($i);
 open(OUT, ">>IJM_index_${i}.html")|| die;
-print OUT "<!--Begin footer--><?php include(\$_SERVER['DOCUMENT_ROOT'].'/common/php/eflora_footer.php'); ?><!--End footer--></body></html>";
-#qq{<br><span class="copyrightText">&nbsp;&nbsp;Copyright &copy; 2023 Regents of the University of California</span></body></html>};
+print OUT qq{<br><span class="copyrightText">&nbsp;&nbsp;Copyright &copy; 2017 Regents of the University of California</span></body></html>};
 close(OUT);
 }

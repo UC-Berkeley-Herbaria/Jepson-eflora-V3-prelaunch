@@ -4,19 +4,22 @@ use strict;
 use BerkeleyDB;
 use HTML::Entities;
 
+
 my %NAME_TO_CODE;
 my %CODE_TO_NAME;
 my @lines;
 my %seen;
-my ($names, $key, $smasch_code, $smasch_name, @residue, $k, $v) = "";
-my ($taxon_name,$accepted_name,$gen_lines,$fam_lines) = "";
-my ($icpn_name,$is_terminal,$is_accepted,$accepted) = "";
-my ($count_lines, $count,$NFM) = "";
+my %seenJFP;
+my %IT;
+my ($names, $key, $smasch_code, $smasch_name, @residue, $k, $v);
+my ($taxon_name,$accepted_name,$gen_lines,$fam_lines);
+my ($icpn_name,$is_terminal,$is_accepted,$accepted);
+my ($count_lines, $count,$NFM,$ADD);
 
+#my $load_date = "2026-04-23";
+my $load_date = "2026-09-30";
 
-my $load_date = "2026-04-23";
-
-open(IN, "../synonymy/input/smasch_taxon_ids.txt") || die;
+open(IN, "../Synonymy/input/smasch_taxon_ids.txt") || die;
 while(<IN>){
 	chomp;
 	s/X /&times;/;
@@ -34,18 +37,52 @@ close(IN);
 print "Hybrid Check==>".$CODE_TO_NAME{93861}."\n\n";
 print LOG "Hybrid Check==>".$CODE_TO_NAME{93861}."\n\n";
 
+open(IN,"../eflora_keys/output/accepted_names.out") || die;
+#LN	nativity	family	genus	species	species_author	infraspecific_rank	infraspecific_epithet	infraspecific_author	name_minus_authors	name_plus_authors	expanded_name	synonyms	common	TJM1/TJM2	major_clade	endemicity
+
+while(<IN>){
+	chomp;
+next if (m/^#/);
+	my ($LN,$nativity, $family, $genus, $species, $species_author, $infraspecific_rank, $infraspecific_epithet, $infraspecific_author, $name_minus_authors, $name_plus_authors, $expanded_name, $synonyms, $common, $TJM1_TJM2, $major_clade, $endemicity)=split(/\t/);
+		#$name_minus_authors =~ s/&times;/X /;
+		my $accTID = $NAME_TO_CODE{$name_minus_authors};
+
+
+		if ($accTID !~ m/^\d+$/){
+			print "eflora name not in SMASCH: $name_minus_authors\n";
+		} else {
+			if ($name_minus_authors =~ m/^(.+) +(subsp\.|var\.) +/){
+				my $temp = $1;
+				$tempTID = $NAME_TO_CODE{$temp};
+#if a name has a variety, Abies magnifica var. magnifica, then
+#Abies magnifica is also accepted in eFlora.
+				if ($tempTID =~ m/^\d+$/){
+					$IT{$tempTID} = "YES";
+				}
+			} else {
+				if ($accTID =~ m/^\d+$/){
+					$IT{$accTID} = "YES";
+				}
+			}
+		}
+}
+close(IN);
+
+
+
+
 #this function indicates the record delimiter. In this case, an empty line
 #as such, it needs to be designated after the other files are processed
 $/="";
 
 #mariaDB
-open(ICPN, ">output/load_icpn.sql") || die;
+open(ICPN, ">../../ICPN/output/load_icpn.sql") || die;
 
-open(FILE, ">output/icpn_accepted_name_list.txt") || die;
+open(FILE, ">../../ICPN/output/icpn_accepted_name_list.txt") || die;
 
-open(TEMP, ">output/icpn_terminal_name_list.txt") || die;
+open(TEMP, ">../../ICPN/output/icpn_terminal_name_list.txt") || die;
 
-open(IN, "../../Interchange/input/icpn_current.txt") || die;
+open(IN, "../../ICPN/input/icpn_current.txt") || die;
 while(<IN>){
    next if m/^\#/; #skip lines that are commented out
    next if m/^\.Admin/;	#skip lines that start with Admin
@@ -87,26 +124,12 @@ s/\\/####fslash####/g; #fix an extra slash created  by some mis-converted end of
 #text file fields
 	my $ScientificName=&get_ScientificName($_);
 	my $Family=&get_Family($_);
-	my $AuthorNotes=&get_AuthorNotes($_);
-	my $KMcitation=&get_KMcitation($_);
-	my $PublicationNote=&get_PublicationNote($_);
-	my $SourceA=&get_SourceA($_);
-	my $SourceB=&get_SourceB($_);
-	my $SourceC=&get_SourceC($_);
-	my $SourceD=&get_SourceD($_);
-	my $SourceE=&get_SourceE($_);
-	my $SourceF=&get_SourceF($_);
-	my $SourceG=&get_SourceG($_);
-	my $LINK=&get_LINK($_);
-	my $LiteratureA=&get_LiteratureA($_);
-	my $LiteratureB=&get_LiteratureB($_);
-	my $LiteratureC=&get_LiteratureC($_);
-	my $LiteratureD=&get_LiteratureD($_);
+	my $Source=&get_Source($_);
+	my $Literature=&get_Literature($_);
 	my $TJMsynonyms=&get_TJMsynonyms($_);
 	my $OtherSynonyms=&get_OtherSynonyms($_);
 	my $TJMmisapplied=&get_TJMmisapplied($_); 
 	my $JFPmisapplied=&get_JFPmisapplied($_); 
-	my $GeographicComment=&get_GeographicComment($_); 
 	my $Correspondence1=&get_Correspondence1($_);
 	my $Correspondence2=&get_Correspondence2($_);
 	my $Correspondence3=&get_Correspondence3($_);
@@ -135,34 +158,19 @@ s/\\/####fslash####/g; #fix an extra slash created  by some mis-converted end of
 	my $EdComments13=&get_EdComments13($_);
 	my $Summary=&get_Summary($_);
 	my $CurrentStatus=&get_CurrentStatus($_);
+	my $JFP=&get_JFP($_);
 	my $CurrentStatusAuthority=&get_CurrentStatusAuthority($_); 
 	my $CurrentStatusDate=&get_CurrentStatusDate($_); 
 	my $CurrentName=&get_CurrentName($_); 
-	my $Pending=&get_Pending($_);
-	my $VariantSpelling=&get_VariantSpelling($_);
 	my $TypesInfo=&get_TypesInfo($_);
 
 #encode HTML entitites for smoother import to SQL
-	$AuthorNotes = encode_entities($AuthorNotes);
-	$KMcitation = encode_entities($KMcitation);
-	$PublicationNote = encode_entities($PublicationNote);
-	$SourceA = encode_entities($SourceA);
-	$SourceB = encode_entities($SourceB);
-	$SourceC = encode_entities($SourceC);
-	$SourceD = encode_entities($SourceD);
-	$SourceE = encode_entities($SourceE);
-	$SourceF = encode_entities($SourceF);
-	$SourceG = encode_entities($SourceG);
-	$LINK = encode_entities($LINK);
-	$LiteratureA = encode_entities($LiteratureA);
-	$LiteratureB = encode_entities($LiteratureB);
-	$LiteratureC = encode_entities($LiteratureC);
-	$LiteratureD = encode_entities($LiteratureD);
+	$Source = encode_entities($Source);
+	$Literature = encode_entities($Literature);
 	$TJMsynonyms = encode_entities($TJMsynonyms);
 	$OtherSynonyms = encode_entities($OtherSynonyms);
 	$TJMmisapplied = encode_entities($TJMmisapplied); 
 	$JFPmisapplied = encode_entities($JFPmisapplied); 
-	$GeographicComment = encode_entities($GeographicComment); 
 	$Correspondence1 = encode_entities($Correspondence1);
 	$Correspondence2 = encode_entities($Correspondence2);
 	$Correspondence3 = encode_entities($Correspondence3);
@@ -194,9 +202,11 @@ s/\\/####fslash####/g; #fix an extra slash created  by some mis-converted end of
 	$CurrentStatusAuthority = encode_entities($CurrentStatusAuthority); 
 	$CurrentStatusDate = encode_entities($CurrentStatusDate); 
 	$CurrentName = encode_entities($CurrentName); 
-	$Pending = encode_entities($Pending);
-	$VariantSpelling = encode_entities($VariantSpelling);
 	$TypesInfo = encode_entities($TypesInfo);
+
+
+#skip quadrinimials for now
+next if $CurrentStatus =~ m/^Current Status: 12, .*$/;
 
 
 #check taxon ID's for current names and icpn entry names
@@ -210,15 +220,17 @@ s/\\/####fslash####/g; #fix an extra slash created  by some mis-converted end of
 	}
 			$icpn_name=&strip_name($ScientificName);
 
-	if ($icpn_name !~ m/^([A-Za-z-]+|&times;[A-Za-z-]+|&times;[A-Za-z-]+ [a-z-]+|[A-Za-z-]+ &times;[a-z-]+|[A-Za-z-]+ [a-z-]+|[A-Za-z-]+ [a-z-]+ [nothvarsbpuf.]{2,11} [a-z-]+)$/){
-		print "icpn_name stripping problem: $icpn_name==>$_\n";
-	}
+
 
 #fix one odd hybrid only in ICPN that does not strip correctly
 	if ($ScientificName =~ m/^Lotus argophyllus .A\. Gray. Greene var\. ornithopus .Greene. Ottley &times;/){
 		$icpn_name = "Lotus argophyllus var. ornithopus &times; dendroideus var. traskiae";
 	}
 
+
+	if ($icpn_name !~ m/^([A-Za-z-]+|&times;[A-Za-z-]+|&times;[A-Za-z-]+ [a-z-]+|[A-Za-z-]+ &times;[a-z-]+|[A-Za-z-]+ [a-z-]+|[A-Za-z-]+ [a-z-]+ [nothvarsbpuf.]{2,11} [a-z-]+)$/){
+		print "icpn_name stripping problem: $icpn_name==>$_\n";
+	}
 
 $CurrentName =~ s/&\#39;/ /g;
 $CurrentName =~ s/ / /g;
@@ -231,48 +243,19 @@ $CurrentName =~ s/&amp;/&/g;
 	if ($accepted !~ m/^[.&;A-Za-z- ]+$/){
 		print "accepted not stripped: $accepted-->$_\n";
 	}
-#if there is no current name field, then it is an accepted name
-#only records without a current name field are candidates for terminal taxa
-	if($CurrentName =~ m/^( *|NULL)$/){
-		$is_accepted = "1";
-		
-		if($icpn_name =~ m/(var\.|subsp\.|f\.)/){
-			$is_terminal = "1";
-		}
-		elsif($icpn_name =~ m/^[A-Za-z-]+ [a-z-]+$/){
-			$is_terminal = "1";
-		}
-		elsif($icpn_name =~ m/^&times;[A-Za-z-]+ [a-z-]+/){
-			$is_terminal = "1";
-		}
-		elsif($icpn_name =~ m/^[A-Za-z-]+ &times;[a-z-]+$/){
-			$is_terminal = "1";
-		}
-		elsif($icpn_name =~ m/^[A-Za-z-]+$/){
-			$is_terminal = "NULL";
-		}
-		else{
-			print TEMP "PROBLEM NAME, NOT TERMINAL?==>$_\n";
-			print "PROBLEM NAME, NOT TERMINAL?==>$_\n";
-			$is_terminal = "NULL";
-		}
-	}
-	else{
-		$is_terminal = "NULL";
-		$is_accepted = "NULL";
-	}
 
-#create the ICPN terminal names table
-	if($is_terminal eq "1"){
-		print TEMP "$icpn_name\n";
+#if there is no current name field, then it is an accepted name
+#Current Status: 1, accepted name for taxon native to CA
+	if($CurrentStatus =~ m/: \d+, accepted/){
+		$is_accepted = "1";
 	}
 	else{
-		$is_terminal = "NULL";
+		$is_accepted = "NULL";
 	}
 
 #create the ICPN accepted names table
 	if($is_accepted eq "1"){
-		print FILE "$icpn_name\n";
+		print FILE $icpn_name."\n";
 	}
 	else{
 		$is_accepted = "NULL";
@@ -284,21 +267,41 @@ $CurrentName =~ s/&amp;/&/g;
 		$TaxonID=$NAME_TO_CODE{$icpn_name};
 		++$NFM;
 		if ($TaxonID !~ m/^\d+$/){
-				print "TAXON_ID non numerical or NULL: $_\n";
+			$TaxonID = "";
+			print "TAXON_ID non numerical or NULL: $_ not in SMASCH\n";
 		}
 	}
 
 	if ($TaxonID !~ m/^\d+$/){
 		$TaxonID = "NULL";
 	}
+	else{
+		my $terminal = $IT{$TaxonID};
+	
+		if ($terminal eq "YES"){
+			$is_terminal = "1";
+		} else {
+			$is_terminal = "NULL";
+		}
+	}
 
-
+#the ICPN terminal name have to be eFlora accepted names
+#this is used differently than is_terminal in the eflora table by necessity
+#not everything that is accepted name in ICPN is in the eflora,
+#but all the eflora accepted names should be accepted here.
+#there is no other way to distinguish between what is only in eFlora as accepted
+	if($is_terminal eq "1"){
+		print TEMP $icpn_name."\n";
+	}
+	else{
+		$is_terminal = "NULL";
+	}
 
 	
 	if($accepted !~ m/^( *|NULL)$/){
 		$CurrentNameTID=$NAME_TO_CODE{$accepted};
 			if ($CurrentNameTID !~ m/^\d+$/){
-				print "CurrentNameTID non numerical or NULL: $accepted==>$_\n";
+				print "CurrentNameTID non numerical or NULL(".$icpn_name."): $accepted==>$_\n";
 			}
 	}
 
@@ -325,10 +328,10 @@ $CurrentName =~ s/&amp;/&/g;
 		++$gen_lines;
 	}
 
-print LOG "$NAME_TO_CODE{$icpn_name}\t$icpn_name\n";
+print LOG $NAME_TO_CODE{$icpn_name}."\t".$icpn_name."\n";
 
 #print out the plain matched taxon names to file used by synonymy script
-print FILE "$icpn_name\n";
+print FILE $icpn_name."\n";
 
 #convert fields to SQL format
 
@@ -355,117 +358,19 @@ print FILE "$icpn_name\n";
 		$Family = "NULL";
 	}
 
-	if ($AuthorNotes !~ m/^(NULL| *)$/){
-		$AuthorNotes = "'".$AuthorNotes."'";
+	if ($Source !~ m/^(NULL| *)$/){
+		$Source =~ s/'/&#39;/g; #apostrophe interferes with SQL, change to html
+		$Source = "'".$Source."'";
 	}
 	else{
-		$AuthorNotes = "NULL";
+		$Source = "NULL";
 	}
 
-	if ($KMcitation !~ m/^(NULL| *)$/){
-		$KMcitation = "'".$KMcitation."'";
+	if ($Literature !~ m/^(NULL| *)$/){
+		$Literature = "'".$Literature."'";
 	}
 	else{
-		$KMcitation = "NULL";
-	}
-
-	if ($PublicationNote !~ m/^(NULL| *)$/){
-		$PublicationNote =~ s/'/&#39;/g; #apostrophe interferes with SQL, change to html
-		$PublicationNote = "'".$PublicationNote."'";
-	}
-	else{
-		$PublicationNote = "NULL";
-	}
-
-	if ($SourceA !~ m/^(NULL| *)$/){
-		$SourceA =~ s/'/&#39;/g; #apostrophe interferes with SQL, change to html
-		$SourceA = "'".$SourceA."'";
-	}
-	else{
-		$SourceA = "NULL";
-	}
-
-	if ($SourceB !~ m/^(NULL| *)$/){
-		$SourceB =~ s/'/&#39;/g; #apostrophe interferes with SQL, change to html
-		$SourceB = "'".$SourceB."'";
-	}
-	else{
-		$SourceB = "NULL";
-	}
-
-	if ($SourceC !~ m/^(NULL| *)$/){
-		$SourceC =~ s/'/&#39;/g; #apostrophe interferes with SQL, change to html
-		$SourceC = "'".$SourceC."'";
-	}
-	else{
-		$SourceC = "NULL";
-	}
-
-	if ($SourceD !~ m/^(NULL| *)$/){
-		$SourceD =~ s/'/&#39;/g; #apostrophe interferes with SQL, change to html
-		$SourceD = "'".$SourceD."'";
-	}
-	else{
-		$SourceD = "NULL";
-	}
-
-	if ($SourceE !~ m/^(NULL| *)$/){
-		$SourceE =~ s/'/&#39;/g; #apostrophe interferes with SQL, change to html
-		$SourceE = "'".$SourceE."'";
-	}
-	else{
-		$SourceE = "NULL";
-	}
-
-	if ($SourceF !~ m/^(NULL| *)$/){
-		$SourceF =~ s/'/&#39;/g; #apostrophe interferes with SQL, change to html
-		$SourceF = "'".$SourceF."'";
-	}
-	else{
-		$SourceF = "NULL";
-	}
-
-	if ($SourceG !~ m/^(NULL| *)$/){
-		$SourceG =~ s/'/&#39;/g; #apostrophe interferes with SQL, change to html
-		$SourceG = "'".$SourceG."'";
-	}
-	else{
-		$SourceG = "NULL";
-	}
-
-	if ($LINK !~ m/^(NULL| *)$/){
-		$LINK = "'".$LINK."'";
-	}
-	else{
-		$LINK = "NULL";
-	}
-
-	if ($LiteratureA !~ m/^(NULL| *)$/){
-		$LiteratureA = "'".$LiteratureA."'";
-	}
-	else{
-		$LiteratureA = "NULL";
-	}
-
-	if ($LiteratureB !~ m/^(NULL| *)$/){
-		$LiteratureB = "'".$LiteratureB."'";
-	}
-	else{
-		$LiteratureB = "NULL";
-	}
-
-	if ($LiteratureC !~ m/^(NULL| *)$/){
-		$LiteratureC = "'".$LiteratureC."'";
-	}
-	else{
-		$LiteratureC = "NULL";
-	}
-
-	if ($LiteratureD !~ m/^(NULL| *)$/){
-		$LiteratureD = "'".$LiteratureD."'";
-	}
-	else{
-		$LiteratureD = "NULL";
+		$Literature = "NULL";
 	}
 
 	if ($TJMsynonyms !~ m/^(NULL| *)$/){
@@ -498,13 +403,6 @@ print FILE "$icpn_name\n";
 	}
 	else{
 		$JFPmisapplied = "NULL";
-	}
-
-	if ($GeographicComment !~ m/^(NULL| *)$/){
-		$GeographicComment = "'".$GeographicComment."'";
-	}
-	else{
-		$GeographicComment = "NULL";
 	}
 
 	if ($Correspondence1 !~ m/^(NULL| *)$/){
@@ -732,6 +630,14 @@ print FILE "$icpn_name\n";
 		$CurrentStatus = "NULL";
 	}
 
+	if ($JFP !~ m/^(NULL| *)$/){
+		$JFPCode = "'".$JFP."'";
+		print $JFP."-->".$CurrentStatus."\n" unless $seenJFP{$JFP}++;
+	}
+	else{
+		$JFPCode = "NULL";
+	}
+
 	if ($CurrentStatusAuthority !~ m/^(NULL| *)$/){
 		$CurrentStatusAuthority = "'".$CurrentStatusAuthority."'";
 	}
@@ -746,28 +652,12 @@ print FILE "$icpn_name\n";
 		$CurrentStatusDate = "NULL";
 	}
 
-	if ($Pending !~ m/^(NULL| *)$/){
-		$Pending =~ s/'/&#39;/g; #apostrophe interferes with SQL, change to html
-		$Pending = "'".$Pending."'";
-	}
-	else{
-		$Pending = "NULL";
-	}
-
 	if ($CurrentName !~ m/^(NULL| *)$/){
 		$CurrentName =~ s/'/&#39;/g; #apostrophe interferes with SQL, change to html
 		$CurrentName = "'".$CurrentName."'";
 	}
 	else{
 		$CurrentName = "NULL";
-	}
-
-	if ($VariantSpelling !~ m/^(NULL| *)$/){
-		$VariantSpelling =~ s/'/&#39;/g; #apostrophe interferes with SQL, change to html
-		$VariantSpelling = "'".$VariantSpelling."'";
-	}
-	else{
-		$VariantSpelling = "NULL";
 	}
 
 	if ($TypesInfo !~ m/^(NULL| *)$/){
@@ -778,16 +668,27 @@ print FILE "$icpn_name\n";
 		$TypesInfo = "NULL";
 	}
 
+	if ($TaxonID =~ m/^\d+$/){
 
-++$count;
-
+		unless($seen{$TaxonID}++){
 
 #mariaDB export
-		print ICPN "INSERT INTO icpn(TaxonID, ScientificName,CurrentNameTID,CurrentName,Family,AuthorNotes,Correspondence1,Correspondence2,Correspondence3,Correspondence4,Correspondence5,Correspondence6,Correspondence7,Correspondence8,Correspondence9,Correspondence10,Correspondence11,Correspondence12,Correspondence13,CurrentStatus,CurrentStatusAuthority,CurrentStatusDate,EdComments1,EdComments2,EdComments3,EdComments4,EdComments5,EdComments6,EdComments7,EdComments8,EdComments9,EdComments10,EdComments11,EdComments12,EdComments13,GeographicComment,JFPmisapplied,KMcitation,LINK,LiteratureA,LiteratureB,LiteratureC,LiteratureD,OtherSynonyms,Pending,PublicationNotes,SourceA,SourceB,SourceC,SourceD,SourceE,SourceF,SourceG,Summary,TJMmisapplied,TJMsynonyms,TypesInfo,VariantSpelling,Updated,IsTerminal,IsAccepted)\n";
-		print ICPN "VALUES(".$TaxonID.",".$taxon_name.",".$CurrentNameTID.",".$accepted_name.",".$Family.",".$AuthorNotes.",".$Correspondence1.",".$Correspondence2.",".$Correspondence3.",".$Correspondence4.",".$Correspondence5.",".$Correspondence6.",".$Correspondence7.",".$Correspondence8.",".$Correspondence9.",".$Correspondence10.",".$Correspondence11.",".$Correspondence12.",".$Correspondence13.",".$CurrentStatus.",".$CurrentStatusAuthority.",".$CurrentStatusDate.",".$EdComments1.",".$EdComments2.",".$EdComments3.",".$EdComments4.",".$EdComments5.",".$EdComments6.",".$EdComments7.",".$EdComments8.",".$EdComments9.",".$EdComments10.",".$EdComments11.",".$EdComments12.",".$EdComments13.",".$GeographicComment.",".$JFPmisapplied.",".$KMcitation.",".$LINK.",".$LiteratureA.",".$LiteratureB.",".$LiteratureC.",".$LiteratureD.",".$OtherSynonyms.",".$Pending.",".$PublicationNote.",".$SourceA.",".$SourceB.",".$SourceC.",".$SourceD.",".$SourceE.",".$SourceF.",".$SourceG.",".$Summary.",".$TJMmisapplied.",".$TJMsynonyms.",".$TypesInfo.",".$VariantSpelling.",'".$Updated."',".$is_terminal.",".$is_accepted.")\n";
+		print ICPN "INSERT INTO icpn(TaxonID, ScientificName,CurrentNameTID,CurrentName,Family,Correspondence1,Correspondence2,Correspondence3,Correspondence4,Correspondence5,Correspondence6,Correspondence7,Correspondence8,Correspondence9,Correspondence10,Correspondence11,Correspondence12,Correspondence13,CurrentStatus,CurrentStatusAuthority,CurrentStatusDate,EdComments1,EdComments2,EdComments3,EdComments4,EdComments5,EdComments6,EdComments7,EdComments8,EdComments9,EdComments10,EdComments11,EdComments12,EdComments13,JFPmisapplied,Literature,OtherSynonyms,Source,Summary,TJMmisapplied,TJMsynonyms,TypesInfo,JFP,Updated,IsTerminal,IsAccepted)\n";
+		print ICPN "VALUES(".$TaxonID.",".$taxon_name.",".$CurrentNameTID.",".$accepted_name.",".$Family.",".$Correspondence1.",".$Correspondence2.",".$Correspondence3.",".$Correspondence4.",".$Correspondence5.",".$Correspondence6.",".$Correspondence7.",".$Correspondence8.",".$Correspondence9.",".$Correspondence10.",".$Correspondence11.",".$Correspondence12.",".$Correspondence13.",".$CurrentStatus.",".$CurrentStatusAuthority.",".$CurrentStatusDate.",".$EdComments1.",".$EdComments2.",".$EdComments3.",".$EdComments4.",".$EdComments5.",".$EdComments6.",".$EdComments7.",".$EdComments8.",".$EdComments9.",".$EdComments10.",".$EdComments11.",".$EdComments12.",".$EdComments13.",".$JFPmisapplied.",".$Literature.",".$OtherSynonyms.",".$Source.",".$Summary.",".$TJMmisapplied.",".$TJMsynonyms.",".$TypesInfo.",".$JFPCode.",'".$Updated."',".$is_terminal.",".$is_accepted.")\n";
 		#If the TaxonID in icpn already exists, update selected fields only 
-		print ICPN "ON DUPLICATE KEY UPDATE ScientificName = ".$taxon_name.",CurrentNameTID = ".$CurrentNameTID.",CurrentName = ".$accepted_name.",Family = ".$Family.",AuthorNotes = ".$AuthorNotes.",Correspondence1 = ".$Correspondence1.",Correspondence2 = ".$Correspondence2.",Correspondence3 = ".$Correspondence3.",Correspondence4 = ".$Correspondence4.",Correspondence5 = ".$Correspondence5.",Correspondence6 = ".$Correspondence6.",Correspondence7 = ".$Correspondence7.",Correspondence8 = ".$Correspondence8.",Correspondence9 = ".$Correspondence9.",Correspondence10 = ".$Correspondence10.",Correspondence11 = ".$Correspondence11.",Correspondence12 = ".$Correspondence12.",Correspondence13 = ".$Correspondence13.",CurrentStatus = ".$CurrentStatus.",CurrentStatusAuthority = ".$CurrentStatusAuthority.",CurrentStatusDate = ".$CurrentStatusDate.",EdComments1 = ".$EdComments1.",EdComments2 = ".$EdComments2.",EdComments3 = ".$EdComments3.",EdComments4 = ".$EdComments4.",EdComments5 = ".$EdComments5.",EdComments6 = ".$EdComments6.",EdComments7 = ".$EdComments7.",EdComments8 = ".$EdComments8.",EdComments9 = ".$EdComments9.",EdComments10 = ".$EdComments10.",EdComments11 = ".$EdComments11.",EdComments12 = ".$EdComments12.",EdComments13 = ".$EdComments13.",GeographicComment = ".$GeographicComment.",JFPmisapplied = ".$JFPmisapplied.",KMcitation = ".$KMcitation.",LINK = ".$LINK.",LiteratureA = ".$LiteratureA.",LiteratureB = ".$LiteratureB.",LiteratureC = ".$LiteratureC.",LiteratureD = ".$LiteratureD.",OtherSynonyms = ".$OtherSynonyms.",Pending = ".$Pending.",PublicationNotes = ".$PublicationNote.",SourceA = ".$SourceA.",SourceB = ".$SourceB.",SourceC = ".$SourceC.",SourceD = ".$SourceD.",SourceE = ".$SourceE.",SourceF = ".$SourceF.",SourceG = ".$SourceG.",Summary = ".$Summary.",TJMmisapplied = ".$TJMmisapplied.",TJMsynonyms = ".$TJMsynonyms.",TypesInfo = ".$TypesInfo.",VariantSpelling = ".$VariantSpelling.",Updated = '".$Updated."',IsTerminal = ".$is_terminal.",IsAccepted = ".$is_accepted."\n";
+		print ICPN "ON DUPLICATE KEY UPDATE ScientificName = ".$taxon_name.",CurrentNameTID = ".$CurrentNameTID.",CurrentName = ".$accepted_name.",Family = ".$Family.",Correspondence1 = ".$Correspondence1.",Correspondence2 = ".$Correspondence2.",Correspondence3 = ".$Correspondence3.",Correspondence4 = ".$Correspondence4.",Correspondence5 = ".$Correspondence5.",Correspondence6 = ".$Correspondence6.",Correspondence7 = ".$Correspondence7.",Correspondence8 = ".$Correspondence8.",Correspondence9 = ".$Correspondence9.",Correspondence10 = ".$Correspondence10.",Correspondence11 = ".$Correspondence11.",Correspondence12 = ".$Correspondence12.",Correspondence13 = ".$Correspondence13.",CurrentStatus = ".$CurrentStatus.",CurrentStatusAuthority = ".$CurrentStatusAuthority.",CurrentStatusDate = ".$CurrentStatusDate.",EdComments1 = ".$EdComments1.",EdComments2 = ".$EdComments2.",EdComments3 = ".$EdComments3.",EdComments4 = ".$EdComments4.",EdComments5 = ".$EdComments5.",EdComments6 = ".$EdComments6.",EdComments7 = ".$EdComments7.",EdComments8 = ".$EdComments8.",EdComments9 = ".$EdComments9.",EdComments10 = ".$EdComments10.",EdComments11 = ".$EdComments11.",EdComments12 = ".$EdComments12.",EdComments13 = ".$EdComments13.",JFPmisapplied = ".$JFPmisapplied.",Literature = ".$Literature.",OtherSynonyms = ".$OtherSynonyms.",Source = ".$Source.",Summary = ".$Summary.",TJMmisapplied = ".$TJMmisapplied.",TJMsynonyms = ".$TJMsynonyms.",TypesInfo = ".$TypesInfo.",JFP = ".$JFPCode.",Updated = '".$Updated."',IsTerminal = ".$is_terminal.",IsAccepted = ".$is_accepted."\n";
 		print ICPN ";\n\n";
+		++$ADD;
+		}
+		else{
+			print "DUPLICATE TAXON ID FOUND(".$icpn_name."): $_\n";
+
+		}
+	}
+	else{
+		print "NO TAXON ID(".$icpn_name."): $_\n";
+
+	}
 
 }
 
@@ -800,7 +701,8 @@ TOTAL lines in ICPN-current: $count_lines
 Family count: $fam_lines
 Genus count: $gen_lines
 Name For Matching count: $NFM
-Records added to icpn MAIN: $count
+
+Records passed and added to SQL: $ADD
 
 END ICPN STATS
 EOP
@@ -813,7 +715,8 @@ TOTAL lines in ICPN-current: $count_lines
 Family count: $fam_lines
 Genus count: $gen_lines
 Name For Matching count: $NFM
-Records added to icpn MAIN: $count
+
+Records passed and added to SQL: $ADD
 
 END ICPN STATS
 EOP
@@ -885,72 +788,12 @@ sub get_PublicationNote {
 		}
 }
 
-sub get_SourceA {
+sub get_Source {
 		my $par = shift;
 		if($par =~ /[\H]Source: *(.+)/){
 			return "$1";
 		}
 		elsif($par =~ /[\H]Source a: *(.+)/){
-			return "$1";
-		}
-		else {
-			return "NULL";
-		}
-}
-
-sub get_SourceB {
-		my $par = shift;
-		if($par =~ /[\H]Source b: *(.+)/){
-			return "$1";
-		}
-		else {
-			return "NULL";
-		}
-}
-
-sub get_SourceC {
-		my $par = shift;
-		if($par =~ /[\H]Source c: *(.+)/){
-			return "$1";
-		}
-		else {
-			return "NULL";
-		}
-}
-
-sub get_SourceD {
-		my $par = shift;
-		if($par =~ /[\H]Source d: *(.+)/){
-			return "$1";
-		}
-		else {
-			return "NULL";
-		}
-}
-
-sub get_SourceE {
-		my $par = shift;
-		if($par =~ /[\H]Source e: *(.+)/){
-			return "$1";
-		}
-		else {
-			return "NULL";
-		}
-}
-
-sub get_SourceF {
-		my $par = shift;
-		if($par =~ /[\H]Source f: *(.+)/){
-			return "$1";
-		}
-		else {
-			return "NULL";
-		}
-}
-
-sub get_SourceG {
-		my $par = shift;
-		if($par =~ /[\H]Source g: *(.+)/){
 			return "$1";
 		}
 		else {
@@ -968,52 +811,22 @@ sub get_SourceComments {
 		}
 }
 
-sub get_LINK {
-		my $par = shift;
-		if($par =~ /[\H]LINK: *(.+)/){
-			return "$1";
-		}
-		else {
-			return "NULL";
-		}
-}
+#sub get_LINK {
+#		my $par = shift;
+#		if($par =~ /[\H]LINK: *(.+)/){
+#			return "$1";
+#		}
+#		else {
+#			return "NULL";
+#		}
+#}
 
-sub get_LiteratureA {
+sub get_Literature {
 		my $par = shift;
 		if($par =~ /[\H]Literature: *(.+)/){
 			return "$1";
 		}
 		elsif($par =~ /[\H]Literature a: *(.+)/){
-			return "$1";
-		}
-		else {
-			return "NULL";
-		}
-}
-
-sub get_LiteratureB {
-		my $par = shift;
-		if($par =~ /[\H]Literature b: *(.+)/){
-			return "$1";
-		}
-		else {
-			return "NULL";
-		}
-}
-
-sub get_LiteratureC {
-		my $par = shift;
-		if($par =~ /[\H]Literature c: *(.+)/){
-			return "$1";
-		}
-		else {
-			return "NULL";
-		}
-}
-
-sub get_LiteratureD {
-		my $par = shift;
-		if($par =~ /[\H]Literature d: *(.+)/){
 			return "$1";
 		}
 		else {
@@ -1343,6 +1156,16 @@ sub get_Summary {
 		}
 }
 
+
+sub get_JFP {
+		my $par = shift;
+		if($par =~ /[\H]Current Status: *([\d+][a-z]*), .+/){
+			return "$1";
+		}
+		else {
+			return "NULL";
+		}
+}
 
 sub get_CurrentStatus {
 		my $par = shift;
