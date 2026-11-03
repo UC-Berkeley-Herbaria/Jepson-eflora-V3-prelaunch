@@ -70,13 +70,14 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 		$result = mysqli_query($db, $sql);
 
 //query and assign variable to each table field
-		if ($result && mysqli_num_rows($result) > 0) {
-			$row = mysqli_fetch_assoc($result);
-		//while ($row = mysqli_fetch_array($result)) {
+		while ($row = mysqli_fetch_array($result)) {
 
-
-	// Assigned safely here
-    // ... rest of your display logic
+// If no results are found, echo a message and stop
+			if ($row == false){
+				echo "<br><br><h1>The ID you are using is not an eflora accepted name and may be a synonym or removed from the database entirely. Please use this link and type in a name to search the eflora database:<br><br>";
+				echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
+				exit();
+			}
 
 //BEGIN temporary bug fix lines to add when needed
 //foreach ($row as $key=>$value) {
@@ -89,6 +90,9 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 			}
 			else{
 				$ID = null;
+				echo "<br><br><h1>The ID you are using is not an eflora accepted name and may be a synonym or removed from the database entirely. Please use this link and type in a name to search the eflora database:<br><br>";
+				echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
+				exit();
 			}
 	
 			if (!empty($row['ScientificName'])){
@@ -593,11 +597,6 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 	which is useful for seeing what you're getting
 	but is pretty ugly
 	*/
-		} else {
-			// Handle the error gracefully
-				echo "<br><br><h1>The ID you are using is not in the eflora database name may be a synonym or removed from the database entirely. Please use this link and type in a name to search the eflora database:<br><br>";
-				echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
-			exit; // Stop execution so lines 1165/1166 don't throw notices
 		}
 	}
 	elseif(!empty($TaxonName))  {
@@ -615,13 +614,14 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 		$result = mysqli_query($db, $sql);
 
 //query and assign variable to each table field
-		if ($result && mysqli_num_rows($result) > 0) {
-			$row = mysqli_fetch_assoc($result);
-		//while ($row = mysqli_fetch_array($result)) {
+		while ($row = mysqli_fetch_array($result)) {
 
-
-	// Assigned safely here
-    // ... rest of your display logic
+// If no results are found, echo a message and stop
+			if ($row == false){
+				echo '<br><br><h1>The ScientificName '.$TaxonName.'</b> was not found in eflora taxon table.<br>Try another search.<br>';
+				echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
+				exit();
+			}
 
 //BEGIN temporary bug fix lines to add when needed
 //foreach ($row as $key=>$value) {
@@ -634,6 +634,9 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 			}
 			else{
 				$ID = null;
+				echo '<br><br><h1>The ScientificName '.$TaxonName.'</b> was not found in eflora taxon table.<br>Try another search.<br>';
+				echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
+				exit();
 			}
 	
 			if (!empty($row['ScientificName'])){
@@ -1138,13 +1141,6 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 //which is useful for seeing what you're getting
 //but is pretty ugly
 
-		} else {
-			// Handle the error gracefully
-			header("Location: search_eflora.php?name=".$TaxonName, true, 301);
-
-			//	echo "<br><br><h1>The name you are using is not in the eflora database and may be a synonym or removed from the database entirely. Please use this link and type in a name to search the eflora database:<br><br>";
-			//	echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
-			exit; // Stop execution so lines 1165/1166 don't throw notices
 		}
 	}
 	else{
