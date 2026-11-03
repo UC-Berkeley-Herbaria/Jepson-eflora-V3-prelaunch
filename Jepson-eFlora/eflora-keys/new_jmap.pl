@@ -1,7 +1,7 @@
 #!/usr/bin/perl
 #$no_legend=1;
 use GD;
-open (GIF,"2016.gif") || die $!;
+open (GIF,"/usr/local/web/herbariadb_web/eflora/common/images/2016.gif") || die $!;
 #open (GIF,"2013.gif") || die $!;
 #binmode(GIF);
               $map = newFromGif GD::Image(GIF) || die "Cant open basemap\n";
@@ -157,9 +157,11 @@ print STDOUT $map->gif;
 close (STDOUT);
 
 #region <tab> coordinates<tab>RGB color
+#KR	48,73	134,157,86	Klamath Ranges	California Floristic Province
+#ScV	90,115	187,255,0	Sacramento Valley	California Floristic Province
 __END__
 NCo	30,149	0,100,0	North Coast	California Floristic Province
-KR	48,73	134,157,86	Klamath Ranges	California Floristic Province
+KR	48,73	99,124,54	Klamath Ranges	California Floristic Province
 NCoRH	55,116	137,204,149	High North Coast Ranges	California Floristic Province
 NCoRI	68,155	137,204,149	Inner North Coast Ranges	California Floristic Province
 NCoRO	29,101	137,204,149	Outer North Coast Ranges	California Floristic Province
@@ -172,7 +174,7 @@ nSNH	135,138	78,190,234	n High Sierra Nevada	California Floristic Province
 cSNH	175,200	78,190,234	c High Sierra Nevada	California Floristic Province
 sSNH	208,266	78,190,234	s High Sierra Nevada	California Floristic Province
 Teh	205,325	177,197,222	Tehachapi Mountain Area	California Floristic Province
-ScV	90,115	187,255,0	Sacramento Valley	California Floristic Province
+ScV	90,115	154,205,50	Sacramento Valley	California Floristic Province
 SnJV	160,260	215,255,134	San Joaquin Valley	California Floristic Province
 CCo	86,220	96,154,131	Central Coast	California Floristic Province
 SnFrB	103,231	209,254,237	San Francisco Bay Area	California Floristic Province

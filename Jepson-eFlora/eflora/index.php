@@ -1,21 +1,22 @@
+
+
 <!DOCTYPE html>
  
 <html lang="en">  
 <head>
 
-<title>California Flora, Jepson eFlora Main Page</title> 
+<title>Jepson eFlora Main Page, California Flora</title> 
 <meta charset="UTF-8">
 <meta name="description" content="The Jepson eFlora is the foremost authority on the native and naturalized vascular plants of California. For plants occurring in wildlands or otherwise outside of cultivation, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys."  />
 	<meta name="keywords" content="Jepson eFlora, Jepson Flora Project, California Flora, Flora of California, Vascular Plants of California">
 	<meta name="viewport" content="width=device-width, initial-scale=1.0">
-	
-	<link href="/common/css/dropdowns.css" rel="stylesheet" type="text/css">
-	<link rel="shortcut icon" href="/common/images/JepsonLogoSmall.png" type="image/x-icon">
+	<link href="common/css/jepson-main.css" rel="stylesheet" type="text/css">
+	<link href="common/css/eflora-header.css" rel="stylesheet" type="text/css">
+
+	<link rel="shortcut icon" href="common/images/JepsonLogoSmall.png" type="image/x-icon">
 
 <!-- Google tag (gtag.js) -->
 <script async src="//www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
-<!-- Cloudflare Turnstile -->
-<script src="//challenges.cloudflare.com/turnstile/v0/api.js" async defer></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -23,234 +24,184 @@
 
   gtag('config', 'G-T5YC99QF6Q');
 </script>
-
-<style type="text/css">
- .bgcolor{
- 	font-size: 4px;
- 	background-color: lightgrey;
- 	width: 100%;
- }
-
-
-</style>
-
-<!-- Begin banner -->
-
 </head>
 
 <body>
 
 <!-- Begin banner -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/header_jeps.php'); ?>  
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora-header.php'); ?>  
 <!-- End banner -->
 
-<!-- Beginning of horizontal menu -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/globalnav.php'); ?> 
-<!-- End of horizontal menu -->
+<main>
 
-<table width="100%" border="0" cellspacing="0" cellpadding="0" >
-  <tr> 
-	<td style="vertical-align: top;width:275px;">
+<!-- Hero Banner -->
+	<section class="eflora-hero" aria-labelledby="hero-title">
+	    <!-- Hidden title for Screen Readers (AAA Accessibility) -->
+	    <h1 id="hero-title" class="visually-hidden">The Jepson eFlora - Provided by the Jepson Herbarium, UC Berkeley</h1>
+    
+	    <div class="hero-container">
+	        <img src="common/images/Front-page-banner.png" 
+	             alt="The Jepson eFlora, Provided by the Jepson Herbarium, UC Berkeley" 
+	             class="hero-graphic">
+	    </div>
+	</section>
 
+    <!-- Main Content Container -->
+    <main class="eflora-main">
+        
+        <!-- Intro Text -->
+        <article class="intro-copy">
+            <p>The Jepson eFlora is the foremost authority on the native and naturalized vascular plants of California. For plants occurring in wildlands or otherwise outside of cultivation, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys.</p>
+            <p>The eFlora is revised annually. For a list of revisions since the printed second edition of The Jepson Manual: Vascular Plants of California (2012), see <a href="supplement_summary.php">Revisions 1-14 (2013-2026)</a>. Minor changes not included in the revisions can be found on the <a href="errata.php">Errata page</a>.</p>
+            <p>The Jepson eFlora is a collaborative effort involving the Jepson Herbarium editors, the editorial board, taxonomic authors from around the world, and community members. Generous support is provided by the Friends of the Jepson Herbarium; special thanks to our Lifetime and Sustaining Members.</p>
+        </article>
 
-<!-- Start of sidebar menu-->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/localnav_jepsfriends.php'); ?>
-<!-- End of sidebar --> 
-	</td>
-	<td style="padding: 15px;vertical-align: top; width:100%;">
+        <!-- Search & Identification Section -->
+        <section class="search-id-block">
+            <h3>Identification Keys & Search Names</h3>
+            <div class="search-layout">
+                <div class="search-forms">
+                    <p class="search-label">Search for:</p>
+                    
 
-    <h1>Jepson eFlora</h1>
-
-<!-- Begin spacer block-->
-<div class="spacer_lightgrey">
-
-
-<table valign="top" align="center" width="100%" border=0>
-<tr>
-<td align="center" style="padding: 0 15 0 0" ><img src="/common/images/ijm_banner_6.jpg" alt="Willis Linn Jepson in the Vaca Hills, 1942, Neat M. Tate"></td>
-<td><a href="https://www.youtube.com/channel/UCbG--FtGxmPCvLIo0Fa1PHg/videos"><img src="/common/images/ijm_banner_7.png" alt="Jepson YouTube Channel"></a></td>
-<td><img src="/common/images/ijm_banner_1.jpg" alt="Arctostaphylos ohloneana, Neal Kramer"></td>
-<td><img src="/common/images/ijm_banner_2.jpg"  alt="Calochortus venustus, John C. Game"></td>
-<!--<td><img src="/common/images/ijm_banner_4.jpg" alt="Harmonia guggolziorum, John C. Game"></td>-->
-<td><img src="/common/images/ijm_banner_5.jpg" alt="Caulanthus inflatus, John C. Game"></td>
-<td align="left"><a href="/eflora/clademap/"><img src="/common/images/pt.jpg" alt = "clademap image"></a></td>
-</tr>
-<tr>
-<td colspan=5>
-</td>
-<td align="left"><a href="/eflora/clademap/clademap2.html">Phylogenetic index to families</a></td>
-</tr>
-</table>
-<p class="bodyText">
-The <i>Jepson eFlora</i> is the foremost authority on the native and naturalized vascular plants of California. For plants occurring in wildlands or otherwise outside of cultivation, the <i>Jepson eFlora</i> contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys.
-<br><span class="smallText">Citation: Jepson Flora Project (eds.) <?php echo date("Y")?>. <i>Jepson eFlora</i>, <a href="/eflora/">https://ucjeps.berkeley.edu/eflora/</a> [accessed on 
-<?php echo date ("M d, Y") ?>].</span>
-</p>
-</div>
-
-<!-- Begin spacer block-->
-<div class="spacer_lightgrey">
-
-<p class=pageMajorHeading><u><b>Search the eFlora for a name:</b></u></p>
-<!-- Turnstile Widget -->
-<div class="cf-turnstile" data-sitekey="0x4AAAAAABe3TrbcyhMmtFuv" data-appearance="interaction-only"></div>
-  <ul>
-  	  <li><p class=bodyText>
-<form action="/eflora/search_eflora.php?name=" method=POST>
-<label><strong>Scientific Name</strong></label><br />
-<input type="text" id="query_text" name="query" size=30>
-<br />
-<input type=submit value="Submit Name">
-<input type=reset value=Reset>
-</form>
-	</p></li>
-
-  	  <li><p class=bodyText>
-<form action="/eflora/search_common.php?cn=" method=POST>
-<label><strong>Common Name</strong></label><br />
-<input type="text" id="cn" name="cn" size=30>
-<br />
-<input type=submit value="Submit Name">
-<input type=reset value=Reset>
-</form>
-	</p></li>
+                    <div class="search-group">
+							<form action="search_eflora.php" method="GET">
+								<label for="name" class="visually-hidden">• Scientific Name</label>
+								<input type="text" placeholder="Enter a scientific name..." id="name" name="name">
+								<!-- Explicitly define the types -->
+								<button type="submit" class="btn btn-submit">Submit Name</button>
+								<button type="reset" class="btn btn-reset">Reset</button>
+							</form>
+                    </div>
 
 
-  	  <li><p class=bodyText>
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/front_page_index_bar.php'); ?>
-	</p>
-	</li>
+                    <div class="search-group">
+							<form action="search_common.php" method="GET">
+								<label for="cn" class="visually-hidden">• Common Name</label>
+								<input type="text" placeholder="Enter a common name..." id="cn" name="cn">
+								<!-- Explicitly define the types -->
+								<button type="submit" class="btn btn-submit">Submit Name</button>
+								<button type="reset" class="btn btn-reset">Reset</button>
+							</form>
+                    </div>
+
+
+                    <ul class="quick-links">
+                        <li>Don't know what your plant is? Start with the 
+                        Family Key link below or search the Jepson eFlora by entering a scientific or common name 
+                        in the above search boxes.</li>
+                        <li><a href="keys/IJM_fam_key.php">Key to families</a></li>
+                        <li><a href="toc.php">List of families and genera</a></li>
+                        <li><?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/front_page_index_bar.php'); ?></li>
+                    </ul>
+                </div>
+
+                <div class="image-gallery">
+                    <img src="common/images/TJM2.jpg" alt="Plant identification 1">
+                    <img src="common/images/TJM2.jpg" alt="Plant identification 2">
+                    <img src="common/images/TJM2.jpg" alt="Plant identification 3">
+                    <img src="common/images/TJM2.jpg" alt="Manual Cover">
+                </div>
+            </div>
+        </section>
+
+        <hr class="section-divider">
+
+<!-- ROW: Geography -->
+<section class="geography-row-section">
+    <div class="row-container center-text">
+        <h3>Geography</h3>
+        <p class="max-width-p">The Jepson bioregions provide an eco-geographic context for biodiversity that can aid in plant identification. The geographic system used in the Jepson eFlora combines features of natural landscapes and biota to delimit the geographic units. The bioregions reflect broad patterns of natural vegetation, geology, topography and climate.</p>
+        
+        <p><strong>What are the geographic subdivisions of California?</strong></p>
+        
+        <div class="map-feature">
+            <a href="geography.php" aria-label="Explore California Bioregions Map">
+                <img src="common/images/Bioregions.png" alt="Map of California Floristic Provinces and Bioregions">
+            </a>
+        </div>
+    </div>
+</section>
+
+<!-- ROW: Keys Informed by Geography (KeyBase) -->
+<section class="kb-row-section">
+    <div class="row-container">
+        <h3 class="center-text">Keys Informed by Geography</h3>
+        <div class="kb-card">
+            <a href="filter_keys.php" 
+               aria-label="Access KeyBase Filter Keys">
+                <img src="common/images/KeyBase-Logo.png" 
+                     alt="KeyBase: Taxonomic key system logo">
+            </a>
+            <p>Keybase filter keys will be restored in a future update.</p>
+        </div>
+    </div>
+</section>
+
+<hr class="section-divider">
+
+
+
+<!-- Tools Icon Section -->
+<section class="tools-container" aria-label="Jepson eFlora Resources and Tools">
+    <div class="tool-card">
+        <a href="https://herbaria.berkeley.edu/floras/jepson-eflora/jepson-eflora-glossary/" aria-label="Open the Botanical Glossary">
+            <div class="tool-image-wrapper">
+                <img src="common/images/Glossary.png" alt="Close-up of a yellow flowering branch representing the Glossary">
+            </div>
+            <h4>Glossary</h4>
+        </a>
+    </div>
+
+    <div class="tool-card">
+        <a href="/eflora/tools/" aria-label="Open Jepson eFlora Tools">
+            <div class="tool-image-wrapper">
+                <img src="common/images/Jepson-eFlora-Tools.png" alt="Yellow and blue wildflowers representing eFlora Tools">
+            </div>
+            <h4>Jepson eFlora Tools</h4>
+        </a>
+    </div>
+
+    <div class="tool-card">
+        <a href="https://herbaria.berkeley.edu/floras/jepson-eflora/jepson-eflora-conventions/" aria-label="Open User's Guide">
+            <div class="tool-image-wrapper">
+                <img src="common/images/Users-Guide.png" alt="Researcher in a field of wildflowers representing the User's Guide">
+            </div>
+            <h4>User's Guide</h4>
+        </a>
+    </div>
+</section>
+
+        <!-- Project Info -->
+        <footer class="project-info">
+            <h3>The Jepson Flora Project</h3>
+            <p>The Jepson eFlora is a product of the Jepson Flora Project. The Project brings together all of the floristic references and data of the Jepson Herbarium. 
+            Resources of the Flora Project are directly linked to the Consortium of California Herbaria, CalPhotos, the California Native Plant Society, 
+            California Exotic Pest Plant Council and many other external sites. The Friends of the Jepson Herbarium help the Jepson Flora project carry out its work. Visit our 
+            <a href="https://herbaria.berkeley.edu/floras/jepson-eflora/jepson-eflora-staff-and-editors/">staff page</a> for more information about our editorial board and staff.</p>
+            <p class="citation">Citation: Jepson Flora Project (eds.) <?php echo date("Y")?>. <i>Jepson eFlora</i>, <a href="/eflora/">https://herbariadb.berkeley.edu/eflora/</a> [Accessed <?php echo date ("M d, Y") ?>]</p>
+
+<p>
+<a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">
+	Send us your feedback and/or questions! Community input helps improve the Jepson eFlora.
 	
-	<li><p><span class="pageAuthorLine">
-				<a href="/IJM_keys/IJM_fam_key.html">Key to families</a>
-				|
-				<a href="/IJM_keys/toc.html">Table of families and genera</a>
-			</span>
-		</p>
-	</li>
-  </ul>
-<p class=pageMajorHeading><u><b>Search eFlora Fields:</b></u> <a href="/eflora/search_advanced.php/" >Advanced Search Page</a></p>
-
-</div>
-
-<!-- Begin spacer block-->
-<div class="spacer_lightgrey">
-
-<p class=pageMajorHeading><u><b>Identify a plant from your region:</b></u></p>
-  <ul>
-  	<li><p class=bodyText><b>Keybase is archived and cannot be updated for revisions 10-13</b></p></li>
-  	  <!--<li><p class=bodyText><b>Simplify plant identification with the new application <a href="/eflora/filter_keys.html">KeyBase</a>, which filters keys based on Jepson regions:</b></p></li>-->
-<form action="/eflora/filter_keys.html">
-        <input type="submit" value="Use filtered keys">
-</form>
-  	  <li><p class=bodyText><b>Click the map for more information about the status of Keybase:</b></p></li>
-  	  
-  	  <a href="/eflora/filter_keys.html"><img width=100px src="/common/images/exploded_map.png"></a>
-  </ul>
-
-</div>
-
-<!-- Begin spacer block-->
-<div class="spacer_lightgrey">
-
-<p class=pageMajorHeading><u><b>Resources:</u></p>
-  <ul>
-  	  <li><p class=bodyText><a href="/eflora/tools/" ><b>eFlora Tools</b></a></p></li>
-  	  <li><p class=bodyText><a href="/eflora/glossary.html"><b>Glossary</b></a></p></li>
-  	  <li><p class=bodyText><a href="/eflora/geography.html"><b>Geographic subdivisions of California</b></a></p></li>
-  </ul>
-
-</div>
-
-<!-- Begin spacer block-->
-<div class="spacer_lightgrey">
-
-<p><span class="pageMajorHeading"><u>Revisions:</u></span></p>
-  <ul>
-	  <li><p class="bodyText">Summary of <a href="/eflora/supplement_summary.html">Revision 1 (2013)</a>, <a href="/eflora/supplement_summary.html#rev2">Revision 2 (2014)</a>, <a href="/eflora/supplement_summary.html#rev3">Revision 3 (2015)</a>, 
-	  <a href="/eflora/supplement_summary.html#rev4">Revision 4 (2016)</a>, 
-	  <a href="/eflora/supplement_summary.html#rev5">Revision 5 (2017)</a>, 
-	  <a href="/eflora/supplement_summary.html#rev6">Revision 6 (2018)</a>, 
-	  <a href="/eflora/supplement_summary.html#rev7">Revision 7 (2019)</a>,
-	  <a href="/eflora/supplement_summary.html#rev8">Revision 8 (2020)</a>,
-	  <a href="/eflora/supplement_summary.html#rev9">Revision 9 (2021)</a>,
-	  <a href="/eflora/supplement_summary.html#rev10">Revision 10 (2022)</a>,
-	  <a href="/eflora/supplement_summary.html#rev11">Revision 11 (2022)</a>,
-	  <a href="/eflora/supplement_summary.html#rev12">Revision 12 (2023)</a>,
-	  and <a href="/eflora/supplement_summary.html#rev13">Revision 13 (2025)</a>.</p></li>
-
-	  <li><p class="bodyText"><a href="https://docs.google.com/spreadsheets/d/174xfVhIT3PB4OUSrcoK6cfMxeIIKnK903f9LInf056Q/edit?usp=sharing">
-	  Spreadsheet Summary of Revisions 1-13.</a></p></li>
-
-	  <li><p class="bodyText"><a href="/eflora/errata.html">
-	  List of all errata and other small changes.</a></p></li>
-
-	  <li><p class="bodyText"><a href="/eflora/IJM_update_history.html"> 
-	  Click here to see when the eflora was last updated with corrections.</a></p></li>
-  </ul>
-
-</div>
-
-<!-- Begin spacer block-->
-<div class="spacer_lightgrey">
-
-<p class=pageMajorHeading><u><b>Editorial Board</b></u></p>
-<p class=bodyText><a href="/jepsonflora/staff.html#Baldwin">Bruce&nbsp;G. Baldwin</a>, Convening Editor, University and Jepson Herbaria</p>
-<p class=bodyText><a href="/jepsonflora/staff.html#Keil">David J. Keil</a>, Professor Emeritus, California Polytechnic State University, San Luis Obispo</p>
-<p class=bodyText><a href="/jepsonflora/staff.html#Markos">Staci&nbsp;Markos</a>, Associate Director, University and Jepson Herbaria</p>
-<p class=bodyText><a href="/people/mishler.html">Brent D. Mishler</a>, Director, University and Jepson Herbaria</p>
-<p class=bodyText><a href="/jepsonflora/staff.html#Patterson">Robert Patterson</a>, Department of Biology, San Francisco State University</p>
-<p class=bodyText><a href="/jepsonflora/staff.html#Rosatti">Thomas&nbsp;J. Rosatti</a>,&nbsp;Scientific Editor, University and Jepson Herbaria</p>
-<p class=bodyText><a href="/jepsonflora/staff.html#Wilken">Dieter H. Wilken</a>, Research Associate, Santa Barbara Botanic Garden</p>
-<p class=pageMajorHeading><u><b>Technical Editor</b></u></p>
-<p class=bodyText><a href="/jepsonflora/staff.html#Alexander">Jason Alexander</a>, University and Jepson Herbaria</p>
-<p class=pageMajorHeading><u><b>Managing Editor</b></u></p>
-<p class=bodyText><a href="https://sites.google.com/view/neenbeeninthegreen/home?authuser=0">Nina House</a>, University and Jepson Herbaria</p>
-
-</div>
-
-<!-- Begin spacer block-->
-<div class="spacer_lightgrey">
-
-<p class=pageMajorHeading><u><b>Information for Contributors</b></u></p>
-  <ul>
-  	  <li><p class=bodyText><a href="/eflora/philosophy.html"><b>eFlora Philosophy</a></b></p></li>
-	  <li><p class=bodyText><a href="/eflora/conventions.html"><b>eFlora User's Guide</b></a></p></li>
-	  <li><p class=bodyText><a href="/eflora/policy.html"><b>eFlora Editorial Policy</b></a></p></li>
-</ul>
-
-</div>
-
-<!-- Begin spacer block-->
-<div class="spacer_lightgrey">
-
-<p><span class="pageMajorHeading"><u>About the <i>Jepson eFlora</i></u></span></p>
-<br />
-<p class="bodyText">Treatments and keys in the <em>Jepson eFlora</em> were initially derived from <I>The Jepson Manual: Vascular Plants of California, Second Edition</I> (TJM2), available from <a href="https://www.ucpress.edu/book/9780520253124/the-jepson-manual">University of California Press</a>.  <!--old link For an explanation of conventions applying to the printed <i>Manual</i>, click here: <a href="conventions.html" class="tocLink" >User's Guide</a>-->
+</a>
 </p>
-<p><span class="bodyText">The eFlora expands on the content of TJM2, 
-including descriptions of taxa not included in the print book (e.g. waifs, agricultural weeds), 
-substantive revisions of scientific content for some taxa, 
-and many errata and other small changes made relative to the print book.</span></p>
-<p class="pageMajorHeading">The <i>Jepson eFlora</i> is a product of the <a href="/jepsonflora/">Jepson Flora Project</a>.</p>
 
-</div>
-<!-- Begin spacer block-->
-<div class="spacer_lightgrey">
+        </footer>
+    </main>
 
-<p class=pageMajorHeading><u><b>Feedback</b></u></p>
-
-<p class=pageMajorHeading><a href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">Please use this Google Form for Contact/Feedback</a>
-
-</div>
-   </td>
-  </tr>
-</table> <!--close box outline table-->
-
-<!-- Begin footer -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/footer.php'); ?>
+    <!-- Social & Copyright Footer -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora-footer.php'); ?>
 <!-- End footer -->
-
 
 </body>
 </html>
+
+<!--Color Contrast on Map/Icons: Ensure the text inside images (like the Map) is large enough to be read or provided in a text table below the image.-->
+<!--Google Forms Link: I added googleForm class to your feedback link to make it look more like a button, which helps it stand out as a clear call to action.-->
+<!--Why this meets AAA Readability:-->
+<!--Font Size: 18px (1.125rem) is the high-visibility threshold.-->
+<!--Line Height: 1.65 ensures that people with dyslexia or visual tracking issues can follow lines of text more easily.-->
+<!--High Contrast: Every color used (Berkeley Blue, Black, Dark Gray) provides at least a 7:1 contrast ratio against a white background.-->
+<!--Touch Targets: Every button and link has been padded so that a user with limited dexterity can click them without error.-->

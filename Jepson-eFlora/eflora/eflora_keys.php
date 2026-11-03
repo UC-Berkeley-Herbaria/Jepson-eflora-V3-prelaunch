@@ -1,306 +1,220 @@
 <?php
+
 date_default_timezone_set('America/Los_Angeles');
 
 //Security mod to prevent cross-site scripting attacks
-$TaxonID = htmlspecialchars($_GET["key"]);
-$TaxonID = str_replace(chr(0), "", $TaxonID);  #NULL BYTES
-$TaxonID = trim($TaxonID, $character_mask = " \t\n\r\0\x0B");
-$TaxonID = preg_replace("/[^0-9]/", "", $TaxonID);
+//Security mod to prevent cross-site scripting attacks
+  if (isset($_GET['key'])){
+
+	$TaxonID = htmlspecialchars($_GET['key']);
+	$TaxonID = str_replace(chr(0),"", $TaxonID);  #NULL BYTES
+	$TaxonID = trim($TaxonID, $character_mask = " \t\n\r\0\x0B");
+  }
+
+//connect to the database
+require '../../herbariadb_data/eflora/config/config_eflora_mysql.php';
+$db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 
 
-require 'config/config.php';
-$db = new SQLite3($database_location);
+//$SearchTerm must be a single capital letter
+	if (preg_match("/^[0-9]+$/", $TaxonID)) {
+//perform a search that returns the key that has that taxon ID
 
-$results = $db->query('SELECT ID, TaxonID, ScientificName, HasKey, KeyText
-						FROM eflora_keys
-						WHERE TaxonID=' . $TaxonID . ''); //16711 is the TaxonID for Calochortus amabilis, for example
+		$sql = "SELECT * ";
+		$sql.= " FROM eflora_keys";
+		$sql.= " WHERE TaxonID='".$TaxonID."'";
 
-while ($row = $results->fetchArray()) {
+//BEGIN temporary bug fix lines to add when needed
+//echo '<br />'.$sql.'<br />';
+
+		if(!mysqli_query($db, $sql)){
+			die('Error: ' . mysqli_error($db));
+		}
 
 
-	$ID = $row['ID'];
-	$TID = $row['TaxonID'];
-	$ScientificName = $row['ScientificName'];
-	$FormattedKey = $row['KeyText'];
-	$has_key = $row['HasKey'];
+		$result = mysqli_query($db, $sql);
+		
+		// Check if any rows were returned
+		if (mysqli_num_rows($result) > 0) {
+		// If rows exist, loop through them
+			while ($row = mysqli_fetch_array($result)) {
 
-	//var_dump($row);
-	/*var_dump prints the whole row in a databased format
+//BEGIN temporary bug fix lines to add when needed
+//foreach ($row as $key=>$value) {
+//    echo $key."<br />";
+//}
+//END temp bug fix lines, ScientificName, HasKey, KeyText
+				if (!empty($row['ScientificName'])){
+					$SciName = $row['ScientificName'];
+				}
+				else{
+					$SciName = null;
+				}
+
+				if (!empty($row['Title'])){
+					$Title = $row['Title'];
+				}
+				else{
+					$Title = null;
+				}
+
+
+				if (!empty($row['TaxonID'])){
+					$TID = $row['TaxonID'];
+				}
+				else{
+					$TID = null;
+				}
+
+				if (!empty($row['HasKey'])){
+					$has_key = $row['HasKey'];
+				} else{
+					$has_key = null;
+				}
+
+				if (!empty($row['KeyText'])){
+					$FormattedKey = $row['KeyText'];
+				} else{
+					$FormattedKey = null;
+				}
+
+//var_dump($row); 
+/*var_dump prints the whole row in a databased format
 which is useful for seeing what you're getting
 but is pretty ugly
 */
-}
-
-
+			}
+		}
+	}
+	
 //Before doing anything, if the TID isn't recognized, give a plain error screen
-if (!$TID) { //if TaxonID (pulled from URL) did not match a line in the database...
-	echo "Taxon not recognized TID=" . $TaxonID;
+if (!$TID){ //if TaxonID (pulled from URL) did not match a line in the database...
+  echo "A key does not exits for this TID=".$TaxonID;
 
-
-	header("Location: https://ucjeps.berkeley.edu/cgi-bin/get_cpn?" . $TaxonID, true, 301);
-	exit();
+exit();
 }
-?>
-
-
-<?php
-
-date_default_timezone_set('America/Los_Angeles');
 
 ?>
+
 <!DOCTYPE html>
-
 <html lang="en">
-<?php
-// TID is passed to JS by using PHP to echo the value of $TaxonID to a JS variable TaxID
-// Apparently there are better ways to do this using AJAX
-
-?>
-<html lang="en">
-
 <head>
-	<title><?php echo "$ScientificName" ?> key to species, California Flora, Jepson eFlora</title>
-	<meta charset="UTF-8">
-	<meta name="keywords"
-		content="California Flora, Jepson eFlora, Flora of California, Vascular Plants of California, Jepson Flora Project, ">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <?php 
+    // Prepare a clean name for the <title> tag
+    $plainName = strip_tags($SciName); 
+    ?>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title><?php echo $plainName; ?> key to species, Jepson eFlora</title>
+    <title>Jepson eFlora: Geographic Subdivisions</title>
+    <meta name="description" content="Geographic subdivisions of California for the Jepson eFlora.">
 
-	<link href="/eflora/common/css/dropdowns.css" rel="stylesheet" type="text/css" />
-	<link href="/eflora/common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
-	<link rel="shortcut icon" href="/eflora/common/images/JepsonLogoSmall.png" type="image/x-icon" />
-	<!--jquery script files-->
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="/eflora/common/js/dh_custom.js"></script>
+    
+    <!-- CSS Standardized -->
+    <link href="/eflora/common/css/eflora-header.css" rel="stylesheet" type="text/css">
+    <link href="/eflora/common/css/jepson-main.css" rel="stylesheet" type="text/css">
+    <link href="/eflora/common/css/eflora.css" rel="stylesheet" type="text/css">
 
+    <link rel="shortcut icon" href="/eflora/common/images/JepsonLogoSmall.png" type="image/x-icon" />
 
-	<!-- Google tag (gtag.js) -->
-	<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
-	<script>
-		window.dataLayer = window.dataLayer || [];
-
-		function gtag() {
-			dataLayer.push(arguments);
-		}
-		gtag('js', new Date());
-
-		gtag('config', 'G-T5YC99QF6Q');
-	</script>
-
-	<style type="text/css">
-		.large-image {
-			box-shadow: 1px 1px 3px 3px rgba(127, 127, 127, 0.15);
-			width: 140px;
-			height: auto;
-			padding-left: 0px;
-			padding-right: 0px;
-		}
+<!--mobile js script files-->
+<script src="common/js/dh_custom.js"></script>
 
 
-		.inline {
-			display: inline-block;
-		}
-
-
-		.dropdown {
-			display: inline;
-			position: relative;
-			padding: 0px;
-		}
-
-		.dropdown-content {
-			display: none;
-			position: absolute;
-			text-align: center;
-			background-color: #FFFFFF;
-			padding-left: 9px;
-			padding-right: 0px;
-			width: 140px;
-			box-shadow: 1px 1px 3px 3px rgba(127, 127, 127, 0.15);
-			z-index: 100;
-		}
-
-		.dropdown-content a {
-			color: black;
-			padding: 0px;
-			text-decoration: none;
-			display: block;
-		}
-
-		.dropdown-content a:hover {
-			background-color: black;
-		}
-
-		.dropdown:hover .dropdown-content {
-			display: inline;
-		}
-
-		.dropdown:hover .dropbtn {
-			background-color: black;
-		}
-	</style>
-
-	<script>
-		window.onload = setInterval(clock, 1000);
-
-		function clock() {
-			var d = new Date();
-			var yr = d.getFullYear();
-			var month = d.getMonth();
-			var monthArr = ["January", "February", "March", "April", "May", "June", "July", "August", "September",
-				"October", "November", "December"
-			];
-			month = monthArr[month];
-			var date = d.getDate();
-			document.getElementById("year").innerHTML = yr;
-			document.getElementById("month").innerHTML = month + " " + yr;
-			document.getElementById("day").innerHTML = date;
-		}
-	</script>
-
-	<!-- Begin banner -->
-
+    <!-- Google Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T5YC99QF6Q');
+    </script>
 </head>
 
 <body>
-	<table id="normaltable">
-		<tr>
-			<td></td>
-			<td>
-				<table>
-					<!-- content table -->
-					<tr>
-						<td>
-							<div>
-								<!-- Begin banner -->
-								<?php include($_SERVER['DOCUMENT_ROOT'] . '/eflora/common/php/header_jeps.php'); ?>
-								<!-- End banner -->
 
-								<!-- Beginning of horizontal menu -->
-								<?php include($_SERVER['DOCUMENT_ROOT'] . '/eflora/common/php/globalnav.php'); ?>
-								<!-- End of horizontal menu -->
-							</div>
+    <!-- ACCESSIBILITY: Skip to Content Link -->
+    <a href="#main-content" class="visually-hidden">Skip to main content</a>
 
-							<div
-								style="border-left-style: solid;border-left-color: #C0DFFD;border-right-style: solid;border-right-color: #C0DFFD;">
-								<!-- Begin content divider -->
-								<table style="background-color: #E6F3FF">
-									<!-- content table -->
-									<tr>
-										<td style="vertical-align: top;">
-											<table id="sideLinks" style="width=10vw;">
-												<tr>
-													<td style="vertical-align: top;">
-														<!-- <<background test>> -->
-														<!-- Start of sidebar menu-->
-														<?php include($_SERVER['DOCUMENT_ROOT'] . '/eflora/common/php/localnav_eflora_primary.php'); ?>
-														<!-- End of sidebar -->
-													</td>
-												</tr>
-											</table>
-										</td>
-										<td style="border-left-style: solid;border-left-color: #C0DFFD;"></td>
-										<td style="padding-top: 5px;vertical-align: top;width=90vw;">
-											<table>
-												<tr>
-													<td style="padding-top: 0;vertical-align: top;">
-														<div id="content-top">
-															<table border="0">
-																<tr>
-																	<td><span class="pageName"><a href="/eflora/">Jepson
-																				eFlora:</a> Key page</span></td>
-
-																</tr>
-																<tr>
-																	<td><span class="pageMajorHeading"><a name="TOP"
-																				id="TOP">Vascular Plants of
-																				California</a></span>
-																		<br>
-																		<span class="pageAuthorLine">
-																			<a href="/IJM_keys/IJM_fam_key.html">Key to
-																				families</a>
-																			|
-																			<a href="/IJM_keys/toc.html">Table of
-																				families and genera</a>
-																		</span>
-																	</td>
-																</tr>
-															</table>
-															<p>
-																<?php
-																$pattern = '/aceae$/';
-
-																if (isset($FormattedKey)) {
-																	echo '<h1>Key to ' . $ScientificName . '</h1>';
-																	echo '<p class=bodyText><a href="/eflora/eflora_display.php?tid=' . $TID . '"><h3>View taxon page for ' . $ScientificName . '</h3></a></p>';
-
-																	if (preg_match($pattern, $ScientificName)) {
-																		echo "<p class=bodyText>&nbsp;</p>";
-																	} else {
-																		echo '<p class=bodyText>(For a list of species in ' . $ScientificName . ', use the above link.)</p>';
-																	}
-																	echo '<p class=bodyText>Jepson Manual glossary definitions can be seen by moving your cursor over words underlined with dots.</p>';
-																	echo $FormattedKey;
-																	echo '<p class=bodyText>&nbsp;</p>';
-																}
-																?>
-															</p>
-															<!--<p class=bodyText>-->
-															<!--<a href="&#109;&#97;&#105;&#108;to:rosatti&#064;berkeley.edu?subject=eFlora comment">Contact/Feedback</a></p>-->
-															<p class=bodyText><a
-																	href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">Please
-																	use this Google Form for Contact/Feedback</a>
+<!-- Header -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora-header.php'); ?>  
 
 
-															<p class="bodyText">Citation for the whole project: Jepson
-																Flora Project (eds.) <span id="year"></span>. Jepson
-																eFlora, https://ucjeps.berkeley.edu/eflora/ [accessed on
-																<span id="day"></span> <span id="month"></span>]
-															</p>
+    <main id="main-content" class="eflora-main">
+        
+        
+        <section class="intro-copy">
+            <h1>Jepson eFlora Key page for <?php echo $plainName; ?></h1>
 
-															<p class=bodyText>
-																Citation for an individual treatment: [Author of taxon
-																treatment] [year]. [Taxon name] in Jepson Flora Project
-																(eds.) <em>Jepson eFlora</em>, [URL for treatment].
-																Accessed on <span id="day"></span> <span
-																	id="month"></span> <span id="year">.</p>
+            <!-- Key Navigation Links -->
+            <nav class="search-group" aria-label="Key Navigation" style="background: #f8f9fa; border: 1px solid #ddd; padding: 20px; margin-top: 30px;">
+                <p style="margin-bottom: 10px; font-weight: bold; color: var(--berkeley-blue);">Vascular Plants of California</p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+                    <a href="/eflora/keys/IJM_fam_key.php">Key to families</a>
+                    <span aria-hidden="true" style="color: #ccc;">|</span>
+                    <a href="/eflora/toc.php">Table of families and genera</a>
+                </div>
+            </nav>
+        </section>
 
-															<p class=bodyText>
-																We encourage links to these pages, but the content may
-																not be downloaded for reposting, repackaging,
-																redistributing, or sale in any form, without written
-																permission from The Jepson Herbarium.
-															</p>
+        <!-- MAIN KEY CONTENT -->
+        <section class="data-section">
+            <?php 
+            $pattern = '/aceae$/';
+
+            if(!empty($FormattedKey)): 
+            ?>
+                <h2 style="border-bottom: 2px solid var(--berkeley-blue); padding-bottom: 10px;">
+                    <?php echo $Title; ?>
+                </h2>
+
+                <div style="margin: 20px 0;">
+                    <a href="/eflora/eflora_display.php?tid=<?php echo $TID; ?>" style="font-size: 1.25rem; font-weight: bold;">
+                        View taxon page for <?php echo $SciName; ?>
+                    </a>
+                </div>
+
+                <?php if (!preg_match($pattern, $SciName)): ?>
+                    <p class="bodyTextBlack">(For a list of taxa in <i><?php echo $SciName; ?></i>, use the above link.)</p>
+                <?php endif; ?>
+
+                <!-- Glossary Usage Instructions -->
+                <div class="citation" style="margin: 30px 0; background-color: #f0f7ff;">
+                    <p><strong>Glossary:</strong> Jepson Manual glossary definitions can be seen by moving your cursor over words underlined with dots.</p>
+                </div>
+
+                <!-- The Formatted Key Output -->
+                <div class="key-content-wrapper">
+                    <?php echo $FormattedKey; ?>
+                </div>
+
+            <?php endif; ?>
+        </section>
 
 
+    <!-- Feedback Area -->
+    <section class="feedback-area center-text">
+        <a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">
+            Send us your feedback! Community input helps improve the Jepson eFlora.
+        </a>
+    </section>
 
-															<!-- End body section-->
+    <!-- FOOTER SECTION -->
+    <!-- CITATION -->
+    <footer class="treatment-citation" style="margin-top:40px; padding: 20px; background: #eee; border-left: 5px solid var(--ef-blue);">
+        <p><strong>Citation:</strong> Jepson Flora Project (eds.) <?php echo date("Y"); ?>, <i><?php echo $ScientificName; ?></i>, in <em>Jepson eFlora</em>, accessed on <?php echo date("F d, Y"); ?>.</p>
+    </footer>
 
-														</div>
-													</td>
-												</tr>
-											</table>
-											<!--close box outline table-->
+</main>
 
-											<!-- Begin footer -->
-											<?php include($_SERVER['DOCUMENT_ROOT'] . '/eflora/common/php/footer.php'); ?>
-											<!-- End footer -->
-
-
-										</td>
-										<td>
-											<hr class="hr_line_blue">
-										</td>
-									</tr>
-								</table>
-								<!--close outside normal table-->
-
-
-
+<!-- Footer -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora-footer.php'); ?>
 
 </body>
-
 </html>
+
+<!--Skip Link: Added <a href="#main-content"> which is essential for keyboard users to bypass the long header.-->
+<!--Corrected Link Syntax: Fixed the original code where an <h3> was placed inside an <a>. In modern HTML, links should be styled to look like headings rather than nesting heading tags inside links for better SEO and accessibility.-->
+<!--Aria-Hidden: Added aria-hidden="true" to the pipe (|) separator. This prevents screen readers from announcing "Vertical Bar" between every navigation link.-->
+<!--Mobile Navigation: Integrated the hamburger menu code from your header CSS so the blue navigation bar works correctly on phones.-->
+<!--Scientific Notation: Used <i> tags for scientific names throughout the logic.-->

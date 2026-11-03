@@ -1,7 +1,6 @@
 /* Update Nav Specific Sizes */
 
 
-
 :root {
     --berkeley-blue: #003262;
     --white: #FFFFFF;
@@ -11,6 +10,62 @@
     --nav-font-size: 1.1rem; /* Approx 17.6px for high readability */
     --mobile-nav-font-size: 1.2rem; /* Slightly larger for touch screens */
 }
+
+
+/* --- Reduce White Branding Section Height by 25% --- */
+/* --- Header & Central Image Spacing Adjustments --- */
+/* --- Branding --- */
+
+/* 1. Tighten the white branding container padding */
+.white-branding-section { 
+    padding: 0 !important; /* Strips out excess top/bottom space */
+    background: white; 
+    overflow: hidden; /* Ensures contents stay within the reduced bounds */
+	max-height: 160px;
+}
+
+
+/* 2. Bring the logo and central banner image tightly together */
+.branding-flex { 
+    display: flex;
+    flex-direction: column; 
+    align-items: flex-start !important; /* Forces left alignment instead of center */
+    width: 100%;
+    gap: 0; 
+}
+
+
+
+/* Constrain the logo height to scale it down */
+.logo-container {
+    max-height: 100%; /* Scales down the container footprint */
+}
+
+/* 3. Constrain and center the image wrappers so they match standard portal proportions */
+.logo-container img { 
+    max-width: 100%;
+    height: auto;
+    object-fit: contain;
+    display: block; 
+    margin: 0 auto !important; /* Removes auto-centering margins */
+}
+
+
+/* Constrain the main banner height to reduce the section's vertical span */
+.banner-container {
+    max-height: 95%;
+    text-align: left;
+    width: 100%;
+}
+
+.banner-img {
+    max-height: 160px; /* Adjust this value down by ~25% from its current rendered height */
+    max-width: 100%;
+    display: block; 
+    object-fit: contain;
+    margin: 0 !important; /* Removes auto-centering so it hugs the left */
+}
+
 
 .herbaria-banner { 
     width: 100%; 
@@ -136,12 +191,6 @@
     border-bottom: 1px solid rgba(255,255,255,0.1);
 }
 
-/* --- Branding --- */
-.white-branding-section { padding: 20px 0; background: white; }
-.branding-flex { flex-direction: column; align-items: center; gap: 20px; }
-.logo-container img { max-width: 280px; height: auto; display: block; }
-.banner-img { max-width: 100%; height: auto; display: block; }
-
 
 /* --- Desktop Responsiveness (768px+) --- */
 @media (min-width: 992px) {
@@ -167,9 +216,20 @@
 
     .branding-flex {
         flex-direction: row;
-        justify-content: space-between;
+        /* Use 'flex-start' instead of 'space-between' to pull them together on the left, 
+           or use 'justify-content: flex-start' with a controlled gap */
+        justify-content: flex-start;
+        /* Ensures the desktop flex row respects the tighter vertical ceiling */
+        align-items: center;
+        gap: 20px; /* Controls the exact pixel distance between the logo and the banner */
+        width: 100%;
     }
 
-    .logo-container { flex: 0 0 25%; }
-    .banner-container { flex: 0 0 72%; }
-}
+    .logo-container { 
+        flex: 0 0 auto; /* Don't force it to stretch; let it take its natural width */
+        max-width: 250px;
+    } 
+    
+    .banner-container { 
+        flex: 0 0 auto; /* Don't let it stretch across the whole screen */
+    }

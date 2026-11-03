@@ -1,6 +1,9 @@
 <?php
 date_default_timezone_set('America/Los_Angeles');
 
+error_reporting(E_ALL);
+ini_set('display_errors', '1');
+
 // define variables and set to null values
 $results = null;
 $row = null;
@@ -17,7 +20,7 @@ $db = null;
   else{
   	$TaxonID = null;
   }
-  
+
   if (isset($_GET['name'])){
 	$TaxonName = $_GET['name'];
 	$TaxonName = htmlspecialchars($TaxonName);
@@ -41,2663 +44,2866 @@ $db = null;
   	$TaxonName = null;
   }
 
-
-require '../../ucjeps_data/ucjeps_data/config/config_eflora.php';
-//require 'config/config.php';
-$db = new SQLite3($database_location);
-
-
-  if(isset($_GET['tid'])){
-
-	#$results = $db->query("SELECT ID, TaxonID, ScientificName, TaxonAuthor, FormattedDisplayName, CommonName, Status, TJM2Author, ScientificEditor, Habit, PlantBody, Stem, SterileStem, FertileStem, Leaf, Spines, Inflorescence, StaminateHead, RayOrPistillateFlower, PistillateHead, StaminateInflorescence, PistillateOrBisexualInflorescence, PistillateInflorescence, Spikelet, FertileSpikelet, SterileSpikelet, DistalSpikelet, CentralSpikelet, LateralSpikelet, StaminateSpikelet, PistillateSpikelet, Flower, StaminateFlower, PistillateFlower, RayFlower, DiskFlower, Cone, PollenCone, SeedCone, BisexualFlower, Fruit, Seed, Sporangia, SporangiumCase, MaleSporangiumCase, FemaleSporangiumCase, Spores, Chromosomes, Ecology, RarityStatus, Elevation, BioregionalDistribution, OutsideCA, SpeciesInGenus, GeneraInFamily, Etymology, Toxicity, Synonyms, UnabridgedSynonyms, Reference, UnabridgedReference, Note, UnabridgedNote, FloweringTime, FloweringTimeCode, FruitingTime, Weediness, IsTerminalTaxon, HasKey, RevisionNumber, RevisionDate, DistCode 
-	$results = $db->query("SELECT * FROM eflora_taxa WHERE TaxonID=".$TaxonID." "); //16711 is the TaxonID for Calochortus amabilis, for example
-
-
-	while ($row = $results->fetchArray()) {
-
-		if (isset($row['ID'])){
-			$ID = $row['ID'];
-		}
-		else{
-			$ID = null;
-		}
-
-		if (isset($row['ScientificName'])){
-			$ScientificName = $row['ScientificName'];
-		}
-		else{
-			$ScientificName = null;
-		}
-
-		if (isset($row['TaxonAuthor'])){
-			$TaxonAuthor = $row['TaxonAuthor'];
-		}
-		else{
-			$TaxonAuthor = null;
-		}
-
-		if (isset($row['FormattedDisplayName'])){
-			$FormattedDisplayName = $row['FormattedDisplayName'];
-		}
-		else{
-			$FormattedDisplayName = null;
-		}
-
-		if (isset($row['CommonName'])){
-			$CommonName = $row['CommonName'];
-		}
-		else{
-			$CommonName = null;
-		}
-
-		if (isset($row['Status'])){
-			$efloraStatus = $row['Status'];
-		}
-		else{
-			$efloraStatus = null;
-		}
-
-		if (isset($row['TJM2Author'])){
-			$TJM2Author = $row['TJM2Author'];
-		}
-		else{
-			$TJM2Author = null;
-		}
-
-		if (isset($row['ScientificEditor'])){
-			$ScientificEditor = $row['ScientificEditor'];
-		}
-		else{
-			$ScientificEditor = null;
-		}
-
-		if (isset($row['Habit'])){
-			$Habit = $row['Habit'];
-		}
-		else{
-			$Habit = null;
-		}
-
-		if (isset($row['PlantBody'])){
-			$PlantBody = $row['PlantBody'];
-		}
-		else{
-			$PlantBody = null;
-		}
-
-		if (isset($row['Stem'])){
-			$Stem = $row['Stem'];
-		}
-		else{
-			$Stem = null;
-		}
-
-		if (isset($row['SterileStem'])){
-			$SterileStem = $row['SterileStem'];
-		}
-		else{
-			$SterileStem = null;
-		}
-
-		if (isset($row['FertileStem'])){
-			$FertileStem = $row['FertileStem'];
-		}
-		else{
-			$FertileStem = null;
-		}
-
-		if (isset($row['Leaf'])){
-			$Leaf = $row['Leaf'];
-		}
-		else{
-			$Leaf = null;
-		}
-
-		if (isset($row['Spines'])){
-			$Spines = $row['Spines'];
-		}
-		else{
-			$Spines = null;
-		}
-
-		if (isset($row['Inflorescence'])){
-			$Inflorescence = $row['Inflorescence'];
-		}
-		else{
-			$Inflorescence = null;
-		}
-
-		if (isset($row['StaminateHead'])){
-			$StaminateHead = $row['StaminateHead'];
-		}
-		else{
-			$StaminateHead = null;
-		}
-
-		if (isset($row['RayOrPistillateFlower'])){
-			$RayOrPistillateFlower = $row['RayOrPistillateFlower'];
-		}
-		else{
-			$RayOrPistillateFlower = null;
-		}
-
-		if (isset($row['PistillateHead'])){
-			$PistillateHead = $row['PistillateHead'];
-		}
-		else{
-			$PistillateHead = null;
-		}
-
-		if (isset($row['StaminateInflorescence'])){
-			$StaminateInflorescence = $row['StaminateInflorescence'];
-		}
-		else{
-			$StaminateInflorescence = null;
-		}
-
-		if (isset($row['PistillateOrBisexualInflorescence'])){
-			$PistillateOrBisexualInflorescence = $row['PistillateOrBisexualInflorescence'];
-		}
-		else{
-			$PistillateOrBisexualInflorescence = null;
-		}
-
-		if (isset($row['PistillateInflorescence'])){
-			$PistillateInflorescence = $row['PistillateInflorescence'];
-		}
-		else{
-			$PistillateInflorescence = null;
-		}
-
-		if (isset($row['Spikelet'])){
-			$Spikelet = $row['Spikelet'];
-		}
-		else{
-			$Spikelet = null;
-		}
-
-		if (isset($row['FertileSpikelet'])){
-			$FertileSpikelet = $row['FertileSpikelet'];
-		}
-		else{
-			$FertileSpikelet = null;
-		}
-
-		if (isset($row['SterileSpikelet'])){
-			$SterileSpikelet = $row['SterileSpikelet'];
-		}
-		else{
-			$SterileSpikelet = null;
-		}
-
-		if (isset($row['DistalSpikelet'])){
-			$DistalSpikelet = $row['DistalSpikelet'];
-		}
-		else{
-			$DistalSpikelet = null;
-		}
-
-		if (isset($row['CentralSpikelet'])){
-			$CentralSpikelet = $row['CentralSpikelet'];
-		}
-		else{
-			$CentralSpikelet = null;
-		}
-
-		if (isset($row['LateralSpikelet'])){
-			$LateralSpikelet = $row['LateralSpikelet'];
-		}
-		else{
-			$LateralSpikelet = null;
-		}
-
-		if (isset($row['StaminateSpikelet'])){
-			$StaminateSpikelet = $row['StaminateSpikelet'];
-		}
-		else{
-			$StaminateSpikelet = null;
-		}
-
-		if (isset($row['PistillateSpikelet'])){
-			$PistillateSpikelet = $row['PistillateSpikelet'];
-		}
-		else{
-			$PistillateSpikelet = null;
-		}
-
-		$Flower = $row['Flower'] ?? '';
-		$Flower = trim($Flower);
-
-		if (isset($row['StaminateFlower'])){
-			$StaminateFlower = $row['StaminateFlower'];
-		}
-		else{
-			$StaminateFlower = null;
-		}
-
-		if (isset($row['PistillateFlower'])){
-			$PistillateFlower = $row['PistillateFlower'];
-		}
-		else{
-			$PistillateFlower = null;
-		}
-
-		if (isset($row['RayFlower'])){
-			$RayFlower = $row['RayFlower'];
-		}
-		else{
-			$RayFlower = null;
-		}
-
-		if (isset($row['DiskFlower'])){
-			$DiskFlower = $row['DiskFlower'];
-		}
-		else{
-			$DiskFlower = null;
-		}
-
-		if (isset($row['Cone'])){
-			$Cone = $row['Cone'];
+//connect to the database
+require '../../herbariadb_data/eflora/config/config_eflora_mysql.php';
+$db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
+
+
+//START TAXON ID AND NAME SQL QUERY ASSIGNMENT
+
+
+//perform a search that returns all names that start with a letter
+//this is the same query as in search_eflora.php, but with a different WHERE clause
+					//georeferenceRemarks
+	if(!empty($TaxonID))  {
+
+//$sql = "SELECT ID, TaxonID, ScientificName, TaxonAuthor, FormattedDisplayName, CommonName, Status, TJM2Author, ScientificEditor, Habit, PlantBody, Stem, SterileStem, FertileStem, Leaf, Spines, Inflorescence, StaminateHead, RayOrPistillateFlower, PistillateHead, StaminateInflorescence, PistillateOrBisexualInflorescence, PistillateInflorescence, Spikelet, FertileSpikelet, SterileSpikelet, DistalSpikelet, CentralSpikelet, LateralSpikelet, StaminateSpikelet, PistillateSpikelet, Flower, StaminateFlower, PistillateFlower, RayFlower, DiskFlower, Cone, PollenCone, SeedCone, BisexualFlower, Fruit, Seed, Sporangia, SporangiumCase, MaleSporangiumCase, FemaleSporangiumCase, Spores, Chromosomes, Ecology, RarityStatus, Elevation, BioregionalDistribution, OutsideCA, SpeciesInGenus, GeneraInFamily, Etymology, Toxicity, Synonyms, UnabridgedSynonyms, Reference, UnabridgedReference, Note, UnabridgedNote, FloweringTime, FloweringTimeCode, FruitingTime, Weediness, IsTerminalTaxon, HasKey, RevisionNumber, RevisionDate, DistCode 
+		$sql = "SELECT * FROM eflora_taxa WHERE TaxonID=".$TaxonID." ";
+
+//BEGIN temporary bug fix lines to add when needed
+//echo '<br>'.$sql.'<br>';
+
+		if(!mysqli_query($db, $sql)){
+			die('Error: ' . mysqli_error($db));
+		}
+
+		$result = mysqli_query($db, $sql);
+
+//query and assign variable to each table field
+		while ($row = mysqli_fetch_array($result)) {
+
+// If no results are found, echo a message and stop
+			if ($row == false){
+				echo '<b>The Taxon ID '.$TaxonID.'</b> was not found in eflora taxon table.<br>Try another search.<br>';
+    			exit;
+			}
+
+//BEGIN temporary bug fix lines to add when needed
+//foreach ($row as $key=>$value) {
+//    echo $key."<br>";
+//}
+//END temp bug fix lines
+
+			if (!empty($row['ID'])){
+				$ID = $row['ID'];
+			}
+			else{
+				$ID = null;
+			}
+	
+			if (!empty($row['ScientificName'])){
+				$ScientificName = $row['ScientificName'];
+			}
+			else{
+				$ScientificName = null;
+			}
+	
+			if (!empty($row['TaxonAuthor'])){
+				$TaxonAuthor = $row['TaxonAuthor'];
+			}
+			else{
+				$TaxonAuthor = null;
+			}
+	
+			if (!empty($row['FormattedDisplayName'])){
+				$FormattedDisplayName = $row['FormattedDisplayName'];
+			}
+			else{
+				$FormattedDisplayName = null;
+			}
+	
+			if (!empty($row['CommonName'])){
+				$CommonName = $row['CommonName'];
+			}
+			else{
+				$CommonName = null;
+			}
+	
+			if (!empty($row['Status'])){
+				$efloraStatus = $row['Status'];
+			}
+			else{
+				$efloraStatus = null;
+			}
+	
+			if (!empty($row['TJM2Author'])){
+				$TJM2Author = $row['TJM2Author'];
+			}
+			else{
+				$TJM2Author = null;
+			}
+	
+			if (!empty($row['ScientificEditor'])){
+				$ScientificEditor = $row['ScientificEditor'];
+			}
+			else{
+				$ScientificEditor = null;
+			}
+	
+			if (!empty($row['Habit'])){
+				$Habit = $row['Habit'];
+			}
+			else{
+				$Habit = null;
+			}
+	
+			if (!empty($row['PlantBody'])){
+				$PlantBody = $row['PlantBody'];
+			}
+			else{
+				$PlantBody = null;
+			}
+	
+			if (!empty($row['Stem'])){
+				$Stem = $row['Stem'];
+			}
+			else{
+				$Stem = null;
+			}
+	
+			if (!empty($row['SterileStem'])){
+				$SterileStem = $row['SterileStem'];
+			}
+			else{
+				$SterileStem = null;
+			}
+	
+			if (!empty($row['FertileStem'])){
+				$FertileStem = $row['FertileStem'];
+			}
+			else{
+				$FertileStem = null;
+			}
+	
+			if (!empty($row['Leaf'])){
+				$Leaf = $row['Leaf'];
+			}
+			else{
+				$Leaf = null;
+			}
+	
+			if (!empty($row['Spines'])){
+				$Spines = $row['Spines'];
+			}
+			else{
+				$Spines = null;
+			}
+	
+			if (!empty($row['Inflorescence'])){
+				$Inflorescence = $row['Inflorescence'];
+			}
+			else{
+				$Inflorescence = null;
+			}
+	
+			if (!empty($row['StaminateHead'])){
+				$StaminateHead = $row['StaminateHead'];
+			}
+			else{
+				$StaminateHead = null;
+			}
+	
+			if (!empty($row['RayOrPistillateFlower'])){
+				$RayOrPistillateFlower = $row['RayOrPistillateFlower'];
+			}
+			else{
+				$RayOrPistillateFlower = null;
+			}
+	
+			if (!empty($row['PistillateHead'])){
+				$PistillateHead = $row['PistillateHead'];
+			}
+			else{
+				$PistillateHead = null;
+			}
+	
+			if (!empty($row['StaminateInflorescence'])){
+				$StaminateInflorescence = $row['StaminateInflorescence'];
+			}
+			else{
+				$StaminateInflorescence = null;
+			}
+	
+			if (!empty($row['PistillateOrBisexualInflorescence'])){
+				$PistillateOrBisexualInflorescence = $row['PistillateOrBisexualInflorescence'];
+			}
+			else{
+				$PistillateOrBisexualInflorescence = null;
+			}
+	
+			if (!empty($row['PistillateInflorescence'])){
+				$PistillateInflorescence = $row['PistillateInflorescence'];
+			}
+			else{
+				$PistillateInflorescence = null;
+			}
+	
+			if (!empty($row['Spikelet'])){
+				$Spikelet = $row['Spikelet'];
+			}
+			else{
+				$Spikelet = null;
+			}
+	
+			if (!empty($row['FertileSpikelet'])){
+				$FertileSpikelet = $row['FertileSpikelet'];
+			}
+			else{
+				$FertileSpikelet = null;
+			}
+	
+			if (!empty($row['SterileSpikelet'])){
+				$SterileSpikelet = $row['SterileSpikelet'];
+			}
+			else{
+				$SterileSpikelet = null;
+			}
+	
+			if (!empty($row['DistalSpikelet'])){
+				$DistalSpikelet = $row['DistalSpikelet'];
+			}
+			else{
+				$DistalSpikelet = null;
+			}
+	
+			if (!empty($row['CentralSpikelet'])){
+				$CentralSpikelet = $row['CentralSpikelet'];
+			}
+			else{
+				$CentralSpikelet = null;
+			}
+	
+			if (!empty($row['LateralSpikelet'])){
+				$LateralSpikelet = $row['LateralSpikelet'];
+			}
+			else{
+				$LateralSpikelet = null;
+			}
+	
+			if (!empty($row['StaminateSpikelet'])){
+				$StaminateSpikelet = $row['StaminateSpikelet'];
+			}
+			else{
+				$StaminateSpikelet = null;
+			}
+	
+			if (!empty($row['PistillateSpikelet'])){
+				$PistillateSpikelet = $row['PistillateSpikelet'];
+			}
+			else{
+				$PistillateSpikelet = null;
+			}
+	
+			$Flower = $row['Flower'] ?? '';
+			$Flower = trim($Flower);
+	
+			if (!empty($row['StaminateFlower'])){
+				$StaminateFlower = $row['StaminateFlower'];
+			}
+			else{
+				$StaminateFlower = null;
+			}
+	
+			if (!empty($row['PistillateFlower'])){
+				$PistillateFlower = $row['PistillateFlower'];
+			}
+			else{
+				$PistillateFlower = null;
+			}
+	
+			if (!empty($row['RayFlower'])){
+				$RayFlower = $row['RayFlower'];
+			}
+			else{
+				$RayFlower = null;
+			}
+	
+			if (!empty($row['DiskFlower'])){
+				$DiskFlower = $row['DiskFlower'];
+			}
+			else{
+				$DiskFlower = null;
+			}
+	
+			if (!empty($row['Cone'])){
+				$Cone = $row['Cone'];
+			}
+			else{
+				$Cone = null;
+			}
+	
+			if (!empty($row['PollenCone'])){
+				$PollenCone = $row['PollenCone'];
+			}
+			else{
+				$PollenCone = null;
+			}
+	
+			if (!empty($row['SeedCone'])){
+				$SeedCone = $row['SeedCone'];
+			}
+			else{
+				$SeedCone = null;
+			}
+	
+			if (!empty($row['BisexualFlower'])){
+				$BisexualFlower = $row['BisexualFlower'];
+			}
+			else{
+				$BisexualFlower = null;
+			}
+	
+			if (!empty($row['Fruit'])){
+				$Fruit = $row['Fruit'];
+			}
+			else{
+				$Fruit = null;
+			}
+	
+			if (!empty($row['Seed'])){
+				$Seed = $row['Seed'];
+			}
+			else{
+				$Seed = null;
+			}
+	
+			if (!empty($row['Sporangia'])){
+				$Sporangia = $row['Sporangia'];
+			}
+			else{
+				$Sporangia = null;
+			}
+	
+			if (!empty($row['SporangiumCase'])){
+				$SporangiumCase = $row['SporangiumCase'];
+			}
+			else{
+				$SporangiumCase = null;
+			}
+	
+			if (!empty($row['MaleSporangiumCase'])){
+				$MaleSporangiumCase = $row['MaleSporangiumCase'];
+			}
+			else{
+				$MaleSporangiumCase = null;
+			}
+	
+			if (!empty($row['FemaleSporangiumCase'])){
+				$FemaleSporangiumCase = $row['FemaleSporangiumCase'];
+			}
+			else{
+				$FemaleSporangiumCase = null;
+			}
+	
+			if (!empty($row['Spores'])){
+				$Spores = $row['Spores'];
+			}
+			else{
+				$Spores = null;
+			}
+	
+			if (!empty($row['Chromosomes'])){
+				$Chromosomes = $row['Chromosomes'];
+			}
+			else{
+				$Chromosomes = null;
+			}
+	
+			if (!empty($row['RarityStatus'])){
+				$RarityStatus = $row['RarityStatus'];
+			}
+			else{
+				$RarityStatus = null;
+			}
+	
+			if (!empty($row['Ecology'])){
+				$Ecology = $row['Ecology'];
+			}
+			else{
+				$Ecology = null;
+			}
+	
+			if (!empty($row['Elevation'])){
+				$Elevation = $row['Elevation'];
+			}
+			else{
+				$Elevation = null;
+			}
+	
+			if (!empty($row['BioregionalDistribution'])){
+				$BioregionalDistribution = $row['BioregionalDistribution'];
+			}
+			else{
+				$BioregionalDistribution = null;
+			}
+	
+			if (!empty($row['OutsideCA'])){
+				$OutsideCA = $row['OutsideCA'];
+			}
+			else{
+				$OutsideCA = null;
+			}
+	
+			if (!empty($row['SpeciesInGenus'])){
+				$SpeciesInGenus = $row['SpeciesInGenus'];
+			}
+			else{
+				$SpeciesInGenus = null;
+			}
+	
+			if (!empty($row['GeneraInFamily'])){
+				$GeneraInFamily = $row['GeneraInFamily'];
+			}
+			else{
+				$GeneraInFamily = null;
+			}
+	
+			if (!empty($row['Etymology'])){
+				$Etymology = $row['Etymology'];
+			}
+			else{
+				$Etymology = null;
+			}
+	
+			if (!empty($row['Toxicity'])){
+				$Toxicity = $row['Toxicity'];
+			}
+			else{
+				$Toxicity = null;
+			}
+	
+			if (!empty($row['Synonyms'])){
+				$Synonyms = $row['Synonyms'];
+			}
+			else{
+				$Synonyms = null;
+			}
+	
+			if (!empty($row['UnabridgedSynonyms'])){
+				$UnabridgedSynonyms = $row['UnabridgedSynonyms'];
+			}
+			else{
+				$UnabridgedSynonyms = null;
+			}
+	
+			if (!empty($row['Reference'])){
+				$Reference = $row['Reference'];
+			}
+			else{
+				$Reference = null;
+			}
+	
+			if (!empty($row['UnabridgedReference'])){
+				$UnabridgedReference = $row['UnabridgedReference'];
+			}
+			else{
+				$UnabridgedReference = null;
+			}
+	
+			if (!empty($row['Note'])){
+				$Note = $row['Note'];
+			}
+			else{
+				$Note = null;
+			}
+	
+			if (!empty($row['UnabridgedNote'])){
+				$UnabridgedNote = $row['UnabridgedNote'];
+			}
+			else{
+				$UnabridgedNote = null;
+			}
+	
+			if (!empty($row['FloweringTime'])){
+				$FloweringTime = $row['FloweringTime'];
+			}
+			else{
+				$FloweringTime = null;
+			}
+	
+			if (!empty($row['FloweringTimeCode'])){
+				$TimeCode = $row['FloweringTimeCode'];
+			}
+			else{
+				$TimeCode = null;
+			}
+	
+			if (!empty($row['FruitingTime'])){
+				$FruitingTime = $row['FruitingTime'];
+			}
+			else{
+				$FruitingTime = null;
+			}
+	
+	//$ConingTime = $row['ConingTime']; 
+	//Remove this as there is no lines with this information
+	//It has never been successfully printing online and it would be a duplicate of the data in the notes anyway
+	
+			if (!empty($row['Weediness'])){
+				$Weediness = $row['Weediness'];
+			}
+			else{
+				$Weediness = null;
+			}
+	
+			if (!empty($row['IsTerminalTaxon'])){
+				$IsTerminalTaxon  = $row['IsTerminalTaxon'];
+			}
+			else{
+				$IsTerminalTaxon = null;
+			}
+	
+			if (!empty($row['RevisionNumber'])){
+				$RevisionNumber  = $row['RevisionNumber'];
+			}
+			else{
+				$RevisionNumber = null;
+			}
+	
+			if (!empty($row['RevisionDate'])){
+				$RevisionDate  = $row['RevisionDate'];
+			}
+			else{
+				$RevisionDate = null;
+			}
+	
+			if (!empty($row['DistCode'])){
+				$DistCode = $row['DistCode'];
+			}
+			else{
+				$DistCode = null;
+			}
+	
+			if (!empty($row['HasKey'])){
+				$HasKey = $row['HasKey'];
+			}
+			else{
+				$HasKey = null;
+			}
+	
+			if (!empty($row['TaxonID'])){
+				$TID = $row['TaxonID'];
+			}
+			else{
+				$TID = null;
+			}
+	
+	//var_dump($row); 
+	/*var_dump prints the whole row in a databased format
+	which is useful for seeing what you're getting
+	but is pretty ugly
+	*/
 		}
-		else{
-			$Cone = null;
-		}
-
-		if (isset($row['PollenCone'])){
-			$PollenCone = $row['PollenCone'];
-		}
-		else{
-			$PollenCone = null;
-		}
-
-		if (isset($row['SeedCone'])){
-			$SeedCone = $row['SeedCone'];
-		}
-		else{
-			$SeedCone = null;
-		}
-
-		if (isset($row['BisexualFlower'])){
-			$BisexualFlower = $row['BisexualFlower'];
-		}
-		else{
-			$BisexualFlower = null;
-		}
-
-		if (isset($row['Fruit'])){
-			$Fruit = $row['Fruit'];
-		}
-		else{
-			$Fruit = null;
-		}
-
-		if (isset($row['Seed'])){
-			$Seed = $row['Seed'];
-		}
-		else{
-			$Seed = null;
-		}
-
-		if (isset($row['Sporangia'])){
-			$Sporangia = $row['Sporangia'];
-		}
-		else{
-			$Sporangia = null;
-		}
-
-		if (isset($row['SporangiumCase'])){
-			$SporangiumCase = $row['SporangiumCase'];
-		}
-		else{
-			$SporangiumCase = null;
-		}
-
-		if (isset($row['MaleSporangiumCase'])){
-			$MaleSporangiumCase = $row['MaleSporangiumCase'];
-		}
-		else{
-			$MaleSporangiumCase = null;
-		}
-
-		if (isset($row['FemaleSporangiumCase'])){
-			$FemaleSporangiumCase = $row['FemaleSporangiumCase'];
-		}
-		else{
-			$FemaleSporangiumCase = null;
-		}
-
-		if (isset($row['Spores'])){
-			$Spores = $row['Spores'];
-		}
-		else{
-			$Spores = null;
-		}
-
-		if (isset($row['Chromosomes'])){
-			$Chromosomes = $row['Chromosomes'];
-		}
-		else{
-			$Chromosomes = null;
-		}
-
-		if (isset($row['RarityStatus'])){
-			$RarityStatus = $row['RarityStatus'];
-		}
-		else{
-			$RarityStatus = null;
-		}
-
-		if (isset($row['Ecology'])){
-			$Ecology = $row['Ecology'];
-		}
-		else{
-			$Ecology = null;
-		}
-
-		if (isset($row['Elevation'])){
-			$Elevation = $row['Elevation'];
-		}
-		else{
-			$Elevation = null;
-		}
-
-		if (isset($row['BioregionalDistribution'])){
-			$BioregionalDistribution = $row['BioregionalDistribution'];
-		}
-		else{
-			$BioregionalDistribution = null;
-		}
-
-		if (isset($row['OutsideCA'])){
-			$OutsideCA = $row['OutsideCA'];
-		}
-		else{
-			$OutsideCA = null;
-		}
-
-		if (isset($row['SpeciesInGenus'])){
-			$SpeciesInGenus = $row['SpeciesInGenus'];
-		}
-		else{
-			$SpeciesInGenus = null;
-		}
-
-		if (isset($row['GeneraInFamily'])){
-			$GeneraInFamily = $row['GeneraInFamily'];
-		}
-		else{
-			$GeneraInFamily = null;
-		}
-
-		if (isset($row['Etymology'])){
-			$Etymology = $row['Etymology'];
-		}
-		else{
-			$Etymology = null;
-		}
-
-		if (isset($row['Toxicity'])){
-			$Toxicity = $row['Toxicity'];
-		}
-		else{
-			$Toxicity = null;
-		}
-
-		if (isset($row['Synonyms'])){
-			$Synonyms = $row['Synonyms'];
-		}
-		else{
-			$Synonyms = null;
-		}
-
-		if (isset($row['UnabridgedSynonyms'])){
-			$UnabridgedSynonyms = $row['UnabridgedSynonyms'];
-		}
-		else{
-			$UnabridgedSynonyms = null;
-		}
-
-		if (isset($row['Reference'])){
-			$Reference = $row['Reference'];
-		}
-		else{
-			$Reference = null;
-		}
-
-		if (isset($row['UnabridgedReference'])){
-			$UnabridgedReference = $row['UnabridgedReference'];
-		}
-		else{
-			$UnabridgedReference = null;
-		}
-
-		if (isset($row['Note'])){
-			$Note = $row['Note'];
-		}
-		else{
-			$Note = null;
-		}
-
-		if (isset($row['UnabridgedNote'])){
-			$UnabridgedNote = $row['UnabridgedNote'];
-		}
-		else{
-			$UnabridgedNote = null;
-		}
-
-		if (isset($row['FloweringTime'])){
-			$FloweringTime = $row['FloweringTime'];
-		}
-		else{
-			$FloweringTime = null;
-		}
-
-		if (isset($row['FloweringTimeCode'])){
-			$TimeCode = $row['FloweringTimeCode'];
-		}
-		else{
-			$TimeCode = null;
-		}
-
-		if (isset($row['FruitingTime'])){
-			$FruitingTime = $row['FruitingTime'];
-		}
-		else{
-			$FruitingTime = null;
-		}
-
-//$ConingTime = $row['ConingTime']; 
-//Remove this as there is no lines with this information
-//It has never been successfully printing online and it would be a duplicate of the data in the notes anyway
-
-		if (isset($row['Weediness'])){
-			$Weediness = $row['Weediness'];
-		}
-		else{
-			$Weediness = null;
-		}
-
-		if (isset($row['IsTerminalTaxon'])){
-			$IsTerminalTaxon  = $row['IsTerminalTaxon'];
-		}
-		else{
-			$IsTerminalTaxon = null;
-		}
-
-		if (isset($row['RevisionNumber'])){
-			$RevisionNumber  = $row['RevisionNumber'];
-		}
-		else{
-			$RevisionNumber = null;
-		}
-
-		if (isset($row['RevisionDate'])){
-			$RevisionDate  = $row['RevisionDate'];
-		}
-		else{
-			$RevisionDate = null;
-		}
-
-		if (isset($row['DistCode'])){
-			$DistCode = $row['DistCode'];
-		}
-		else{
-			$DistCode = null;
-		}
-
-		if (isset($row['HasKey'])){
-			$HasKey = $row['HasKey'];
-		}
-		else{
-			$HasKey = null;
-		}
-
-		if (isset($row['TaxonID'])){
-			$TID = $row['TaxonID'];
-		}
-		else{
-			$TID = null;
-		}
-
-//var_dump($row); 
-/*var_dump prints the whole row in a databased format
-which is useful for seeing what you're getting
-but is pretty ugly
-*/
 	}
+	elseif(!empty($TaxonName))  {
+
+//$sql = "SELECT ID, TaxonID, ScientificName, TaxonAuthor, FormattedDisplayName, CommonName, Status, TJM2Author, ScientificEditor, Habit, PlantBody, Stem, SterileStem, FertileStem, Leaf, Spines, Inflorescence, StaminateHead, RayOrPistillateFlower, PistillateHead, StaminateInflorescence, PistillateOrBisexualInflorescence, PistillateInflorescence, Spikelet, FertileSpikelet, SterileSpikelet, DistalSpikelet, CentralSpikelet, LateralSpikelet, StaminateSpikelet, PistillateSpikelet, Flower, StaminateFlower, PistillateFlower, RayFlower, DiskFlower, Cone, PollenCone, SeedCone, BisexualFlower, Fruit, Seed, Sporangia, SporangiumCase, MaleSporangiumCase, FemaleSporangiumCase, Spores, Chromosomes, Ecology, RarityStatus, Elevation, BioregionalDistribution, OutsideCA, SpeciesInGenus, GeneraInFamily, Etymology, Toxicity, Synonyms, UnabridgedSynonyms, Reference, UnabridgedReference, Note, UnabridgedNote, FloweringTime, FloweringTimeCode, FruitingTime, Weediness, IsTerminalTaxon, HasKey, RevisionNumber, RevisionDate, DistCode 
+		$sql = "SELECT * FROM eflora_taxa WHERE ScientificName LIKE '".$TaxonName."' ";//Calochortus amabilis, for example
+
+//BEGIN temporary bug fix lines to add when needed
+//echo '<br>'.$sql.'<br>';
+
+		if(!mysqli_query($db, $sql)){
+			die('Error: ' . mysqli_error($db));
+		}
+
+		$result = mysqli_query($db, $sql);
+
+//query and assign variable to each table field
+		while ($row = mysqli_fetch_array($result)) {
+
+// If no results are found, echo a message and stop
+			if ($row == false){
+				echo '<b>The ScientificName '.$TaxonName.'</b> was not found in eflora taxon table.<br>Try another search.<br>';
+    			exit;
+			}
+
+//BEGIN temporary bug fix lines to add when needed
+//foreach ($row as $key=>$value) {
+//    echo $key."<br>";
+//}
+//END temp bug fix lines
+
+			if (!empty($row['ID'])){
+				$ID = $row['ID'];
+			}
+			else{
+				$ID = null;
+			}
+	
+			if (!empty($row['ScientificName'])){
+				$ScientificName = $row['ScientificName'];
+			}
+			else{
+				$ScientificName = null;
+			}
+	
+			if (!empty($row['TaxonAuthor'])){
+				$TaxonAuthor = $row['TaxonAuthor'];
+			}
+			else{
+				$TaxonAuthor = null;
+			}
+	
+			if (!empty($row['FormattedDisplayName'])){
+				$FormattedDisplayName = $row['FormattedDisplayName'];
+			}
+			else{
+				$FormattedDisplayName = null;
+			}
+	
+			if (!empty($row['CommonName'])){
+				$CommonName = $row['CommonName'];
+			}
+			else{
+				$CommonName = null;
+			}
+	
+			if (!empty($row['Status'])){
+				$efloraStatus = $row['Status'];
+			}
+			else{
+				$efloraStatus = null;
+			}
+	
+			if (!empty($row['TJM2Author'])){
+				$TJM2Author = $row['TJM2Author'];
+			}
+			else{
+				$TJM2Author = null;
+			}
+	
+			if (!empty($row['ScientificEditor'])){
+				$ScientificEditor = $row['ScientificEditor'];
+			}
+			else{
+				$ScientificEditor = null;
+			}
+	
+			if (!empty($row['Habit'])){
+				$Habit = $row['Habit'];
+			}
+			else{
+				$Habit = null;
+			}
+	
+			if (!empty($row['PlantBody'])){
+				$PlantBody = $row['PlantBody'];
+			}
+			else{
+				$PlantBody = null;
+			}
+	
+			if (!empty($row['Stem'])){
+				$Stem = $row['Stem'];
+			}
+			else{
+				$Stem = null;
+			}
+	
+			if (!empty($row['SterileStem'])){
+				$SterileStem = $row['SterileStem'];
+			}
+			else{
+				$SterileStem = null;
+			}
+	
+			if (!empty($row['FertileStem'])){
+				$FertileStem = $row['FertileStem'];
+			}
+			else{
+				$FertileStem = null;
+			}
+	
+			if (!empty($row['Leaf'])){
+				$Leaf = $row['Leaf'];
+			}
+			else{
+				$Leaf = null;
+			}
+	
+			if (!empty($row['Spines'])){
+				$Spines = $row['Spines'];
+			}
+			else{
+				$Spines = null;
+			}
+	
+			if (!empty($row['Inflorescence'])){
+				$Inflorescence = $row['Inflorescence'];
+			}
+			else{
+				$Inflorescence = null;
+			}
+	
+			if (!empty($row['StaminateHead'])){
+				$StaminateHead = $row['StaminateHead'];
+			}
+			else{
+				$StaminateHead = null;
+			}
+	
+			if (!empty($row['RayOrPistillateFlower'])){
+				$RayOrPistillateFlower = $row['RayOrPistillateFlower'];
+			}
+			else{
+				$RayOrPistillateFlower = null;
+			}
+	
+			if (!empty($row['PistillateHead'])){
+				$PistillateHead = $row['PistillateHead'];
+			}
+			else{
+				$PistillateHead = null;
+			}
+	
+			if (!empty($row['StaminateInflorescence'])){
+				$StaminateInflorescence = $row['StaminateInflorescence'];
+			}
+			else{
+				$StaminateInflorescence = null;
+			}
+	
+			if (!empty($row['PistillateOrBisexualInflorescence'])){
+				$PistillateOrBisexualInflorescence = $row['PistillateOrBisexualInflorescence'];
+			}
+			else{
+				$PistillateOrBisexualInflorescence = null;
+			}
+	
+			if (!empty($row['PistillateInflorescence'])){
+				$PistillateInflorescence = $row['PistillateInflorescence'];
+			}
+			else{
+				$PistillateInflorescence = null;
+			}
+	
+			if (!empty($row['Spikelet'])){
+				$Spikelet = $row['Spikelet'];
+			}
+			else{
+				$Spikelet = null;
+			}
+	
+			if (!empty($row['FertileSpikelet'])){
+				$FertileSpikelet = $row['FertileSpikelet'];
+			}
+			else{
+				$FertileSpikelet = null;
+			}
+	
+			if (!empty($row['SterileSpikelet'])){
+				$SterileSpikelet = $row['SterileSpikelet'];
+			}
+			else{
+				$SterileSpikelet = null;
+			}
+	
+			if (!empty($row['DistalSpikelet'])){
+				$DistalSpikelet = $row['DistalSpikelet'];
+			}
+			else{
+				$DistalSpikelet = null;
+			}
+	
+			if (!empty($row['CentralSpikelet'])){
+				$CentralSpikelet = $row['CentralSpikelet'];
+			}
+			else{
+				$CentralSpikelet = null;
+			}
+	
+			if (!empty($row['LateralSpikelet'])){
+				$LateralSpikelet = $row['LateralSpikelet'];
+			}
+			else{
+				$LateralSpikelet = null;
+			}
+	
+			if (!empty($row['StaminateSpikelet'])){
+				$StaminateSpikelet = $row['StaminateSpikelet'];
+			}
+			else{
+				$StaminateSpikelet = null;
+			}
+	
+			if (!empty($row['PistillateSpikelet'])){
+				$PistillateSpikelet = $row['PistillateSpikelet'];
+			}
+			else{
+				$PistillateSpikelet = null;
+			}
+	
+			$Flower = $row['Flower'] ?? '';
+			$Flower = trim($Flower);
+	
+			if (!empty($row['StaminateFlower'])){
+				$StaminateFlower = $row['StaminateFlower'];
+			}
+			else{
+				$StaminateFlower = null;
+			}
+	
+			if (!empty($row['PistillateFlower'])){
+				$PistillateFlower = $row['PistillateFlower'];
+			}
+			else{
+				$PistillateFlower = null;
+			}
+	
+			if (!empty($row['RayFlower'])){
+				$RayFlower = $row['RayFlower'];
+			}
+			else{
+				$RayFlower = null;
+			}
+	
+			if (!empty($row['DiskFlower'])){
+				$DiskFlower = $row['DiskFlower'];
+			}
+			else{
+				$DiskFlower = null;
+			}
+	
+			if (!empty($row['Cone'])){
+				$Cone = $row['Cone'];
+			}
+			else{
+				$Cone = null;
+			}
+	
+			if (!empty($row['PollenCone'])){
+				$PollenCone = $row['PollenCone'];
+			}
+			else{
+				$PollenCone = null;
+			}
+	
+			if (!empty($row['SeedCone'])){
+				$SeedCone = $row['SeedCone'];
+			}
+			else{
+				$SeedCone = null;
+			}
+	
+			if (!empty($row['BisexualFlower'])){
+				$BisexualFlower = $row['BisexualFlower'];
+			}
+			else{
+				$BisexualFlower = null;
+			}
+	
+			if (!empty($row['Fruit'])){
+				$Fruit = $row['Fruit'];
+			}
+			else{
+				$Fruit = null;
+			}
+	
+			if (!empty($row['Seed'])){
+				$Seed = $row['Seed'];
+			}
+			else{
+				$Seed = null;
+			}
+	
+			if (!empty($row['Sporangia'])){
+				$Sporangia = $row['Sporangia'];
+			}
+			else{
+				$Sporangia = null;
+			}
+	
+			if (!empty($row['SporangiumCase'])){
+				$SporangiumCase = $row['SporangiumCase'];
+			}
+			else{
+				$SporangiumCase = null;
+			}
+	
+			if (!empty($row['MaleSporangiumCase'])){
+				$MaleSporangiumCase = $row['MaleSporangiumCase'];
+			}
+			else{
+				$MaleSporangiumCase = null;
+			}
+	
+			if (!empty($row['FemaleSporangiumCase'])){
+				$FemaleSporangiumCase = $row['FemaleSporangiumCase'];
+			}
+			else{
+				$FemaleSporangiumCase = null;
+			}
+	
+			if (!empty($row['Spores'])){
+				$Spores = $row['Spores'];
+			}
+			else{
+				$Spores = null;
+			}
+	
+			if (!empty($row['Chromosomes'])){
+				$Chromosomes = $row['Chromosomes'];
+			}
+			else{
+				$Chromosomes = null;
+			}
+	
+			if (!empty($row['RarityStatus'])){
+				$RarityStatus = $row['RarityStatus'];
+			}
+			else{
+				$RarityStatus = null;
+			}
+	
+			if (!empty($row['Ecology'])){
+				$Ecology = $row['Ecology'];
+			}
+			else{
+				$Ecology = null;
+			}
+	
+			if (!empty($row['Elevation'])){
+				$Elevation = $row['Elevation'];
+			}
+			else{
+				$Elevation = null;
+			}
+	
+			if (!empty($row['BioregionalDistribution'])){
+				$BioregionalDistribution = $row['BioregionalDistribution'];
+			}
+			else{
+				$BioregionalDistribution = null;
+			}
+	
+			if (!empty($row['OutsideCA'])){
+				$OutsideCA = $row['OutsideCA'];
+			}
+			else{
+				$OutsideCA = null;
+			}
+	
+			if (!empty($row['SpeciesInGenus'])){
+				$SpeciesInGenus = $row['SpeciesInGenus'];
+			}
+			else{
+				$SpeciesInGenus = null;
+			}
+	
+			if (!empty($row['GeneraInFamily'])){
+				$GeneraInFamily = $row['GeneraInFamily'];
+			}
+			else{
+				$GeneraInFamily = null;
+			}
+	
+			if (!empty($row['Etymology'])){
+				$Etymology = $row['Etymology'];
+			}
+			else{
+				$Etymology = null;
+			}
+	
+			if (!empty($row['Toxicity'])){
+				$Toxicity = $row['Toxicity'];
+			}
+			else{
+				$Toxicity = null;
+			}
+	
+			if (!empty($row['Synonyms'])){
+				$Synonyms = $row['Synonyms'];
+			}
+			else{
+				$Synonyms = null;
+			}
+	
+			if (!empty($row['UnabridgedSynonyms'])){
+				$UnabridgedSynonyms = $row['UnabridgedSynonyms'];
+			}
+			else{
+				$UnabridgedSynonyms = null;
+			}
+	
+			if (!empty($row['Reference'])){
+				$Reference = $row['Reference'];
+			}
+			else{
+				$Reference = null;
+			}
+	
+			if (!empty($row['UnabridgedReference'])){
+				$UnabridgedReference = $row['UnabridgedReference'];
+			}
+			else{
+				$UnabridgedReference = null;
+			}
+	
+			if (!empty($row['Note'])){
+				$Note = $row['Note'];
+			}
+			else{
+				$Note = null;
+			}
+	
+			if (!empty($row['UnabridgedNote'])){
+				$UnabridgedNote = $row['UnabridgedNote'];
+			}
+			else{
+				$UnabridgedNote = null;
+			}
+	
+			if (!empty($row['FloweringTime'])){
+				$FloweringTime = $row['FloweringTime'];
+			}
+			else{
+				$FloweringTime = null;
+			}
+	
+			if (!empty($row['FloweringTimeCode'])){
+				$TimeCode = $row['FloweringTimeCode'];
+			}
+			else{
+				$TimeCode = null;
+			}
+	
+			if (!empty($row['FruitingTime'])){
+				$FruitingTime = $row['FruitingTime'];
+			}
+			else{
+				$FruitingTime = null;
+			}
+	
+	//$ConingTime = $row['ConingTime']; 
+	//Remove this as there is no lines with this information
+	//It has never been successfully printing online and it would be a duplicate of the data in the notes anyway
+	
+			if (!empty($row['Weediness'])){
+				$Weediness = $row['Weediness'];
+			}
+			else{
+				$Weediness = null;
+			}
+	
+			if (!empty($row['IsTerminalTaxon'])){
+				$IsTerminalTaxon  = $row['IsTerminalTaxon'];
+			}
+			else{
+				$IsTerminalTaxon = null;
+			}
+	
+			if (!empty($row['RevisionNumber'])){
+				$RevisionNumber  = $row['RevisionNumber'];
+			}
+			else{
+				$RevisionNumber = null;
+			}
+	
+			if (!empty($row['RevisionDate'])){
+				$RevisionDate  = $row['RevisionDate'];
+			}
+			else{
+				$RevisionDate = null;
+			}
+	
+			if (!empty($row['DistCode'])){
+				$DistCode = $row['DistCode'];
+			}
+			else{
+				$DistCode = null;
+			}
+	
+			if (!empty($row['HasKey'])){
+				$HasKey = $row['HasKey'];
+			}
+			else{
+				$HasKey = null;
+			}
+	
+			if (!empty($row['TaxonID'])){
+				$TID = $row['TaxonID'];
+			}
+			else{
+				$TID = null;
+			}
+	
+//var_dump($row); 
+//var_dump prints the whole row in a databased format
+//which is useful for seeing what you're getting
+//but is pretty ugly
+
+		}
+	}
+	else{
 
 //Before doing anything, if the TID isn't recognized, give a plain error screen
 //Security mod to prevent cross-site scripting attacks
-	if (!isset($TID)){ //if TaxonID (pulled from URL) did not match a line in the database...
-		//echo "Taxon not recognized TID=".$TaxonID;
-		header("Location: search_icpn.php?tid=".$TaxonID, true, 301);
-		exit();
-	}
-  }
-  elseif (isset($_GET['name'])){
-
-	#$results = $db->query("SELECT ID, TaxonID, ScientificName, TaxonAuthor, FormattedDisplayName, CommonName, Status, TJM2Author, ScientificEditor, Habit, PlantBody, Stem, SterileStem, FertileStem, Leaf, Spines, Inflorescence, StaminateHead, RayOrPistillateFlower, PistillateHead, StaminateInflorescence, PistillateOrBisexualInflorescence, PistillateInflorescence, Spikelet, FertileSpikelet, SterileSpikelet, DistalSpikelet, CentralSpikelet, LateralSpikelet, StaminateSpikelet, PistillateSpikelet, Flower, StaminateFlower, PistillateFlower, RayFlower, DiskFlower, Cone, PollenCone, SeedCone, BisexualFlower, Fruit, Seed, Sporangia, SporangiumCase, MaleSporangiumCase, FemaleSporangiumCase, Spores, Chromosomes, Ecology, RarityStatus, Elevation, BioregionalDistribution, OutsideCA, SpeciesInGenus, GeneraInFamily, Etymology, Toxicity, Synonyms, UnabridgedSynonyms, Reference, UnabridgedReference, Note, UnabridgedNote, FloweringTime, FloweringTimeCode, FruitingTime, Weediness, IsTerminalTaxon, HasKey, RevisionNumber, RevisionDate, DistCode 
-	$results = $db->query("SELECT * FROM eflora_taxa 
-						WHERE ScientificName LIKE '".$TaxonName."' "); //16711 is the TaxonID for Calochortus amabilis, for example
-
-	while ($row = $results->fetchArray()) {
-
-		if (isset($row['ID'])){
-			$ID = $row['ID'];
-		}
-		else{
-			$ID = null;
-		}
-
-		if (isset($row['ScientificName'])){
-			$ScientificName = $row['ScientificName'];
-		}
-		else{
-			$ScientificName = null;
-		}
-
-		if (isset($row['TaxonAuthor'])){
-			$TaxonAuthor = $row['TaxonAuthor'];
-		}
-		else{
-			$TaxonAuthor = null;
-		}
-
-		if (isset($row['FormattedDisplayName'])){
-			$FormattedDisplayName = $row['FormattedDisplayName'];
-		}
-		else{
-			$FormattedDisplayName = null;
-		}
-
-		if (isset($row['CommonName'])){
-			$CommonName = $row['CommonName'];
-		}
-		else{
-			$CommonName = null;
-		}
-
-		if (isset($row['Status'])){
-			$efloraStatus = $row['Status'];
-		}
-		else{
-			$efloraStatus = null;
-		}
-
-		if (isset($row['TJM2Author'])){
-			$TJM2Author = $row['TJM2Author'];
-		}
-		else{
-			$TJM2Author = null;
-		}
-
-		if (isset($row['ScientificEditor'])){
-			$ScientificEditor = $row['ScientificEditor'];
-		}
-		else{
-			$ScientificEditor = null;
-		}
-
-		if (isset($row['Habit'])){
-			$Habit = $row['Habit'];
-		}
-		else{
-			$Habit = null;
-		}
-
-		if (isset($row['PlantBody'])){
-			$PlantBody = $row['PlantBody'];
-		}
-		else{
-			$PlantBody = null;
-		}
-
-		if (isset($row['Stem'])){
-			$Stem = $row['Stem'];
-		}
-		else{
-			$Stem = null;
-		}
-
-		if (isset($row['SterileStem'])){
-			$SterileStem = $row['SterileStem'];
-		}
-		else{
-			$SterileStem = null;
-		}
-
-		if (isset($row['FertileStem'])){
-			$FertileStem = $row['FertileStem'];
-		}
-		else{
-			$FertileStem = null;
-		}
-
-		if (isset($row['Leaf'])){
-			$Leaf = $row['Leaf'];
-		}
-		else{
-			$Leaf = null;
-		}
-
-		if (isset($row['Spines'])){
-			$Spines = $row['Spines'];
-		}
-		else{
-			$Spines = null;
-		}
-
-		if (isset($row['Inflorescence'])){
-			$Inflorescence = $row['Inflorescence'];
-		}
-		else{
-			$Inflorescence = null;
-		}
-
-		if (isset($row['StaminateHead'])){
-			$StaminateHead = $row['StaminateHead'];
-		}
-		else{
-			$StaminateHead = null;
-		}
-
-		if (isset($row['RayOrPistillateFlower'])){
-			$RayOrPistillateFlower = $row['RayOrPistillateFlower'];
-		}
-		else{
-			$RayOrPistillateFlower = null;
-		}
-
-		if (isset($row['PistillateHead'])){
-			$PistillateHead = $row['PistillateHead'];
-		}
-		else{
-			$PistillateHead = null;
-		}
-
-		if (isset($row['StaminateInflorescence'])){
-			$StaminateInflorescence = $row['StaminateInflorescence'];
-		}
-		else{
-			$StaminateInflorescence = null;
-		}
-
-		if (isset($row['PistillateOrBisexualInflorescence'])){
-			$PistillateOrBisexualInflorescence = $row['PistillateOrBisexualInflorescence'];
-		}
-		else{
-			$PistillateOrBisexualInflorescence = null;
-		}
-
-		if (isset($row['PistillateInflorescence'])){
-			$PistillateInflorescence = $row['PistillateInflorescence'];
-		}
-		else{
-			$PistillateInflorescence = null;
-		}
-
-		if (isset($row['Spikelet'])){
-			$Spikelet = $row['Spikelet'];
-		}
-		else{
-			$Spikelet = null;
-		}
-
-		if (isset($row['FertileSpikelet'])){
-			$FertileSpikelet = $row['FertileSpikelet'];
-		}
-		else{
-			$FertileSpikelet = null;
-		}
-
-		if (isset($row['SterileSpikelet'])){
-			$SterileSpikelet = $row['SterileSpikelet'];
-		}
-		else{
-			$SterileSpikelet = null;
-		}
-
-		if (isset($row['DistalSpikelet'])){
-			$DistalSpikelet = $row['DistalSpikelet'];
-		}
-		else{
-			$DistalSpikelet = null;
-		}
-
-		if (isset($row['CentralSpikelet'])){
-			$CentralSpikelet = $row['CentralSpikelet'];
-		}
-		else{
-			$CentralSpikelet = null;
-		}
-
-		if (isset($row['LateralSpikelet'])){
-			$LateralSpikelet = $row['LateralSpikelet'];
-		}
-		else{
-			$LateralSpikelet = null;
-		}
-
-		if (isset($row['StaminateSpikelet'])){
-			$StaminateSpikelet = $row['StaminateSpikelet'];
-		}
-		else{
-			$StaminateSpikelet = null;
-		}
-
-		if (isset($row['PistillateSpikelet'])){
-			$PistillateSpikelet = $row['PistillateSpikelet'];
-		}
-		else{
-			$PistillateSpikelet = null;
-		}
-
-		$Flower = $row['Flower'] ?? '';
-		$Flower = trim($Flower);
-
-		if (isset($row['StaminateFlower'])){
-			$StaminateFlower = $row['StaminateFlower'];
-		}
-		else{
-			$StaminateFlower = null;
-		}
-
-		if (isset($row['PistillateFlower'])){
-			$PistillateFlower = $row['PistillateFlower'];
-		}
-		else{
-			$PistillateFlower = null;
-		}
-
-		if (isset($row['RayFlower'])){
-			$RayFlower = $row['RayFlower'];
-		}
-		else{
-			$RayFlower = null;
-		}
-
-		if (isset($row['DiskFlower'])){
-			$DiskFlower = $row['DiskFlower'];
-		}
-		else{
-			$DiskFlower = null;
-		}
-
-		if (isset($row['Cone'])){
-			$Cone = $row['Cone'];
-		}
-		else{
-			$Cone = null;
-		}
-
-		if (isset($row['PollenCone'])){
-			$PollenCone = $row['PollenCone'];
-		}
-		else{
-			$PollenCone = null;
-		}
-
-		if (isset($row['SeedCone'])){
-			$SeedCone = $row['SeedCone'];
-		}
-		else{
-			$SeedCone = null;
-		}
-
-		if (isset($row['BisexualFlower'])){
-			$BisexualFlower = $row['BisexualFlower'];
-		}
-		else{
-			$BisexualFlower = null;
-		}
-
-		if (isset($row['Fruit'])){
-			$Fruit = $row['Fruit'];
-		}
-		else{
-			$Fruit = null;
-		}
-
-		if (isset($row['Seed'])){
-			$Seed = $row['Seed'];
-		}
-		else{
-			$Seed = null;
-		}
-
-		if (isset($row['Sporangia'])){
-			$Sporangia = $row['Sporangia'];
-		}
-		else{
-			$Sporangia = null;
-		}
-
-		if (isset($row['SporangiumCase'])){
-			$SporangiumCase = $row['SporangiumCase'];
-		}
-		else{
-			$SporangiumCase = null;
-		}
-
-		if (isset($row['MaleSporangiumCase'])){
-			$MaleSporangiumCase = $row['MaleSporangiumCase'];
-		}
-		else{
-			$MaleSporangiumCase = null;
-		}
-
-		if (isset($row['FemaleSporangiumCase'])){
-			$FemaleSporangiumCase = $row['FemaleSporangiumCase'];
-		}
-		else{
-			$FemaleSporangiumCase = null;
-		}
-
-		if (isset($row['Spores'])){
-			$Spores = $row['Spores'];
-		}
-		else{
-			$Spores = null;
-		}
-
-		if (isset($row['Chromosomes'])){
-			$Chromosomes = $row['Chromosomes'];
-		}
-		else{
-			$Chromosomes = null;
-		}
-
-		if (isset($row['RarityStatus'])){
-			$RarityStatus = $row['RarityStatus'];
-		}
-		else{
-			$RarityStatus = null;
-		}
-
-		if (isset($row['Ecology'])){
-			$Ecology = $row['Ecology'];
-		}
-		else{
-			$Ecology = null;
-		}
-
-		if (isset($row['Elevation'])){
-			$Elevation = $row['Elevation'];
-		}
-		else{
-			$Elevation = null;
-		}
-
-		if (isset($row['BioregionalDistribution'])){
-			$BioregionalDistribution = $row['BioregionalDistribution'];
-		}
-		else{
-			$BioregionalDistribution = null;
-		}
-
-		if (isset($row['OutsideCA'])){
-			$OutsideCA = $row['OutsideCA'];
-		}
-		else{
-			$OutsideCA = null;
-		}
-
-		if (isset($row['SpeciesInGenus'])){
-			$SpeciesInGenus = $row['SpeciesInGenus'];
-		}
-		else{
-			$SpeciesInGenus = null;
-		}
-
-		if (isset($row['GeneraInFamily'])){
-			$GeneraInFamily = $row['GeneraInFamily'];
-		}
-		else{
-			$GeneraInFamily = null;
-		}
-
-		if (isset($row['Etymology'])){
-			$Etymology = $row['Etymology'];
-		}
-		else{
-			$Etymology = null;
-		}
-
-		if (isset($row['Toxicity'])){
-			$Toxicity = $row['Toxicity'];
-		}
-		else{
-			$Toxicity = null;
-		}
-
-		if (isset($row['Synonyms'])){
-			$Synonyms = $row['Synonyms'];
-		}
-		else{
-			$Synonyms = null;
-		}
-
-		if (isset($row['UnabridgedSynonyms'])){
-			$UnabridgedSynonyms = $row['UnabridgedSynonyms'];
-		}
-		else{
-			$UnabridgedSynonyms = null;
-		}
-
-		if (isset($row['Reference'])){
-			$Reference = $row['Reference'];
-		}
-		else{
-			$Reference = null;
-		}
-
-		if (isset($row['UnabridgedReference'])){
-			$UnabridgedReference = $row['UnabridgedReference'];
-		}
-		else{
-			$UnabridgedReference = null;
-		}
-
-		if (isset($row['Note'])){
-			$Note = $row['Note'];
-		}
-		else{
-			$Note = null;
-		}
-
-		if (isset($row['UnabridgedNote'])){
-			$UnabridgedNote = $row['UnabridgedNote'];
-		}
-		else{
-			$UnabridgedNote = null;
-		}
-
-		if (isset($row['FloweringTime'])){
-			$FloweringTime = $row['FloweringTime'];
-		}
-		else{
-			$FloweringTime = null;
-		}
-
-		if (isset($row['FloweringTimeCode'])){
-			$TimeCode = $row['FloweringTimeCode'];
-		}
-		else{
-			$TimeCode = null;
-		}
-
-		if (isset($row['FruitingTime'])){
-			$FruitingTime = $row['FruitingTime'];
-		}
-		else{
-			$FruitingTime = null;
-		}
-
-//$ConingTime = $row['ConingTime']; 
-//Remove this as there is no lines with this information
-//It has never been successfully printing online and it would be a duplicate of the data in the notes anyway
-
-		if (isset($row['Weediness'])){
-			$Weediness = $row['Weediness'];
-		}
-		else{
-			$Weediness = null;
-		}
-
-		if (isset($row['IsTerminalTaxon'])){
-			$IsTerminalTaxon  = $row['IsTerminalTaxon'];
-		}
-		else{
-			$IsTerminalTaxon = null;
-		}
-
-		if (isset($row['RevisionNumber'])){
-			$RevisionNumber  = $row['RevisionNumber'];
-		}
-		else{
-			$RevisionNumber = null;
-		}
-
-		if (isset($row['RevisionDate'])){
-			$RevisionDate  = $row['RevisionDate'];
-		}
-		else{
-			$RevisionDate = null;
-		}
-
-		if (isset($row['DistCode'])){
-			$DistCode = $row['DistCode'];
-		}
-		else{
-			$DistCode = null;
-		}
-
-		if (isset($row['HasKey'])){
-			$HasKey = $row['HasKey'];
-		}
-		else{
-			$HasKey = null;
-		}
-
-		if (isset($row['TaxonID'])){
-			$TID = $row['TaxonID'];
-		}
-		else{
-			$TID = null;
-		}
-
- if ( (isset($TaxonName)) && (is_null($row['TaxonID'])) && (is_null($row['Inflorescence'])) && (is_null($row['Spines'])) && (is_null($row['Leaf'])) && (is_null($row['FertileStem'])) && (is_null($row['SterileStem'])) && (is_null($row['Stem'])) && (is_null($row['PlantBody'])) && (is_null($row['Habit'])) && (is_null($row['ScientificEditor'])) && (is_null($row['TJM2Author'])) && (is_null($row['CommonName'])) && (is_null($row['FormattedDisplayName'])) && (is_null($row['TaxonAuthor'])) ){
-
-// if ( (isset($TaxonName)) && (!isset($row['TaxonID'])) && (!isset($row['Inflorescence'])) && (!isset($row['Spines'])) && (!isset($row['Leaf'])) && (!isset($row['FertileStem'])) && (!isset($row['SterileStem'])) && (!isset($row['Stem'])) && (!isset($row['PlantBody'])) && (!isset($row['Habit'])) && (!isset($row['ScientificEditor'])) && (!isset($row['TJM2Author'])) && (!isset($row['CommonName'])) && (!isset($row['FormattedDisplayName'])) && (!isset($row['TaxonAuthor'])) && (!isset($row['ScientificName']))  ){
-		//var_dump($row); 
-		header("Location: search_icpn.php?name=".$TaxonName, true, 301);
-		exit();
- }
-//var_dump($row); 
-/*var_dump prints the whole row in a databased format
-which is useful for seeing what you're getting
-but is pretty ugly
-*/
-	}
-
-
-//Before doing anything, if the TID isn't recognized, give a plain error screen
-//Security mod to prevent cross-site scripting attacks
-	if (!isset($ScientificName)){
-		//echo "Taxon not recognized NAME=".$TaxonName;
+		echo "<br><br><h1>Taxon not recognized NAME=".$TaxonName."</h1><br><br>";
 		header("Location: search_icpn.php?name=".$TaxonName, true, 301);
 		exit();
 	}
 
-  }
 
- if ( (empty($ID)) && (!empty($TaxonName)) ){
-		//echo "Taxon not recognized NAME=".$TaxonName;
-		header("Location: search_icpn.php?name=".$TaxonName, true, 301);
-		exit();
- }
- else{
+//END TAXON ID AND NAME SQL QUERY ASSIGNMENT
+
+
+//START previousID AND nextID SQL QUERY ASSIGNMENT
+
+//This provides values so users can browse the eflora page by page
+	if (!empty($ID)){
 	//get previous and next info based on ID
-  $previousID = $ID-1;
-  $nextID = $ID+1;
+		$previousID = $ID-1;
+		$nextID = $ID+1;
 
-  $results = $db->query('SELECT TaxonID, ScientificName
-						FROM eflora_taxa
-						WHERE ID='.$previousID.' ');
+		if (!empty($previousID)){
+			$sql = "SELECT TaxonID, ScientificName FROM eflora_taxa WHERE ID=".$previousID." ";
+		
+//BEGIN temporary bug fix lines to add when needed
+//echo '<br>'.$sql.'<br>';
 
-	while ($row = $results->fetchArray()) {
+			if(!mysqli_query($db, $sql)){
+				die('Error: ' . mysqli_error($db));
+			}
 
-		if (isset($row['TaxonID'])){
-			$previousTaxonID = $row['TaxonID'];
+			$result = mysqli_query($db, $sql);
+
+//query and assign variable to each table field
+			while ($row = mysqli_fetch_array($result)) {
+
+// If no results are found, echo a message and stop
+				if ($row == false){
+					echo '<b>The previous ID was not found in the eflora taxon table.<br>Try another search.<br>';
+    				exit;
+				}
+//BEGIN temporary bug fix lines to add when needed
+//foreach ($row as $key=>$value) {
+//    echo $key."<br>";
+//}
+//END temp bug fix lines
+				// if (!empty($row(['TaxonID'])){    jg commented out
+				if (!empty($row['TaxonID'])){
+					$previousTaxonID = $row['TaxonID'];
+				}
+				else{
+					$previousTaxonID = null;
+				}
+
+				// if (!empty($row(['ScientificName'])){    jg commented out
+				if (!empty($row['ScientificName'])){
+					$previousName = $row['ScientificName'];
+				}
+				else{
+					$previousName = null;
+				}
+			}
 		}
-		else{
-			$previousTaxonID = null;
-		}
 
-		if (isset($row['ScientificName'])){
-			$previousName = $row['ScientificName'];
-		}
-		else{
-			$previousName = null;
-		}
+		if (!empty($nextID)){
+			$sql = "SELECT TaxonID, ScientificName FROM eflora_taxa WHERE ID=".$nextID." ";
+		
+//BEGIN temporary bug fix lines to add when needed
+//echo '<br>'.$sql.'<br>';
 
+			if(!mysqli_query($db, $sql)){
+				die('Error: ' . mysqli_error($db));
+			}
+
+			$result = mysqli_query($db, $sql);
+
+//query and assign variable to each table field
+			while ($row = mysqli_fetch_array($result)) {
+
+// If no results are found, echo a message and stop
+				if ($row == false){
+					echo '<b>The next ID was not found in the eflora taxon table.<br>Try another search.<br>';
+    				exit;
+				}
+//BEGIN temporary bug fix lines to add when needed
+//foreach ($row as $key=>$value) {
+//    echo $key."<br>";
+//}
+//END temp bug fix lines
+				// if (!empty($row(['TaxonID'])){    jg commented out
+				if (!empty($row['TaxonID'])){
+					$nextTaxonID = $row['TaxonID'];
+				}
+				else{
+					$nextTaxonID = null;
+				}
+
+				// if (!empty($row(['ScientificName'])){    jg commented out
+				if (!empty($row['ScientificName'])){
+					$nextName = $row['ScientificName'];
+				}
+				else{
+					$nextName = null;
+				}
+			}
+		}
 	}
+//END previousID AND nextID SQL QUERY ASSIGNMENT
 
-  $results = $db->query('SELECT TaxonID, ScientificName
-						FROM eflora_taxa
-						WHERE ID='.$nextID.'');
 
-	while ($row = $results->fetchArray()) {
 
-		if (isset($row['TaxonID'])){
-			$nextTaxonID = $row['TaxonID'];
-		}
-		else{
-			$nextTaxonID = null;
-		}
-
-		if (isset($row['ScientificName'])){
-			$nextName = $row['ScientificName'];
-		}
-		else{
-			$nextName = null;
-		}
-
-	}
-
+//START FAMILY SQL QUERY ASSIGNMENT
 
   //query and assign family info
   //Note that only Family has "GeneraInFamily" and "ScientificEditor"
-  $results = $db->query('SELECT t.TaxonID, t.FamilyID, f.TaxonID, f.ScientificName, f.TaxonAuthor, f.CommonName, f.TJM2Author, f.ScientificEditor, f.Habit, f.PlantBody, f.Stem, f.SterileStem, f.FertileStem, f.Leaf, f.Spines, f.Inflorescence, f.StaminateHead, f.RayOrPistillateFlower, f.PistillateHead, f.StaminateInflorescence, f.PistillateOrBisexualInflorescence, f.PistillateInflorescence, f.Spikelet, f.FertileSpikelet, f.SterileSpikelet, f.DistalSpikelet, f.CentralSpikelet, f.LateralSpikelet, f.StaminateSpikelet, f.PistillateSpikelet, f.Flower, f.StaminateFlower, f.PistillateFlower, f.RayFlower, f.DiskFlower, f.Cone, f.PollenCone, f.SeedCone, f.BisexualFlower, f.Fruit, f.Seed, f.Sporangia, f.SporangiumCase, f.MaleSporangiumCase, f.FemaleSporangiumCase, f.Spores, f.Chromosomes, f.GeneraInFamily, f.Etymology, f.Toxicity, f.Synonyms, f.UnabridgedSynonyms, f.Note, f.UnabridgedNote, f.RevisionNumber, f.RevisionDate, f.HasKey
-						from eflora_taxonomy t, eflora_taxa f
-						WHERE t.TaxonID='.$TID.' AND t.FamilyID=f.TaxonID');
+  //included in query below as f.GeneraInFamily and f.ScientificEditor
+		if (!empty($TID)){
+				$sql = "SELECT t.TaxonID, t.FamilyID";
+//Family
+				$sql.= ", f.TaxonID, f.ScientificName, f.TaxonAuthor, f.CommonName";
+				$sql.= ", f.TJM2Author, f.ScientificEditor, f.Habit, f.PlantBody, f.Stem";
+				$sql.= ", f.SterileStem, f.FertileStem, f.Leaf, f.Spines, f.Inflorescence";
+				$sql.= ", f.StaminateHead, f.RayOrPistillateFlower, f.PistillateHead, f.StaminateInflorescence";
+				$sql.= ", f.PistillateOrBisexualInflorescence, f.PistillateInflorescence, f.Spikelet, f.FertileSpikelet";
+				$sql.= ", f.SterileSpikelet, f.DistalSpikelet, f.CentralSpikelet, f.LateralSpikelet, f.StaminateSpikelet";
+				$sql.= ", f.PistillateSpikelet, f.Flower, f.StaminateFlower, f.PistillateFlower, f.RayFlower, f.DiskFlower";
+				$sql.= ", f.Cone, f.PollenCone, f.SeedCone, f.BisexualFlower, f.Fruit, f.Seed, f.Sporangia, f.SporangiumCase";
+				$sql.= ", f.MaleSporangiumCase, f.FemaleSporangiumCase, f.Spores, f.Chromosomes, f.GeneraInFamily, f.Etymology";
+				$sql.= ", f.Toxicity, f.Synonyms, f.UnabridgedSynonyms, f.Note, f.UnabridgedNote, f.RevisionNumber";
+				$sql.= ", f.RevisionDate, f.HasKey";
+				$sql.= " from eflora_taxonomy t, eflora_taxa f";
+				$sql.= " WHERE t.TaxonID=".$TID." AND t.FamilyID=f.TaxonID";
+
+//BEGIN temporary bug fix lines to add when needed
+//echo '<br>'.$sql.'<br>';
+
+			if(!mysqli_query($db, $sql)){
+				die('Error: ' . mysqli_error($db));
+			}
+
+			$result = mysqli_query($db, $sql);
+
+//query and assign variable to each table field
+			while ($row = mysqli_fetch_array($result)) {
+
+// If no results are found, echo a message and stop
+				if ($row == false){
+					echo '<b>Family was not found in the eflora taxon table.<br>Try another search.<br>';
+    				exit;
+				}
+//BEGIN temporary bug fix lines to add when needed
+//foreach ($row as $key=>$value) {
+//    echo $key."<br>";
+//}
+//END temp bug fix lines
+
+				if (!empty($row['ScientificName'])){
+					$FamScientificName = $row['ScientificName'];
+				}
+				else{
+					$FamScientificName = null;
+				}
+		
+				if (!empty($row['TaxonAuthor'])){
+					$FamTaxonAuthor = $row['TaxonAuthor'];
+				}
+				else{
+					$FamTaxonAuthor = null;
+				}
+		
+				if (!empty($row['FormattedDisplayName'])){
+					$FamFormattedDisplayName = $row['FormattedDisplayName'];
+				}
+				else{
+					$FamFormattedDisplayName = null;
+				}
+		
+				if (!empty($row['CommonName'])){
+					$FamCommonName = $row['CommonName'];
+				}
+				else{
+					$FamCommonName = null;
+				}
+		
+				if (!empty($row['TJM2Author'])){
+					$FamTJM2Author = $row['TJM2Author'];
+				}
+				else{
+					$FamTJM2Author = null;
+				}
+		
+				if (!empty($row['ScientificEditor'])){
+					$FamScientificEditor = $row['ScientificEditor'];
+				}
+				else{
+					$FamScientificEditor = null;
+				}
+		
+				if (!empty($row['Habit'])){
+					$FamHabit = $row['Habit'];
+				}
+				else{
+					$FamHabit = null;
+				}
+		
+				if (!empty($row['PlantBody'])){
+					$FamPlantBody = $row['PlantBody'];
+				}
+				else{
+					$FamPlantBody = null;
+				}
+		
+				if (!empty($row['Stem'])){
+					$FamStem = $row['Stem'];
+				}
+				else{
+					$FamStem = null;
+				}
+		
+				if (!empty($row['SterileStem'])){
+					$FamSterileStem = $row['SterileStem'];
+				}
+				else{
+					$FamSterileStem = null;
+				}
+		
+				if (!empty($row['FertileStem'])){
+					$FamFertileStem = $row['FertileStem'];
+				}
+				else{
+					$FamFertileStem = null;
+				}
+		
+				if (!empty($row['Leaf'])){
+					$FamLeaf = $row['Leaf'];
+				}
+				else{
+					$FamLeaf = null;
+				}
+		
+				if (!empty($row['Spines'])){
+					$FamSpines = $row['Spines'];
+				}
+				else{
+					$FamSpines = null;
+				}
+		
+				if (!empty($row['Inflorescence'])){
+					$FamInflorescence = $row['Inflorescence'];
+				}
+				else{
+					$FamInflorescence = null;
+				}
+		
+				if (!empty($row['StaminateHead'])){
+					$FamStaminateHead = $row['StaminateHead'];
+				}
+				else{
+					$FamStaminateHead = null;
+				}
+		
+				if (!empty($row['RayOrPistillateFlower'])){
+					$FamRayOrPistillateFlower = $row['RayOrPistillateFlower'];
+				}
+				else{
+					$FamRayOrPistillateFlower = null;
+				}
+		
+				if (!empty($row['PistillateHead'])){
+					$FamPistillateHead = $row['PistillateHead'];
+				}
+				else{
+					$FamPistillateHead = null;
+				}
+		
+				if (!empty($row['StaminateInflorescence'])){
+					$FamStaminateInflorescence = $row['StaminateInflorescence'];
+				}
+				else{
+					$FamStaminateInflorescence = null;
+				}
+		
+				if (!empty($row['PistillateOrBisexualInflorescence'])){
+					$FamPistillateOrBisexualInflorescence = $row['PistillateOrBisexualInflorescence'];
+				}
+				else{
+					$FamPistillateOrBisexualInflorescence = null;
+				}
+		
+				if (!empty($row['PistillateInflorescence'])){
+					$FamPistillateInflorescence = $row['PistillateInflorescence'];
+				}
+				else{
+					$FamPistillateInflorescence = null;
+				}
+		
+				if (!empty($row['Spikelet'])){
+					$FamSpikelet = $row['Spikelet'];
+				}
+				else{
+					$FamSpikelet = null;
+				}
+		
+				if (!empty($row['FertileSpikelet'])){
+					$FamFertileSpikelet = $row['FertileSpikelet'];
+				}
+				else{
+					$FamFertileSpikelet = null;
+				}
+		
+				if (!empty($row['SterileSpikelet'])){
+					$FamSterileSpikelet = $row['SterileSpikelet'];
+				}
+				else{
+					$FamSterileSpikelet = null;
+				}
+		
+				if (!empty($row['DistalSpikelet'])){
+					$FamDistalSpikelet = $row['DistalSpikelet'];
+				}
+				else{
+					$FamDistalSpikelet = null;
+				}
+		
+				if (!empty($row['CentralSpikelet'])){
+					$FamCentralSpikelet = $row['CentralSpikelet'];
+				}
+				else{
+					$FamCentralSpikelet = null;
+				}
+		
+				if (!empty($row['LateralSpikelet'])){
+					$FamLateralSpikelet = $row['LateralSpikelet'];
+				}
+				else{
+					$FamLateralSpikelet = null;
+				}
+		
+				if (!empty($row['StaminateSpikelet'])){
+					$FamStaminateSpikelet = $row['StaminateSpikelet'];
+				}
+				else{
+					$FamStaminateSpikelet = null;
+				}
+		
+				if (!empty($row['PistillateSpikelet'])){
+					$FamPistillateSpikelet = $row['PistillateSpikelet'];
+				}
+				else{
+					$FamPistillateSpikelet = null;
+				}
+		
+				if (!empty($row['Flower'])){
+					$FamFlower = $row['Flower'];
+				}
+				else{
+					$FamFlower = null;
+				}
+		
+				if (!empty($row['StaminateFlower'])){
+					$FamStaminateFlower = $row['StaminateFlower'];
+				}
+				else{
+					$FamStaminateFlower = null;
+				}
+		
+				if (!empty($row['PistillateFlower'])){
+					$FamPistillateFlower = $row['PistillateFlower'];
+				}
+				else{
+					$FamPistillateFlower = null;
+				}
+		
+				if (!empty($row['RayFlower'])){
+					$FamRayFlower = $row['RayFlower'];
+				}
+				else{
+					$FamRayFlower = null;
+				}
+		
+				if (!empty($row['DiskFlower'])){
+					$FamDiskFlower = $row['DiskFlower'];
+				}
+				else{
+					$FamDiskFlower = null;
+				}
+		
+				if (!empty($row['Cone'])){
+					$FamCone = $row['Cone'];
+				}
+				else{
+					$FamCone = null;
+				}
+		
+				if (!empty($row['PollenCone'])){
+					$FamPollenCone = $row['PollenCone'];
+				}
+				else{
+					$FamPollenCone = null;
+				}
+		
+				if (!empty($row['SeedCone'])){
+					$FamSeedCone = $row['SeedCone'];
+				}
+				else{
+					$FamSeedCone = null;
+				}
+		
+				if (!empty($row['BisexualFlower'])){
+					$FamBisexualFlower = $row['BisexualFlower'];
+				}
+				else{
+					$FamBisexualFlower = null;
+				}
+		
+				if (!empty($row['Fruit'])){
+					$FamFruit = $row['Fruit'];
+				}
+				else{
+					$FamFruit = null;
+				}
+		
+				if (!empty($row['Seed'])){
+					$FamSeed = $row['Seed'];
+				}
+				else{
+					$FamSeed = null;
+				}
+		
+				if (!empty($row['Sporangia'])){
+					$FamSporangia = $row['Sporangia'];
+				}
+				else{
+					$FamSporangia = null;
+				}
+		
+				if (!empty($row['SporangiumCase'])){
+					$FamSporangiumCase = $row['SporangiumCase'];
+				}
+				else{
+					$FamSporangiumCase = null;
+				}
+		
+				if (!empty($row['MaleSporangiumCase'])){
+					$FamMaleSporangiumCase = $row['MaleSporangiumCase'];
+				}
+				else{
+					$FamMaleSporangiumCase = null;
+				}
+		
+				if (!empty($row['FemaleSporangiumCase'])){
+					$FamFemaleSporangiumCase = $row['FemaleSporangiumCase'];
+				}
+				else{
+					$FamFemaleSporangiumCase = null;
+				}
+		
+				if (!empty($row['Spores'])){
+					$FamSpores = $row['Spores'];
+				}
+				else{
+					$FamSpores = null;
+				}
+		
+				if (!empty($row['Chromosomes'])){
+					$FamChromosomes = $row['Chromosomes'];
+				}
+				else{
+					$FamChromosomes = null;
+				}
+		
+				if (!empty($row['RarityStatus'])){
+					$FamRarityStatus = $row['RarityStatus'];
+				}
+				else{
+					$FamRarityStatus = null;
+				}
+		
+				if (!empty($row['Ecology'])){
+					$FamEcology = $row['Ecology'];
+				}
+				else{
+					$FamEcology = null;
+				}
+		
+				if (!empty($row['Elevation'])){
+					$FamElevation = $row['Elevation'];
+				}
+				else{
+					$FamElevation = null;
+				}
+		
+				if (!empty($row['BioregionalDistribution'])){
+					$FamBioregionalDistribution = $row['BioregionalDistribution'];
+				}
+				else{
+					$FamBioregionalDistribution = null;
+				}
+		
+				if (!empty($row['OutsideCA'])){
+					$FamOutsideCA = $row['OutsideCA'];
+				}
+				else{
+					$FamOutsideCA = null;
+				}
+
+				if (!empty($row['GeneraInFamily'])){
+					$FamGeneraInFamily = $row['GeneraInFamily'];
+				}
+				else{
+					$FamGeneraInFamily = null;
+				}
+		
+				if (!empty($row['Etymology'])){
+					$FamEtymology = $row['Etymology'];
+				}
+				else{
+					$FamEtymology = null;
+				}
+		
+				if (!empty($row['Toxicity'])){
+					$FamToxicity = $row['Toxicity'];
+				}
+				else{
+					$FamToxicity = null;
+				}
+		
+				if (!empty($row['Synonyms'])){
+					$FamSynonyms = $row['Synonyms'];
+				}
+				else{
+					$FamSynonyms = null;
+				}
+		
+				if (!empty($row['UnabridgedSynonyms'])){
+					$FamUnabridgedSynonyms = $row['UnabridgedSynonyms'];
+				}
+				else{
+					$FamUnabridgedSynonyms = null;
+				}
+		
+				if (!empty($row['Reference'])){
+					$FamReference = $row['Reference'];
+				}
+				else{
+					$FamReference = null;
+				}
+		
+				if (!empty($row['UnabridgedReference'])){
+					$FamUnabridgedReference = $row['UnabridgedReference'];
+				}
+				else{
+					$FamUnabridgedReference = null;
+				}
+		
+				if (!empty($row['Note'])){
+					$FamNote = $row['Note'];
+				}
+				else{
+					$FamNote = null;
+				}
+		
+				if (!empty($row['UnabridgedNote'])){
+					$FamUnabridgedNote = $row['UnabridgedNote'];
+				}
+				else{
+					$FamUnabridgedNote = null;
+				}
+		
+				if (!empty($row['FloweringTime'])){
+					$FamFloweringTime = $row['FloweringTime'];
+				}
+				else{
+					$FamFloweringTime = null;
+				}
+		
+				if (!empty($row['FloweringTimeCode'])){
+					$FamTimeCode = $row['FloweringTimeCode'];
+				}
+				else{
+					$FamTimeCode = null;
+				}
+		
+				if (!empty($row['FruitingTime'])){
+					$FamFruitingTime = $row['FruitingTime'];
+				}
+				else{
+					$FamFruitingTime = null;
+				}
+		
+				if (!empty($row['Weediness'])){
+					$FamWeediness = $row['Weediness'];
+				}
+				else{
+					$FamWeediness = null;
+				}
+		
+				if (!empty($row['IsTerminalTaxon'])){
+					$FamIsTerminalTaxon  = $row['IsTerminalTaxon'];
+				}
+				else{
+					$FamIsTerminalTaxon = null;
+				}
+		
+				if (!empty($row['RevisionNumber'])){
+					$FamRevisionNumber  = $row['RevisionNumber'];
+				}
+				else{
+					$FamRevisionNumber = null;
+				}
+		
+				if (!empty($row['RevisionDate'])){
+					$FamRevisionDate  = $row['RevisionDate'];
+				}
+				else{
+					$FamRevisionDate = null;
+				}
+		
+				if (!empty($row['DistCode'])){
+					$FamDistCode = $row['DistCode'];
+				}
+				else{
+					$FamDistCode = null;
+				}
+		
+				if (!empty($row['HasKey'])){
+					$FamHasKey = $row['HasKey'];
+				}
+				else{
+					$FamHasKey = null;
+				}
+		
+				if (!empty($row['TaxonID'])){
+					$FamTaxonID = $row['TaxonID'];
+				}
+				else{
+					$FamTaxonID = null;
+				}
+			}
+		}
+		
+//END FAMILY SQL QUERY ASSIGNMENT
+
+
+//START GENUS SQL QUERY ASSIGNMENT
 
-	while ($row = $results->fetchArray()) {
-
-		if (isset($row['ScientificName'])){
-			$FamScientificName = $row['ScientificName'];
-		}
-		else{
-			$FamScientificName = null;
-		}
-
-		if (isset($row['TaxonAuthor'])){
-			$FamTaxonAuthor = $row['TaxonAuthor'];
-		}
-		else{
-			$FamTaxonAuthor = null;
-		}
-
-		if (isset($row['FormattedDisplayName'])){
-			$FamFormattedDisplayName = $row['FormattedDisplayName'];
-		}
-		else{
-			$FamFormattedDisplayName = null;
-		}
-
-		if (isset($row['CommonName'])){
-			$FamCommonName = $row['CommonName'];
-		}
-		else{
-			$FamCommonName = null;
-		}
-
-		if (isset($row['TJM2Author'])){
-			$FamTJM2Author = $row['TJM2Author'];
-		}
-		else{
-			$FamTJM2Author = null;
-		}
-
-		if (isset($row['ScientificEditor'])){
-			$FamScientificEditor = $row['ScientificEditor'];
-		}
-		else{
-			$FamScientificEditor = null;
-		}
-
-		if (isset($row['Habit'])){
-			$FamHabit = $row['Habit'];
-		}
-		else{
-			$FamHabit = null;
-		}
-
-		if (isset($row['PlantBody'])){
-			$FamPlantBody = $row['PlantBody'];
-		}
-		else{
-			$FamPlantBody = null;
-		}
-
-		if (isset($row['Stem'])){
-			$FamStem = $row['Stem'];
-		}
-		else{
-			$FamStem = null;
-		}
-
-		if (isset($row['SterileStem'])){
-			$FamSterileStem = $row['SterileStem'];
-		}
-		else{
-			$FamSterileStem = null;
-		}
-
-		if (isset($row['FertileStem'])){
-			$FamFertileStem = $row['FertileStem'];
-		}
-		else{
-			$FamFertileStem = null;
-		}
-
-		if (isset($row['Leaf'])){
-			$FamLeaf = $row['Leaf'];
-		}
-		else{
-			$FamLeaf = null;
-		}
-
-		if (isset($row['Spines'])){
-			$FamSpines = $row['Spines'];
-		}
-		else{
-			$FamSpines = null;
-		}
-
-		if (isset($row['Inflorescence'])){
-			$FamInflorescence = $row['Inflorescence'];
-		}
-		else{
-			$FamInflorescence = null;
-		}
-
-		if (isset($row['StaminateHead'])){
-			$FamStaminateHead = $row['StaminateHead'];
-		}
-		else{
-			$FamStaminateHead = null;
-		}
-
-		if (isset($row['RayOrPistillateFlower'])){
-			$FamRayOrPistillateFlower = $row['RayOrPistillateFlower'];
-		}
-		else{
-			$FamRayOrPistillateFlower = null;
-		}
-
-		if (isset($row['PistillateHead'])){
-			$FamPistillateHead = $row['PistillateHead'];
-		}
-		else{
-			$FamPistillateHead = null;
-		}
-
-		if (isset($row['StaminateInflorescence'])){
-			$FamStaminateInflorescence = $row['StaminateInflorescence'];
-		}
-		else{
-			$FamStaminateInflorescence = null;
-		}
-
-		if (isset($row['PistillateOrBisexualInflorescence'])){
-			$FamPistillateOrBisexualInflorescence = $row['PistillateOrBisexualInflorescence'];
-		}
-		else{
-			$FamPistillateOrBisexualInflorescence = null;
-		}
-
-		if (isset($row['PistillateInflorescence'])){
-			$FamPistillateInflorescence = $row['PistillateInflorescence'];
-		}
-		else{
-			$FamPistillateInflorescence = null;
-		}
-
-		if (isset($row['Spikelet'])){
-			$FamSpikelet = $row['Spikelet'];
-		}
-		else{
-			$FamSpikelet = null;
-		}
-
-		if (isset($row['FertileSpikelet'])){
-			$FamFertileSpikelet = $row['FertileSpikelet'];
-		}
-		else{
-			$FamFertileSpikelet = null;
-		}
-
-		if (isset($row['SterileSpikelet'])){
-			$FamSterileSpikelet = $row['SterileSpikelet'];
-		}
-		else{
-			$FamSterileSpikelet = null;
-		}
-
-		if (isset($row['DistalSpikelet'])){
-			$FamDistalSpikelet = $row['DistalSpikelet'];
-		}
-		else{
-			$FamDistalSpikelet = null;
-		}
-
-		if (isset($row['CentralSpikelet'])){
-			$FamCentralSpikelet = $row['CentralSpikelet'];
-		}
-		else{
-			$FamCentralSpikelet = null;
-		}
-
-		if (isset($row['LateralSpikelet'])){
-			$FamLateralSpikelet = $row['LateralSpikelet'];
-		}
-		else{
-			$FamLateralSpikelet = null;
-		}
-
-		if (isset($row['StaminateSpikelet'])){
-			$FamStaminateSpikelet = $row['StaminateSpikelet'];
-		}
-		else{
-			$FamStaminateSpikelet = null;
-		}
-
-		if (isset($row['PistillateSpikelet'])){
-			$FamPistillateSpikelet = $row['PistillateSpikelet'];
-		}
-		else{
-			$FamPistillateSpikelet = null;
-		}
-
-		if (isset($row['Flower'])){
-			$FamFlower = $row['Flower'];
-		}
-		else{
-			$FamFlower = null;
-		}
-
-		if (isset($row['StaminateFlower'])){
-			$FamStaminateFlower = $row['StaminateFlower'];
-		}
-		else{
-			$FamStaminateFlower = null;
-		}
-
-		if (isset($row['PistillateFlower'])){
-			$FamPistillateFlower = $row['PistillateFlower'];
-		}
-		else{
-			$FamPistillateFlower = null;
-		}
-
-		if (isset($row['RayFlower'])){
-			$FamRayFlower = $row['RayFlower'];
-		}
-		else{
-			$FamRayFlower = null;
-		}
-
-		if (isset($row['DiskFlower'])){
-			$FamDiskFlower = $row['DiskFlower'];
-		}
-		else{
-			$FamDiskFlower = null;
-		}
-
-		if (isset($row['Cone'])){
-			$FamCone = $row['Cone'];
-		}
-		else{
-			$FamCone = null;
-		}
-
-		if (isset($row['PollenCone'])){
-			$FamPollenCone = $row['PollenCone'];
-		}
-		else{
-			$FamPollenCone = null;
-		}
-
-		if (isset($row['SeedCone'])){
-			$FamSeedCone = $row['SeedCone'];
-		}
-		else{
-			$FamSeedCone = null;
-		}
-
-		if (isset($row['BisexualFlower'])){
-			$FamBisexualFlower = $row['BisexualFlower'];
-		}
-		else{
-			$FamBisexualFlower = null;
-		}
-
-		if (isset($row['Fruit'])){
-			$FamFruit = $row['Fruit'];
-		}
-		else{
-			$FamFruit = null;
-		}
-
-		if (isset($row['Seed'])){
-			$FamSeed = $row['Seed'];
-		}
-		else{
-			$FamSeed = null;
-		}
-
-		if (isset($row['Sporangia'])){
-			$FamSporangia = $row['Sporangia'];
-		}
-		else{
-			$FamSporangia = null;
-		}
-
-		if (isset($row['SporangiumCase'])){
-			$FamSporangiumCase = $row['SporangiumCase'];
-		}
-		else{
-			$FamSporangiumCase = null;
-		}
-
-		if (isset($row['MaleSporangiumCase'])){
-			$FamMaleSporangiumCase = $row['MaleSporangiumCase'];
-		}
-		else{
-			$FamMaleSporangiumCase = null;
-		}
-
-		if (isset($row['FemaleSporangiumCase'])){
-			$FamFemaleSporangiumCase = $row['FemaleSporangiumCase'];
-		}
-		else{
-			$FamFemaleSporangiumCase = null;
-		}
-
-		if (isset($row['Spores'])){
-			$FamSpores = $row['Spores'];
-		}
-		else{
-			$FamSpores = null;
-		}
-
-		if (isset($row['Chromosomes'])){
-			$FamChromosomes = $row['Chromosomes'];
-		}
-		else{
-			$FamChromosomes = null;
-		}
-
-		if (isset($row['RarityStatus'])){
-			$FamRarityStatus = $row['RarityStatus'];
-		}
-		else{
-			$FamRarityStatus = null;
-		}
-
-		if (isset($row['Ecology'])){
-			$FamEcology = $row['Ecology'];
-		}
-		else{
-			$FamEcology = null;
-		}
-
-		if (isset($row['Elevation'])){
-			$FamElevation = $row['Elevation'];
-		}
-		else{
-			$FamElevation = null;
-		}
-
-		if (isset($row['BioregionalDistribution'])){
-			$FamBioregionalDistribution = $row['BioregionalDistribution'];
-		}
-		else{
-			$FamBioregionalDistribution = null;
-		}
-
-		if (isset($row['OutsideCA'])){
-			$FamOutsideCA = $row['OutsideCA'];
-		}
-		else{
-			$FamOutsideCA = null;
-		}
-
-		if (isset($row['SpeciesInGenus'])){
-			$FamSpeciesInGenus = $row['SpeciesInGenus'];
-		}
-		else{
-			$FamSpeciesInGenus = null;
-		}
-
-		if (isset($row['GeneraInFamily'])){
-			$FamGeneraInFamily = $row['GeneraInFamily'];
-		}
-		else{
-			$FamGeneraInFamily = null;
-		}
-
-		if (isset($row['Etymology'])){
-			$FamEtymology = $row['Etymology'];
-		}
-		else{
-			$FamEtymology = null;
-		}
-
-		if (isset($row['Toxicity'])){
-			$FamToxicity = $row['Toxicity'];
-		}
-		else{
-			$FamToxicity = null;
-		}
-
-		if (isset($row['Synonyms'])){
-			$FamSynonyms = $row['Synonyms'];
-		}
-		else{
-			$FamSynonyms = null;
-		}
-
-		if (isset($row['UnabridgedSynonyms'])){
-			$FamUnabridgedSynonyms = $row['UnabridgedSynonyms'];
-		}
-		else{
-			$FamUnabridgedSynonyms = null;
-		}
-
-		if (isset($row['Reference'])){
-			$FamReference = $row['Reference'];
-		}
-		else{
-			$FamReference = null;
-		}
-
-		if (isset($row['UnabridgedReference'])){
-			$FamUnabridgedReference = $row['UnabridgedReference'];
-		}
-		else{
-			$FamUnabridgedReference = null;
-		}
-
-		if (isset($row['Note'])){
-			$FamNote = $row['Note'];
-		}
-		else{
-			$FamNote = null;
-		}
-
-		if (isset($row['UnabridgedNote'])){
-			$FamUnabridgedNote = $row['UnabridgedNote'];
-		}
-		else{
-			$FamUnabridgedNote = null;
-		}
-
-		if (isset($row['FloweringTime'])){
-			$FamFloweringTime = $row['FloweringTime'];
-		}
-		else{
-			$FamFloweringTime = null;
-		}
-
-		if (isset($row['FloweringTimeCode'])){
-			$FamTimeCode = $row['FloweringTimeCode'];
-		}
-		else{
-			$FamTimeCode = null;
-		}
-
-		if (isset($row['FruitingTime'])){
-			$FamFruitingTime = $row['FruitingTime'];
-		}
-		else{
-			$FamFruitingTime = null;
-		}
-
-		if (isset($row['Weediness'])){
-			$FamWeediness = $row['Weediness'];
-		}
-		else{
-			$FamWeediness = null;
-		}
-
-		if (isset($row['IsTerminalTaxon'])){
-			$FamIsTerminalTaxon  = $row['IsTerminalTaxon'];
-		}
-		else{
-			$FamIsTerminalTaxon = null;
-		}
-
-		if (isset($row['RevisionNumber'])){
-			$FamRevisionNumber  = $row['RevisionNumber'];
-		}
-		else{
-			$FamRevisionNumber = null;
-		}
-
-		if (isset($row['RevisionDate'])){
-			$FamRevisionDate  = $row['RevisionDate'];
-		}
-		else{
-			$FamRevisionDate = null;
-		}
-
-		if (isset($row['DistCode'])){
-			$FamDistCode = $row['DistCode'];
-		}
-		else{
-			$FamDistCode = null;
-		}
-
-		if (isset($row['HasKey'])){
-			$FamHasKey = $row['HasKey'];
-		}
-		else{
-			$FamHasKey = null;
-		}
-
-		if (isset($row['TaxonID'])){
-			$FamTaxonID = $row['TaxonID'];
-		}
-		else{
-			$FamTaxonID = null;
-		}
-	}
 
   //query and assign genus info
   //Note that only Genus has "SpeciesInGenus"
-  $results = $db->query('SELECT t.TaxonID, t.GenusID, g.TaxonID, g.ScientificName, g.TaxonAuthor, g.CommonName, g.TJM2Author, g.Habit, g.PlantBody, g.Stem, g.SterileStem, g.FertileStem, g.Leaf, g.Spines, g.Inflorescence, g.StaminateHead, g.RayOrPistillateFlower, g.PistillateHead, g.StaminateInflorescence, g.PistillateOrBisexualInflorescence, g.PistillateInflorescence, g.Spikelet, g.FertileSpikelet, g.SterileSpikelet, g.DistalSpikelet, g.CentralSpikelet, g.LateralSpikelet, g.StaminateSpikelet, g.PistillateSpikelet, g.Flower, g.StaminateFlower, g.PistillateFlower, g.RayFlower, g.DiskFlower, g.Cone, g.PollenCone, g.SeedCone, g.BisexualFlower, g.Fruit, g.Seed, g.Sporangia, g.SporangiumCase, g.MaleSporangiumCase, g.FemaleSporangiumCase, g.Spores, g.Chromosomes, g.SpeciesInGenus, g.Etymology, g.Toxicity, g.Synonyms, g.UnabridgedSynonyms, g.Reference, g.UnabridgedReference, g.Note, g.UnabridgedNote, g.RevisionNumber, g.RevisionDate, g.HasKey
-						from eflora_taxonomy t, eflora_taxa g
-						WHERE t.TaxonID='.$TID.' AND t.GenusID=g.TaxonID');
+  //added as g.SpeciesInGenus
+  //in text file, all genera should be checked if there is SpeciesInGenus line
+  //GeneraInFamily and ScientificEditor removed
+		if (!empty($TID)){
+				$sql = "SELECT t.TaxonID, t.FamilyID";
+//Genus
+				$sql.= ", g.TaxonID, g.ScientificName, g.TaxonAuthor, g.CommonName";
+				$sql.= ", g.TJM2Author, g.SpeciesInGenus, g.Habit, g.PlantBody, g.Stem";
+				$sql.= ", g.SterileStem, g.FertileStem, g.Leaf, g.Spines, g.Inflorescence";
+				$sql.= ", g.StaminateHead, g.RayOrPistillateFlower, g.PistillateHead, g.StaminateInflorescence";
+				$sql.= ", g.PistillateOrBisexualInflorescence, g.PistillateInflorescence, g.Spikelet, g.FertileSpikelet";
+				$sql.= ", g.SterileSpikelet, g.DistalSpikelet, g.CentralSpikelet, g.LateralSpikelet, g.StaminateSpikelet";
+				$sql.= ", g.PistillateSpikelet, g.Flower, g.StaminateFlower, g.PistillateFlower, g.RayFlower, g.DiskFlower";
+				$sql.= ", g.Cone, g.PollenCone, g.SeedCone, g.BisexualFlower, g.Fruit, g.Seed, g.Sporangia, g.SporangiumCase";
+				$sql.= ", g.MaleSporangiumCase, g.FemaleSporangiumCase, g.Spores, g.Chromosomes, g.Etymology";
+				$sql.= ", g.Toxicity, g.Synonyms, g.UnabridgedSynonyms, g.Note, g.UnabridgedNote, g.RevisionNumber";
+				$sql.= ", g.RevisionDate, g.HasKey";
+				$sql.= " from eflora_taxonomy t, eflora_taxa g";
+				$sql.= " WHERE t.TaxonID=".$TID." AND t.GenusID=g.TaxonID";
+
+//BEGIN temporary bug fix lines to add when needed
+//echo '<br>'.$sql.'<br>';
+
+			if(!mysqli_query($db, $sql)){
+				die('Error: ' . mysqli_error($db));
+			}
+
+			$result = mysqli_query($db, $sql);
+
+//query and assign variable to each table field
+			while ($row = mysqli_fetch_array($result)) {
+
+// If no results are found, echo a message and stop
+				if ($row == false){
+					echo '<b>Genus was not found in the eflora taxon table.<br>Try another search.<br>';
+    				exit;
+				}
+//BEGIN temporary bug fix lines to add when needed
+//foreach ($row as $key=>$value) {
+//    echo $key."<br>";
+//}
+//END temp bug fix lines
+				if (!empty($row['ScientificName'])){
+					$GenScientificName = $row['ScientificName'];
+				}
+				else{
+					$GenScientificName = null;
+				}
+		
+				if (!empty($row['TaxonAuthor'])){
+					$GenTaxonAuthor = $row['TaxonAuthor'];
+				}
+				else{
+					$GenTaxonAuthor = null;
+				}
+		
+				if (!empty($row['FormattedDisplayName'])){
+					$GenFormattedDisplayName = $row['FormattedDisplayName'];
+				}
+				else{
+					$GenFormattedDisplayName = null;
+				}
+		
+				if (!empty($row['CommonName'])){
+					$GenCommonName = $row['CommonName'];
+				}
+				else{
+					$GenCommonName = null;
+				}
+		
+				if (!empty($row['TJM2Author'])){
+					$GenTJM2Author = $row['TJM2Author'];
+				}
+				else{
+					$GenTJM2Author = null;
+				}
+		
+				if (!empty($row['ScientificEditor'])){
+					$GenScientificEditor = $row['ScientificEditor'];
+				}
+				else{
+					$GenScientificEditor = null;
+				}
+		
+				if (!empty($row['Habit'])){
+					$GenHabit = $row['Habit'];
+				}
+				else{
+					$GenHabit = null;
+				}
+		
+				if (!empty($row['PlantBody'])){
+					$GenPlantBody = $row['PlantBody'];
+				}
+				else{
+					$GenPlantBody = null;
+				}
+		
+				if (!empty($row['Stem'])){
+					$GenStem = $row['Stem'];
+				}
+				else{
+					$GenStem = null;
+				}
+		
+				if (!empty($row['SterileStem'])){
+					$GenSterileStem = $row['SterileStem'];
+				}
+				else{
+					$GenSterileStem = null;
+				}
+		
+				if (!empty($row['FertileStem'])){
+					$GenFertileStem = $row['FertileStem'];
+				}
+				else{
+					$GenFertileStem = null;
+				}
+		
+				if (!empty($row['Leaf'])){
+					$GenLeaf = $row['Leaf'];
+				}
+				else{
+					$GenLeaf = null;
+				}
+		
+				if (!empty($row['Spines'])){
+					$GenSpines = $row['Spines'];
+				}
+				else{
+					$GenSpines = null;
+				}
+		
+				if (!empty($row['Inflorescence'])){
+					$GenInflorescence = $row['Inflorescence'];
+				}
+				else{
+					$GenInflorescence = null;
+				}
+		
+				if (!empty($row['StaminateHead'])){
+					$GenStaminateHead = $row['StaminateHead'];
+				}
+				else{
+					$GenStaminateHead = null;
+				}
+		
+				if (!empty($row['RayOrPistillateFlower'])){
+					$GenRayOrPistillateFlower = $row['RayOrPistillateFlower'];
+				}
+				else{
+					$GenRayOrPistillateFlower = null;
+				}
+		
+				if (!empty($row['PistillateHead'])){
+					$GenPistillateHead = $row['PistillateHead'];
+				}
+				else{
+					$GenPistillateHead = null;
+				}
+		
+				if (!empty($row['StaminateInflorescence'])){
+					$GenStaminateInflorescence = $row['StaminateInflorescence'];
+				}
+				else{
+					$GenStaminateInflorescence = null;
+				}
+		
+				if (!empty($row['PistillateOrBisexualInflorescence'])){
+					$GenPistillateOrBisexualInflorescence = $row['PistillateOrBisexualInflorescence'];
+				}
+				else{
+					$GenPistillateOrBisexualInflorescence = null;
+				}
+		
+				if (!empty($row['PistillateInflorescence'])){
+					$GenPistillateInflorescence = $row['PistillateInflorescence'];
+				}
+				else{
+					$GenPistillateInflorescence = null;
+				}
+		
+				if (!empty($row['Spikelet'])){
+					$GenSpikelet = $row['Spikelet'];
+				}
+				else{
+					$GenSpikelet = null;
+				}
+		
+				if (!empty($row['FertileSpikelet'])){
+					$GenFertileSpikelet = $row['FertileSpikelet'];
+				}
+				else{
+					$GenFertileSpikelet = null;
+				}
+		
+				if (!empty($row['SterileSpikelet'])){
+					$GenSterileSpikelet = $row['SterileSpikelet'];
+				}
+				else{
+					$GenSterileSpikelet = null;
+				}
+		
+				if (!empty($row['DistalSpikelet'])){
+					$GenDistalSpikelet = $row['DistalSpikelet'];
+				}
+				else{
+					$GenDistalSpikelet = null;
+				}
+		
+				if (!empty($row['CentralSpikelet'])){
+					$GenCentralSpikelet = $row['CentralSpikelet'];
+				}
+				else{
+					$GenCentralSpikelet = null;
+				}
+		
+				if (!empty($row['LateralSpikelet'])){
+					$GenLateralSpikelet = $row['LateralSpikelet'];
+				}
+				else{
+					$GenLateralSpikelet = null;
+				}
+		
+				if (!empty($row['StaminateSpikelet'])){
+					$GenStaminateSpikelet = $row['StaminateSpikelet'];
+				}
+				else{
+					$GenStaminateSpikelet = null;
+				}
+		
+				if (!empty($row['PistillateSpikelet'])){
+					$GenPistillateSpikelet = $row['PistillateSpikelet'];
+				}
+				else{
+					$GenPistillateSpikelet = null;
+				}
+		
+				if (!empty($row['Flower'])){
+					$GenFlower = $row['Flower'];
+				}
+				else{
+					$GenFlower = null;
+				}
+		
+				if (!empty($row['StaminateFlower'])){
+					$GenStaminateFlower = $row['StaminateFlower'];
+				}
+				else{
+					$GenStaminateFlower = null;
+				}
+		
+				if (!empty($row['PistillateFlower'])){
+					$GenPistillateFlower = $row['PistillateFlower'];
+				}
+				else{
+					$GenPistillateFlower = null;
+				}
+		
+				if (!empty($row['RayFlower'])){
+					$GenRayFlower = $row['RayFlower'];
+				}
+				else{
+					$GenRayFlower = null;
+				}
+		
+				if (!empty($row['DiskFlower'])){
+					$GenDiskFlower = $row['DiskFlower'];
+				}
+				else{
+					$GenDiskFlower = null;
+				}
+		
+				if (!empty($row['Cone'])){
+					$GenCone = $row['Cone'];
+				}
+				else{
+					$GenCone = null;
+				}
+		
+				if (!empty($row['PollenCone'])){
+					$GenPollenCone = $row['PollenCone'];
+				}
+				else{
+					$GenPollenCone = null;
+				}
+		
+				if (!empty($row['SeedCone'])){
+					$GenSeedCone = $row['SeedCone'];
+				}
+				else{
+					$GenSeedCone = null;
+				}
+		
+				if (!empty($row['BisexualFlower'])){
+					$GenBisexualFlower = $row['BisexualFlower'];
+				}
+				else{
+					$GenBisexualFlower = null;
+				}
+		
+				if (!empty($row['Fruit'])){
+					$GenFruit = $row['Fruit'];
+				}
+				else{
+					$GenFruit = null;
+				}
+		
+				if (!empty($row['Seed'])){
+					$GenSeed = $row['Seed'];
+				}
+				else{
+					$GenSeed = null;
+				}
+		
+				if (!empty($row['Sporangia'])){
+					$GenSporangia = $row['Sporangia'];
+				}
+				else{
+					$GenSporangia = null;
+				}
+		
+				if (!empty($row['SporangiumCase'])){
+					$GenSporangiumCase = $row['SporangiumCase'];
+				}
+				else{
+					$GenSporangiumCase = null;
+				}
+		
+				if (!empty($row['MaleSporangiumCase'])){
+					$GenMaleSporangiumCase = $row['MaleSporangiumCase'];
+				}
+				else{
+					$GenMaleSporangiumCase = null;
+				}
+		
+				if (!empty($row['FemaleSporangiumCase'])){
+					$GenFemaleSporangiumCase = $row['FemaleSporangiumCase'];
+				}
+				else{
+					$GenFemaleSporangiumCase = null;
+				}
+		
+				if (!empty($row['Spores'])){
+					$GenSpores = $row['Spores'];
+				}
+				else{
+					$GenSpores = null;
+				}
+		
+				if (!empty($row['Chromosomes'])){
+					$GenChromosomes = $row['Chromosomes'];
+				}
+				else{
+					$GenChromosomes = null;
+				}
+		
+				if (!empty($row['RarityStatus'])){
+					$GenRarityStatus = $row['RarityStatus'];
+				}
+				else{
+					$GenRarityStatus = null;
+				}
+		
+				if (!empty($row['Ecology'])){
+					$GenEcology = $row['Ecology'];
+				}
+				else{
+					$GenEcology = null;
+				}
+		
+				if (!empty($row['Elevation'])){
+					$GenElevation = $row['Elevation'];
+				}
+				else{
+					$GenElevation = null;
+				}
+		
+				if (!empty($row['BioregionalDistribution'])){
+					$GenBioregionalDistribution = $row['BioregionalDistribution'];
+				}
+				else{
+					$GenBioregionalDistribution = null;
+				}
+		
+				if (!empty($row['OutsideCA'])){
+					$GenOutsideCA = $row['OutsideCA'];
+				}
+				else{
+					$GenOutsideCA = null;
+				}
+		
+				if (!empty($row['SpeciesInGenus'])){
+					$GenSpeciesInGenus = $row['SpeciesInGenus'];
+				}
+				else{
+					$GenSpeciesInGenus = null;
+				}
+		
+				if (!empty($row['GeneraInFamily'])){
+					$GenGeneraInFamily = $row['GeneraInFamily'];
+				}
+				else{
+					$GenGeneraInFamily = null;
+				}
+		
+				if (!empty($row['Etymology'])){
+					$GenEtymology = $row['Etymology'];
+				}
+				else{
+					$GenEtymology = null;
+				}
+		
+				if (!empty($row['Toxicity'])){
+					$GenToxicity = $row['Toxicity'];
+				}
+				else{
+					$GenToxicity = null;
+				}
+		
+				if (!empty($row['Synonyms'])){
+					$GenSynonyms = $row['Synonyms'];
+				}
+				else{
+					$GenSynonyms = null;
+				}
+		
+				if (!empty($row['UnabridgedSynonyms'])){
+					$GenUnabridgedSynonyms = $row['UnabridgedSynonyms'];
+				}
+				else{
+					$GenUnabridgedSynonyms = null;
+				}
+		
+				if (!empty($row['Reference'])){
+					$GenReference = $row['Reference'];
+				}
+				else{
+					$GenReference = null;
+				}
+		
+				if (!empty($row['UnabridgedReference'])){
+					$GenUnabridgedReference = $row['UnabridgedReference'];
+				}
+				else{
+					$GenUnabridgedReference = null;
+				}
+		
+				if (!empty($row['Note'])){
+					$GenNote = $row['Note'];
+				}
+				else{
+					$GenNote = null;
+				}
+		
+				if (!empty($row['UnabridgedNote'])){
+					$GenUnabridgedNote = $row['UnabridgedNote'];
+				}
+				else{
+					$GenUnabridgedNote = null;
+				}
+		
+				if (!empty($row['FloweringTime'])){
+					$GenFloweringTime = $row['FloweringTime'];
+				}
+				else{
+					$GenFloweringTime = null;
+				}
+		
+				if (!empty($row['FloweringTimeCode'])){
+					$GenTimeCode = $row['FloweringTimeCode'];
+				}
+				else{
+					$GenTimeCode = null;
+				}
+		
+				if (!empty($row['FruitingTime'])){
+					$GenFruitingTime = $row['FruitingTime'];
+				}
+				else{
+					$GenFruitingTime = null;
+				}
+		
+				if (!empty($row['Weediness'])){
+					$GenWeediness = $row['Weediness'];
+				}
+				else{
+					$GenWeediness = null;
+				}
+		
+				if (!empty($row['IsTerminalTaxon'])){
+					$GenIsTerminalTaxon  = $row['IsTerminalTaxon'];
+				}
+				else{
+					$GenIsTerminalTaxon = null;
+				}
+		
+				if (!empty($row['RevisionNumber'])){
+					$GenRevisionNumber  = $row['RevisionNumber'];
+				}
+				else{
+					$GenRevisionNumber = null;
+				}
+		
+				if (!empty($row['RevisionDate'])){
+					$GenRevisionDate  = $row['RevisionDate'];
+				}
+				else{
+					$GenRevisionDate = null;
+				}
+		
+				if (!empty($row['DistCode'])){
+					$GenDistCode = $row['DistCode'];
+				}
+				else{
+					$GenDistCode = null;
+				}
+		
+				if (!empty($row['HasKey'])){
+					$GenHasKey = $row['HasKey'];
+				}
+				else{
+					$GenHasKey = null;
+				}
+		
+				if (!empty($row['TaxonID'])){
+					$GenTaxonID = $row['TaxonID'];
+				}
+				else{
+					$GenTaxonID = null;
+				}
+			}
+		}
+
+
+
+//END FAMILY SQL QUERY ASSIGNMENT
+
+
+//START GENUS SQL QUERY ASSIGNMENT
 
-	while ($row = $results->fetchArray()) {
-
-		if (!empty($row['ScientificName'])){
-			$GenScientificName = $row['ScientificName'];
-		}
-		else{
-			$GenScientificName = null;
-		}
-
-		if (!empty($row['TaxonAuthor'])){
-			$GenTaxonAuthor = $row['TaxonAuthor'];
-		}
-		else{
-			$GenTaxonAuthor = null;
-		}
-
-		if (!empty($row['FormattedDisplayName'])){
-			$GenFormattedDisplayName = $row['FormattedDisplayName'];
-		}
-		else{
-			$GenFormattedDisplayName = null;
-		}
-
-		if (!empty($row['CommonName'])){
-			$GenCommonName = $row['CommonName'];
-		}
-		else{
-			$GenCommonName = null;
-		}
-
-
-		if (!empty($row['TJM2Author'])){
-			$GenTJM2Author = $row['TJM2Author'];
-		}
-		else{
-			$GenTJM2Author = null;
-		}
-
-		if (!empty($row['ScientificEditor'])){
-			$GenScientificEditor = $row['ScientificEditor'];
-		}
-		else{
-			$GenScientificEditor = null;
-		}
-
-		if (!empty($row['Habit'])){
-			$GenHabit = $row['Habit'];
-		}
-		else{
-			$GenHabit = null;
-		}
-
-		if (!empty($row['PlantBody'])){
-			$GenPlantBody = $row['PlantBody'];
-		}
-		else{
-			$GenPlantBody = null;
-		}
-
-		if (!empty($row['Stem'])){
-			$GenStem = $row['Stem'];
-		}
-		else{
-			$GenStem = null;
-		}
-
-		if (!empty($row['SterileStem'])){
-			$GenSterileStem = $row['SterileStem'];
-		}
-		else{
-			$GenSterileStem = null;
-		}
-
-		if (!empty($row['FertileStem'])){
-			$GenFertileStem = $row['FertileStem'];
-		}
-		else{
-			$GenFertileStem = null;
-		}
-
-		if (!empty($row['Leaf'])){
-			$GenLeaf = $row['Leaf'];
-		}
-		else{
-			$GenLeaf = null;
-		}
-
-		if (!empty($row['Spines'])){
-			$GenSpines = $row['Spines'];
-		}
-		else{
-			$GenSpines = null;
-		}
-
-		if (!empty($row['Inflorescence'])){
-			$GenInflorescence = $row['Inflorescence'];
-		}
-		else{
-			$GenInflorescence = null;
-		}
-
-		if (!empty($row['StaminateHead'])){
-			$GenStaminateHead = $row['StaminateHead'];
-		}
-		else{
-			$GenStaminateHead = null;
-		}
-
-		if (!empty($row['RayOrPistillateFlower'])){
-			$GenRayOrPistillateFlower = $row['RayOrPistillateFlower'];
-		}
-		else{
-			$GenRayOrPistillateFlower = null;
-		}
-
-		if (!empty($row['PistillateHead'])){
-			$GenPistillateHead = $row['PistillateHead'];
-		}
-		else{
-			$GenPistillateHead = null;
-		}
-
-		if (!empty($row['StaminateInflorescence'])){
-			$GenStaminateInflorescence = $row['StaminateInflorescence'];
-		}
-		else{
-			$GenStaminateInflorescence = null;
-		}
-
-		if (!empty($row['PistillateOrBisexualInflorescence'])){
-			$GenPistillateOrBisexualInflorescence = $row['PistillateOrBisexualInflorescence'];
-		}
-		else{
-			$GenPistillateOrBisexualInflorescence = null;
-		}
-
-		if (!empty($row['PistillateInflorescence'])){
-			$GenPistillateInflorescence = $row['PistillateInflorescence'];
-		}
-		else{
-			$GenPistillateInflorescence = null;
-		}
-
-		if (!empty($row['Spikelet'])){
-			$GenSpikelet = $row['Spikelet'];
-		}
-		else{
-			$GenSpikelet = null;
-		}
-
-		if (!empty($row['FertileSpikelet'])){
-			$GenFertileSpikelet = $row['FertileSpikelet'];
-		}
-		else{
-			$GenFertileSpikelet = null;
-		}
-
-		if (!empty($row['SterileSpikelet'])){
-			$GenSterileSpikelet = $row['SterileSpikelet'];
-		}
-		else{
-			$GenSterileSpikelet = null;
-		}
-
-		if (!empty($row['DistalSpikelet'])){
-			$GenDistalSpikelet = $row['DistalSpikelet'];
-		}
-		else{
-			$GenDistalSpikelet = null;
-		}
-
-		if (!empty($row['CentralSpikelet'])){
-			$GenCentralSpikelet = $row['CentralSpikelet'];
-		}
-		else{
-			$GenCentralSpikelet = null;
-		}
-
-		if (!empty($row['LateralSpikelet'])){
-			$GenLateralSpikelet = $row['LateralSpikelet'];
-		}
-		else{
-			$GenLateralSpikelet = null;
-		}
-
-		if (!empty($row['StaminateSpikelet'])){
-			$GenStaminateSpikelet = $row['StaminateSpikelet'];
-		}
-		else{
-			$GenStaminateSpikelet = null;
-		}
-
-		if (!empty($row['PistillateSpikelet'])){
-			$GenPistillateSpikelet = $row['PistillateSpikelet'];
-		}
-		else{
-			$GenPistillateSpikelet = null;
-		}
-
-		if (!empty($row['Flower'])){
-			$GenFlower = $row['Flower'];
-		}
-		else{
-			$GenFlower = null;
-		}
-
-		if (!empty($row['StaminateFlower'])){
-			$GenStaminateFlower = $row['StaminateFlower'];
-		}
-		else{
-			$GenStaminateFlower = null;
-		}
-
-		if (!empty($row['PistillateFlower'])){
-			$GenPistillateFlower = $row['PistillateFlower'];
-		}
-		else{
-			$GenPistillateFlower = null;
-		}
-
-		if (!empty($row['RayFlower'])){
-			$GenRayFlower = $row['RayFlower'];
-		}
-		else{
-			$GenRayFlower = null;
-		}
-
-		if (!empty($row['DiskFlower'])){
-			$GenDiskFlower = $row['DiskFlower'];
-		}
-		else{
-			$GenDiskFlower = null;
-		}
-
-		if (!empty($row['Cone'])){
-			$GenCone = $row['Cone'];
-		}
-		else{
-			$GenCone = null;
-		}
-
-		if (!empty($row['PollenCone'])){
-			$GenPollenCone = $row['PollenCone'];
-		}
-		else{
-			$GenPollenCone = null;
-		}
-
-		if (!empty($row['SeedCone'])){
-			$GenSeedCone = $row['SeedCone'];
-		}
-		else{
-			$GenSeedCone = null;
-		}
-
-		if (!empty($row['BisexualFlower'])){
-			$GenBisexualFlower = $row['BisexualFlower'];
-		}
-		else{
-			$GenBisexualFlower = null;
-		}
-
-		if (!empty($row['Fruit'])){
-			$GenFruit = $row['Fruit'];
-		}
-		else{
-			$GenFruit = null;
-		}
-
-		if (!empty($row['Seed'])){
-			$GenSeed = $row['Seed'];
-		}
-		else{
-			$GenSeed = null;
-		}
-
-		if (!empty($row['Sporangia'])){
-			$GenSporangia = $row['Sporangia'];
-		}
-		else{
-			$GenSporangia = null;
-		}
-
-		if (!empty($row['SporangiumCase'])){
-			$GenSporangiumCase = $row['SporangiumCase'];
-		}
-		else{
-			$GenSporangiumCase = null;
-		}
-
-		if (!empty($row['MaleSporangiumCase'])){
-			$GenMaleSporangiumCase = $row['MaleSporangiumCase'];
-		}
-		else{
-			$GenMaleSporangiumCase = null;
-		}
-
-		if (!empty($row['FemaleSporangiumCase'])){
-			$GenFemaleSporangiumCase = $row['FemaleSporangiumCase'];
-		}
-		else{
-			$GenFemaleSporangiumCase = null;
-		}
-
-		if (!empty($row['Spores'])){
-			$GenSpores = $row['Spores'];
-		}
-		else{
-			$GenSpores = null;
-		}
-
-		if (!empty($row['Chromosomes'])){
-			$GenChromosomes = $row['Chromosomes'];
-		}
-		else{
-			$GenChromosomes = null;
-		}
-
-		if (!empty($row['RarityStatus'])){
-			$GenRarityStatus = $row['RarityStatus'];
-		}
-		else{
-			$GenRarityStatus = null;
-		}
-
-		if (!empty($row['Ecology'])){
-			$GenEcology = $row['Ecology'];
-		}
-		else{
-			$GenEcology = null;
-		}
-
-		if (!empty($row['Elevation'])){
-			$GenElevation = $row['Elevation'];
-		}
-		else{
-			$GenElevation = null;
-		}
-
-		if (!empty($row['BioregionalDistribution'])){
-			$GenBioregionalDistribution = $row['BioregionalDistribution'];
-		}
-		else{
-			$GenBioregionalDistribution = null;
-		}
-
-		if (!empty($row['OutsideCA'])){
-			$GenOutsideCA = $row['OutsideCA'];
-		}
-		else{
-			$GenOutsideCA = null;
-		}
-
-		if (!empty($row['SpeciesInGenus'])){
-			$GenSpeciesInGenus = $row['SpeciesInGenus'];
-		}
-		else{
-			$GenSpeciesInGenus = null;
-		}
-
-		if (!empty($row['GeneraInFamily'])){
-			$GenGeneraInFamily = $row['GeneraInFamily'];
-		}
-		else{
-			$GenGeneraInFamily = null;
-		}
-
-		if (!empty($row['Etymology'])){
-			$GenEtymology = $row['Etymology'];
-		}
-		else{
-			$GenEtymology = null;
-		}
-
-		if (!empty($row['Toxicity'])){
-			$GenToxicity = $row['Toxicity'];
-		}
-		else{
-			$GenToxicity = null;
-		}
-
-		if (!empty($row['Synonyms'])){
-			$GenSynonyms = $row['Synonyms'];
-		}
-		else{
-			$GenSynonyms = null;
-		}
-
-		if (!empty($row['UnabridgedSynonyms'])){
-			$GenUnabridgedSynonyms = $row['UnabridgedSynonyms'];
-		}
-		else{
-			$GenUnabridgedSynonyms = null;
-		}
-
-		if (!empty($row['Reference'])){
-			$GenReference = $row['Reference'];
-		}
-		else{
-			$GenReference = null;
-		}
-
-		if (!empty($row['UnabridgedReference'])){
-			$GenUnabridgedReference = $row['UnabridgedReference'];
-		}
-		else{
-			$GenUnabridgedReference = null;
-		}
-
-		if (!empty($row['Note'])){
-			$GenNote = $row['Note'];
-		}
-		else{
-			$GenNote = null;
-		}
-
-		if (!empty($row['UnabridgedNote'])){
-			$GenUnabridgedNote = $row['UnabridgedNote'];
-		}
-		else{
-			$GenUnabridgedNote = null;
-		}
-
-		if (!empty($row['FloweringTime'])){
-			$GenFloweringTime = $row['FloweringTime'];
-		}
-		else{
-			$GenFloweringTime = null;
-		}
-
-		if (!empty($row['FloweringTimeCode'])){
-			$GenTimeCode = $row['FloweringTimeCode'];
-		}
-		else{
-			$GenTimeCode = null;
-		}
-
-		if (!empty($row['FruitingTime'])){
-			$GenFruitingTime = $row['FruitingTime'];
-		}
-		else{
-			$GenFruitingTime = null;
-		}
-
-		if (!empty($row['Weediness'])){
-			$GenWeediness = $row['Weediness'];
-		}
-		else{
-			$GenWeediness = null;
-		}
-
-		if (!empty($row['IsTerminalTaxon'])){
-			$GenIsTerminalTaxon  = $row['IsTerminalTaxon'];
-		}
-		else{
-			$GenIsTerminalTaxon = null;
-		}
-
-		if (!empty($row['RevisionNumber'])){
-			$GenRevisionNumber  = $row['RevisionNumber'];
-		}
-		else{
-			$GenRevisionNumber = null;
-		}
-
-		if (!empty($row['RevisionDate'])){
-			$GenRevisionDate  = $row['RevisionDate'];
-		}
-		else{
-			$GenRevisionDate = null;
-		}
-
-		if (!empty($row['DistCode'])){
-			$GenDistCode = $row['DistCode'];
-		}
-		else{
-			$GenDistCode = null;
-		}
-
-		if (!empty($row['HasKey'])){
-			$GenHasKey = $row['HasKey'];
-		}
-		else{
-			$GenHasKey = null;
-		}
-
-		if (!empty($row['TaxonID'])){
-			$GenTaxonID = $row['TaxonID'];
-		}
-		else{
-			$GenTaxonID = null;
-		}
-	}
 
   //query and assign species info
-  //Species has neither GeneraInFamily nor SpeciesInGenus
-  $results = $db->query('SELECT t.TaxonID, t.SpeciesID, s.TaxonID, s.ScientificName, s.TaxonAuthor, s.CommonName, s.TJM2Author, s.Habit, s.PlantBody, s.Stem, s.SterileStem, s.FertileStem, s.Leaf, s.Spines, s.Inflorescence, s.StaminateHead, s.RayOrPistillateFlower, s.PistillateHead, s.StaminateInflorescence, s.PistillateOrBisexualInflorescence, s.PistillateInflorescence, s.Spikelet, s.FertileSpikelet, s.SterileSpikelet, s.DistalSpikelet, s.CentralSpikelet, s.LateralSpikelet, s.StaminateSpikelet, s.PistillateSpikelet, s.Flower, s.StaminateFlower, s.PistillateFlower, s.RayFlower, s.DiskFlower, s.Cone, s.PollenCone, s.SeedCone, s.BisexualFlower, s.Fruit, s.Seed, s.Sporangia, s.SporangiumCase, s.MaleSporangiumCase, s.FemaleSporangiumCase, s.Spores, s.Chromosomes, s.Etymology, s.Toxicity, s.Synonyms, s.UnabridgedSynonyms, s.Reference, s.UnabridgedReference, s.Note, s.UnabridgedNote, s.RevisionNumber, s.RevisionDate, s.HasKey
-						from eflora_taxonomy t, eflora_taxa s
-						WHERE t.TaxonID='.$TID.' AND t.SpeciesID=s.TaxonID');
-
-	while ($row = $results->fetchArray()) {
-
-		if (isset($row['ScientificName'])){
-			$SpecScientificName = $row['ScientificName'];
-		}
-		else{
-			$SpecScientificName = null;
-		}
-
-		if (isset($row['TaxonAuthor'])){
-			$SpecTaxonAuthor = $row['TaxonAuthor'];
-		}
-		else{
-			$SpecTaxonAuthor = null;
-		}
-
-		if (isset($row['FormattedDisplayName'])){
-			$SpecFormattedDisplayName = $row['FormattedDisplayName'];
-		}
-		else{
-			$SpecFormattedDisplayName = null;
-		}
-
-		if (isset($row['CommonName'])){
-			$SpecCommonName = $row['CommonName'];
-		}
-		else{
-			$SpecCommonName = null;
-		}
-
-		if (isset($row['TJM2Author'])){
-			$SpecTJM2Author = $row['TJM2Author'];
-		}
-		else{
-			$SpecTJM2Author = null;
-		}
-
-		if (isset($row['ScientificEditor'])){
-			$SpecScientificEditor = $row['ScientificEditor'];
-		}
-		else{
-			$SpecScientificEditor = null;
-		}
-
-		if (isset($row['Habit'])){
-			$SpecHabit = $row['Habit'];
-		}
-		else{
-			$SpecHabit = null;
-		}
-
-		if (isset($row['PlantBody'])){
-			$SpecPlantBody = $row['PlantBody'];
-		}
-		else{
-			$SpecPlantBody = null;
-		}
-
-		if (isset($row['Stem'])){
-			$SpecStem = $row['Stem'];
-		}
-		else{
-			$SpecStem = null;
-		}
-
-		if (isset($row['SterileStem'])){
-			$SpecSterileStem = $row['SterileStem'];
-		}
-		else{
-			$SpecSterileStem = null;
-		}
-
-		if (isset($row['FertileStem'])){
-			$SpecFertileStem = $row['FertileStem'];
-		}
-		else{
-			$SpecFertileStem = null;
-		}
-
-		if (isset($row['Leaf'])){
-			$SpecLeaf = $row['Leaf'];
-		}
-		else{
-			$SpecLeaf = null;
-		}
-
-		if (isset($row['Spines'])){
-			$SpecSpines = $row['Spines'];
-		}
-		else{
-			$SpecSpines = null;
-		}
-
-		if (isset($row['Inflorescence'])){
-			$SpecInflorescence = $row['Inflorescence'];
-		}
-		else{
-			$SpecInflorescence = null;
-		}
-
-		if (isset($row['StaminateHead'])){
-			$SpecStaminateHead = $row['StaminateHead'];
-		}
-		else{
-			$SpecStaminateHead = null;
-		}
-
-		if (isset($row['RayOrPistillateFlower'])){
-			$SpecRayOrPistillateFlower = $row['RayOrPistillateFlower'];
-		}
-		else{
-			$SpecRayOrPistillateFlower = null;
-		}
-
-		if (isset($row['PistillateHead'])){
-			$SpecPistillateHead = $row['PistillateHead'];
-		}
-		else{
-			$SpecPistillateHead = null;
-		}
-
-		if (isset($row['StaminateInflorescence'])){
-			$SpecStaminateInflorescence = $row['StaminateInflorescence'];
-		}
-		else{
-			$SpecStaminateInflorescence = null;
-		}
-
-		if (isset($row['PistillateOrBisexualInflorescence'])){
-			$SpecPistillateOrBisexualInflorescence = $row['PistillateOrBisexualInflorescence'];
-		}
-		else{
-			$SpecPistillateOrBisexualInflorescence = null;
-		}
-
-		if (isset($row['PistillateInflorescence'])){
-			$SpecPistillateInflorescence = $row['PistillateInflorescence'];
-		}
-		else{
-			$SpecPistillateInflorescence = null;
-		}
-
-		if (isset($row['Spikelet'])){
-			$SpecSpikelet = $row['Spikelet'];
-		}
-		else{
-			$SpecSpikelet = null;
-		}
-
-		if (isset($row['FertileSpikelet'])){
-			$SpecFertileSpikelet = $row['FertileSpikelet'];
-		}
-		else{
-			$SpecFertileSpikelet = null;
-		}
-
-		if (isset($row['SterileSpikelet'])){
-			$SpecSterileSpikelet = $row['SterileSpikelet'];
-		}
-		else{
-			$SpecSterileSpikelet = null;
-		}
-
-		if (isset($row['DistalSpikelet'])){
-			$SpecDistalSpikelet = $row['DistalSpikelet'];
-		}
-		else{
-			$SpecDistalSpikelet = null;
-		}
-
-		if (isset($row['CentralSpikelet'])){
-			$SpecCentralSpikelet = $row['CentralSpikelet'];
-		}
-		else{
-			$SpecCentralSpikelet = null;
-		}
-
-		if (isset($row['LateralSpikelet'])){
-			$SpecLateralSpikelet = $row['LateralSpikelet'];
-		}
-		else{
-			$SpecLateralSpikelet = null;
-		}
-
-		if (isset($row['StaminateSpikelet'])){
-			$SpecStaminateSpikelet = $row['StaminateSpikelet'];
-		}
-		else{
-			$SpecStaminateSpikelet = null;
-		}
-
-		if (isset($row['PistillateSpikelet'])){
-			$SpecPistillateSpikelet = $row['PistillateSpikelet'];
-		}
-		else{
-			$SpecPistillateSpikelet = null;
-		}
-
-		if (isset($row['Flower'])){
-			$SpecFlower = $row['Flower'];
-		}
-		else{
-			$SpecFlower = null;
-		}
-
-		if (isset($row['StaminateFlower'])){
-			$SpecStaminateFlower = $row['StaminateFlower'];
-		}
-		else{
-			$SpecStaminateFlower = null;
-		}
-
-		if (isset($row['PistillateFlower'])){
-			$SpecPistillateFlower = $row['PistillateFlower'];
-		}
-		else{
-			$SpecPistillateFlower = null;
-		}
-
-		if (isset($row['RayFlower'])){
-			$SpecRayFlower = $row['RayFlower'];
-		}
-		else{
-			$SpecRayFlower = null;
-		}
-
-		if (isset($row['DiskFlower'])){
-			$SpecDiskFlower = $row['DiskFlower'];
-		}
-		else{
-			$SpecDiskFlower = null;
-		}
-
-		if (isset($row['Cone'])){
-			$SpecCone = $row['Cone'];
-		}
-		else{
-			$SpecCone = null;
-		}
-
-		if (isset($row['PollenCone'])){
-			$SpecPollenCone = $row['PollenCone'];
-		}
-		else{
-			$SpecPollenCone = null;
-		}
-
-		if (isset($row['SeedCone'])){
-			$SpecSeedCone = $row['SeedCone'];
-		}
-		else{
-			$SpecSeedCone = null;
-		}
-
-		if (isset($row['BisexualFlower'])){
-			$SpecBisexualFlower = $row['BisexualFlower'];
-		}
-		else{
-			$SpecBisexualFlower = null;
-		}
-
-		if (isset($row['Fruit'])){
-			$SpecFruit = $row['Fruit'];
-		}
-		else{
-			$SpecFruit = null;
-		}
-
-		if (isset($row['Seed'])){
-			$SpecSeed = $row['Seed'];
-		}
-		else{
-			$SpecSeed = null;
-		}
-
-		if (isset($row['Sporangia'])){
-			$SpecSporangia = $row['Sporangia'];
-		}
-		else{
-			$SpecSporangia = null;
-		}
-
-		if (isset($row['SporangiumCase'])){
-			$SpecSporangiumCase = $row['SporangiumCase'];
-		}
-		else{
-			$SpecSporangiumCase = null;
-		}
-
-		if (isset($row['MaleSporangiumCase'])){
-			$SpecMaleSporangiumCase = $row['MaleSporangiumCase'];
-		}
-		else{
-			$SpecMaleSporangiumCase = null;
-		}
-
-		if (isset($row['FemaleSporangiumCase'])){
-			$SpecFemaleSporangiumCase = $row['FemaleSporangiumCase'];
-		}
-		else{
-			$SpecFemaleSporangiumCase = null;
-		}
-
-		if (isset($row['Spores'])){
-			$SpecSpores = $row['Spores'];
-		}
-		else{
-			$SpecSpores = null;
-		}
-
-		if (isset($row['Chromosomes'])){
-			$SpecChromosomes = $row['Chromosomes'];
-		}
-		else{
-			$SpecChromosomes = null;
-		}
-
-		if (isset($row['RarityStatus'])){
-			$SpecRarityStatus = $row['RarityStatus'];
-		}
-		else{
-			$SpecRarityStatus = null;
-		}
-
-		if (isset($row['Ecology'])){
-			$SpecEcology = $row['Ecology'];
-		}
-		else{
-			$SpecEcology = null;
-		}
-
-		if (isset($row['Elevation'])){
-			$SpecElevation = $row['Elevation'];
-		}
-		else{
-			$SpecElevation = null;
-		}
-
-		if (isset($row['BioregionalDistribution'])){
-			$SpecBioregionalDistribution = $row['BioregionalDistribution'];
-		}
-		else{
-			$SpecBioregionalDistribution = null;
-		}
-
-		if (isset($row['OutsideCA'])){
-			$SpecOutsideCA = $row['OutsideCA'];
-		}
-		else{
-			$SpecOutsideCA = null;
-		}
-
-		if (isset($row['SpeciesInGenus'])){
-			$SpecSpeciesInGenus = $row['SpeciesInGenus'];
-		}
-		else{
-			$SpecSpeciesInGenus = null;
-		}
-
-		if (isset($row['GeneraInFamily'])){
-			$SpecGeneraInFamily = $row['GeneraInFamily'];
-		}
-		else{
-			$SpecGeneraInFamily = null;
-		}
-
-		if (isset($row['Etymology'])){
-			$SpecEtymology = $row['Etymology'];
-		}
-		else{
-			$SpecEtymology = null;
-		}
-
-		if (isset($row['Toxicity'])){
-			$SpecToxicity = $row['Toxicity'];
-		}
-		else{
-			$SpecToxicity = null;
-		}
-
-		if (isset($row['Synonyms'])){
-			$SpecSynonyms = $row['Synonyms'];
-		}
-		else{
-			$SpecSynonyms = null;
-		}
-
-		if (isset($row['UnabridgedSynonyms'])){
-			$SpecUnabridgedSynonyms = $row['UnabridgedSynonyms'];
-		}
-		else{
-			$SpecUnabridgedSynonyms = null;
-		}
-
-		if (isset($row['Reference'])){
-			$SpecReference = $row['Reference'];
-		}
-		else{
-			$SpecReference = null;
-		}
-
-		if (isset($row['UnabridgedReference'])){
-			$SpecUnabridgedReference = $row['UnabridgedReference'];
-		}
-		else{
-			$SpecUnabridgedReference = null;
-		}
-
-		if (isset($row['Note'])){
-			$SpecNote = $row['Note'];
-		}
-		else{
-			$SpecNote = null;
-		}
-
-		if (isset($row['UnabridgedNote'])){
-			$SpecUnabridgedNote = $row['UnabridgedNote'];
-		}
-		else{
-			$SpecUnabridgedNote = null;
-		}
-
-		if (isset($row['FloweringTime'])){
-			$SpecFloweringTime = $row['FloweringTime'];
-		}
-		else{
-			$SpecFloweringTime = null;
-		}
-
-		if (isset($row['FloweringTimeCode'])){
-			$SpecTimeCode = $row['FloweringTimeCode'];
-		}
-		else{
-			$SpecTimeCode = null;
-		}
-
-		if (isset($row['FruitingTime'])){
-			$SpecFruitingTime = $row['FruitingTime'];
-		}
-		else{
-			$SpecFruitingTime = null;
-		}
-
-		if (isset($row['Weediness'])){
-			$SpecWeediness = $row['Weediness'];
-		}
-		else{
-			$SpecWeediness = null;
-		}
-
-		if (isset($row['IsTerminalTaxon'])){
-			$SpecIsTerminalTaxon  = $row['IsTerminalTaxon'];
-		}
-		else{
-			$SpecIsTerminalTaxon = null;
-		}
-
-		if (isset($row['RevisionNumber'])){
-			$SpecRevisionNumber  = $row['RevisionNumber'];
-		}
-		else{
-			$SpecRevisionNumber = null;
-		}
-
-		if (isset($row['RevisionDate'])){
-			$SpecRevisionDate  = $row['RevisionDate'];
-		}
-		else{
-			$SpecRevisionDate = null;
-		}
-
-		if (isset($row['DistCode'])){
-			$SpecDistCode = $row['DistCode'];
-		}
-		else{
-			$SpecDistCode = null;
-		}
-
-		if (isset($row['HasKey'])){
-			$SpecHasKey = $row['HasKey'];
-		}
-		else{
-			$SpecHasKey = null;
-		}
-
-		if (isset($row['TaxonID'])){
-			$SpecTaxonID = $row['TaxonID'];
-		}
-		else{
-			$SpecTaxonID = null;
+  //Species has neither GeneraInFamily, SpeciesInGenus nor ScientificEditor
+  //SpeciesInGenus, GeneraInFamily and ScientificEditor removed
+		if (!empty($TID)){
+				$sql = "SELECT t.TaxonID, t.FamilyID";
+//Species
+				$sql.= ", s.TaxonID, s.ScientificName, s.TaxonAuthor, s.CommonName";
+				$sql.= ", s.TJM2Author, s.Habit, s.PlantBody, s.Stem";
+				$sql.= ", s.SterileStem, s.FertileStem, s.Leaf, s.Spines, s.Inflorescence";
+				$sql.= ", s.StaminateHead, s.RayOrPistillateFlower, s.PistillateHead, s.StaminateInflorescence";
+				$sql.= ", s.PistillateOrBisexualInflorescence, s.PistillateInflorescence, s.Spikelet, s.FertileSpikelet";
+				$sql.= ", s.SterileSpikelet, s.DistalSpikelet, s.CentralSpikelet, s.LateralSpikelet, s.StaminateSpikelet";
+				$sql.= ", s.PistillateSpikelet, s.Flower, s.StaminateFlower, s.PistillateFlower, s.RayFlower, s.DiskFlower";
+				$sql.= ", s.Cone, s.PollenCone, s.SeedCone, s.BisexualFlower, s.Fruit, s.Seed, s.Sporangia, s.SporangiumCase";
+				$sql.= ", s.MaleSporangiumCase, s.FemaleSporangiumCase, s.Spores, s.Chromosomes, s.Etymology";
+				$sql.= ", s.Toxicity, s.Synonyms, s.UnabridgedSynonyms, s.Note, s.UnabridgedNote, s.RevisionNumber";
+				$sql.= ", s.RevisionDate, s.HasKey";
+				$sql.= " from eflora_taxonomy t, eflora_taxa s";
+				$sql.= " WHERE t.TaxonID=".$TID." AND t.SpeciesID=s.TaxonID";
+
+//BEGIN temporary bug fix lines to add when needed
+//echo '<br>'.$sql.'<br>';
+
+			if(!mysqli_query($db, $sql)){
+				die('Error: ' . mysqli_error($db));
+			}
+
+			$result = mysqli_query($db, $sql);
+
+//query and assign variable to each table field
+			while ($row = mysqli_fetch_array($result)) {
+
+// If no results are found, echo a message and stop
+				if ($row == false){
+					echo '<b>Species was not found in the eflora taxon table.<br>Try another search.<br>';
+    				exit;
+				}
+//BEGIN temporary bug fix lines to add when needed
+//foreach ($row as $key=>$value) {
+//    echo $key."<br>";
+//}
+//END temp bug fix lines
+				if (!empty($row['ScientificName'])){
+					$SpecScientificName = $row['ScientificName'];
+				}
+				else{
+					$SpecScientificName = null;
+				}
+		
+				if (!empty($row['TaxonAuthor'])){
+					$SpecTaxonAuthor = $row['TaxonAuthor'];
+				}
+				else{
+					$SpecTaxonAuthor = null;
+				}
+		
+				if (!empty($row['FormattedDisplayName'])){
+					$SpecFormattedDisplayName = $row['FormattedDisplayName'];
+				}
+				else{
+					$SpecFormattedDisplayName = null;
+				}
+		
+				if (!empty($row['CommonName'])){
+					$SpecCommonName = $row['CommonName'];
+				}
+				else{
+					$SpecCommonName = null;
+				}
+		
+				if (!empty($row['TJM2Author'])){
+					$SpecTJM2Author = $row['TJM2Author'];
+				}
+				else{
+					$SpecTJM2Author = null;
+				}
+		
+				if (!empty($row['Habit'])){
+					$SpecHabit = $row['Habit'];
+				}
+				else{
+					$SpecHabit = null;
+				}
+		
+				if (!empty($row['PlantBody'])){
+					$SpecPlantBody = $row['PlantBody'];
+				}
+				else{
+					$SpecPlantBody = null;
+				}
+		
+				if (!empty($row['Stem'])){
+					$SpecStem = $row['Stem'];
+				}
+				else{
+					$SpecStem = null;
+				}
+		
+				if (!empty($row['SterileStem'])){
+					$SpecSterileStem = $row['SterileStem'];
+				}
+				else{
+					$SpecSterileStem = null;
+				}
+		
+				if (!empty($row['FertileStem'])){
+					$SpecFertileStem = $row['FertileStem'];
+				}
+				else{
+					$SpecFertileStem = null;
+				}
+		
+				if (!empty($row['Leaf'])){
+					$SpecLeaf = $row['Leaf'];
+				}
+				else{
+					$SpecLeaf = null;
+				}
+		
+				if (!empty($row['Spines'])){
+					$SpecSpines = $row['Spines'];
+				}
+				else{
+					$SpecSpines = null;
+				}
+		
+				if (!empty($row['Inflorescence'])){
+					$SpecInflorescence = $row['Inflorescence'];
+				}
+				else{
+					$SpecInflorescence = null;
+				}
+		
+				if (!empty($row['StaminateHead'])){
+					$SpecStaminateHead = $row['StaminateHead'];
+				}
+				else{
+					$SpecStaminateHead = null;
+				}
+		
+				if (!empty($row['RayOrPistillateFlower'])){
+					$SpecRayOrPistillateFlower = $row['RayOrPistillateFlower'];
+				}
+				else{
+					$SpecRayOrPistillateFlower = null;
+				}
+		
+				if (!empty($row['PistillateHead'])){
+					$SpecPistillateHead = $row['PistillateHead'];
+				}
+				else{
+					$SpecPistillateHead = null;
+				}
+		
+				if (!empty($row['StaminateInflorescence'])){
+					$SpecStaminateInflorescence = $row['StaminateInflorescence'];
+				}
+				else{
+					$SpecStaminateInflorescence = null;
+				}
+		
+				if (!empty($row['PistillateOrBisexualInflorescence'])){
+					$SpecPistillateOrBisexualInflorescence = $row['PistillateOrBisexualInflorescence'];
+				}
+				else{
+					$SpecPistillateOrBisexualInflorescence = null;
+				}
+		
+				if (!empty($row['PistillateInflorescence'])){
+					$SpecPistillateInflorescence = $row['PistillateInflorescence'];
+				}
+				else{
+					$SpecPistillateInflorescence = null;
+				}
+		
+				if (!empty($row['Spikelet'])){
+					$SpecSpikelet = $row['Spikelet'];
+				}
+				else{
+					$SpecSpikelet = null;
+				}
+		
+				if (!empty($row['FertileSpikelet'])){
+					$SpecFertileSpikelet = $row['FertileSpikelet'];
+				}
+				else{
+					$SpecFertileSpikelet = null;
+				}
+		
+				if (!empty($row['SterileSpikelet'])){
+					$SpecSterileSpikelet = $row['SterileSpikelet'];
+				}
+				else{
+					$SpecSterileSpikelet = null;
+				}
+		
+				if (!empty($row['DistalSpikelet'])){
+					$SpecDistalSpikelet = $row['DistalSpikelet'];
+				}
+				else{
+					$SpecDistalSpikelet = null;
+				}
+		
+				if (!empty($row['CentralSpikelet'])){
+					$SpecCentralSpikelet = $row['CentralSpikelet'];
+				}
+				else{
+					$SpecCentralSpikelet = null;
+				}
+		
+				if (!empty($row['LateralSpikelet'])){
+					$SpecLateralSpikelet = $row['LateralSpikelet'];
+				}
+				else{
+					$SpecLateralSpikelet = null;
+				}
+		
+				if (!empty($row['StaminateSpikelet'])){
+					$SpecStaminateSpikelet = $row['StaminateSpikelet'];
+				}
+				else{
+					$SpecStaminateSpikelet = null;
+				}
+		
+				if (!empty($row['PistillateSpikelet'])){
+					$SpecPistillateSpikelet = $row['PistillateSpikelet'];
+				}
+				else{
+					$SpecPistillateSpikelet = null;
+				}
+		
+				if (!empty($row['Flower'])){
+					$SpecFlower = $row['Flower'];
+				}
+				else{
+					$SpecFlower = null;
+				}
+		
+				if (!empty($row['StaminateFlower'])){
+					$SpecStaminateFlower = $row['StaminateFlower'];
+				}
+				else{
+					$SpecStaminateFlower = null;
+				}
+		
+				if (!empty($row['PistillateFlower'])){
+					$SpecPistillateFlower = $row['PistillateFlower'];
+				}
+				else{
+					$SpecPistillateFlower = null;
+				}
+		
+				if (!empty($row['RayFlower'])){
+					$SpecRayFlower = $row['RayFlower'];
+				}
+				else{
+					$SpecRayFlower = null;
+				}
+		
+				if (!empty($row['DiskFlower'])){
+					$SpecDiskFlower = $row['DiskFlower'];
+				}
+				else{
+					$SpecDiskFlower = null;
+				}
+		
+				if (!empty($row['Cone'])){
+					$SpecCone = $row['Cone'];
+				}
+				else{
+					$SpecCone = null;
+				}
+		
+				if (!empty($row['PollenCone'])){
+					$SpecPollenCone = $row['PollenCone'];
+				}
+				else{
+					$SpecPollenCone = null;
+				}
+		
+				if (!empty($row['SeedCone'])){
+					$SpecSeedCone = $row['SeedCone'];
+				}
+				else{
+					$SpecSeedCone = null;
+				}
+		
+				if (!empty($row['BisexualFlower'])){
+					$SpecBisexualFlower = $row['BisexualFlower'];
+				}
+				else{
+					$SpecBisexualFlower = null;
+				}
+		
+				if (!empty($row['Fruit'])){
+					$SpecFruit = $row['Fruit'];
+				}
+				else{
+					$SpecFruit = null;
+				}
+		
+				if (!empty($row['Seed'])){
+					$SpecSeed = $row['Seed'];
+				}
+				else{
+					$SpecSeed = null;
+				}
+		
+				if (!empty($row['Sporangia'])){
+					$SpecSporangia = $row['Sporangia'];
+				}
+				else{
+					$SpecSporangia = null;
+				}
+		
+				if (!empty($row['SporangiumCase'])){
+					$SpecSporangiumCase = $row['SporangiumCase'];
+				}
+				else{
+					$SpecSporangiumCase = null;
+				}
+		
+				if (!empty($row['MaleSporangiumCase'])){
+					$SpecMaleSporangiumCase = $row['MaleSporangiumCase'];
+				}
+				else{
+					$SpecMaleSporangiumCase = null;
+				}
+		
+				if (!empty($row['FemaleSporangiumCase'])){
+					$SpecFemaleSporangiumCase = $row['FemaleSporangiumCase'];
+				}
+				else{
+					$SpecFemaleSporangiumCase = null;
+				}
+		
+				if (!empty($row['Spores'])){
+					$SpecSpores = $row['Spores'];
+				}
+				else{
+					$SpecSpores = null;
+				}
+		
+				if (!empty($row['Chromosomes'])){
+					$SpecChromosomes = $row['Chromosomes'];
+				}
+				else{
+					$SpecChromosomes = null;
+				}
+		
+				if (!empty($row['RarityStatus'])){
+					$SpecRarityStatus = $row['RarityStatus'];
+				}
+				else{
+					$SpecRarityStatus = null;
+				}
+		
+				if (!empty($row['Ecology'])){
+					$SpecEcology = $row['Ecology'];
+				}
+				else{
+					$SpecEcology = null;
+				}
+		
+				if (!empty($row['Elevation'])){
+					$SpecElevation = $row['Elevation'];
+				}
+				else{
+					$SpecElevation = null;
+				}
+		
+				if (!empty($row['BioregionalDistribution'])){
+					$SpecBioregionalDistribution = $row['BioregionalDistribution'];
+				}
+				else{
+					$SpecBioregionalDistribution = null;
+				}
+		
+				if (!empty($row['OutsideCA'])){
+					$SpecOutsideCA = $row['OutsideCA'];
+				}
+				else{
+					$SpecOutsideCA = null;
+				}
+		
+				if (!empty($row['Etymology'])){
+					$SpecEtymology = $row['Etymology'];
+				}
+				else{
+					$SpecEtymology = null;
+				}
+		
+				if (!empty($row['Toxicity'])){
+					$SpecToxicity = $row['Toxicity'];
+				}
+				else{
+					$SpecToxicity = null;
+				}
+		
+				if (!empty($row['Synonyms'])){
+					$SpecSynonyms = $row['Synonyms'];
+				}
+				else{
+					$SpecSynonyms = null;
+				}
+		
+				if (!empty($row['UnabridgedSynonyms'])){
+					$SpecUnabridgedSynonyms = $row['UnabridgedSynonyms'];
+				}
+				else{
+					$SpecUnabridgedSynonyms = null;
+				}
+		
+				if (!empty($row['Reference'])){
+					$SpecReference = $row['Reference'];
+				}
+				else{
+					$SpecReference = null;
+				}
+		
+				if (!empty($row['UnabridgedReference'])){
+					$SpecUnabridgedReference = $row['UnabridgedReference'];
+				}
+				else{
+					$SpecUnabridgedReference = null;
+				}
+		
+				if (!empty($row['Note'])){
+					$SpecNote = $row['Note'];
+				}
+				else{
+					$SpecNote = null;
+				}
+		
+				if (!empty($row['UnabridgedNote'])){
+					$SpecUnabridgedNote = $row['UnabridgedNote'];
+				}
+				else{
+					$SpecUnabridgedNote = null;
+				}
+		
+				if (!empty($row['FloweringTime'])){
+					$SpecFloweringTime = $row['FloweringTime'];
+				}
+				else{
+					$SpecFloweringTime = null;
+				}
+		
+				if (!empty($row['FloweringTimeCode'])){
+					$SpecTimeCode = $row['FloweringTimeCode'];
+				}
+				else{
+					$SpecTimeCode = null;
+				}
+		
+				if (!empty($row['FruitingTime'])){
+					$SpecFruitingTime = $row['FruitingTime'];
+				}
+				else{
+					$SpecFruitingTime = null;
+				}
+		
+				if (!empty($row['Weediness'])){
+					$SpecWeediness = $row['Weediness'];
+				}
+				else{
+					$SpecWeediness = null;
+				}
+		
+				if (!empty($row['IsTerminalTaxon'])){
+					$SpecIsTerminalTaxon  = $row['IsTerminalTaxon'];
+				}
+				else{
+					$SpecIsTerminalTaxon = null;
+				}
+		
+				if (!empty($row['RevisionNumber'])){
+					$SpecRevisionNumber  = $row['RevisionNumber'];
+				}
+				else{
+					$SpecRevisionNumber = null;
+				}
+		
+				if (!empty($row['RevisionDate'])){
+					$SpecRevisionDate  = $row['RevisionDate'];
+				}
+				else{
+					$SpecRevisionDate = null;
+				}
+		
+				if (!empty($row['DistCode'])){
+					$SpecDistCode = $row['DistCode'];
+				}
+				else{
+					$SpecDistCode = null;
+				}
+		
+				if (!empty($row['HasKey'])){
+					$SpecHasKey = $row['HasKey'];
+				}
+				else{
+					$SpecHasKey = null;
+				}
+		
+				if (!empty($row['TaxonID'])){
+					$SpecTaxonID = $row['TaxonID'];
+				}
+				else{
+					$SpecTaxonID = null;
+				}
+			}
+		}
+		
+		
+//END Species SQL QUERY ASSIGNMENT
+
+
+//START illustration SQL QUERY ASSIGNMENT
+
+  //get the illustration and video URLs 
+	if (!empty($TID)){
+		$sql = "SELECT FileName, RevisedFileName, VideoURL FROM eflora_illustrations WHERE TaxonID=".$TID." ";
+
+//BEGIN temporary bug fix lines to add when needed
+//echo '<br>'.$sql.'<br>';
+
+			if(!mysqli_query($db, $sql)){
+				die('Error: ' . mysqli_error($db));
+			}
+
+			$result = mysqli_query($db, $sql);
+
+//query and assign variable to each table field
+		while ($row = mysqli_fetch_array($result)) {
+
+// If no results are found, echo a message and stop
+			if ($row == false){
+				echo '<b>Species was not found in the eflora taxon table.<br>Try another search.<br>';
+    			exit;
+			}
+//BEGIN temporary bug fix lines to add when needed
+//foreach ($row as $key=>$value) {
+//    echo $key."<br>";
+//}
+//END temp bug fix lines
+			if (!empty($row['FileName'])){
+				$IllustrationFile = $row['FileName'];
+			}
+			else{
+				$IllustrationFile = null;
+			}
+		
+			if (!empty($row['RevisedFileName'])){
+				$RevisedFileName = $row['RevisedFileName'];
+			}
+			else{
+				$RevisedFileName = null;
+			}
+		
+			if (!empty($row['VideoURL'])){
+				$VIDEO = $row['VideoURL'];
+			}
+			else{
+				$VIDEO = null;
+			}
 		}
 	}
+//END illustration SQL QUERY ASSIGNMENT
 
-  //get the illustration
-  $results = $db->query('SELECT FileName, LargeFileName, VideoURL
-						FROM eflora_illustrations
-						WHERE TaxonID='.$TID.''); //16711 is the TID for Calochortus amabilis, for example
 
-	while ($row = $results->fetchArray()) {
 
-		if (!empty($row['FileName'])){
-			$IllustrationFile = $row['FileName'];
-		}
-		#else{
-		#	$IllustrationFile = null;
-		#}
-		
-		if (!empty($row['LargeFileName'])){
-			$IllustrationLarge = $row['LargeFileName'];
-		}
-		#else{
-		#	$IllustrationLarge = null;
-		#}
-		
-		if (!empty($row['VideoURL'])){
-			$VIDEO = $row['VideoURL'];
-		}
-		#else{
-		#	$VIDEO = null;
-		#}
-	}
+//Start JMAuthor pass down statements
 
   //assign the JM author and revision number
-  //JMAuthor is inherited from the next highest up. Note that "except where noted" will be inherited by terminals which might be unacceptable
-  if (isset($SpecTJM2Author)){ $JMAuthor = $SpecTJM2Author;}
-  if (isset($GenTJM2Author)){ $JMAuthor = $GenTJM2Author;}
-  if (isset($FamTJM2Author)){ $JMAuthor = $FamTJM2Author;}
+  //JMAuthor is inherited from the next highest up. 
+	if (!empty($SpecTJM2Author)){ $JMAuthor = $SpecTJM2Author;}
+	if (!empty($GenTJM2Author)){ $JMAuthor = $GenTJM2Author;}
+	if (!empty($FamTJM2Author)){ $JMAuthor = $FamTJM2Author;}
 
 	if (!empty($TJM2Author)){
 		$JMAuthor = $TJM2Author;
@@ -2720,74 +2926,116 @@ but is pretty ugly
 			}
 		}
 	}
-	
+
+  //JMAuthor is inherited from the next highest up. 
+  //Note that "except where noted" will be inherited by terminals which might be unacceptable
+  //it is removed here
   $JMAuthor = str_replace(", except as noted", "", $JMAuthor);
 
-  if (isset($Reference)){ $Ref = $Reference;}#there are no species references, genus reference is always passed down
-	elseif (isset($GenReference)){ $Ref = $GenReference;}
-	elseif (isset($FamReference)){ $Ref = $FamReference;}
-	else {$Ref = null;}
+//END JMAuthor pass down statements
 
-  if (isset($UnabridgedReference)){ $UnabRef = $UnabridgedReference;}#there are no species references, genus reference is always passed down
-	#elseif (isset($GenUnabridgedReference)){ $UnabRef = $GenUnabridgedReference;}
-	#elseif (isset($FamUnabridgedReference)){ $UnabRef = $FamUnabridgedReference;}
-	#the old method is above, but the genus description link and family description link already pass this information
-	#the data can be found by clikcing above, so why does it need to be displayed twice (although it is hidden by default)
-	#all carex species pages are very long because of the extra long unabridged reference in the genus page
-	else {$UnabRef = null;}
 
+//START Reference pass down statements
+
+//$Ref is inherited from the next highest up. 
+
+	if (!empty($Reference)){
+		$Ref = $Reference;
+	//there are no species references, genus reference is always passed down
+	}
+	elseif (!empty($GenReference)){
+		$Ref = $GenReference;
+	}
+	elseif (!empty($FamReference)){ 
+		$Ref = $FamReference;
+	}
+	else {
+		$Ref = null;
+	}
+
+	if (!empty($UnabridgedReference)){ 
+		$UnabRef = $UnabridgedReference;
+	//there are no species references, genus reference is always passed down
+	}
+	else {
+		$UnabRef = null;
+	}
+	//elseif (!empty($GenUnabridgedReference)){ $UnabRef = $GenUnabridgedReference;}
+	//elseif (!empty($FamUnabridgedReference)){ $UnabRef = $FamUnabridgedReference;}
+	//the old method is coomented out, but the genus description link and family description link already pass this information
+	//the data can be found by clikcing above, so why does it need to be displayed twice (although it is hidden by default)
+	//all carex species pages are very long because of the extra long unabridged reference in the genus page
+
+//END Reference pass down statements
+
+
+//START Revision Number pass down statements
 
   //RevNumber is inherited by species or genus, but not from the family
   //Because a family revision does not affect all species/genera within the family
-  if (isset($RevisionNumber)){ $RevNumber = $RevisionNumber;}
-	elseif (isset($SpecRevisionNumber)){ $RevNumber = $SpecRevisionNumber;}
-	elseif (isset($GenRevisionNumber)){ $RevNumber = $GenRevisionNumber;}
-	else {$RevNumber = null;}
+	if (!empty($RevisionNumber)){ 
+		$RevNumber = $RevisionNumber;
+	}
+	elseif (!empty($SpecRevisionNumber)){ 
+		$RevNumber = $SpecRevisionNumber;
+	}
+	elseif (!empty($GenRevisionNumber)){ 
+		$RevNumber = $GenRevisionNumber;
+	}
+	else {
+		$RevNumber = null;
+	}
+//END Revision Number pass down statements
 
-  //RevNumber is inherited by species or genusbut not from the family
+
+//START Revision Date pass down statements
+
+  //RevNumber is inherited by species or genus but not from the family
   //Because a family revision does not affect all species/genera within the family
-  if (isset($RevisionDate)){ $RevDate = $RevisionDate;}
-	elseif (isset($SpecRevisionDate)){ $RevDate = $SpecRevisionDate;}
-	elseif (isset($GenRevisionDate)){ $RevDate = $GenRevisionDate;}
-	else {$RevDate = "2012";} //2012 is the defaut revision date; theoretically all revised taxa would fall into one of above
-	
- }
- 
-?>
+	if (!empty($RevisionDate)){ 
+		$RevDate = $RevisionDate;
+	}
+	elseif (!empty($SpecRevisionDate)){ 
+		$RevDate = $SpecRevisionDate;
+	}
+	elseif (!empty($GenRevisionDate)){ 
+		$RevDate = $GenRevisionDate;
+	}
+	else {
+		$RevDate = "2012"; 
+	//2012 is the defaut revision date; theoretically all revised taxa would fall into one of above
+	}
 
-<?php
+//END Revision Date pass down statements
+
+//Set default time zone for webpages
 
 date_default_timezone_set('America/Los_Angeles');
 
 ?>
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
-<?php 
-// TID is passed to JS by using PHP to echo the value of $TaxonID to a JS variable TaxID 
-// Apparently there are better ways to do this
 
-?>
-
-
-<title><?php echo "$ScientificName"?></title>
+<title><?php echo "$ScientificName"?> Taxon Page</title>
 <meta charset="UTF-8">
+<meta name="description" content="For vascular plants occurring in wildlands or otherwise outside of cultivation in California, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys.">
   <meta name="keywords" content="California Flora, Jepson eFlora, Flora of California, Vascular Plants of California, Jepson Flora Project, ">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="/common/css/dropdowns.css" rel="stylesheet" type="text/css" />
-<link href="/common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
-<link rel="shortcut icon" href="/common/images/JepsonLogoSmall.png" type="image/x-icon" />
+<link href="common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
+
+<link rel="shortcut icon" href="common/images/JepsonLogoSmall.png" type="image/x-icon" />
 
 <!--mobile js script files-->
-	<script src="/eflora/common/js/dh_custom.js"></script>
-
+<script src="common/js/dh_custom.js"></script>
 
 <!--jquery script files-->
-	<script src="//code.jquery.com/jquery-latest.js"></script>
-	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="https://code.jquery.com/jquery-latest.js"></script>
+	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 <!-- leaflet maps files and scripts -->
 
@@ -2795,14 +3043,14 @@ date_default_timezone_set('America/Los_Angeles');
 
 <!-- Include Leaflet CSS and JavaScript files -->
   <link rel="stylesheet" href="https://unpkg.com/leaflet/dist/leaflet.css" />
-  <script src="//unpkg.com/leaflet/dist/leaflet.js"></script>
+  <script src="https://unpkg.com/leaflet/dist/leaflet.js"></script>
   
 <script src='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/Leaflet.fullscreen.min.js'></script>
 
 <script src='https://api.mapbox.com/mapbox.js/plugins/geojson-extent/v0.0.1/geojson-extent.js'></script>
 
 <link rel="stylesheet" href="https://unpkg.com/leaflet-snap@0.0.4/leaflet.snap.js" />
-<script src="//unpkg.com/leaflet-snap@0.0.4/leaflet.snap.js"></script>
+<script src="https://unpkg.com/leaflet-snap@0.0.4/leaflet.snap.js"></script>
 
 
 
@@ -2816,11 +3064,16 @@ img {
 	max-width: 600px; 
 }
 
+.container {
+    display: block; /* Ensures the image behaves as a block element */
+    float: left;
+    /* Other image styles (width, height, etc.) */
+}
+
 </style>
 
 <!-- Google tag (gtag.js) -->
-<script async src="//www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
-<script async src="//www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -2856,61 +3109,71 @@ $(document).ready(function(){
 });
 </script>
 
-
 </head>
 
 <body onload="initialize()">
 
-
 <!-- Begin banner -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/header_jeps.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/herbaria-header.php'); ?>  
 <!-- End banner -->
 
-
-
-<!-- Beginning of horizontal menu -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/globalnav.php'); ?> 
-<!-- End of horizontal menu -->
-
-
 <main>
-    <div id="content-top">
-		<h1><a href="/eflora/">Jepson eFlora</a></h1>
+	<div id="content-top">
+		<h1><a class="efTitle" href="/eflora/">Jepson eFlora</a></h1>
 		<h2>Taxon Page</h2>
-	<div>
+
+
+<p>
+<a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">
+	Send us your feedback and/or questions! Community input helps improve the Jepson eFlora.
+	
+</a>
+</p>
 
 	<table id = "efTable" style="vertical-align: top;width=90vw;">
 		<tr>
 		<td>
-			<?php echo '<a href="/eflora/eflora_display.php?tid='.$previousTaxonID.'"><IMG SRC="/common/images/icons/left.gif" BORDER=2 ALT="Previous taxon"></a>'?>
+<?php
+			if (!empty($previousTaxonID)){
+				echo '<a href="/eflora/eflora_display.php?tid='.$previousTaxonID.'"><IMG SRC="common/images/icons/left.gif" BORDER=2 ALT="Previous taxon"></a>';
+			} else {
+				echo '<IMG SRC="common/images/icons/blueball.gif" BORDER=2 ALT="This is first name in the Index"></a>';
+			}
+?>
 		</td>
 
 		<td><span class="pageMajorHeading"><a name="TOP" id="TOP">Vascular Plants of California</a></span>
 		<br>
-			<span class="pageAuthorLine">
-				<a href="/IJM_keys/IJM_fam_key.html">Key to families</a>
+<h2><a name="TOP" id="TOP">Vascular Plants of California</a></h2>
+				<a class="efTag" href="/eflora/keys/IJM_fam_key.php">Key to families</a>
 				|
-				<a href="/IJM_keys/toc.html">Table of families and genera</a>
-			</span>	  
+				<a class="efTag" href="/eflora/toc.php">Table of families and genera</a><br>
 		</td>
 		<td align = "right">
-			<?php echo '<a href="/eflora/eflora_display.php?tid='.$nextTaxonID.'"><IMG SRC="/common/images/icons/right.gif" BORDER=2 ALT="Next taxon"></a>'?>
+<?php
+			if (!empty($nextTaxonID)){
+				echo '<a href="/eflora/eflora_display.php?tid='.$nextTaxonID.'"><IMG SRC="common/images/icons/right.gif" BORDER=2 ALT="Next taxon"></a>';
+			} else {
+				echo '<IMG SRC="common/images/icons/blueball.gif" BORDER=2 ALT="This is last name in the Index"></a>';
+			}
+?>
 		</td>
 	 </tr>
 	 </table>
-
-	 <table >
-		<td>
 <!--eFlora index-->
+<div class="index-container">
+    <div class="grey-bar top"></div>
+    
+    <div class="index-content">
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora_index_bar.php'); ?>
+    </div>
 
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/eflora_index_bar.php'); ?>
-
+    <div class="grey-bar bottom"></div>
+</div>
 <!--end eFlora index-->
-		</td>
-	  </tr>
-	 </table>
 
-	 </div>
+	</div><!--end top content div-->
+
 <div id="content">
 
 <table align="center" width="100%">
@@ -2923,263 +3186,260 @@ $(document).ready(function(){
 		</td>
 	</tr>
 </table>
-<br />
+<br>
 <table width="100%">
 	<tr>
 		<td>
 <!-- this hidden table provides the column width values (check1 through check3) which are used to assign consistent widths to the actual higher taxonomy tables-->
 	<div class="hidden">
 	<table class="taxonomy_table" style="padding: 5px;">
-	<tr><td id='check1'><b>Family: <?php if(isset($FamScientificName)){ echo"{$FamScientificName}";}?></b></td><td id='check2'><b><a href="#">View Description</a></b></td><td id='check3'><a href='#'>Dichotomous Key</a></td></tr>
-	<tr><td><b>Genus: <?php if(isset($GenScientificName)){ echo"{$GenScientificName}";}?></b></td><td><b><a href="#">View Description</a></b></td><td><a href='#'>Dichotomous Key</a></td></tr>
-	<tr><td><b>Species: <?php if(isset($SpecScientificName)){ echo"{$SpecScientificName}";}?></b></td><td><b><a href="#">View Description</a></b></td><td><a href='#'>Dichotomous Key</a></td></tr>
+	<tr><td id='check1'><b>Family: <?php if(!empty($FamScientificName)){ echo"{$FamScientificName}";}?></b></td><td id='check2'><b><a href="#">View Description</a></b></td><td id='check3'><a href='#'>Dichotomous Key</a></td></tr>
+	<tr><td><b>Genus: <?php if(!empty($GenScientificName)){ echo"{$GenScientificName}";}?></b></td><td><b><a href="#">View Description</a></b></td><td><a href='#'>Dichotomous Key</a></td></tr>
+	<tr><td><b>Species: <?php if(!empty($SpecScientificName)){ echo"{$SpecScientificName}";}?></b></td><td><b><a href="#">View Description</a></b></td><td><a href='#'>Dichotomous Key</a></td></tr>
 	</table>
 	</div>
 		</td>
 	</tr>
 	<tr>
 		<td>
+
 <?php
-//actual higher taxonomy table
+//START higher taxonomy table 
+
 //if there is no higher taxonomy (i.e. family entries), skip this section
-if (!empty($FamScientificName)){
-	echo '<table><tr><td width=100%>';
-	echo "<div class='pageMajorHeading'><b>Higher Taxonomy</b><br></div>";
-	echo "<table class='taxonomy_table'><tr><td class='column1'><b>Family: {$FamScientificName}</b></td><td class='column2'><a id='familylink'>View Description</a></b></td>";
+	if (!empty($FamScientificName)){
+		echo '<table><tr><td width=100%>';
+		echo "<div class='pageMajorHeading'><b>Higher Taxonomy</b><br></div>";
+		echo "<table class='taxonomy_table'><tr><td class='column1'><b>Family: {$FamScientificName}</b></td><td class='column2'><a id='familylink'>View Description</a></b></td>";
 	
-	if (!empty($FamHasKey)){
-		echo "<td class='column3'><a href='/eflora/eflora_keys.php?key={$FamTaxonID}'>Dichotomous Key</a></td></tr></table>";
-	}
-	else{ 
-		$FamHasKey = null;
-		echo "<td class='column3'>&nbsp;</td></tr></table>"; 
-	}
-		
-		echo '<table><tr>';
-		echo '<td><div id="familydesc" class="initiallyHidden">';
-		echo "<blockquote class='bodyText'>";
-	if (isset($FamCommonName)){ echo "<b>Common Name:</b> {$FamCommonName}<br>";}
-	if (isset($FamHabit)){ echo "<b>Habit:</b> {$FamHabit} ";}
-	if (isset($FamPlantBody)){ echo "<b>Plant Body:</b> {$FamPlantBody} ";}
-	if (isset($FamStem)){ echo "<b>Stem:</b> {$FamStem} ";}
-	if (isset($FamSterileStem)){ echo "<b>Sterile Stem:</b> {$FamSterileStem} ";}
-	if (isset($FamFertileStem)){ echo "<b>Fertile Stem:</b> {$FamFertileStem} ";}
-	if (isset($FamLeaf)){ echo "<b>Leaf:</b> {$FamLeaf} ";}
-	if (isset($FamSpines)){ echo "<b>Spines:</b> {$FamSpines} ";}
-	if (isset($FamInflorescence)){ echo "<b>Inflorescence:</b> {$FamInflorescence} ";}
-	if (isset($FamStaminateHead)){ echo "<b>Staminate Head:</b> {$FamStaminateHead} ";}
-	if (isset($FamRayOrPistillateFlower)){ echo "<b>Ray Or Pistillate Flower:</b> {$FamRayOrPistillateFlower} ";}
-	if (isset($FamPistillateHead)){ echo "<b>Pistillate Head:</b> {$FamPistillateHead} ";}
-	if (isset($FamStaminateInflorescence)){ echo "<b>Staminate Inflorescence:</b> {$FamStaminateInflorescence} ";}
-	if (isset($FamPistillateOrBisexualInflorescence)){ echo "<b>Pistillate Or Bisexual Inflorescence:</b> {$FamPistillateOrBisexualInflorescence} ";}
-	if (isset($FamPistillateInflorescence)){ echo "<b>Pistillate Inflorescence:</b> {$FamPistillateInflorescence} ";}
-	if (isset($FamSpikelet)){ echo "<b>Spikelet:</b> {$FamSpikelet} ";}
-	if (isset($FamFertileSpikelet)){ echo "<b>Fertile Spikelet:</b> {$FamFertileSpikelet} ";}
-	if (isset($FamSterileSpikelet)){ echo "<b>Sterile Spikelet:</b> {$FamSterileSpikelet} ";}
-	if (isset($FamDistalSpikelet)){ echo "<b>Distal Spikelet:</b> {$FamDistalSpikelet} ";}
-	if (isset($FamCentralSpikelet)){ echo "<b>Central Spikelet:</b> {$FamCentralSpikelet}";}
-	if (isset($FamLateralSpikelet)){ echo "<b>Lateral Spikelet:</b> {$FamLateralSpikelet}";}
-	if (isset($FamStaminateSpikelet)){ echo "<b>Staminate Spikelet:</b> {$FamStaminateSpikelet} ";}
-	if (isset($FamPistillateSpikelet)){ echo "<b>Pistillate Spikelet:</b> {$FamPistillateSpikelet} ";}
-	if (isset($FamFlower)){ echo "<b>Flower:</b> {$FamFlower} ";}
-	if (isset($FamStaminateFlower)){ echo "<b>Staminate Flower:</b> {$FamStaminateFlower} ";}
-	if (isset($FamPistillateFlower)){ echo "<b>Pistillate Flower:</b> {$FamPistillateFlower} ";}
-	if (isset($FamRayFlower)){ echo "<b>Ray Flower:</b> {$FamRayFlower} ";}
-	if (isset($FamDiskFlower)){ echo "<b>Disk Flower:</b> {$FamDiskFlower} ";}
-	if (isset($FamCone)){ echo "<b>Cone:</b> {$FamCone} ";}
-	if (isset($FamPollenCone)){ echo "<b>Pollen Cone:</b> {$FamPollenCone} ";}
-	if (isset($FamSeedCone)){ echo "<b>Seed Cone:</b> {$FamSeedCone} ";}
-	if (isset($FamBisexualFlower)){ echo "<b>Bisexual Flower:</b> {$FamBisexualFlower} ";}
-	if (isset($FamFruit)){ echo "<b>Fruit:</b> {$FamFruit} ";}
-	if (isset($FamSeed)){ echo "<b>Seed:</b> {$FamSeed} ";}
-	if (isset($FamSporangia)){ echo "<b>Sporangia:</b> {$FamSporangia} ";}
-	if (isset($FamSporangiumCase)){ echo "<b>Sporangium Case:</b> {$FamSporangiumCase} ";}
-	if (isset($FamMaleSporangiumCase)){ echo "<b>Male Sporangium Case:</b> {$FamMaleSporangiumCase} ";}
-	if (isset($FamFemaleSporangiumCase)){ echo "<b>Female Sporangium Case:</b> {$FamFemaleSporangiumCase} ";}
-	if (isset($FamSpores)){ echo "<b>Spores:</b> {$FamSpores} ";}
-	if (isset($FamChromosomes)){ echo "<b>Chromosomes:</b> {$FamChromosomes}";}
-		echo "<br />"; //break between morphological fields and rest of fields
-
-	if (isset($FamGeneraInFamily)){ echo "<b>Genera In Family:</b> {$FamGeneraInFamily} ";}
-	if (isset($FamEtymology)){ echo "<b>Etymology:</b> {$FamEtymology} ";}
-	if (isset($FamToxicity)){ echo "<b>Toxicity:</b> {$FamToxicity} ";}
-	if (isset($FamNote)){ echo "<b>Note:</b> {$FamNote} ";}
-		echo "<br />";
-
-	if (isset($FamUnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$FamUnabridgedNote}</span><br>";}
-	if (isset($FamTJM2Author)){ echo "<b>eFlora Treatment Author:</b> {$FamTJM2Author}<br>";}
-	if (isset($FamReference)){ echo "<b>Reference:</b> {$FamReference}<br>";}
-	if (isset($FamUnabridgedReference)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$FamUnabridgedReference}</span><br>";}
-	if (isset($FamScientificEditor)){ echo "<b>Scientific Editor:</b> {$FamScientificEditor}<br>";}
-		echo "</blockquote></div></td>";
-
-	if (isset($GenScientificName)){
-		echo "<table class='taxonomy_table'><tr><td class='column1'><b>Genus: {$GenScientificName}</b></td><td class='column2'><a id='genuslink'>View Description</a></b></td>";
-		if (isset($GenHasKey)){
-			echo "<td class='column3'><a href='/eflora/eflora_keys.php?key={$GenTaxonID}'>Dichotomous Key</a></td></tr></table>";
+		if (!empty($FamHasKey)){
+			echo "<td class='column3'><a href='/eflora/eflora_keys.php?key={$FamTaxonID}'>Dichotomous Key</a></td></tr></table>";
 		}
 		else{ 
-			$GenHasKey = null;
+			$FamHasKey = null;
 			echo "<td class='column3'>&nbsp;</td></tr></table>"; 
 		}
-
-		echo '<table><tr>';
-		echo '<td><div id="genusdesc" class="initiallyHidden">';
-		echo "<blockquote class='bodyText'><br>";
-	if (isset($GenCommonName)){ echo "<b>Common Name:</b> {$GenCommonName}<br>";}
-	if (isset($GenHabit)){ echo "<b>Habit:</b> {$GenHabit} ";}
-	if (isset($GenPlantBody)){ echo "<b>Plant Body:</b> {$GenPlantBody} ";}
-	if (isset($GenStem)){ echo "<b>Stem:</b> {$GenStem} ";}
-	if (isset($GenSterileStem)){ echo "<b>Sterile Stem:</b> {$GenSterileStem} ";}
-	if (isset($GenFertileStem)){ echo "<b>Fertile Stem:</b> {$GenFertileStem} ";}
-	if (isset($GenLeaf)){ echo "<b>Leaf:</b> {$GenLeaf} ";}
-	if (isset($GenSpines)){ echo "<b>Spines:</b> {$GenSpines} ";}
-	if (isset($GenInflorescence)){ echo "<b>Inflorescence:</b> {$GenInflorescence} ";}
-	if (isset($GenStaminateHead)){ echo "<b>Staminate Head:</b> {$GenStaminateHead} ";}
-	if (isset($GenRayOrPistillateFlower)){ echo "<b>Ray Or Pistillate Flower:</b> {$GenRayOrPistillateFlower} ";}
-	if (isset($GenPistillateHead)){ echo "<b>Pistillate Head:</b> {$GenPistillateHead} ";}
-	if (isset($GenStaminateInflorescence)){ echo "<b>Staminate Inflorescence:</b> {$GenStaminateInflorescence} ";}
-	if (isset($GenPistillateOrBisexualInflorescence)){ echo "<b>Pistillate Or Bisexual Inflorescence:</b> {$GenPistillateOrBisexualInflorescence} ";}
-	if (isset($GenPistillateInflorescence)){ echo "<b>Pistillate Inflorescence:</b> {$GenPistillateInflorescence} ";}
-	if (isset($GenSpikelet)){ echo "<b>Spikelet:</b> {$GenSpikelet} ";}
-	if (isset($GenFertileSpikelet)){ echo "<b>Fertile Spikelet:</b> {$GenFertileSpikelet} ";}
-	if (isset($GenSterileSpikelet)){ echo "<b>Sterile Spikelet:</b> {$GenSterileSpikelet} ";}
-	if (isset($GenDistalSpikelet)){ echo "<b>Distal Spikelet:</b> {$GenDistalSpikelet} ";}
-	if (isset($GenCentralSpikelet)){ echo "<b>Central Spikelet:</b> {$GenCentralSpikelet}";}
-	if (isset($GenLateralSpikelet)){ echo "<b>Lateral Spikelet:</b> {$GenLateralSpikelet}";}
-	if (isset($GenStaminateSpikelet)){ echo "<b>Staminate Spikelet:</b> {$GenStaminateSpikelet} ";}
-	if (isset($GenPistillateSpikelet)){ echo "<b>Pistillate Spikelet:</b> {$GenPistillateSpikelet} ";}
-	if (isset($GenFlower)){ echo "<b>Flower:</b> {$GenFlower} ";}
-	if (isset($GenStaminateFlower)){ echo "<b>Staminate Flower:</b> {$GenStaminateFlower} ";}
-	if (isset($GenPistillateFlower)){ echo "<b>Pistillate Flower:</b> {$GenPistillateFlower} ";}
-	if (isset($GenRayFlower)){ echo "<b>Ray Flower:</b> {$GenRayFlower} ";}
-	if (isset($GenDiskFlower)){ echo "<b>Disk Flower:</b> {$GenDiskFlower} ";}
-	if (isset($GenCone)){ echo "<b>Cone:</b> {$GenCone} ";}
-	if (isset($GenPollenCone)){ echo "<b>Pollen Cone:</b> {$GenPollenCone} ";}
-	if (isset($GenSeedCone)){ echo "<b>Seed Cone:</b> {$GenSeedCone} ";}
-	if (isset($GenBisexualFlower)){ echo "<b>Bisexual Flower:</b> {$GenBisexualFlower} ";}
-	if (isset($GenFruit)){ echo "<b>Fruit:</b> {$GenFruit} ";}
-	if (isset($GenSeed)){ echo "<b>Seed:</b> {$GenSeed} ";}
-	if (isset($GenSporangia)){ echo "<b>Sporangia:</b> {$GenSporangia} ";}
-	if (isset($GenSporangiumCase)){ echo "<b>Sporangium Case:</b> {$GenSporangiumCase} ";}
-	if (isset($GenMaleSporangiumCase)){ echo "<b>Male Sporangium Case:</b> {$GenMaleSporangiumCase} ";}
-	if (isset($GenFemaleSporangiumCase)){ echo "<b>Female Sporangium Case:</b> {$GenFemaleSporangiumCase} ";}
-	if (isset($GenSpores)){ echo "<b>Spores:</b> {$GenSpores} ";}
-	if (isset($GenChromosomes)){ echo "<b>Chromosomes:</b> {$GenChromosomes}";}
-		echo "<br />"; //break between morphological fields and rest of fields
-
-	if (isset($GenGeneraInFamily)){ echo "<b>Genera In Family:</b> {$GenGeneraInFamily} ";}
-	if (isset($GenEtymology)){ echo "<b>Etymology:</b> {$GenEtymology} ";}
-	if (isset($GenToxicity)){ echo "<b>Toxicity:</b> {$GenToxicity} ";}
-	if (isset($GenNote)){ echo "<b>Note:</b> {$GenNote} ";}
-		echo "<br />";
-
-	if (isset($GenUnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$GenUnabridgedNote}</span><br>";}
-	if (isset($GenTJM2Author)){ echo "<b>eFlora Treatment Author:</b> {$GenTJM2Author}<br>";}
-	if (isset($GenReference)){ echo "<b>Reference:</b> {$GenReference}<br>";}
-	if (isset($GenUnabridgedReference)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$GenUnabridgedReference}</span><br>";}
-	if (isset($GenScientificEditor)){ echo "<b>Scientific Editor:</b> {$GenScientificEditor}<br>";}
-
-		echo "</div></td>";
-	
-	}
-	
-	//if (isset($SpecScientificName)){ 
-	//	echo "<table class='taxonomy_table'><tr><td class='column1'><b>Species: {$SpecScientificName}</b></td><td class='column2'><a id='specieslink'>View Description</a></b></td><td class='column3'>&nbsp;</td></tr></table>";
-	//	echo '<table><tr>';
-	//	echo '<td><div id="speciesdesc" class="initiallyHidden">';
-	//	echo "<blockquote class='bodyText'>";
 		
-		
-	if (isset($SpecScientificName)){
-		echo "<table class='taxonomy_table'><tr><td class='column1'><b>Species: {$SpecScientificName}</b></td><td class='column2'><a id='specieslink'>View Description</a></b></td>";
-		if (isset($SpecHasKey)){
-			echo "<td class='column3'><a href='/eflora/eflora_keys.php?key={$SpecTaxonID}'>Dichotomous Key</a></td></tr></table>";
-		}
-		else{ 
-			$SpecHasKey = null;
-			echo "<td class='column3'>&nbsp;</td></tr></table>"; 
-		}
+			echo '<table><tr>';
+			echo '<td><div id="familydesc" class="initiallyHidden">';
+			echo "<blockquote class='bodyText'>";
 
-		echo '<table><tr>';
-		echo '<td><div id="speciesdesc" class="initiallyHidden">';
-		echo "<blockquote class='bodyText'><br>";		
-
-	if (isset($SpecCommonName)){ echo "<b>Common Name:</b> {$SpecCommonName}<br>";}
-	if (isset($SpecHabit)){ echo "<b>Habit:</b> {$SpecHabit} ";}
-	if (isset($SpecPlantBody)){ echo "<b>Plant Body:</b> {$SpecPlantBody} ";}
-	if (isset($SpecStem)){ echo "<b>Stem:</b> {$SpecStem} ";}
-	if (isset($SpecSterileStem)){ echo "<b>Sterile Stem:</b> {$SpecSterileStem} ";}
-	if (isset($SpecFertileStem)){ echo "<b>Fertile Stem:</b> {$SpecFertileStem} ";}
-	if (isset($SpecLeaf)){ echo "<b>Leaf:</b> {$SpecLeaf} ";}
-	if (isset($SpecSpines)){ echo "<b>Spines:</b> {$SpecSpines} ";}
-	if (isset($SpecInflorescence)){ echo "<b>Inflorescence:</b> {$SpecInflorescence} ";}
-	if (isset($SpecStaminateHead)){ echo "<b>Staminate Head:</b> {$SpecStaminateHead} ";}
-	if (isset($SpecRayOrPistillateFlower)){ echo "<b>Ray Or Pistillate Flower:</b> {$SpecRayOrPistillateFlower} ";}
-	if (isset($SpecPistillateHead)){ echo "<b>Pistillate Head:</b> {$SpecPistillateHead} ";}
-	if (isset($SpecStaminateInflorescence)){ echo "<b>Staminate Inflorescence:</b> {$SpecStaminateInflorescence} ";}
-	if (isset($SpecPistillateOrBisexualInflorescence)){ echo "<b>Pistillate Or Bisexual Inflorescence:</b> {$SpecPistillateOrBisexualInflorescence} ";}
-	if (isset($SpecPistillateInflorescence)){ echo "<b>Pistillate Inflorescence:</b> {$SpecPistillateInflorescence} ";}
-	if (isset($SpecSpikelet)){ echo "<b>Spikelet:</b> {$SpecSpikelet} ";}
-	if (isset($SpecFertileSpikelet)){ echo "<b>Fertile Spikelet:</b> {$SpecFertileSpikelet} ";}
-	if (isset($SpecSterileSpikelet)){ echo "<b>Sterile Spikelet:</b> {$SpecSterileSpikelet} ";}
-	if (isset($SpecDistalSpikelet)){ echo "<b>Distal Spikelet:</b> {$SpecDistalSpikelet} ";}
-	if (isset($SpecCentralSpikelet)){ echo "<b>Central Spikelet:</b> {$SpecCentralSpikelet}";}
-	if (isset($SpecLateralSpikelet)){ echo "<b>Lateral Spikelet:</b> {$SpecLateralSpikelet}";}
-	if (isset($SpecStaminateSpikelet)){ echo "<b>Staminate Spikelet:</b> {$SpecStaminateSpikelet} ";}
-	if (isset($SpecPistillateSpikelet)){ echo "<b>Pistillate Spikelet:</b> {$SpecPistillateSpikelet} ";}
-	if (isset($SpecFlower)){ echo "<b>Flower:</b> {$SpecFlower} ";}
-	if (isset($SpecStaminateFlower)){ echo "<b>Staminate Flower:</b> {$SpecStaminateFlower} ";}
-	if (isset($SpecPistillateFlower)){ echo "<b>Pistillate Flower:</b> {$SpecPistillateFlower} ";}
-	if (isset($SpecRayFlower)){ echo "<b>Ray Flower:</b> {$SpecRayFlower} ";}
-	if (isset($SpecDiskFlower)){ echo "<b>Disk Flower:</b> {$SpecDiskFlower} ";}
-	if (isset($SpecCone)){ echo "<b>Cone:</b> {$SpecCone} ";}
-	if (isset($SpecPollenCone)){ echo "<b>Pollen Cone:</b> {$SpecPollenCone} ";}
-	if (isset($SpecSeedCone)){ echo "<b>Seed Cone:</b> {$SpecSeedCone} ";}
-	if (isset($SpecBisexualFlower)){ echo "<b>Bisexual Flower:</b> {$SpecBisexualFlower} ";}
-	if (isset($SpecFruit)){ echo "<b>Fruit:</b> {$SpecFruit} ";}
-	if (isset($SpecSeed)){ echo "<b>Seed:</b> {$SpecSeed} ";}
-	if (isset($SpecSporangia)){ echo "<b>Sporangia:</b> {$SpecSporangia} ";}
-	if (isset($SpecSporangiumCase)){ echo "<b>Sporangium Case:</b> {$SpecSporangiumCase} ";}
-	if (isset($SpecMaleSporangiumCase)){ echo "<b>Male Sporangium Case:</b> {$SpecMaleSporangiumCase} ";}
-	if (isset($SpecFemaleSporangiumCase)){ echo "<b>Female Sporangium Case:</b> {$SpecFemaleSporangiumCase} ";}
-	if (isset($SpecSpores)){ echo "<b>Spores:</b> {$SpecSpores} ";}
-	if (isset($SpecChromosomes)){ echo "<b>Chromosomes:</b> {$SpecChromosomes}";}
-		echo "<br />"; //break between morphological fields and rest of fields
-
-	if (isset($SpecGeneraInFamily)){ echo "<b>Genera In Family:</b> {$SpecGeneraInFamily} ";}
-	if (isset($SpecEtymology)){ echo "<b>Etymology:</b> {$SpecEtymology} ";}
-	if (isset($SpecToxicity)){ echo "<b>Toxicity:</b> {$SpecToxicity} ";}
-	if (isset($SpecNote)){ echo "<b>Note:</b> {$SpecNote} ";}
-		echo "<br />";
-
-	if (isset($SpecUnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$SpecUnabridgedNote}</span><br>";}
-	if (isset($SpecTJM2Author)){ echo "<b>eFlora Treatment Author:</b> {$SpecTJM2Author}<br>";}
-	if (isset($SpecReference)){ echo "<b>Reference:</b> {$SpecReference}<br>";}
-	if (isset($SpecUnabridgedReference)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$SpecUnabridgedReference}</span><br>";}
-	if (isset($SpecScientificEditor)){ echo "<b>Scientific Editor:</b> {$SpecScientificEditor}<br>";}
-
-		echo "</div></td>";
-	}
+		if (!empty($FamCommonName)){ echo "<b>Common Name:</b> {$FamCommonName}<br>";}
+		if (!empty($FamHabit)){ echo "<b>Habit:</b> {$FamHabit} ";}
+		if (!empty($FamPlantBody)){ echo "<b>Plant Body:</b> {$FamPlantBody} ";}
+		if (!empty($FamStem)){ echo "<b>Stem:</b> {$FamStem} ";}
+		if (!empty($FamSterileStem)){ echo "<b>Sterile Stem:</b> {$FamSterileStem} ";}
+		if (!empty($FamFertileStem)){ echo "<b>Fertile Stem:</b> {$FamFertileStem} ";}
+		if (!empty($FamLeaf)){ echo "<b>Leaf:</b> {$FamLeaf} ";}
+		if (!empty($FamSpines)){ echo "<b>Spines:</b> {$FamSpines} ";}
+		if (!empty($FamInflorescence)){ echo "<b>Inflorescence:</b> {$FamInflorescence} ";}
+		if (!empty($FamStaminateHead)){ echo "<b>Staminate Head:</b> {$FamStaminateHead} ";}
+		if (!empty($FamRayOrPistillateFlower)){ echo "<b>Ray Or Pistillate Flower:</b> {$FamRayOrPistillateFlower} ";}
+		if (!empty($FamPistillateHead)){ echo "<b>Pistillate Head:</b> {$FamPistillateHead} ";}
+		if (!empty($FamStaminateInflorescence)){ echo "<b>Staminate Inflorescence:</b> {$FamStaminateInflorescence} ";}
+		if (!empty($FamPistillateOrBisexualInflorescence)){ echo "<b>Pistillate Or Bisexual Inflorescence:</b> {$FamPistillateOrBisexualInflorescence} ";}
+		if (!empty($FamPistillateInflorescence)){ echo "<b>Pistillate Inflorescence:</b> {$FamPistillateInflorescence} ";}
+		if (!empty($FamSpikelet)){ echo "<b>Spikelet:</b> {$FamSpikelet} ";}
+		if (!empty($FamFertileSpikelet)){ echo "<b>Fertile Spikelet:</b> {$FamFertileSpikelet} ";}
+		if (!empty($FamSterileSpikelet)){ echo "<b>Sterile Spikelet:</b> {$FamSterileSpikelet} ";}
+		if (!empty($FamDistalSpikelet)){ echo "<b>Distal Spikelet:</b> {$FamDistalSpikelet} ";}
+		if (!empty($FamCentralSpikelet)){ echo "<b>Central Spikelet:</b> {$FamCentralSpikelet}";}
+		if (!empty($FamLateralSpikelet)){ echo "<b>Lateral Spikelet:</b> {$FamLateralSpikelet}";}
+		if (!empty($FamStaminateSpikelet)){ echo "<b>Staminate Spikelet:</b> {$FamStaminateSpikelet} ";}
+		if (!empty($FamPistillateSpikelet)){ echo "<b>Pistillate Spikelet:</b> {$FamPistillateSpikelet} ";}
+		if (!empty($FamFlower)){ echo "<b>Flower:</b> {$FamFlower} ";}
+		if (!empty($FamStaminateFlower)){ echo "<b>Staminate Flower:</b> {$FamStaminateFlower} ";}
+		if (!empty($FamPistillateFlower)){ echo "<b>Pistillate Flower:</b> {$FamPistillateFlower} ";}
+		if (!empty($FamRayFlower)){ echo "<b>Ray Flower:</b> {$FamRayFlower} ";}
+		if (!empty($FamDiskFlower)){ echo "<b>Disk Flower:</b> {$FamDiskFlower} ";}
+		if (!empty($FamCone)){ echo "<b>Cone:</b> {$FamCone} ";}
+		if (!empty($FamPollenCone)){ echo "<b>Pollen Cone:</b> {$FamPollenCone} ";}
+		if (!empty($FamSeedCone)){ echo "<b>Seed Cone:</b> {$FamSeedCone} ";}
+		if (!empty($FamBisexualFlower)){ echo "<b>Bisexual Flower:</b> {$FamBisexualFlower} ";}
+		if (!empty($FamFruit)){ echo "<b>Fruit:</b> {$FamFruit} ";}
+		if (!empty($FamSeed)){ echo "<b>Seed:</b> {$FamSeed} ";}
+		if (!empty($FamSporangia)){ echo "<b>Sporangia:</b> {$FamSporangia} ";}
+		if (!empty($FamSporangiumCase)){ echo "<b>Sporangium Case:</b> {$FamSporangiumCase} ";}
+		if (!empty($FamMaleSporangiumCase)){ echo "<b>Male Sporangium Case:</b> {$FamMaleSporangiumCase} ";}
+		if (!empty($FamFemaleSporangiumCase)){ echo "<b>Female Sporangium Case:</b> {$FamFemaleSporangiumCase} ";}
+		if (!empty($FamSpores)){ echo "<b>Spores:</b> {$FamSpores} ";}
+		if (!empty($FamChromosomes)){ echo "<b>Chromosomes:</b> {$FamChromosomes}";}
+			echo "<br>"; //break between morphological fields and rest of fields
 	
-	echo "<br />";
-	echo '</tr></table>';
-}
+		if (!empty($FamGeneraInFamily)){ echo "<b>Genera In Family:</b> {$FamGeneraInFamily} ";}
+		if (!empty($FamEtymology)){ echo "<b>Etymology:</b> {$FamEtymology} ";}
+		if (!empty($FamToxicity)){ echo "<b>Toxicity:</b> {$FamToxicity} ";}
+		if (!empty($FamNote)){ echo "<b>Note:</b> {$FamNote} ";}
+			echo "<br>";
+	
+		if (!empty($FamUnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$FamUnabridgedNote}</span><br>";}
+		if (!empty($FamTJM2Author)){ echo "<b>eFlora Treatment Author:</b> {$FamTJM2Author}<br>";}
+		if (!empty($FamReference)){ echo "<b>Reference:</b> {$FamReference}<br>";}
+		if (!empty($FamUnabridgedReference)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$FamUnabridgedReference}</span><br>";}
+		if (!empty($FamScientificEditor)){ echo "<b>Scientific Editor:</b> {$FamScientificEditor}<br>";}
+			echo "</blockquote></div></td>";
+
+		if (!empty($GenScientificName)){
+
+			echo "<table class='taxonomy_table'><tr><td class='column1'><b>Genus: {$GenScientificName}</b></td><td class='column2'><a id='genuslink'>View Description</a></b></td>";
+
+			if (!empty($GenHasKey)){
+				echo "<td class='column3'><a href='/eflora/eflora_keys.php?key={$GenTaxonID}'>Dichotomous Key</a></td></tr></table>";
+			}
+			else{ 
+				$GenHasKey = null;
+				echo "<td class='column3'>&nbsp;</td></tr></table>"; 
+			}
+
+			echo '<table><tr>';
+			echo '<td><div id="genusdesc" class="initiallyHidden">';
+			echo "<blockquote class='bodyText'><br>";
+
+			if (!empty($GenCommonName)){ echo "<b>Common Name:</b> {$GenCommonName}<br>";}
+			if (!empty($GenHabit)){ echo "<b>Habit:</b> {$GenHabit} ";}
+			if (!empty($GenPlantBody)){ echo "<b>Plant Body:</b> {$GenPlantBody} ";}
+			if (!empty($GenStem)){ echo "<b>Stem:</b> {$GenStem} ";}
+			if (!empty($GenSterileStem)){ echo "<b>Sterile Stem:</b> {$GenSterileStem} ";}
+			if (!empty($GenFertileStem)){ echo "<b>Fertile Stem:</b> {$GenFertileStem} ";}
+			if (!empty($GenLeaf)){ echo "<b>Leaf:</b> {$GenLeaf} ";}
+			if (!empty($GenSpines)){ echo "<b>Spines:</b> {$GenSpines} ";}
+			if (!empty($GenInflorescence)){ echo "<b>Inflorescence:</b> {$GenInflorescence} ";}
+			if (!empty($GenStaminateHead)){ echo "<b>Staminate Head:</b> {$GenStaminateHead} ";}
+			if (!empty($GenRayOrPistillateFlower)){ echo "<b>Ray Or Pistillate Flower:</b> {$GenRayOrPistillateFlower} ";}
+			if (!empty($GenPistillateHead)){ echo "<b>Pistillate Head:</b> {$GenPistillateHead} ";}
+			if (!empty($GenStaminateInflorescence)){ echo "<b>Staminate Inflorescence:</b> {$GenStaminateInflorescence} ";}
+			if (!empty($GenPistillateOrBisexualInflorescence)){ echo "<b>Pistillate Or Bisexual Inflorescence:</b> {$GenPistillateOrBisexualInflorescence} ";}
+			if (!empty($GenPistillateInflorescence)){ echo "<b>Pistillate Inflorescence:</b> {$GenPistillateInflorescence} ";}
+			if (!empty($GenSpikelet)){ echo "<b>Spikelet:</b> {$GenSpikelet} ";}
+			if (!empty($GenFertileSpikelet)){ echo "<b>Fertile Spikelet:</b> {$GenFertileSpikelet} ";}
+			if (!empty($GenSterileSpikelet)){ echo "<b>Sterile Spikelet:</b> {$GenSterileSpikelet} ";}
+			if (!empty($GenDistalSpikelet)){ echo "<b>Distal Spikelet:</b> {$GenDistalSpikelet} ";}
+			if (!empty($GenCentralSpikelet)){ echo "<b>Central Spikelet:</b> {$GenCentralSpikelet}";}
+			if (!empty($GenLateralSpikelet)){ echo "<b>Lateral Spikelet:</b> {$GenLateralSpikelet}";}
+			if (!empty($GenStaminateSpikelet)){ echo "<b>Staminate Spikelet:</b> {$GenStaminateSpikelet} ";}
+			if (!empty($GenPistillateSpikelet)){ echo "<b>Pistillate Spikelet:</b> {$GenPistillateSpikelet} ";}
+			if (!empty($GenFlower)){ echo "<b>Flower:</b> {$GenFlower} ";}
+			if (!empty($GenStaminateFlower)){ echo "<b>Staminate Flower:</b> {$GenStaminateFlower} ";}
+			if (!empty($GenPistillateFlower)){ echo "<b>Pistillate Flower:</b> {$GenPistillateFlower} ";}
+			if (!empty($GenRayFlower)){ echo "<b>Ray Flower:</b> {$GenRayFlower} ";}
+			if (!empty($GenDiskFlower)){ echo "<b>Disk Flower:</b> {$GenDiskFlower} ";}
+			if (!empty($GenCone)){ echo "<b>Cone:</b> {$GenCone} ";}
+			if (!empty($GenPollenCone)){ echo "<b>Pollen Cone:</b> {$GenPollenCone} ";}
+			if (!empty($GenSeedCone)){ echo "<b>Seed Cone:</b> {$GenSeedCone} ";}
+			if (!empty($GenBisexualFlower)){ echo "<b>Bisexual Flower:</b> {$GenBisexualFlower} ";}
+			if (!empty($GenFruit)){ echo "<b>Fruit:</b> {$GenFruit} ";}
+			if (!empty($GenSeed)){ echo "<b>Seed:</b> {$GenSeed} ";}
+			if (!empty($GenSporangia)){ echo "<b>Sporangia:</b> {$GenSporangia} ";}
+			if (!empty($GenSporangiumCase)){ echo "<b>Sporangium Case:</b> {$GenSporangiumCase} ";}
+			if (!empty($GenMaleSporangiumCase)){ echo "<b>Male Sporangium Case:</b> {$GenMaleSporangiumCase} ";}
+			if (!empty($GenFemaleSporangiumCase)){ echo "<b>Female Sporangium Case:</b> {$GenFemaleSporangiumCase} ";}
+			if (!empty($GenSpores)){ echo "<b>Spores:</b> {$GenSpores} ";}
+			if (!empty($GenChromosomes)){ echo "<b>Chromosomes:</b> {$GenChromosomes}";}
+				echo "<br>"; //break between morphological fields and rest of fields
+		
+			if (!empty($GenEtymology)){ echo "<b>Etymology:</b> {$GenEtymology} ";}
+			if (!empty($GenToxicity)){ echo "<b>Toxicity:</b> {$GenToxicity} ";}
+			if (!empty($GenNote)){ echo "<b>Note:</b> {$GenNote} ";}
+				echo "<br>";
+		
+			if (!empty($GenUnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$GenUnabridgedNote}</span><br>";}
+			if (!empty($GenTJM2Author)){ echo "<b>eFlora Treatment Author:</b> {$GenTJM2Author}<br>";}
+			if (!empty($GenReference)){ echo "<b>Reference:</b> {$GenReference}<br>";}
+			if (!empty($GenUnabridgedReference)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$GenUnabridgedReference}</span><br>";}
+			if (!empty($GenScientificEditor)){ echo "<b>Scientific Editor:</b> {$GenScientificEditor}<br>";}
+		
+				echo "</div></td>";
+			
+		}
+		
+		if (!empty($SpecScientificName)){
+			echo "<table class='taxonomy_table'><tr><td class='column1'><b>Species: {$SpecScientificName}</b></td><td class='column2'><a id='specieslink'>View Description</a></b></td>";
+
+			if (!empty($SpecHasKey)){
+				echo "<td class='column3'><a href='/eflora/eflora_keys.php?key={$SpecTaxonID}'>Dichotomous Key</a></td></tr></table>";
+			}
+			else{ 
+				$SpecHasKey = null;
+				echo "<td class='column3'>&nbsp;</td></tr></table>"; 
+			}
+
+			echo '<table><tr>';
+			echo '<td><div id="speciesdesc" class="initiallyHidden">';
+			echo "<blockquote class='bodyText'><br>";		
+
+			if (!empty($SpecCommonName)){ echo "<b>Common Name:</b> {$SpecCommonName}<br>";}
+			if (!empty($SpecHabit)){ echo "<b>Habit:</b> {$SpecHabit} ";}
+			if (!empty($SpecPlantBody)){ echo "<b>Plant Body:</b> {$SpecPlantBody} ";}
+			if (!empty($SpecStem)){ echo "<b>Stem:</b> {$SpecStem} ";}
+			if (!empty($SpecSterileStem)){ echo "<b>Sterile Stem:</b> {$SpecSterileStem} ";}
+			if (!empty($SpecFertileStem)){ echo "<b>Fertile Stem:</b> {$SpecFertileStem} ";}
+			if (!empty($SpecLeaf)){ echo "<b>Leaf:</b> {$SpecLeaf} ";}
+			if (!empty($SpecSpines)){ echo "<b>Spines:</b> {$SpecSpines} ";}
+			if (!empty($SpecInflorescence)){ echo "<b>Inflorescence:</b> {$SpecInflorescence} ";}
+			if (!empty($SpecStaminateHead)){ echo "<b>Staminate Head:</b> {$SpecStaminateHead} ";}
+			if (!empty($SpecRayOrPistillateFlower)){ echo "<b>Ray Or Pistillate Flower:</b> {$SpecRayOrPistillateFlower} ";}
+			if (!empty($SpecPistillateHead)){ echo "<b>Pistillate Head:</b> {$SpecPistillateHead} ";}
+			if (!empty($SpecStaminateInflorescence)){ echo "<b>Staminate Inflorescence:</b> {$SpecStaminateInflorescence} ";}
+			if (!empty($SpecPistillateOrBisexualInflorescence)){ echo "<b>Pistillate Or Bisexual Inflorescence:</b> {$SpecPistillateOrBisexualInflorescence} ";}
+			if (!empty($SpecPistillateInflorescence)){ echo "<b>Pistillate Inflorescence:</b> {$SpecPistillateInflorescence} ";}
+			if (!empty($SpecSpikelet)){ echo "<b>Spikelet:</b> {$SpecSpikelet} ";}
+			if (!empty($SpecFertileSpikelet)){ echo "<b>Fertile Spikelet:</b> {$SpecFertileSpikelet} ";}
+			if (!empty($SpecSterileSpikelet)){ echo "<b>Sterile Spikelet:</b> {$SpecSterileSpikelet} ";}
+			if (!empty($SpecDistalSpikelet)){ echo "<b>Distal Spikelet:</b> {$SpecDistalSpikelet} ";}
+			if (!empty($SpecCentralSpikelet)){ echo "<b>Central Spikelet:</b> {$SpecCentralSpikelet}";}
+			if (!empty($SpecLateralSpikelet)){ echo "<b>Lateral Spikelet:</b> {$SpecLateralSpikelet}";}
+			if (!empty($SpecStaminateSpikelet)){ echo "<b>Staminate Spikelet:</b> {$SpecStaminateSpikelet} ";}
+			if (!empty($SpecPistillateSpikelet)){ echo "<b>Pistillate Spikelet:</b> {$SpecPistillateSpikelet} ";}
+			if (!empty($SpecFlower)){ echo "<b>Flower:</b> {$SpecFlower} ";}
+			if (!empty($SpecStaminateFlower)){ echo "<b>Staminate Flower:</b> {$SpecStaminateFlower} ";}
+			if (!empty($SpecPistillateFlower)){ echo "<b>Pistillate Flower:</b> {$SpecPistillateFlower} ";}
+			if (!empty($SpecRayFlower)){ echo "<b>Ray Flower:</b> {$SpecRayFlower} ";}
+			if (!empty($SpecDiskFlower)){ echo "<b>Disk Flower:</b> {$SpecDiskFlower} ";}
+			if (!empty($SpecCone)){ echo "<b>Cone:</b> {$SpecCone} ";}
+			if (!empty($SpecPollenCone)){ echo "<b>Pollen Cone:</b> {$SpecPollenCone} ";}
+			if (!empty($SpecSeedCone)){ echo "<b>Seed Cone:</b> {$SpecSeedCone} ";}
+			if (!empty($SpecBisexualFlower)){ echo "<b>Bisexual Flower:</b> {$SpecBisexualFlower} ";}
+			if (!empty($SpecFruit)){ echo "<b>Fruit:</b> {$SpecFruit} ";}
+			if (!empty($SpecSeed)){ echo "<b>Seed:</b> {$SpecSeed} ";}
+			if (!empty($SpecSporangia)){ echo "<b>Sporangia:</b> {$SpecSporangia} ";}
+			if (!empty($SpecSporangiumCase)){ echo "<b>Sporangium Case:</b> {$SpecSporangiumCase} ";}
+			if (!empty($SpecMaleSporangiumCase)){ echo "<b>Male Sporangium Case:</b> {$SpecMaleSporangiumCase} ";}
+			if (!empty($SpecFemaleSporangiumCase)){ echo "<b>Female Sporangium Case:</b> {$SpecFemaleSporangiumCase} ";}
+			if (!empty($SpecSpores)){ echo "<b>Spores:</b> {$SpecSpores} ";}
+			if (!empty($SpecChromosomes)){ echo "<b>Chromosomes:</b> {$SpecChromosomes}";}
+				echo "<br>"; //break between morphological fields and rest of fields
+		
+			if (!empty($SpecEtymology)){ echo "<b>Etymology:</b> {$SpecEtymology} ";}
+			if (!empty($SpecToxicity)){ echo "<b>Toxicity:</b> {$SpecToxicity} ";}
+			if (!empty($SpecNote)){ echo "<b>Note:</b> {$SpecNote} ";}
+				echo "<br>";
+		
+			if (!empty($SpecUnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$SpecUnabridgedNote}</span><br>";}
+			if (!empty($SpecTJM2Author)){ echo "<b>eFlora Treatment Author:</b> {$SpecTJM2Author}<br>";}
+			if (!empty($SpecReference)){ echo "<b>Reference:</b> {$SpecReference}<br>";}
+			if (!empty($SpecUnabridgedReference)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$SpecUnabridgedReference}</span><br>";}
+		
+				echo "</div></td>";
+		}
+			
+		echo "<br>";
+		echo '</tr></table>';
+	}
 
 
-echo '</tr></table>';
+echo '</tr></table><div class="spacer_lightgrey"><p class="bodyText">';
+
+		if (!empty($HasKey)){ echo "<b><a href='/eflora/eflora_keys.php?key=".$TID."'>Key to <i>".$ScientificName."</i></a></b></p></div><br>"; }
+
+//END higher taxonomy table 
+
+//START TAXON treatment table
+//define based on presence of RIGHT SIDE BLOCK illustration/video section
 
 //if illustration exists, there are two table cells, else there is one
 	if (!empty($IllustrationFile)){
 		echo '<table id = "EF_right"><tr><td>';
-		#echo '<table width="100%"><tr><td width="60%" valign="top">';
-		#if (isset($VIDEO)){
-		#	echo '<p>VIDEO TEST FOUND</p>';
-		#}
 	}
-	#elseif (isset($IllustrationLarge)){
-	#	echo '<table width="100%"><tr><td width="60%" valign="top">';
-	#}
 	elseif (!empty($VIDEO)){
 		echo '<table id = "EF_right"><tr><td>';
 	}
@@ -3190,283 +3450,201 @@ echo '</tr></table>';
 		echo '<table id = "EF_citation"><tr><td>';
 	}
 
+//END illustration/video type section
 
-//then finally, print the focal taxonID block
-echo '<div class="pageMajorHeading"><b>'.$FormattedDisplayName.'</b><br></div>';
-echo "<div class='bodyText'>";
-	if (!empty($efloraStatus)){ echo '<b>'.$efloraStatus.'</b><br>';}
+//START LEFT SIDE BLOCK, FIRST ROW, taxon descriptions
 
-	if (!empty($Habit)){ echo '<b>Habit:</b> '.$Habit.' ';}
-	if (!empty($PlantBody)){ echo '<b>Plant Body:</b> '.$PlantBody.' ';}
-	if (!empty($Stem)){ echo '<b>Stem:</b> '.$Stem.' ';}
-	if (!empty($SterileStem)){ echo '<b>Sterile Stem:</b> '.$SterileStem.' ';}
-	if (!empty($FertileStem)){ echo '<b>Fertile Stem:</b> '.$FertileStem.' ';}
-	if (!empty($Leaf)){ echo '<b>Leaf:</b> '.$Leaf.' ';}
-	if (!empty($Spines)){ echo '<b>Spines:</b> '.$Spines.' ';}
-	if (!empty($Inflorescence)){ echo '<b>Inflorescence:</b> '.$Inflorescence.' ';}
-	if (!empty($StaminateHead)){ echo '<b>Staminate Head:</b> '.$StaminateHead.' ';}
-	if (!empty($RayOrPistillateFlower)){ echo '<b>Ray Or Pistillate Flower:</b> '.$RayOrPistillateFlower.' ';}
-	if (!empty($PistillateHead)){ echo '<b>Pistillate Head:</b> '.$PistillateHead.' ';}
-	if (!empty($StaminateInflorescence)){ echo '<b>Staminate Inflorescence:</b> '.$StaminateInflorescence.' ';}
-	if (!empty($PistillateOrBisexualInflorescence)){ echo '<b>Pistillate Or Bisexual Inflorescence:</b> '.$PistillateOrBisexualInflorescence.' ';}
-	if (!empty($PistillateInflorescence)){ echo '<b>Pistillate Inflorescence:</b> '.$PistillateInflorescence.' ';}
-	if (!empty($Spikelet)){ echo '<b>Spikelet:</b> '.$Spikelet.' ';}
-	if (!empty($FertileSpikelet)){ echo '<b>Fertile Spikelet:</b> '.$FertileSpikelet.' ';}
-	if (!empty($SterileSpikelet)){ echo '<b>Sterile Spikelet:</b> '.$SterileSpikelet.' ';}
-	if (!empty($DistalSpikelet)){ echo '<b>Distal Spikelet:</b> '.$DistalSpikelet.' ';}
-	if (!empty($CentralSpikelet)){ echo '<b>Central Spikelet:</b> '.$CentralSpikelet.' ';}
-	if (!empty($LateralSpikelet)){ echo '<b>Lateral Spikelet:</b> '.$LateralSpikelet.' ';}
-	if (!empty($StaminateSpikelet)){ echo '<b>Staminate Spikelet:</b> '.$StaminateSpikelet.' ';}
-	if (!empty($PistillateSpikelet)){ echo '<b>Pistillate Spikelet:</b> '.$PistillateSpikelet.' ';}
-	if (!empty($Flower)){ echo '<b>Flower:</b> '.$Flower.' ';}
-	if (!empty($StaminateFlower)){ echo '<b>Staminate Flower:</b> '.$StaminateFlower.' ';}
-	if (!empty($PistillateFlower)){ echo '<b>Pistillate Flower:</b> '.$PistillateFlower.' ';}
-	if (!empty($RayFlower)){ echo '<b>Ray Flower:</b> '.$RayFlower.' ';}
-	if (!empty($DiskFlower)){ echo '<b>Disk Flower:</b> '.$DiskFlower.' ';}
-	if (!empty($Cone)){ echo '<b>Cone:</b> '.$Cone.' ';}
-	if (!empty($PollenCone)){ echo '<b>Pollen Cone:</b> '.$PollenCone.' ';}
-	if (!empty($SeedCone)){ echo '<b>Seed Cone:</b> '.$SeedCone.' ';}
-	if (!empty($BisexualFlower)){ echo '<b>Bisexual Flower:</b> '.$BisexualFlower.' ';}
-	if (!empty($Fruit)){ echo '<b>Fruit:</b> '.$Fruit.' ';}
-	if (!empty($Seed)){ echo '<b>Seed:</b> '.$Seed.' ';}
-	if (!empty($Sporangia)){ echo '<b>Sporangia:</b> '.$Sporangia.' ';}
-	if (!empty($SporangiumCase)){ echo '<b>Sporangium Case:</b> '.$SporangiumCase.' ';}
-	if (!empty($MaleSporangiumCase)){ echo '<b>Male Sporangium Case:</b> '.$MaleSporangiumCase.' ';}
-	if (!empty($FemaleSporangiumCase)){ echo '<b>Female Sporangium Case:</b> '.$FemaleSporangiumCase.' ';}
-	if (!empty($Spores)){ echo '<b>Spores:</b> '.$Spores.' ';}
-	if (!empty($Chromosomes)){ echo '<b>Chromosomes:</b> '.$Chromosomes.' ';}
-echo "<br />"; //break between morphological fields and rest of fields
-
-	if (isset($Ecology)){ echo "<b>Ecology:</b> {$Ecology} ";}
-	if (isset($Elevation)){ echo "<b>Elevation:</b> {$Elevation} ";}
-	if (isset($BioregionalDistribution)){ echo "<b><a href=\"#MAP\">Bioregional Distribution:</a></b> {$BioregionalDistribution} ";}
-	if (isset($OutsideCA)){ echo "<b>Distribution Outside California:</b> {$OutsideCA} ";}
-	if (isset($SpeciesInGenus)){ echo "<b>Species In Genus:</b> {$SpeciesInGenus} ";}
-	if (isset($GeneraInFamily)){ echo "<b>Genera In Family:</b> {$GeneraInFamily} ";}
-	if (isset($Etymology)){ echo "<b>Etymology:</b> {$Etymology} ";}
-	if (isset($Toxicity)){ echo "<b>Toxicity:</b> {$Toxicity} ";}
-	if (isset($FloweringTime)){ echo "<b>Flowering Time:</b> {$FloweringTime} ";}
-	if (isset($FruitingTime)){ echo "<b>Fruiting Time:</b> {$FruitingTime} ";}
-//if ($ConingTime){ echo "<b>Coning Time:</b> {$ConingTime} ";}
-//Remove as the data was a duplicate of that in Notes
-	if (isset($Note)){ echo "<b>Note:</b> {$Note} ";}
-echo "<br />";
-
-	if (isset($Synonyms)){ echo "<b>Synonyms:</b> {$Synonyms}<br>";}
-	if (isset($UnabridgedSynonyms)){ echo "<span class=\"blueTEXT\"><b>Unabridged Synonyms:</b> {$UnabridgedSynonyms}</span><br>";}
-	if (isset($UnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$UnabridgedNote}</span><br>";}
-	if (isset($JMAuthor)){ echo "<b>Jepson eFlora Author:</b> {$JMAuthor}<br>";}
-	if (isset($Ref)){ echo "<b>Reference:</b> {$Ref}<br>";}
-	if (isset($UnabRef)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$UnabRef}</span><br>";}
-	if (isset($ScientificEditor)){ echo "<b>Scientific Editor:</b> {$ScientificEditor}<br>";}
-echo '<a href="/cgi-bin/get_cpn?'.$TID.'"><b>Index of California Plant Names (ICPN; linked via the Jepson Online Interchange)</b></a><br>';
-	if (isset($HasKey)){ echo "<b><a href='/eflora/eflora_keys.php?key=".$TID."'>Key to <i>".$ScientificName."</i></a></b></br>"; }
-
-//old CDFA table, links are broken, so it is now just a list
-	if (isset($Weediness)){
-		if (strstr($Weediness, 'SYMBOL 1') !== false){ 
-			echo '<a href="https://www.cdfa.ca.gov/plant/IPC/encycloweedia/weedinfo/winfo_table-sciname.html"><b>Noxious Weed listed on the CDFA Weed Pest Ratings table</b></a><br>';
-		}
-
-//new CDFA weed ranking sheets, indexed by page number of some sort, not taxon name
-//This has to be updated manually and added to a new table in eflora.db 
-//so that the CDFA_ID variable can be found; set as null for now
-$CDFA_name = null;
-$CDFA_ID = null;
-$CDFA_url = null;
-$url = null;
-
-		if (isset($CDFA_ID)){
-			if (strstr($Weediness, 'SYMBOL 1') !== false){
-				$CDFAurl = "https://blogs.cdfa.ca.gov/Section3162/?p=".$CDFA_ID;
-				echo '<a href="'.$CDFAurl.'"><b>Weed listed by Cal-IPC</b></a><br />';
-			}
-		}
-		else{
-			$CDFA_name = str_replace(" ", "+", $ScientificName);
-			$CDFAurl = "https://blogs.cdfa.ca.gov/Section3162/?s=".$CDFA_name;
-			echo '<a href="'.$CDFAurl.'"><b>View the CDFA Pest Rating page for <i>'.$ScientificName.'</i></b></a><br />';
-		}
+//print the focal taxon block
+	echo '<div class="pageMajorHeading"><b>'.$FormattedDisplayName.'</b><br></div>';
+	echo "<div class='bodyText'>";
+		if (!empty($efloraStatus)){ echo '<b>'.$efloraStatus.'</b><br>';}
 	
-		if (strstr($Weediness, 'SYM') !== false){
-			//convert scientific name to IPC name format for new website
-			$IPC_name = str_replace(" subsp. ", "-ssp-", $ScientificName); //CalPhotos uses "ssp." and not "subsp."
-			$IPC_name = str_replace(" nothosubsp. ", "-ssp-", $IPC_name);
-			$hb_name = str_replace(" var. ", "-var-", $IPC_name);
-			// convert the string to all lowercase
-			$IPC_name = strtolower($IPC_name);
-			//replace all other spaces in name with -
-			$IPC_search_name = str_replace(" ", "-", $IPC_name);
-		//fix some irregular formats in the calIPC website 
-				$IPC_search_name = str_replace("acacia-dealbata", "acacia_dealbata", $IPC_search_name);
-				$IPC_search_name = str_replace("acacia-melanoxylon", "acacia_melanoxylon", $IPC_search_name);
-				$IPC_search_name = str_replace("lythrum-hyssopifolia", "lythrum-hyssopifolium", $IPC_search_name);
-				$IPC_search_name = str_replace("ludwigia-peploides-ssp-montevidensis", "ludwigia-peploides", $IPC_search_name);
-				$IPC_search_name = str_replace("ludwigia-peploides-ssp-peploides", "ludwigia-peploides", $IPC_search_name);
-				$IPC_search_name = str_replace("phytolacca-americana-var.-americana", "phytolacca-americana", $IPC_search_name);
-				$IPC_search_name = str_replace("phytolacca-americana-var-americana", "phytolacca-americana", $IPC_search_name);
-				$IPC_search_name = str_replace("tetragonia-tetragonoides", "tetragonia-tetragonioides", $IPC_search_name);
+		if (!empty($Habit)){ echo '<b>Habit:</b> '.$Habit.' ';}
+		if (!empty($PlantBody)){ echo '<b>Plant Body:</b> '.$PlantBody.' ';}
+		if (!empty($Stem)){ echo '<b>Stem:</b> '.$Stem.' ';}
+		if (!empty($SterileStem)){ echo '<b>Sterile Stem:</b> '.$SterileStem.' ';}
+		if (!empty($FertileStem)){ echo '<b>Fertile Stem:</b> '.$FertileStem.' ';}
+		if (!empty($Leaf)){ echo '<b>Leaf:</b> '.$Leaf.' ';}
+		if (!empty($Spines)){ echo '<b>Spines:</b> '.$Spines.' ';}
+		if (!empty($Inflorescence)){ echo '<b>Inflorescence:</b> '.$Inflorescence.' ';}
+		if (!empty($StaminateHead)){ echo '<b>Staminate Head:</b> '.$StaminateHead.' ';}
+		if (!empty($RayOrPistillateFlower)){ echo '<b>Ray Or Pistillate Flower:</b> '.$RayOrPistillateFlower.' ';}
+		if (!empty($PistillateHead)){ echo '<b>Pistillate Head:</b> '.$PistillateHead.' ';}
+		if (!empty($StaminateInflorescence)){ echo '<b>Staminate Inflorescence:</b> '.$StaminateInflorescence.' ';}
+		if (!empty($PistillateOrBisexualInflorescence)){ echo '<b>Pistillate Or Bisexual Inflorescence:</b> '.$PistillateOrBisexualInflorescence.' ';}
+		if (!empty($PistillateInflorescence)){ echo '<b>Pistillate Inflorescence:</b> '.$PistillateInflorescence.' ';}
+		if (!empty($Spikelet)){ echo '<b>Spikelet:</b> '.$Spikelet.' ';}
+		if (!empty($FertileSpikelet)){ echo '<b>Fertile Spikelet:</b> '.$FertileSpikelet.' ';}
+		if (!empty($SterileSpikelet)){ echo '<b>Sterile Spikelet:</b> '.$SterileSpikelet.' ';}
+		if (!empty($DistalSpikelet)){ echo '<b>Distal Spikelet:</b> '.$DistalSpikelet.' ';}
+		if (!empty($CentralSpikelet)){ echo '<b>Central Spikelet:</b> '.$CentralSpikelet.' ';}
+		if (!empty($LateralSpikelet)){ echo '<b>Lateral Spikelet:</b> '.$LateralSpikelet.' ';}
+		if (!empty($StaminateSpikelet)){ echo '<b>Staminate Spikelet:</b> '.$StaminateSpikelet.' ';}
+		if (!empty($PistillateSpikelet)){ echo '<b>Pistillate Spikelet:</b> '.$PistillateSpikelet.' ';}
+		if (!empty($Flower)){ echo '<b>Flower:</b> '.$Flower.' ';}
+		if (!empty($StaminateFlower)){ echo '<b>Staminate Flower:</b> '.$StaminateFlower.' ';}
+		if (!empty($PistillateFlower)){ echo '<b>Pistillate Flower:</b> '.$PistillateFlower.' ';}
+		if (!empty($RayFlower)){ echo '<b>Ray Flower:</b> '.$RayFlower.' ';}
+		if (!empty($DiskFlower)){ echo '<b>Disk Flower:</b> '.$DiskFlower.' ';}
+		if (!empty($Cone)){ echo '<b>Cone:</b> '.$Cone.' ';}
+		if (!empty($PollenCone)){ echo '<b>Pollen Cone:</b> '.$PollenCone.' ';}
+		if (!empty($SeedCone)){ echo '<b>Seed Cone:</b> '.$SeedCone.' ';}
+		if (!empty($BisexualFlower)){ echo '<b>Bisexual Flower:</b> '.$BisexualFlower.' ';}
+		if (!empty($Fruit)){ echo '<b>Fruit:</b> '.$Fruit.' ';}
+		if (!empty($Seed)){ echo '<b>Seed:</b> '.$Seed.' ';}
+		if (!empty($Sporangia)){ echo '<b>Sporangia:</b> '.$Sporangia.' ';}
+		if (!empty($SporangiumCase)){ echo '<b>Sporangium Case:</b> '.$SporangiumCase.' ';}
+		if (!empty($MaleSporangiumCase)){ echo '<b>Male Sporangium Case:</b> '.$MaleSporangiumCase.' ';}
+		if (!empty($FemaleSporangiumCase)){ echo '<b>Female Sporangium Case:</b> '.$FemaleSporangiumCase.' ';}
+		if (!empty($Spores)){ echo '<b>Spores:</b> '.$Spores.' ';}
+		if (!empty($Chromosomes)){ echo '<b>Chromosomes:</b> '.$Chromosomes.' ';}
+			echo "<br>"; //break between morphological fields and rest of fields
+	
+		if (!empty($Ecology)){ echo "<b>Ecology:</b> {$Ecology} ";}
+		if (!empty($Elevation)){ echo "<b>Elevation:</b> {$Elevation} ";}
+		if (!empty($BioregionalDistribution)){ echo "<b><a href=\"#MAP\">Bioregional Distribution:</a></b> {$BioregionalDistribution} ";}
+		if (!empty($OutsideCA)){ echo "<b>Distribution Outside California:</b> {$OutsideCA} ";}
+		if (!empty($SpeciesInGenus)){ echo "<b>Species In Genus:</b> {$SpeciesInGenus} ";}
+		if (!empty($GeneraInFamily)){ echo "<b>Genera In Family:</b> {$GeneraInFamily} ";}
+		if (!empty($Etymology)){ echo "<b>Etymology:</b> {$Etymology} ";}
+		if (!empty($Toxicity)){ echo "<b>Toxicity:</b> {$Toxicity} ";}
+		if (!empty($FloweringTime)){ echo "<b>Flowering Time:</b> {$FloweringTime} ";}
+		if (!empty($FruitingTime)){ echo "<b>Fruiting Time:</b> {$FruitingTime} ";}
+		if (!empty($Note)){ echo "<b>Note:</b> {$Note} ";}
+			echo "<br>";
+	
+		if (!empty($Synonyms)){ echo "<b>Synonyms:</b> {$Synonyms}<br>";}
+		if (!empty($UnabridgedSynonyms)){ echo "<span class=\"blueTEXT\"><b>Unabridged Synonyms:</b> {$UnabridgedSynonyms}</span><br>";}
+		if (!empty($UnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$UnabridgedNote}</span><br>";}
+		if (!empty($JMAuthor)){ echo "<b>Jepson eFlora Author:</b> {$JMAuthor}<br>";}
+		if (!empty($Ref)){ echo "<b>Reference:</b> {$Ref}<br>";}
+		if (!empty($UnabRef)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$UnabRef}</span><br>";}
+		if (!empty($ScientificEditor)){ echo "<b>Scientific Editor:</b> {$ScientificEditor}<br>";}
 
-			$url = 'https://www.cal-ipc.org//plants/profile/'.$IPC_search_name.'-profile/';
-			echo '<a href="'.$url.'"><b>Weed listed by Cal-IPC</b></a> <br>';
-//these codes create a lag, but will print a link only if the page exists.
-//page loading lag is about the same time it takes for a page to load in Cal-IPC, so this is a Cal_IPC issue during checking to see if the page exists
-//using just this echo line above does not check the eflora treatments text to see if the author was correct in placing a SYMBOL 2 in WEEDINESS
-//nor does is check to see if the page of the NOXIOUS WEED exists in Cal-IPC
-//note sure which is better, but all of the WEEDINESS records need some type of reporting function to see if the page still exists or has been changed in Cal_IPC
-//the web page url changes in Cal_IPC happens at least once per year, but not to all taxon pages at once in the past 3 years.
-//variant code 1
-		//$headers=get_headers($url, 1);
-		//	if ($headers[0]!='HTTP/1.1 200 OK'){
-		//		echo "<a href='https://www.cal-ipc.org/plants/profile/$IPC_search_name-profile/'><b>Weed listed by Cal-IPC</b></a> <br>";
-		//	}
-		//	else{
-		//		echo "<b>CHECK URL at Cal-IPC - poorly formatted weed url</b><br />";
-		//	}
+			echo '<p class="BodyText"><a href="/cgi-bin/icpn/get_cpn?tid='.$TID.'"><b>Index of California Plant Names (ICPN)</b></a></p>';
 
-//variant code 2
-			//function get_http_response_code($url) {
-			//	$headers = get_headers($url);
-			//	return substr($headers[0], 9, 3);
-			//}
+//END LEFT SIDE BLOCK, FIRST ROW, taxon descriptions
 
-		//if(intval(get_http_response_code($url)) < 400){
-			// File exists, huzzah!
-		//	echo "<a href='https://www.cal-ipc.org/plants/profile/$IPC_search_name-profile/'><b>Weed listed by Cal-IPC</b></a> <br>";
-		//}
-		//else{
-		//	echo "<b>CHECK URL at Cal-IPC - poorly formatted weed url</b><br />";
-		//}
-
-//variant code 3
-		//ini_set("default_socket_timeout","05");
-		//set_time_limit(5);
-		//$f=fopen($url,"r");
-		//$r=fread($f,500);
-		//fclose($f);
-		//	if(strlen($r)>1) {
-			//echo("<span class='online'>Online</span>");
-			// File exists, huzzah!
-		//	echo "<a href='https://www.cal-ipc.org/plants/profile/$IPC_search_name-profile/'><b>Weed listed by Cal-IPC</b></a> <br>";
-		//	}
-		//	else {
-				//echo("<span class='offline'>Offline</span>");
-		//		echo "<b>CHECK URL at Cal-IPC - poorly formatted weed url</b><br />";
-		//	}
-
-//variant code 4
-		//if(! @(file_get_contents($url))){
-		//	echo "<b>CHECK URL at Cal-IPC - poorly formatted weed url</b><br />";
-		//}
-		//else{
-		//	echo "<a href='https://www.cal-ipc.org/plants/profile/$IPC_search_name-profile/'><b>Weed listed by Cal-IPC</b></a> <br>";
-		//}
-
-//variant code 5
-		//if (fopen($url, "r")){
-		//	echo "<a href='https://www.cal-ipc.org/plants/profile/$IPC_search_name-profile/'><b>Weed listed by Cal-IPC</b></a> <br>"; 
-		//}
-		//else{
-		//	echo "<b>CHECK URL at Cal-IPC - poorly formatted weed url</b><br />";
-		//}
-		}
-	}
-	else{
-		$IPC_name = null;
-		$url = null;
-		$IPC_search_name = null;
-		$CDFAurl = null;
-		$hb_name = null;
-		$Weediness = null;
-	}
-		
-#the CNPS conversion in SQL is not working for subtaxa
-$CNPS_name = str_replace(" subsp. ", " ssp. ", $ScientificName);
-
-		if (!empty($CNPS_name)){
-			$CNPS_name = str_replace(" ", "+", $CNPS_name);
-		}
-
-	if (!empty($RarityStatus)){ 
-		if (strpos($RarityStatus, '+') !== false){ echo '<a href="https://rareplants.cnps.org/Plants/Details?taxon='.$CNPS_name.'"><b>Listed on CNPS Rare Plant Inventory</b></a><br>';}
-		else { echo '<a href="http://www.rareplants.cnps.org/detail/'.$RarityStatus.'.html"><b>Listed on CNPS Rare Plant Inventory</b></a><br>';}
-	}
-?>
-
-
-<?php //photos from CalPhotos.
-
+//photos from CalPhotos, set up a converison of the taxon name for the API below.
+//not sure why this is placed here and not below
 $cp_ssp_name = str_replace(" subsp. ", " ssp. ", $ScientificName); //CalPhotos uses "ssp." and not "subsp."
 $cp_name = $cp_ssp_name;
 
-?>
+//START LEFT SIDE BLOCK, FIRST ROW, create species drop down box using SQL Query statements
 
+//get and print list of taxa within the genus (if a species or infra), or list of species within genus (if a genus)
 
+  //if the rank is lower than genus
+	if (!empty($GenTaxonID)){
+		echo '<p><form>';
+		echo '<label><b>List of species:</b><select WIDTH=20 onChange="window.location=this.value">';
+		echo '<OPTION VALUE="None">&nbsp;&nbsp;click here';
+		//$GenTaxonID for focal taxon determined in an earlier query
+		$sql = "SELECT DISTINCT a.TaxonID as TaxonID, a.ScientificName as ScientificName, b.TaxonID, b.GenusID as GenusID FROM eflora_taxa a";
+		$sql.= " INNER JOIN eflora_taxonomy b on a.TaxonID = b.TaxonID";
+		$sql.= " WHERE GenusID=".$GenTaxonID." ";
 
+//BEGIN temporary bug fix lines to add when needed
+//echo '<br>'.$sql.'<br>';
 
-<?php //get and print list of taxa within the genus (if a species or infra), or list of species within genus (if a genus)
-if (!empty($GenTaxonID)) { //i.e. if the rank is lower than genus
-echo '<p><form>';
-echo '<label><b>List of species:</b><select WIDTH=20 onChange="window.location=this.value">';
-echo '<OPTION VALUE="None">&nbsp;&nbsp;click here';
+			if(!mysqli_query($db, $sql)){
+				die('Error: ' . mysqli_error($db));
+			}
 
-$results = $db->query('SELECT DISTINCT a.TaxonID as TaxonID, a.ScientificName as ScientificName, b.TaxonID, b.GenusID as GenusID
-						FROM eflora_taxa a
-						INNER JOIN eflora_taxonomy b on a.TaxonID = b.TaxonID
-						WHERE GenusID='.$GenTaxonID.''); //$GenTaxonID for focal taxon determined in an earlier query
-	while ($row = $results->fetchArray()) {
-		if ($row['TaxonID']){
-			echo ' <OPTION VALUE="/eflora/eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'];
+			$result = mysqli_query($db, $sql);
+
+//query and assign variable to each table field
+		while ($row = mysqli_fetch_array($result)) {
+
+// If no results are found, echo a message and stop
+			if ($row == false){
+				echo '<b>Genus ID was not found in the eflora taxon table.<br>Try another search.<br>';
+    			exit;
+			}
+//BEGIN temporary bug fix lines to add when needed
+//foreach ($row as $key=>$value) {
+//    echo $key."<br>";
+//}
+//END temp bug fix lines
+			if (!empty($row['TaxonID'])){
+				echo ' <OPTION VALUE="/eflora/eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'];
+			}
+
 		}
-
+		echo '</select></label></form></p>';
 	}
-echo '</select></label></form></p>';
-}
-elseif (!empty($FamTaxonID)) { //i.e. if the rank is otherwise lower than family, and therefore at rank genus
-echo '<p><form>';
-echo '<label><b>List of species:</b><select width=20 onchange="window.location=this.value">';
-echo '<OPTION value="None">&nbsp;&nbsp;click here';
-$results = $db->query('SELECT DISTINCT a.TaxonID as TaxonID, a.ScientificName as ScientificName, b.TaxonID, b.GenusID as GenusID
-						FROM eflora_taxa a
-						INNER JOIN eflora_taxonomy b on a.TaxonID = b.TaxonID
-						WHERE GenusID='.$TID.''); //$in this case, the $TaxonID is the ID for a genus
-	while ($row = $results->fetchArray()) {
-		if ($row['TaxonID']){
-			echo ' <OPTION VALUE="/eflora/eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'];
+	elseif (!empty($FamTaxonID)) { 
+	//if the rank is otherwise lower than family, and therefore at rank genus
+		echo '<p><form>';
+		echo '<label><b>List of species:</b><select width=20 onchange="window.location=this.value">';
+		echo '<OPTION value="None">&nbsp;&nbsp;click here';
+
+		$sql = "SELECT DISTINCT a.TaxonID as TaxonID, a.ScientificName as ScientificName, b.TaxonID, b.GenusID as GenusID FROM eflora_taxa a";
+		$sql.= " INNER JOIN eflora_taxonomy b on a.TaxonID = b.TaxonID";
+		$sql.= " WHERE GenusID=".$TID." ";
+
+//BEGIN temporary bug fix lines to add when needed
+//echo '<br>'.$sql.'<br>';
+
+			if(!mysqli_query($db, $sql)){
+				die('Error: ' . mysqli_error($db));
+			}
+
+			$result = mysqli_query($db, $sql);
+
+//query and assign variable to each table field
+		while ($row = mysqli_fetch_array($result)) {
+
+// If no results are found, echo a message and stop
+			if ($row == false){
+				echo '<b>Genus ID (2) was not found in the eflora taxon table.<br>Try another search.<br>';
+    			exit;
+			}
+//BEGIN temporary bug fix lines to add when needed
+//foreach ($row as $key=>$value) {
+//    echo $key."<br>";
+//}
+//END temp bug fix lines
+			if (!empty($row['TaxonID'])){
+				echo ' <OPTION VALUE="/eflora/eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'];
+			}
+
 		}
-
+		echo '</select></label></form></p>';
 	}
-echo '</select></label></form></p>';	
-}
-else {
-	echo '<br />';
-}
+	else {
+		echo '<br>';
+	}
+
+//END LEFT SIDE BLOCK, FIRST ROW, create species drop down box using SQL Query statements
+
+
+//START LEFT SIDE BLOCK, FIRST ROW, create Next-Previous taxon links
+	if (!empty($previousTaxonID)) { //i.e. always, except for the very first page
+		echo '<a href="/eflora/eflora_display.php?tid='.$previousTaxonID.'">Previous taxon: '.$previousName.'</a><br>';
+	}
+
+	if (!empty($nextTaxonID)) { //i.e. always, except for the very last page
+		echo '<a href="/eflora/eflora_display.php?tid='.$nextTaxonID.'">Next taxon: '.$nextName.'</a><br>';
+	}
+//END LEFT SIDE BLOCK, FIRST ROW, create Next-Previous taxon links
+
+//START LEFT SIDE BLOCK, FIRST ROW, create Name Search box
 ?>
 
-<?php //Next-Previous taxon links
-if (isset ($previousTaxonID)) { //i.e. always, except for the very first page
-	echo '<a href="/eflora/eflora_display.php?tid='.$previousTaxonID.'">Previous taxon: '.$previousName.'</a><br>';
-}
-if (isset ($nextTaxonID)) { //i.e. always, except for the very last page
-	echo '<a href="/eflora/eflora_display.php?tid='.$nextTaxonID.'">Next taxon: '.$nextName.'</a><br>';
-}
-?>
-
-<?php //Search box, which probably needs some flavour and/or relocation 
-?>
-<br />
-<form action="/eflora/search_eflora.php" method="POST">
-<label><b>Name Search:</b><input type="text" id="query_text" name="query"></input>
-</label>
-		<input type="submit" value="Submit Name" /></input>
-
-</form>
-
-
-
+<br>
+	<form action="/eflora/search_eflora.php" method="get">
+		<label for="name"><b>Name Search:</b></label>
+		<input type="text" id="name" name="name" placeholder="Enter a scientific name..." required>
+		<input type="submit" value="Submit Name">
+	</form>
 
 
 <?php
+//END LEFT SIDE BLOCK, FIRST ROW, create Name Search box
+
+
+//START RIGHT SIDE BLOCK, FIRST ROW, ADD Illustration and Video Table
 
   if (!empty($VIDEO)) {
 	echo '</td><td>';
@@ -3476,123 +3654,134 @@ if (isset ($nextTaxonID)) { //i.e. always, except for the very last page
 	echo "<tr>";
 	echo '<td><p class=smallText><b>Jepson Video for <i>';
 	echo str_replace(" var. ", "</i> var. <i>", $ScientificName);
-	echo '</i>Click to watch the video.</b><br /><br />';
-	echo '<a href="'.$VIDEO.'"><img height="88px" src="/common/images/youtube_social_icon_red.png" ALT="YouTube Video Icon"></img></a><br />';
+	echo '</i>Click to watch the video.<br><br>';
+	echo '<a href="'.$VIDEO.'"><img height="88px" src="/common/images/youtube_social_icon_red.png" ALT="YouTube Video Icon"></img></a><br>';
 	echo '</p></td>';	
 
 
-	if (!empty($IllustrationFile)) {
-		if (!empty($IllustrationLarge)) {
+		if (!empty($RevisedFileName)) {
 			echo '</tr><tr>';
 			echo '<td>';
 			echo '<p class=smallText><b>Botanical illustration including <i>'.$ScientificName.'</i></b>';	
 	//this uses a symbolic link for /usr/local/web/ucjeps_data/ucjeps_data/illustrations/, where all the illustration files were moved some time before 2015
-			echo '<a href="/images/illustrations/revised/'.$IllustrationLarge.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/revised/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' "></a>';
+			echo '<a href="/images/illustrations/revised/'.$RevisedFileName.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/revised/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' "></a>';
 			echo '</p></td>';
 			echo "</tr></table>";
 			echo '</td>';
 		}
 		else{
-			$IllustrationLarge = null;
-			echo '</tr><tr>';
-			echo '<td>';
-			echo '<p class=smallText><b>Botanical illustration including <i>'.$ScientificName.'</i></b>';	
+			if (!empty($IllustrationFile)) {
+				$RevisedFileName = null;
+				echo '</tr><tr>';
+				echo '<td>';
+				echo '<p class=smallText><b>Botanical illustration including <i>'.$ScientificName.'</i></b>';	
 	//this uses a symbolic link for /usr/local/web/ucjeps_data/ucjeps_data/illustrations/, where all the illustration files were moved some time before 2015
 	//old version 2017 - echo '<center><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including <i>'.$ScientificName.'</i>" height="475" border="0" align="center"/></center>';
 	//old version 2015 - echo '<center><img src="'.$ILLUS.'" alt="botanical illustration including '.$ScientificName.'" height="475" border="0" align="center"/></center>';
-			echo '<a href="/images/illustrations/'.$IllustrationFile.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' "></a>';
-			echo '</p></td>';
-			echo "</tr></table>";
-			echo '</td>';
+				echo '<a href="/images/illustrations/'.$IllustrationFile.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' "></a>';
+				echo '</p></td>';
+				echo "</tr></table>";
+				echo '</td>';
+			}
+			else{
+				$IllustrationFile = null;
+				$RevisedFileName = null;
+				echo "</tr></table>";
+				echo '</td>';
+			}
 		}
-	}
-	else{
-		$IllustrationFile = null;
-		echo "</tr></table>";
-		echo '</td>';
-	}
   }
   else{
 	echo '</td><td>';
 	$VIDEO = null;
-   	 
-	if (!empty($IllustrationFile)) {
-//add second cell for illustration, if one is available
-		if (!empty($IllustrationLarge)) {
+		if (!empty($RevisedFileName)) {
 			echo '<p class=smallText><b>Botanical illustration including <i>'.$ScientificName.'</i></b>';	
 	//this used a symbolic link for /usr/local/web/ucjeps_data/ucjeps_data/illustrations/, where all the illustration files were moved some time before 2015
-			echo '<a href="/images/illustrations/revised/'.$IllustrationLarge.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/revised/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' "></a>';
+			echo '<a href="/images/illustrations/revised/'.$RevisedFileName.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/revised/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' "></a>';
 			echo '</p></td>';
 		}
 		else{
-			$IllustrationLarge = null;
-			echo '<p class=smallText><b>Botanical illustration including <i>'.$ScientificName.'</i></b>';	
+			$RevisedFileName = null;
+
+			if (!empty($IllustrationFile)) {
+				echo '<p class=smallText><b>Botanical illustration including <i>'.$ScientificName.'</i></b>';	
 	//this used a symbolic link for /usr/local/web/ucjeps_data/ucjeps_data/illustrations/, where all the illustration files were moved some time before 2015
 	//old version 2017 - echo '<center><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including <i>'.$ScientificName.'</i>" height="475" border="0" align="center"/></center>';
 	//old version 2015 - echo '<center><img src="'.$ILLUS.'" alt="botanical illustration including '.$ScientificName.'" height="475" border="0" align="center"/></center>';
-			echo '<a href="/images/illustrations/'.$IllustrationFile.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' "></a>';
-			echo '</p></td>';
+				echo '<a href="/images/illustrations/'.$IllustrationFile.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' "></a>';
+				echo '</p></td>';
+			}
+			else{
+				$IllustrationFile = null;
+				$RevisedFileName = null;
+				echo '</td>';
+			}
 		}
-	}
-	else{
-		$IllustrationFile = null;
-		echo '</td>';
-	}
   }
+
+//END RIGHT SIDE BLOCK, FIRST ROW, ADD Illustration and Video Table
 
 ?>
 
 </tr>
 </table>
-</div>
-<br />
-
-<table id="EF_citation">
-<tr style="background-color:grey">
-<td>
-</td>
-</tr>
-<tr>
-<td>
+</div><!--END content division -->
+<!--END FIRST ROW Description SECTION, CLOSE TABLE-->
 
 
-<!--<a href="&#109;&#97;&#105;&#108;to:interchange&#064;lists.berkeley.edu?subject=new eFlora comment"><font size=3 color="red">Contact/Feedback</span></a>
--->
-<p>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">
-	<span class="commentText">Please use this Google Form for Contact/Feedback
-	</span>
-</a>
-</p>
-<p class=bodyText>
+<br>
 
-<?php echo "Citation for this treatment: ";
-	  echo preg_replace("/\[[^\]]+\]/","",$JMAuthor); 
-	  if ($RevDate){ echo " ".$RevDate.", ";}
-	  echo "<i>".$ScientificName."</i>, ";
-	  echo "in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, ";
-	  	if ($RevNumber){ echo $RevNumber.", ";}
-	  echo "https://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=".$TID.", accessed on "?> <?php echo date ("F d, Y")?>.
-</p>
-<p class=bodyText>Citation for the whole project: Jepson Flora Project (eds.) <?php echo date ("Y") ?>, <em>Jepson eFlora</em>,  https://ucjeps.berkeley.edu/eflora/, accessed on <?php echo date ("F d, Y")?>.</p>
-
+<!--START SECOND ROW Citation SECTION, New TABLE-->
 
 <?php
 	if (empty($GenTaxonID)){//i.e. if the rank is higher than genus, there is no genus taxon ID
 //, otherwords at the family level
 //for family treatments, distribution and image pages are now excluded, they use to be displayed
-		//<!--Begin footer-->
-		include($_SERVER['DOCUMENT_ROOT'].'/common/php/eflora_footer.php');
-		//<!--End footer-->
 
+echo '</td></tr></table><table id="EF_citation"><tr><td><p>';
+echo '<a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">Send us your feedback and/or questions! Community input helps improve the Jepson eFlora.</a></p><p class=bodyText><br>';
+
+	  echo "Citation for this treatment: ";
+	  echo preg_replace("/\[[^\]]+\]/","",$JMAuthor); 
+	  if ($RevDate){ echo " ".$RevDate.", ";}
+	  echo "<i>".$ScientificName."</i>, ";
+	  echo "in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, ";
+	  	if ($RevNumber){ echo $RevNumber.", ";}
+	  echo "https://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=".$TID.", accessed on ";
+	  echo date ("F d, Y");
+	  echo '.</p>';
+	  echo '<p class=bodyText>Citation for the whole project: Jepson Flora Project (eds.)';
+	   echo date ("Y");
+	   echo', <em>Jepson eFlora</em>,  https://ucjeps.berkeley.edu/eflora/, accessed on';
+	   echo date ("F d, Y");
+	   echo'.</p></td></tr></table></div></main><!--begin footer-->';
+		include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/footer.php');
+		echo'<!--end footer--></body></html>';
 		exit();
 	}
 	elseif(empty($FamTaxonID)){//i.e. if the rank is higher than family, there is no family taxon ID
 //for family treatments, photos and distribution pages are excluded
 //so exit out at this point
-		//<!--Begin footer-->
-		include($_SERVER['DOCUMENT_ROOT'].'/common/php/eflora_footer.php');
-		//<!--End footer-->
+
+echo '</td></tr></table><table id="EF_citation"><tr><td><p>';
+echo '<a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">Send us your feedback and/or questions! Community input helps improve the Jepson eFlora.</a></p><p class=bodyText><br>';
+
+	  echo "Citation for this treatment: ";
+	  echo preg_replace("/\[[^\]]+\]/","",$JMAuthor); 
+	  if ($RevDate){ echo " ".$RevDate.", ";}
+	  echo "<i>".$ScientificName."</i>, ";
+	  echo "in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, ";
+	  	if ($RevNumber){ echo $RevNumber.", ";}
+	  echo "https://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=".$TID.", accessed on ";
+	  echo date ("F d, Y");
+	  echo '.</p>';
+	  echo '<p class=bodyText>Citation for the whole project: Jepson Flora Project (eds.)';
+	   echo date ("Y");
+	   echo', <em>Jepson eFlora</em>,  https://ucjeps.berkeley.edu/eflora/, accessed on';
+	   echo date ("F d, Y");
+	   echo'.</p></td></tr></table></div></main><!--begin footer-->';
+		include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/footer.php');
+		echo'<!--end footer--></body></html>';
 		exit();
 	}
 	else{
@@ -3601,6 +3790,9 @@ if (isset ($nextTaxonID)) { //i.e. always, except for the very last page
 ?>
 
 </td></tr></table>
+<!--END SECOND ROW Citation SECTION, CLOSE TABLE-->
+
+<!--START THIRD ROW CalPhotos SECTION, NEW DIVISION, NEW TABLE-->
 
 <div id="content-top">
 
@@ -3626,30 +3818,35 @@ $homepage = file_get_contents("https://calphotos.berkeley.edu/cgi/api_taxon?taxo
 		if (!empty($splitcontents)){ 
 			foreach ( $splitcontents as $line ){
 				$bits = explode("\t", $line);
-
+				[$var0, $var1, $var2, $var3] = array_pad($bits, 4, null);
 
 					foreach($bits as $key => $value) {
-						$raw_taxon = $bits[0];
+						//$raw_taxon = $bits[0];
+						$raw_taxon = $var0;
 						$taxon = str_replace(" ssp. ", " subsp. ", $raw_taxon);
-						$kwid = $bits[1];
-						$copyright = $bits[2];
+						//$kwid = $bits[1];
+						$kwid = $var1;
+						//$copyright = $bits[2];
+						$copyright = $var2;
 						$enlarge = str_replace(" ", "+", $kwid); //full image links in format 0000+1111+2222+3333
 						$kwidarray = explode(" ",$kwid);
-						$kwid4thumb = "{$kwidarray[0]}_{$kwidarray[1]}/{$kwidarray[2]}/{$kwidarray[3]}"; //thumbnail links in format 0000_1111/2222/3333
-						
+						[$kwid0, $kwid1, $kwid2, $kwid3] = array_pad($kwidarray, 4, null);
+						//$kwid4thumb = "{$kwidarray[0]}_{$kwidarray[1]}/{$kwidarray[2]}/{$kwidarray[3]}"; //thumbnail links in format 0000_1111/2222/3333
+						$kwid4thumb = "{$kwid0}_{$kwid1}/{$kwid2}/{$kwid3}"; //thumbnail links in format 0000_1111/2222/3333
+				
 						
 
 						if(in_array($kwid, $alreadyOutput)){
 							continue;
 						}
 						$alreadyOutput[] = $kwid; 
-						//echo $kwid . "<br />";
+						//echo $kwid . "<br>";
 						
 						echo '<div class="i-align">';
 							if ( (!empty($taxon)) && (!empty($kwid)) ){
 								echo '<div class="v-align">';
 								echo '<div class=bodyText><i>';
-								echo str_replace(" var. ", "&nbsp;&nbsp;<br /></i> var. <i>", $taxon);
+								echo str_replace(" var. ", "&nbsp;&nbsp;<br></i> var. <i>", $taxon);
 								echo '</i></div>';
 			
 								echo '<div>';
@@ -3682,44 +3879,64 @@ echo "</td></tr></table>";
 
 if (!empty($splitcontents)){ 
 	$cp_search_name = str_replace(" ", "+", $cp_ssp_name);
-	echo '<p class=bodyText><a href="https://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&where-genre=Plant&where-taxon='.$cp_ssp_name.'&title_tag='.$ScientificName.'">More photos of <i>'.$ScientificName.'</i><br /> in CalPhotos</a></p>';
+	echo '<p class=bodyText><a href="https://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&where-genre=Plant&where-taxon='.$cp_ssp_name.'&title_tag='.$ScientificName.'">More photos of <i>'.$ScientificName.'</i><br> in CalPhotos</a></p>';
 }
 
 
 ?>
 
 </td></tr></table>
-</div>
-<br />
+</div> <!--END snd top content division-->
+<!--END THIRD ROW CalPhotos SECTION, CLOSE DIVISION, CLOSE TABLE-->
+
+
+<br>
+
+<!--START FORTH ROW MAP SECTION, NEW DIVISION, NEW TABLE-->
+
+
 <!--distribution panes-->
 <div id="content">
 <table id="EF_bottom">
 <tr><td>
-<br />
-<span class=smallText>
-<a name="MAP" id="MAP"></a>Geographic subdivisions for <a href="#TOP"><?php echo "$ScientificName"?></a>:
 
-<br />
+<!--EMPTY ROW?  not sure why this is here, maybe needed for old website design-->
 
-<?php 
-$regname = str_replace(";", " ", $BioregionalDistribution);
-echo "$regname"?>
-</span>
 </td>
 <td>
-<span class=smallText>
-<b><a name="EFMAP" id="EFMAP"></a>MAP CONTROLS</b>
-<br />1. You can change the display of the base map layer control box in the upper right-hand corner.
-<br />2. County and Jepson Region polygons can be turned off and on using the check boxes.
-</span>
 </td></tr>
+
 <tr>
+<!--START FORTH ROW LEFT SIDE SECTION, Geographic subdivisions title & MAP-->
+
 <td valign="top">
-<span class=smallText>
-<?php echo '<img src="/cgi-bin/new_jmap?'.$DistCode.'" border="0" alt="map of distribution 1">' ?>
-</span>
+
+<p class=smallText>
+<b><a name="MAP" id="MAP"></a>Geographic subdivisions for <a href="#TOP"><?php echo "$ScientificName"?></a>:</b>
+<br>
+<b>&nbsp;&nbsp;
+<?php 
+	$regname = str_replace(";", " ", $BioregionalDistribution);
+	echo "$regname";
+?>
+</b>
+<br>
+<p class=smallText>
+<?php echo '<img src="/cgi-bin/eflora/new_jmap?'.$DistCode.'" border="0" alt="map of California distribution of '.$regname.'">' ?>
+</p>
+
 </td>
+<!--END FORTH ROW LEFT SIDE SECTION, Geographic subdivisions title & MAP-->
+
+<!--START FORTH ROW RIGHT SIDE SECTION, specimen distribution map-->
 <td>
+
+<p class=smallText>
+<b><a name="EFMAP" id="EFMAP"></a>MAP CONTROLS</b>
+<br>1. You can change the display of the base map layer control box in the upper right-hand corner.
+<br>2. County and Jepson Region polygons can be turned off and on using the check boxes.
+</p>
+    
 	<div id="map_canvas"></div>
 	<link href="common/cluster/MarkerCluster.Default.css" type="text/css" rel=stylesheet />
 	<link rel="stylesheet" type="text/css" href="common/cluster/MapkeyIcons.css" />
@@ -3749,11 +3966,12 @@ map.addControl(new L.Control.Fullscreen());
 	
 	map.scrollWheelZoom.disable();
 
-var cacount = "counties_TIGER2016.geojson"; //full json file for California County TIGER2016 
-var regfill = "JepsonV7.geojson"; //full json file for Jepson regions
-var CABND = "CA_BND_line.geojson"; //full json file for California Boundary line file
-var bnd = "Jepson_regions_buffer_bnd.geojson"; //full json file for Jepson regions
+var cacount = "geojson/counties_TIGER2016.geojson"; //full json file for California County TIGER2016 
+var regfill = "geojson/JepsonV7.geojson"; //full json file for Jepson regions
+var CABND = "geojson/CA_BND_line.geojson"; //full json file for California Boundary line file
+var bnd = "geojson/Jepson_regions_buffer_bnd.geojson"; //full json file for Jepson regions
 
+//this section defines the version of geojson specimen dot map file to use
 
 //$.getJSON('GEOJSON/'+MapName+'_2.geojson', function(data) { //March 2022
 //$.getJSON('GEOJSON/'+MapName+'_3.geojson', function(data) { //Jan 2023
@@ -3762,7 +3980,11 @@ var bnd = "Jepson_regions_buffer_bnd.geojson"; //full json file for Jepson regio
 //$.getJSON('GEOJSON/'+MapName+'_6.geojson', function(data) { //MAR 2025
 //$.getJSON('GEOJSON/'+MapName+'_8.geojson', function(data) { //MAY 2025        
 //$.getJSON('GEOJSON/'+MapName+'_9.geojson', function(data) { //NOV 2025        
-$.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) { //DEC 2025
+//$.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) { //DEC 2025
+//$.getJSON('GEOJSON/'+MapName+'_2.geojson', function(data) { //MAR 2026
+$.getJSON('geojson/taxa/'+MapName+'_3.geojson', function(data) { //APR 2026
+
+//geojson specimen dot map configurations
 
 	geojsonLayerP = L.geoJson(data, {
 			// Make the popup
@@ -3780,7 +4002,9 @@ $.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) { //DEC 2025
 		
   map.on('zoomend', function() {
 	var currentZoom = map.getZoom();
-	
+
+//geojson specimen dot map has different configurations for different zoom settings
+
 	  if (currentZoom <= 5) {
 
 		geojsonLayerP = L.geoJson(data, {
@@ -3831,7 +4055,7 @@ $.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) { //DEC 2025
 			                                                        
 //"DET": "Galium stellatum var. eremicum","CO": "San Bernardino","LOC"          
 					onEachFeature: function (feature, layer) {
-			         layer.bindPopup(feature.properties.DET+"<br /><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br />"+feature.properties.CO+" County<br />"+feature.properties.LOC);
+			         layer.bindPopup(feature.properties.DET+"<br><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br>"+feature.properties.CO+" County<br>"+feature.properties.LOC);
 					},
 					pointToLayer: function (feature, latlng) {
 			// Get the icon
@@ -3853,7 +4077,7 @@ $.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) { //DEC 2025
 					geojsonLayerP = L.geoJson(data, {
 			// Make the popup
 						onEachFeature: function (feature, layer) {
-				         layer.bindPopup(feature.properties.DET+"<br /><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br />"+feature.properties.CO+" County<br />"+feature.properties.LOC);
+				         layer.bindPopup(feature.properties.DET+"<br><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br>"+feature.properties.CO+" County<br>"+feature.properties.LOC);
 						},
 						pointToLayer: function (feature, latlng) {
 			// Get the icon
@@ -3874,7 +4098,7 @@ $.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) { //DEC 2025
 					geojsonLayerP = L.geoJson(data, {
 					// Make the popup
 						onEachFeature: function (feature, layer) {
-				         layer.bindPopup(feature.properties.DET+"<br /><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br />"+feature.properties.CO+" County<br />"+feature.properties.LOC);
+				         layer.bindPopup(feature.properties.DET+"<br><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br>"+feature.properties.CO+" County<br>"+feature.properties.LOC);
 						},
 						pointToLayer: function (feature, latlng) {
 						// Get the icon
@@ -3895,6 +4119,7 @@ $.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) { //DEC 2025
 	  }
   });
 
+//add geojson specimen dot map to map window
 
   map.on('zoomstart', function() {
 
@@ -3902,18 +4127,13 @@ $.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) { //DEC 2025
 			if (map.hasLayer(geojsonLayerP)) {
 				map.removeLayer(geojsonLayerP);
 			}
-			//if (this.checked) { map.addLayer(layer); }
-//else { map.removeLayer(layer); }
-			//if( layer instanceof L.GeoJSON ) {
-			//	map.removeLayer(layer);
-				
-			//}
-
 		});
   });
 
 
 });
+
+//California Counties KMZ file configuration settings
 
 // loading GeoJSON file - files resides in same folder
 $.getJSON(cacount ,function(data){
@@ -4275,6 +4495,7 @@ $.getJSON(cacount ,function(data){
 });
 
 
+//Jepson Regions shapefile, REGION FILL version for click box, configuration settings
 
 // loading GeoJSON file - files resides in same folder
 $.getJSON(regfill ,function(data){
@@ -4567,6 +4788,8 @@ $.getJSON(regfill ,function(data){
 	}).addTo(FILL);
 });
 
+
+//Jepson Regions shapefile, Boundary Line version (default), configuration settings
 
 // loading GeoJSON file
 $.getJSON(bnd ,function(data){
@@ -4861,6 +5084,9 @@ $.getJSON(bnd ,function(data){
 });
 
 
+//State Boundary shapefile, configuration settings
+//Neither the county or the regions files have a modifiable state border
+
 $.getJSON(CABND ,function(data){
 // L.geoJson function is used to parse geojson file and load on to map
 
@@ -4949,90 +5175,306 @@ $.getJSON(CABND ,function(data){
   });
 
 
-
-
 </script>
-
 
 </td>
 </tr>
 
+<!--START FIFTH ROW LEFT SIDE SECTION, Geographic subdivisions comments and Heath Bars-->
 
-<tr><td valign="top">
+<tr>
+<td valign="top">
+
 <p class=smallText>(Note: any qualifiers in the taxon distribution description, such as 'northern', 'southern', 'adjacent' etc., are not reflected in the map above, and in some cases indication of a taxon in a subdivision is based on a single collection or author-verified occurrence).
 </p>
-<br />
-<br />
-<br />
-<br />
-<br />
-&nbsp;<br />
-<?php 
-//a.k.a. "heath bars"
-//infra rank must be removed for the heath bar script
+<br>
+<p>
+    <h3>External Links:</h3>
 
-$hb_value = "&times;";
-$hb_name = str_replace(" nothosubsp.", "", $ScientificName);
-$hb_name = str_replace(" subsp.", "", $hb_name);
-$hb_name = str_replace(" var.", "", $hb_name);
-$hb_name = str_replace($hb_value, "", $hb_name);
-//$hb_name = str_replace($hb_value, "X ", $ScientificName);
 
-// convert names to hybrid form that are compatible for taxon synonym tables
-//echo '<a href="/cgi-bin/map_cch_elev.pl?taxon_name='.$hb_name.'&t=&g="><h3>View elevation by latitude chart</h3></a>'
+
+<?php
+//START LEFT SIDE BLOCK, SECOND ROW, CNPS rare plant link
+
+	#the CNPS conversion in SQL is not working for subtaxa
+	$CNPS_name = str_replace(" subsp. ", " ssp. ", $ScientificName);
+
+		if (!empty($CNPS_name)){
+			$CNPS_name = str_replace(" ", "+", $CNPS_name);
+		}
+
+		if (!empty($RarityStatus)){ 
+			echo '<a href="https://rareplants.cnps.org/Plants/Details?taxon='.$CNPS_name.'"><b>Listed on CNPS Rare Plant Inventory</b></a><br>';
+		}
+//END LEFT SIDE BLOCK, SECOND ROW, CNPS rare plant link
+
+
+//START LEFT SIDE BLOCK, FIRST ROW, weediness links
+
+//old CDFA table retired, links are broken, so it is now just a list
+
+	if (!empty($Weediness)){
+		if (strstr($Weediness, 'SYMBOL 1') !== false){ 
+			echo '<p class="BodyText"><a href="https://www.cdfa.ca.gov/plant/IPC/encycloweedia/weedinfo/winfo_table-sciname.html"><b>Noxious Weed listed on the CDFA Weed Pest Ratings table</b></a></p>';
+		}
+//new CDFA weed ranking sheets, indexed by page number of some sort, not taxon name
+//This has to be updated manually and added to a new table in eflora.db 
+//so that the CDFA_ID variable can be found; set as null for now
+		$CDFA_name = null;
+		$CDFA_ID = null;
+		$CDFA_url = null;
+		$url = null;
+
+		if (!empty($CDFA_ID)){
+			if (strstr($Weediness, 'SYMBOL 1') !== false){
+				$CDFAurl = "https://blogs.cdfa.ca.gov/Section3162/?p=".$CDFA_ID;
+				echo '<p class="BodyText"><a href="'.$CDFAurl.'"><b>Weed listed by Cal-IPC</b></a></p>';
+			}
+		}
+		else{
+			$CDFA_name = str_replace(" ", "+", $ScientificName);
+			$CDFAurl = "https://blogs.cdfa.ca.gov/Section3162/?s=".$CDFA_name;
+			echo '<p class="BodyText"><a href="'.$CDFAurl.'"><b>View the CDFA Pest Rating page for <i>'.$ScientificName.'</i></b></a></p>';
+		}
+	
+		if (strstr($Weediness, 'SYM') !== false){
+			//convert scientific name to IPC name format for new website
+			$IPC_name = str_replace(" subsp. ", "-ssp-", $ScientificName); //CalPhotos uses "ssp." and not "subsp."
+			$IPC_name = str_replace(" nothosubsp. ", "-ssp-", $IPC_name);
+			$hb_name = str_replace(" var. ", "-var-", $IPC_name);
+			// convert the string to all lowercase
+			$IPC_name = strtolower($IPC_name);
+			//replace all other spaces in name with -
+			$IPC_search_name = str_replace(" ", "-", $IPC_name);
+		//fix some irregular formats in the calIPC website 
+				$IPC_search_name = str_replace("acacia-dealbata", "acacia_dealbata", $IPC_search_name);
+				$IPC_search_name = str_replace("acacia-melanoxylon", "acacia_melanoxylon", $IPC_search_name);
+				$IPC_search_name = str_replace("lythrum-hyssopifolia", "lythrum-hyssopifolium", $IPC_search_name);
+				$IPC_search_name = str_replace("ludwigia-peploides-ssp-montevidensis", "ludwigia-peploides", $IPC_search_name);
+				$IPC_search_name = str_replace("ludwigia-peploides-ssp-peploides", "ludwigia-peploides", $IPC_search_name);
+				$IPC_search_name = str_replace("phytolacca-americana-var.-americana", "phytolacca-americana", $IPC_search_name);
+				$IPC_search_name = str_replace("phytolacca-americana-var-americana", "phytolacca-americana", $IPC_search_name);
+				$IPC_search_name = str_replace("tetragonia-tetragonoides", "tetragonia-tetragonioides", $IPC_search_name);
+
+			$url = 'https://www.cal-ipc.org//plants/profile/'.$IPC_search_name.'-profile/';
+			echo '<p class="BodyText"><a href="'.$url.'"><b>Weed listed by Cal-IPC</b></a></p>';
+		}
+	}
+	else{
+		$IPC_name = null;
+		$url = null;
+		$IPC_search_name = null;
+		$CDFAurl = null;
+		$hb_name = null;
+		$Weediness = null;
+	}
+
+//END LEFT SIDE BLOCK, FIRST ROW, weediness links
+
 ?>
-<br />
-</td>
-<td valign="top"><p class=smallText>
+
+
+<?php
+//START LEFT SIDE BLOCK, THIRD ROW, USDA plant links
+/**
+ * Queries the USDA backend search service to find the exact alphanumeric symbol
+ * for a given genus and species, fallback to a keyword search if not found.
+ *
+ * @param string $genus   Plant Genus
+ * @param string $species Specific epithet
+ * @return string The exact USDA profile link or a graceful search-fallback link
+ */
+//function getUSDASymbolLink(string $ScientificName): string {
+
+    //Extract the symbol from the database
+    //
+//    if (!empty($data['symbol'])) {
+//        $symbol = $data['symbol']; // Alphanumeric code (e.g., 'QURU')
+//        return "https://plants.sc.egov.usda.gov/plant-profile/" . urlencode($symbol);
+//    }
+//    else{
+//    $profileUrl = "";
+//    }
+
+//    return $profileUrl;
+//}
+
+//$profileUrl = getUSDASymbolLink($ScientificName);
+$displayName = htmlspecialchars($ScientificName);
+
+    if (!empty($profileUrl)) {
+		echo '<p>USDA Plants Link:';
+		echo '<a href="';
+		echo htmlspecialchars($profileUrl); 
+		echo '" target="_blank" rel="noopener"><strong>';
+		echo $displayName; 
+		echo '</strong> Profile</a></p>';
+	}
+?>
+
+
+<?php
+//START LEFT SIDE BLOCK, FIRST ROW, Calflora name links
+
+	#Make the CalPhotos Name
+	$CF_name = str_replace(' ', '+', $displayName);
+	$CF_name = str_replace('subsp.', 'ssp.', $CF_name);
+
+
+	echo '<p class="BodyText"><a href="https://www.calflora.org/cgi-bin/species_query.cgi?where-taxon=';
+	echo $CF_name;
+	echo '">Calflora Taxon report</a></p>';
+
+
+//END LEFT SIDE BLOCK, FIRST ROW, Calflora name links
+
+//START LEFT SIDE BLOCK, FIRST ROW, plantID.net name links
+
+	echo '<p class="BodyText"><a href="https://calscape.org/search/?plant=';
+	echo $tropicos_name;
+	echo '">Calscape profile page</a></p>';
+
+
+//END LEFT SIDE BLOCK, FIRST ROW, Tropicos name links
+
+
+
+
+//END LEFT SIDE BLOCK, FIRST ROW, plantID.net name links
+
+//START LEFT SIDE BLOCK, FIRST ROW, Tropicos name links
+// The Regex is needed by more than the tropicos link, so keep it
+	$tropicos_name = preg_replace('/^([A-Z][a-z-]+) ([a-z-]+).*/', '$1%20$2', $displayName);
+ 
+// Output: Abies%20magnifica
+
+//this needs more work since Tropicos is blocking external links to searches
+//
+//	echo '<p class=smallText><a href="https://www.tropicos.org/nameSearch?name=';
+//	echo $tropicos_name;
+//	echo '">Taxonomic information from the Missouri Botanical Garden (Tropicos)</a></p>';
+
+
+//END LEFT SIDE BLOCK, FIRST ROW, Tropicos name links
+
+
+//START LEFT SIDE BLOCK, FIRST ROW, plantID.net name links
+
+	echo '<p class="BodyText"><a href="https://plantid.net/Gallery.aspx?Taxon=';
+	echo $tropicos_name;
+	echo '">PlantID.net profile page</a></p>';
+
+
+//END LEFT SIDE BLOCK, FIRST ROW, Tropicos name links
+
+
+
+//START LEFT SIDE BLOCK, FIRST ROW, Painter Common name links
+
+	echo '<p class="BodyText">Elizabeth Painter\'s ';
+	echo '<a href="/cgi-bin/icpn/get_painter_common?';
+	echo $TaxonID;
+	echo' ">common name index</a></p>';
+
+
+//END LEFT SIDE BLOCK, FIRST ROW, Painter Common name links
+
+?>
+
+
+<!--END FIFTH ROW LEFT SIDE SECTION, Geographic subdivisions and External Links -->
+
+
+<!--START FIFTH ROW RIGHT SIDE SECTION, specimen map comments & legend-->
+<td>
+<p class=smallText>
 Data provided by the participants of the&nbsp;
 <?php echo '<a href="/consortium/about.html">Consortium of California Herbaria</a>'?>.
 </p>
 <p class=smallText><b>MAP LEGEND</b>
-<br />
-<!--<?php
-echo '<a href="/consortium/list.php?taxon_name='.$hb_name.'"">View all CCH records</a>'
-?>
--->
+
 <ul>
-<li>Due to persistent denial-of-service attacks caused by aggressive bot traffic,<br> the search interface for CCH1 is no longer publicly accessible.</span></li>
-<br>
-<li>If you would like a custom query export of the data from this map,<br>
-please e-mail Jason Alexander &nbsp;&nbsp;(<a class="CCHtable" href="mailto:jason_alexander@berkeley.edu">jason_alexander@berkeley.edu</a>).</span></li>
+<li class=smallText>All markers link to CCH2 and GBIF specimen records. The original determination is shown in the popup window.</li>
+<li class=smallText>Blue markers indicate specimens that map to one of the expected Jepson geographic subdivisions (see left map). Purple markers indicate specimens collected from a garden, greenhouse, or other non-wild location.</li>
+<li class=smallText>Yellow markers indicate records that may provide evidence for eFlora range revision or may have georeferencing or identification issues.</li>
+<li class=smallText><b><a href="/consortium/about_yellow.html">READ ABOUT YELLOW FLAGS</a></b></li>
 </ul>
 
-<br />All markers link to CCH specimen records. The original determination is shown in the popup window.
-<br />Blue markers indicate specimens that map to one of the expected Jepson geographic subdivisions (see left map). Purple markers indicate specimens collected from a garden, greenhouse, or other non-wild location.
-<br />Yellow markers indicate records that may provide evidence for eFlora range revision or may have georeferencing or identification issues.
-<br /><b><a href="/consortium/about_yellow.html">READ ABOUT YELLOW FLAGS</a></b>
 </p>
-<p class=smallText>
-CCH collections by month
+
+<p class=smallText><b>
+Mapped specimen collections, sorted by month</b></p>
+
 <?php
 //a.k.a. "heath bars"
-//infra rank must be removed for the heath bar script
-$hb_name = str_replace(" nothosubsp.", "", $hb_name);
-$hb_name = str_replace(" subsp.", "", $hb_name);
-$hb_name = str_replace(" var.", "", $hb_name);
+
+//The original =hb script made modifications to the stripped ScientificName
+//then made them lower case in order to match the values in the hb hash table
+//There is no reason that this cannot be done with the taxon ID instead
+//then there is no confusion matching by a modified taxon name if
+//cch1 hash table has mistakes that do not match names in the eFlora
 
 //the hb2 script takes the flowering/fruiting/spore/cone time as input, e.g. "&FT=3,4,5" for Mar-May. This is pre-loaded in the FLFRTimeCode field
-if (isset($TimeCode)){
-	echo '<img border=1 src="/cgi-bin/hb2?name='.$hb_name.'&FT='.$TimeCode.'" ALT="Flowering-Fruiting Monthly Counts">';
+if (!empty($TimeCode)){
+	echo '<img border=1 src="/cgi-bin/eflora/hb2?id='.$TaxonID.'&FT='.$TimeCode.'" ALT="Flowering-Fruiting Monthly Counts">';
 }	
 else {
-	echo '<img border=1 src="/cgi-bin/hb2?name='.$hb_name.'&FT=" ALT="Flowering-Fruiting Monthly Counts">';
+	echo '<img border=1 src="/cgi-bin/eflora/hb2?id='.$TaxonID.'&FT=" ALT="Flowering-Fruiting Monthly Counts">';
 }	
 ?>
-</p>
-<p class=smallText>Duplicates counted once; synonyms included.<br />
-Species do not include records of infraspecific taxa, if there are more than 1 infraspecific taxon in CA.<br />
-Blue line denotes eFlora flowering time (fruiting time in some monocot genera).</p>
 
-</td></tr></table>	
+<p class=smallText><ul><li>Duplicates counted once; synonyms included</li>
+<li>Species do not include records of infraspecific taxa, if there are more than 1 infraspecific taxon in CA</li>
+<li>Blue line denotes eFlora flowering time (fruiting time in some monocot genera)</li></ul></p>
+
+<p class=smallText><b>Geospatial Specimen Database Exports</b>
+<ul>
+<li class=smallText>Specimen data is currently limited to being displayed on the Jepson eFlora taxon maps.</li>
+<br>
+<li class=smallText>If you would like a custom query export of the data from this map,<br>
+please e-mail Jason Alexander &nbsp;&nbsp;(<a class="CCHtable" href="mailto:jason_alexander@berkeley.edu">jason_alexander@berkeley.edu</a>).</span></li>
+</ul>
+</p>
+
+<!--END FIFTH ROW RIGHT SIDE SECTION, specimen map comments & legend-->
+
+</td></tr>
+<!--END FIFTH ROW -->
+
+</table>	
+
+<table id="EF_citation">
+<tr>
+<td>
+
+
+<p>
+<a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">
+	Send us your feedback and/or questions! Community input helps improve the Jepson eFlora.
+</a>
+</p>
+<p class=bodyText>
+
+<?php echo "Citation for this treatment: ";
+	  echo preg_replace("/\[[^\]]+\]/","",$JMAuthor); 
+	  if ($RevDate){ echo " ".$RevDate.", ";}
+	  echo "<i>".$ScientificName."</i>, ";
+	  echo "in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, ";
+	  	if ($RevNumber){ echo $RevNumber.", ";}
+	  echo "https://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=".$TID.", accessed on "?> <?php echo date ("F d, Y")?>.
+</p>
+<p class=bodyText>Citation for the whole project: Jepson Flora Project (eds.) <?php echo date ("Y") ?>, <em>Jepson eFlora</em>,  https://ucjeps.berkeley.edu/eflora/, accessed on <?php echo date ("F d, Y")?>.</p>
+
+</td></tr>
+</table>	
+
+
+
 </div>
 </main>
 
 <!--begin footer-->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/eflora_footer.php'); ?>
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/footer.php'); ?>
 <!--end footer-->
 
 

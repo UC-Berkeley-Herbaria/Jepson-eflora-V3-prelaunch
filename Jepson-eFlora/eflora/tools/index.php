@@ -1,18 +1,19 @@
+
+
 <!DOCTYPE html>
  
-<html lang="en"> 
-
+<html lang="en">  
 <head>
-<title>Jepson eFlora: Users Guide</title> 
+
+<title>Jepson eFlora Tools Page</title> 
 <meta charset="UTF-8">
-<meta name="description" content="For vascular plants occurring in wildlands or otherwise outside of cultivation in California, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys.">
-  <meta name="keywords" content="California Flora, Jepson eFlora, Flora of California, Vascular Plants of California, Jepson Flora Project, ">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="The Jepson eFlora is the foremost authority on the native and naturalized vascular plants of California. For plants occurring in wildlands or otherwise outside of cultivation, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys."  />
+	<meta name="keywords" content="Jepson eFlora, Jepson Flora Project, California Flora, Flora of California, Vascular Plants of California">
+	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+	<link href="/eflora/common/css/jepson-main.css" rel="stylesheet" type="text/css">
+	<link href="/eflora/common/css/eflora-header.css" rel="stylesheet" type="text/css">
 
-<link href="/common/css/dropdowns.css" rel="stylesheet" type="text/css" />
-
-<link href="/common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
-
+	<link rel="shortcut icon" href="/eflora/common/images/JepsonLogoSmall.png" type="image/x-icon">
 
 <!-- Google tag (gtag.js) -->
 <script async src="//www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
@@ -23,163 +24,41 @@
 
   gtag('config', 'G-T5YC99QF6Q');
 </script>
-
-  <script>
-    function myFunction() {
-      var x = document.lastModified;
-      document.getElementById("demo").innerHTML = x;
-
-	var objToday = new Date(),
-		domEnder = function() { var a = objToday; if (/1/.test(parseInt((a + "").charAt(0)))) return "th"; a = parseInt((a + "").charAt(1)); return 1 == a ? "st" : 2 == a ? "nd" : 3 == a ? "rd" : "th" }(),
-		dayOfMonth = today + ( objToday.getDate() < 10) ? '0' + objToday.getDate() + domEnder : objToday.getDate() + domEnder,
-		months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'),
-		curMonth = months[objToday.getMonth()],
-		curYear = objToday.getFullYear();
-	var today = dayOfMonth + " " + curMonth + " " + curYear;
-
-	document.getElementById("DateA").innerHTML = today; 
-	document.getElementById("DateB").innerHTML = today; 
-
-    }
-  </script>
-
-
 </head>
 
 <body>
 
-<body onload="myFunction()">
+<!-- Begin banner -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora-header.php'); ?>  
+<!-- End banner -->
 
-<div class="header">
-<header>
- <table style="background-color: #003366;">
- <tr>
-	<td style="width:100vw;">
+    <main id="main-content" class="eflora-main">
 
-    <div class="section1" style="display: inline-block">
-		<div style="display: block">
-            <a href="/jeps/" title="Jepson Herbarium">
-                <img class="JEPS" src="/common/images/JepsonLogoSmall.png" alt="Jepson Herbarium (JEPS) logo image" title="Jepson Herbarium">
-            </a>
-		</div>
-		<div style="margin-bottom: 5px; display: block">
-    	<span class="logoText">Jepson&nbsp;Herbarium</span>
-		</div>
-    </div>
+        <section class="intro-copy">
+            <h1>Jepson eFlora Key Tools Page</h1>
 
-    <div class="section2" style="display: inline-block">
-			<div class="titleTextHead">The University and Jepson Herbaria</div>
-			<div class="titleTextTag">University of California, Berkeley</div>
-    </div>
-
-</td></tr>
-</table>
-</header>
+    <!-- return home link -->
+<div class="center-text" style="margin-top: 30px;">
+    <a href="/eflora/" style="font-weight: bold;">&larr; Return to the <i>Jepson eFlora</i> Resource Portal</a>
 </div>
 
-	<nav aria-label="global navigation menu" tabindex="0">
-<table class="horizMenu" align="center">
-<tr>
-<td>
-	<ul >
-    	<li class="globalNav"><a class="globalNav" href="/">Home</a></li>
-        <li class="globalNav"><a class="globalNav" href="/main/collections.html">About &#x25BE;</a>
-        	<ul>
-                <li class="globalNav"><a class="globalNavSub" href="/main/collections.html#UC">About the Collections</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/main/directory.html">People</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/main/guidelines.html">Visiting the Herbaria</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/main/volunteer.html">Volunteering</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/main/policies.html">Policies</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/history/">History</a></li>
-            </ul>
-        </li>
-        <li class="globalNav"><a class="globalNav" href="/main/research/">Research &#x25BE;</a>
-        	<ul>
-            	<li class="globalNav"><a class="globalNavSub" href="/main/research/faculty.html">Faculty Research Programs</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/jepsonflora/Herb_Pubs.html">Herbarium Publications</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/jepsonflora/">Jepson Flora Project</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/CPD/algal_research.html">Silva Center for Phycological <br />Documentation</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/bryolab/CPPP/">California Plant Phylodiversity Project</a></li>
-            </ul>
-        </li>
-        <li class="globalNav"><a class="globalNav" href="/main/databases.html">Databases &#x25BE;</a>
-        	<ul>
-            	<li class="globalNav"><a class="globalNavSub" href="https://webapps.cspace.berkeley.edu/ucjeps/publicsearch/publicsearch/">UC/JEPS Specimen Portal</a></li>
-            	<li class="globalNav"><a class="globalNavSub" href="https://webapps.cspace.berkeley.edu/ucjeps/searchmedia/search/">UC/JEPS Slide Image Collection</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/consortium/">Consortium of California Herbaria</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/interchange/">Jepson Online Interchange</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/db/icpn/">Index of California Plant Names</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/INA.html">Index Nominum Algarum</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/db/JPNI.html">Jepson Place Name Index</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/baker/">Baker Seed Collection</a></li>
-            </ul>
-        </li>
-        <li class="globalNav"><a class="globalNav" href="">eFloras &#x25BE;</a>
-        	<ul>
-            	<li class="globalNav"><a class="globalNavSub" href="/eflora/">Jepson eFlora</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/CA_moss_eflora/">California Moss eFlora</a></li>
-				<li class="globalNav"><a class="globalNavSub" href="/seaweedflora/seaweedflora.html">Seaweed Flora of California<br />(Upcoming)</a></li>
-              	<li class="globalNav"><a class="globalNavSub" href="/efc/">Ecological Flora of California</a></li>
-            </ul>
-        </li>
-        <li class="globalNav"><a class="globalNav" href="/main/education.html">Education &amp; Outreach &#x25BE;</a>
-        	<ul>
-            	<li class="globalNav"><a class="globalNavSub" href="/workshops/">Public Workshops</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/main/opportunities.html">Academic Opportunities</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/news/botanylunch/">Botany Lunch Seminar</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/jeps/globe/"><i>The Jepson Globe</i></a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/media/">Videos and Educational Resources</a></li>
-            </ul>
-        </li>
-        <li class="globalNav"><a class="globalNav" href="/main/archives/">Archives &#x25BE;</a>
-        	<ul>
-            	<li class="globalNav"><a class="globalNavSub" href="/main/archives/archives_overview.html">Collections Overview</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/archon/">Archives Database</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/main/archives/images.html">Images</a></li>
-                <li class="globalNav"><a class="globalNavSub" href="/images/fieldbooks/jepson_fieldbooks.html">Jepson Field Books</a></li>
-            </ul>
-        </li>
-        <li class="globalNav"><a class="globalNav" href="/main/directory.html">Contact</a></li>
-        <li class="globalNav"><a class="globalNav" href="/jeps/friends/donate/">Donate</a></li>
-    </ul>
-
-</td>
-</tr>
-</table>
-</nav>
-
-
-<div class="efBody">
-
-	<h1>Jepson eFlora Tools</h1>
-
-<p><a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">Please use this Google Form for Contact/Feedback</a>
-
-
-
-
-<table align="center" width="100%">
-<tr>
-<td align="center"><a href="/eflora/clademap/clademap2.html"><img src="/common/images/pt.jpg"></a></td>
-<td><a href="/eflora/eflora_display.php?tid=16772"><img src="/common/images/ijm_banner_2.jpg"  alt="Calochortus venustus, John C. Game"></a></td>
-<td><a href="/eflora/eflora_display.php?tid=18403"><img src="/common/images/ijm_banner_5.jpg" alt="Caulanthus inflatus, John C. Game"></td>
-<td><a href="/eflora/eflora_display.php?tid=79332"><img src="/common/images/ijm_banner_4.jpg" alt="Harmonia guggolziorum, John C. Game"></a></td>
-</tr>
-<tr>
-<td align="center"><a href="/eflora/clademap/clademap2.html">Phylogenetic index<br>to families</td>
-<td><img src="/common/images/ijm_banner_6.jpg" alt="Willis Linn Jepson in the Vaca Hills, 1942, Neat M. Tate"></td>
-<td><a href="/eflora/eflora_display.php?tid=88878"><img src="/common/images/ijm_banner_1.jpg" alt="Arctostaphylos ohloneana, Neal Kramer"></a></td>
-<td></td>
-</tr>
-</table>
-
-
+<h2>Jepson eFlora Resource Links</h2>
+  <ul>
+	  <li><a href="https://herbaria.berkeley.edu/floras/jepson-eflora/jepson-eflora-abbreviations-and-symbols/"><b>Jepson eFlora Abbreviations and Symbols</b></a> </li>
+	  <li><a href="https://herbaria.berkeley.edu/floras/jepson-eflora/jepson-eflora-conventions/"><b>Jepson eFlora Convention</b></a> </li>
+	  <li><a href="https://herbaria.berkeley.edu/floras/jepson-eflora/jepson-eflora-glossary/"><b>Jepson eFlora Glossary</b></a> </li>
+  	  <li><a href="https://herbaria.berkeley.edu/floras/jepson-eflora/jepson-eflora-philosophy/"><b>Jepson eFlora Philosophy</a></b> </li>
+	  <li><a href="https://herbaria.berkeley.edu/floras/jepson-eflora/jepson-eflora-editorial-policy/"><b>Jepson eFlora Editorial Policy</b></a> </li>
+	  <li><a href="https://herbaria.berkeley.edu/floras/jepson-eflora/jepson-eflora-staff-and-editors/"><b>Jepson eFlora Staff and Editors</b></a> </li>
+</ul>
 
 <h2>Statistics and species lists</h2>
 <ol>
-<li class="pageAuthorLine"> <a href="/eflora/IJM_stats.html">Summary statistics</a></li>
-<li class="pageAuthorLine"><a href="/eflora/tools/TJM_name_words.txt">Jepson Manual name words:</a>  Import this list of names to build custom dictionaries (for example, for <a href="http://www.google.com/search?client=safari&rls=en&q=Microsoft+Word+create+custom+dictionary&ie=UTF-8&oe=UTF-8">Word</a>).</li>
-<li class="pageAuthorLine">Generate a list of taxa by bioregion (e.g., all species inferred from the eFlora to be present in the White and Inyo mountains)</li>
+<li><a href="/eflora/IJM_stats.php">Summary statistics</a></li>
+<li><a href="TJM_name_words.txt">Jepson Manual name words:</a>  Import this list of names to build custom dictionaries (for example, for <b>Microsoft Word</b>).</li>
+<li>Generate a list of taxa by bioregion (e.g., all species inferred from the eFlora to be present in the White and Inyo mountains)</li>
+
+
 <table>
 <tr>
 <td>
@@ -268,7 +147,7 @@
 
 		<tr>
 		<td valign="top"  >
-			<FORM action="/cgi-bin/get_JM_name_data" method=post>
+			<FORM action="/cgi-bin/eflora/get_JM_name_data" method=post>
 			<P>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;
 			<SELECT NAME="fields" size=16 multiple>
 <OPTION VALUE="0" SELECTED>All data</option>
@@ -321,33 +200,30 @@
 
 <h2>Tools comparing TJM (1993) to TJM2 (2012): </h2>
 <ol>
-	<li class="pageAuthorLine"><a href="/interchange/JMtoJMII.html">Dynamic concordance:</a> Use this search tool to look up names that were accepted in <em>The Jepson Manual</em> (1993). The return page will indicate how (or if) the name is treated in the <em>eFlora</em> (e.g., if it was accepted, excluded, or listed as a synonym under a newly adopted name). </li>
-	<li class="pageAuthorLine"> <a href="/interchange/superseded_names.html">Superseded names:</a> Browse this list of names from <em>The Jepson Manual</em> (1993) that are no longer recognized in the <em>eFlora</em></li>
-	<li class="pageAuthorLine"><a href="/eflora/IJM_family_dispo.html">Comparison of recognition and composition of families:</a> Learn about changes in families and genera.</li>
-
-
-</td>
-</tr>
-</table>
+	<li class="pageAuthorLine"><a href="/archive/tjm93/JMtoJMII.html">Dynamic concordance:</a> Use this search tool to look up names that were accepted in <em>The Jepson Manual</em> (1993). The return page will indicate how (or if) the name is treated in the <em>eFlora</em> (e.g., if it was accepted, excluded, or listed as a synonym under a newly adopted name). </li>
+	<li class="pageAuthorLine"> <a href="/archive/tjm93/superseded_names.html">Superseded names with authors:</a> Browse this list of names from <em>The Jepson Manual</em> (1993) that are no longer recognized in the <em>eFlora</em></li>
+	<li class="pageAuthorLine"> <a href="/archive/tjm93/superseded_names_noauts.html">Superseded names no authors:</a> Browse this list of names from <em>The Jepson Manual</em> (1993) that are no longer recognized in the <em>eFlora</em></li>
+	<li class="pageAuthorLine"><a href="/archive/tjm93/IJM_family_dispo.html">Comparison of recognition and composition of families:</a> Learn about changes in families and genera.</li>
 </ol>
 
+    <!-- Feedback Area -->
+    <section class="feedback-area center-text">
+        <a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">
+            Send us your feedback! Community input helps improve the Jepson eFlora.
+        </a>
+    </section>
 
+    <!-- FOOTER SECTION -->
+    <!-- CITATION -->
+    <footer class="treatment-citation" style="margin-top:40px; padding: 20px; background: #eee; border-left: 5px solid var(--ef-blue);">
+        <p><strong>Citation:</strong> Jepson Flora Project (eds.) <?php echo date("Y"); ?>, <i><?php echo $ScientificName; ?></i>, in <em>Jepson eFlora</em>, accessed on <?php echo date("F d, Y"); ?>.</p>
+    </footer>
 
-</div>
-<hr class ="hr_line_grey">
-<p class="footerText"><a href="/main/copyright.html"> Copyright</a> &copy; 2012 - <span id="currentYear"> </span>.  Regents of the University of California</p>
-<p class="footerText">We encourage links to these pages, but the content may not be downloaded for reposting, repackaging, redistributing, or sale in any form, without written permission from The University and Jepson Herbaria &mdash; <a href="/eflora/termsofuse.html">Terms of Use</a>.</p>
-<p class="footerText">Page last updated <span id='demo'></span>
+</main>
 
+<!-- Footer -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora-footer.php'); ?>
 
-</p>
-
-
-<!-- Get current year for copyright statement -->
-<script>
-  var currentYear = new Date().getFullYear(); 
-  document.getElementById("currentYear").innerText = currentYear; 
-</script>
 </body>
 </html>
 
