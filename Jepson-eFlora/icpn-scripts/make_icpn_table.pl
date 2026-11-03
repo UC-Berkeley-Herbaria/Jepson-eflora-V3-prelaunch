@@ -4,17 +4,17 @@ use strict;
 use BerkeleyDB;
 use HTML::Entities;
 
-
 my %NAME_TO_CODE;
 my %CODE_TO_NAME;
 my @lines;
 my %seen;
 my %seenJFP;
 my %IT;
+my $is_terminal = "NULL";
 my ($names, $key, $smasch_code, $smasch_name, @residue, $k, $v);
 my ($taxon_name,$accepted_name,$gen_lines,$fam_lines);
 my ($icpn_name,$is_terminal,$is_accepted,$accepted);
-my ($count_lines, $count,$NFM,$ADD);
+my ($count_lines, $count,$NFM,$ADD,$JFPCode);
 
 #my $load_date = "2026-04-23";
 my $load_date = "2026-09-30";
@@ -53,7 +53,7 @@ next if (m/^#/);
 		} else {
 			if ($name_minus_authors =~ m/^(.+) +(subsp\.|var\.) +/){
 				my $temp = $1;
-				$tempTID = $NAME_TO_CODE{$temp};
+				my $tempTID = $NAME_TO_CODE{$temp};
 #if a name has a variety, Abies magnifica var. magnifica, then
 #Abies magnifica is also accepted in eFlora.
 				if ($tempTID =~ m/^\d+$/){
@@ -77,6 +77,7 @@ $/="";
 
 #mariaDB
 open(ICPN, ">../../ICPN/output/load_icpn.sql") || die;
+open(TAX, ">../../ICPN/output/load_split_icpn_names.sql") || die;
 
 open(FILE, ">../../ICPN/output/icpn_accepted_name_list.txt") || die;
 
@@ -204,10 +205,22 @@ s/\\/####fslash####/g; #fix an extra slash created  by some mis-converted end of
 	$CurrentName = encode_entities($CurrentName); 
 	$TypesInfo = encode_entities($TypesInfo);
 
+#skip these problems that cannot be displayed online without further modification
+	#next if $CurrentName =~ m/^to be determined$/;
+	#next if $CurrentName =~ m/^unresolved$/;
+	#next if $CurrentStatus =~ m/^to be determined$/;
 
-#skip quadrinimials for now
-next if $CurrentStatus =~ m/^Current Status: 12, .*$/;
+	if ($CurrentStatus =~ m/^to be determined/){
+		$ScientificName = "SKIP";
+	}
 
+	if ($CurrentName =~ m/^to be determined/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($CurrentName =~ m/^unresolved/){
+		$ScientificName = "SKIP";
+	}
 
 #check taxon ID's for current names and icpn entry names
 			$ScientificName =~ s/^[. ]+//g;
@@ -215,11 +228,128 @@ next if $CurrentStatus =~ m/^Current Status: 12, .*$/;
 			$ScientificName =~ s/&amp;/&/g;
 
 
-	if ($ScientificName =~ m/^( *|NULL)$/){
-		print "ScientificName missing or NULL: $_\n";
+	if ($ScientificName =~ m/^Leptosiphon aureus \(Nutt\.\) Benth\. ex E\. Vilm/){
+		$ScientificName = "SKIP";
 	}
-			$icpn_name=&strip_name($ScientificName);
 
+	if ($ScientificName =~ m/^Layia erubescens D\. D\. Keck/){
+		$ScientificName = "SKIP";
+	}
+	
+	if ($ScientificName =~ m/^Amsinckia longifolia Brand/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Senecio bicolor \(Willd\.\) Tod/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Festuca rigida \(L/){
+		$ScientificName = "SKIP";
+	}
+#do not activate these, just make sure the homonym Festuca rigida (L.) Raspail is excluded from lists
+
+#ICPN is Nasturtium dictyotum Greene, which is a synonym for Rorippa palustris; conflicts with Nasturtium dictyotum (A. Gray) Kuntze which is a synonym of Lepidium dictyotum A. Gray
+	#next if $ScientificName =~ m/^Nasturtium dictyotum Greene/;
+	if ($ScientificName =~ m/^Nasturtium dictyotum Greene/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Sporobolus alterniflorus &times;/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Spartina alterniflora &times;/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Poa tenuifolia Buckley/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Epilobium concinnum \(D\. Don\)/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Oenothera rubicunda Torr\./){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Oenothera cruciata \(S\. Watson/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Nama arizonica J\. *D\. Bacon/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Trifolium variegatum Nutt\. phase/){
+		$ScientificName = "SKIP";
+	}
+	#skip TJM 1993 phase taxon entries
+
+	if ($ScientificName =~ m/^Holodiscus discolor var. dumosus \(S\. Watson/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Eucalyptus gunnii Miq\./){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Eucalyptus cordata G\. Lodd\./){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Arabis &times;divaricarpa var\. interposita/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Atriplex glauca \(L\.\) Crant/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Allium howellii var\. sanbenitense \(Traub\) Ownbey/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Fragaria &times;ananassa Duchesne var\./){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Anagallis caerulea Lam/){
+		$ScientificName = "SKIP";
+	}
+
+	if ($ScientificName =~ m/^Streptanthus lemmonii Jepson/){
+		$ScientificName = "SKIP";
+	}
+	
+	if ($ScientificName =~ m/^Encelia farinosa &times;/){
+		$ScientificName = "SKIP";
+	}
+	
+	if ($ScientificName =~ m/^Encelia californica &times;/){
+		$ScientificName = "SKIP";
+	}
+	
+	
+
+
+	if ($ScientificName =~ m/^SKIP$/){
+		$icpn_name = "SKIP"; #these are problems homonyms
+	}
+	elsif ($ScientificName =~ m/^( *|NULL)$/){
+		print "ScientificName missing or NULL: $_\n";
+		$icpn_name = "";
+	}
+	elsif ($ScientificName =~ m/^Leptosiphon aureus \(Nutt\.\) of.+/){
+			$icpn_name = $ScientificName;
+			
+	} else {
+
+		$icpn_name=&strip_name($ScientificName);
+
+	}
 
 
 #fix one odd hybrid only in ICPN that does not strip correctly
@@ -227,8 +357,10 @@ next if $CurrentStatus =~ m/^Current Status: 12, .*$/;
 		$icpn_name = "Lotus argophyllus var. ornithopus &times; dendroideus var. traskiae";
 	}
 
-
-	if ($icpn_name !~ m/^([A-Za-z-]+|&times;[A-Za-z-]+|&times;[A-Za-z-]+ [a-z-]+|[A-Za-z-]+ &times;[a-z-]+|[A-Za-z-]+ [a-z-]+|[A-Za-z-]+ [a-z-]+ [nothvarsbpuf.]{2,11} [a-z-]+)$/){
+	if ($icpn_name =~ m/^Leptosiphon aureus \(Nutt\.\) of.+/){
+		#skip this
+	} 
+	elsif ($icpn_name !~ m/^([A-Za-z-]+|&times;[A-Za-z-]+|&times;[A-Za-z-]+ [a-z-]+|[A-Za-z-]+ &times;[a-z-]+|[A-Za-z-]+ [a-z-]+|[A-Za-z-]+ [a-z-]+ [nothvarsbpuf.]{2,11} [a-z-]+)$/){
 		print "icpn_name stripping problem: $icpn_name==>$_\n";
 	}
 
@@ -240,13 +372,16 @@ $CurrentName =~ s/&amp;/&/g;
 
 			$accepted=&strip_name($CurrentName);
 
+
+
+
 	if ($accepted !~ m/^[.&;A-Za-z- ]+$/){
 		print "accepted not stripped: $accepted-->$_\n";
 	}
 
 #if there is no current name field, then it is an accepted name
 #Current Status: 1, accepted name for taxon native to CA
-	if($CurrentStatus =~ m/: \d+, accepted/){
+	if($CurrentStatus =~ m/^\d+, accepted/){
 		$is_accepted = "1";
 	}
 	else{
@@ -263,7 +398,13 @@ $CurrentName =~ s/&amp;/&/g;
 	
 ##############TAXON ID's
 
-	if($icpn_name !~ /^( *|NULL)$/){
+	if ($icpn_name =~ m/^SKIP$/){
+		$TaxonID = "SKIP";
+	}
+	elsif ($icpn_name =~ m/^Leptosiphon aureus \(Nutt\.\) of.+/){
+		$TaxonID = "80383";
+	}
+	elsif($icpn_name !~ /^( *|NULL)$/){
 		$TaxonID=$NAME_TO_CODE{$icpn_name};
 		++$NFM;
 		if ($TaxonID !~ m/^\d+$/){
@@ -272,18 +413,94 @@ $CurrentName =~ s/&amp;/&/g;
 		}
 	}
 
-	if ($TaxonID !~ m/^\d+$/){
+#skip quadrinimials for now
+	if ($CurrentStatus =~ m/^12, .+/){
+		$TaxonID = "SKIP";
+	}
+
+
+
+	if ($TaxonID !~ m/^(\d+|SKIP)$/){
 		$TaxonID = "NULL";
 	}
 	else{
-		my $terminal = $IT{$TaxonID};
-	
-		if ($terminal eq "YES"){
-			$is_terminal = "1";
-		} else {
-			$is_terminal = "NULL";
+		if ($TaxonID =~ m/^(\d+)$/){
+			my $terminal = $IT{$TaxonID};
+
+			if ($terminal eq "YES"){
+				$is_terminal = "1";
+			} else {
+				$is_terminal = "NULL";
+			}
 		}
 	}
+
+	# 1. Define the components
+	my ($genus, $species, $infra) = ("", "NULL", "NULL");
+
+	if ($TaxonID =~ m/^(\d+)$/){
+		foreach ($icpn_name) {
+			# 2. Clean the HTML entity for the hybrid symbol if present
+			$icpn_name =~ s/&times;/x/g;
+    
+
+			# Regex breakdown:
+			# ^(\S+)             -> Genus (the first word)
+			# (?:\s+([a-z]\S+))? -> Optional Species (word starting with lowercase)
+			# .*?                -> Ignore anything in between (Authors, etc.)
+			# (?:(subsp\.|ssp\.|var\.|f\.)\s+(\S+))? -> Optional rank and Infraspecific epithet
+    
+			if ($icpn_name =~ /^([A-Z][a-z&;x-]+)(?:\s+([a-z][a-z-]+))?/) {
+				$genus   = $1;
+				$species = $2 // "NULL";
+        
+				# Look for infraspecific names later in the string
+				if ($icpn_name =~ /(?:subsp\.|var\.|f\.|fo\.)\s+([a-z][a-z-]+)/i) {
+					$infra = $1;
+				}
+			}
+		}
+
+		#3. Final cleanup (trimming and standardizing)
+		$genus   = lc($genus) if $genus;
+		$species = lc($species) if $species;
+		$infra   = lc($infra) if $infra;
+
+		if ($genus !~ m/^(NULL| *)$/i){
+			$genus = "'".$genus."'";
+		}
+		else{
+			$genus = "NULL";
+		}
+
+		if ($species !~ m/^(NULL| *)$/i){
+			$species = "'".$species."'";
+		}
+		else{
+			$species = "NULL";
+		}
+
+		if ($infra !~ m/^(NULL| *)$/i){
+			$infra = "'".$infra."'";
+		}
+		else{
+			$infra = "NULL";
+		}
+
+		#printf("%-20s | %-15s | %-15s\n", $genus, $species, $infra);
+    
+		#4. Here you would execute your SQL update, for example:
+    	# Only write a query if we have a valid TaxonID and Genus/Family identified
+    	if ($genus ne "") {
+    	    my $sql = "UPDATE icpn SET Genus = ".$genus.", Species = ".$species.", Infraspecies = ".$infra." WHERE TaxonID = ".$TaxonID.";";
+    	    print TAX "$sql\n\n";
+    	}
+
+	}
+
+
+
+
 
 #the ICPN terminal name have to be eFlora accepted names
 #this is used differently than is_terminal in the eflora table by necessity
@@ -343,9 +560,9 @@ print FILE $icpn_name."\n";
 		$taxon_name = "NULL";
 	}
 
-	if ($CurrentName !~ m/^(NULL| *)$/){
-		$CurrentName =~ s/'/&#39;/g; #apostrophe interferes with SQL, change to html
-		$accepted_name = "'".$CurrentName."'";
+#accepted is the stripped form of $CurrentName
+	if ($accepted !~ m/^(NULL| *)$/){
+		$accepted_name = "'".$accepted."'";
 	}
 	else{
 		$accepted_name = "NULL";
@@ -686,8 +903,11 @@ print FILE $icpn_name."\n";
 		}
 	}
 	else{
-		print "NO TAXON ID(".$icpn_name."): $_\n";
-
+		
+		if( ($icpn_name !~ m/^SKIP$/) && ($TaxonID !~ m/^SKIP$/) ){
+			print "NO TAXON ID(".$icpn_name."): $_\n";
+		}
+		#the skip are quadrinomials and problem homonyms which cannot be added for now
 	}
 
 }
@@ -1159,7 +1379,7 @@ sub get_Summary {
 
 sub get_JFP {
 		my $par = shift;
-		if($par =~ /[\H]Current Status: *([\d+][a-z]*), .+/){
+		if($par =~ /[\H]Current Status: *(\d+[a-z]*), .+/){
 			return "$1";
 		}
 		else {
@@ -1448,7 +1668,7 @@ s/Wendl\. f\./Wendl. filius/g;
 
 s/,//g; #delete stray commas
 
-s/^([A-Z][A-Za-z-]+) ([-a-z]+) ?.* (subvar\.|subsp\.|var\.|f\.|nothosubsp\.) ([-a-z]+).*/$1 $2 $3 $4/ ||
+s/^([A-Z][A-Za-z-]+) ([-a-z]+) ?.* (subvar\.|subsp\.|var\.|f\.|nothosubsp\.|nothovar\.) ([-a-z]+).*/$1 $2 $3 $4/ ||
 s/^([A-Z][A-Za-z-]+) (&times;)([-a-z]+) .+/$1 $2$3/||
 s/^([A-Z][A-Za-z-]+) (&times;)([-a-z]+)/$1 $2$3/||
 s/^([A-Z][A-Za-z-]+) ([-a-z]+) .+/$1 $2/||
