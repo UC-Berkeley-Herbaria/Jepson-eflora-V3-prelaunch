@@ -21,7 +21,7 @@ $db = null;
 
   if(isset($_GET['tid'])){
   
-	require '/eflora/config/config_eflora.php';
+	require '../../ucjeps_data/ucjeps_data/config/config_eflora.php';
 	//require 'config/config.php';
 	$db = new SQLite3($database_location);
   }
@@ -52,10 +52,10 @@ date_default_timezone_set('America/Los_Angeles');
 <link rel="shortcut icon" href="/common/images/JepsonLogoSmall.png" type="image/x-icon" />
 
 <!--jquery script files-->
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+	<script src="//code.jquery.com/jquery-latest.js"></script>
+	<script src="//ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
+	<link rel="stylesheet" href="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
+	<script src="//ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
 
 <!-- leaflet maps files and scripts -->
 
@@ -64,7 +64,8 @@ date_default_timezone_set('America/Los_Angeles');
    crossorigin=""/>
 <link href='https://api.mapbox.com/mapbox.js/plugins/leaflet-fullscreen/v1.0.1/leaflet.fullscreen.css' rel='stylesheet' />
 
-<script src="https://unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+<script src="//unpkg.com/leaflet@1.4.0/dist/leaflet.js"
+<script src="//unpkg.com/leaflet@1.4.0/dist/leaflet.js"
    integrity="sha512-QVftwZFqvtRNi0ZyCtsznlKSWOStnDORoefr1enyq5mVL4tmKB3S/EnC3rRJcxCPavG10IcrVGSmPh6Qw5lwrg=="
    crossorigin=""></script>
 

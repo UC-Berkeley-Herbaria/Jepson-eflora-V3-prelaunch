@@ -16,14 +16,14 @@ use CCH1;
 
 my %LINK;
 my %TJM1;
-my %TNOAN;
+my %CODE_TO_NAME;
 my %IJM_key;
 my %HEX;
 my %KEYTABLE;
 my %CNPS;
 my @lines;
 my @FT;
-my %TID;
+my %NAME_TO_CODE;
 my %monthno;
 my %seen;
 my ($names, $key, $smasch_code, $smasch_name, @residue, $hex_code, $hex_ID, $HEX, $k, $v, $CNPS_ID, $CNPS_name);
@@ -45,17 +45,23 @@ $log_file = 'output/eflora_log'.$todayJD.'.txt';
 #my $load_date = "2023-09-29";
 #my $load_date = "2023-12-23";
 #my $load_date = "2024-02-29";
-my $load_date = "2025-02-19";
+#my $load_date = "2025-02-19";
+my $load_date = "2026-03-06";
+
+
+#my $file_date = "2025MAR06";
+#my $file_date = "2025NOV04";
+my $file_date = "2026MAR06";
 
 #open(TEMP, ">../eflora_extracts/2022NOV_Baldwin-Juncus/ef-terminal.txt") || die;
 
- my $filename = "output/JEPS_elev.hash";
-    tie %jeps_elev, "BerkeleyDB::Hash",
-                -Filename => $filename,
-        or die "Cannot open file $filename: $! $BerkeleyDB::Error\n" ;
+ #my $filename = "output/JEPS_elev.hash";
+#    tie %jeps_elev, "BerkeleyDB::Hash",
+#                -Filename => $filename,
+#        or die "Cannot open file $filename: $! $BerkeleyDB::Error\n" ;
 
 
-open(IN, "../synonymy/input/smasch_taxon_ids.txt") || die;
+open(IN, "../Synonymy/input/smasch_taxon_ids.txt") || die;
 while(<IN>){
 	chomp;
 	s/X /&times;/;
@@ -64,13 +70,13 @@ while(<IN>){
 	s/Encelia farinosa &times;frutescens/Encelia farinosa &times; frutescens/;
 
 	($smasch_code,$smasch_name)=split(/\t/);
-	$TNOAN{$smasch_name}=$smasch_code;
-	$TID{$smasch_code}=$smasch_name;
+	$NAME_TO_CODE{$smasch_name}=$smasch_code;
+	$CODE_TO_NAME{$smasch_code}=$smasch_name;
 	
 }
 close(IN);
 
-open(IN, "/Users/Shared/Jepson-Master/Interchange/input/TJM1_NAMES.txt") || die; #file not updated since 2014, no record how it was created
+open(IN, "../../ICPN/input/TJM1_NAMES.txt") || die; #file not updated since 2014, no record how it was created
 #Abies	magnifica	Andr. Murray	var.	shastensis	Lemmon	PINACEAE
 while(<IN>){
 chomp;
@@ -97,7 +103,7 @@ tie(%IJM_key, "BerkeleyDB::Hash", -Filename=>"../eflora_keys/output/IJM_key.hash
 #however, this script no longer works due to technical reasons due to the upgrading of
 #CCH and the eFlora to a database instead of a hash file
 #the file below is generated from the new process 'get_HCODES.sh'
-open(IN, "../YELLOW_FLAGGING/output/tid_accepted_HCODE_".$load_date.".txt") || die;
+open(IN, "../YELLOW_FLAGGING/output/tid_accepted_HCODE_".$file_date.".txt") || die;
 while(<IN>){
 	#$hex_code="";
 	s/X /&times;/;
@@ -162,7 +168,7 @@ close(IN);
 
 my ($CNPS_ID,$CNPS_name,$cnps,$g,$mod);
 #open(IN, "../../Interchange/input/CNPS/CNPS_ID_master.txt") || die;
-open(IN, "../../Interchange/input/CNPS/CNPS-ID-EFLORA-converted.txt") || die;
+open(IN, "../../ICPN/input/CNPS/CNPS-ID-EFLORA-converted.txt") || die;
 while(<IN>){
 	next if (m/^#/);
 	s/X /&times;/;
@@ -191,12 +197,17 @@ print TID "TID\tnativity\tfamily\tgenus\tspecies\tspecies_author\tinfraspecific_
 #mariaDB
 open(EF, ">output/load_eflora_main.sql") || die;
 
+open(SY, ">output/load_eflora_accepted_synonymy.sql") || die;
+
 #old version sqlite3
 open(OUT, ">output/load_main_table.sql") || die;
 open(PROB, ">output/problem_names_NOHCODE.txt") || die;
 
 #This file is made here and subsequently used by the synonymy script
-open(FILE, ">output/accepted_name_list.txt") || die;
+open(FILE, ">output/accepted_name_list_".$file_date.".txt") || die;
+open(SYNS, ">output/accepted_ALL_synonym_list_".$file_date.".txt") || die;
+
+
 
 #custom export file
 open(OUT3, ">output/CA_expanded_list_2024.txt") || die;
@@ -211,7 +222,7 @@ open(OUT2, ">output/I_common.txt") || die;
 EOP
 
 #Load master taxon list for taxon ID matching
-open(IN, "/Users/Shared/Jepson-Master/Jepson-eFlora/synonymy/input/smasch_taxon_ids.txt") || die;
+open(IN, "../Synonymy/input/smasch_taxon_ids.txt") || die;
 while(<IN>){
 	chomp;
 s/X /&times;/;
@@ -221,8 +232,8 @@ s/X /&times;/;
 	
 	$smasch_name =~ s/farinosa &times;frutescens/farinosa &times; frutescens/;
 	
-	$TID{$smasch_name}=$smasch_code;
-	$TNOAN{$smasch_code}=$smasch_name;
+	$NAME_TO_CODE{$smasch_name}=$smasch_code;
+	$CODE_TO_NAME{$smasch_code}=$smasch_name;
 }
 close(IN);
 
@@ -235,8 +246,8 @@ while(<IN>){
 #13|29370|<i>Isoetes bolanderi</i> Engelm.|Isoetes bolanderi Engelm. var. bolanderi; Isoetes bolanderi var. pygmaea (Engelm.) Clute||0|1|1
 #13|29379|<i>Isoetes echinospora</i> Durieu|Isoetes braunii Durieu; Isoetes muricata Durieu||0|0|1
 
-my $fam = $TNOAN{$fid};
-my $acc = $TNOAN{$tid};
+my $fam = $CODE_TO_NAME{$fid};
+my $acc = $CODE_TO_NAME{$tid};
 my $syns;
 	#if ( ($syn eq "") && ($unabsyn eq "") ){
 	#	$syns = "";
@@ -254,9 +265,6 @@ my $syns;
 	#	$syns = "";
 	#}
 	
-	#if ($TNOAN{$fid}){
-	#	print OUT3 $fam."\t".$accName."\t".$syns."\t".$D."\t".$GB."\t".$CAFP."\n";
-	#}
 
 	$LINK{$tid}= $D."\t".$GB."\t".$CAFP
 
@@ -317,9 +325,6 @@ if(m/CAPTION: *([A-Z]+) *\(.+/){ #when it encounters a CAPS string starting with
 $clade=$1; #that word is assigned to major clade (until it gets reassigned)
 ++$clade_lines;
 }
-
-
-
 
 #The contents of many tags are retrieved with the generalized "&basic_get" subroutine
 	my $plant_body=&basic_get($_, "PLANT BODY");
@@ -610,7 +615,7 @@ else{
 
 }
 
-$taxon_id=$TNOAN{$name_for_matching};
+$taxon_id=$NAME_TO_CODE{$name_for_matching};
 		
 	#if ($name_for_matching =~ m/Encelia farinosa (&times;|X) Encelia frutescens/){ #the spontaneous hybrid is kluged because there is only one and it's awkward
 	#	$name_for_matching = "Encelia farinosa &times; frutescens";
@@ -627,10 +632,11 @@ $taxon_id=$TNOAN{$name_for_matching};
 	}
 
 	next unless $taxon_id;
-print LOG "$TNOAN{$name_for_matching}\t$name_for_matching\n";
+print LOG $NAME_TO_CODE{$name_for_matching}."\t".$name_for_matching."\n";
 
 #print out the plain matched taxon names to file used by synonymy script
-print FILE "$name_for_matching\n";
+print FILE $name_for_matching."\n";
+
 
 	unless ($common_name eq "NULL"){
 		my $CN_ALT = $common_name;
@@ -657,8 +663,6 @@ print FILE "$name_for_matching\n";
 		$dist_code=$HEX{$taxon_id};
 
 		$dist_code = &format_for_SQLite($dist_code);
-
-
 		#$dist_array = unpack("b*",pack("H*",$HEX{$taxon_id}));
 		#$dist_array = &format_for_SQLite($dist_array);
 	}
@@ -674,8 +678,6 @@ print FILE "$name_for_matching\n";
 #these two are sometimes problematic and may need manual editing or checking the tid hcode file
 #100435	Encelia farinosa &times; frutescens	e000000000
 #100435	Encelia farinosa X frutescens	e000000000
-
-
 	else{
 		#$dist_array = "NULL";
 		if ($name_for_matching =~ m/^([A-Z][a-z-]+|[A-Z][a-z]+aceae)$/){
@@ -686,10 +688,16 @@ print FILE "$name_for_matching\n";
 			$dist_code = "NULL";
 		}
 		else{
-			$dist_code = "NULL";
-			++$DIST_NULL;
-			print "BIOREG DIST not FOUND with accepted name in HCODE file: $name_for_matching==>$taxon_id\n";
-			print PROB "HCODE NOT FOUND, accepted name matching PROBLEM: $name_for_matching==>$taxon_id\n";
+			if($is_terminal_taxon eq "1"){
+				#print TEMP "$taxon_name\n";
+				$dist_code = "NULL";
+				++$DIST_NULL;
+				print "BIOREG DIST not FOUND with accepted name in HCODE file: $name_for_matching==>$taxon_id\n";
+				print PROB "HCODE NOT FOUND, accepted name matching PROBLEM: $name_for_matching==>$taxon_id\n";
+			}
+			else{
+				print "Synonymy without BIOREG DIST in HCODE file: $name_for_matching==>$taxon_id\n";
+			}
 		}
 	}
 #this file used to use the IJM_key.has file to determine if there is a key
@@ -761,7 +769,56 @@ my $LN = "0";
 	else{
 		$SYN = "";
 	}
+#notes for synonymy table parsing
+		my $NOTE;
+		my $tempN = $note;
+		$tempN =~ s/'/ /g;
+		$tempN =~ s/  +/ /g;
+		
+		my $tempUN = $unabridged_note;
+		$tempUN =~ s/'/ /g;
+		$tempUN =~ s/  +/ /g;
+		
+	if ( ($tempN eq "NULL") && ($tempUN eq "NULL") ){
+		$NOTE = "";
+	}
+	elsif ( ($tempN ne "NULL") && ($tempUN eq "NULL") ){
+		$NOTE = $tempN;
+	}
+	elsif ( ($tempN ne "NULL") && ($tempUN ne "NULL") ){
+		$NOTE = $tempN."; ".$tempUN;
+	}
+	elsif ( ($tempN eq "NULL") && ($tempUN ne "NULL") ){
+		$NOTE = $tempUN;
+	}
+	else{
+		$NOTE = "";
+	}
 
+		if($SYN !~ m/^( *|NULL)$/){
+		#print out the terminal taxon name plus ALL synonyms (normal and unabridged)
+		#file to be used by synonymy script
+		#remove end ' added for SQL injection
+		
+			my $biodist = $bioregional_distribution;
+			$biodist =~ s/^'//g;
+			$biodist =~ s/'$//g;
+			
+			my $temp = $SYN;
+			$temp =~ s/^'//g;
+			$temp =~ s/'$//g;
+			$temp =~ s/'; '/; /g;
+			$temp =~ s/'/ /g;
+			$temp =~ s/  +/ /g;
+			
+			print SYNS "$taxon_id\t$taxon_name\t$biodist\t$temp\t$NOTE\n";
+		}
+		else{
+			my $biodist = $bioregional_distribution;
+			$biodist =~ s/^'//g;
+			$biodist =~ s/'$//g;
+			print SYNS "$taxon_id\t$taxon_name\t$biodist\tNULL\t$NOTE\n";
+		}
 
 	if ($endem eq "NULL"){
 		$endem = "";
@@ -800,8 +857,8 @@ if( ($taxon_name ne "") && ($genus eq "") && ($species eq "") ){
 
 	
 		++$ADDED;
-		print ACC $LN."\t".$stat_temp."\t".$family."\t".$genus."\t".$species."\t".$auth_temp."\t".$infra_rank."\t".$inf_temp."\t".$infra_AUTH."\t".$taxon_name."\t".$full_formatted_display_name."\t".$SYN."\t".$temp_CN."\t".$TJM."\t".$clade."\t".$endem."\n";
-		print AAA $LN."\t".$stat_temp."\t".$family."\t".$genus."\t".$species."\t".$auth_temp."\t".$infra_rank."\t".$inf_temp."\t".$infra_AUTH."\t".$taxon_name."\t".$full_formatted_display_name."\t".$SYN."\t".$temp_CN."\t".$TJM."\t".$clade."\t".$endem."\n";
+		print ACC $LN."\t".$stat_temp."\t".$family."\t".$genus."\t".$species."\t".$auth_temp."\t".$infra_rank."\t".$infra_epithet."\t".$inf_temp."\t".$taxon_name."\t".$full_formatted_display_name."\t".$SYN."\t".$temp_CN."\t".$TJM."\t".$clade."\t".$endem."\n";
+		print AAA $LN."\t".$stat_temp."\t".$family."\t".$genus."\t".$species."\t".$auth_temp."\t".$infra_rank."\t".$infra_epithet."\t".$inf_temp."\t".$taxon_name."\t".$full_formatted_display_name."\t".$SYN."\t".$temp_CN."\t".$TJM."\t".$clade."\t".$endem."\n";
 	my $temp = $LINK{$taxon_id};
 
 	my $temp_full = $full_formatted_display_name;
@@ -820,14 +877,35 @@ if( ($taxon_name ne "") && ($genus eq "") && ($species eq "") ){
 
 
 #mariaDB export
-		print EF "INSERT INTO eflora_taxa(TaxonID, ScientificName, TaxonAuthor, FormattedDisplayName, CommonName, KeyGroup, Status, TJM2Author, ScientificEditor, Habit, PlantBody, Stem, SterileStem, FertileStem, Leaf, Spines, Inflorescence, StaminateHead, RayOrPistillateFlower, PistillateHead, StaminateInflorescence, PistillateOrBisexualInflorescence, PistillateInflorescence, Spikelet, FertileSpikelet, SterileSpikelet, DistalSpikelet, CentralSpikelet, LateralSpikelet, StaminateSpikelet, PistillateSpikelet, Flower, StaminateFlower, PistillateFlower, RayFlower, DiskFlower, Cone, PollenCone, SeedCone, BisexualFlower, Fruit, Seed, Sporangia, SporangiumCase, MaleSporangiumCase, FemaleSporangiumCase, Spores, Chromosomes, Ecology, RarityStatus, Elevation, BioregionalDistribution, OutsideCA, SpeciesInGenus, GeneraInFamily, Etymology, UnabridgedEtymology, Toxicity, Synonyms, UnabridgedSynonyms, Reference, UnabridgedReference, Note, UnabridgedNote, FloweringTime, FloweringTimeCode, FruitingTime, Weediness, IsTerminalTaxon, HasKey, RevisionNumber, RevisionDate, DistCode, Updated)\n";
-		print EF "VALUES(".$taxon_id.", '".$taxon_name."', ".$taxon_author.", '".$full_formatted_display_name."', ".$common_name.", ".$key_group.", ".$eflora_status.", ".$TJM2_author.", ".$scientific_editor.", ".$habit.", ".$plant_body.", ".$stem.", ".$sterile_stem.", ".$fertile_stem.", ".$leaf.", ".$spines.", ".$inflorescence.", ".$staminate_head.", ".$ray_or_pistillate_flower.", ".$pistillate_head.", ".$staminate_inflorescence.", ".$pistillate_or_bisexual_inflorescence.", ".$pistillate_inflorescence.", ".$spikelet.", ".$fertile_spikelet.", ".$sterile_spikelet.", ".$distal_spikelet.", ".$central_spikelet.", ".$lateral_spikelet.", ".$staminate_spikelet.", ".$pistillate_spikelet.", ".$flower.", ".$staminate_flower.", ".$pistillate_flower.", ".$ray_flower.", ".$disk_flower.", ".$cone.", ".$pollen_cone.", ".$seed_cone.", ".$bisexual_flower.", ".$fruit.", ".$seed.", ".$sporangia.", ".$sporangium_case.", ".$male_sporangium_case.", ".$female_sporangium_case.", ".$spores.", ".$chromosomes.", ".$ecology.", ".$rarity_status.", ".$elevation.", ".$bioregional_distribution.", ".$outside_CA.", ".$species_in_genus.", ".$genera_in_family.", ".$etymology.", ".$unabridged_etymology.", ".$toxicity.", ".$synonyms.", ".$unabridged_synonyms.", ".$reference.", ".$unabridged_reference.", ".$note.", ".$unabridged_note.", ".$flowering_time.", ".$ft_code.", ".$fruiting_time.", ".$weediness.", ".$is_terminal_taxon.", ".$has_key.", ".$revision_number.", ".$revision_date.", ".$dist_code.", ".$load_date.")\n";
+		print EF "INSERT INTO eflora_taxa(TaxonID, ScientificName, TaxonAuthor, FormattedDisplayName, CommonName, KeyGroup, Status, TJM2Author, ScientificEditor, Habit, PlantBody, Stem, SterileStem, FertileStem, Leaf, Spines, Inflorescence, StaminateHead, RayOrPistillateFlower, PistillateHead, StaminateInflorescence, PistillateOrBisexualInflorescence, PistillateInflorescence, Spikelet, FertileSpikelet, SterileSpikelet, DistalSpikelet, CentralSpikelet, LateralSpikelet, StaminateSpikelet, PistillateSpikelet, Flower, StaminateFlower, PistillateFlower, RayFlower, DiskFlower, Cone, PollenCone, SeedCone, BisexualFlower, Fruit, Seed, Sporangia, SporangiumCase, MaleSporangiumCase, FemaleSporangiumCase, Spores, Chromosomes, Ecology, RarityStatus, Elevation, BioregionalDistribution, OutsideCA, SpeciesInGenus, GeneraInFamily, Etymology, Toxicity, Synonyms, UnabridgedSynonyms, Reference, UnabridgedReference, Note, UnabridgedNote, FloweringTime, FloweringTimeCode, FruitingTime, Weediness, IsTerminalTaxon, HasKey, RevisionNumber, RevisionDate, DistCode, Updated)\n";
+		print EF "VALUES(".$taxon_id.", '".$taxon_name."', ".$taxon_author.", '".$full_formatted_display_name."', ".$common_name.", ".$key_group.", ".$eflora_status.", ".$TJM2_author.", ".$scientific_editor.", ".$habit.", ".$plant_body.", ".$stem.", ".$sterile_stem.", ".$fertile_stem.", ".$leaf.", ".$spines.", ".$inflorescence.", ".$staminate_head.", ".$ray_or_pistillate_flower.", ".$pistillate_head.", ".$staminate_inflorescence.", ".$pistillate_or_bisexual_inflorescence.", ".$pistillate_inflorescence.", ".$spikelet.", ".$fertile_spikelet.", ".$sterile_spikelet.", ".$distal_spikelet.", ".$central_spikelet.", ".$lateral_spikelet.", ".$staminate_spikelet.", ".$pistillate_spikelet.", ".$flower.", ".$staminate_flower.", ".$pistillate_flower.", ".$ray_flower.", ".$disk_flower.", ".$cone.", ".$pollen_cone.", ".$seed_cone.", ".$bisexual_flower.", ".$fruit.", ".$seed.", ".$sporangia.", ".$sporangium_case.", ".$male_sporangium_case.", ".$female_sporangium_case.", ".$spores.", ".$chromosomes.", ".$ecology.", ".$rarity_status.", ".$elevation.", ".$bioregional_distribution.", ".$outside_CA.", ".$species_in_genus.", ".$genera_in_family.", ".$etymology.", ".$toxicity.", ".$synonyms.", ".$unabridged_synonyms.", ".$reference.", ".$unabridged_reference.", ".$note.", ".$unabridged_note.", ".$flowering_time.", ".$ft_code.", ".$fruiting_time.", ".$weediness.", ".$is_terminal_taxon.", ".$has_key.", ".$revision_number.", ".$revision_date.", ".$dist_code.", '".$load_date."')\n";
 		#If the TaxonID in eflora_taxa already exists, update selected fields only 
-		print EF "ON DUPLICATE KEY UPDATE ScientificName = '".$taxon_name."', TaxonAuthor = ".$taxon_author.", FormattedDisplayName = '".$full_formatted_display_name."', CommonName = ".$common_name.", KeyGroup = ".$key_group.", Status = ".$eflora_status.", TJM2Author = ".$TJM2_author.", ScientificEditor = ".$scientific_editor.", Habit = ".$habit.", PlantBody = ".$plant_body.", Stem = ".$stem.", SterileStem = ".$sterile_stem.", FertileStem = ".$fertile_stem.", Leaf = ".$leaf.", Spines = ".$spines.", Inflorescence = ".$inflorescence.", StaminateHead = ".$staminate_head.", RayOrPistillateFlower = ".$ray_or_pistillate_flower.", PistillateHead = ".$pistillate_head.", StaminateInflorescence = ".$staminate_inflorescence.", PistillateOrBisexualInflorescence = ".$pistillate_or_bisexual_inflorescence.", PistillateInflorescence = ".$pistillate_inflorescence.", Spikelet = ".$spikelet.", FertileSpikelet = ".$fertile_spikelet.", SterileSpikelet = ".$sterile_spikelet.", DistalSpikelet = ".$distal_spikelet.", CentralSpikelet = ".$central_spikelet.", LateralSpikelet = ".$lateral_spikelet.", StaminateSpikelet = ".$staminate_spikelet.", PistillateSpikelet = ".$pistillate_spikelet.", Flower = ".$flower.", StaminateFlower = ".$staminate_flower.", PistillateFlower = ".$pistillate_flower.", RayFlower = ".$ray_flower.", DiskFlower = ".$disk_flower.", Cone = ".$cone.", PollenCone = ".$pollen_cone.", SeedCone = ".$seed_cone.", BisexualFlower = ".$bisexual_flower.", Fruit = ".$fruit.", Seed = ".$seed.", Sporangia = ".$sporangia.", SporangiumCase = ".$sporangium_case.", MaleSporangiumCase = ".$male_sporangium_case.", FemaleSporangiumCase = ".$female_sporangium_case.", Spores = ".$spores.", Chromosomes = ".$chromosomes.", Ecology = ".$ecology.", RarityStatus = ".$rarity_status.", Elevation = ".$elevation.", BioregionalDistribution = ".$bioregional_distribution.", OutsideCA = ".$outside_CA.", SpeciesInGenus = ".$species_in_genus.", GeneraInFamily = ".$genera_in_family.", Etymology = ".$etymology.", UnabridgedEtymology = ".$unabridged_etymology.", Toxicity = ".$toxicity.", Synonyms = ".$synonyms.", UnabridgedSynonyms = ".$unabridged_synonyms.", Reference = ".$reference.", UnabridgedReference = ".$unabridged_reference.", Note = ".$note.", UnabridgedNote = ".$unabridged_note.", FloweringTime = ".$flowering_time.", FloweringTimeCode = ".$ft_code.", FruitingTime = ".$fruiting_time.", Weediness = ".$weediness.", IsTerminalTaxon = ".$is_terminal_taxon.", HasKey = ".$has_key.", RevisionNumber = ".$revision_number.", RevisionDate = ".$revision_date.", DistCode = ".$dist_code.", Updated = ".$load_date."\n";
+		print EF "ON DUPLICATE KEY UPDATE ScientificName = '".$taxon_name."', TaxonAuthor = ".$taxon_author.", FormattedDisplayName = '".$full_formatted_display_name."', CommonName = ".$common_name.", KeyGroup = ".$key_group.", Status = ".$eflora_status.", TJM2Author = ".$TJM2_author.", ScientificEditor = ".$scientific_editor.", Habit = ".$habit.", PlantBody = ".$plant_body.", Stem = ".$stem.", SterileStem = ".$sterile_stem.", FertileStem = ".$fertile_stem.", Leaf = ".$leaf.", Spines = ".$spines.", Inflorescence = ".$inflorescence.", StaminateHead = ".$staminate_head.", RayOrPistillateFlower = ".$ray_or_pistillate_flower.", PistillateHead = ".$pistillate_head.", StaminateInflorescence = ".$staminate_inflorescence.", PistillateOrBisexualInflorescence = ".$pistillate_or_bisexual_inflorescence.", PistillateInflorescence = ".$pistillate_inflorescence.", Spikelet = ".$spikelet.", FertileSpikelet = ".$fertile_spikelet.", SterileSpikelet = ".$sterile_spikelet.", DistalSpikelet = ".$distal_spikelet.", CentralSpikelet = ".$central_spikelet.", LateralSpikelet = ".$lateral_spikelet.", StaminateSpikelet = ".$staminate_spikelet.", PistillateSpikelet = ".$pistillate_spikelet.", Flower = ".$flower.", StaminateFlower = ".$staminate_flower.", PistillateFlower = ".$pistillate_flower.", RayFlower = ".$ray_flower.", DiskFlower = ".$disk_flower.", Cone = ".$cone.", PollenCone = ".$pollen_cone.", SeedCone = ".$seed_cone.", BisexualFlower = ".$bisexual_flower.", Fruit = ".$fruit.", Seed = ".$seed.", Sporangia = ".$sporangia.", SporangiumCase = ".$sporangium_case.", MaleSporangiumCase = ".$male_sporangium_case.", FemaleSporangiumCase = ".$female_sporangium_case.", Spores = ".$spores.", Chromosomes = ".$chromosomes.", Ecology = ".$ecology.", RarityStatus = ".$rarity_status.", Elevation = ".$elevation.", BioregionalDistribution = ".$bioregional_distribution.", OutsideCA = ".$outside_CA.", SpeciesInGenus = ".$species_in_genus.", GeneraInFamily = ".$genera_in_family.", Etymology = ".$etymology.", Toxicity = ".$toxicity.", Synonyms = ".$synonyms.", UnabridgedSynonyms = ".$unabridged_synonyms.", Reference = ".$reference.", UnabridgedReference = ".$unabridged_reference.", Note = ".$note.", UnabridgedNote = ".$unabridged_note.", FloweringTime = ".$flowering_time.", FloweringTimeCode = ".$ft_code.", FruitingTime = ".$fruiting_time.", Weediness = ".$weediness.", IsTerminalTaxon = ".$is_terminal_taxon.", HasKey = ".$has_key.", RevisionNumber = ".$revision_number.", RevisionDate = ".$revision_date.", DistCode = ".$dist_code.", Updated = '".$load_date."'\n";
 		print EF ";\n\n";
 
-#create jeps_elev hash
+		print SY "INSERT INTO eflora_synonymy(TaxonID, ScientificName, Status, AcceptedNameTID, AcceptedName, Updated)\n";
+		print SY "VALUES(".$taxon_id.", '".$taxon_name."', 'accepted name', NULL, NULL, '".$load_date."')\n";
+		#If the TaxonID in eflora_synonymy already exists, update selected fields only 
+		print SY "ON DUPLICATE KEY UPDATE ScientificName = '".$taxon_name."', Status = 'accepted name', AcceptedNameTID = NULL, AcceptedName = NULL, Updated = '".$load_date."'\n";
+		print SY ";\n\n";
+
+		if ($has_key eq "1"){
+			print SY "INSERT INTO eflora_synonymy(TaxonID, ScientificName, HasKey, Updated)\n";
+			print SY "VALUES(".$taxon_id.", '".$taxon_name."', 1, '".$load_date."')\n";
+			#If the TaxonID in eflora_synonymy already exists, update selected fields only 
+			print SY "ON DUPLICATE KEY UPDATE HasKey = 1, Updated = '".$load_date."'\n";
+			print SY ";\n\n";
+		}
+
 		if ($is_terminal_taxon eq "1"){
+			print SY "INSERT INTO eflora_synonymy(TaxonID, ScientificName, IsTerminalTaxon, Updated)\n";
+			print SY "VALUES(".$taxon_id.", '".$taxon_name."', 1, '".$load_date."')\n";
+			#If the TaxonID in eflora_synonymy already exists, update selected fields only 
+			print SY "ON DUPLICATE KEY UPDATE IsTerminalTaxon = 1, Updated = '".$load_date."'\n";
+			print SY ";\n\n";
+		}
+
+
 		$elevation =~ s/^'//g;#remove sql loading quotes
 		$elevation =~ s/'$//g;
 		
@@ -855,8 +933,11 @@ if( ($taxon_name ne "") && ($genus eq "") && ($species eq "") ){
 					$max_e=$1; 
 					$min_e=$1;
 				}
+				elsif($elevation =~ m/^(NULL| *)$/){
+					#print "JEPS ELEV NULL: $taxon_name $elevation\n";
+				}
 				else{
-					print "MISSED JEPS ELEV HASH: $taxon_name $elevation\n";
+					print "JEPS ELEV NEED REFORMAT: $taxon_name $elevation\n";
 				}
 				 
 				if ($max_e < 0){
@@ -872,9 +953,9 @@ if( ($taxon_name ne "") && ($genus eq "") && ($species eq "") ){
 					$min_e=0;
 				}
 				
-			$jeps_elev{$taxon_id}="$min_e\t$max_e";
+			#$jeps_elev{$taxon_id}="$min_e\t$max_e";
 
-		}
+
 
 
 }
@@ -965,36 +1046,6 @@ sub get_status {
     }
 }
 
-sub get_taxon_name {
-    my $par = shift; #each paragraph is separated by a blank line
-    @lines=split(/\n/,$par); #the array of lines within a paragraph are values separated by a new line
-	if($lines[1]=~/^(POSSIBLY IN CA|CULTIVATED PLANT|WAIF|EXTIRPATED ALIEN|EXTIRPATED WAIF|EXTIRPATED WEED|EXTIRPATED|HISTORICAL WAIF|SPONTANEOUS HYBRID|AGRICULTURAL WEED|GARDEN WEED|URBAN WEED|GARDEN AND URBAN WEED|AGRICULTURAL, GARDEN, OR URBAN WEED|URBAN WEED EXPECTED IN WILDLANDS)/){
-        return $lines[2]; #elsif the second line starts with any of the above values, the name is what's on the third line
-		#ASCLEPIAS curassavica is also an anomaly here as Line 0 is UNABRIDGED and Line 1 CULTIVATED PLANT
-		#this was also not parsing correctly in the old way
-    }
-    elsif( $lines[0]=~/^(URBAN WEED|WAIF)/){ #if the first line starts with...
-        return $lines[1]; #the name is what's on the second line
-    }
-    elsif( $lines[0]=~/^(NATIVE|NATURALIZED)/){ #if the first line starts with...
-        return $lines[1]; #the name is the contents of the second line
-        #The name for Zeltnera arizonica is on line 2, Line 0 is NATIVE and line 1 is EXTIRPATED
-        #in the old code, this was first as 'if', but Zeltnera arizonica was always and error, 
-        #since line 1 is not the name
-    }
-    elsif($lines[0]=~/UNABRIDGED/){ #elsif the first line starts with "UNABRIDGED"
-        return $lines[1]; #the name is what's on the second line
-    }
-    elsif( $lines[0]=~/^(CAPTION|LYCOPHYTES|FERNS|gymnosperms|nymphaeales|magnoliids|ceratophyllales|eudicots)/i){ #skip the caption lines
-        return "NULL"; #don't return anything for that paragraph
-    }
-    elsif( $lines[0]=~/^[A-Z][A-Z][A-Z]/){ #elsif the first line starts with three capital letters...
-        return $lines[0]; #the name is what's on the first line
-    }
-    else{ #otherwise...
-        return "NULL"; #don't return anything for that paragraph
-    }
-}
 
 sub get_taxon_author {
 # taxon author is returned without single quotes, since it is used to generate the formatted display name
@@ -1389,7 +1440,10 @@ sub is_terminal_taxon {
 
 sub get_TJM2_author {
 		my $par = shift;
-		if($par =~ /TJM14X AUTHOR: *(.+)/){
+		if($par =~ /TJM15X AUTHOR: *(.+)/){
+			return "'".$1."'"; 
+		}
+		elsif($par =~ /TJM14X AUTHOR: *(.+)/){
 			return "'".$1."'"; 
 		}
 		elsif($par =~ /TJM13X AUTHOR: *(.+)/){
@@ -1442,7 +1496,10 @@ sub get_TJM2_author {
 
 sub get_revision_number {
 	my $par = shift;
-	if ($par =~ m/TJM14X AUTHOR:/){
+	if ($par =~ m/TJM15X AUTHOR:/){
+		return "'Revision 15'";
+	}
+	elsif ($par =~ m/TJM14X AUTHOR:/){
 		return "'Revision 14'";
 	}
 	elsif ($par =~ m/TJM13X AUTHOR:/){
@@ -1491,8 +1548,14 @@ sub get_revision_number {
 
 sub get_revision_date {
 	my $par = shift;
-	if ($par =~ m/TJM13X AUTHOR: .*/){
-		return "2024";
+	if ($par =~ m/TJM15X AUTHOR: .*/){
+		return "2027";
+	}
+	elsif ($par =~ m/TJM14X AUTHOR: .*/){
+		return "2026";
+	}
+	elsif ($par =~ m/TJM13X AUTHOR: .*/){
+		return "2025";
 	}
 	elsif ($par =~ m/TJM12X AUTHOR: .*/){
 		return "2023";

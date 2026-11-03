@@ -1,34 +1,23 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en"> 
 
 
-<head><title>Jepson eFlora: Klamath Ranges Expansion</title> 
-<link href="http://ucjeps.berkeley.edu/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
-<script type="text/javascript">
+<html lang="en"><head><title>Jepson eFlora: Klamath Ranges Expansion</title> 
+<link href="/common/css/dropdowns.css" rel="stylesheet" type="text/css" />
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-27128382-1']);
-  _gaq.push(['_trackPageview']);
+<!-- Google tag (gtag.js) -->
+<script async src="//www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
-
+  gtag('config', 'G-T5YC99QF6Q');
 </script>
-<script type="text/javascript">
 
-  var _gaq = _gaq || [];
-  _gaq.push(['_setAccount', 'UA-43909100-1']);
-  _gaq.push(['_trackPageview']);
 
-  (function() {
-    var ga = document.createElement('script'); ga.type = 'text/javascript'; ga.async = true;
-    ga.src = ('https:' == document.location.protocol ? 'https://ssl' : 'http://www') + '.google-analytics.com/ga.js';
-    var s = document.getElementsByTagName('script')[0]; s.parentNode.insertBefore(ga, s);
-  })();
 
-</script>
+
+
 </head>
 
 <body>
@@ -54,7 +43,7 @@
        <td>&nbsp;</td>
        <td>&nbsp;</td>
 
-       <td width="100%"><span class="pageName"><a href="/IJM.html">Jepson eFlora:</a> Klamath Ranges Expansion</span><br />
+       <td width="100%"><span class="pageName"><a href="/eflora/">Jepson eFlora:</a> Klamath Ranges Expansion</span><br />
 	<span class="pageSubHeading"><!--2015-09-21-->September 21, 2015</span><br /><br />
 
 </td>
@@ -64,22 +53,32 @@
 
 <!--<span class="pageName">Filtered Keys using KeyBase</span>-->
 <P class=bodyText>
-The Jepson Flora Project's <a href="/IJM_geography.html">Geographic Subdivisions of California</a> has been updated. A large area of limestone and metasedimentary landscape between Redding CA and Mount Shasta was previously attributed to the volcanic Cascade Ranges (CaR) Region instead of the adjacent metamorphic Klamath Ranges (KR) Subregion.</p> 
+The Jepson Flora Project's <a href="/eflora/geography.html">Geographic 
+Subdivisions of California</a> has been updated. A large area of 
+limestone and metasedimentary landscape between Redding CA and Mount Shasta 
+was previously attributed to the volcanic Cascade Ranges (CaR) Region instead of 
+the adjacent metamorphic Klamath Ranges (KR) Subregion.</p> 
 
-<p class=bodyText>Consequently, the new KR boundary now encompasses most of the lands east of Interstate 5, south of Highway 89, and north of Highway 299E to include Shasta Lake, the McCloud and Hosselkus limestone formations, and Grizzly Peak. The new CaR boundary now starts entirely east of Shasta Lake, and abuts the Inner North Coast Ranges subregion along Interstate 5 from west of Redding south to Red Bluff.
-</P>
+<p class=bodyText>Consequently, the new KR boundary now encompasses most of the 
+lands east of Interstate 5, south of Highway 89, and north of Highway 299E to 
+include Shasta Lake, the McCloud and Hosselkus limestone formations, and Grizzly Peak. 
+The new CaR boundary now starts entirely east of Shasta Lake, 
+and abuts the Inner North Coast Ranges subregion along Interstate 5 from west of 
+Redding south to Red Bluff.
+</p>
 
 <P class=bodyText>
-</P>
+</p>
 
-<center>
+
 <img align="center" height="500px" src="/common/images/KR_expansion.png">
-</center>
+
 
 <br>
 
 <P class=bodyText>
-A detailed account of the KR expansion was published in the Fall 2015 issue of the <a href="http://ucjeps.berkeley.edu/jeps/globe/"><i>Jepson Globe</i></a>, and is included below.
+A detailed account of the KR expansion was published in the Fall 2015 
+issue of the <a href="/jeps/globe/"><i>Jepson Globe</i></a>, and is included below.
 </P>
 <br><br>
 

@@ -1,25 +1,22 @@
+<!DOCTYPE html>
+ 
+<html lang="en"> 
 
-<html lang="en">
-<html lang="en"><head>
-
-<title>Filter Key Intro: Jepson eFlora - Jepson Herbarium - Jepson Flora Project</title>
+<head>
+<title>Jepson eFlora: Filter Key Intro</title> 
 <meta charset="UTF-8">
-<meta name="description" content="The Jepson eFlora is the foremost authority on the native and naturalized vascular plants of California. For plants occurring in wildlands or otherwise outside of cultivation, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys."  />
-	<meta name="keywords" content="Jepson eFlora, Jepson Flora Project, California Flora, Flora of California, Vascular Plants of California">
-	<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<meta name="description" content="For vascular plants occurring in wildlands or otherwise outside of cultivation in California, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys.">
+  <meta name="keywords" content="California Flora, Jepson eFlora, Flora of California, Vascular Plants of California, Jepson Flora Project, ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-	<link href="/eflora/common/css/dropdowns.css" rel="stylesheet" type="text/css" />
-	<link rel="shortcut icon" href="eflora/common/images/JepsonLogoSmall.png" type="image/x-icon" />
-	<!--jquery script files-->
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
-	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
-	<script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
-	<script src="http://code.jquery.com/jquery-latest.js"></script>
-	<script src="/eflora/common/js/dh_custom.js"></script>
+<link href="/common/css/dropdowns.css" rel="stylesheet" type="text/css" />
+
+	<link href="/common/css/jepson_eflora.css" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="/common/images/JepsonLogoSmall.png" type="image/x-icon">
+
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
+<script async src="//www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -28,60 +25,163 @@
   gtag('config', 'G-T5YC99QF6Q');
 </script>
 
+  <script>
+    function myFunction() {
+      var x = document.lastModified;
+      document.getElementById("demo").innerHTML = x;
+
+	var objToday = new Date(),
+		domEnder = function() { var a = objToday; if (/1/.test(parseInt((a + "").charAt(0)))) return "th"; a = parseInt((a + "").charAt(1)); return 1 == a ? "st" : 2 == a ? "nd" : 3 == a ? "rd" : "th" }(),
+		dayOfMonth = today + ( objToday.getDate() < 10) ? '0' + objToday.getDate() + domEnder : objToday.getDate() + domEnder,
+		months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'),
+		curMonth = months[objToday.getMonth()],
+		curYear = objToday.getFullYear();
+	var today = dayOfMonth + " " + curMonth + " " + curYear;
+
+	document.getElementById("DateA").innerHTML = today; 
+	document.getElementById("DateB").innerHTML = today; 
+
+    }
+  </script>
+
 
 </head>
 
-<body>
+<body onload="myFunction()">
 
-<!-- Begin banner -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/header_jeps.php'); ?>
-<!-- End banner -->
+<div class="header">
+<header>
+ <table style="background-color: #003366;">
+ <tr>
+	<td style="width:100vw;">
 
-<!-- Beginning of horizontal menu -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/globalnav.php'); ?>
-<!-- End of horizontal menu -->
-<table style="vertical-align: top;width:100%;">
-  <tr>
-	<td style="vertical-align: top;width:200px;border-right-style: solid;border-right-color: #9090AA;border-left-style: solid;border-left-color: #9090AA;">
-		<div style="border-bottom-style: solid;">
-<!-- Start of sidebar menu-->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/localnav_media.php'); ?>
-<!-- End of sidebar -->
+    <div class="section1" style="display: inline-block">
+		<div style="display: block">
+            <a href="/jeps/" title="Jepson Herbarium">
+                <img class="JEPS" src="/common/images/JepsonLogoSmall.png" alt="Jepson Herbarium (JEPS) logo image" title="Jepson Herbarium">
+            </a>
 		</div>
-	</td>
-	<td style="padding: 5px;vertical-align: top; width:100%;">
+		<div style="margin-bottom: 5px; display: block">
+    	<span class="logoText">Jepson&nbsp;Herbarium</span>
+		</div>
+    </div>
 
-<!-- Begin body section-->
+    <div class="section2" style="display: inline-block">
+			<div class="titleTextHead">The University and Jepson Herbaria</div>
+			<div class="titleTextTag">University of California, Berkeley</div>
+    </div>
+
+</td></tr>
+</table>
+</header>
+</div>
+
+	<nav aria-label="global navigation menu" tabindex="0">
+<table class="horizMenu" align="center">
+<tr>
+<td>
+	<ul >
+    	<li class="globalNav"><a class="globalNav" href="/">Home</a></li>
+        <li class="globalNav"><a class="globalNav" href="/main/collections.html">About &#x25BE;</a>
+        	<ul>
+                <li class="globalNav"><a class="globalNavSub" href="/main/collections.html#UC">About the Collections</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/directory.html">People</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/guidelines.html">Visiting the Herbaria</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/volunteer.html">Volunteering</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/policies.html">Policies</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/history/">History</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/research/">Research &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="/main/research/faculty.html">Faculty Research Programs</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/jepsonflora/Herb_Pubs.html">Herbarium Publications</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/jepsonflora/">Jepson Flora Project</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/CPD/algal_research.html">Silva Center for Phycological <br />Documentation</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/bryolab/CPPP/">California Plant Phylodiversity Project</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/databases.html">Databases &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="https://webapps.cspace.berkeley.edu/ucjeps/publicsearch/publicsearch/">UC/JEPS Specimen Portal</a></li>
+            	<li class="globalNav"><a class="globalNavSub" href="https://webapps.cspace.berkeley.edu/ucjeps/searchmedia/search/">UC/JEPS Slide Image Collection</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/consortium/">Consortium of California Herbaria</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/interchange/">Jepson Online Interchange</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/db/icpn/">Index of California Plant Names</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/INA.html">Index Nominum Algarum</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/db/JPNI.html">Jepson Place Name Index</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/baker/">Baker Seed Collection</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="">eFloras &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="/eflora/">Jepson eFlora</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/CA_moss_eflora/">California Moss eFlora</a></li>
+				<li class="globalNav"><a class="globalNavSub" href="/seaweedflora/seaweedflora.html">Seaweed Flora of California<br />(Upcoming)</a></li>
+              	<li class="globalNav"><a class="globalNavSub" href="/efc/">Ecological Flora of California</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/education.html">Education &amp; Outreach &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="/workshops/">Public Workshops</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/opportunities.html">Academic Opportunities</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/news/botanylunch/">Botany Lunch Seminar</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/jeps/globe/"><i>The Jepson Globe</i></a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/media/">Videos and Educational Resources</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/archives/">Archives &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="/main/archives/archives_overview.html">Collections Overview</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/archon/">Archives Database</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/archives/images.html">Images</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/images/fieldbooks/jepson_fieldbooks.html">Jepson Field Books</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/directory.html">Contact</a></li>
+        <li class="globalNav"><a class="globalNav" href="/jeps/friends/donate/">Donate</a></li>
+    </ul>
+
+</td>
+</tr>
+</table>
+</nav>
 
 
+<div class="efBody">
 
-<h1><a href="/eflora/">Jepson eFlora:</a> Filtered Keys using KeyBase</h1>
+	<h1>Jepson eFlora Filtered Keys using KeyBase</h1>
+
+<p><a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">Please use this Google Form for Contact/Feedback</a>
 
 
-
+<p class="fontRed"><b>NOTE:</b> The server supporting Keybase was attacked and the code damaged by hackers in late 2021.  UCJEPS was undergoing a major
+update of all filter keys during this attack.  Keybase developers were able to restore a archived version of UCJEPS Keybase files.  
+However, the ability for users to securely update filter keys has been disabled for an indetetminate period of time.  Fixing this issue is costly.</p>
+<p class="fontRed"><b>This version of keybase does not have any new taxa or name changes made to the eflora for Revisions 10 through 13. Keys for taxa that have been unchanged are still usable.</b></p>
 <!--<span class="pageName">Filtered Keys using KeyBase</span>-->
-<p class=bodyText>
+<p class="bodyTextBlack">
 <a href="https://keybase.rbg.vic.gov.au">KeyBase</a> is a dichotomous key platform hosted by <a href="https://www.rbg.vic.gov.au">
-Royal Botanical Gardens, Victoria</a>, with an interface that allows one to easily navigate dichotomous keys and "filter" them with a
+Royal Botanical Gardens, Victoria</a>, with an interface that allows one to easily navigate dichotomous keys and "filter" them with a 
 checklist, removing key leads that do not pertain to any terminal taxa in the checklist.
 </p>
 
-<p class=bodyText>
-The Jepson eFlora dichotomous keys are fully integrated into KeyBase, essentially making a regional flora available for any of the
-Jepson bioregions. Select the region in which you found your plant, and you will be taken to a simplified version of the eFlora keys in
-KeyBase. (e.g. <a href="https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=6520bf5d52cd7">Key to Plants of the Sierra Nevada</a>,
-<a href="https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=6521048e2d094">Key to Plants of the San Gabriel Mountains</a>)
-Taxon names in KeyBase link back to Jepson eFlora taxon pages.
+<p class="bodyTextBlack">
+The Jepson eFlora dichotomous keys are fully integrated into KeyBase, essentially making a regional flora available for any of the 
+Jepson bioregions. Select the region in which you found your plant, and you will be taken to a simplified version of the eFlora keys in 
+KeyBase. (e.g. <a href="https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=6520bf5d52cd7">Key to Plants of the Sierra Nevada</a>, 
+<a href="https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=6521048e2d094">Key to Plants of the San Gabriel Mountains</a>) 
+Taxon names in KeyBase link back to Jepson eFlora taxon pages. 
 </p>
 
 <p class="pageSubheading">
 <b>Get Started: </b>
 <select onchange="window.location=this.value">
 <option>Select a region</option>
-<?php
-$keybase_URL='https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=';
+<?php 
+$keybase_URL='https://keybase.rbg.vic.gov.au/projects/show/11?filter_id='; 
 
-echo "<OPTION VALUE='".$keybase_URL."65711209297e3'>CA-FP";
+echo "<OPTION VALUE='".$keybase_URL."65711209297e3'>CA-FP"; 
 echo "<OPTION VALUE='".$keybase_URL."65207c1c00253'>&nbsp;&nbsp;NW";
 echo "<OPTION VALUE='".$keybase_URL."65207c9ec5a68'>&nbsp;&nbsp;&nbsp;&nbsp;NCo";
 echo "<OPTION VALUE='".$keybase_URL."65207d079cd58'>&nbsp;&nbsp;&nbsp;&nbsp;NCoR";
@@ -142,25 +242,25 @@ echo "<OPTION VALUE='".$keybase_URL."65711823a7da4'>&nbsp;&nbsp;DSon";
 </select>
 </p>
 
-<p class="bodyText"><b>NOTE:</b> The KeyBase taxon filters are based on Jepson eFlora author's assertions of taxon ranges.
-As we have discovered from comparing <a href="/consortium/">Consortium of California Herbaria (CCH)</a>
-specimen records to eFlora authored ranges in the <a href="/consortium/about_yellow.html">Yellow Flag project</a>,
-there are many plant populations that occur outside the eFlora authored ranges.
-If a filtered key does not bring you to an answer that matches the plant you are identifying,
-try using a more relaxed filter (e.g. use the
-<a href="https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=6520bf5d52cd7">Sierra Nevada filter</a>
+<p class="bodyText"><b>NOTE:</b> The KeyBase taxon filters are based on Jepson eFlora author's assertions of taxon ranges. 
+As we have discovered from comparing <a href="/consortium/">Consortium of California Herbaria (CCH)</a> 
+specimen records to eFlora authored ranges in the <a href="/consortium/about_yellow.html">Yellow Flag project</a>, 
+there are many plant populations that occur outside the eFlora authored ranges. 
+If a filtered key does not bring you to an answer that matches the plant you are identifying, 
+try using a more relaxed filter (e.g. use the 
+<a href="https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=6520bf5d52cd7">Sierra Nevada filter</a> 
 instead of the <a href="https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=6520bff351cf9">Central Sierra Nevada Foothills filter</a>),
  or use the full key if necessary.</p>
 
-<p class="bodyText">For feedback regarding KeyBase software, contact Niels Klazenga
+<p class="bodyText">For feedback regarding KeyBase software, contact Niels Klazenga 
 (<a href="mailto:Niels.Klazenga@rbg.vic.gov.au">Niels.Klazenga@rbg.vic.gov.au</a>)
 </p>
-<p  class="bodyText">For feedback regarding how Jepson eFlora content is displayed in KeyBase, contact Jason Alexander
+<p  class="bodyText">For feedback regarding how Jepson eFlora content is displayed in KeyBase, contact Jason Alexander 
 (<a href="mailto:jason_alexander@berkeley.edu">jason_alexander@berkeley.edu</a>)
 </p>
 <p  class="bodyText"><b>Recent Update History</b>
-<br /><strong>Oct. 20, 2023:</strong> <a href="/eflora/region_updates_2023.html">Bioregion species lists</a> updated for <a href="/eflora/supplement_summary.html#rev11">Revision 11</a>.
-<br /><strong>Apr. 20, 2022:</strong> <a href="/eflora/region_updates_2022.html">Bioregion species lists</a> updated for <a href="/eflora/supplement_summary.html#rev10">Revision 10</a>.
+<br /><strong>Oct. 20, 2023:</strong> <a href="">Bioregion species lists</a> NOT updated for <a href="/eflora/supplement_summary.html#rev11">Revision 11</a>.
+<br /><strong>Apr. 20, 2022:</strong> <a href="">Bioregion species lists</a> NOT updated for <a href="/eflora/supplement_summary.html#rev10">Revision 10</a>.
 <br /><strong>Dec. 23, 2021:</strong> <a href="/eflora/region_updates_2021.html">Bioregion species lists</a> updated for <a href="/eflora/supplement_summary.html#rev9">Revision 9</a>.
 </p>
 
@@ -168,8 +268,8 @@ instead of the <a href="https://keybase.rbg.vic.gov.au/projects/show/11?filter_i
 <table width=100% valign=top>
 <tr>
 <td width=45% valign=top>
-<!-- <img align="center" src="http://ucjeps.berkeley.edu/cgi-bin/new_jmap.pl?ffffffffff"> -->
-<img align="center"  src="/eflora/common/images/exploded_map.png">
+<!-- <img align="center" src="//ucjeps.berkeley.edu/cgi-bin/new_jmap.pl?ffffffffff"> -->
+<img align="center"  src="/common/images/exploded_map.png">
 </td>
 
 <td width=50% valign=top>
@@ -181,12 +281,12 @@ instead of the <a href="https://keybase.rbg.vic.gov.au/projects/show/11?filter_i
 <tr><td>
 
 <table><tr><td width=270px valign="top">
-<?php
+<?php 
 $keybase_URL='https://keybase.rbg.vic.gov.au/projects/show/11?filter_id=';
 echo '<p style="font-size:1.2em">';
 echo '<b>CA-FP</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'65711209297e3">California Floristic Province</a><br />';
 echo '</p>';
-echo '<p>';
+echo '<p class="bodyTextBlack">';
 echo '<b>&nbsp;&nbsp;NW</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'65207c1c00253">Northwestern California</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;NCo</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'65207c9ec5a68">North Coast subregion</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;NCoR</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'65207d079cd58">North Coast Ranges subregion</a><br />';
@@ -195,12 +295,12 @@ echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCoRI</b>&nbsp;&nbsp;<a href="'.$ke
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;NCoRO</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'65207dfcbabe9">Outer North Coast Ranges district</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;KR</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'65207e3f8f49e">Klamath Ranges subregion</a><br />';
 echo '</p>';
-echo '<p>';
+echo '<p class="bodyTextBlack">';
 echo '<b>&nbsp;&nbsp;CaR</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'65207e8abafa9">Cascade Ranges</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;CaRF</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'65207ebad5ea1">Cascade Range Foothills</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;CaRH</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'65207f0443b12">High Cascade Ranges</a><br />';
 echo '</p>';
-echo '<p>';
+echo '<p class="bodyTextBlack">';
 echo '<b>&nbsp;&nbsp;SN</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'6520bf5d52cd7">Sierra Nevada</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;nSN</b>&nbsp;&nbsp;&nbsp;<a href="'.$keybase_URL.'6520c1d1d138d">northern Sierra Nevada subregion (nSNF + nSNH)</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;cSN</b>&nbsp;&nbsp;&nbsp;<a href="'.$keybase_URL.'6520c2623b603">central Sierra Nevada subregion (cSNF + cSNH)</a><br />';
@@ -215,12 +315,12 @@ echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;cSNH</b>&nbsp;&nbsp;<a href="'.$keybase_U
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;sSNH</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'6520c61adbc83">southern High Sierra Nevada</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;Teh</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'6520c4ec0b0a3">Tehachapi Mountains subregion</a><br />';
 echo '</p>';
-echo '<p>';
+echo '<p class="bodyTextBlack">';
 echo '<b>&nbsp;&nbsp;GV</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'6520d30f6664e">Great Central Valley</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;ScV</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'6520d418b4dca">Sacramento Valley</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;SnJV</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'6520d4843ea7d">San Joaquin Valley</a><br />';
 echo '</p>';
-echo '<p>';
+echo '<p class="bodyTextBlack">';
 echo '<b>&nbsp;&nbsp;CW</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'6520d83790ef4">Central Western California</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;CCo</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'6520da49e1811">Central Coast subregion</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;SnFrB</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'6520dab067adb">San Francisco Bay Area subregion</a><br />';
@@ -232,7 +332,7 @@ echo '</td>';
 
 
 echo '<td width=320px valign="top">';
-echo '<p>';
+echo '<p class="bodyTextBlack">';
 echo '<b>&nbsp;&nbsp;SW</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'6520ddb40ec8e">Southwestern California</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;SCo</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'6520de133613b">South Coast</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;ChI</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'6520de618c9c3">Channel Islands</a><br />';
@@ -251,7 +351,7 @@ echo '</p>';
 echo '<p style="font-size:1.2em">';
 echo '<b>GB</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'6521059c33e2b">Great Basin Province</a><br />';
 echo '</p>';
-echo '<p>';
+echo '<p class="bodyTextBlack">';
 echo '<b>&nbsp;&nbsp;MP</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'65210e54b3803">Modoc Plateau</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;Wrn</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'65210ebc301ca">Warner Mountains</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;MP exc Wrn</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'653bf1c1a1ac6">Modoc Plateau excluding Warner Mtns</a><br />';
@@ -264,7 +364,7 @@ echo '</p>';
 echo '<p style="font-size:1.2em">';
 echo '<b>D</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'657115d8c4dfd">Desert Province</a><br />';
 echo '</p>';
-echo '<p>';
+echo '<p class="bodyTextBlack">';
 echo '<b>&nbsp;&nbsp;DMoj</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'657117619f1cf">Mojave Desert</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;DMtns</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'657116826fa05">Desert Mountains</a><br />';
 echo '<b>&nbsp;&nbsp;&nbsp;&nbsp;DMoj exc DMtns</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'65711986f0e41">Mojave Desert excluding Desert Mtns</a><br />';
@@ -280,37 +380,41 @@ echo '<b>&nbsp;&nbsp;DSon</b>&nbsp;&nbsp;<a href="'.$keybase_URL.'65711823a7da4"
 </td></tr>
 </table>
 
-<p class=bodyText>
-The Jepson eFlora divides California into 35 ecologically distinct <em>bioregions</em> for the purpose of indicating where plant taxa grow.
-The smallest subdivision defined as a distinct <em>bioregions</em>,
-depends on how finely each region is ecologically divided.
-One bioregion, the Sonoran Desert, is at the finest scale at the region-level, and is not divided into subregions.
-The other nine regions are further divided into two or more subregions.
-Seven subregions are further divided into two or more districts.
+<p class="bodyTextBlack">
+The Jepson eFlora divides California into 35 ecologically distinct <em>bioregions</em> for the purpose of indicating where plant taxa grow. 
+The smallest subdivision defined as a distinct <em>bioregions</em>, 
+depends on how finely each region is ecologically divided. 
+One bioregion, the Sonoran Desert, is at the finest scale at the region-level, and is not divided into subregions. 
+The other nine regions are further divided into two or more subregions. 
+Seven subregions are further divided into two or more districts.  
 All regions are grouped into three main <em>provinces</em>, as shown in the maps above.
 </p>
 
-<p class=bodyText>
-Each terminal taxon treatment in the Jepson eFlora indicates the treatments in which the taxon is asserted to occur.
+<p class="bodyTextBlack">
+Each terminal taxon treatment in the Jepson eFlora indicates the treatments in which the taxon is asserted to occur. 
 Using this information, a checklist for any subregion, region or province can be made (see the <a href="/eflora/tools/">eFlora Tools page</a>
  for a tool that does exactly that).
 </p>
 
 
-<p class=bodyText>
+<p class="bodyTextBlack">
 For full descriptions of each bioregion, see <a href="/eflora/geography.html">Geographic Subdivisions of California</a>
 </p>
 
-   </td>
-  </tr>
-</table> <!--close box outline table-->
 
-<!-- Begin footer -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/footer.php'); ?>
-<!-- End footer -->
+</div>
+<div class ="hr_line_grey">
+<p class="footerText"><a href="/main/copyright.html"> Copyright</a> &copy; 2012 - <span id="currentYear"> </span>.  Regents of the University of California</p>
+<p class="footerText">We encourage links to these pages, but the content may not be downloaded for reposting, repackaging, redistributing, or sale in any form, without written permission from The University and Jepson Herbaria &mdash; <a href="/eflora/termsofuse.html">Terms of Use</a>.</p>
+<p class="footerText">Page last updated <span id='demo'></span>
+</p>
+</div>
 
-
+<!-- Get current year for copyright statement -->
+<script>
+  var currentYear = new Date().getFullYear(); 
+  document.getElementById("currentYear").innerText = currentYear; 
+</script>
 </body>
 </html>
-
 

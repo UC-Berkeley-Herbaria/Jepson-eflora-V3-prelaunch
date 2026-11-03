@@ -1,12 +1,23 @@
-<html xmlns="http://www.w3.org/1999/xhtml">
 
+<!DOCTYPE html>
+ 
+<html lang="en"> 
 
-<head><title>Jepson Herbarium: Jepson Flora Project: Jepson eFlora: Geography</title> 
-<link href="/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+<head>
+<title>Jepson eFlora: Geographic subdivisions</title> 
+<meta charset="UTF-8">
+<meta name="description" content="For vascular plants occurring in wildlands or otherwise outside of cultivation in California, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys.">
+  <meta name="keywords" content="California Flora, Jepson eFlora, Flora of California, Vascular Plants of California, Jepson Flora Project, ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="/common/css/dropdowns.css" rel="stylesheet" type="text/css" />
+
+	<link href="/common/css/jepson_eflora.css" rel="stylesheet" type="text/css">
+		<link rel="shortcut icon" href="/common/images/JepsonLogoSmall.png" type="image/x-icon">
 
 
 <!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
+<script async src="//www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
 <script>
   window.dataLayer = window.dataLayer || [];
   function gtag(){dataLayer.push(arguments);}
@@ -15,86 +26,153 @@
   gtag('config', 'G-T5YC99QF6Q');
 </script>
 
-<!-- Begin banner -->
+  <script>
+    function myFunction() {
+      var x = document.lastModified;
+      document.getElementById("demo").innerHTML = x;
+
+	var objToday = new Date(),
+		domEnder = function() { var a = objToday; if (/1/.test(parseInt((a + "").charAt(0)))) return "th"; a = parseInt((a + "").charAt(1)); return 1 == a ? "st" : 2 == a ? "nd" : 3 == a ? "rd" : "th" }(),
+		dayOfMonth = today + ( objToday.getDate() < 10) ? '0' + objToday.getDate() + domEnder : objToday.getDate() + domEnder,
+		months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'),
+		curMonth = months[objToday.getMonth()],
+		curYear = objToday.getFullYear();
+	var today = dayOfMonth + " " + curMonth + " " + curYear;
+
+	document.getElementById("DateA").innerHTML = today; 
+	document.getElementById("DateB").innerHTML = today; 
+
+    }
+  </script>
 
 
 </head>
 
-<body>
+<body onload="myFunction()">
 
-<!-- Begin banner -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/header_jeps.php'); ?>
-<!-- End banner -->
+<div class="header">
+<header>
+ <table style="background-color: #003366;">
+ <tr>
+	<td style="width:100vw;">
 
-<!-- Beginning of horizontal menu -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/globalnav.php'); ?>
-<!-- End of horizontal menu -->
+    <div class="section1" style="display: inline-block">
+		<div style="display: block">
+            <a href="/jeps/" title="Jepson Herbarium">
+                <img class="JEPS" src="/common/images/JepsonLogoSmall.png" alt="Jepson Herbarium (JEPS) logo image" title="Jepson Herbarium">
+            </a>
+		</div>
+		<div style="margin-bottom: 5px; display: block">
+    	<span class="logoText">Jepson&nbsp;Herbarium</span>
+		</div>
+    </div>
 
-<!-- Start of sidebar menu-->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/localnav_media.php'); ?>
-<!-- End of sidebar --> 
+    <div class="section2" style="display: inline-block">
+			<div class="titleTextHead">The University and Jepson Herbaria</div>
+			<div class="titleTextTag">University of California, Berkeley</div>
+    </div>
 
- <table border="0">
-   <tr>
+</td></tr>
+</table>
+</header>
+</div>
 
-       <td>&nbsp;</td>
-       <td>&nbsp;</td>
-       <td>&nbsp;</td>
-       <td>&nbsp;</td>
-       <td>&nbsp;</td>
-     </tr>
-   <tr>
-       <td>&nbsp;</td>
-       <td>&nbsp;</td>
-
-       <td width="100%"><span class="pageName"><a href="/eflora/">Jepson eFlora:</a> Geographic subdivisions</span><br /><br />
+	<nav aria-label="global navigation menu" tabindex="0">
+<table class="horizMenu" align="center">
+<tr>
+<td>
+	<ul >
+    	<li class="globalNav"><a class="globalNav" href="/">Home</a></li>
+        <li class="globalNav"><a class="globalNav" href="/main/collections.html">About &#x25BE;</a>
+        	<ul>
+                <li class="globalNav"><a class="globalNavSub" href="/main/collections.html#UC">About the Collections</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/directory.html">People</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/guidelines.html">Visiting the Herbaria</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/volunteer.html">Volunteering</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/policies.html">Policies</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/history/">History</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/research/">Research &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="/main/research/faculty.html">Faculty Research Programs</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/jepsonflora/Herb_Pubs.html">Herbarium Publications</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/jepsonflora/">Jepson Flora Project</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/CPD/algal_research.html">Silva Center for Phycological <br />Documentation</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/bryolab/CPPP/">California Plant Phylodiversity Project</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/databases.html">Databases &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="https://webapps.cspace.berkeley.edu/ucjeps/publicsearch/publicsearch/">UC/JEPS Specimen Portal</a></li>
+            	<li class="globalNav"><a class="globalNavSub" href="https://webapps.cspace.berkeley.edu/ucjeps/searchmedia/search/">UC/JEPS Slide Image Collection</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/consortium/">Consortium of California Herbaria</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/interchange/">Jepson Online Interchange</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/db/icpn/">Index of California Plant Names</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/INA.html">Index Nominum Algarum</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/db/JPNI.html">Jepson Place Name Index</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/baker/">Baker Seed Collection</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="">eFloras &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="/eflora/">Jepson eFlora</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/CA_moss_eflora/">California Moss eFlora</a></li>
+				<li class="globalNav"><a class="globalNavSub" href="/seaweedflora/seaweedflora.html">Seaweed Flora of California<br />(Upcoming)</a></li>
+              	<li class="globalNav"><a class="globalNavSub" href="/efc/">Ecological Flora of California</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/education.html">Education &amp; Outreach &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="/workshops/">Public Workshops</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/opportunities.html">Academic Opportunities</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/news/botanylunch/">Botany Lunch Seminar</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/jeps/globe/"><i>The Jepson Globe</i></a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/media/">Videos and Educational Resources</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/archives/">Archives &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="/main/archives/archives_overview.html">Collections Overview</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/archon/">Archives Database</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/archives/images.html">Images</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/images/fieldbooks/jepson_fieldbooks.html">Jepson Field Books</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/directory.html">Contact</a></li>
+        <li class="globalNav"><a class="globalNav" href="/jeps/friends/donate/">Donate</a></li>
+    </ul>
 
 </td>
 </tr>
 </table>
+</nav>
 
-        
-<!--<P class=bodyText>
-Contact: Comments on this page should be sent to Tom Rosatti, Scientific Editor (rosatti@berkeley.edu).</P>-->
-<table width="100%" border="0" cellpadding="0" cellspacing="0">
 
-  <tr>
+<div class="efBody">
 
-    <td>&nbsp;</td>
+	<h1>Jepson eFlora Geographic subdivisions</h1>
 
-    <td>&nbsp;</td>
+<p><a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">Please use this Google Form for Contact/Feedback</a>
 
-    <td>&nbsp;</td>
 
-    <td>&nbsp;</td>
-
-    <td>&nbsp;</td>
-
-  </tr>
-
-  <tr>
-
-    <td>&nbsp;</td>
-
-    <td>&nbsp;</td>
-
-    <td width=100%>
-	
-	
-<p class=bodyText>
-Citation for the whole project: Jepson Flora Project (eds.) [year] <em>Jepson eFlora</em>, https://ucjeps.berkeley.edu/eflora/ [accessed on month, day, year]
+<h2>Citation for the whole project: Jepson Flora Project (eds.) <span id="YYYY"> </span>. Jepson eFlora, https://ucjeps.berkeley.edu/eflora/ [accessed on <span id="DateA"> </span>]</h2> 
+<script>
+  var CYEAR = new Date().getFullYear(); 
+  document.getElementById("YYYY").innerText = CYEAR; 
+</script>
+<br />
+<br />
+<p class="bodyTextBlack">We now charge a service fee for the Geographical Subdivisions Map of California.  All new flora additions, data maintenance, GIS services, and data queries of the Jepson eFlora Website are funded in a large part by donations and grants.  This service fee is to help offset the rising costs of server maintenance, computer equipment, and staff.  The rate for educational, academic, or non-profit organizations is $75 and the rate for commercial or for-profit companies is $150.  Service fee rates can also be found on the <a href="/main/policies.html#FEE">Policy page.</a></p>
+<p class="bodyTextBlack">To request a full image of the subdivision map or related GIS files, contact Jason Alexander (<a href = "mailto:jason_alexander@berkeley.edu">jason_alexander&#064;berkeley.edu</a>).</p> 
 <br>
 <br>
-<p class=bodyText>We now charge a service fee for the Geographical Subdivisions Map of California.  All new flora additions, data maintenance, GIS services, and data queries of the Jepson eFlora Website are funded in a large part by donations and grants.  This service fee is to help offset the rising costs of server maintenance, computer equipment, and staff.  The rate for educational, academic, or non-profit organizations is $75 and the rate for commercial or for-profit companies is $150.  Service fee rates can also be found on the <a href="/main/policies.html#FEE">Policy page.</a></p>
-<p class=bodyText>To request a full image of the subdivision map or related GIS files, contact Jason Alexander (<a href = "mailto:jason_alexander@berkeley.edu">jason_alexander&#064;berkeley.edu</a>).</p> 
-<br>
-<br>
-<h3 align="center">GEOGRAPHIC SUBDIVISIONS OF CALIFORNIA</h3>
-<center>
+<h2 align="center">GEOGRAPHIC SUBDIVISIONS OF CALIFORNIA</h2>
+
 <img align="center" src="/cgi-bin/new_jmap.pl?ffffffffff">
-</center>
 
-<p class=bodyText>Inclusion of geographic ranges of taxa, in addition
+
+<p class="bodyTextBlack">Inclusion of geographic ranges of taxa, in addition
 to their habitats and elevational ranges, in the Jepson eFlora
 provides an eco-geographic context for plant
 diversity that can aid in locating known populations of particular taxa and
@@ -103,7 +181,7 @@ can be a challenge, especially in a large state with the topographic complexity
 and climatic and habitat diversity of California, where sizable areas remain
 insufficiently explored botanically. </p>
 
-<p class=bodyText>To enhance the effectiveness of geographic data in
+<p class="bodyTextBlack">To enhance the effectiveness of geographic data in
 predicting plant occurrences, a system was developed for <i>The Jepson Manual</i>, or <i>TJM</i>
 (1993), that departed from the widespread practice of simply listing the
 counties in which a taxon is known to occur or indicating those counties on a
@@ -114,7 +192,7 @@ geographic system most importantly reflects broad patterns of natural
 vegetation (and, at a finer scale, more specific plant assemblages), geology,
 topography, and climate.</p>
 
-<p class=bodyText>Patterns of vegetation and flora that influenced the
+<p class="bodyTextBlack">Patterns of vegetation and flora that influenced the
 Jepson geographic system were drawn largely from A. W. Kuchler's (1977) "The
 Map of the Natural Vegetation of California" (pp. 909&#8211;938 in M. G.
 Barbour and J. Major, eds, <i>Terrestrial Vegetation of California</i>, J. Wiley &amp; Sons, New York; reprinted in 1988 by
@@ -132,21 +210,21 @@ Schoenherr's (2007) <i>Terrestrial Vegetation of California, Third
 Edition </i>(University of California Press,
 Berkeley). </p>
 
-<p class=bodyText>The Jepson geographic system is organized
+<p class="bodyTextBlack">The Jepson geographic system is organized
 hierarchically, starting with broadly defined provinces and ending with
 districts (third-order subdivisions of provinces). Directional modifiers on the
 geographic units, e.g., &quot;sw NCoRI&quot;, are used to increase precision.
 Combining geographic range statements with habitat descriptions and elevation
 ranges increases the predictiveness of overall range statements. </p>
 
-<p class=bodyText>There are 50 geographic units in this system. Each
+<p class="bodyTextBlack">There are 50 geographic units in this system. Each
 has a unique abbreviation, used in descriptions and keys. If a user is already
 familiar with California geography, the units and their abbreviations may be
 readily understood. For those less familiar with the state's landforms and
 vegetation, the system (with abbreviations) should be of help in learning
 California geography. </p>
 
-<p class=bodyText>Each of the 50 units is defined and described below.
+<p class="bodyTextBlack">Each of the 50 units is defined and described below.
 These descriptions will be easier to follow if studied in conjunction with the
 map and hierarchical outline of subdivisions <!-- link to map needed here --> .&nbsp; In some cases, counties are indicated
 parenthetically after a geographic unit in the range statement to provide more
@@ -154,7 +232,7 @@ distributional detail (for units that span multiple counties). This was
 frequently done for rare plants because county-by-county information is often
 sought for them. </p>
 
-<p class=bodyText>The system of geographic units is four-tiered:
+<p class="bodyTextBlack">The system of geographic units is four-tiered:
 provinces, regions, subregions, and districts <!-- link to outline needed here --> .
 There are three provinces at the most inclusive level. All three extend outside
 of California but the California Floristic Province includes most of the state
@@ -172,7 +250,7 @@ on topographic, climatic, and vegetation variation within the region. Seven of
 the subregions are further divided into districts, based on more localized
 environmental variation.</p>
 
-<p class=bodyText>In contrast to the use of arbitrary, often
+<p class="bodyTextBlack">In contrast to the use of arbitrary, often
 politically determined delimiters, such as county lines, the use of
 biologically meaningful criteria to delimit geographic units results in
 sometimes frustratingly indefinite or fuzzy boundaries. Wherever possible,
@@ -192,7 +270,7 @@ substrates predominant on the Cascade side) or easy-to-follow, man-made
 corridors (e.g., State Highway 58 through Tehachapi Pass divides the Tehachapi
 Mountains from the southern Sierra Nevada Foothills).</p>
 
-<p class=bodyText>Presence of a taxon in broad or imprecise
+<p class="bodyTextBlack">Presence of a taxon in broad or imprecise
 transitional areas between two geographic subunits is indicated by use of a
 &quot;/&quot; between the adjacent subunits involved. For example, the
 distribution of a plant that occurs in the Sacramento Valley (ScV) and also in
@@ -203,11 +281,11 @@ separated with a &quot;/&quot;.</p>
 
 
 
-<p class=bodyText><b>CALIFORNIA
+<p class="bodyTextBlack"><b>CALIFORNIA
 FLORISTIC PROVINCE (CA-FP) </b></p>
 
 
-<p class=bodyText>The largest and most
+<p class="bodyTextBlack">The largest and most
 botanically diverse geographic unit in California is the California Floristic
 Province (CA-FP). It comprises all of the state west of the two other
 provinces, the Great Basin Province (GB), in the north, and the Desert Province
@@ -218,7 +296,7 @@ together contain the remainder of the transmontane region. The border between
 the CA-FP, on the one hand, and the GB and D, on the other, is the main
 phytogeographic boundary in the state.</p>
 
-<p class=bodyText>North of Lake Tahoe, the boundary between the CA-FP
+<p class="bodyTextBlack">North of Lake Tahoe, the boundary between the CA-FP
 and GB lies between the Cascade Ranges and the Sierra Nevada to the west, with
 their montane conifer forests, and the Modoc Plateau of the GB to the east,
 with its juniper woodland and sagebrush steppe. Vegetational, topographic, and
@@ -230,7 +308,7 @@ more numerous, while in the GB the terrain is generally flatter, with a greater
 predominance of lava flows that have been faulted into small mountains with
 intervening basins.</p>
 
-<p class=bodyText>The boundary between the CA-FP and GB runs south from
+<p class="bodyTextBlack">The boundary between the CA-FP and GB runs south from
 the Oregon border at US Highway 97, along the south side of Lava Beds National
 Monument, and around Glass Mountain and Black Mountain (barely in Modoc
 County); it curves west again around the Burnt Lava Flow area, and (from the
@@ -242,7 +320,7 @@ Plateau. The CA-FP extends slightly into Nevada east of Lake Tahoe (e.g., in
 the Mount Rose area), with the boundary between the CA-FP and GB nearly
 following Highways 395 and 88 through Nevada.</p>
 
-<p class=bodyText>South of Lake Tahoe, the boundary between the CA-FP
+<p class="bodyTextBlack">South of Lake Tahoe, the boundary between the CA-FP
 and GB follows the east slope of the Sierra Nevada, generally defined by the
 indefinite break between either upper montane (red-fir/lodgepole-pine) forest
 or Jeffrey-pine forest on the CA-FP side and either pinyon/juniper woodland or
@@ -251,7 +329,7 @@ sagebrush steppe on the GB side; there also is Jeffrey-pine forest in the GB
 CA-FP and GB is approximated by Highway 395, but south of Bishop it lies to the
 west of Highway 395, farther up the east slope of the Sierra Nevada.</p>
 
-<p class=bodyText>South of Owens Valley, the provincial boundary lies
+<p class="bodyTextBlack">South of Owens Valley, the provincial boundary lies
 between chaparral or pinyon/juniper woodland on the CA-FP side, and vegetation
 including Joshua tree or creosote bush and white bur-sage on the D side.
 Montane vegetation in the southeastern Sierra Nevada, northeastern Transverse Ranges,
@@ -261,7 +339,7 @@ to the D. In Riverside County, San Diego County, and southwesternmost Imperial
 County, the San Jacinto, Santa Rosa, Volcan, Laguna, and Jacumba mountains make
 up the eastern edge of the CA-FP, and are included within it.</p>
 
-<p class=bodyText>Outside of California, the CA-FP extends north into
+<p class="bodyTextBlack">Outside of California, the CA-FP extends north into
 southwestern Oregon, south into northwestern Baja California, and east into the
 Lake Tahoe region of Nevada, as described above. Those out-of-state parts of
 the CA-FP are not covered by <i>JM II</i>. In
@@ -270,11 +348,11 @@ districts, as described below.</p>
 
 
 
-<p class=bodyText><b>NORTHWESTERN CALIFORNIA REGION (NW).</b></p>
+<p class="bodyTextBlack"><b>NORTHWESTERN CALIFORNIA REGION (NW).</b></p>
 
 <p>&nbsp;</p>
 
-<p class=bodyText>This region has the
+<p class="bodyTextBlack">This region has the
 wettest and most predictable climate in California. The boundary between the NW
 and the Cascade Ranges Region (CaR) is approximated by Interstate 5 and the
 Sacramento River south to the Great Central Valley Region (GV, which reaches its
@@ -284,7 +362,7 @@ those developed from volcanic material support sagebrush scrub or montane
 conifer forest much like that of the High Sierra Nevada Subregion (SNH), with
 sugar pine but without hemlock, on the CaR side. </p>
 
-<p class=bodyText>From near Red Bluff south
+<p class="bodyTextBlack">From near Red Bluff south
 to southwestern Solano County, the NW meets the GV and the boundary is defined
 primarily by blue oak/foothill-pine woodland on the NW side, and grassland (or
 agricultural land) on the GV side. From southwestern Solano County, the
@@ -294,7 +372,7 @@ Western California Region (CW) to the south, and then proceeds through southern
 Sonoma County to the Pacific Ocean near Bodega Bay. The NW is divided into
 three subregions.</p>
 
-<p class=bodyText><b>North Coast Subregion
+<p class="bodyTextBlack"><b>North Coast Subregion
 (NCo).</b> This subregion extends along the
 Pacific Coast the full length of the NW, from the Oregon border south to Bodega
 Bay. It is a strip of land of variable width that supports truly coastal
@@ -303,7 +381,7 @@ coastal scrub, closed-cone-pine/cypress forest, and grand-fir/Sitka-spruce
 forest. In some places (e.g., the northern Mendocino coast), the NCo is reduced
 to coastal bluffs.</p>
 
-<p class=bodyText><b>Klamath Ranges
+<p class="bodyTextBlack"><b>Klamath Ranges
 Subregion (KR).</b> The California portion of
 this geologically old and distinct, serpentine-rich subregion is bounded to the
 north by Oregon and in the northwest by the coastal vegetation of the NCo. Its
@@ -316,13 +394,13 @@ of the Trinity rivers. The transition in forest types across the boundary
 between the KR and NCoR is gradual, with the KR containing forests of globally
 exceptional conifer diversity.</p>
 
-<p class=bodyText>In the east, the boundary
+<p class="bodyTextBlack">In the east, the boundary
 between the predominantly metamorphic KR and the volcanic CaR lies east and north of Shasta Lake, incorporating the McCloud and Hosselkus limestone formations.
 In the southeast, the boundary generally excludes the
 chaparral and foothill-pine/blue-oak woodland vegetation of the Inner North Coast Ranges
 District (NCoRI) in southwestern Shasta and northwestern Tehama counties.</p>
 
-<p class=bodyText>The KR includes the
+<p class="bodyTextBlack">The KR includes the
 Marble, Salmon, Scott, Scott Bar, Siskiyou, and Trinity mountains, the Trinity
 Alps, and Mount Eddy. Red Mountain, near the point where Trinity, Shasta, and
 Tehama counties meet, is one of the southernmost peaks in the KR that exceeds
@@ -330,12 +408,12 @@ Tehama counties meet, is one of the southernmost peaks in the KR that exceeds
 
 
 
-<p class=bodyText><b>North Coast Ranges
+<p class="bodyTextBlack"><b>North Coast Ranges
 Subregion (NCoR).</b> This subregion is the
 largest in the NW and includes widespread serpentine. It is divided into three
 districts:</p>
 
-<p class=bodyText><b><i>Outer North Coast
+<p class="bodyTextBlack"><b><i>Outer North Coast
 Ranges District</i></b><b> (NCoRO).</b>
 This district, the largest in the NCoR, is characterized by very high rainfall,
 as well as by redwood, mixed-evergreen, and mixed-hardwood forests. Notable
@@ -345,7 +423,7 @@ Ranges District (NCoRH).</p>
 
 
 
-<p class=bodyText><b><i>High North Coast
+<p class="bodyTextBlack"><b><i>High North Coast
 Ranges District</i></b><b> (NCoRH).</b>
 This district is characterized by heavy snow cover, as well as by montane and
 subalpine conifer forests, treeless high peaks, and floristic similarities to
@@ -359,7 +437,7 @@ NCoRH.</p>
 
 
 
-<p class=bodyText><b><i>Inner North Coast
+<p class="bodyTextBlack"><b><i>Inner North Coast
 Ranges District</i></b><b> (NCoRI).</b>
 This district is characterized by low rainfall and hot, dry summers, as well as
 by chaparral and pine/oak woodland. It extends from the Anderson area in
@@ -371,23 +449,23 @@ district.</p>
 
 
 
-<p class=bodyText><b>CASCADE RANGES REGION (CaR).</b> </p>
+<p class="bodyTextBlack"><b>CASCADE RANGES REGION (CaR).</b> </p>
 
 
 
-<p class=bodyText>This region, characterized
+<p class="bodyTextBlack">This region, characterized
 by volcanics, is bounded to the north by Oregon, to the west by the
 predominantly metamorphic KR, to the southwest by
 agricultural land or grassland of the GV, to the southeast by the Sierra Nevada
 Region (SN), and to the east by the juniper woodland of the GB. </p>
 
-<p class=bodyText>Differences in vegetation
+<p class="bodyTextBlack">Differences in vegetation
 between the CaR and the Modoc Plateau Region (MP) of the GB are especially
 unclear. For example, a major island of GB vegetation (sagebrush steppe and
 juniper woodland) occurs well within the CaR, in Shasta Valley (east of Yreka,
 near the boundary between the CaR and KR).</p>
 
-<p class=bodyText>The interface between the
+<p class="bodyTextBlack">The interface between the
 CaR and SN is defined geologically by the contact between the relatively recent
 volcanics of the CaR and the predominant metamorphics (with both granitic
 intrusions and volcanics) of the northern SN (n SN). This contact, located
@@ -399,7 +477,7 @@ latitude. The CaR is divided into two subregions.</p>
 
 
 
-<p class=bodyText><b>Cascade Range Foothills
+<p class="bodyTextBlack"><b>Cascade Range Foothills
 Subregion (CaRF).</b> This subregion, in the
 southwestern part of CaR, is characterized by chaparral and
 blue-oak/foothill-pine woodland at about 100&#8211;500 m in elevation. The northern CaRF
@@ -408,7 +486,7 @@ band of similar foothill vegetation along the northern margin of the GV.<b></b><
 
 
 
-<p class=bodyText><b>High Cascade Range
+<p class="bodyTextBlack"><b>High Cascade Range
 Subregion (CaRH).</b> This subregion
 (generally above 500 m) comprises the remainder of the CaR and is characterized
 by ponderosa-pine, montane fir/pine, and lodgepole-pine forests, with treeless
@@ -416,18 +494,18 @@ alpine vegetation on Mount Shasta and Lassen Peak.</p>
 
 
 
-<p class=bodyText><b>SIERRA NEVADA REGION (SN).</b> </p>
+<p class="bodyTextBlack"><b>SIERRA NEVADA REGION (SN).</b> </p>
 
 
 
-<p class=bodyText>This primarily igneous
+<p class="bodyTextBlack">This primarily igneous
 region meets the volcanic CaR to the north. To the west it shares a long
 north-south border with the GV (grassland on the GV side versus foothill
 vegetation on the SN side), and meets the Southwestern California Region (SW)
 at Tejon Pass (on Interstate 5). On the east, the SN contacts the provincial
 boundaries of the GB and D.</p>
 
-<p class=bodyText>The SN is divided into
+<p class="bodyTextBlack">The SN is divided into
 three subregions, the two larger of which (SNF, SNH) comprise all but the
 southernmost extremity of the region, the Tehachapi Mountains Subregion (Teh).
 Each of the two larger subregions is divided into three districts (northern,
@@ -439,7 +517,7 @@ and with major rivers or drainage systems.</p>
 
 
 
-<p class=bodyText><b>Sierra Nevada Foothills
+<p class="bodyTextBlack"><b>Sierra Nevada Foothills
 Subregion (SNF).</b> This subregion comprises a
 lower, mostly narrow, north-south strip in the westernmost one-third to
 one-fifth of the SN, with the GV to the west, the SNH or the Mojave Desert
@@ -448,7 +526,7 @@ limit of the SNF is approximately 1500 m (in the north) to 1000 m (in the
 south) except near Lake Isabella, where the upper limit is approximately 1500
 m. </p>
 
-<p class=bodyText>Throughout most of its
+<p class="bodyTextBlack">Throughout most of its
 area, the SNF is characterized by blue-oak/foothill-pine woodlands (versus
 ponderosa-pine forest of higher elevations in the SNH) and chaparral, with some
 serpentine. It is best differentiated from the SNH and GV by vegetation, as
@@ -458,7 +536,7 @@ SN, and as defined under each.</p>
 
 
 
-<p class=bodyText><b><i>Northern Sierra
+<p class="bodyTextBlack"><b><i>Northern Sierra
 Nevada Foothills District</i></b><b> (n SNF).</b>
 This district meets the CaRF to the north (northwest of Oroville) and is
 bounded more or less arbitrarily in the south, where it meets the c SNF, by the
@@ -468,7 +546,7 @@ Valley, at about 800 m, is near the border with the n SNH.</p>
 
 
 
-<p class=bodyText><b><i>Central Sierra
+<p class="bodyTextBlack"><b><i>Central Sierra
 Nevada Foothills District</i></b><b> (c SNF).</b>
 This district meets the n SNF to the north and is bounded in the south by the
 divide (in Fresno County) between the San Joaquin and Kings river drainages,
@@ -477,7 +555,7 @@ within the c SNF.</p>
 
 
 
-<p class=bodyText><b><i>Southern Sierra
+<p class="bodyTextBlack"><b><i>Southern Sierra
 Nevada Foothills District</i></b><b> (s SNF).</b>
 This district meets the c SNF to the northwest and the Teh to the south, at
 Highway 58 through Tehachapi Pass, which approximates the division between the
@@ -488,7 +566,7 @@ transitions into surrounding areas of the GV, s SNH, and DMoj.</p>
 
 
 
-<p class=bodyText><b>High Sierra Nevada
+<p class="bodyTextBlack"><b>High Sierra Nevada
 Subregion (SNH).</b> This large subregion is
 elongate in a north-south direction, extending from Lassen and Plumas counties
 in the north to Kern County in the south, and is bounded by the SNF to the west
@@ -499,7 +577,7 @@ Jeffrey pine, and lodgepole pine in upper montane areas, forests of mountain
 hemlock and whitebark pine in subalpine areas, and treeless alpine areas at the
 highest elevations (about 3000&#8211;4400+ m).</p>
 
-<p class=bodyText>The long border between
+<p class="bodyTextBlack">The long border between
 the SNH to the west and the GB and D to the east, extending more than half the
 length of California, is in places difficult to define (see the CA-FP, above).
 The SNH is divided (as is the SNF) into northern, central, and southern
@@ -507,7 +585,7 @@ districts, as discussed under the SN.</p>
 
 
 
-<p class=bodyText><b><i>Northern High Sierra
+<p class="bodyTextBlack"><b><i>Northern High Sierra
 Nevada District</i></b><b> (n SNH).</b>
 This district in the north meets the CaRH of the CA-FP and the MP of the GB;
 the boundary with the CaRH more or less coincides with the North Fork of the
@@ -518,7 +596,7 @@ Quincy, Downieville, Truckee, and Markleeville are within the n SNH.</p>
 
 
 
-<p class=bodyText><b><i>Central High Sierra
+<p class="bodyTextBlack"><b><i>Central High Sierra
 Nevada District</i></b><b> (c SNH).</b>
 This district meets the n SNH to the north, as defined above. The southern
 boundary, west of the Sierran crest, is the divide between the San Joaquin and
@@ -530,7 +608,7 @@ Yosemite National Park and Mammoth Lakes are within the c SNH.</p>
 
 
 
-<p class=bodyText><b><i>Southern High Sierra
+<p class="bodyTextBlack"><b><i>Southern High Sierra
 Nevada District</i></b><b> (s SNH).</b>
 This district meets the c SNH to the north-northwest and the s SNF to the west
 and south. All but the northern tip of Kings Canyon National Park and all of
@@ -548,7 +626,7 @@ desert scrub of neighboring geographic units.</p>
 
 
 
-<p class=bodyText><b>Tehachapi Mountain Area
+<p class="bodyTextBlack"><b>Tehachapi Mountain Area
 Subregion (Teh).</b> This small foothill and
 montane subregion, in which elevations rarely exceed 2000 m, has floristic
 elements of all surrounding geographic units. Highway 58 through Tehachapi Pass
@@ -563,11 +641,11 @@ side.</p>
 
 
 
-<p class=bodyText><b>GREAT CENTRAL VALLEY REGION (GV).</b> </p>
+<p class="bodyTextBlack"><b>GREAT CENTRAL VALLEY REGION (GV).</b> </p>
 
 
 
-<p class=bodyText>This region is an
+<p class="bodyTextBlack">This region is an
 elongate, north-south oriented lowland surrounded by all other regions of the
 CA-FP but bordered mostly by coast ranges to the west and the SN to the east.
 On all borders (i.e., those with the NW, CW, SW, SN, and CaR) it ends where
@@ -579,7 +657,7 @@ into two subregions.</p>
 
 
 
-<p class=bodyText><b>Sacramento Valley
+<p class="bodyTextBlack"><b>Sacramento Valley
 Subregion (ScV).</b> This subregion comprises
 the northern, smaller, wetter, cooler area of the GV, extending from near Red
 Bluff in Tehama County to the salt marshes of Suisun Slough in southwestern
@@ -590,7 +668,7 @@ and San Joaquin rivers. </p>
 
 
 
-<p class=bodyText><b>San Joaquin Valley
+<p class="bodyTextBlack"><b>San Joaquin Valley
 Subregion (SnJV).</b> This subregion comprises
 the southern, larger, drier, hotter area of the GV; its northern limits are
 defined under the ScV, while its other boundaries equal those of the GV.
@@ -605,11 +683,11 @@ and northernmost Santa Barbara counties. Further north, the Livermore Valley
 
 
 
-<p class=bodyText><b>CENTRAL WESTERN CALIFORNIA REGION (CW).</b> </p>
+<p class="bodyTextBlack"><b>CENTRAL WESTERN CALIFORNIA REGION (CW).</b> </p>
 
 
 
-<p class=bodyText>This north-south oriented
+<p class="bodyTextBlack">This north-south oriented
 region is bounded by the NW to the north, the Pacific Ocean to the west, SW to
 the south, and GV to the east. The boundary between the CW and SW follows the
 crest of the Santa Ynez Mountains from Point Conception to just north of Santa
@@ -621,7 +699,7 @@ comprises two districts.</p>
 
 
 
-<p class=bodyText><b>Central Coast Subregion
+<p class="bodyTextBlack"><b>Central Coast Subregion
 (CCo).</b> This subregion extends along the
 Pacific Coast (and San Francisco Bay) the full length of the CW, from near
 Bodega Bay in the north to Point Conception in the south. Like the NCo in the
@@ -634,7 +712,7 @@ non-coastal vegetation. </p>
 
 
 
-<p class=bodyText><b>San Francisco Bay Area
+<p class="bodyTextBlack"><b>San Francisco Bay Area
 Subregion (SnFrB).</b> This subregion occupies
 the northern one-third of the CW, east of the CCo. It is reasonably well
 defined physiographically, by features such as Mount Tamalpais, the Santa Cruz
@@ -647,7 +725,7 @@ redwood forest to dry oak/pine woodland and chaparral.</p>
 
 
 
-<p class=bodyText><b>South Coast Ranges
+<p class="bodyTextBlack"><b>South Coast Ranges
 Subregion (SCoR).</b> This subregion is
 bounded by the SnFrB to the north (boundary defined under the SnFrB), CCo to
 the west, SW to the south, and SnJV to the east. It is divided into two
@@ -655,7 +733,7 @@ districts.</p>
 
 
 
-<p class=bodyText><b><i>Outer South Coast
+<p class="bodyTextBlack"><b><i>Outer South Coast
 Ranges District</i></b><b> (SCoRO).</b>
 The boundary between this district and the Inner South Coast Ranges District
 (SCoRI) to the east runs along the Salinas River (approximated by Highway 101),
@@ -671,7 +749,7 @@ primarily blue-oak/foothill-pine woodland and chaparral.</p>
 
 
 
-<p class=bodyText><b><i>Inner South Coast
+<p class="bodyTextBlack"><b><i>Inner South Coast
 Ranges District</i></b><b> (SCoRI).</b>
 Located east of the SCoRO, this district includes the southern Diablo Range
 from Hollister and Pacheco Pass south to (and including) San Benito Mountain,
@@ -682,11 +760,11 @@ juniper woodland, chaparral, and elements of desert scrub. </p>
 
 
 
-<p class=bodyText><b>SOUTHWESTERN CALIFORNIA REGION (SW).</b> </p>
+<p class="bodyTextBlack"><b>SOUTHWESTERN CALIFORNIA REGION (SW).</b> </p>
 
 
 
-<p class=bodyText>The mainland part of this
+<p class="bodyTextBlack">The mainland part of this
 region is a wide band, oriented northwest to southeast, that is bounded by the
 Pacific Ocean to the west and Mexico to the south. The SW also includes the
 Channel Islands. It is separated from the CW to the northwest by the crest of
@@ -700,7 +778,7 @@ and six districts.</p>
 
 
 
-<p class=bodyText><b>South Coast Subregion
+<p class="bodyTextBlack"><b>South Coast Subregion
 (SCo).</b> This subregion extends along the
 Pacific Coast, from Point Conception of the CCo (CW) to Mexico. It is comparable
 to the NCo and CCo of the NW and CW regions, respectively, but is hotter and
@@ -710,7 +788,7 @@ chaparral vegetation predominated in the SCo before urbanization.</p>
 
 
 
-<p class=bodyText><b>Channel Islands
+<p class="bodyTextBlack"><b>Channel Islands
 Subregion (ChI).</b> The eight major islands
 in the Pacific Ocean off the coast of southern California are floristically
 similar to the SCo, but include enough endemics to justify recognition of the
@@ -723,7 +801,7 @@ County.</p>
 
 
 
-<p class=bodyText><b><i>Northern Channel
+<p class="bodyTextBlack"><b><i>Northern Channel
 Islands District</i></b><b> (n ChI).</b>
 This district includes the islands of San Miguel (Santa Barbara County), Santa
 Rosa (Santa Barbara County), Santa Cruz (Santa Barbara County), and Anacapa
@@ -734,7 +812,7 @@ of the Western Transverse Ranges District (WTR).</p>
 
 
 
-<p class=bodyText><b><i>Southern Channel
+<p class="bodyTextBlack"><b><i>Southern Channel
 Islands District</i></b><b> (s ChI).</b>
 This district includes the islands of Santa Barbara (Santa Barbara County),
 Santa Catalina (Los Angeles County), San Clemente (Los Angeles County), and San
@@ -745,7 +823,7 @@ during periods of lowered sea levels that accompanied various glaciations.</p>
 
 
 
-<p class=bodyText><b>Transverse Ranges
+<p class="bodyTextBlack"><b>Transverse Ranges
 Subregion (TR).</b> This subregion, the
 northernmost in the SW, includes mountain ranges that are oriented in an
 east-west direction. The TR shares nearly all of its southern boundary with the
@@ -755,7 +833,7 @@ lies between the San Bernardino Mountains (TR) to the north and the San Jacinto
 Mountains (in PR) to the south. San Gorgonio Pass, near Banning, also marks the
 division between the SCo (CA-FP) to the west and the D to the east. </p>
 
-<p class=bodyText>The TR is characterized at
+<p class="bodyTextBlack">The TR is characterized at
 lower elevations by chaparral and at higher elevations by oak forest and dry
 montane forests of white fir, incense cedar, or Jeffrey, sugar, or lodgepole
 pines. The boundary between the TR and D lies between these communities and
@@ -765,7 +843,7 @@ districts that are progressively higher, hotter, and drier eastward.</p>
 
 
 
-<p class=bodyText><b><i>Western Transverse
+<p class="bodyTextBlack"><b><i>Western Transverse
 Ranges District</i></b><b> (WTR).</b>
 This district meets the SN, GV, and CW to the north, the SCo to the south (a
 narrow strip of which separates the WTR from the Pacific Ocean), and the D and
@@ -779,7 +857,7 @@ to the boundary between the WTR and D south of Palmdale.</p>
 
 
 
-<p class=bodyText><b><i>San Gabriel
+<p class="bodyTextBlack"><b><i>San Gabriel
 Mountains District</i></b><b> (SnGb).</b>
 This district is a topographically well-defined mountain range situated northeast of Los
 Angeles. It is bounded by the D to the north and northeast, the WTR to the
@@ -792,7 +870,7 @@ It supports alpine taxa near its summit.</p>
 
 
 
-<p class=bodyText><b><i>San Bernardino
+<p class="bodyTextBlack"><b><i>San Bernardino
 Mountains District</i></b><b> (SnBr).</b>
 This is a topographically well-defined mountain range, east of the SnGb. This
 district is adjacent to the D on its north, east, and southeast boundaries, the
@@ -806,7 +884,7 @@ to the D than to the SnBr.</p>
 
 
 
-<p class=bodyText><b>Peninsular Ranges
+<p class="bodyTextBlack"><b>Peninsular Ranges
 Subregion (PR).</b> This subregion occupies
 approximately the southeastern one-third of the SW. It includes Mount Palomar,
 as well as the Santa Ana, Cuyamaca, Santa Rosa, Laguna, Jacumba, Volcan, and
@@ -814,7 +892,7 @@ San Jacinto mountains. The last range comprises its own district within the PR.<
 
 
 
-<p class=bodyText><b><i>San Jacinto
+<p class="bodyTextBlack"><b><i>San Jacinto
 Mountains District</i></b><b> (SnJt).</b>
 This district in the PR is an area with a high level of
 local endemism. The San Jacinto Mountains include the highest elevations in the
@@ -824,12 +902,12 @@ supports well-developed montane to subalpine forests.</p>
 
 
 
-<p class=bodyText><b>GREAT
+<p class="bodyTextBlack"><b>GREAT
 BASIN PROVINCE (GB) </b></p>
 
 
 
-<p class=bodyText>The Great Basin Province (GB) lies to the east of the
+<p class="bodyTextBlack">The Great Basin Province (GB) lies to the east of the
 CA-FP in the northern two-thirds of California and meets the D at its southern
 margin. The boundary with the CA-FP is described above; it follows the high
 eastern margin of the CaR and SN. The boundary with the D at its northern
@@ -843,11 +921,11 @@ subregions.</p>
 
 
 
-<p class=bodyText><b>MODOC PLATEAU REGION (MP).</b> </p>
+<p class="bodyTextBlack"><b>MODOC PLATEAU REGION (MP).</b> </p>
 
 
 
-<p class=bodyText>This region, entirely
+<p class="bodyTextBlack">This region, entirely
 north of Lake Tahoe, is a high plateau (mostly about 1300&#8211;1800 m) in the
 northeastern corner of California, occupying most of Modoc and Lassen counties
 and parts of Plumas, Shasta, Sierra, and Siskiyou counties. The MP is
@@ -859,7 +937,7 @@ predominating over cones (see the CaR, above).
 
 
 
-<p class=bodyText><b>Warner Mountains Subregion
+<p class="bodyTextBlack"><b>Warner Mountains Subregion
 (Wrn).</b> The Warner Mountains, a faulted
 volcanic range situated mostly in eastern Modoc County, is the most outstanding
 topographic feature of the MP. Its highest point is Eagle Peak, which exceeds
@@ -868,11 +946,11 @@ unique flora that includes an alpine component at the higher elevations.</p>
 
 
 
-<p class=bodyText><b>EAST OF THE SIERRA NEVADA REGION (SNE).</b> </p>
+<p class="bodyTextBlack"><b>EAST OF THE SIERRA NEVADA REGION (SNE).</b> </p>
 
 
 
-<p class=bodyText>This region, entirely
+<p class="bodyTextBlack">This region, entirely
 south of Lake Tahoe, has a wide elevational range, from Owens Lake at 1100 m to
 White Mountain Peak at 4330 m. The part of the SNE excluding the White-Inyo
 Mountains Subregion (W&amp;I) supports primarily a mosaic of sagebrush steppe,
@@ -886,7 +964,7 @@ bur-sage dominated scrub vegetation. To the east of the junction of the W&amp;I
 at Westgard Pass lies a low (1500&#8211;2000 m) outlier of the SNE that
 includes the Deep Springs and Fish Lake valleys.</p>
 
-<p class=bodyText>The boundary between the
+<p class="bodyTextBlack">The boundary between the
 SNE and CA-FP along the eastern edge of the SN is generally defined by an
 indefinite break between either upper montane (red-fir/lodgepole-pine) forest
 or Jeffrey-pine forest on the CA-FP side and either pinyon/juniper woodland or
@@ -897,7 +975,7 @@ Bishop). </p>
 
 
 
-<p class=bodyText><b>White and Inyo
+<p class="bodyTextBlack"><b>White and Inyo
 Mountains Subregion (W&amp;I).</b> The
 White-Inyo Range (W&amp;I) is considered a separate subregion because it
 supports subalpine bristlecone-pine and limber-pine woodlands as well as
@@ -906,18 +984,18 @@ Waucoba peaks both around 3400 m).</p>
 
 
 
-<p class=bodyText><b>DESERT
+<p class="bodyTextBlack"><b>DESERT
 PROVINCE (D)</b></p>
 
 
-<p class=bodyText>The Desert Province (D) of southeastern California
+<p class="bodyTextBlack">The Desert Province (D) of southeastern California
 encompasses the Mojave Desert Region (DMoj) and Sonoran Desert Region (DSon).
 This province lies east of the CA-FP and south of the GB. A matrix of scrub
 vegetation dominated by creosote bush and white bur-sage occurs throughout much
 of the lowlands, with saltbush scrub characteristic of alkaline basins. The
 boundary of the D with the SNE is described above under the GB. </p>
 
-<p class=bodyText>South of Owens Valley, the provincial boundary with
+<p class="bodyTextBlack">South of Owens Valley, the provincial boundary with
 the CA-FP lies between chaparral or pinyon/juniper woodland on the CA-FP side,
 and vegetation dominated by Joshua tree or creosote bush and white bur-sage on
 the D side. Montane vegetation of adjacent areas in the southeastern SN,
@@ -928,11 +1006,11 @@ edge DSon&quot;, as appropriate. </p>
 
 
 
-<p class=bodyText><b>MOJAVE DESERT REGION (DMoj).</b> </p>
+<p class="bodyTextBlack"><b>MOJAVE DESERT REGION (DMoj).</b> </p>
 
 
 
-<p class=bodyText>This region, occupying the
+<p class="bodyTextBlack">This region, occupying the
 northern two-thirds of the D, exhibits greater temperature ranges and more
 extreme elevational relief than the DSon to the south. Joshua tree and Mojave
 yucca are conspicuous, widespread members of DMoj vegetation that are absent
@@ -940,7 +1018,7 @@ from the DSon.</p>
 
 
 
-<p class=bodyText><b>Desert Mountains
+<p class="bodyTextBlack"><b>Desert Mountains
 Subregion (DMtns).</b> Although the entire
 DMoj is a series of mountains and intervening (often wide) valleys, some ranges
 reach sufficient elevation (generally above 1700 m) to support pinyon/juniper
@@ -956,7 +1034,7 @@ floristically with pinyon/juniper woodland vegetation of the adjacent CA-FP.
 Some of the eastern DMtns support taxa that occur more widely, in D or GB
 outside of the state, but are otherwise unknown in California. </p>
 
-<p class=bodyText>The Little San Bernardino
+<p class="bodyTextBlack">The Little San Bernardino
 Mountains, across Morongo and Yucca valleys from the SnBr (of TR, CA-FP) and
 mostly included in Joshua Tree National Park, are included as part of the DMtns
 because the vegetation in this range is more similar to the D than to the SnBr,
@@ -964,11 +1042,11 @@ as noted above.</p>
 
 
 
-<p class=bodyText><b>SONORAN DESERT REGION (DSon).</b> </p>
+<p class="bodyTextBlack"><b>SONORAN DESERT REGION (DSon).</b> </p>
 
 
 
-<p class=bodyText>This region, the
+<p class="bodyTextBlack">This region, the
 California portion of which is also known as the Colorado Desert, occupies the
 southern one-third of the D, south of the DMoj. The physiographic line separating
 the two desert regions is not always clear, but overall the DSon is lower,
@@ -976,59 +1054,27 @@ warmer, and somewhat distinct floristically. Conspicuous members of the flora
 in the DSon that are absent from the DMoj or confined to the southeastern
 limits of the DMoj include blue palo verde, ocotillo, chuparosa, and ironwood.</p>
 
-<p class=bodyText>The approximate boundary
+<p class="bodyTextBlack">The approximate boundary
 between the DMoj and DSon, from west to east, is along the south edge of the
 Little San Bernardino, Cottonwood, and Eagle mountains (all in the DMoj), then
 north along the eastern edge of the Coxcomb Mountains (DMoj) and around the Old
 Woman, Turtle, and Chemehuevi mountains (all in the DMoj) to the Colorado
 River. The Chuckwalla and Whipple mountains are in the DSon.</p>
 
-</td>
-	
-	
- 
 
-    <td>&nbsp;</td>
 
-  </tr>
+</div>
+<div class ="hr_line_grey">
+<p class="footerText"><a href="/main/copyright.html"> Copyright</a> &copy; 2012 - <span id="currentYear"> </span>.  Regents of the University of California</p>
+<p class="footerText">We encourage links to these pages, but the content may not be downloaded for reposting, repackaging, redistributing, or sale in any form, without written permission from The University and Jepson Herbaria &mdash; <a href="/eflora/termsofuse.html">Terms of Use</a>.</p>
+<p class="footerText">Page last updated <span id='demo'></span>
+</p>
+</div>
 
-  <tr>
-
-    <td>&nbsp;</td>
-
-    <td>&nbsp;</td>
-
-    <td height="10">&nbsp;</td>
-
-    <td>&nbsp;</td>
-
-    <td>&nbsp;</td>
-
-  </tr>
-
-  
-
-  <tr>
-
-    <td width="15"><img src="/common/images/common_spacer.gif" alt="" width="15" height="1" /></td>
-
-    <td width="15"><img src="/common/images/common_spacer.gif" alt="" width="15" height="1" /></td>
-
-    <td width=100%><img src="/common/images/common_spacer.gif" alt="" width="5" height="1" /></td>
-
-    <td width="15"><img src="/common/images/common_spacer.gif" alt="" width="15" height="1" /></td>
-
-    <td width="15"><img src="/common/images/common_spacer.gif" alt="" width="15" height="1" /></td>
-
-  </tr>
-
-</table>
-	
-<!--Begin footer-->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/footer.php'); ?>
-<!--End footer-->
-
+<!-- Get current year for copyright statement -->
+<script>
+  var currentYear = new Date().getFullYear(); 
+  document.getElementById("currentYear").innerText = currentYear; 
+</script>
 </body>
-
 </html>
-
