@@ -58,7 +58,7 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 	if(!empty($TaxonID))  {
 
 //$sql = "SELECT ID, TaxonID, ScientificName, TaxonAuthor, FormattedDisplayName, CommonName, Status, TJM2Author, ScientificEditor, Habit, PlantBody, Stem, SterileStem, FertileStem, Leaf, Spines, Inflorescence, StaminateHead, RayOrPistillateFlower, PistillateHead, StaminateInflorescence, PistillateOrBisexualInflorescence, PistillateInflorescence, Spikelet, FertileSpikelet, SterileSpikelet, DistalSpikelet, CentralSpikelet, LateralSpikelet, StaminateSpikelet, PistillateSpikelet, Flower, StaminateFlower, PistillateFlower, RayFlower, DiskFlower, Cone, PollenCone, SeedCone, BisexualFlower, Fruit, Seed, Sporangia, SporangiumCase, MaleSporangiumCase, FemaleSporangiumCase, Spores, Chromosomes, Ecology, RarityStatus, Elevation, BioregionalDistribution, OutsideCA, SpeciesInGenus, GeneraInFamily, Etymology, Toxicity, Synonyms, UnabridgedSynonyms, Reference, UnabridgedReference, Note, UnabridgedNote, FloweringTime, FloweringTimeCode, FruitingTime, Weediness, IsTerminalTaxon, HasKey, RevisionNumber, RevisionDate, DistCode 
-		$sql = "SELECT * FROM eflora_taxa WHERE TaxonID=".$TaxonID." ";
+		$sql = "SELECT t.*, t.taxonID AS TID, tax.sortID FROM eflora_taxa t JOIN eflora_taxonomy tax ON t.TaxonID = tax.TaxonID WHERE t.TaxonID=".$TaxonID." ";
 
 //BEGIN temporary bug fix lines to add when needed
 //echo '<br>'.$sql.'<br>';
@@ -84,8 +84,8 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 //}
 //END temp bug fix lines
 
-			if (!empty($row['ID'])){
-				$ID = $row['ID'];
+			if (!empty($row['sortID'])){
+				$ID = $row['sortID'];
 			}
 			else{
 				$ID = null;
@@ -581,8 +581,8 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 				$HasKey = null;
 			}
 	
-			if (!empty($row['TaxonID'])){
-				$TID = $row['TaxonID'];
+			if (!empty($row['TID'])){
+				$TID = $row['TID'];
 			}
 			else{
 				$TID = null;
@@ -598,8 +598,8 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 	elseif(!empty($TaxonName))  {
 
 //$sql = "SELECT ID, TaxonID, ScientificName, TaxonAuthor, FormattedDisplayName, CommonName, Status, TJM2Author, ScientificEditor, Habit, PlantBody, Stem, SterileStem, FertileStem, Leaf, Spines, Inflorescence, StaminateHead, RayOrPistillateFlower, PistillateHead, StaminateInflorescence, PistillateOrBisexualInflorescence, PistillateInflorescence, Spikelet, FertileSpikelet, SterileSpikelet, DistalSpikelet, CentralSpikelet, LateralSpikelet, StaminateSpikelet, PistillateSpikelet, Flower, StaminateFlower, PistillateFlower, RayFlower, DiskFlower, Cone, PollenCone, SeedCone, BisexualFlower, Fruit, Seed, Sporangia, SporangiumCase, MaleSporangiumCase, FemaleSporangiumCase, Spores, Chromosomes, Ecology, RarityStatus, Elevation, BioregionalDistribution, OutsideCA, SpeciesInGenus, GeneraInFamily, Etymology, Toxicity, Synonyms, UnabridgedSynonyms, Reference, UnabridgedReference, Note, UnabridgedNote, FloweringTime, FloweringTimeCode, FruitingTime, Weediness, IsTerminalTaxon, HasKey, RevisionNumber, RevisionDate, DistCode 
-		$sql = "SELECT * FROM eflora_taxa WHERE ScientificName LIKE '".$TaxonName."' ";//Calochortus amabilis, for example
-
+		//Calochortus amabilis, for example
+		$sql = "SELECT t.*, t.taxonID AS TID, tax.sortID FROM eflora_taxa t JOIN eflora_taxonomy tax ON t.TaxonID = tax.TaxonID WHERE t.ScientificName LIKE '".$TaxonName."' ";
 //BEGIN temporary bug fix lines to add when needed
 //echo '<br>'.$sql.'<br>';
 
@@ -624,8 +624,8 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 //}
 //END temp bug fix lines
 
-			if (!empty($row['ID'])){
-				$ID = $row['ID'];
+			if (!empty($row['sortID'])){
+				$ID = $row['sortID'];
 			}
 			else{
 				$ID = null;
@@ -1121,8 +1121,8 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 				$HasKey = null;
 			}
 	
-			if (!empty($row['TaxonID'])){
-				$TID = $row['TaxonID'];
+			if (!empty($row['TID'])){
+				$TID = $row['TID'];
 			}
 			else{
 				$TID = null;
@@ -1149,18 +1149,21 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 
 
 //START previousID AND nextID SQL QUERY ASSIGNMENT
-
-//This provides values so users can browse the eflora page by page
-	if (!empty($ID)){
+ if ( (empty($ID)) && (!empty($TaxonName)) ){
+		//echo "Taxon not recognized NAME=".$TaxonName;
+		header("Location: search_icpn.php?name=".$TaxonName, true, 301);
+		exit();
+ }
+ else{
 	//get previous and next info based on ID
 		$previousID = $ID-1;
 		$nextID = $ID+1;
 
 		if (!empty($previousID)){
-			$sql = "SELECT TaxonID, ScientificName FROM eflora_taxa WHERE ID=".$previousID." ";
-		
+			$sql = "SELECT sortID, TaxonID FROM eflora_taxonomy WHERE sortID=".$previousID." ";
+
 //BEGIN temporary bug fix lines to add when needed
-//echo '<br>'.$sql.'<br>';
+//echo '<br>'.$previousID.'<br>';
 
 			if(!mysqli_query($db, $sql)){
 				die('Error: ' . mysqli_error($db));
@@ -1188,22 +1191,15 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 				else{
 					$previousTaxonID = null;
 				}
-
-				// if (!empty($row(['ScientificName'])){    jg commented out
-				if (!empty($row['ScientificName'])){
-					$previousName = $row['ScientificName'];
-				}
-				else{
-					$previousName = null;
-				}
 			}
 		}
 
 		if (!empty($nextID)){
-			$sql = "SELECT TaxonID, ScientificName FROM eflora_taxa WHERE ID=".$nextID." ";
-		
+			$sql = "SELECT sortID, TaxonID FROM eflora_taxonomy WHERE sortID=".$nextID." ";
+
 //BEGIN temporary bug fix lines to add when needed
 //echo '<br>'.$sql.'<br>';
+//echo '<br>'.$nextID.'<br>';
 
 			if(!mysqli_query($db, $sql)){
 				die('Error: ' . mysqli_error($db));
@@ -1232,13 +1228,6 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 					$nextTaxonID = null;
 				}
 
-				// if (!empty($row(['ScientificName'])){    jg commented out
-				if (!empty($row['ScientificName'])){
-					$nextName = $row['ScientificName'];
-				}
-				else{
-					$nextName = null;
-				}
 			}
 		}
 	}
@@ -3637,9 +3626,33 @@ if ($hasMedia):
         <p><strong>Citation for the whole project:</strong> Jepson Flora Project (eds.) <?php echo date("Y"); ?>, <em>Jepson eFlora</em>, https://herbariadb.berkeley.edu/eflora/, accessed on <?php echo date("F d, Y"); ?>.</p>
     </footer>
 
+<?php 
+	if (preg_match('/^[A-Za-z-]+aceae$|^[A-Za-z-]+$/', $ScientificName)) {
+	    // Your code here if it does NOT match
+echo "</div></main>";
+
+
+
+echo "    <!-- SEPARATOR BAR HERE -->";
+echo "    <hr class=\"footer-separator\">";
+
+echo "    <!-- Feedback CTA -->";
+echo "    <section class=\"feedback-section center-text\">";
+echo "        <a class=\"googleForm\" href=\"https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform\">";
+echo "            Send us your feedback! Community input helps improve the Jepson eFlora.";
+echo "        </a></section>";
+
+
+
+echo "<!-- Footer -->";
+echo '<?php include($_SERVER[\'DOCUMENT_ROOT\'].\'/eflora/common/php/eflora-footer.php\'); ?>';echo '<?php include($_SERVER[\'DOCUMENT_ROOT\'].\'/eflora/common/php/eflora-footer.php\'); ?>';
+echo "</body></html>";
+
+	} else {
+?>
     <!-- CALPHOTOS RESPONSIVE GALLERY -->
     <section class="photo-gallery-section">
-        <h3 class="center-text">CalPhotos: Expert Verified Images</h3>
+        <h3 class="center-text">Images courtesy of CalPhotos</h3>
         <div class="i-align">
 <?php 
 //photos from CalPhotos, set up a converison of the taxon name for the API below.
@@ -3714,7 +3727,7 @@ $homepage = file_get_contents("https://calphotos.berkeley.edu/cgi/api_taxon?taxo
 	//echo "<p>FOUND-->".$cp_search_name."</p>";
 		}
 		else{//if there is no $kwid (i.e. no photos), do not print the "see more" link or the extra divider
-			echo '<p class="max-width-p">No expert verified images found for <i>'.$ScientificName.'.</i></p>';
+			echo '<p class="max-width-p">No images found for <i>'.$ScientificName.'.</i></p>';
 		}
 
 echo "</td></tr></table>";
@@ -3722,7 +3735,7 @@ echo "</td></tr></table>";
 
 if (!empty($splitcontents)){ 
 	$cp_search_name = str_replace(" ", "+", $cp_ssp_name);
-	echo '<p class="max-width-p"><a href="https://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&where-genre=Plant&where-taxon='.$cp_ssp_name.'&title_tag='.$ScientificName.'">More photos of <i>'.$ScientificName.'</i> in CalPhotos</a></p>';
+	echo '<p class="max-width-p"><a href="https://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&where-genre=Plant&where-taxon='.$cp_ssp_name.'&title_tag='.$ScientificName.'">See all photos of <i>'.$ScientificName.'</i> in CalPhotos</a></p>';
 }
 
 
@@ -3733,8 +3746,11 @@ if (!empty($splitcontents)){
     <!-- MAPS SECTION (Interactive hides on mobile) -->
     <section class="map-display-grid">
         <div class="static-map-box center-text data-section">
-            <h4><a name="MAP" id="MAP"></a>Geographic subdivisions for <a href="#TOP"><?php echo "$ScientificName"?></a>:
-<?php 
+ 
+			<h4>This map presents a visual display of a taxon’s distribution in the geographic subdivisions (bioregions) of California as indicated by the Jepson eFlora author. 
+			</h4>
+<h4><?php echo "<i>$ScientificName</i>&nbsp;&nbsp;&nbsp;&nbsp;";?>
+ <?php
 	$regname = str_replace(";", " ", $BioregionalDistribution);
 	echo "$regname";
 ?></h4>
@@ -3755,8 +3771,8 @@ if (!empty($splitcontents)){
             <div class="interactive-map-wrapper">
             <h3>Specimen Distribution (Interactive)</h3>
 <b><a name="EFMAP" id="EFMAP"></a>MAP CONTROLS</b>
-<br>1. You can change the display of the base map layer control box in the upper right-hand corner.
-<br>2. County and Jepson Region polygons can be turned off and on using the check boxes.
+<br>1. You can change the display of the base map in the upper right-hand corner.
+<br>2. County and Jepson bioregions can be turned off and on by using the check boxes in the control box.
 </p>
 
                 <div id="map_canvas">
@@ -5273,6 +5289,9 @@ $displayName = htmlspecialchars($ScientificName);
 </body>
 </html>
 
+<?php
+}//close the else section that forces the maps to not display in genus and family pages
+?>
 <!--Removed Nested Tables: All sections are now wrapped in div, section, or article tags with a logical vertical flow.-->
 <!--AAA Typography: The base font is handled by your jepson-main.css, and the hero header uses a massive 2.8rem size for the scientific name.-->
 <!--Reflow (Mobile): On small screens, the Illustration moves below the Description, and the Specimen Map moves below the Static Map.-->

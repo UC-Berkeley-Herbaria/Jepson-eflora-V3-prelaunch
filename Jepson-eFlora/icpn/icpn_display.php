@@ -115,7 +115,7 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 //END temp bug fix lines
 
 			if (!empty($row['ScientificName'])){
-				$ScientificName = $row['ScientificName'];
+				$ScientificName = html_entity_decode($row['ScientificName']);
 			}
 			else{
 				$ScientificName = null;
@@ -129,238 +129,238 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 			}
 	
 			if (!empty($row['Source'])){
-				$Source = $row['Source'];
+				$Source = html_entity_decode($row['Source']);
 			}
 			else{
 				$Source = null;
 			}
 	
 			if (!empty($row['SourceComments'])){
-				$SourceComments = $row['SourceComments'];
+				$SourceComments = html_entity_decode($row['SourceComments']);
 			}
 			else{
 				$SourceComments = null;
 			}
 	
 			if (!empty($row['Literature'])){
-				$Literature = $row['Literature'];
+				$Literature = html_entity_decode($row['Literature']);
 			}
 			else{
 				$Literature = null;
 			}
 	
 			if (!empty($row['TJMsynonyms'])){
-				$TJMsynonyms = $row['TJMsynonyms'];
+				$TJMsynonyms = html_entity_decode($row['TJMsynonyms']);
 			}
 			else{
 				$TJMsynonyms = null;
 			}
 	
 			if (!empty($row['OtherSynonyms'])){
-				$OtherSynonyms = $row['OtherSynonyms'];
+				$OtherSynonyms = html_entity_decode($row['OtherSynonyms']);
 			}
 			else{
 				$OtherSynonyms = null;
 			}
 	
 			if (!empty($row['TJMmisapplied'])){
-				$TJMmisapplied = $row['TJMmisapplied'];
+				$TJMmisapplied = html_entity_decode($row['TJMmisapplied']);;
 			}
 			else{
 				$TJMmisapplied = null;
 			}
 	
 			if (!empty($row['JFPmisapplied'])){
-				$JFPmisapplied = $row['JFPmisapplied'];
+				$JFPmisapplied = html_entity_decode($row['JFPmisapplied']);
 			}
 			else{
 				$JFPmisapplied = null;
 			}
 	
 			if (!empty($row['Correspondence1'])){
-				$Correspondence1 = $row['Correspondence1'];
+				$Correspondence1 = html_entity_decode($row['Correspondence1']);
 			}
 			else{
 				$Correspondence1 = null;
 			}
 	
 			if (!empty($row['Correspondence2'])){
-				$Correspondence2 = $row['Correspondence2'];
+				$Correspondence2 = html_entity_decode($row['Correspondence2']);
 			}
 			else{
 				$Correspondence2 = null;
 			}
 	
 			if (!empty($row['Correspondence3'])){
-				$Correspondence3 = $row['Correspondence3'];
+				$Correspondence3 = html_entity_decode($row['Correspondence3']);
 			}
 			else{
 				$Correspondence3 = null;
 			}
 	
 			if (!empty($row['Correspondence4'])){
-				$Correspondence4 = $row['Correspondence4'];
+				$Correspondence4 = html_entity_decode($row['Correspondence4']);
 			}
 			else{
 				$Correspondence4 = null;
 			}
 	
 			if (!empty($row['Correspondence5'])){
-				$Correspondence5 = $row['Correspondence5'];
+				$Correspondence5 = html_entity_decode($row['Correspondence5']);
 			}
 			else{
 				$Correspondence5 = null;
 			}
 
 			if (!empty($row['Correspondence6'])){
-				$Correspondence6 = $row['Correspondence6'];
+				$Correspondence6 = html_entity_decode($row['Correspondence6']);
 			}
 			else{
 				$Correspondence6 = null;
 			}
 			
 			if (!empty($row['Correspondence7'])){
-				$Correspondence7 = $row['Correspondence7'];
+				$Correspondence7 = html_entity_decode($row['Correspondence7']);
 			}
 			else{
 				$Correspondence7 = null;
 			}
 
 			if (!empty($row['Correspondence8'])){
-				$Correspondence8 = $row['Correspondence8'];
+				$Correspondence8 = html_entity_decode($row['Correspondence8']);
 			}
 			else{
 				$Correspondence8 = null;
 			}
 
 			if (!empty($row['Correspondence9'])){
-				$Correspondence9 = $row['Correspondence9'];
+				$Correspondence9 = html_entity_decode($row['Correspondence9']);
 			}
 			else{
 				$Correspondence9 = null;
 			}
 
 			if (!empty($row['Correspondence10'])){
-				$Correspondence10 = $row['Correspondence10'];
+				$Correspondence10 = html_entity_decode($row['Correspondence10']);
 			}
 			else{
 				$Correspondence10 = null;
 			}
 
 			if (!empty($row['Correspondence11'])){
-				$Correspondence11 = $row['Correspondence11'];
+				$Correspondence11 = html_entity_decode($row['Correspondence11']);
 			}
 			else{
 				$Correspondence11 = null;
 			}
 
 			if (!empty($row['Correspondence12'])){
-				$Correspondence12 = $row['Correspondence12'];
+				$Correspondence12 = html_entity_decode($row['Correspondence12']);
 			}
 			else{
 				$Correspondence12 = null;
 			}
 
 			if (!empty($row['Correspondence13'])){
-				$Correspondence13 = $row['Correspondence13'];
+				$Correspondence13 = html_entity_decode($row['Correspondence13']);
 			}
 			else{
 				$Correspondence13 = null;
 			}
 
 			if (!empty($row['EdComments1'])){
-				$EdComments1 = $row['EdComments1'];
+				$EdComments1 = html_entity_decode($row['EdComments1']);
 			}
 			else{
 				$EdComments1 = null;
 			}
 	
 			if (!empty($row['EdComments2'])){
-				$EdComments2 = $row['EdComments2'];
+				$EdComments2 = html_entity_decode($row['EdComments2']);
 			}
 			else{
 				$EdComments2 = null;
 			}
 	
 			if (!empty($row['EdComments3'])){
-				$EdComments3 = $row['EdComments3'];
+				$EdComments3 = html_entity_decode($row['EdComments3']);
 			}
 			else{
 				$EdComments3 = null;
 			}
 	
 			if (!empty($row['EdComments4'])){
-				$EdComments4 = $row['EdComments4'];
+				$EdComments4 = html_entity_decode($row['EdComments4']);
 			}
 			else{
 				$EdComments4 = null;
 			}
 	
 			if (!empty($row['EdComments5'])){
-				$EdComments5 = $row['EdComments5'];
+				$EdComments5 = html_entity_decode($row['EdComments5']);
 			}
 			else{
 				$EdComments5 = null;
 			}
 
 			if (!empty($row['EdComments6'])){
-				$EdComments6 = $row['EdComments6'];
+				$EdComments6 = html_entity_decode($row['EdComments6']);
 			}
 			else{
 				$EdComments6 = null;
 			}
 			
 			if (!empty($row['EdComments7'])){
-				$EdComments7 = $row['EdComments7'];
+				$EdComments7 = html_entity_decode($row['EdComments7']);
 			}
 			else{
 				$EdComments7 = null;
 			}
 
 			if (!empty($row['EdComments8'])){
-				$EdComments8 = $row['EdComments8'];
+				$EdComments8 = html_entity_decode($row['EdComments8']);
 			}
 			else{
 				$EdComments8 = null;
 			}
 
 			if (!empty($row['EdComments9'])){
-				$EdComments9 = $row['EdComments9'];
+				$EdComments9 = html_entity_decode($row['EdComments9']);
 			}
 			else{
 				$EdComments9 = null;
 			}
 
 			if (!empty($row['EdComments10'])){
-				$EdComments10 = $row['EdComments10'];
+				$EdComments10 = html_entity_decode($row['EdComments10']);
 			}
 			else{
 				$EdComments10 = null;
 			}
 
 			if (!empty($row['EdComments11'])){
-				$EdComments11 = $row['EdComments11'];
+				$EdComments11 = html_entity_decode($row['EdComments11']);
 			}
 			else{
 				$EdComments11 = null;
 			}
 
 			if (!empty($row['EdComments12'])){
-				$EdComments12 = $row['EdComments12'];
+				$EdComments12 = html_entity_decode($row['EdComments12']);
 			}
 			else{
 				$EdComments12 = null;
 			}
 
 			if (!empty($row['EdComments13'])){
-				$EdComments13 = $row['EdComments13'];
+				$EdComments13 = html_entity_decode($row['EdComments13']);
 			}
 			else{
 				$EdComments13 = null;
 			}
 
 			if (!empty($row['Summary'])){
-				$Summary = $row['Summary'];
+				$Summary = html_entity_decode($row['Summary']);
 			}
 			else{
 				$Summary = null;
@@ -919,6 +919,11 @@ date_default_timezone_set('America/Los_Angeles');
         <h1><a href="/eflora/icpn/">Index to California Plant Names (ICPN)</a></h1>
     </header>
 
+    <!-- return home link -->
+<div class="center-text" style="margin-top: 30px;">
+    <a href="/eflora/icpn/" style="font-weight: bold;">&larr; Return to the <i>ICPN</i> Search Page</a>
+</div>
+
     <!-- Search Navigation Section -->
     <nav class="icpn-nav-block" aria-label="ICPN Navigation">        
         <div class="search-centered-container">
@@ -954,6 +959,7 @@ date_default_timezone_set('America/Los_Angeles');
                     <?php if (!empty($CurrentName)): ?>
                         <p class="status-msg synonym"><strong>Synonym:</strong> This name is a synonym or variant.</p>
                         <p><strong>Current Accepted Name:</strong> <?php echo $CurrentName; ?></p>
+                    <p><a href="/eflora/search_icpn.php?icpn=<?php echo $CurrentName; ?>" class="cta-link">View Accepted Name Page &rarr;</a></p>
                     <?php else: ?>
                         <p class="status-msg">ICPN name (not in Jepson eFlora).</p>
                     <?php endif; ?>
@@ -969,15 +975,15 @@ date_default_timezone_set('America/Los_Angeles');
             <section class="notes-box data-section">
                 <h3>Source and Publication Notes</h3>
                 <div class="field-list">
-                    <?php if (!empty($Source)) echo "<p><strong>Source:</strong> $Source</p>"; ?>
-                    <?php if (!empty($SourceComments)) echo "<p><strong>Source Comments:</strong> $SourceComments</p>"; ?>
-                    <?php if (!empty($AuthorNotes)) echo "<p><strong>Author Notes:</strong> $AuthorNotes</p>"; ?>
-                    <?php if (!empty($PublicationNotes)) echo "<p><strong>Publication Notes:</strong> $PublicationNotes</p>"; ?>
+                    <?php if (!empty($Source)) echo "<p><strong>Source:</strong>$Source</p>"; ?>
+                    <?php if (!empty($SourceComments)) echo "<p><strong>Source Comments:</strong>$SourceComments</p>"; ?>
+                    <?php if (!empty($AuthorNotes)) echo "<p><strong>Author Notes:</strong>$AuthorNotes</p>"; ?>
+                    <?php if (!empty($PublicationNotes)) echo "<p><strong>Publication Notes:</strong>$PublicationNotes </p>"; ?>
                     <?php 
-                        if (!empty($LiteratureA)) echo "<p><strong>Recent Literature:</strong> $LiteratureA</p>"; 
-                        if (!empty($LiteratureB)) echo "<p><strong>Recent Literature (2):</strong> $LiteratureB</p>"; 
-                        if (!empty($LiteratureC)) echo "<p><strong>Recent Literature (3):</strong> $LiteratureC</p>"; 
-                        if (!empty($LiteratureD)) echo "<p><strong>Recent Literature (4):</strong> $LiteratureD</p>"; 
+                        if (!empty($LiteratureA)) echo "<p><strong>Recent Literature:</strong> $LiteratureA  </p>"; 
+                        if (!empty($LiteratureB)) echo "<p><strong>Recent Literature (2):</strong> $LiteratureB  </p>"; 
+                        if (!empty($LiteratureC)) echo "<p><strong>Recent Literature (3):</strong> $LiteratureC  </p>"; 
+                        if (!empty($LiteratureD)) echo "<p><strong>Recent Literature (4):</strong> $LiteratureD  </p>"; 
                     ?>
                 </div>
             </section>
@@ -1008,6 +1014,7 @@ date_default_timezone_set('America/Los_Angeles');
         <div class="correspondence-layout">
             <?php 
                 for($i=1; $i<=13; $i++) {
+
                     $corr = "Correspondence".$i;
                     $ed = "EdComments".$i;
                     if (!empty($$corr) || !empty($$ed)) {
@@ -1015,10 +1022,12 @@ date_default_timezone_set('America/Los_Angeles');
                         if (!empty($$corr)) echo "<p class='corr'><strong>Correspondence ($i):</strong> ".$$corr."</p>";
                         if (!empty($$ed)) echo "<p class='ed'><strong>Editorial Comment ($i):</strong> ".$$ed."</p>";
                         echo "</div>";
+                    } else {
+                    	$$corr = "";
+                    	$$ed = "";
                     }
                 }
             ?>
-        </div>
         <?php if (!empty($GeographicComment)) echo "<p><strong>Geographic Comment:</strong> $GeographicComment</p>"; ?>
 
         <!-- Synonymy / Misapplied names included in full-width row -->
@@ -1030,13 +1039,20 @@ date_default_timezone_set('America/Los_Angeles');
             </div>
         <?php endif; ?>
 
-        <?php if (!empty($TJMmisapplied) || !empty($JFPmisapplied)): ?>
+        <?php 
+
+        if (!empty($TJMmisapplied) || !empty($JFPmisapplied)): ?>
             <div class="sub-data-section">
                 <h4>Misapplied Names</h4>
                 <?php if (!empty($TJMmisapplied)) echo "<p><strong>Misapplied in TJM (1993):</strong> $TJMmisapplied</p>"; ?>
                 <?php if (!empty($JFPmisapplied)) echo "<p><strong>Current JFP Misapplied:</strong> $JFPmisapplied</p>"; ?>
             </div>
         <?php endif; ?>
+
+		<?php if ( empty($Correspondence1) && empty($EdComments1) && empty($JFPmisapplied) && empty($TJMmisapplied) && empty($OtherSynonyms) && empty($TJMsynonyms) && empty($Summary) && empty($$corr) && empty($$ed) ): ?>
+    		<p class="summary-text"><strong>No entries for this taxon.</strong></p>
+		<?php endif; ?>
+
     </section>
 
     <!-- Citation Row -->
@@ -1055,13 +1071,13 @@ date_default_timezone_set('America/Los_Angeles');
             <!-- Alphabetical Index -->
             <h3 id="alpha-title" style="margin-top: 0;">Alphabetical Index to ICPN accepted names and synonyms</h3>
             <div class="index-bar" style="margin-bottom: 30px;">
-                <?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/icpn/common/php/icpn_index_bar.php'); ?>
+                <?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/icpn/common/php/icpn_index_bar.html'); ?>
             </div>
 
             <!-- Numerical Index -->
             <h3 id="status-title">Index to Numerical Status Ranks for ICPN Scientific Names</h3>
             <div class="index-bar">
-                <?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/icpn/common/php/status_index_bar.php'); ?>
+                <?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/icpn/common/php/status_index_bar.html'); ?>
             </div>
         </nav>
     </div>
