@@ -70,13 +70,13 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 		$result = mysqli_query($db, $sql);
 
 //query and assign variable to each table field
-		while ($row = mysqli_fetch_array($result)) {
+		if ($result && mysqli_num_rows($result) > 0) {
+			$row = mysqli_fetch_assoc($result);
+		//while ($row = mysqli_fetch_array($result)) {
 
-// If no results are found, echo a message and stop
-			if ($row == false){
-				echo '<b>The Taxon ID '.$TaxonID.'</b> was not found in eflora taxon table.<br>Try another search.<br>';
-    			exit;
-			}
+
+	// Assigned safely here
+    // ... rest of your display logic
 
 //BEGIN temporary bug fix lines to add when needed
 //foreach ($row as $key=>$value) {
@@ -593,6 +593,11 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 	which is useful for seeing what you're getting
 	but is pretty ugly
 	*/
+		} else {
+			// Handle the error gracefully
+				echo "<br><br><h1>The ID you are using is not in the eflora database name may be a synonym or removed from the database entirely. Please use this link and type in a name to search the eflora database:<br><br>";
+				echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
+			exit; // Stop execution so lines 1165/1166 don't throw notices
 		}
 	}
 	elseif(!empty($TaxonName))  {
@@ -610,13 +615,13 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 		$result = mysqli_query($db, $sql);
 
 //query and assign variable to each table field
-		while ($row = mysqli_fetch_array($result)) {
+		if ($result && mysqli_num_rows($result) > 0) {
+			$row = mysqli_fetch_assoc($result);
+		//while ($row = mysqli_fetch_array($result)) {
 
-// If no results are found, echo a message and stop
-			if ($row == false){
-				echo '<b>The ScientificName '.$TaxonName.'</b> was not found in eflora taxon table.<br>Try another search.<br>';
-    			exit;
-			}
+
+	// Assigned safely here
+    // ... rest of your display logic
 
 //BEGIN temporary bug fix lines to add when needed
 //foreach ($row as $key=>$value) {
@@ -1133,17 +1138,23 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 //which is useful for seeing what you're getting
 //but is pretty ugly
 
+		} else {
+			// Handle the error gracefully
+			header("Location: search_eflora.php?name=".$TaxonName, true, 301);
+
+			//	echo "<br><br><h1>The name you are using is not in the eflora database and may be a synonym or removed from the database entirely. Please use this link and type in a name to search the eflora database:<br><br>";
+			//	echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
+			exit; // Stop execution so lines 1165/1166 don't throw notices
 		}
 	}
 	else{
 
 //Before doing anything, if the TID isn't recognized, give a plain error screen
 //Security mod to prevent cross-site scripting attacks
-		echo "<br><br><h1>Taxon not recognized NAME=".$TaxonName."</h1><br><br>";
-		header("Location: search_icpn.php?name=".$TaxonName, true, 301);
+		echo "<br><br><h1>The ID you are using is not an eflora accepted name and may be a synonym or removed from the database entirely. Please use this link and type in a name to search the eflora database:<br><br>";
+		echo '<a href="/eflora/search_eflora.php?name=">Start a new search using this link</a></h1>';
 		exit();
 	}
-
 
 //END TAXON ID AND NAME SQL QUERY ASSIGNMENT
 
@@ -1151,7 +1162,7 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 //START previousID AND nextID SQL QUERY ASSIGNMENT
  if ( (empty($ID)) && (!empty($TaxonName)) ){
 		//echo "Taxon not recognized NAME=".$TaxonName;
-		header("Location: search_icpn.php?name=".$TaxonName, true, 301);
+		header("Location: search_eflora.php?name=".$TaxonName, true, 301);
 		exit();
  } else{
 	//get previous and next info based on ID
