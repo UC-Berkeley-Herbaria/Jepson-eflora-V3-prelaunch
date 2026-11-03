@@ -141,9 +141,8 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
             </div>
     <!-- full status index page link -->
 <div class="center-text" style="margin-top: 30px;">
-    <a href="/eflora/icpn/status_list.php" style="font-weight: bold;">View the full list of <i>ICPN</i> Status Ranks</a>
+    <a href="/eflora/icpn/status_index.php" style="font-weight: bold;">View the full list of <i>ICPN</i> Status Ranks</a>
 </div>
-
             <!-- Numerical Index -->
             <h3 id="status-title">Index to Numerical Status Ranks for ICPN Scientific Names</h3>
             <div class="index-bar">

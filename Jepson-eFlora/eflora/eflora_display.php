@@ -2843,59 +2843,46 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
 //END Species SQL QUERY ASSIGNMENT
 
 
-//START illustration SQL QUERY ASSIGNMENT
+// START illustration SQL QUERY ASSIGNMENT
 
-  //get the illustration and video URLs 
-	if (!empty($TID)){
-		$sql = "SELECT FileName, RevisedFileName, VideoURL FROM eflora_illustrations WHERE TaxonID=".$TID." ";
+// 1. INITIALIZE VARIABLES (Prevents "Undefined Variable" errors)
+$IllustrationFile = null;
+$RevisedFileName = null;
+$VIDEO = null;
 
-//BEGIN temporary bug fix lines to add when needed
-//echo '<br>'.$sql.'<br>';
+if (!empty($TID)) {
+    // Sanitize TID to prevent SQL injection
+    $safeTID = mysqli_real_escape_string($db, $TID);
+    
+    $sql = "SELECT FileName, RevisedFileName, VideoURL FROM eflora_illustrations WHERE TaxonID='$safeTID'";
 
-			if(!mysqli_query($db, $sql)){
-				die('Error: ' . mysqli_error($db));
-			}
+    $result = mysqli_query($db, $sql);
 
-			$result = mysqli_query($db, $sql);
+    if (!$result) {
+        die('Error: ' . mysqli_error($db));
+    }
 
-//query and assign variable to each table field
-		while ($row = mysqli_fetch_array($result)) {
+    // 2. QUERY AND ASSIGN
+    // If the record exists, these will be filled. If not, they stay NULL.
+    while ($row = mysqli_fetch_array($result)) {
+        if (!empty($row['FileName'])) {
+            $IllustrationFile = $row['FileName'];
+        }
+        
+        if (!empty($row['RevisedFileName'])) {
+            $RevisedFileName = $row['RevisedFileName'];
+        }
+        
+        if (!empty($row['VideoURL'])) {
+            $VIDEO = $row['VideoURL'];
+        }
+    }
+}
 
-// If no results are found, echo a message and stop
-			if ($row == false){
-				echo '<b>Species was not found in the eflora taxon table.<br>Try another search.<br>';
-    			exit;
-			}
-//BEGIN temporary bug fix lines to add when needed
-//foreach ($row as $key=>$value) {
-//    echo $key."<br>";
-//}
-//END temp bug fix lines
-			if (!empty($row['FileName'])){
-				$IllustrationFile = $row['FileName'];
-			}
-			else{
-				$IllustrationFile = null;
-			}
-		
-			if (!empty($row['RevisedFileName'])){
-				$RevisedFileName = $row['RevisedFileName'];
-			}
-			else{
-				$RevisedFileName = null;
-			}
-		
-			if (!empty($row['VideoURL'])){
-				$VIDEO = $row['VideoURL'];
-			}
-			else{
-				$VIDEO = null;
-			}
-		}
-	}
-//END illustration SQL QUERY ASSIGNMENT
+// 3. SET $hasMedia FLAG (Use this for your HTML logic)
+$hasMedia = (!empty($IllustrationFile) || !empty($RevisedFileName) || !empty($VIDEO));
 
-
+// END illustration SQL QUERY ASSIGNMENT
 
 //Start JMAuthor pass down statements
 
@@ -3014,24 +3001,54 @@ date_default_timezone_set('America/Los_Angeles');
 
 ?>
 
+
+
 <!DOCTYPE html>
 <html lang="en">
 <head>
+    <title><?php echo strip_tags($ScientificName); ?> - Jepson eFlora Taxon Page</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <!-- CSS Standardized -->
+    <link href="/eflora/common/css/eflora-header.css" rel="stylesheet" type="text/css">
+    <link href="/eflora/common/css/jepson-main.css" rel="stylesheet" type="text/css">
+    <link href="/eflora/common/css/eflora.css" rel="stylesheet" type="text/css">
 
-<title><?php echo "$ScientificName"?> Taxon Page</title>
-<meta charset="UTF-8">
-<meta name="description" content="For vascular plants occurring in wildlands or otherwise outside of cultivation in California, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys.">
-  <meta name="keywords" content="California Flora, Jepson eFlora, Flora of California, Vascular Plants of California, Jepson Flora Project, ">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-
-<link href="common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
-
-<link rel="shortcut icon" href="common/images/JepsonLogoSmall.png" type="image/x-icon" />
+    <link rel="shortcut icon" href="/eflora/common/images/JepsonLogoSmall.png" type="image/x-icon" />
 
 <!--mobile js script files-->
 <script src="common/js/dh_custom.js"></script>
 
+
+<script>
+document.addEventListener('DOMContentLoaded', function() {
+    // Select all buttons with the class 'tax-toggle-btn'
+    const toggleButtons = document.querySelectorAll('.tax-toggle-btn');
+
+    toggleButtons.forEach(button => {
+        button.addEventListener('click', function() {
+            // Get the ID of the description div based on the button's ID
+            // e.g., 'familylink' matches with 'familydesc'
+            const targetId = this.id.replace('link', 'desc');
+            const targetDiv = document.getElementById(targetId);
+
+            if (targetDiv) {
+                // Check if the div is currently hidden
+                if (targetDiv.style.display === 'block') {
+                    targetDiv.style.display = 'none';
+                    this.textContent = 'View Description';
+                } else {
+                    targetDiv.style.display = 'block';
+                    this.textContent = 'Hide Description';
+                }
+            }
+        });
+    });
+});
+</script>
 <!--jquery script files-->
+
 	<script src="https://code.jquery.com/jquery-latest.js"></script>
 	<script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.0/jquery.min.js"></script>
 	<link rel="stylesheet" href="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/themes/smoothness/jquery-ui.css">
@@ -3058,243 +3075,139 @@ date_default_timezone_set('America/Los_Angeles');
     var MapName = <?php echo json_encode($TID); ?>; 
 </script>
 
-<style type="text/css" media="screen">
 
-img {
-	max-width: 600px; 
-}
-
-.container {
-    display: block; /* Ensures the image behaves as a block element */
-    float: left;
-    /* Other image styles (width, height, etc.) */
-}
-
-</style>
-
-<!-- Google tag (gtag.js) -->
-<script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
-<script>
-  window.dataLayer = window.dataLayer || [];
-  function gtag(){dataLayer.push(arguments);}
-  gtag('js', new Date());
-
-  gtag('config', 'G-T5YC99QF6Q');
-</script>
-
-<!-- jquery functions -->
-<script>
-//jquery ui functions that make the hidden higher taxonomy descriptions appear
-$(document).ready(function(){
-    $("#familylink").click(function(){
-        $("#familydesc").slideToggle(500);
-    });
-    $("#genuslink").click(function(){
-        $("#genusdesc").slideToggle(500);
-    });
-    $("#specieslink").click(function(){
-        $("#speciesdesc").slideToggle(500);
-    });
-});
-
-$(document).ready(function(){
-//jquery functions that grab the column widths from the hidden table
-//so they can be applied as a standard to the higher taxonomy table, which is made up of three separate tables
-	var width1 = $("#check1").width() + 1; // width() function turns out to be one pixel too small, so add 1
-	var width2 = $("#check2").width() + 1;
-	var width3 = $("#check3").width() + 1;
-	$(".column1").attr("width", width1);
-	$(".column2").attr("width", width2);
-	$(".column3").attr("width", width3);
-});
-</script>
-
+    <!-- Google Tag -->
+    <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
+    <script>
+      window.dataLayer = window.dataLayer || [];
+      function gtag(){dataLayer.push(arguments);}
+      gtag('js', new Date());
+      gtag('config', 'G-T5YC99QF6Q');
+    </script>
 </head>
 
 <body onload="initialize()">
 
-<!-- Begin banner -->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/herbaria-header.php'); ?>  
-<!-- End banner -->
+<!-- Header -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora-header.php'); ?>  
 
-<main>
-	<div id="content-top">
-		<h1><a class="efTitle" href="/eflora/">Jepson eFlora</a></h1>
-		<h2>Taxon Page</h2>
+<main class="eflora-main">
 
+        <div style="margin-top: 20px;margin-bottom: 20px;">
 
-<p>
-<a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">
-	Send us your feedback and/or questions! Community input helps improve the Jepson eFlora.
-	
-</a>
-</p>
+    <!-- Hero Header Section -->
+    <header class="hero-taxon">
+        <h1>Jepson eFlora Taxon Page</h1>
+    </header>
 
-	<table id = "efTable" style="vertical-align: top;width=90vw;">
-		<tr>
-		<td>
-<?php
-			if (!empty($previousTaxonID)){
-				echo '<a href="/eflora/eflora_display.php?tid='.$previousTaxonID.'"><IMG SRC="common/images/icons/left.gif" BORDER=2 ALT="Previous taxon"></a>';
-			} else {
-				echo '<IMG SRC="common/images/icons/blueball.gif" BORDER=2 ALT="This is first name in the Index"></a>';
-			}
-?>
-		</td>
-
-		<td><span class="pageMajorHeading"><a name="TOP" id="TOP">Vascular Plants of California</a></span>
-		<br>
-<h2><a name="TOP" id="TOP">Vascular Plants of California</a></h2>
-				<a class="efTag" href="/eflora/keys/IJM_fam_key.php">Key to families</a>
-				|
-				<a class="efTag" href="/eflora/toc.php">Table of families and genera</a><br>
-		</td>
-		<td align = "right">
-<?php
-			if (!empty($nextTaxonID)){
-				echo '<a href="/eflora/eflora_display.php?tid='.$nextTaxonID.'"><IMG SRC="common/images/icons/right.gif" BORDER=2 ALT="Next taxon"></a>';
-			} else {
-				echo '<IMG SRC="common/images/icons/blueball.gif" BORDER=2 ALT="This is last name in the Index"></a>';
-			}
-?>
-		</td>
-	 </tr>
-	 </table>
-<!--eFlora index-->
-<div class="index-container">
-    <div class="grey-bar top"></div>
-    
-    <div class="index-content">
-<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora_index_bar.php'); ?>
-    </div>
-
-    <div class="grey-bar bottom"></div>
+    <!-- return home link -->
+<div class="center-text" style="margin-top: 30px;">
+    <a href="/eflora/" style="font-weight: bold;">&larr; Return to <i>Jepson eFlora</i> Search Page</a>
 </div>
-<!--end eFlora index-->
 
-	</div><!--end top content div-->
+    <!-- Feedback CTA -->
+    <section class="feedback-section center-text">
+        <a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">
+            Send us your feedback! Community input helps improve the Jepson eFlora.
+        </a>
+    </section>
+        </div>
 
-<div id="content">
+    <!-- Navigation Block -->
+    <nav class="icpn-nav-block" aria-label="Taxon Navigation">
+        <div class="button-group" style="justify-content: space-between; width: 100%; display: flex; margin-bottom: 15px;">
+            <?php 
+                if (!empty($previousTaxonID)) echo '<a href="?tid='.$previousTaxonID.'" class="btn btn-reset">&larr; Previous Taxon</a>';
+                echo '<div class="center-nav"><a href="/eflora/keys/IJM_fam_key.php">Key to Families</a> | <a href="/eflora/toc.php">Table of families and genera</a></div>';
+                if (!empty($nextTaxonID)) echo '<a href="?tid='.$nextTaxonID.'" class="btn btn-reset">Next Taxon &rarr;</a>';
+            ?>
+        </div>
+    </nav>
 
-<table align="center" width="100%">
-	<tr>
-		<td>
-<h1>
-<p class="pageLargeHeading" style="text-align: center;"><?php echo "{$ScientificName}"?></p>
-<p class="pageMajorHeading" style="text-align: center;"><?php echo "{$CommonName}"?></p>
-</h1>
-		</td>
-	</tr>
-</table>
-<br>
-<table width="100%">
-	<tr>
-		<td>
-<!-- this hidden table provides the column width values (check1 through check3) which are used to assign consistent widths to the actual higher taxonomy tables-->
-	<div class="hidden">
-	<table class="taxonomy_table" style="padding: 5px;">
-	<tr><td id='check1'><b>Family: <?php if(!empty($FamScientificName)){ echo"{$FamScientificName}";}?></b></td><td id='check2'><b><a href="#">View Description</a></b></td><td id='check3'><a href='#'>Dichotomous Key</a></td></tr>
-	<tr><td><b>Genus: <?php if(!empty($GenScientificName)){ echo"{$GenScientificName}";}?></b></td><td><b><a href="#">View Description</a></b></td><td><a href='#'>Dichotomous Key</a></td></tr>
-	<tr><td><b>Species: <?php if(!empty($SpecScientificName)){ echo"{$SpecScientificName}";}?></b></td><td><b><a href="#">View Description</a></b></td><td><a href='#'>Dichotomous Key</a></td></tr>
-	</table>
-	</div>
-		</td>
-	</tr>
-	<tr>
-		<td>
+    <!-- Higher Taxonomy Toggles -->
+    <?php if (!empty($FamScientificName)): ?>
+    <section class="taxonomy-container">
+        <div class="taxonomy-row">
+            <strong>Family: <?php echo $FamScientificName; ?></strong>
+            <button class="tax-toggle-btn" id="familylink">View Description</button>
+            <?php if($FamHasKey) echo "<a href='/eflora/eflora_keys.php?key=$FamTaxonID'>Dichotomous Key</a>"; ?>
+        </div>
 
-<?php
-//START higher taxonomy table 
-
-//if there is no higher taxonomy (i.e. family entries), skip this section
-	if (!empty($FamScientificName)){
-		echo '<table><tr><td width=100%>';
-		echo "<div class='pageMajorHeading'><b>Higher Taxonomy</b><br></div>";
-		echo "<table class='taxonomy_table'><tr><td class='column1'><b>Family: {$FamScientificName}</b></td><td class='column2'><a id='familylink'>View Description</a></b></td>";
-	
-		if (!empty($FamHasKey)){
-			echo "<td class='column3'><a href='/eflora/eflora_keys.php?key={$FamTaxonID}'>Dichotomous Key</a></td></tr></table>";
+		<div id="familydesc" class="initiallyHidden">
+		<?php
+			if (!empty($FamScientificName)) {
+			echo "<p>";
+//if there is no  family entries, skip this section
+			if (!empty($FamCommonName)){ echo "<b>Common Name:</b> {$FamCommonName}<br>";}
+			if (!empty($FamHabit)){ echo "<b>Habit:</b> {$FamHabit} ";}
+			if (!empty($FamPlantBody)){ echo "<b>Plant Body:</b> {$FamPlantBody} ";}
+			if (!empty($FamStem)){ echo "<b>Stem:</b> {$FamStem} ";}
+			if (!empty($FamSterileStem)){ echo "<b>Sterile Stem:</b> {$FamSterileStem} ";}
+			if (!empty($FamFertileStem)){ echo "<b>Fertile Stem:</b> {$FamFertileStem} ";}
+			if (!empty($FamLeaf)){ echo "<b>Leaf:</b> {$FamLeaf} ";}
+			if (!empty($FamSpines)){ echo "<b>Spines:</b> {$FamSpines} ";}
+			if (!empty($FamInflorescence)){ echo "<b>Inflorescence:</b> {$FamInflorescence} ";}
+			if (!empty($FamStaminateHead)){ echo "<b>Staminate Head:</b> {$FamStaminateHead} ";}
+			if (!empty($FamRayOrPistillateFlower)){ echo "<b>Ray Or Pistillate Flower:</b> {$FamRayOrPistillateFlower} ";}
+			if (!empty($FamPistillateHead)){ echo "<b>Pistillate Head:</b> {$FamPistillateHead} ";}
+			if (!empty($FamStaminateInflorescence)){ echo "<b>Staminate Inflorescence:</b> {$FamStaminateInflorescence} ";}
+			if (!empty($FamPistillateOrBisexualInflorescence)){ echo "<b>Pistillate Or Bisexual Inflorescence:</b> {$FamPistillateOrBisexualInflorescence} ";}
+			if (!empty($FamPistillateInflorescence)){ echo "<b>Pistillate Inflorescence:</b> {$FamPistillateInflorescence} ";}
+			if (!empty($FamSpikelet)){ echo "<b>Spikelet:</b> {$FamSpikelet} ";}
+			if (!empty($FamFertileSpikelet)){ echo "<b>Fertile Spikelet:</b> {$FamFertileSpikelet} ";}
+			if (!empty($FamSterileSpikelet)){ echo "<b>Sterile Spikelet:</b> {$FamSterileSpikelet} ";}
+			if (!empty($FamDistalSpikelet)){ echo "<b>Distal Spikelet:</b> {$FamDistalSpikelet} ";}
+			if (!empty($FamCentralSpikelet)){ echo "<b>Central Spikelet:</b> {$FamCentralSpikelet}";}
+			if (!empty($FamLateralSpikelet)){ echo "<b>Lateral Spikelet:</b> {$FamLateralSpikelet}";}
+			if (!empty($FamStaminateSpikelet)){ echo "<b>Staminate Spikelet:</b> {$FamStaminateSpikelet} ";}
+			if (!empty($FamPistillateSpikelet)){ echo "<b>Pistillate Spikelet:</b> {$FamPistillateSpikelet} ";}
+			if (!empty($FamFlower)){ echo "<b>Flower:</b> {$FamFlower} ";}
+			if (!empty($FamStaminateFlower)){ echo "<b>Staminate Flower:</b> {$FamStaminateFlower} ";}
+			if (!empty($FamPistillateFlower)){ echo "<b>Pistillate Flower:</b> {$FamPistillateFlower} ";}
+			if (!empty($FamRayFlower)){ echo "<b>Ray Flower:</b> {$FamRayFlower} ";}
+			if (!empty($FamDiskFlower)){ echo "<b>Disk Flower:</b> {$FamDiskFlower} ";}
+			if (!empty($FamCone)){ echo "<b>Cone:</b> {$FamCone} ";}
+			if (!empty($FamPollenCone)){ echo "<b>Pollen Cone:</b> {$FamPollenCone} ";}
+			if (!empty($FamSeedCone)){ echo "<b>Seed Cone:</b> {$FamSeedCone} ";}
+			if (!empty($FamBisexualFlower)){ echo "<b>Bisexual Flower:</b> {$FamBisexualFlower} ";}
+			if (!empty($FamFruit)){ echo "<b>Fruit:</b> {$FamFruit} ";}
+			if (!empty($FamSeed)){ echo "<b>Seed:</b> {$FamSeed} ";}
+			if (!empty($FamSporangia)){ echo "<b>Sporangia:</b> {$FamSporangia} ";}
+			if (!empty($FamSporangiumCase)){ echo "<b>Sporangium Case:</b> {$FamSporangiumCase} ";}
+			if (!empty($FamMaleSporangiumCase)){ echo "<b>Male Sporangium Case:</b> {$FamMaleSporangiumCase} ";}
+			if (!empty($FamFemaleSporangiumCase)){ echo "<b>Female Sporangium Case:</b> {$FamFemaleSporangiumCase} ";}
+			if (!empty($FamSpores)){ echo "<b>Spores:</b> {$FamSpores} ";}
+			if (!empty($FamChromosomes)){ echo "<b>Chromosomes:</b> {$FamChromosomes}";}
+				echo "</p>"; //break between morphological fields and rest of fields
+				echo "<p>";
+			if (!empty($FamGeneraInFamily)){ echo "<b>Genera In Family:</b> {$FamGeneraInFamily} ";}
+			if (!empty($FamEtymology)){ echo "<b>Etymology:</b> {$FamEtymology} ";}
+			if (!empty($FamToxicity)){ echo "<b>Toxicity:</b> {$FamToxicity} ";}
+			if (!empty($FamNote)){ echo "<b>Note:</b> {$FamNote} ";}
+				echo "</p>";
+				echo "<p>";
+			if (!empty($FamUnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$FamUnabridgedNote}</span><br>";}
+			if (!empty($FamTJM2Author)){ echo "<b>eFlora Treatment Author:</b> {$FamTJM2Author}<br>";}
+			if (!empty($FamReference)){ echo "<b>Reference:</b> {$FamReference}<br>";}
+			if (!empty($FamUnabridgedReference)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$FamUnabridgedReference}</span><br>";}
+			if (!empty($FamScientificEditor)){ echo "<b>Scientific Editor:</b> {$FamScientificEditor}<br>";}
+				echo "</p>";
 		}
-		else{ 
-			$FamHasKey = null;
-			echo "<td class='column3'>&nbsp;</td></tr></table>"; 
-		}
-		
-			echo '<table><tr>';
-			echo '<td><div id="familydesc" class="initiallyHidden">';
-			echo "<blockquote class='bodyText'>";
 
-		if (!empty($FamCommonName)){ echo "<b>Common Name:</b> {$FamCommonName}<br>";}
-		if (!empty($FamHabit)){ echo "<b>Habit:</b> {$FamHabit} ";}
-		if (!empty($FamPlantBody)){ echo "<b>Plant Body:</b> {$FamPlantBody} ";}
-		if (!empty($FamStem)){ echo "<b>Stem:</b> {$FamStem} ";}
-		if (!empty($FamSterileStem)){ echo "<b>Sterile Stem:</b> {$FamSterileStem} ";}
-		if (!empty($FamFertileStem)){ echo "<b>Fertile Stem:</b> {$FamFertileStem} ";}
-		if (!empty($FamLeaf)){ echo "<b>Leaf:</b> {$FamLeaf} ";}
-		if (!empty($FamSpines)){ echo "<b>Spines:</b> {$FamSpines} ";}
-		if (!empty($FamInflorescence)){ echo "<b>Inflorescence:</b> {$FamInflorescence} ";}
-		if (!empty($FamStaminateHead)){ echo "<b>Staminate Head:</b> {$FamStaminateHead} ";}
-		if (!empty($FamRayOrPistillateFlower)){ echo "<b>Ray Or Pistillate Flower:</b> {$FamRayOrPistillateFlower} ";}
-		if (!empty($FamPistillateHead)){ echo "<b>Pistillate Head:</b> {$FamPistillateHead} ";}
-		if (!empty($FamStaminateInflorescence)){ echo "<b>Staminate Inflorescence:</b> {$FamStaminateInflorescence} ";}
-		if (!empty($FamPistillateOrBisexualInflorescence)){ echo "<b>Pistillate Or Bisexual Inflorescence:</b> {$FamPistillateOrBisexualInflorescence} ";}
-		if (!empty($FamPistillateInflorescence)){ echo "<b>Pistillate Inflorescence:</b> {$FamPistillateInflorescence} ";}
-		if (!empty($FamSpikelet)){ echo "<b>Spikelet:</b> {$FamSpikelet} ";}
-		if (!empty($FamFertileSpikelet)){ echo "<b>Fertile Spikelet:</b> {$FamFertileSpikelet} ";}
-		if (!empty($FamSterileSpikelet)){ echo "<b>Sterile Spikelet:</b> {$FamSterileSpikelet} ";}
-		if (!empty($FamDistalSpikelet)){ echo "<b>Distal Spikelet:</b> {$FamDistalSpikelet} ";}
-		if (!empty($FamCentralSpikelet)){ echo "<b>Central Spikelet:</b> {$FamCentralSpikelet}";}
-		if (!empty($FamLateralSpikelet)){ echo "<b>Lateral Spikelet:</b> {$FamLateralSpikelet}";}
-		if (!empty($FamStaminateSpikelet)){ echo "<b>Staminate Spikelet:</b> {$FamStaminateSpikelet} ";}
-		if (!empty($FamPistillateSpikelet)){ echo "<b>Pistillate Spikelet:</b> {$FamPistillateSpikelet} ";}
-		if (!empty($FamFlower)){ echo "<b>Flower:</b> {$FamFlower} ";}
-		if (!empty($FamStaminateFlower)){ echo "<b>Staminate Flower:</b> {$FamStaminateFlower} ";}
-		if (!empty($FamPistillateFlower)){ echo "<b>Pistillate Flower:</b> {$FamPistillateFlower} ";}
-		if (!empty($FamRayFlower)){ echo "<b>Ray Flower:</b> {$FamRayFlower} ";}
-		if (!empty($FamDiskFlower)){ echo "<b>Disk Flower:</b> {$FamDiskFlower} ";}
-		if (!empty($FamCone)){ echo "<b>Cone:</b> {$FamCone} ";}
-		if (!empty($FamPollenCone)){ echo "<b>Pollen Cone:</b> {$FamPollenCone} ";}
-		if (!empty($FamSeedCone)){ echo "<b>Seed Cone:</b> {$FamSeedCone} ";}
-		if (!empty($FamBisexualFlower)){ echo "<b>Bisexual Flower:</b> {$FamBisexualFlower} ";}
-		if (!empty($FamFruit)){ echo "<b>Fruit:</b> {$FamFruit} ";}
-		if (!empty($FamSeed)){ echo "<b>Seed:</b> {$FamSeed} ";}
-		if (!empty($FamSporangia)){ echo "<b>Sporangia:</b> {$FamSporangia} ";}
-		if (!empty($FamSporangiumCase)){ echo "<b>Sporangium Case:</b> {$FamSporangiumCase} ";}
-		if (!empty($FamMaleSporangiumCase)){ echo "<b>Male Sporangium Case:</b> {$FamMaleSporangiumCase} ";}
-		if (!empty($FamFemaleSporangiumCase)){ echo "<b>Female Sporangium Case:</b> {$FamFemaleSporangiumCase} ";}
-		if (!empty($FamSpores)){ echo "<b>Spores:</b> {$FamSpores} ";}
-		if (!empty($FamChromosomes)){ echo "<b>Chromosomes:</b> {$FamChromosomes}";}
-			echo "<br>"; //break between morphological fields and rest of fields
-	
-		if (!empty($FamGeneraInFamily)){ echo "<b>Genera In Family:</b> {$FamGeneraInFamily} ";}
-		if (!empty($FamEtymology)){ echo "<b>Etymology:</b> {$FamEtymology} ";}
-		if (!empty($FamToxicity)){ echo "<b>Toxicity:</b> {$FamToxicity} ";}
-		if (!empty($FamNote)){ echo "<b>Note:</b> {$FamNote} ";}
-			echo "<br>";
-	
-		if (!empty($FamUnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$FamUnabridgedNote}</span><br>";}
-		if (!empty($FamTJM2Author)){ echo "<b>eFlora Treatment Author:</b> {$FamTJM2Author}<br>";}
-		if (!empty($FamReference)){ echo "<b>Reference:</b> {$FamReference}<br>";}
-		if (!empty($FamUnabridgedReference)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$FamUnabridgedReference}</span><br>";}
-		if (!empty($FamScientificEditor)){ echo "<b>Scientific Editor:</b> {$FamScientificEditor}<br>";}
-			echo "</blockquote></div></td>";
+    	?>
+		</div>
 
+	<?php if (!empty($GenScientificName)): ?>
+        <div class="taxonomy-row">
+            <strong>Genus: <?php echo $GenScientificName; ?></strong>
+            <button class="tax-toggle-btn" id="genuslink">View Description</button>
+            <?php if($GenHasKey) echo "<a href='/eflora/eflora_keys.php?key=$GenTaxonID'>Dichotomous Key</a>"; ?>
+        </div>
+
+        <div id="genusdesc" class="initiallyHidden">
+<?php		
 		if (!empty($GenScientificName)){
-
-			echo "<table class='taxonomy_table'><tr><td class='column1'><b>Genus: {$GenScientificName}</b></td><td class='column2'><a id='genuslink'>View Description</a></b></td>";
-
-			if (!empty($GenHasKey)){
-				echo "<td class='column3'><a href='/eflora/eflora_keys.php?key={$GenTaxonID}'>Dichotomous Key</a></td></tr></table>";
-			}
-			else{ 
-				$GenHasKey = null;
-				echo "<td class='column3'>&nbsp;</td></tr></table>"; 
-			}
-
-			echo '<table><tr>';
-			echo '<td><div id="genusdesc" class="initiallyHidden">';
-			echo "<blockquote class='bodyText'><br>";
-
+			echo "<p>";
 			if (!empty($GenCommonName)){ echo "<b>Common Name:</b> {$GenCommonName}<br>";}
 			if (!empty($GenHabit)){ echo "<b>Habit:</b> {$GenHabit} ";}
 			if (!empty($GenPlantBody)){ echo "<b>Plant Body:</b> {$GenPlantBody} ";}
@@ -3335,38 +3248,37 @@ $(document).ready(function(){
 			if (!empty($GenFemaleSporangiumCase)){ echo "<b>Female Sporangium Case:</b> {$GenFemaleSporangiumCase} ";}
 			if (!empty($GenSpores)){ echo "<b>Spores:</b> {$GenSpores} ";}
 			if (!empty($GenChromosomes)){ echo "<b>Chromosomes:</b> {$GenChromosomes}";}
-				echo "<br>"; //break between morphological fields and rest of fields
-		
+			echo "</p>"; //break between morphological fields and rest of fields
+			echo "<p>";
 			if (!empty($GenEtymology)){ echo "<b>Etymology:</b> {$GenEtymology} ";}
 			if (!empty($GenToxicity)){ echo "<b>Toxicity:</b> {$GenToxicity} ";}
 			if (!empty($GenNote)){ echo "<b>Note:</b> {$GenNote} ";}
-				echo "<br>";
-		
+			echo "</p>";
+			echo "<p>";
 			if (!empty($GenUnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$GenUnabridgedNote}</span><br>";}
 			if (!empty($GenTJM2Author)){ echo "<b>eFlora Treatment Author:</b> {$GenTJM2Author}<br>";}
 			if (!empty($GenReference)){ echo "<b>Reference:</b> {$GenReference}<br>";}
 			if (!empty($GenUnabridgedReference)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$GenUnabridgedReference}</span><br>";}
 			if (!empty($GenScientificEditor)){ echo "<b>Scientific Editor:</b> {$GenScientificEditor}<br>";}
-		
-				echo "</div></td>";
+			echo "</p>";
 			
 		}
 		
+?>
+        </div>
+    <?php endif; ?>
+
+	<?php if (!empty($SpecScientificName)): ?>
+        <div class="taxonomy-row">
+            <strong>Species: <?php echo $SpecScientificName; ?></strong>
+            <button class="tax-toggle-btn" id="specieslink">View Description</button>
+            <?php if($SpecHasKey) echo "<a href='/eflora/eflora_keys.php?key=$SpecTaxonID'>Dichotomous Key</a>"; ?>
+        </div>
+
+        <div id="speciesdesc" class="initiallyHidden">
+		<?php
 		if (!empty($SpecScientificName)){
-			echo "<table class='taxonomy_table'><tr><td class='column1'><b>Species: {$SpecScientificName}</b></td><td class='column2'><a id='specieslink'>View Description</a></b></td>";
-
-			if (!empty($SpecHasKey)){
-				echo "<td class='column3'><a href='/eflora/eflora_keys.php?key={$SpecTaxonID}'>Dichotomous Key</a></td></tr></table>";
-			}
-			else{ 
-				$SpecHasKey = null;
-				echo "<td class='column3'>&nbsp;</td></tr></table>"; 
-			}
-
-			echo '<table><tr>';
-			echo '<td><div id="speciesdesc" class="initiallyHidden">';
-			echo "<blockquote class='bodyText'><br>";		
-
+			echo "<p>";
 			if (!empty($SpecCommonName)){ echo "<b>Common Name:</b> {$SpecCommonName}<br>";}
 			if (!empty($SpecHabit)){ echo "<b>Habit:</b> {$SpecHabit} ";}
 			if (!empty($SpecPlantBody)){ echo "<b>Plant Body:</b> {$SpecPlantBody} ";}
@@ -3407,58 +3319,52 @@ $(document).ready(function(){
 			if (!empty($SpecFemaleSporangiumCase)){ echo "<b>Female Sporangium Case:</b> {$SpecFemaleSporangiumCase} ";}
 			if (!empty($SpecSpores)){ echo "<b>Spores:</b> {$SpecSpores} ";}
 			if (!empty($SpecChromosomes)){ echo "<b>Chromosomes:</b> {$SpecChromosomes}";}
-				echo "<br>"; //break between morphological fields and rest of fields
-		
+			echo "</p>"; //break between morphological fields and rest of fields
+			echo "<p>";
 			if (!empty($SpecEtymology)){ echo "<b>Etymology:</b> {$SpecEtymology} ";}
 			if (!empty($SpecToxicity)){ echo "<b>Toxicity:</b> {$SpecToxicity} ";}
 			if (!empty($SpecNote)){ echo "<b>Note:</b> {$SpecNote} ";}
-				echo "<br>";
-		
+			echo "</p>";
+			echo "<p>";
 			if (!empty($SpecUnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$SpecUnabridgedNote}</span><br>";}
 			if (!empty($SpecTJM2Author)){ echo "<b>eFlora Treatment Author:</b> {$SpecTJM2Author}<br>";}
 			if (!empty($SpecReference)){ echo "<b>Reference:</b> {$SpecReference}<br>";}
 			if (!empty($SpecUnabridgedReference)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$SpecUnabridgedReference}</span><br>";}
-		
-				echo "</div></td>";
+			echo "</p>";
 		}
-			
-		echo "<br>";
-		echo '</tr></table>';
-	}
+		?>
+        </div>
+    <?php endif; ?>
 
+  </section>
+  <?php endif; ?>
 
-echo '</tr></table><div class="spacer_lightgrey"><p class="bodyText">';
+    <!-- Hero Header Section -->
+    <header class="hero-taxon">
+        <h2><?php echo $FormattedDisplayName; ?></h2>
+        <p class="common-name"><?php echo $CommonName; ?></p>
+    </header>
+<?php
+	if (isset($HasKey)){ echo "<p><b><a href='/eflora/eflora_keys.php?key=".$TID."'>Key to ".$ScientificName."</a></b></p>"; }
+?>
 
-		if (!empty($HasKey)){ echo "<b><a href='/eflora/eflora_keys.php?key=".$TID."'>Key to <i>".$ScientificName."</i></a></b></p></div><br>"; }
+<?php 
+    // Check if any media exists
+    $hasMedia = (!empty($VIDEO) || !empty($RevisedFileName) || !empty($IllustrationFile));
+    // Determine the grid class: split-view or full-width
+    $layoutClass = $hasMedia ? "has-media-grid" : "no-media-full";
+?>
 
-//END higher taxonomy table 
+<!-- PRIMARY CONTENT GRID -->
+<div class="treatment-grid <?php echo $layoutClass; ?>">
+    
+    <!-- This section will now span the full width if $hasMedia is false -->
+    <article class="treatment-text data-section">
+        <h3>Treatment Description</h3>
+        <p><strong><?php echo $efloraStatus; ?></strong></p>
+        <div class="morphology">
 
-//START TAXON treatment table
-//define based on presence of RIGHT SIDE BLOCK illustration/video section
-
-//if illustration exists, there are two table cells, else there is one
-	if (!empty($IllustrationFile)){
-		echo '<table id = "EF_right"><tr><td>';
-	}
-	elseif (!empty($VIDEO)){
-		echo '<table id = "EF_right"><tr><td>';
-	}
-	else {
-		$IllustrationFile = null;
-		$VIDEO = null;
-		$IllustrationLarge = null;
-		echo '<table id = "EF_citation"><tr><td>';
-	}
-
-//END illustration/video type section
-
-//START LEFT SIDE BLOCK, FIRST ROW, taxon descriptions
-
-//print the focal taxon block
-	echo '<div class="pageMajorHeading"><b>'.$FormattedDisplayName.'</b><br></div>';
-	echo "<div class='bodyText'>";
-		if (!empty($efloraStatus)){ echo '<b>'.$efloraStatus.'</b><br>';}
-	
+		<?php
 		if (!empty($Habit)){ echo '<b>Habit:</b> '.$Habit.' ';}
 		if (!empty($PlantBody)){ echo '<b>Plant Body:</b> '.$PlantBody.' ';}
 		if (!empty($Stem)){ echo '<b>Stem:</b> '.$Stem.' ';}
@@ -3498,8 +3404,13 @@ echo '</tr></table><div class="spacer_lightgrey"><p class="bodyText">';
 		if (!empty($FemaleSporangiumCase)){ echo '<b>Female Sporangium Case:</b> '.$FemaleSporangiumCase.' ';}
 		if (!empty($Spores)){ echo '<b>Spores:</b> '.$Spores.' ';}
 		if (!empty($Chromosomes)){ echo '<b>Chromosomes:</b> '.$Chromosomes.' ';}
-			echo "<br>"; //break between morphological fields and rest of fields
-	
+
+ ?>
+            </div>
+            
+            <div class="ecology-dist" style="margin-top:20px; padding-top:20px; border-top: 1px solid #eee;">
+<?php 
+		echo "<p>";
 		if (!empty($Ecology)){ echo "<b>Ecology:</b> {$Ecology} ";}
 		if (!empty($Elevation)){ echo "<b>Elevation:</b> {$Elevation} ";}
 		if (!empty($BioregionalDistribution)){ echo "<b><a href=\"#MAP\">Bioregional Distribution:</a></b> {$BioregionalDistribution} ";}
@@ -3511,8 +3422,8 @@ echo '</tr></table><div class="spacer_lightgrey"><p class="bodyText">';
 		if (!empty($FloweringTime)){ echo "<b>Flowering Time:</b> {$FloweringTime} ";}
 		if (!empty($FruitingTime)){ echo "<b>Fruiting Time:</b> {$FruitingTime} ";}
 		if (!empty($Note)){ echo "<b>Note:</b> {$Note} ";}
-			echo "<br>";
-	
+		echo "</p>";
+		echo "<p>";
 		if (!empty($Synonyms)){ echo "<b>Synonyms:</b> {$Synonyms}<br>";}
 		if (!empty($UnabridgedSynonyms)){ echo "<span class=\"blueTEXT\"><b>Unabridged Synonyms:</b> {$UnabridgedSynonyms}</span><br>";}
 		if (!empty($UnabridgedNote)){ echo "<span class=\"blueTEXT\"><b>Unabridged Note:</b> {$UnabridgedNote}</span><br>";}
@@ -3520,25 +3431,30 @@ echo '</tr></table><div class="spacer_lightgrey"><p class="bodyText">';
 		if (!empty($Ref)){ echo "<b>Reference:</b> {$Ref}<br>";}
 		if (!empty($UnabRef)){ echo "<span class=\"blueTEXT\"><b>Unabridged Reference:</b> {$UnabRef}</span><br>";}
 		if (!empty($ScientificEditor)){ echo "<b>Scientific Editor:</b> {$ScientificEditor}<br>";}
+		echo "</p>";
+ ?>
 
-			echo '<p class="BodyText"><a href="/cgi-bin/icpn/get_cpn?tid='.$TID.'"><b>Index of California Plant Names (ICPN)</b></a></p>';
+                <p><a href="/eflora/icpn/icpn_display.php?tid=<?php echo $TID; ?>"><strong>Index of California Plant Names (ICPN) Record</strong></a></p>
 
-//END LEFT SIDE BLOCK, FIRST ROW, taxon descriptions
 
-//photos from CalPhotos, set up a converison of the taxon name for the API below.
-//not sure why this is placed here and not below
-$cp_ssp_name = str_replace(" subsp. ", " ssp. ", $ScientificName); //CalPhotos uses "ssp." and not "subsp."
-$cp_name = $cp_ssp_name;
+            </div>
 
+            <!-- Taxa Dropdown -->
+            <div class="search-group" style="margin-top:30px;">
+                <form>
+                    <label for="taxa-select"><strong>List of taxa:</strong></label>
+                    <select id="taxa-select" onchange="window.location=this.value" style="width:100%; min-height:48px;">
+                        <option value="">Select a taxon...</option>
+<?php 
 //START LEFT SIDE BLOCK, FIRST ROW, create species drop down box using SQL Query statements
 
 //get and print list of taxa within the genus (if a species or infra), or list of species within genus (if a genus)
 
   //if the rank is lower than genus
 	if (!empty($GenTaxonID)){
-		echo '<p><form>';
-		echo '<label><b>List of species:</b><select WIDTH=20 onChange="window.location=this.value">';
-		echo '<OPTION VALUE="None">&nbsp;&nbsp;click here';
+		//echo '<p><form>';
+		//echo '<label><b>List of species:</b><select WIDTH=20 onChange="window.location=this.value">';
+		//echo '<OPTION VALUE="None">&nbsp;&nbsp;click here';
 		//$GenTaxonID for focal taxon determined in an earlier query
 		$sql = "SELECT DISTINCT a.TaxonID as TaxonID, a.ScientificName as ScientificName, b.TaxonID, b.GenusID as GenusID FROM eflora_taxa a";
 		$sql.= " INNER JOIN eflora_taxonomy b on a.TaxonID = b.TaxonID";
@@ -3567,17 +3483,17 @@ $cp_name = $cp_ssp_name;
 //}
 //END temp bug fix lines
 			if (!empty($row['TaxonID'])){
-				echo ' <OPTION VALUE="/eflora/eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'];
+				//echo ' <OPTION VALUE="/eflora/eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'];
+				echo '<option value="/eflora/eflora_display.php?tid=' . $row['TaxonID'] . '">' . $row['ScientificName'] . '</option>';
 			}
 
 		}
-		echo '</select></label></form></p>';
 	}
 	elseif (!empty($FamTaxonID)) { 
 	//if the rank is otherwise lower than family, and therefore at rank genus
-		echo '<p><form>';
-		echo '<label><b>List of species:</b><select width=20 onchange="window.location=this.value">';
-		echo '<OPTION value="None">&nbsp;&nbsp;click here';
+		//echo '<p><form>';
+		//echo '<label><b>List of species:</b><select width=20 onchange="window.location=this.value">';
+		//echo '<OPTION value="None">&nbsp;&nbsp;click here';
 
 		$sql = "SELECT DISTINCT a.TaxonID as TaxonID, a.ScientificName as ScientificName, b.TaxonID, b.GenusID as GenusID FROM eflora_taxa a";
 		$sql.= " INNER JOIN eflora_taxonomy b on a.TaxonID = b.TaxonID";
@@ -3606,206 +3522,133 @@ $cp_name = $cp_ssp_name;
 //}
 //END temp bug fix lines
 			if (!empty($row['TaxonID'])){
-				echo ' <OPTION VALUE="/eflora/eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'];
+				//echo ' <OPTION VALUE="/eflora/eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'];
+				echo '<option value="/eflora/eflora_display.php?tid=' . $row['TaxonID'] . '">' . $row['ScientificName'] . '</option>';
+
 			}
 
 		}
-		echo '</select></label></form></p>';
-	}
-	else {
-		echo '<br>';
+	} else {
+	    echo '<option value="" disabled>No results available for this taxon</option>';
 	}
 
 //END LEFT SIDE BLOCK, FIRST ROW, create species drop down box using SQL Query statements
+ ?>
 
-
-//START LEFT SIDE BLOCK, FIRST ROW, create Next-Previous taxon links
-	if (!empty($previousTaxonID)) { //i.e. always, except for the very first page
-		echo '<a href="/eflora/eflora_display.php?tid='.$previousTaxonID.'">Previous taxon: '.$previousName.'</a><br>';
-	}
-
-	if (!empty($nextTaxonID)) { //i.e. always, except for the very last page
-		echo '<a href="/eflora/eflora_display.php?tid='.$nextTaxonID.'">Next taxon: '.$nextName.'</a><br>';
-	}
-//END LEFT SIDE BLOCK, FIRST ROW, create Next-Previous taxon links
-
-//START LEFT SIDE BLOCK, FIRST ROW, create Name Search box
-?>
-
-<br>
-	<form action="/eflora/search_eflora.php" method="get">
-		<label for="name"><b>Name Search:</b></label>
-		<input type="text" id="name" name="name" placeholder="Enter a scientific name..." required>
-		<input type="submit" value="Submit Name">
-	</form>
-
-
-<?php
-//END LEFT SIDE BLOCK, FIRST ROW, create Name Search box
-
-
-//START RIGHT SIDE BLOCK, FIRST ROW, ADD Illustration and Video Table
-
-  if (!empty($VIDEO)) {
-	echo '</td><td>';
-//display another section for records with videos
-
-	echo "<table>";
-	echo "<tr>";
-	echo '<td><p class=smallText><b>Jepson Video for <i>';
-	echo str_replace(" var. ", "</i> var. <i>", $ScientificName);
-	echo '</i>Click to watch the video.<br><br>';
-	echo '<a href="'.$VIDEO.'"><img height="88px" src="/common/images/youtube_social_icon_red.png" ALT="YouTube Video Icon"></img></a><br>';
-	echo '</p></td>';	
-
-
-		if (!empty($RevisedFileName)) {
-			echo '</tr><tr>';
-			echo '<td>';
-			echo '<p class=smallText><b>Botanical illustration including <i>'.$ScientificName.'</i></b>';	
-	//this uses a symbolic link for /usr/local/web/ucjeps_data/ucjeps_data/illustrations/, where all the illustration files were moved some time before 2015
-			echo '<a href="/images/illustrations/revised/'.$RevisedFileName.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/revised/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' "></a>';
-			echo '</p></td>';
-			echo "</tr></table>";
-			echo '</td>';
-		}
-		else{
-			if (!empty($IllustrationFile)) {
-				$RevisedFileName = null;
-				echo '</tr><tr>';
-				echo '<td>';
-				echo '<p class=smallText><b>Botanical illustration including <i>'.$ScientificName.'</i></b>';	
-	//this uses a symbolic link for /usr/local/web/ucjeps_data/ucjeps_data/illustrations/, where all the illustration files were moved some time before 2015
-	//old version 2017 - echo '<center><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including <i>'.$ScientificName.'</i>" height="475" border="0" align="center"/></center>';
-	//old version 2015 - echo '<center><img src="'.$ILLUS.'" alt="botanical illustration including '.$ScientificName.'" height="475" border="0" align="center"/></center>';
-				echo '<a href="/images/illustrations/'.$IllustrationFile.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' "></a>';
-				echo '</p></td>';
-				echo "</tr></table>";
-				echo '</td>';
-			}
-			else{
-				$IllustrationFile = null;
-				$RevisedFileName = null;
-				echo "</tr></table>";
-				echo '</td>';
-			}
-		}
-  }
-  else{
-	echo '</td><td>';
-	$VIDEO = null;
-		if (!empty($RevisedFileName)) {
-			echo '<p class=smallText><b>Botanical illustration including <i>'.$ScientificName.'</i></b>';	
-	//this used a symbolic link for /usr/local/web/ucjeps_data/ucjeps_data/illustrations/, where all the illustration files were moved some time before 2015
-			echo '<a href="/images/illustrations/revised/'.$RevisedFileName.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/revised/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' "></a>';
-			echo '</p></td>';
-		}
-		else{
-			$RevisedFileName = null;
-
-			if (!empty($IllustrationFile)) {
-				echo '<p class=smallText><b>Botanical illustration including <i>'.$ScientificName.'</i></b>';	
-	//this used a symbolic link for /usr/local/web/ucjeps_data/ucjeps_data/illustrations/, where all the illustration files were moved some time before 2015
-	//old version 2017 - echo '<center><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including <i>'.$ScientificName.'</i>" height="475" border="0" align="center"/></center>';
-	//old version 2015 - echo '<center><img src="'.$ILLUS.'" alt="botanical illustration including '.$ScientificName.'" height="475" border="0" align="center"/></center>';
-				echo '<a href="/images/illustrations/'.$IllustrationFile.'" target="_blank" title="botanical illustration including '.$ScientificName.' "><img src="/images/illustrations/'.$IllustrationFile.'" alt="botanical illustration including '.$ScientificName.' "></a>';
-				echo '</p></td>';
-			}
-			else{
-				$IllustrationFile = null;
-				$RevisedFileName = null;
-				echo '</td>';
-			}
-		}
-  }
-
-//END RIGHT SIDE BLOCK, FIRST ROW, ADD Illustration and Video Table
-
-?>
-
-</tr>
-</table>
-</div><!--END content division -->
-<!--END FIRST ROW Description SECTION, CLOSE TABLE-->
-
-
-<br>
-
-<!--START SECOND ROW Citation SECTION, New TABLE-->
-
-<?php
-	if (empty($GenTaxonID)){//i.e. if the rank is higher than genus, there is no genus taxon ID
-//, otherwords at the family level
-//for family treatments, distribution and image pages are now excluded, they use to be displayed
-
-echo '</td></tr></table><table id="EF_citation"><tr><td><p>';
-echo '<a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">Send us your feedback and/or questions! Community input helps improve the Jepson eFlora.</a></p><p class=bodyText><br>';
-
-	  echo "Citation for this treatment: ";
-	  echo preg_replace("/\[[^\]]+\]/","",$JMAuthor); 
-	  if ($RevDate){ echo " ".$RevDate.", ";}
-	  echo "<i>".$ScientificName."</i>, ";
-	  echo "in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, ";
-	  	if ($RevNumber){ echo $RevNumber.", ";}
-	  echo "https://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=".$TID.", accessed on ";
-	  echo date ("F d, Y");
-	  echo '.</p>';
-	  echo '<p class=bodyText>Citation for the whole project: Jepson Flora Project (eds.)';
-	   echo date ("Y");
-	   echo', <em>Jepson eFlora</em>,  https://ucjeps.berkeley.edu/eflora/, accessed on';
-	   echo date ("F d, Y");
-	   echo'.</p></td></tr></table></div></main><!--begin footer-->';
-		include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/footer.php');
-		echo'<!--end footer--></body></html>';
-		exit();
-	}
-	elseif(empty($FamTaxonID)){//i.e. if the rank is higher than family, there is no family taxon ID
-//for family treatments, photos and distribution pages are excluded
-//so exit out at this point
-
-echo '</td></tr></table><table id="EF_citation"><tr><td><p>';
-echo '<a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">Send us your feedback and/or questions! Community input helps improve the Jepson eFlora.</a></p><p class=bodyText><br>';
-
-	  echo "Citation for this treatment: ";
-	  echo preg_replace("/\[[^\]]+\]/","",$JMAuthor); 
-	  if ($RevDate){ echo " ".$RevDate.", ";}
-	  echo "<i>".$ScientificName."</i>, ";
-	  echo "in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, ";
-	  	if ($RevNumber){ echo $RevNumber.", ";}
-	  echo "https://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=".$TID.", accessed on ";
-	  echo date ("F d, Y");
-	  echo '.</p>';
-	  echo '<p class=bodyText>Citation for the whole project: Jepson Flora Project (eds.)';
-	   echo date ("Y");
-	   echo', <em>Jepson eFlora</em>,  https://ucjeps.berkeley.edu/eflora/, accessed on';
-	   echo date ("F d, Y");
-	   echo'.</p></td></tr></table></div></main><!--begin footer-->';
-		include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/footer.php');
-		echo'<!--end footer--></body></html>';
-		exit();
-	}
-	else{
-	//do nothing, proceed
-	}
-?>
-
-</td></tr></table>
-<!--END SECOND ROW Citation SECTION, CLOSE TABLE-->
-
-<!--START THIRD ROW CalPhotos SECTION, NEW DIVISION, NEW TABLE-->
-
-<div id="content-top">
-
-
-<table id="EF_citation">
-<tr>
-<td>
+                    </select>
+                </form>
+            </div>
+        </article>
 
 
 <?php 
+// 1. RE-EVALUATE $hasMedia right before the block
+$hasMedia = (!empty($VIDEO) || !empty($RevisedFileName) || !empty($IllustrationFile));
+
+if ($hasMedia): 
+?>
+    <!-- ASIDE ONLY SHOWS IF MEDIA EXISTS -->
+    <aside class="media-column">
+        <?php if (!empty($VIDEO)): ?>
+            <div class="video-box" style="margin-bottom:30px;">
+                <h4>Jepson Video for <i><?php echo str_replace(" var. ", "</i> var. <i>", $ScientificName); ?></i></h4>
+                <p>Click to watch the video.</p>
+                <a href="<?php echo $VIDEO; ?>" target="_blank">
+                    <img src="/eflora/common/images/youtube_social_icon_red.png" alt="YouTube Video" style="width:64px;">
+                </a>
+            </div>
+        <?php endif; ?>
+
+        <?php 
+        // 2. Determine which illustration to show
+       
+        if (!empty($RevisedFileName)): 
+        ?>
+            <div class="illus-box">
+                <h4>Botanical Illustration for <i><?php echo str_replace(" var. ", "</i> var. <i>", $ScientificName); ?></i></h4>
+                <?php
+                   $imgPath = "/eflora/illustrations/revised/" . $RevisedFileName; 
+                ?>
+                <a href="<?php echo $imgPath; ?>" target="_blank">
+                    <img src="<?php echo $imgPath; ?>" alt="Illustration of <?php echo strip_tags($ScientificName); ?>">
+                </a>
+            </div>
+        <?php 
+        elseif (!empty($IllustrationFile)): 
+        ?>
+            <div class="illus-box">
+                <h4>Botanical Illustration for <i><?php echo str_replace(" var. ", "</i> var. <i>", $ScientificName); ?></i></h4>
+                <?php
+                   $imgPath = "/eflora/illustrations/" . $IllustrationFile; 
+                ?>
+                <a href="<?php echo $imgPath; ?>" target="_blank">
+                    <img src="<?php echo $imgPath; ?>" alt="Illustration of <?php echo strip_tags($ScientificName); ?>">
+                </a>
+            </div>
+        <?php endif; ?>
+
+    </aside>
+<?php endif; ?>
+
+</div> <!-- End treatment-grid -->
+
+    <!-- Navigation & Index Bars -->
+    <nav class="icpn-nav-block" aria-label="eFlora Navigation">
+		<!-- Index Section -->
+		<section class="index-footer-wrap">
+    		<div class="search-group">
+        		<nav class="icpn-index-container" aria-labelledby="alpha-title">
+            		<!-- Alphabetical Index -->
+            		<h3 id="alpha-title" style="margin-top: 0;">Alphabetical Index to eFlora accepted names and synonyms</h3>
+            		<div class="index-bar" style="margin-bottom: 10px;">
+            			<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora_index_bar.html'); ?>
+        			</div>
+        		</nav>
+    		</div>
+                <!-- Standardized Horizontal Search Form -->
+        <div class="search-centered-container">
+            <form action="search_eflora.php" method="get" class="centered-form">
+                <label for="name" class="search-label">Scientific Name Search:</label>
+                <div class="input-row">
+                    <input type="text" id="name" name="name" placeholder="Enter a scientific name..." required>
+                    <div class="button-group">
+                        <button type="submit" class="btn btn-submit">Submit</button>
+                        <button type="reset" class="btn btn-reset">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        </section>
+    </nav>
+
+
+
+    <!-- CITATION -->
+    <footer class="treatment-citation" style="margin-top:40px; padding: 20px; background: #eee; border-left: 5px solid var(--ef-blue);">
+	<p><strong>Citation for this treatment:</strong> 
+<?php echo preg_replace("/\[[^\]]+\]/","",$JMAuthor); 
+	  if ($RevDate){ echo " ".$RevDate.", ";}
+	  echo $ScientificName.", in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, ";
+	  if ($RevNumber){ echo $RevNumber.", ";}
+	  echo "https://herbariadb.berkeley.edu/eflora/eflora_display.php?tid=".$TID.", accessed on "?> 
+<?php echo date ("F d, Y")?>.
+</p>
+
+        <p><strong>Citation for the whole project:</strong> Jepson Flora Project (eds.) <?php echo date("Y"); ?>, <em>Jepson eFlora</em>, https://herbariadb.berkeley.edu/eflora/, accessed on <?php echo date("F d, Y"); ?>.</p>
+    </footer>
+
+    <!-- CALPHOTOS RESPONSIVE GALLERY -->
+    <section class="photo-gallery-section">
+        <h3 class="center-text">CalPhotos: Expert Verified Images</h3>
+        <div class="i-align">
+<?php 
+//photos from CalPhotos, set up a converison of the taxon name for the API below.
+//not sure why this is placed here and not below
+$cp_ssp_name = str_replace(" subsp. ", " ssp. ", $ScientificName); //CalPhotos uses "ssp." and not "subsp."
+$cp_name = $cp_ssp_name;
+
+
 //check for known synonyms that are not showing up with images in CalPhotos under the eFlora name
-
-
 echo '<table id="calphotos"><tr><td>';
 	echo '<div class="i-align">';
 
@@ -3845,7 +3688,7 @@ $homepage = file_get_contents("https://calphotos.berkeley.edu/cgi/api_taxon?taxo
 						echo '<div class="i-align">';
 							if ( (!empty($taxon)) && (!empty($kwid)) ){
 								echo '<div class="v-align">';
-								echo '<div class=bodyText><i>';
+								echo '<div class="max-width-p"><i>';
 								echo str_replace(" var. ", "&nbsp;&nbsp;<br></i> var. <i>", $taxon);
 								echo '</i></div>';
 			
@@ -3868,10 +3711,10 @@ $homepage = file_get_contents("https://calphotos.berkeley.edu/cgi/api_taxon?taxo
 			}
 
 //Sagina apetala	0000 0000 0320 1497	2020 Keir Morse
-	//echo "<p class=bodyText>FOUND-->".$cp_search_name."</p>";
+	//echo "<p>FOUND-->".$cp_search_name."</p>";
 		}
 		else{//if there is no $kwid (i.e. no photos), do not print the "see more" link or the extra divider
-			echo '<p class=bodyText style="color:#BBBBB">No expert verified images found for <i>'.$ScientificName.'.</i></p>';
+			echo '<p class="max-width-p">No expert verified images found for <i>'.$ScientificName.'.</i></p>';
 		}
 
 echo "</td></tr></table>";
@@ -3879,70 +3722,49 @@ echo "</td></tr></table>";
 
 if (!empty($splitcontents)){ 
 	$cp_search_name = str_replace(" ", "+", $cp_ssp_name);
-	echo '<p class=bodyText><a href="https://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&where-genre=Plant&where-taxon='.$cp_ssp_name.'&title_tag='.$ScientificName.'">More photos of <i>'.$ScientificName.'</i><br> in CalPhotos</a></p>';
+	echo '<p class="max-width-p"><a href="https://calphotos.berkeley.edu/cgi/img_query?query_src=ucjeps&where-genre=Plant&where-taxon='.$cp_ssp_name.'&title_tag='.$ScientificName.'">More photos of <i>'.$ScientificName.'</i> in CalPhotos</a></p>';
 }
 
 
 ?>
+        </div>
+    </section>
 
-</td></tr></table>
-</div> <!--END snd top content division-->
-<!--END THIRD ROW CalPhotos SECTION, CLOSE DIVISION, CLOSE TABLE-->
-
-
-<br>
-
-<!--START FORTH ROW MAP SECTION, NEW DIVISION, NEW TABLE-->
-
-
-<!--distribution panes-->
-<div id="content">
-<table id="EF_bottom">
-<tr><td>
-
-<!--EMPTY ROW?  not sure why this is here, maybe needed for old website design-->
-
-</td>
-<td>
-</td></tr>
-
-<tr>
-<!--START FORTH ROW LEFT SIDE SECTION, Geographic subdivisions title & MAP-->
-
-<td valign="top">
-
-<p class=smallText>
-<b><a name="MAP" id="MAP"></a>Geographic subdivisions for <a href="#TOP"><?php echo "$ScientificName"?></a>:</b>
-<br>
-<b>&nbsp;&nbsp;
+    <!-- MAPS SECTION (Interactive hides on mobile) -->
+    <section class="map-display-grid">
+        <div class="static-map-box center-text data-section">
+            <h4><a name="MAP" id="MAP"></a>Geographic subdivisions for <a href="#TOP"><?php echo "$ScientificName"?></a>:
 <?php 
 	$regname = str_replace(";", " ", $BioregionalDistribution);
 	echo "$regname";
-?>
-</b>
-<br>
-<p class=smallText>
-<?php echo '<img src="/cgi-bin/eflora/new_jmap?'.$DistCode.'" border="0" alt="map of California distribution of '.$regname.'">' ?>
+?></h4>
+            <img src="/cgi-bin/eflora/new_jmap?<?php echo $DistCode; ?>" alt="Bioregional map" style="max-width:100%; height:auto; border:1px solid #ccc;">
+<p>(Note: any qualifiers in the taxon distribution description, such as 'northern', 'southern', 'adjacent' etc., are not reflected in the map above, and in some cases indication of a taxon in a subdivision is based on a single collection or author-verified occurrence).
 </p>
 
-</td>
-<!--END FORTH ROW LEFT SIDE SECTION, Geographic subdivisions title & MAP-->
+        </div>
+        
 
-<!--START FORTH ROW RIGHT SIDE SECTION, specimen distribution map-->
-<td>
 
-<p class=smallText>
+    <!-- RIGHT COLUMN: Specimen Map & Phenology -->
+    <div class="bottom-column-right">
+        
+        <!-- Box 3: Specimen Map & Text -->
+        <section class="data-section specimen-map-container">
+            <!-- Map hides on mobile via CSS -->
+            <div class="interactive-map-wrapper">
+            <h3>Specimen Distribution (Interactive)</h3>
 <b><a name="EFMAP" id="EFMAP"></a>MAP CONTROLS</b>
 <br>1. You can change the display of the base map layer control box in the upper right-hand corner.
 <br>2. County and Jepson Region polygons can be turned off and on using the check boxes.
 </p>
-    
-	<div id="map_canvas"></div>
-	<link href="common/cluster/MarkerCluster.Default.css" type="text/css" rel=stylesheet />
-	<link rel="stylesheet" type="text/css" href="common/cluster/MapkeyIcons.css" />
-	<link rel="stylesheet" type="text/css" href="common/cluster/L.Icon.Mapkey.css" />
-	<script src="common/cluster/L.Icon.Mapkey.js"></script>
-	<script src="common/cluster/leaflet.markercluster.js"></script>
+
+                <div id="map_canvas">
+	<link href="/eflora/common/cluster/MarkerCluster.Default.css" type="text/css" rel=stylesheet />
+	<link rel="stylesheet" type="text/css" href="/eflora/common/cluster/MapkeyIcons.css" />
+	<link rel="stylesheet" type="text/css" href="/eflora/common/cluster/L.Icon.Mapkey.css" />
+	<script src="/eflora/common/cluster/L.Icon.Mapkey.js"></script>
+	<script src="/eflora/common/cluster/leaflet.markercluster.js"></script>
 
 <script type="text/javascript"> 
 
@@ -3982,7 +3804,9 @@ var bnd = "geojson/Jepson_regions_buffer_bnd.geojson"; //full json file for Jeps
 //$.getJSON('GEOJSON/'+MapName+'_9.geojson', function(data) { //NOV 2025        
 //$.getJSON('GEOJSON/'+MapName+'_1.geojson', function(data) { //DEC 2025
 //$.getJSON('GEOJSON/'+MapName+'_2.geojson', function(data) { //MAR 2026
-$.getJSON('geojson/taxa/'+MapName+'_3.geojson', function(data) { //APR 2026
+//$.getJSON('geojson/taxa/'+MapName+'_3.geojson', function(data) { //APR 2026
+//$.getJSON('geojson/'+MapName+'_3.geojson', function(data) { //SEP 2026
+$.getJSON('geojson/'+MapName+'_4.geojson', function(data) { //SEP 2026
 
 //geojson specimen dot map configurations
 
@@ -4002,9 +3826,7 @@ $.getJSON('geojson/taxa/'+MapName+'_3.geojson', function(data) { //APR 2026
 		
   map.on('zoomend', function() {
 	var currentZoom = map.getZoom();
-
-//geojson specimen dot map has different configurations for different zoom settings
-
+	
 	  if (currentZoom <= 5) {
 
 		geojsonLayerP = L.geoJson(data, {
@@ -4054,9 +3876,29 @@ $.getJSON('geojson/taxa/'+MapName+'_3.geojson', function(data) { //APR 2026
 // Make the popup
 			                                                        
 //"DET": "Galium stellatum var. eremicum","CO": "San Bernardino","LOC"          
-					onEachFeature: function (feature, layer) {
-			         layer.bindPopup(feature.properties.DET+"<br><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br>"+feature.properties.CO+" County<br>"+feature.properties.LOC);
-					},
+						onEachFeature: function (feature, layer) {
+							// 1. Start with your default popup content (e.g., cchID)
+							let popupContent = "<strong>"+feature.properties.DET+"</strong><br>"+ feature.properties.accid+"<br>"+feature.properties.CO+"<br>"+feature.properties.LOC+"<br>";
+
+							// 2. Check if seiID exists and is not an empty string
+							if (feature.properties.seiID && feature.properties.seiID.trim() !== "") {
+							let url = "https://swbiodiversity.org/seinet/collections/individual/index.php?occid=" + feature.properties.seiID; 
+							popupContent += '<a href="' + url + '"&clid=0" target="_blank">View SEINet Record</a>';
+							}
+
+							// 3. Check if seiID exists and is not an empty string
+							if (feature.properties.cchID && feature.properties.cchID.trim() !== "") {
+							let url = "https://cch2.org/portal/collections/individual/index.php?occid=" + feature.properties.cchID; 
+							popupContent += '<a href="' + url + '"&clid=0" target="_blank">View CCH2 Record</a>';
+							}
+							
+							// 4. Bind the complete content to the layer
+							layer.bindPopup(popupContent);
+						},
+					//old code
+					//onEachFeature: function (feature, layer) {
+			        // layer.bindPopup(feature.properties.DET+"<br /><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br />"+feature.properties.CO+" County<br />"+feature.properties.LOC);
+					//},
 					pointToLayer: function (feature, latlng) {
 			// Get the icon
 						return L.marker(latlng, {
@@ -4076,9 +3918,30 @@ $.getJSON('geojson/taxa/'+MapName+'_3.geojson', function(data) { //APR 2026
 
 					geojsonLayerP = L.geoJson(data, {
 			// Make the popup
+
 						onEachFeature: function (feature, layer) {
-				         layer.bindPopup(feature.properties.DET+"<br><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br>"+feature.properties.CO+" County<br>"+feature.properties.LOC);
+							// 1. Start with your default popup content (e.g., cchID)
+							let popupContent = "<strong>"+feature.properties.DET+"</strong><br>"+ feature.properties.accid+"<br>"+feature.properties.CO+"<br>"+feature.properties.LOC+"<br>";
+
+							// 2. Check if seiID exists and is not an empty string
+							if (feature.properties.seiID && feature.properties.seiID.trim() !== "") {
+							let url = "https://swbiodiversity.org/seinet/collections/individual/index.php?occid=" + feature.properties.seiID; 
+							popupContent += '<a href="' + url + '"&clid=0" target="_blank">View SEINet Record</a>';
+							}
+
+							// 3. Check if seiID exists and is not an empty string
+							if (feature.properties.cchID && feature.properties.cchID.trim() !== "") {
+							let url = "https://cch2.org/portal/collections/individual/index.php?occid=" + feature.properties.cchID; 
+							popupContent += '<a href="' + url + '"&clid=0" target="_blank">View CCH2 Record</a>';
+							}
+							
+							// 4. Bind the complete content to the layer
+							layer.bindPopup(popupContent);
 						},
+					//old code
+						//onEachFeature: function (feature, layer) {
+				        // layer.bindPopup(feature.properties.DET+"<br /><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br />"+feature.properties.CO+" County<br />"+feature.properties.LOC);
+						//},
 						pointToLayer: function (feature, latlng) {
 			// Get the icon
 							return L.marker(latlng, {
@@ -4097,9 +3960,30 @@ $.getJSON('geojson/taxa/'+MapName+'_3.geojson', function(data) { //APR 2026
 
 					geojsonLayerP = L.geoJson(data, {
 					// Make the popup
+
 						onEachFeature: function (feature, layer) {
-				         layer.bindPopup(feature.properties.DET+"<br><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br>"+feature.properties.CO+" County<br>"+feature.properties.LOC);
+							// 1. Start with your default popup content (e.g., cchID)
+							let popupContent = "<strong>"+feature.properties.DET+"</strong><br>"+ feature.properties.accid+"<br>"+feature.properties.CO+"<br>"+feature.properties.LOC+"<br>";
+
+							// 2. Check if seiID exists and is not an empty string
+							if (feature.properties.seiID && feature.properties.seiID.trim() !== "") {
+							let url = "https://swbiodiversity.org/seinet/collections/individual/index.php?occid=" + feature.properties.seiID; 
+							popupContent += '<a href="' + url + '"&clid=0" target="_blank">View SEINet Record</a>';
+							}
+
+							// 3. Check if seiID exists and is not an empty string
+							if (feature.properties.cchID && feature.properties.cchID.trim() !== "") {
+							let url = "https://cch2.org/portal/collections/individual/index.php?occid=" + feature.properties.cchID; 
+							popupContent += '<a href="' + url + '"&clid=0" target="_blank">View CCH2 Record</a>';
+							}
+							
+							// 4. Bind the complete content to the layer
+							layer.bindPopup(popupContent);
 						},
+					//old code
+						//onEachFeature: function (feature, layer) {
+				        // layer.bindPopup(feature.properties.DET+"<br /><a href=/consortium/details.php?aid="+feature.properties.accid+">"+feature.properties.accid+"</a><br />"+feature.properties.CO+" County<br />"+feature.properties.LOC);
+						//},
 						pointToLayer: function (feature, latlng) {
 						// Get the icon
 							return L.marker(latlng, {
@@ -5176,24 +5060,67 @@ $.getJSON(CABND ,function(data){
 
 
 </script>
+                </div>
+            </div>
 
-</td>
-</tr>
+            <div class="map-legend-text">
+                <p class="smallText">Data provided by participants of the <a href="/consortium/about.html">Consortium of California Herbaria</a>.</p>
+                <ul class="legend-list smallText">
+                    <li><strong>Blue:</strong> Specimen maps to expected Jepson subdivision.</li>
+                    <li><strong>Purple:</strong> Garden, greenhouse, or non-wild collection.</li>
+                    <li><strong>Yellow:</strong> Flags for range revision or georeferencing issues.</li>
+                    <li><a href="/consortium/about_yellow.html">Read more about yellow flags</a></li>
+                </ul>
 
-<!--START FIFTH ROW LEFT SIDE SECTION, Geographic subdivisions comments and Heath Bars-->
-
-<tr>
-<td valign="top">
-
-<p class=smallText>(Note: any qualifiers in the taxon distribution description, such as 'northern', 'southern', 'adjacent' etc., are not reflected in the map above, and in some cases indication of a taxon in a subdivision is based on a single collection or author-verified occurrence).
-</p>
-<br>
-<p>
-    <h3>External Links:</h3>
-
+            <div class="export-notice smallText">
+                <p>If you would like a custom query export of data from this map, please email <a href="mailto:jason_alexander@berkeley.edu">Jason Alexander</a>.</p>
+            </div>
 
 
+            </div>
+        </section>
+
+        <!-- Box 4: Phenology / Heath Bar (Below Specimen Map Text) -->
+        <section class="data-section phenology-box">
 <?php
+//a.k.a. "heath bars"
+
+//The original =hb script made modifications to the stripped ScientificName
+//then made them lower case in order to match the values in the hb hash table
+//There is no reason that this cannot be done with the taxon ID instead
+//then there is no confusion matching by a modified taxon name if
+//cch1 hash table has mistakes that do not match names in the eFlora
+
+//the hb2 script takes the flowering/fruiting/spore/cone time as input, e.g. "&FT=3,4,5" for Mar-May. This is pre-loaded in the FLFRTimeCode field
+
+?>
+
+            <h3>Flowering & Fruiting Phenology</h3>
+            <p class="smallText">Mapped specimen collections, sorted by month:</p>
+            
+            <div class="heath-bar-wrapper">
+                <img src="/cgi-bin/eflora/hb2?id=<?php echo $TaxonID; ?>&FT=<?php echo $TimeCode; ?>" 
+                     alt="Phenology monthly counts for <?php echo $ScientificName; ?>" 
+                     class="heath-bar-img">
+            </div>
+
+
+            <ul class="smallText phenology-notes">
+                <li>Duplicates counted once; synonyms included.</li>
+                <li>Blue line denotes eFlora flowering/fruiting time.</li>
+            </ul>
+
+        </section>
+
+
+    <!-- EXTERNAL LINKS & PHENOLOGY -->
+		<div class="links-legend-grid">
+            <h3>External Resources</h3>
+            <ul style="list-style: none; padding: 0;">
+<?php
+
+$displayName = htmlspecialchars($ScientificName);
+
 //START LEFT SIDE BLOCK, SECOND ROW, CNPS rare plant link
 
 	#the CNPS conversion in SQL is not working for subtaxa
@@ -5204,10 +5131,8 @@ $.getJSON(CABND ,function(data){
 		}
 
 		if (!empty($RarityStatus)){ 
-			echo '<a href="https://rareplants.cnps.org/Plants/Details?taxon='.$CNPS_name.'"><b>Listed on CNPS Rare Plant Inventory</b></a><br>';
+			echo '<li><a href="https://rareplants.cnps.org/Plants/Details?taxon='.$CNPS_name.'"><b>Listed on CNPS Rare Plant Inventory</b></a></li>';
 		}
-//END LEFT SIDE BLOCK, SECOND ROW, CNPS rare plant link
-
 
 //START LEFT SIDE BLOCK, FIRST ROW, weediness links
 
@@ -5215,7 +5140,7 @@ $.getJSON(CABND ,function(data){
 
 	if (!empty($Weediness)){
 		if (strstr($Weediness, 'SYMBOL 1') !== false){ 
-			echo '<p class="BodyText"><a href="https://www.cdfa.ca.gov/plant/IPC/encycloweedia/weedinfo/winfo_table-sciname.html"><b>Noxious Weed listed on the CDFA Weed Pest Ratings table</b></a></p>';
+			echo '<li><a href="https://www.cdfa.ca.gov/plant/IPC/encycloweedia/weedinfo/winfo_table-sciname.html"><b>Noxious Weed listed on the CDFA Weed Pest Ratings table</b></a></li>';
 		}
 //new CDFA weed ranking sheets, indexed by page number of some sort, not taxon name
 //This has to be updated manually and added to a new table in eflora.db 
@@ -5228,13 +5153,13 @@ $.getJSON(CABND ,function(data){
 		if (!empty($CDFA_ID)){
 			if (strstr($Weediness, 'SYMBOL 1') !== false){
 				$CDFAurl = "https://blogs.cdfa.ca.gov/Section3162/?p=".$CDFA_ID;
-				echo '<p class="BodyText"><a href="'.$CDFAurl.'"><b>Weed listed by Cal-IPC</b></a></p>';
+				echo '<li><a href="'.$CDFAurl.'"><b>Weed listed by Cal-IPC</b></a></li>';
 			}
 		}
 		else{
 			$CDFA_name = str_replace(" ", "+", $ScientificName);
 			$CDFAurl = "https://blogs.cdfa.ca.gov/Section3162/?s=".$CDFA_name;
-			echo '<p class="BodyText"><a href="'.$CDFAurl.'"><b>View the CDFA Pest Rating page for <i>'.$ScientificName.'</i></b></a></p>';
+			echo '<li><a href="'.$CDFAurl.'"><b>View the CDFA Pest Rating page for <i>'.$ScientificName.'</i></b></a></li>';
 		}
 	
 		if (strstr($Weediness, 'SYM') !== false){
@@ -5247,8 +5172,6 @@ $.getJSON(CABND ,function(data){
 			//replace all other spaces in name with -
 			$IPC_search_name = str_replace(" ", "-", $IPC_name);
 		//fix some irregular formats in the calIPC website 
-				$IPC_search_name = str_replace("acacia-dealbata", "acacia_dealbata", $IPC_search_name);
-				$IPC_search_name = str_replace("acacia-melanoxylon", "acacia_melanoxylon", $IPC_search_name);
 				$IPC_search_name = str_replace("lythrum-hyssopifolia", "lythrum-hyssopifolium", $IPC_search_name);
 				$IPC_search_name = str_replace("ludwigia-peploides-ssp-montevidensis", "ludwigia-peploides", $IPC_search_name);
 				$IPC_search_name = str_replace("ludwigia-peploides-ssp-peploides", "ludwigia-peploides", $IPC_search_name);
@@ -5257,7 +5180,7 @@ $.getJSON(CABND ,function(data){
 				$IPC_search_name = str_replace("tetragonia-tetragonoides", "tetragonia-tetragonioides", $IPC_search_name);
 
 			$url = 'https://www.cal-ipc.org//plants/profile/'.$IPC_search_name.'-profile/';
-			echo '<p class="BodyText"><a href="'.$url.'"><b>Weed listed by Cal-IPC</b></a></p>';
+			echo '<li><a href="'.$url.'"><b>Weed listed by Cal-IPC</b></a></li>';
 		}
 	}
 	else{
@@ -5268,101 +5191,44 @@ $.getJSON(CABND ,function(data){
 		$hb_name = null;
 		$Weediness = null;
 	}
-
 //END LEFT SIDE BLOCK, FIRST ROW, weediness links
 
-?>
+//START LEFT SIDE BLOCK, FIRST ROW, Tropicos name links
+// The Regex below is required by several links below the tropicos one
+//Keep this even thouigh tropicos is blocking external search attempts
+	$tropicos_name = preg_replace('/^([A-Z][a-z-]+) ([a-z-]+).*/', '$1%20$2', $displayName);
+//END LEFT SIDE BLOCK, FIRST ROW, Tropicos name links
 
-
-<?php
-//START LEFT SIDE BLOCK, THIRD ROW, USDA plant links
-/**
- * Queries the USDA backend search service to find the exact alphanumeric symbol
- * for a given genus and species, fallback to a keyword search if not found.
- *
- * @param string $genus   Plant Genus
- * @param string $species Specific epithet
- * @return string The exact USDA profile link or a graceful search-fallback link
- */
-//function getUSDASymbolLink(string $ScientificName): string {
-
-    //Extract the symbol from the database
-    //
-//    if (!empty($data['symbol'])) {
-//        $symbol = $data['symbol']; // Alphanumeric code (e.g., 'QURU')
-//        return "https://plants.sc.egov.usda.gov/plant-profile/" . urlencode($symbol);
-//    }
-//    else{
-//    $profileUrl = "";
-//    }
-
-//    return $profileUrl;
-//}
-
-//$profileUrl = getUSDASymbolLink($ScientificName);
-$displayName = htmlspecialchars($ScientificName);
-
-    if (!empty($profileUrl)) {
-		echo '<p>USDA Plants Link:';
-		echo '<a href="';
-		echo htmlspecialchars($profileUrl); 
-		echo '" target="_blank" rel="noopener"><strong>';
-		echo $displayName; 
-		echo '</strong> Profile</a></p>';
-	}
-?>
-
-
-<?php
 //START LEFT SIDE BLOCK, FIRST ROW, Calflora name links
+
 
 	#Make the CalPhotos Name
 	$CF_name = str_replace(' ', '+', $displayName);
 	$CF_name = str_replace('subsp.', 'ssp.', $CF_name);
 
 
-	echo '<p class="BodyText"><a href="https://www.calflora.org/cgi-bin/species_query.cgi?where-taxon=';
+	echo '<li><a href="https://www.calflora.org/cgi-bin/species_query.cgi?where-taxon=';
 	echo $CF_name;
-	echo '">Calflora Taxon report</a></p>';
+	echo '">Calflora Taxon report</a></li>';
 
 
 //END LEFT SIDE BLOCK, FIRST ROW, Calflora name links
 
-//START LEFT SIDE BLOCK, FIRST ROW, plantID.net name links
+//START LEFT SIDE BLOCK, FIRST ROW, calscape name links
 
-	echo '<p class="BodyText"><a href="https://calscape.org/search/?plant=';
+	echo '<li><a href="https://calscape.org/search/?plant=';
 	echo $tropicos_name;
-	echo '">Calscape profile page</a></p>';
+	echo '">Calscape profile page</a></li>';
 
 
-//END LEFT SIDE BLOCK, FIRST ROW, Tropicos name links
-
-
-
-
-//END LEFT SIDE BLOCK, FIRST ROW, plantID.net name links
-
-//START LEFT SIDE BLOCK, FIRST ROW, Tropicos name links
-// The Regex is needed by more than the tropicos link, so keep it
-	$tropicos_name = preg_replace('/^([A-Z][a-z-]+) ([a-z-]+).*/', '$1%20$2', $displayName);
- 
-// Output: Abies%20magnifica
-
-//this needs more work since Tropicos is blocking external links to searches
-//
-//	echo '<p class=smallText><a href="https://www.tropicos.org/nameSearch?name=';
-//	echo $tropicos_name;
-//	echo '">Taxonomic information from the Missouri Botanical Garden (Tropicos)</a></p>';
-
-
-//END LEFT SIDE BLOCK, FIRST ROW, Tropicos name links
+//END LEFT SIDE BLOCK, FIRST ROW, calscape name links
 
 
 //START LEFT SIDE BLOCK, FIRST ROW, plantID.net name links
 
-	echo '<p class="BodyText"><a href="https://plantid.net/Gallery.aspx?Taxon=';
+	echo '<li><a href="https://plantid.net/Gallery.aspx?Taxon=';
 	echo $tropicos_name;
-	echo '">PlantID.net profile page</a></p>';
+	echo '">PlantID.net profile page</a></li>';
 
 
 //END LEFT SIDE BLOCK, FIRST ROW, Tropicos name links
@@ -5371,112 +5237,79 @@ $displayName = htmlspecialchars($ScientificName);
 
 //START LEFT SIDE BLOCK, FIRST ROW, Painter Common name links
 
-	echo '<p class="BodyText">Elizabeth Painter\'s ';
-	echo '<a href="/cgi-bin/icpn/get_painter_common?';
+	echo '<li>Elizabeth Painter&prime;s ';
+	echo '<a href="/cgi-bin/eflora/get_painter_common?';
 	echo $TaxonID;
-	echo' ">common name index</a></p>';
+	echo' ">common name index</a></li>';
 
 
 //END LEFT SIDE BLOCK, FIRST ROW, Painter Common name links
-
 ?>
+            </ul>
+
+	    </div>
 
 
-<!--END FIFTH ROW LEFT SIDE SECTION, Geographic subdivisions and External Links -->
-
-
-<!--START FIFTH ROW RIGHT SIDE SECTION, specimen map comments & legend-->
-<td>
-<p class=smallText>
-Data provided by the participants of the&nbsp;
-<?php echo '<a href="/consortium/about.html">Consortium of California Herbaria</a>'?>.
-</p>
-<p class=smallText><b>MAP LEGEND</b>
-
-<ul>
-<li class=smallText>All markers link to CCH2 and GBIF specimen records. The original determination is shown in the popup window.</li>
-<li class=smallText>Blue markers indicate specimens that map to one of the expected Jepson geographic subdivisions (see left map). Purple markers indicate specimens collected from a garden, greenhouse, or other non-wild location.</li>
-<li class=smallText>Yellow markers indicate records that may provide evidence for eFlora range revision or may have georeferencing or identification issues.</li>
-<li class=smallText><b><a href="/consortium/about_yellow.html">READ ABOUT YELLOW FLAGS</a></b></li>
-</ul>
-
-</p>
-
-<p class=smallText><b>
-Mapped specimen collections, sorted by month</b></p>
-
-<?php
-//a.k.a. "heath bars"
-
-//The original =hb script made modifications to the stripped ScientificName
-//then made them lower case in order to match the values in the hb hash table
-//There is no reason that this cannot be done with the taxon ID instead
-//then there is no confusion matching by a modified taxon name if
-//cch1 hash table has mistakes that do not match names in the eFlora
-
-//the hb2 script takes the flowering/fruiting/spore/cone time as input, e.g. "&FT=3,4,5" for Mar-May. This is pre-loaded in the FLFRTimeCode field
-if (!empty($TimeCode)){
-	echo '<img border=1 src="/cgi-bin/eflora/hb2?id='.$TaxonID.'&FT='.$TimeCode.'" ALT="Flowering-Fruiting Monthly Counts">';
-}	
-else {
-	echo '<img border=1 src="/cgi-bin/eflora/hb2?id='.$TaxonID.'&FT=" ALT="Flowering-Fruiting Monthly Counts">';
-}	
-?>
-
-<p class=smallText><ul><li>Duplicates counted once; synonyms included</li>
-<li>Species do not include records of infraspecific taxa, if there are more than 1 infraspecific taxon in CA</li>
-<li>Blue line denotes eFlora flowering time (fruiting time in some monocot genera)</li></ul></p>
-
-<p class=smallText><b>Geospatial Specimen Database Exports</b>
-<ul>
-<li class=smallText>Specimen data is currently limited to being displayed on the Jepson eFlora taxon maps.</li>
-<br>
-<li class=smallText>If you would like a custom query export of the data from this map,<br>
-please e-mail Jason Alexander &nbsp;&nbsp;(<a class="CCHtable" href="mailto:jason_alexander@berkeley.edu">jason_alexander@berkeley.edu</a>).</span></li>
-</ul>
-</p>
-
-<!--END FIFTH ROW RIGHT SIDE SECTION, specimen map comments & legend-->
-
-</td></tr>
-<!--END FIFTH ROW -->
-
-</table>	
-
-<table id="EF_citation">
-<tr>
-<td>
-
-
-<p>
-<a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">
-	Send us your feedback and/or questions! Community input helps improve the Jepson eFlora.
-</a>
-</p>
-<p class=bodyText>
-
-<?php echo "Citation for this treatment: ";
-	  echo preg_replace("/\[[^\]]+\]/","",$JMAuthor); 
-	  if ($RevDate){ echo " ".$RevDate.", ";}
-	  echo "<i>".$ScientificName."</i>, ";
-	  echo "in Jepson Flora Project (eds.) <em>Jepson eFlora</em>, ";
-	  	if ($RevNumber){ echo $RevNumber.", ";}
-	  echo "https://ucjeps.berkeley.edu/eflora/eflora_display.php?tid=".$TID.", accessed on "?> <?php echo date ("F d, Y")?>.
-</p>
-<p class=bodyText>Citation for the whole project: Jepson Flora Project (eds.) <?php echo date ("Y") ?>, <em>Jepson eFlora</em>,  https://ucjeps.berkeley.edu/eflora/, accessed on <?php echo date ("F d, Y")?>.</p>
-
-</td></tr>
-</table>	
-
-
-
+    </div>
 </div>
+
 </main>
 
-<!--begin footer-->
-<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/footer.php'); ?>
-<!--end footer-->
+    <!-- SEPARATOR BAR HERE -->
+    <hr class="footer-separator">
 
+    <!-- Feedback CTA -->
+    <section class="feedback-section center-text">
+        <a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">
+            Send us your feedback! Community input helps improve the Jepson eFlora.
+        </a>
+    </section>
+
+
+
+<!-- Footer -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora-footer.php'); ?>
 
 </body>
 </html>
+
+<!--Removed Nested Tables: All sections are now wrapped in div, section, or article tags with a logical vertical flow.-->
+<!--AAA Typography: The base font is handled by your jepson-main.css, and the hero header uses a massive 2.8rem size for the scientific name.-->
+<!--Reflow (Mobile): On small screens, the Illustration moves below the Description, and the Specimen Map moves below the Static Map.-->
+<!--Touch Targets: The jQuery toggles for higher taxonomy are now <button> elements with a minimum height and padding, making them easier to tap than the previous tiny blue links.-->
+<!--Interactive Map: The Leaflet map (#map_canvas) is now width-responsive (100%), ensuring it doesn't break the page container on small devices.-->
+<!--Accessibility (Images): All generated images now include meaningful alt text incorporating the PHP $ScientificName variable.-->
+<!--Mobile Performance: Interactive Leaflet maps can be heavy to load and difficult to navigate with a thumb on small screens (often causing the user to get "stuck" in the map while trying to scroll down). Hiding it on mobile improves page speed and prevents scrolling issues.-->
+<!--CalPhotos Column: On desktop, having 4-5 images per row makes the best use of the wide screen. On mobile, the vertical column (flex-direction: column) allows the user to see larger, clearer images of the plant without the text becoming squished or unreadable.-->
+<!--WCAG AAA: By setting a max-width: 300px for the mobile image column, we ensure that the images don't stretch into pixelated versions, maintaining high visual quality.-->
+
+<!--Logical Column Flow: On PC, Subdivisions and External Links stay grouped on the left. The Interactive Map and the Phenology (Heath Bar) stay grouped on the right.-->
+<!--Sequential Right Column: The right side now flows: Map -> Legend Text -> Heath Bar -> Export Notice.-->
+<!--Phenology Position: The Flowering/Fruiting map is now its own distinct section within the right column, placed exactly below the map legend as requested.-->
+<!--Accessibility (AAA): Used !important on the footer CSS to override any lingering white-text rules, ensuring 100% compliance for black text on light backgrounds.-->
+<!--Touch Targets: Links in the External Resources box are spaced out with gap: 12px to ensure they are easy to tap on mobile.-->
+
+<!--Semantic Cleanup: By using if ($hasMedia), we prevent an empty <aside> tag from rendering at all. This is better for SEO and screen readers.-->
+<!--CSS Grid Control: By default, a grid with grid-template-columns: 1fr will expand to fill all available horizontal space. On desktop, we only apply the 1.6fr 1fr split if the has-media-grid class is present.-->
+<!--Future-Proof: If you ever add a new media type (like a 3D model or audio clip), you just add it to the $hasMedia check at the top, and the layout will automatically handle the columns correctly.-->
+<!--Mobile-First: On mobile devices, both versions will look identical (stacked), which is the most accessible way to display content on small screens.-->
+
+<!--HEATH BAR-->
+<!--Padding Adjustment: On a desktop, 20px of padding looks nice. On a narrow phone, 20px on each side steals 40px of total width from the image. By dropping padding to 8px on mobile, the chart itself becomes significantly larger and easier to read.-->
+<!--Width vs. Max-Width: Using width: 100% ensures that if the container grows (like when columns stack on mobile), the image grows with it immediately.-->
+<!--Crisp Rendering: Phenology charts are often "line art" with small text (J, F, M, A...). The image-rendering properties prevent the browser from "blurring" the image when it scales it up, keeping the text readable for users with low vision.-->
+<!--No Fixed Heights: By using height: auto, the image will never look squashed or distorted regardless of the device's aspect ratio.-->
+
+<!--return to home link-->
+<!--WCAG AAA Touch Targets: By wrapping the link in a div or using the button class, we ensure there is enough "hit area" for mobile users to tap without clicking something else.-->
+<!--Breadcrumb Style: Adding the arrow (&larr;) in Option 1 helps users with cognitive disabilities understand that this link takes them "back" or "up" a level.-->
+<!--Color Standards: Because you are using standard <a> tags or the .googleForm class, the colors will automatically use the AAA-compliant blue (#0058a3 or #003262) defined in your CSS.-->
+<!--Centered: Using the .center-text class ensures it aligns with your 70% width search boxes and timeline image.-->
+
+
+<!--Alphabetical index bar-->
+<!--Large Targets: Every link is now a minimum of 44x44 pixels. It is impossible to miss, even with a thumb or a shaky cursor.-->
+<!--No Pipes: By removing the | and using a list (<ul>), screen readers will say "List with 26 items" and then allow the user to jump letter by letter.-->
+<!--Perfect Wrapping: Flexbox handles the layout. On a phone, it might show 6 letters per row; on a tablet 10; on a desktop all 26. It will never look broken.-->
+<!--Visual Clarity: The light grey background makes it clear that these are interactive "zones," not just plain text.-->
+<!--AAA Compliance: The colors meet the high contrast ratio, and the focus state (#FDB515 gold ring) is highly visible for keyboard-only users.-->

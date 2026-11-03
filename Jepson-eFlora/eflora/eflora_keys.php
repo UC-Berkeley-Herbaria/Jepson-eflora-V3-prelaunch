@@ -148,12 +148,25 @@ exit();
 
             <!-- Key Navigation Links -->
             <nav class="search-group" aria-label="Key Navigation" style="background: #f8f9fa; border: 1px solid #ddd; padding: 20px; margin-top: 30px;">
-                <p style="margin-bottom: 10px; font-weight: bold; color: var(--berkeley-blue);">Vascular Plants of California</p>
-                <div style="display: flex; gap: 20px; flex-wrap: wrap;">
+		       <p style="margin-bottom: 10px; font-weight: bold; color: var(--berkeley-blue);">Vascular Plants of California</p>
+                <div style="display: flex; gap: 20px; flex-wrap: wrap; border-bottom: 2px solid var(--berkeley-blue); padding-bottom: 20px;">
                     <a href="/eflora/keys/IJM_fam_key.php">Key to families</a>
                     <span aria-hidden="true" style="color: #ccc;">|</span>
-                    <a href="/eflora/toc.php">Table of families and genera</a>
+                    <a href="/eflora/toc.php">Table of families and genera</a><span aria-hidden="true" style="color: #ccc;">|</span>
+                    <a href="/eflora/" style="font-weight: bold;">Return to <i>Jepson eFlora</i> Resource Portal</a>
                 </div>
+		          <div class="search-centered-container" style="padding-top: 20px;">
+		            <form action="search_eflora.php" method="get" class="centered-form">
+		                <label for="name" class="search-label">Scientific Name Search:</label>
+		                <div class="input-row">
+		                    <input type="text" id="name" name="name" placeholder="Enter a scientific name..." required>
+		                    <div class="button-group">
+		                        <button type="submit" class="btn btn-submit">Submit</button>
+		                        <button type="reset" class="btn btn-reset">Reset</button>
+		                    </div>
+		                </div>
+		            </form>
+		          </div>
             </nav>
         </section>
 
@@ -168,6 +181,7 @@ exit();
                     <?php echo $Title; ?>
                 </h2>
 
+			<?php if (stripos($SciName, ' Group ') === false): ?>
                 <div style="margin: 20px 0;">
                     <a href="/eflora/eflora_display.php?tid=<?php echo $TID; ?>" style="font-size: 1.25rem; font-weight: bold;">
                         View taxon page for <?php echo $SciName; ?>
@@ -177,6 +191,9 @@ exit();
                 <?php if (!preg_match($pattern, $SciName)): ?>
                     <p class="bodyTextBlack">(For a list of taxa in <i><?php echo $SciName; ?></i>, use the above link.)</p>
                 <?php endif; ?>
+
+			<?php endif; ?>
+
 
                 <!-- Glossary Usage Instructions -->
                 <div class="citation" style="margin: 30px 0; background-color: #f0f7ff;">

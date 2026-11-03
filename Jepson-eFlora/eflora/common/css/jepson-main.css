@@ -13,19 +13,15 @@
     --h3-size: 1.5rem;
 }
 
-/* --- Force Footer Text to Black --- */
-.site-footer, 
-.site-footer p, 
-.site-footer a, 
-.site-footer .copyright, 
-.site-footer .legal a {
-    color: #000000 !important; /* Forces black text */
-    text-decoration: underline; /* Ensures links are identifiable for AAA */
+
+/* Ensure herbaria branding sections stay white */
+.herbaria-banner a{
+    color: #ffffff !important;
+    text-decoration: none;
 }
 
-.site-footer a:hover {
-    color: #003262 !important; /* Dark Berkeley Blue on hover */
-    text-decoration: none;
+.herbaria-banner a:hover {
+    text-decoration: underline;
 }
 
 /* Ensure the blue header bars STAY white while the footer stays black */
@@ -35,6 +31,7 @@
 .herbaria-banner h2 {
     color: #FFFFFF !important;
 }
+
 
 body {
     margin: 0;
@@ -46,14 +43,15 @@ body {
 }
 
 
-
 /* --- Hero Section --- */
 .eflora-hero {
     background: #e6e0cc; /* Fallback */
-    padding: 80px 20px;
+    /* [MODIFIED: Reduced vertical padding from 80px to 20px] */
+    padding: 20px 20px;
     text-align: center;
     border-bottom: 5px solid #003262;
 }
+
 
 .hero-overlay h2 {
     font-size: var(--h1-size);
@@ -69,8 +67,10 @@ body {
 .eflora-main {
     max-width: 1100px;
     margin: 0 auto;
-    padding: 40px 20px;
+    /* [MODIFIED: Reduced vertical padding from 40px to 15px] */
+    padding: 15px 20px;
 }
+
 
 .intro-copy p {
     margin-bottom: 1.5rem;
@@ -93,9 +93,10 @@ a:hover, a:focus {
 /* --- Forms (WCAG 2.2 Target Size) --- */
 .search-group {
     background: #f4f4f4;
-    padding: 25px;
+    /* [MODIFIED: Reduced padding from 25px to 15px] */
+    padding: 15px;
     border: 1px solid var(--border-gray);
-    margin-bottom: 25px;
+    margin-bottom: 15px;
 }
 
 .search-group label {
@@ -222,19 +223,24 @@ input[type="text"] {
     padding: 0 20px;
 }
 
+
 /* --- KeyBase Row Section --- */
 .kb-row-section {
-    padding: 40px 0;
+    /* [MODIFIED: Reduced padding from 40px to 15px] */
+    padding: 15px 0;
     width: 100%;
 }
 
 .kb-card {
     border: 2px solid #767676; /* AAA contrast border */
-    padding: 40px;
+    /* [MODIFIED: Reduced padding from 40px to 20px] */
+    padding: 20px;
     text-align: center;
     background-color: #f9f9f9;
-    max-width: 600px; /* Constrains the card so it doesn't get too wide */
-    margin: 20px auto;
+    max-width: 600px; 
+    margin: 10px auto;
+        /* [MODIFIED: Reduced margin from 20px to 10px] */
+
 }
 
 .kb-card img {
@@ -296,9 +302,11 @@ input[type="text"] {
 
 /* --- Geography Row Section --- */
 .geography-row-section {
-    padding: 40px 0;
+    /* [MODIFIED: Reduced padding from 40px to 15px] */
+    padding: 15px 0;
     width: 100%;
 }
+
 
 /* AAA Accessibility: Prevents lines of text from being too long for comfortable reading */
 .max-width-p {
@@ -534,24 +542,26 @@ h3 {
 
 /* --- Footer & Citations --- */
 
-/* Ensure all text and links within the blue footer bars are white */
+/* --- Force Footer Text to Black --- */
 .site-footer, 
 .site-footer p, 
-.site-footer a,
-.bottom-blue-bar a,
-.top-blue-bar a {
-    color: #FFFFFF !important;
+.site-footer a, 
+.site-footer .copyright, 
+.site-footer .legal a {
+    color: #000000 !important; /* Forces black text */
+    text-decoration: underline; /* Ensures links are identifiable for AAA */
 }
+
+.site-footer a:hover {
+    color: #003262 !important; /* Dark Berkeley Blue on hover */
+    text-decoration: none;
+}
+
 
 /* Specifically target that feedback link if it's inside a blue section */
 .spacer_grey .feedbackLink, 
 .site-footer .feedbackLink {
     color: #FFFFFF !important;
-}
-
-.project-info {
-    border-top: 2px solid #003262;
-    padding-top: 40px;
 }
 
 .citation {
@@ -568,12 +578,12 @@ h3 {
 }
 
 
-
 /* --- Centered Footer Styles --- */
 .site-footer {
-    text-align: center;      /* Centers inline-block and text elements */
-    padding: 40px 20px;
-    background-color: #f4f4f4; /* Light gray for contrast */
+    text-align: center;      
+    /* [MODIFIED: Reduced padding from 40px to 20px] */
+    padding: 20px 20px;
+    background-color: #f4f4f4; 
     border-top: 4px solid #003262;
     width: 100%;
 }
@@ -608,18 +618,20 @@ h3 {
     line-height: 1.5;
 }
 
-/* --- Project Info Footer (The section above the final footer) --- */
+/* --- Project Info Footer --- */
 .project-info {
-    text-align: center;     /* Centers the heading and citation */
+    text-align: center;     
     border-top: 2px solid #003262;
-    padding-top: 40px;
-    margin-top: 40px;
+    /* [MODIFIED: Reduced padding from 40px to 20px] */
+    padding-top: 20px;
+    margin-top: 20px;
 }
 
 .project-info .citation {
     display: inline-block;  /* Allows the citation box to center */
     text-align: left;       /* Keeps text readable inside the centered box */
-    margin: 20px auto;
+    margin: 10px auto;
+    /* [MODIFIED: Reduced margin from 20px to 10px] */
     max-width: 800px;
 }
 
@@ -707,16 +719,6 @@ h3 {
     display: inline-block;
     margin-top: 5px;
     text-decoration: none;
-}
-
-/* Ensure branding sections (headers/footers) stay white */
-.herbaria-banner a, .site-footer a, .site-footer p {
-    color: #ffffff !important;
-    text-decoration: none;
-}
-
-.herbaria-banner a:hover {
-    text-decoration: underline;
 }
 
 /* High-specificity override to force legal text to black */
@@ -869,16 +871,19 @@ h3 {
 
 /* --- Instructional Search Tip Box --- */
 .search-tip-box {
-    background-color: #ffffff; /* Clean white background */
-    border: 1px solid #767676; /* AAA contrast border */
-    border-left: 8px solid #003262; /* Berkeley Blue accent cue */
-    padding: 20px 25px;
-    margin: 20px 0;
+    background-color: #ffffff; 
+    border: 1px solid #767676; 
+    border-left: 8px solid #003262; 
+    /* [MODIFIED: Reduced padding from 20px 25px to 12px 18px] */
+    padding: 12px 18px;
+    margin: 10px 0;
     border-radius: 4px;
     box-shadow: 0 2px 5px rgba(0,0,0,0.05);
     width: 100%;
-    box-sizing: border-box; /* Ensures padding doesn't break width */
+    box-sizing: border-box; 
 }
+
+
 
 .search-tip-box p {
     margin: 0;

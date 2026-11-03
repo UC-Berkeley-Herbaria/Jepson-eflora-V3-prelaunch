@@ -209,39 +209,6 @@ a:hover, a:focus {
     border-left: 4px solid #ddd;
 }
 
-/* --- Table Styles (Zebra Striped) --- */
-.table-responsive {
-    width: 100%;
-    overflow-x: auto;
-    margin: 20px 0;
-}
-
-.eFloraTable {
-    width: 100%;
-    border-collapse: collapse;
-    border: 1px solid var(--border-color);
-}
-
-.eFloraTable th {
-    background-color: var(--berkeley-blue);
-    color: #fff !important;
-    padding: 15px;
-    text-align: left;
-}
-
-.eFloraTable td {
-    padding: 15px;
-    border-bottom: 1px solid #eee;
-}
-
-/* Zebra Striping: Light Blue for even rows */
-.eFloraTable tbody tr:nth-child(even) {
-    background-color: #f0f7ff;
-}
-
-.eFloraTable tbody tr:hover {
-    background-color: #e1efff;
-}
 
 /* --- Mobile Specific Overrides --- */
 @media (max-width: 991px) {

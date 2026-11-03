@@ -4,6 +4,48 @@ date_default_timezone_set('America/Los_Angeles');
 ?>
 
 <!DOCTYPE html>
+ 
+<html lang="en">  
+
+<head>
+<title>ICPN About Page</title>
+
+<meta charset="UTF-8">
+<meta name="description" content="For vascular plants occurring in wildlands or otherwise outside of cultivation in California, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys.">
+  <meta name="keywords" content="California Flora, Jepson eFlora, Flora of California, Vascular Plants of California, Jepson Flora Project, ">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<link href="/common/css/dropdowns.css" rel="stylesheet" type="text/css" />
+
+<link href="common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
+
+<link rel="shortcut icon" href="/common/images/JepsonLogoSmall.png" type="image/x-icon" />
+
+<!--mobile js script files-->
+<script src="/common/js/dh_custom.js"></script>
+
+<!-- Google tag (gtag.js) -->
+<script async src="https://www.googletagmanager.com/gtag/js?id=G-JCLW1NZYB5"></script>
+<script>
+  window.dataLayer = window.dataLayer || [];
+  function gtag(){dataLayer.push(arguments);}
+  gtag('js', new Date());
+
+  gtag('config', 'G-JCLW1NZYB5');
+</script>
+
+</head>
+
+<body>
+<div class="spacer_grey">
+
+<!-- Begin banner -->
+<?php include($_SERVER['DOCUMENT_ROOT'].'/common/php/header.php'); ?>
+<!-- End banner -->
+
+
+
+<!DOCTYPE html>
 <html lang="en">
 <head>
     <title>ICPN About Page - Jepson eFlora</title>

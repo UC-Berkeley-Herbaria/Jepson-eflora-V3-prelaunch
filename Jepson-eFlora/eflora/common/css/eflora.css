@@ -3,6 +3,7 @@
    Standards: WCAG 2.2 AAA, Mobile Responsive
    ========================================================================== */
 
+
 :root {
     --ef-blue: #003262;
     --ef-light-bg: #f8f9fa;
@@ -10,7 +11,27 @@
     --ef-border: #767676;
 }
 
+.initiallyHidden {
+    display: none;
+    /* [MODIFIED: Reduced padding from 20px to 10px] */
+    padding: 10px;
+    background: #fff;
+    border: 1px dashed #ccc;
+    margin: 5px 0;
+    animation: fadeIn 0.3s ease-in;
+}
+
 /* --- Hero Taxon Header --- */
+.hero-taxon {
+    text-align: center;
+    /* [MODIFIED: Reduced vertical padding from 20px to 10px] */
+    padding: 10px 10px;
+    background: #f0f4f8;
+    margin-bottom: 5px;
+    border-bottom: 5px solid var(--ef-blue);
+}
+
+
 .hero-taxon {
     text-align: center;
     padding: 20px 10px;
@@ -64,16 +85,6 @@
 }
 
 .tax-toggle-btn:hover { background: var(--ef-blue); color: #fff; }
-
-.initiallyHidden {
-    display: none;
-    padding: 20px;
-    background: #fff;
-    border: 1px dashed #ccc;
-    margin: 10px 0;
-    /* Add a slight fade-in effect */
-    animation: fadeIn 0.3s ease-in;
-}
 
 
 /* --- Higher Taxonomy Toggles --- */
@@ -268,7 +279,8 @@ blockquote.bodyText strong {
 .data-section {
     background: #fff;
     border: 1px solid #ddd;
-    padding: 30px;
+    /* [MODIFIED: Reduced padding from 30px to 15px] */
+    padding: 15px;
     box-sizing: border-box;
     width: 100%;
 }
@@ -276,7 +288,8 @@ blockquote.bodyText strong {
 .media-column {
     text-align: center;
     background: var(--ef-accent);
-    padding: 20px;
+    /* [MODIFIED: Reduced padding from 20px to 10px] */
+    padding: 10px;
     border: 1px solid #ddd;
 }
 
@@ -340,7 +353,8 @@ blockquote.bodyText strong {
 
 .legend-box {
     background: var(--ef-light-bg);
-    padding: 20px;
+    /* [MODIFIED: Reduced padding from 20px to 10px] */
+    padding: 10px;
     border: 1px solid #ddd;
 }
 
@@ -381,10 +395,11 @@ blockquote.bodyText strong {
     background: #fff;
     border: 1px solid #ddd;
     text-align: center;
-    margin: 30px auto; /* More vertical space to stand out */
-    padding: 20px;  /* Desktop padding */
+    margin: 15px auto; /* [MODIFIED: Reduced vertical space] */
+    /* [MODIFIED: Reduced padding from 20px to 10px] */
+    padding: 10px;  
     box-sizing: border-box;
-    box-shadow: 0 2px 10px rgba(0,0,0,0.05); /* Professional lift */
+    box-shadow: 0 2px 10px rgba(0,0,0,0.05); 
     width: 75%;
 }
 
@@ -430,10 +445,13 @@ blockquote.bodyText strong {
             margin-top: 5px;
             font-weight: 500;
         }
-        .erratum-entry {
-            padding: 25px 0;
-            border-bottom: 1px solid #ddd;
-        }
+
+		.erratum-entry {
+	    /* [MODIFIED: Reduced padding from 25px to 12px] */
+		    padding: 12px 0;
+		    border-bottom: 1px solid #ddd;
+		}
+
         .erratum-date {
             font-weight: bold;
             color: var(--berkeley-blue);

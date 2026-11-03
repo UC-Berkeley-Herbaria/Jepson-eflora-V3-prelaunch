@@ -63,6 +63,11 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
         <h1>Jepson eFlora Common Name Search Results</h1>
     </header>
 
+    <!-- return home link -->
+<div class="center-text" style="margin-top: 30px;">
+    <a href="/eflora/" style="font-weight: bold;">&larr; Return to <i>Jepson eFlora</i> Search Page</a>
+</div>
+
     <!-- Navigation & Index Bars -->
     <nav class="icpn-nav-block" aria-label="eFlora Navigation">
         <!-- Standardized Horizontal Search Form -->
@@ -169,7 +174,7 @@ $db = mysqli_connect($db_host, $db_user, $db_pw, $db_name);
             <!-- Alphabetical Index -->
             <h3 id="alpha-title" style="margin-top: 0;">Alphabetical Index to eFlora scientific names</h3>
             <div class="index-bar" style="margin-bottom: 10px;">
-            	<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora_index_bar.php'); ?>
+            	<?php include($_SERVER['DOCUMENT_ROOT'].'/eflora/common/php/eflora_index_bar.html'); ?>
         	</div>
         </nav>
     </div>

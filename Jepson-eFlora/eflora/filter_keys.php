@@ -62,80 +62,28 @@
 <!--            <a href="https://keybase.rbg.vic.gov.au">KeyBase</a> is a dichotomous key platform hosted by Royal Botanical Gardens, Victoria. It allows you to "filter" keys with a regional checklist, automatically removing leads that do not pertain to your specific area.-->
 <!--        </p>-->
 
-    <section class="intro-copy">
-
-        <!-- DROPDOWN SELECTOR -->
-        <div class="search-group" style="padding: 25px; background: #f0f7ff;">
-            <label for="region-select" style="font-weight: bold; display: block; margin-bottom: 10px;">Get Started: Select a Region</label>
-            <select id="region-select" onchange="window.location=this.value" style="width: 100%; max-width: 500px; padding: 12px; height: 48px;">
-                <option value="">Select a region...</option>
-                <?php 
-                $keybase_URL='https://keybase.rbg.vic.gov.au/projects/show/11?filter_id='; 
-                echo "<option value='".$keybase_URL."65711209297e3'>CA-FP (California Floristic Province)</option>"; 
-                echo "<option value='".$keybase_URL."65207c1c00253'>&nbsp;&nbsp;NW (Northwestern CA)</option>";
-                echo "<option value='".$keybase_URL."6520bf5d52cd7'>&nbsp;&nbsp;SN (Sierra Nevada)</option>";
-                echo "<h2> (Include all other options here following this pattern)</h2>";
-                ?>
-            </select>
-        </div>
-    </section>
-
-    <!-- RESPONSIVE GRID: Map and List -->
-    <div class="treatment-grid has-media-grid">
-        
-        <!-- Column 1: Map -->
-        <div class="media-column" style="background: none; border: none;">
-            <h3>Bioregion Map</h3>
-            <img src="/eflora/common/images/exploded_map.png" alt="Exploded Map of California Bioregions" style="border: 1px solid #ccc;">
-            
-            <div class="citation" style="margin-top: 20px; text-align: left;">
-                <p><strong>Note on Filters:</strong> KeyBase filters are based on authored range assertions. Many populations occur outside these ranges. If a filtered key fails, try using a more relaxed filter (e.g., use the full Sierra Nevada filter instead of a specific District).</p>
-            </div>
-        </div>
-
-        <!-- Column 2: Hierarchical List -->
-        <div class="data-section">
-            <h3>Regional Key Links</h3>
-            <p>Click on any link below to view the filtered key in KeyBase.</p>
-            
-            <div class="links-list" style="margin-top: 20px;">
-                <!-- CA-FP -->
-                <div style="margin-bottom: 15px;">
-                    <a href="<?php echo $keybase_URL; ?>65711209297e3" style="font-size: 1.2rem;"><strong>CA-FP</strong> California Floristic Province</a>
-                </div>
-
-                <!-- Nested Example: NW -->
-                <div style="padding-left: 20px; border-left: 2px solid #eee;">
-                    <a href="<?php echo $keybase_URL; ?>65207c1c00253"><strong>NW</strong> Northwestern California</a>
-                    <div style="padding-left: 20px; font-size: 0.95rem;">
-                        <a href="<?php echo $keybase_URL; ?>65207c9ec5a68"><strong>NCo</strong> North Coast subregion</a><br>
-                        <a href="<?php echo $keybase_URL; ?>65207d079cd58"><strong>NCoR</strong> North Coast Ranges</a>
-                    </div>
-                </div>
-
-                <!-- Nested Example: SN -->
-                <div style="padding-left: 20px; border-left: 2px solid #eee; margin-top: 15px;">
-                    <a href="<?php echo $keybase_URL; ?>6520bf5d52cd7"><strong>SN</strong> Sierra Nevada</a>
-                    <div style="padding-left: 20px; font-size: 0.95rem;">
-                        <a href="<?php echo $keybase_URL; ?>6520c1d1d138d"><strong>nSN</strong> northern SN subregion</a><br>
-                        <a href="<?php echo $keybase_URL; ?>6520c2623b603"><strong>cSN</strong> central SN subregion</a>
-                    </div>
-                </div>
-
-                <h2> Add other groups (GV, CW, SW, GB, D) following the same structure </h2>
-            </div>
+<!-- ROW: Keys Informed by Geography (KeyBase) -->
+<section class="kb-row-section">
+    <div class="row-container">
+        <h3 class="center-text">Keys Informed by Geography</h3>
+        <div class="kb-card">
+            <a href="filter_keys.php" 
+               aria-label="Access KeyBase Filter Keys">
+                <img src="common/images/KeyBase-Logo.png" 
+                     alt="KeyBase: Taxonomic key system logo">
+            </a>
+            <p>Keybase filter keys will be restored in a future update.</p>
         </div>
     </div>
+</section>
+
+<hr class="section-divider">
+
+
+
 
     <!-- TEXT FOOTER CONTENT -->
     <section class="data-section" style="margin-top: 40px; border-top: 2px solid var(--berkeley-blue);">
-        <p class="bodyTextBlack">
-            The Jepson eFlora divides California into 35 ecologically distinct <strong>bioregions</strong>. These range from the finest scale (e.g., Sonoran Desert) to grouped districts within subregions. All regions are nested within three main provinces (CA-FP, GB, D).
-        </p>
-
-        <p class="bodyTextBlack">
-            Each terminal taxon treatment in the eFlora indicates the bioregions where it is asserted to occur. You can generate custom checklists for any region using our <a href="/eflora/tools/">eFlora Tools</a>.
-        </p>
 
         <div style="margin-top: 20px;">
             <a href="/eflora/geography.php" style="font-weight: bold;">Full Descriptions of Geographic Subdivisions &rarr;</a>

@@ -34,17 +34,14 @@
 
 <main>
 
-<!-- Hero Banner -->
-	<section class="eflora-hero" aria-labelledby="hero-title">
-	    <!-- Hidden title for Screen Readers (AAA Accessibility) -->
-	    <h1 id="hero-title" class="visually-hidden">The Jepson eFlora - Provided by the Jepson Herbarium, UC Berkeley</h1>
-    
-	    <div class="hero-container">
-	        <img src="common/images/Front-page-banner.png" 
-	             alt="The Jepson eFlora, Provided by the Jepson Herbarium, UC Berkeley" 
-	             class="hero-graphic">
-	    </div>
-	</section>
+    <!-- Hero Banner -->
+    <section class="eflora-hero">
+        <div class="hero-overlay">
+            <h2>The Jepson eFlora</h2>
+            <p class="hero-sub">Provided by the Jepson Herbarium</p>
+
+        </div>
+    </section>
 
     <!-- Main Content Container -->
     <main class="eflora-main">
@@ -63,27 +60,29 @@
                 <div class="search-forms">
                     <p class="search-label">Search for:</p>
                     
-
                     <div class="search-group">
-							<form action="search_eflora.php" method="GET">
-								<label for="name" class="visually-hidden">• Scientific Name</label>
-								<input type="text" placeholder="Enter a scientific name..." id="name" name="name">
-								<!-- Explicitly define the types -->
-								<button type="submit" class="btn btn-submit">Submit Name</button>
-								<button type="reset" class="btn btn-reset">Reset</button>
+                        <label>• Scientific Name</label>
+                        <div class="input-row">
+
+							<form action="search_eflora.php" method="get">
+								<input type="text" id="name" name="name" placeholder="Enter a scientific name..." required>
+                            	<button class="btn btn-submit">Submit Name</button>
+                            	<button class="btn btn-reset">Reset</button>
 							</form>
+                        </div>
                     </div>
 
-
                     <div class="search-group">
-							<form action="search_common.php" method="GET">
-								<label for="cn" class="visually-hidden">• Common Name</label>
-								<input type="text" placeholder="Enter a common name..." id="cn" name="cn">
-								<!-- Explicitly define the types -->
-								<button type="submit" class="btn btn-submit">Submit Name</button>
-								<button type="reset" class="btn btn-reset">Reset</button>
-							</form>
-                    </div>
+						<label>• Common Name</label>
+							<div class="input-row">
+								<form action="search_common.php" method="GET">
+								<input type="text"  placeholder="Enter a common name..." id="cn" name="cn"></input>
+                            	<button class="btn btn-submit">Submit Name</button>
+                            	<button class="btn btn-reset">Reset</button>
+							
+								</form>
+							</div>
+					</div>
 
 
                     <ul class="quick-links">
@@ -107,70 +106,45 @@
 
         <hr class="section-divider">
 
-<!-- ROW: Geography -->
-<section class="geography-row-section">
-    <div class="row-container center-text">
-        <h3>Geography</h3>
-        <p class="max-width-p">The Jepson bioregions provide an eco-geographic context for biodiversity that can aid in plant identification. The geographic system used in the Jepson eFlora combines features of natural landscapes and biota to delimit the geographic units. The bioregions reflect broad patterns of natural vegetation, geology, topography and climate.</p>
-        
-        <p><strong>What are the geographic subdivisions of California?</strong></p>
-        
-        <div class="map-feature">
-            <a href="geography.php" aria-label="Explore California Bioregions Map">
-                <img src="common/images/Bioregions.png" alt="Map of California Floristic Provinces and Bioregions">
-            </a>
-        </div>
-    </div>
-</section>
-
-<!-- ROW: Keys Informed by Geography (KeyBase) -->
-<section class="kb-row-section">
-    <div class="row-container">
-        <h3 class="center-text">Keys Informed by Geography</h3>
-        <div class="kb-card">
-            <a href="filter_keys.php" 
-               aria-label="Access KeyBase Filter Keys">
-                <img src="common/images/KeyBase-Logo.png" 
-                     alt="KeyBase: Taxonomic key system logo">
-            </a>
-            <p>Keybase filter keys will be restored in a future update.</p>
-        </div>
-    </div>
-</section>
-
-<hr class="section-divider">
-
-
-
-<!-- Tools Icon Section -->
-<section class="tools-container" aria-label="Jepson eFlora Resources and Tools">
-    <div class="tool-card">
-        <a href="https://herbaria.berkeley.edu/floras/jepson-eflora/jepson-eflora-glossary/" aria-label="Open the Botanical Glossary">
-            <div class="tool-image-wrapper">
-                <img src="common/images/Glossary.png" alt="Close-up of a yellow flowering branch representing the Glossary">
+        <!-- Geography Section -->
+        <section class="geography-grid">
+            <div class="geo-info">
+                <h3>Geography</h3>
+                <p>The Jepson bioregions provide an eco-geographic context for biodiversity that can aid in plant identification. 
+                The geographic system used in the Jepson eFlora combines features of natural landscapes and biota to delimit the geographic units. 
+                The bioregions reflect broad patterns of natural vegetation, geology, topography and climate.</p>
+                <div class="map-feature">
+                    <a href="https://herbariadb.berkeley.edu/eflora/geography.php" class="efloradb-nav-link"><img src="common/images/exploded_map.png" alt="California Bioregions Map"></a>
+                    <p><strong>What are the geographic subdivisions of California?</strong></p>
+                </div>
             </div>
-            <h4>Glossary</h4>
-        </a>
-    </div>
-
-    <div class="tool-card">
-        <a href="/eflora/tools/" aria-label="Open Jepson eFlora Tools">
-            <div class="tool-image-wrapper">
-                <img src="common/images/Jepson-eFlora-Tools.png" alt="Yellow and blue wildflowers representing eFlora Tools">
+            
+            <div class="keybase-feature">
+                <div class="kb-card">
+                    <a href="https://herbariadb.berkeley.edu/eflora/filter_keys.php" class="efloradb-nav-link"><img src="common/images/KeyBase.png" alt="KeyBase Logo"></a>
+                    <p>Keybase filter keys will be restore in a future update</p>
+                    <!--<p>Use the Jepson Bioregions to narrow the number of taxa included in a taxonomic key.</p>-->
+                </div>
             </div>
-            <h4>Jepson eFlora Tools</h4>
-        </a>
-    </div>
+        </section>
 
-    <div class="tool-card">
-        <a href="https://herbaria.berkeley.edu/floras/jepson-eflora/jepson-eflora-conventions/" aria-label="Open User's Guide">
-            <div class="tool-image-wrapper">
-                <img src="common/images/Users-Guide.png" alt="Researcher in a field of wildflowers representing the User's Guide">
+        <hr class="section-divider">
+
+        <!-- Tools Icon Section -->
+        <section class="tools-container">
+            <div class="tool-card">
+                <a href="https://herbaria.berkeley.edu/floras/jepson-eflora/jepson-eflora-glossary/"><img src="Glossary.png" alt="Glossary"></a>
+                <h4>Glossary</h4>
             </div>
-            <h4>User's Guide</h4>
-        </a>
-    </div>
-</section>
+            <div class="tool-card">
+                <a href="/eflora/tools/"><img src="icon-tools.png" alt="Tools"></a>
+                <h4>Jepson eFlora Tools</h4>
+            </div>
+            <div class="tool-card">
+                <a href="https://herbaria.berkeley.edu/floras/jepson-eflora/jepson-eflora-conventions/"><img src="Users-Guide.png" alt="User Guide"></a>
+                <h4>User's Guide</h4>
+            </div>
+        </section>
 
         <!-- Project Info -->
         <footer class="project-info">
