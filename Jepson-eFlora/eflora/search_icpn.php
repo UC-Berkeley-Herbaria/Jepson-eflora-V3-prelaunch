@@ -32,6 +32,7 @@ if (isset($_POST['query'])){
 
 //prep value for searching
 	$TaxonName = str_replace("%20", " ", $TaxonName);
+	$TaxonName = str_replace("&times;", "", $TaxonName);
 	$TaxonName = str_replace("+", " ", $TaxonName);
 	$TaxonName = str_replace("_", " ", $TaxonName);
 	$TaxonName = str_replace("\s+", " ", $TaxonName); 
@@ -42,7 +43,7 @@ if (isset($_POST['query'])){
   }
 
 
-require '../../ucjeps_data/ucjeps_data/config/config_eflora.php';
+require '/config/config_eflora.php';
 //require 'config/config.php';
 $db = new SQLite3($database_location);
 
@@ -50,10 +51,10 @@ $db = new SQLite3($database_location);
 
 
 
-<html xmlns="http://www.w3.org/1999/xhtml">
+<html lang="en"> 
 <head><title>California Flora - Jepson eFlora Search; Vascular Plants of California, Jepson Herbarium</title>
 
-<link href="/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
+<link href="/common/css/dropdowns.css" rel="stylesheet" type="text/css" />
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
@@ -134,8 +135,10 @@ $results = $stmt->execute();
 //because when the while loop runs fetchArray, it is moving on to the second row
 //so if the first row isn't printed before the while loop, the results will start with the second row.
 	if ($row = $results->fetchArray()) {
-		echo '<div class="eFloraTable"><table border="1">';
-		echo '<tr><td>Scientific Name</td><td>Common Name</td><td></td></tr>';
+
+	  echo '<div class="eFloraTable"><table border="1">';
+		echo '<tr ><td><span class="tdTitle">Scientific Name</span></td><td><span class="tdTitle">Common Name</span></td><td><span class="tdTitle">Status</span></td></tr>';
+
 		if ($row['AcceptedNameTID']){ //if it has an AcceptedNameTID, then it's a synonym, so print the synonym line
 			$row['Status'] = str_replace("Noted Name", "Mentioned in<br>a note", $row['Status']);
 			echo '<tr><td><a href="/eflora/eflora_display.php?tid='.$row['AcceptedNameTID'].'">'.$row['ScientificName'].'</a><br>(Under '.$row['AcceptedName'].')</td>';
@@ -214,8 +217,10 @@ $results = $stmt->execute();
 //because when the while loop runs fetchArray, it is moving on to the second row
 //so if the first row isn't printed before the while loop, the results will start with the second row.
 	if ($row = $results->fetchArray()) {
-		echo '<div class="eFloraTable"><table border="1">';
-		echo '<tr><td>Scientific Name</td><td>Common Name</td><td></td></tr>';
+
+	  echo '<div class="eFloraTable"><table border="1">';
+		echo '<tr ><td><span class="tdTitle">Scientific Name</span></td><td><span class="tdTitle">Common Name</span></td><td><span class="tdTitle">Status</span></td></tr>';
+
 		if ($row['AcceptedNameTID']){ //if it has an AcceptedNameTID, then it's a synonym, so print the synonym line
 			$row['Status'] = str_replace("Noted Name", "Mentioned in<br>a note", $row['Status']);
 			echo '<tr><td><a href="/eflora/eflora_display.php?tid='.$row['AcceptedNameTID'].'">'.$row['ScientificName'].'</a><br>(Under '.$row['AcceptedName'].')</td>';
@@ -293,8 +298,10 @@ $results = $stmt->execute();
 //because when the while loop runs fetchArray, it is moving on to the second row
 //so if the first row isn't printed before the while loop, the results will start with the second row.
 	if ($row = $results->fetchArray()) {
-		echo '<div class="eFloraTable"><table border="1">';
-		echo '<tr><td>Scientific Name</td><td>Common Name</td><td></td></tr>';
+
+	  echo '<div class="eFloraTable"><table border="1">';
+		echo '<tr ><td><span class="tdTitle">Scientific Name</span></td><td><span class="tdTitle">Common Name</span></td><td><span class="tdTitle">Status</span></td></tr>';
+
 		if ($row['AcceptedNameTID']){ //if it has an AcceptedNameTID, then it's a synonym, so print the synonym line
 			$row['Status'] = str_replace("Noted Name", "Mentioned in<br>a note", $row['Status']);
 			echo '<tr><td><a href="/eflora/eflora_display.php?tid='.$row['AcceptedNameTID'].'">'.$row['ScientificName'].'</a><br>(Under '.$row['AcceptedName'].')</td>';
@@ -362,7 +369,7 @@ $results = $stmt->execute();
 <br>
 <!--<a href="mailto:interchange@lists.berkeley.edu"><span class="feedbackLink">Feedback/Contact<span></a><br>
 -->
-<p class=bodyText><a href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform"><font size=3 color="red">Please use this Google Form for Contact/Feedback</font></a>
+<p class=bodyText><a href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">Please use this Google Form for Contact/Feedback</a>
 
 </td>
 </tr>

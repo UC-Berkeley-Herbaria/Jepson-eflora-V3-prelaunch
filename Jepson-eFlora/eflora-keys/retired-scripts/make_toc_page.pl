@@ -3,9 +3,9 @@ use BerkeleyDB::Hash;
 #use warnings;
 #use strict;
 use BerkeleyDB;
-use lib "/Users/Shared/Jepson-Master/Jepson-eFlora/Modules/";
+use lib "../Modules/";
 use flatten;
-use CCH;
+use CCH1;
 
 my %TNOAN;
 my %IJM_key;
@@ -23,7 +23,7 @@ my ($count_lines, $count, $family, $group, %FAM,%combine) = "";
 
 
 
-open(IN, "/Users/Shared/Jepson-Master/Jepson-eFlora/synonymy/input/smasch_taxon_ids.txt") || die;
+open(IN, "../Synonymy/input/smasch_taxon_ids.txt") || die;
 while(<IN>){
 	chomp;
 	s/X /&times;/;
@@ -47,35 +47,21 @@ open(OUT, ">output/toc.html") || die;
 
 print OUT <<EOP;
 
-<?php
 
-date_default_timezone_set('America/Los_Angeles');
-
-?>
-<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
-<html xmlns="http://www.w3.org/1999/xhtml">
+<!DOCTYPE html>
+ 
+<html lang="en"> 
 
 <head>
-<title>Table of Contents: Jepson eFlora, Jepson Herbarium </title>
+
+<title>Jepson eFlora: Table of Contents</title>
 <meta charset="UTF-8">
 <meta name="description" content="For vascular plants occurring in wildlands or otherwise outside of cultivation in California, the Jepson eFlora contains taxonomic treatments, distribution maps, illustrations, photographs, and identification keys.">
   <meta name="keywords" content="California Flora, Jepson eFlora, Flora of California, Vascular Plants of California, Jepson Flora Project, ">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
-<link href="/common/styles/dropdowns.css" rel="stylesheet" type="text/css" />
-<link href="/common/css/jepson_eflora.css" rel="stylesheet" type="text/css" />
-<link rel="shortcut icon" href="/common/images/JepsonLogoSmall.png" type="image/x-icon" />
+<link href="/common/css/jepson_eflora.css" rel="stylesheet" type="text/css">
 
-
-
-<style type="text/css" media="screen">
-
-#ckboxes {	/* pushes checkbox a little from sidebar left edge */
-	padding-left: 10px;
-}
-
-
-</style>
 
 <!-- Google tag (gtag.js) -->
 <script async src="https://www.googletagmanager.com/gtag/js?id=G-T5YC99QF6Q"></script>
@@ -87,48 +73,147 @@ date_default_timezone_set('America/Los_Angeles');
   gtag('config', 'G-T5YC99QF6Q');
 </script>
 
+  <script>
+    function myFunction() {
+      var x = document.lastModified;
+      document.getElementById("demo").innerHTML = x;
+
+	var objToday = new Date(),
+		domEnder = function() { var a = objToday; if (/1/.test(parseInt((a + "").charAt(0)))) return "th"; a = parseInt((a + "").charAt(1)); return 1 == a ? "st" : 2 == a ? "nd" : 3 == a ? "rd" : "th" }(),
+		dayOfMonth = today + ( objToday.getDate() < 10) ? '0' + objToday.getDate() + domEnder : objToday.getDate() + domEnder,
+		months = new Array('January', 'February', 'March', 'April', 'May', 'June', 'July', 'August', 'September', 'October', 'November', 'December'),
+		curMonth = months[objToday.getMonth()],
+		curYear = objToday.getFullYear();
+	var today = dayOfMonth + " " + curMonth + " " + curYear;
+
+	document.getElementById("DateA").innerHTML = today; 
+	document.getElementById("DateB").innerHTML = today; 
+
+    }
+  </script>
+
 
 </head>
 
-<body>
+<body onload="myFunction()">
 
-<!-- Begin banner -->
-<?php include(\$_SERVER['DOCUMENT_ROOT'].'/common/php/header_jeps.php'); ?>
-<!-- End banner -->
+<div class="header">
+<header>
+ <table style="background-color: #003366;">
+ <tr>
+	<td style="width:100vw;">
 
-<!-- Beginning of horizontal menu -->
-<?php include(\$_SERVER\['DOCUMENT_ROOT'].'/common/php/globalnav.php'); ?> 
-<!-- End of horizontal menu -->
+    <div class="section1" style="display: inline-block">
+		<div style="display: block">
+            <a class="efTag" href="/jeps/" title="Jepson Herbarium">
+                <img class="JEPS" src="/common/images/JepsonLogoSmall.png" alt="Jepson Herbarium (JEPS) logo image" title="Jepson Herbarium">
+            </a>
+		</div>
+		<div style="margin-bottom: 5px; display: block">
+    	<span class="logoText">Jepson&nbsp;Herbarium</span>
+		</div>
+    </div>
 
-<!-- Start of sidebar menu-->
-<?php include(\$_SERVER['DOCUMENT_ROOT'].'/common/php/localnav_media.php'); ?>
-<!-- End of sidebar --> 
+    <div class="section2" style="display: inline-block">
+			<div class="titleTextHead">The University and Jepson Herbaria</div>
+			<div class="titleTextTag">University of California, Berkeley</div>
+    </div>
 
-	 <table align="center" width="100%">
-	  <tr>
-		<td>&nbsp;</td>
-		<td>&nbsp;</td>
-		<td>
-<!--eFlora index-->
+</td></tr>
+</table>
+</header>
+</div>
 
-<?php include(\$_SERVER['DOCUMENT_ROOT'].'/common/php/front_page_index_bar.php'); ?>
+	<nav aria-label="global navigation menu" tabindex="0">
+<table class="horizMenu" align="center">
+<tr>
+<td>
+	<ul>
+    	<li class="globalNav"><a class="globalNav" href="/">Home</a></li>
+        <li class="globalNav"><a class="globalNav" href="/main/collections.html">About &#x25BE;</a>
+        	<ul>
+                <li class="globalNav"><a class="globalNavSub" href="/main/collections.html#UC">About the Collections</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/directory.html">People</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/guidelines.html">Visiting the Herbaria</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/volunteer.html">Volunteering</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/policies.html">Policies</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/history/">History</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/research/">Research &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="/main/research/faculty.html">Faculty Research Programs</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/jepsonflora/Herb_Pubs.html">Herbarium Publications</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/jepsonflora/">Jepson Flora Project</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/CPD/algal_research.html">Silva Center for Phycological <br>Documentation</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/bryolab/CPPP/">California Plant Phylodiversity Project</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/databases.html">Databases &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="https://webapps.cspace.berkeley.edu/ucjeps/publicsearch/publicsearch/">UC/JEPS Specimen Portal</a></li>
+            	<li class="globalNav"><a class="globalNavSub" href="https://webapps.cspace.berkeley.edu/ucjeps/searchmedia/search/">UC/JEPS Slide Image Collection</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/consortium/">Consortium of California Herbaria</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/interchange/">Jepson Online Interchange</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/db/icpn/">Index of California Plant Names</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/INA.html">Index Nominum Algarum</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/db/JPNI.html">Jepson Place Name Index</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/baker/">Baker Seed Collection</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="">eFloras &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="/eflora/">Jepson eFlora</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/CA_moss_eflora/">California Moss eFlora</a></li>
+				<li class="globalNav"><a class="globalNavSub" href="/seaweedflora/seaweedflora.html">Seaweed Flora of California<br>(Upcoming)</a></li>
+              	<li class="globalNav"><a class="globalNavSub" href="/efc/">Ecological Flora of California</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/education.html">Education &amp; Outreach &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="/workshops/">Public Workshops</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/opportunities.html">Academic Opportunities</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/news/botanylunch/">Botany Lunch Seminar</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/jeps/globe/"><i>The Jepson Globe</i></a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/media/">Videos and Educational Resources</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/archives/">Archives &#x25BE;</a>
+        	<ul>
+            	<li class="globalNav"><a class="globalNavSub" href="/main/archives/archives_overview.html">Collections Overview</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/archon/">Archives Database</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/main/archives/images.html">Images</a></li>
+                <li class="globalNav"><a class="globalNavSub" href="/images/fieldbooks/jepson_fieldbooks.html">Jepson Field Books</a></li>
+            </ul>
+        </li>
+        <li class="globalNav"><a class="globalNav" href="/main/directory.html">Contact</a></li>
+        <li class="globalNav"><a class="globalNav" href="/jeps/friends/donate/">Donate</a></li>
+    </ul>
 
-<!--end eFlora index-->
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-   </tr>
-  <tr>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-
-    <td width="100%"><span class="pageName"><a href="/eflora/">Jepson eFlora:</a> Table of families and genera</span><br /><br />
-
-<div id="content">
-
-<table width="95%" border="2" align="center" cellpadding="1" cellspacing="0" bordercolor="#C0DFFD">
-<tr><th class="pageSubheading">Section</th><th valign="middle" class="pageSubheading">Family</th>
-<th class="pageSubheading" width="60%">Genera</th>
+</td>
 </tr>
+</table>
+</nav>
+
+
+<div class="efBody">
+
+<h1>Jepson eFlora: Table of families and genera</h1>
+
+
+<p><a class="googleForm" href="https://docs.google.com/forms/d/e/1FAIpQLSc_wrQXqB9gNPrOgUTZ9WN38Ub08JlmgaIha7Ua99sHGzMntA/viewform">Please use this Google Form for Contact/Feedback</a>
+
+
+<h2>Citation for the whole project: Jepson Flora Project (eds.) <span id="YYYY"> </span>. Jepson eFlora, https://ucjeps.berkeley.edu/eflora/ [accessed on <span id="DateA"> </span>]</h2> 
+<script>
+  var CYEAR = new Date().getFullYear(); 
+  document.getElementById("YYYY").innerText = CYEAR; 
+</script>
+<br>
+<br>
+
+<div class="eFloraTable"><table>
+<tr><th>Section</th><th>Family</th><th>Genera</th></tr>
 
 
 EOP
@@ -252,7 +337,7 @@ $fam_id = $TNOAN{$family};
 		foreach ($genus){
 				++$count;
 			if ($family eq $FAM{$genus}){
-				$combine{$family} .= "<a href='/eflora/eflora_display.php?tid=".$taxon_id."'>".$genus."</a>&nbsp;|&nbsp;"; 
+				$combine{$family} .= '<a class="efTag" href="/eflora/eflora_display.php?tid='.$taxon_id.'">'.$genus.'</a>&nbsp;|&nbsp;'; 
 			}
 		}
 	}
@@ -346,65 +431,65 @@ $fam_id = $TNOAN{$family};
 
 			if ($group =~ m/^Lycophytes/i){
 				unless ($seen{$family}++){#one line per family
-					print OUT "<tr bgcolor='#dddddd'><td>".$group."</td><td valign='middle'>";
-					print OUT "<a href='/eflora/eflora_display.php?tid=".$fam_id."'>".$family."</a></td>";
-					print OUT "<td valign='middle'>".$combine{$family}."</td></tr>\n";
+					print OUT "<tr bgcolor='#dddddd'><td>".$group."</td><td>";
+					print OUT '<a class="efTag" href="/eflora/eflora_display.php?tid='.$fam_id.'">'.$family.'</a></td>';
+					print OUT "<td>".$combine{$family}."</td></tr>\n";
 				}
 			}
 			
 			if ($group =~ m/^Ferns/i){
 				unless ($seen{$family}++){#one line per family
-					print OUT "<tr><td>".$group."</td><td valign='middle'>";
-					print OUT "<a href='/eflora/eflora_display.php?tid=".$fam_id."'>".$family."</a></td>";
-					print OUT "<td valign='middle'>".$combine{$family}."</td></tr>\n";
+					print OUT "<tr><td>".$group."</td><td>";
+					print OUT '<a class="efTag" href="/eflora/eflora_display.php?tid='.$fam_id.'">'.$family.'</a></td>';
+					print OUT "<td>".$combine{$family}."</td></tr>\n";
 				}
 			}
 
 			if ($group =~ m/^GYMNOSPERMS/i){
 				unless ($seen{$family}++){#one line per family
-					print OUT "<tr bgcolor='#dddddd'><td>".$group."</td><td valign='middle'>";
-					print OUT "<a href='/eflora/eflora_display.php?tid=".$fam_id."'>".$family."</a></td>";
-					print OUT "<td valign='middle'>".$combine{$family}."</td></tr>\n";
+					print OUT "<tr bgcolor='#dddddd'><td>".$group."</td><td>";
+					print OUT '<a class="efTag" href="/eflora/eflora_display.php?tid='.$fam_id.'">'.$family.'</a></td>';
+					print OUT "<td>".$combine{$family}."</td></tr>\n";
 				}
 			}
 
 			if ($group =~ m/^NYMPHAEALES/i){
 				unless ($seen{$family}++){#one line per family
-					print OUT "<tr><td>".$group."</td><td valign='middle'>";
-					print OUT "<a href='/eflora/eflora_display.php?tid=".$fam_id."'>".$family."</a></td>";
-					print OUT "<td valign='middle'>".$combine{$family}."</td></tr>\n";
+					print OUT "<tr><td>".$group."</td><td>";
+					print OUT '<a class="efTag" href="/eflora/eflora_display.php?tid='.$fam_id.'">'.$family.'</a></td>';
+					print OUT "<td>".$combine{$family}."</td></tr>\n";
 				}
 			}
 
 			if ($group =~ m/^MAGNOLIIDS/i){
 				unless ($seen{$family}++){#one line per family
-					print OUT "<tr bgcolor='#dddddd'><td>".$group."</td><td valign='middle'>";
-					print OUT "<a href='/eflora/eflora_display.php?tid=".$fam_id."'>".$family."</a></td>";
-					print OUT "<td valign='middle'>".$combine{$family}."</td></tr>\n";
+					print OUT "<tr bgcolor='#dddddd'><td>".$group."</td><td>";
+					print OUT '<a class="efTag" href="/eflora/eflora_display.php?tid='.$fam_id.'">'.$family.'</a></td>';
+					print OUT "<td>".$combine{$family}."</td></tr>\n";
 				}
 			}
 
 			if ($group =~ m/^CERATOPHYLLALES/i){
 				unless ($seen{$family}++){#one line per family
-					print OUT "<tr><td>".$group."</td><td valign='middle'>";
-					print OUT "<a href='/eflora/eflora_display.php?tid=".$fam_id."'>".$family."</a></td>";
-					print OUT "<td valign='middle'>".$combine{$family}."</td></tr>\n";
+					print OUT "<tr><td>".$group."</td><td>";
+					print OUT '<a class="efTag" href="/eflora/eflora_display.php?tid='.$fam_id.'">'.$family.'</a></td>';
+					print OUT "<td>".$combine{$family}."</td></tr>\n";
 				}
 			}
 
 			if ($group =~ m/^EUDICOTS/i){
 				unless ($seen{$family}++){#one line per family
-					print OUT "<tr bgcolor='#dddddd'><td>".$group."</td><td valign='middle'>";
-					print OUT "<a href='/eflora/eflora_display.php?tid=".$fam_id."'>".$family."</a></td>";
-					print OUT "<td valign='middle'>".$combine{$family}."</td></tr>\n";
+					print OUT "<tr bgcolor='#dddddd'><td>".$group."</td><td>";
+					print OUT '<a class="efTag" href="/eflora/eflora_display.php?tid='.$fam_id.'">'.$family.'</a></td>';
+					print OUT "<td>".$combine{$family}."</td></tr>\n";
 				}
 			}
 
 			if ($group =~ m/^MONOCOTS/i){
 				unless ($seen{$family}++){#one line per family
-					print OUT "<tr><td>".$group."</td><td valign='middle'>";
-					print OUT "<a href='/eflora/eflora_display.php?tid=".$fam_id."'>".$family."</a></td>";
-					print OUT "<td valign='middle'>".$combine{$family}."</td></tr>\n";
+					print OUT "<tr><td>".$group."</td><td>";
+					print OUT '<a class="efTag" href="/eflora/eflora_display.php?tid='.$fam_id.'">'.$family.'</a></td>';
+					print OUT "<td>".$combine{$family}."</td></tr>\n";
 				}
 			}
 
@@ -429,16 +514,23 @@ EOP
 print OUT <<EOP;
 		</table>
 	</div>
-	</td>
-    <td>&nbsp;</td>
-    <td>&nbsp;</td>
-   </tr>
-</table>
 
-<!--Begin footer-->
-<?php include(\$_SERVER['DOCUMENT_ROOT'].'/common/php/eflora_footer.php'); ?>
-<!--End footer-->
+</div>
+<div class ="hr_line_grey">
+<p class="footerText"><a href="/main/copyright.html"> Copyright</a> &copy; 2012 - <span id="currentYear"> </span>.  Regents of the University of California</p>
+<p class="footerText">We encourage links to these pages, but the content may not be downloaded for reposting, repackaging, redistributing, or sale in any form, without written permission from The University and Jepson Herbaria &mdash; <a href="/eflora/termsofuse.html">Terms of Use</a>.</p>
+<p class="footerText">Page last updated <span id='demo'></span>
+</p>
+</div>
 
+
+
+
+<!-- Get current year for copyright statement -->
+<script>
+  var currentYear = new Date().getFullYear(); 
+  document.getElementById("currentYear").innerText = currentYear; 
+</script>
 </body>
 </html>
 
