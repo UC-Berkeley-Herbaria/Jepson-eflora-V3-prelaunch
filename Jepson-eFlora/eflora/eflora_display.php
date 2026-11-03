@@ -3124,8 +3124,8 @@ document.addEventListener('DOMContentLoaded', function() {
     <section class="taxonomy-container">
         <div class="taxonomy-row">
             <strong>Family: <?php echo $FamScientificName; ?></strong>
-            <button class="tax-toggle-btn" id="familylink">View Description</button>
-            <?php if($FamHasKey) echo "<a href='/eflora/eflora_keys.php?key=$FamTaxonID'>Dichotomous Key</a>"; ?>
+			<?php if($FamScientificName !== $ScientificName) echo'<button class="tax-toggle-btn" id="familylink">View Description</button>';?>
+            <?php if($FamHasKey) echo "<div class='center-text'><a href='/eflora/eflora_keys.php?key=$FamTaxonID'>Dichotomous Key</a></div>"; ?>
         </div>
 
 		<div id="familydesc" class="initiallyHidden">
@@ -3195,7 +3195,7 @@ document.addEventListener('DOMContentLoaded', function() {
 	<?php if (!empty($GenScientificName)): ?>
         <div class="taxonomy-row">
             <strong>Genus: <?php echo $GenScientificName; ?></strong>
-            <button class="tax-toggle-btn" id="genuslink">View Description</button>
+			<?php if($GenScientificName !== $ScientificName) echo'<button class="tax-toggle-btn" id="genuslink">View Description</button>';?>
             <?php if($GenHasKey) echo "<a href='/eflora/eflora_keys.php?key=$GenTaxonID'>Dichotomous Key</a>"; ?>
         </div>
 
@@ -3263,10 +3263,10 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     <?php endif; ?>
 
-	<?php if (!empty($SpecScientificName) && ($SpecScientificName !== $FamScientificName) ): ?>
+	<?php if (!empty($SpecScientificName)): ?>
         <div class="taxonomy-row">
             <strong>Species: <?php echo $SpecScientificName; ?></strong>
-            <button class="tax-toggle-btn" id="specieslink">View Description</button>
+			<?php if($SpecScientificName !== $ScientificName) echo'<button class="tax-toggle-btn" id="specieslink">View Description</button>';?>
             <?php if($SpecHasKey) echo "<a href='/eflora/eflora_keys.php?key=$SpecTaxonID'>Dichotomous Key</a>"; ?>
         </div>
 
@@ -3491,18 +3491,29 @@ document.addEventListener('DOMContentLoaded', function() {
 			}
 
 		}
-	}
-	elseif (!empty($FamTaxonID)) { 
+	} else {
+		if (preg_match('/aceae$/i', $ScientificName)) {
+		//if (!empty($FamTaxonID)) { 
 	//if the rank is otherwise lower than family, and therefore at rank genus
 		//echo '<p><form>';
 		//echo '<label><b>List of species:</b><select width=20 onchange="window.location=this.value">';
 		//echo '<OPTION value="None">&nbsp;&nbsp;click here';
 
-		$sql = "SELECT DISTINCT b.sortID AS SORT, a.TaxonID, a.ScientificName, b.TaxonID AS TID, b.GenusID ";
-		$sql .= "FROM eflora_taxa a ";
-		$sql .= "INNER JOIN eflora_taxonomy b ON a.TaxonID = b.TaxonID ";
-		$sql .= "WHERE b.$FamTaxonID = " . intval($FamTaxonID) . " AND b.sortID IS NOT NULL ";
-		$sql .= "ORDER BY SORT";
+	// Assuming $currentFamilyTaxonID is the ID of the family the user is currently viewing
+			$currentFamilyTaxonID = intval($TaxonID); 
+
+			$sql = "SELECT DISTINCT b.sortID AS SORT, a.TaxonID, a.ScientificName, b.TaxonID AS TID, b.GenusID ";
+			$sql .= "FROM eflora_taxa a ";
+			$sql .= "INNER JOIN eflora_taxonomy b ON a.TaxonID = b.TaxonID "; // Join taxa to their corresponding genera/taxonomy records
+			$sql .= "WHERE b.FamilyID = " . $currentFamilyTaxonID . " AND b.sortID IS NOT NULL ";
+			$sql .= "ORDER BY SORT";
+
+
+		//$sql = "SELECT DISTINCT b.sortID AS SORT, a.TaxonID, a.ScientificName, b.TaxonID AS TID, b.GenusID";
+		//$sql .= "FROM eflora_taxa a ";
+		//$sql .= "INNER JOIN eflora_taxonomy b ON a.TaxonID = b.$FamTaxonId ";
+		//$sql .= "WHERE a.$TaxonID = " . intval($FamTaxonID) . " AND b.sortID IS NOT NULL ";
+		//$sql .= "ORDER BY SORT";
 
 		//$sql = "SELECT DISTINCT b.sortID as SORT, a.TaxonID as TaxonID, a.ScientificName as ScientificName, b.TaxonID as TID, b.GenusID as GenusID FROM eflora_taxa a";
 		//$sql.= " INNER JOIN eflora_taxonomy b on TaxonID = TID";
@@ -3535,27 +3546,27 @@ document.addEventListener('DOMContentLoaded', function() {
 			$result = mysqli_query($db, $sql);
 
 //query and assign variable to each table field
-		while ($row = mysqli_fetch_array($result)) {
+			while ($row = mysqli_fetch_array($result)) {
 
 // If no results are found, echo a message and stop
-			if ($row == false){
-				echo '<b>Genus ID (2) was not found in the eflora taxon table.<br>Try another search.<br>';
-    			exit;
-			}
+				if ($row == false){
+					echo '<b>Genus ID (2) was not found in the eflora taxon table.<br>Try another search.<br>';
+    				exit;
+				}
 //BEGIN temporary bug fix lines to add when needed
 //foreach ($row as $key=>$value) {
 //    echo $key."<br>";
 //}
 //END temp bug fix lines
-			if (!empty($row['TaxonID'])){
-				//echo ' <OPTION VALUE="/eflora/eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'];
-				echo '<option value="/eflora/eflora_display.php?tid=' . $row['TaxonID'] . '">' . $row['ScientificName'] . '</option>';
+				if (!empty($row['TaxonID'])){
+					//echo ' <OPTION VALUE="/eflora/eflora_display.php?tid='.$row['TaxonID'].'">'.$row['ScientificName'];
+					echo '<option value="/eflora/eflora_display.php?tid=' . $row['TaxonID'] . '">' . $row['ScientificName'] . '</option>';
 
+				}
 			}
-
-		}
-	} else {
+		} else {
 	    echo '<option value="" disabled>No results available for this taxon</option>';
+		}
 	}
 
 //END LEFT SIDE BLOCK, FIRST ROW, create species drop down box using SQL Query statements
