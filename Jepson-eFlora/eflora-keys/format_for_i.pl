@@ -15,11 +15,12 @@ warn <<EOP;
 NEED TO ADD IN AUTHORS WHERE THEY WERE DEEMED UNNECESSARY FOR PRINTED BOOK
 EOP
 use BerkeleyDB;
-open (ERR, ">ijm_error.txt");
+open (ERR, ">output/ijm_error.txt");
+use lib "/JEPS-master/Jepson-eFlora/Modules/";
 use flatten;
 $genus="AA";
-$unlinked= unlink 'IJM.hash', 'IJM_key.hash', 'name_to_code.hash';
-#die "failed to unlink hashes\n" unless $unlinked==2;
+$unlinked= unlink 'output/IJM.hash', 'output/IJM_key.hash', 'output/name_to_code.hash', 'output/IJM_expanded.hash';
+
 
 #http://www.rareplants.cnps.org/detail/65.html
 open(IN, "/Users/davidbaxter/DATA/Interchange/CNPS_ID.txt") || die;
@@ -30,20 +31,21 @@ while(<IN>){
 	$CNPS_URL{$name}="http://www.rareplants.cnps.org/detail/${id}.html";
 }
 
-tie(%IJM, "BerkeleyDB::Hash", -Filename=>"IJM.hash", -Flags      => DB_CREATE)|| die "Stopped; couldnt open IJM\n";
-$IJM=();
-tie(%IJM_key, "BerkeleyDB::Hash", -Filename=>"IJM_key.hash", -Flags      => DB_CREATE )|| die "Stopped; couldnt open IJM_key\n";
-
-tie(%NAME_CODE, "BerkeleyDB::Hash", -Filename=>"name_to_code.hash" , -Flags      => DB_CREATE )|| die "Stopped; couldnt open name code\n";
+tie(%IJM, "BerkeleyDB::Hash", -Filename=>"output/IJM.hash", -Flags      => DB_CREATE)|| die "Stopped; couldnt open IJM\n";
+#$IJM=();
+tie(%IJM_key, "BerkeleyDB::Hash", -Filename=>"output/IJM_key.hash", -Flags      => DB_CREATE )|| die "Stopped; couldnt open IJM_key\n";
+tie(%NAME_CODE, "BerkeleyDB::Hash", -Filename=>"output/name_to_code.hash" , -Flags      => DB_CREATE )|| die "Stopped; couldnt open name code\n";
 open(IN, "/Users/davidbaxter/DATA/Interchange/_input/output/flat_dbm_4.txt") || die;
 $/="";
 while(<IN>){
 	chomp;
 	($name, $code)=split(/\n/);
+	$name = s/ X / &times;/;
 	$NAME_CODE{$name}=$code;
 }
 #These not in ICPN yet
 
+#
 foreach(keys(%NAME_CODE)){
 print <<EOP;
 name: $_
@@ -54,25 +56,26 @@ EOP
 #die;
 
 
-open(IN, "/Users/davidbaxter/DATA/smasch_taxon_ids.txt") || die;
+open(IN, "/JEPS-master/Jepson-eFlora/synonymy/input/smasch_taxon_ids.txt") || die;
 local($/)="\n";
 while(<IN>){
 	chomp;
-	  s/&times; */X /;
+	  s/ X / &times;/;
 	($code,$name,@residue)=split(/\t/);
 	$TNOAN{$name}=$code;
 	$NAN{$code}=$name;
 $name=~s/ X / &times;/;
 	$TNOAN{$name}=$code;
 }
-$TNOAN{"Centaurea jacea nothosubsp. pratensis"}=93858;
-$NAN{93858}="Centaurea jacea nothosubsp. pratensis";
+
 close(IN);
-#foreach(keys(%TNOAN)){
-#print "$_\n" if m/acutidens/;
-#print "$_\n";
-#}
+
+foreach(keys(%TNOAN)){
+print "$_\n" if m/acutidens/;
+print "$_\n";
+}
 #die;
+
 
 @field_list=(
 "UNABRIDGED KEY LEAD",
@@ -84,6 +87,7 @@ close(IN);
 "TJMX AUTHOR",
 "TJMXX AUTHOR",
 "TJMXXX AUTHOR",
+"TJM4X AUTHOR",
 "AUTHORSHIP COMMENT",  #this was out of order in this file compared to sanity.pl and eflora_display.php, added here DEC2016
 "HABIT+",
 "UNABRIDGED HABIT+",
@@ -253,13 +257,7 @@ close(IN);
 
 
 
-
-$field_order=1;
-grep($field_list{$_}=$field_order++,@field_list);
-
-$pageAuthorLine=qq{<span class="pageAuthorLine">Treatments for public viewing </span><br />};
-
-$file="eflora_treatments.txt";
+$file="/JEPS-master/Jepson-eFlora/eflora_database/eflora_treatments.txt";
 	undef($/);
 	open(IN,$file) || die "couldn't open $file\n";
 warn "reading from $file\n";
@@ -305,9 +303,9 @@ s/\nPROOF: .*//;
 		$nativity="";
 		next if m/^[aA]dmin/;
 		s/([0-9])-([0-9])/$1&ndash;$2/g;
-		s/ó/&ndash;/g;
-		s/‚Äô/'/;
-		s/í/'/g;
+		s/√≥/&ndash;/g;
+		s/‚Äö√Ñ√¥/'/;
+		s/√≠/'/g;
 		s/</&lt;/g;
 		s//-/g;
 ###################### KEYS ##########################
@@ -403,7 +401,7 @@ if( m/^1\./ || m/^UNABRIDGED KEY/ || m/^Group \d+[A-Z]?[.:]/ || m/^Key to Groups
 		}
 		elsif( m!--&gt; *(most )([A-Z]). ([&;a-z-]+)!){
 			$key_species=$3;
-			#$key_species=~s/&times;/◊ /;
+			#$key_species=~s/&times;/‚óä /;
 			$goto_code=$TNOAN{"$key_genus $key_species"} || "C6";
 			if($goto_code eq "C6"){
 				print qq{3 >$key_genus $key_species< code=$goto_code\n\n};
@@ -455,7 +453,7 @@ if( m/^1\./ || m/^UNABRIDGED KEY/ || m/^Group \d+[A-Z]?[.:]/ || m/^Key to Groups
 		}
 		elsif( m!--&gt; *\[(\d*)([A-Z]). ([&;a-z-]+)\]!){
 			$key_species=$3;
-			#$key_species=~s/&times;/◊ /;
+			#$key_species=~s/&times;/‚óä /;
 			$goto_code= $TNOAN{"$key_genus $key_species"} || "C9";
 			#$goto_code=$NAME_CODE{"$key_genus $key_species"} || $TNOAN{"$key_genus $key_species"} || "C9";
 			print ERR qq{8 $key_genus $key_species code=$goto_code\n\n};
@@ -463,7 +461,7 @@ if( m/^1\./ || m/^UNABRIDGED KEY/ || m/^Group \d+[A-Z]?[.:]/ || m/^Key to Groups
 		}
 		elsif( m!--&gt; *\[(\d*)([A-Z]). ([&;a-z-]+);.*\]!){
 			$key_species=$3;
-			#$key_species=~s/&times;/◊ /;
+			#$key_species=~s/&times;/‚óä /;
 			$goto_code= $TNOAN{"$key_genus $key_species"} || "C10";
 			#$goto_code=$NAME_CODE{"$key_genus $key_species"} || $TNOAN{"$key_genus $key_species"} || "C10";
 			print ERR qq{9 $key_genus $key_species code=$goto_code\n\n};
@@ -524,7 +522,7 @@ if( m/^1\./ || m/^UNABRIDGED KEY/ || m/^Group \d+[A-Z]?[.:]/ || m/^Key to Groups
 		#<a href="#AO6'">6.</a><a name="AO6."> </a> Trophophore and sporophore joined well below mid-lf, gen at ground level--&gt; small or shade pls of _Botrychium simplex_(2) or _Botrychium pumicola_(2), see lead 3 for separation of taxa
 		elsif( m!--&gt;.*_([A-Z].) ([&;a-z-]+)_!){
 			$key_species=$2;
-			#$key_species=~s/&times;/◊ /;
+			#$key_species=~s/&times;/‚óä /;
 			$goto_code= $TNOAN{"$key_genus $key_species"} || "C12";
 			#$goto_code=$NAME_CODE{"$key_genus $key_species"} || $TNOAN{"$key_genus $key_species"} || "C12";
 			print ERR qq{13 $key_genus $key_species code=$goto_code\n\n};
@@ -579,7 +577,6 @@ if( m/^1\./ || m/^UNABRIDGED KEY/ || m/^Group \d+[A-Z]?[.:]/ || m/^Key to Groups
 	}
 	$_=join("\n",@lines);
 
-
 	#substitute out the "UNABRIDGED KEY LEAD: " prefix and make the text blue 
 	s/UNABRIDGED KEY LEAD: (.*)/<font color=\"blue\">$1<\/font>/g;
 	if(s/UNABRIDGED KEY/<br>Unabridged key/g){
@@ -613,7 +610,7 @@ if( m/^1\./ || m/^UNABRIDGED KEY/ || m/^Group \d+[A-Z]?[.:]/ || m/^Key to Groups
 		$exclude=0;
 		#if(m/^UNABRIDGED/){$exclude=1;};
 		if(s/UNABRIDGED\nURBAN WEED EXPECTED IN WILDLANDS//){
-			$nativity=qq{URBAN WEED (expected in wildlands)};
+			$nativity=qq{URBAN WEED (EXPECTED IN WILDLANDS)};
 		$exclude=1;
 		}
 		elsif(s/UNABRIDGED\n(AGRICULTURAL, GARDEN, OR URBAN WEED)//){
@@ -648,8 +645,8 @@ if( m/^1\./ || m/^UNABRIDGED KEY/ || m/^Group \d+[A-Z]?[.:]/ || m/^Key to Groups
 			$nativity=qq{WAIF};
 		$exclude=1;
 		}
-		elsif(s/UNABRIDGED\nJFP-8, (.*)//){
-			$nativity=qq{$1};
+		elsif(s/UNABRIDGED\nPOSSIBLY IN CA//){
+			$nativity=qq{POSSIBLY IN CA};
 		$exclude=1;
 		}
 		elsif(s/UNABRIDGED\nJFP-4, (URBAN WEED)//){
@@ -665,11 +662,11 @@ if( m/^1\./ || m/^UNABRIDGED KEY/ || m/^Group \d+[A-Z]?[.:]/ || m/^Key to Groups
 		$exclude=1;
 		}
 		elsif(s/UNABRIDGED\nEXTIRPATED (WAIF|ALIEN)//){
-			$nativity=qq{$1 (extirpated)};
+			$nativity=qq{$1 (EXTIRPATED)};
 		$exclude=1;
 		}
 		elsif(s/UNABRIDGED\nNATURALIZED\nEXTIRPATED//){
-			$nativity=qq{NATURALIZED (extirpated)};
+			$nativity=qq{NATURALIZED (EXTIRPATED)};
 		$exclude=1;
 		}
 		elsif(s/NATIVE OR NATURALIZED//){
@@ -679,7 +676,7 @@ if( m/^1\./ || m/^UNABRIDGED KEY/ || m/^Group \d+[A-Z]?[.:]/ || m/^Key to Groups
 			$nativity=qq{NATURALIZED};
 		}
 		elsif(s/NATIVE\nEXTIRPATED//){
-			$nativity=qq{NATIVE (extirpated)};
+			$nativity=qq{NATIVE (EXTIRPATED)};
 		}
 		elsif(s/NATIVE//){
 			$nativity=qq{NATIVE};
@@ -689,26 +686,25 @@ if( m/^1\./ || m/^UNABRIDGED KEY/ || m/^Group \d+[A-Z]?[.:]/ || m/^Key to Groups
 if(m/TJMX AUTHOR/i){
 		s|(TJM2 AUTHOR:.*\n)||i; #TJMX AUTHOR line has priority over TJM2 AUTHOR
 }
+
 if(m/TJMXX AUTHOR/i){
 		s|(TJM2 AUTHOR:.*\n)||i; #TJMXX AUTHOR line has priority over both TJM2 AUTHOR and TJMX AUTHOR
 		s|(TJMX AUTHOR:.*\n)||i;
 }
-		s|TJM[2X]X? AUTHOR:(.*)|<h4>$1</h4>|i; # "TJM2 AUTHOR", "TJMX AUTHOR" or "TJMXX AUTHOR"
-		s|(TJM1 AUTHOR:.*)||i;
-		s|(TJM\(1993\) AUTHOR:.*)||i;
-		s|^FAMILY: *||;
-		s|SCIED: *|&mdash;|;
-		s|UNABRIDGED COMMON NAME: (.*)|<font size="3" color="blue">\U$1\E</font>|;
-		s|COMMON NAME: (.*) (\(Group.*\))|<font size="3">\U$1\E $2</font>| or
-		s|COMMON NAME: (.*)|<font size="3">\U$1\E</font>|;
-		s|(<font size="3">.*) OR |$1 or |;
-		
+
 if(m/TJMXXX AUTHOR/i){ #this was not added to this file when the XXX authors were added by David to sanity.pl and eFlora_display.php, DEC2016
-		s|(TJM2 AUTHOR:.*\n)||i; #TJMXXX AUTHOR line has priority over both TJM2 AUTHOR and TJMX and TJMXX AUTHOR
+		s|(TJM2 AUTHOR:.*\n)||i; #TJM4X AUTHOR line has priority over both TJM2 AUTHOR and TJMX and TJMXX AUTHOR
 		s|(TJMX AUTHOR:.*\n)||i;
 		s|(TJMXX AUTHOR:.*\n)||i;
 }
-		s|TJM[2X]X?X? AUTHOR:(.*)|<h4>$1</h4>|i; # "TJM2 AUTHOR", "TJMX AUTHOR" or "TJMXX AUTHOR" or "TJMXXX AUTHOR"
+
+if(m/TJM4X AUTHOR/i){ #this was not added to this file when the XXX authors were added by David to sanity.pl and eFlora_display.php, DEC2016
+		s|(TJM2 AUTHOR:.*\n)||i; #TJM4X AUTHOR line has priority over both TJM2 AUTHOR and TJMX and TJMXX AUTHOR
+		s|(TJMX AUTHOR:.*\n)||i;
+		s|(TJMXX AUTHOR:.*\n)||i;
+		s|(TJMXXX AUTHOR:.*\n)||i;
+}
+		s/TJM(4X|2|X+) AUTHOR:(.*)/<h4>$2<\/h4>/i; # "TJM2 AUTHOR", "TJMX AUTHOR" or "TJMXX AUTHOR" "TJM4X AUTHOR"
 		s|(TJM1 AUTHOR:.*)||i;
 		s|(TJM\(1993\) AUTHOR:.*)||i;
 		s|^FAMILY: *||;
@@ -1075,8 +1071,8 @@ print ERR "$ceae $name_for_hc  NO Bioregional distribution line\n\n";
 		s/([0-9])-([0-9])/$1&ndash;$2/;
 s/Madrono/Madro&ntilde;o/g;
 s/\xf6/&ouml;/g;
-s/⁄/&eacute;/g;
-s/é/&eacute;/g;
+s/‚ÅÑ/&eacute;/g;
+s/√©/&eacute;/g;
 s/([A-Za-z])_([A-Za-z])/$1&95;$2/g;
 		while(s/_/<I>/){
 			s/_/<\/I>/;
@@ -1094,7 +1090,7 @@ s/  +/ /g;
 		s/TOXICITY: //;
 if(m/NATURALIZED|NATIVE|WAIF/){
 #warn "$name_anchor name_link is $name_link\n";
-unless ($name_link=~/(◊|&times;)/){
+unless ($name_link=~/(‚óä|&times;)/){
 s/<\/blockquote>/$name_link<\/blockquote>/ if $name_link=~/cgi-bin/;
 #s/^/$name_anchor/;
 #$name_anchor="";
@@ -1517,5 +1513,15 @@ s/\bspp\.(\s+[A-Z])/species.$1/g;
 s/\bspp\./species/g;
 s/\bsspp\./subspp./g;
 s|</?quote>|"|g;
+$_;
+}
+sub expand_keys {
+local($_) = @_;
+
+
+if (m/(P| p)erennial([ ,;\)])/){
+s/(P| p)erennial([ ,;\)])/<a href="\/IJM_glossary.html#perennial" title="Completing life cycle \(germination through death\) in more than two years or growing seasons, generally non-woody \(at least above ground\) to woody" style="color:#003366;" text-decoration="none&quot;">$1erennial<\/a>$2/;
+}
+
 $_;
 }
