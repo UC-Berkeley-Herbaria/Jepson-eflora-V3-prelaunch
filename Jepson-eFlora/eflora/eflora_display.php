@@ -3089,9 +3089,15 @@ document.addEventListener('DOMContentLoaded', function() {
         <h1>Jepson eFlora Taxon Page</h1>
     </header>
 
+    <!-- warning link -->
+<div class="center-text" style="margin-top: 30px;">
+    <p style="font-weight: bolder; color: #5c3160;">&rarr; The Jepson eFlora has migrated to a new URL.  During this week, users may notice some features are not fully accessible.  Please continue to use the feedback link during this transition time.</p>
+</div>
+
+
     <!-- return home link -->
 <div class="center-text" style="margin-top: 30px;">
-    <a href="/eflora/" style="font-weight: bold;">&larr; Return to <i>Jepson eFlora</i> Search Page</a>
+    <a href="/eflora/" style="font-weight: bold;">&larr; Return to <i>Jepson eFlora</i> Resource Portal</a>
 </div>
 
     <!-- Feedback CTA -->
@@ -3257,7 +3263,7 @@ document.addEventListener('DOMContentLoaded', function() {
         </div>
     <?php endif; ?>
 
-	<?php if (!empty($SpecScientificName)): ?>
+	<?php if (!empty($SpecScientificName) && ($SpecScientificName !== $FamScientificName) ): ?>
         <div class="taxonomy-row">
             <strong>Species: <?php echo $SpecScientificName; ?></strong>
             <button class="tax-toggle-btn" id="specieslink">View Description</button>
@@ -3445,9 +3451,17 @@ document.addEventListener('DOMContentLoaded', function() {
 		//echo '<label><b>List of species:</b><select WIDTH=20 onChange="window.location=this.value">';
 		//echo '<OPTION VALUE="None">&nbsp;&nbsp;click here';
 		//$GenTaxonID for focal taxon determined in an earlier query
-		$sql = "SELECT DISTINCT a.TaxonID as TaxonID, a.ScientificName as ScientificName, b.TaxonID, b.GenusID as GenusID FROM eflora_taxa a";
-		$sql.= " INNER JOIN eflora_taxonomy b on a.TaxonID = b.TaxonID";
-		$sql.= " WHERE GenusID=".$GenTaxonID." ";
+		//$sql = "SELECT DISTINCT b.sortID as SORT, a.TaxonID as TaxonID, a.ScientificName as ScientificName, b.TaxonID as TID, b.GenusID as GenusID FROM eflora_taxa a";
+		//$sql.= " INNER JOIN eflora_taxonomy b on TaxonID = TID";
+		//$sql.= " WHERE GenusID=".$GenTaxonID." AND SORT IS NOT NULL";
+		//$sql.= " ORDER BY SORT ";
+
+		$sql = "SELECT DISTINCT b.sortID AS SORT, a.TaxonID, a.ScientificName, b.TaxonID AS TID, b.GenusID ";
+		$sql .= "FROM eflora_taxa a ";
+		$sql .= "INNER JOIN eflora_taxonomy b ON a.TaxonID = b.TaxonID ";
+		$sql .= "WHERE b.GenusID = " . intval($GenTaxonID) . " AND b.sortID IS NOT NULL ";
+		$sql .= "ORDER BY SORT";
+
 
 //BEGIN temporary bug fix lines to add when needed
 //echo '<br>'.$sql.'<br>';
@@ -3484,9 +3498,32 @@ document.addEventListener('DOMContentLoaded', function() {
 		//echo '<label><b>List of species:</b><select width=20 onchange="window.location=this.value">';
 		//echo '<OPTION value="None">&nbsp;&nbsp;click here';
 
-		$sql = "SELECT DISTINCT a.TaxonID as TaxonID, a.ScientificName as ScientificName, b.TaxonID, b.GenusID as GenusID FROM eflora_taxa a";
-		$sql.= " INNER JOIN eflora_taxonomy b on a.TaxonID = b.TaxonID";
-		$sql.= " WHERE GenusID=".$TID." ";
+		$sql = "SELECT DISTINCT b.sortID AS SORT, a.TaxonID, a.ScientificName, b.TaxonID AS TID, b.GenusID ";
+		$sql .= "FROM eflora_taxa a ";
+		$sql .= "INNER JOIN eflora_taxonomy b ON a.TaxonID = b.TaxonID ";
+		$sql .= "WHERE b.$FamTaxonID = " . intval($FamTaxonID) . " AND b.sortID IS NOT NULL ";
+		$sql .= "ORDER BY SORT";
+
+		//$sql = "SELECT DISTINCT b.sortID as SORT, a.TaxonID as TaxonID, a.ScientificName as ScientificName, b.TaxonID as TID, b.GenusID as GenusID FROM eflora_taxa a";
+		//$sql.= " INNER JOIN eflora_taxonomy b on TaxonID = TID";
+		//$sql.= " WHERE GenusID=".$TID." AND SORT IS NOT NULL";
+		//$sql.= " ORDER BY SORT ";
+
+//The ON clause (TaxonID = TID):
+
+//TID is an alias you created inside the SELECT statement. SQL processes the FROM and JOIN clauses before it looks at the SELECT clause, meaning TID doesn't exist yet when the JOIN runs.
+//Fix: Changed it to use the actual column names from the tables: ON a.TaxonID = b.TaxonID.
+//Ambiguous GenusID in the WHERE clause:
+
+//You wrote GenusID= without specifying whether it belongs to table a or table b. If both tables happen to have a column named GenusID, MariaDB will throw an ambiguity error.
+//Fix: Prefixed it with b.GenusID (assuming it belongs to the taxonomy table based on your SELECT clause).
+//Using SORT in the WHERE clause:
+
+//Just like aliases in JOIN, you cannot use a SELECT column alias (SORT) in a WHERE clause because WHERE runs before SELECT.
+//Fix: Used the actual column name instead: b.sortID IS NOT NULL.
+//Security Improvement (intval):
+
+//If $TID is a number, passing it straight into the string makes your code vulnerable to SQL Injection. Wrapping it in intval($TID) ensures it's treated safely as an integer. (Note: If $TID is a string/text instead of a number, use your database //connection's real escape function instead).
 
 //BEGIN temporary bug fix lines to add when needed
 //echo '<br>'.$sql.'<br>';
